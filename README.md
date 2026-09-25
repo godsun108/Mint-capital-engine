@@ -36,3 +36,7 @@ Discovery, normalization, ranking, drafting and reminders may become highly auto
 7. bounded investment analysis
 
 MINT records settled capital only after the user marks a cash event settled.
+
+
+## v0.2 — SCOUT
+SCOUT v0.1 adds automated public-opportunity discovery. The first adapter ingests Grants.gov candidates on a six-hour schedule and presents them for human review before entering MINT's opportunity queue. Imported candidates start with zero assumed value/probability; discovery is not eligibility or expected cash.
