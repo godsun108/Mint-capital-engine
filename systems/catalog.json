@@ -1,0 +1,10 @@
+{
+  "schema": "mint.catalog.v1",
+  "items": [],
+  "rules": {
+    "truthful_offer_required": true,
+    "delivery_capability_required": true,
+    "external_publish_requires_approval": true,
+    "note": "Empty by design until a real product/service is approved."
+  }
+}
