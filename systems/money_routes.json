@@ -1,0 +1,69 @@
+{
+  "schema": "mint.money_routes.v1",
+  "routes": [
+    {
+      "id": "sell_service",
+      "class": "CREATE",
+      "state": "READY_FOR_OFFER",
+      "cash_type": "EARNED",
+      "rail": "stripe",
+      "priority": 1
+    },
+    {
+      "id": "sell_product",
+      "class": "CREATE",
+      "state": "READY_FOR_OFFER",
+      "cash_type": "EARNED",
+      "rail": "stripe",
+      "priority": 2
+    },
+    {
+      "id": "collect_receivable",
+      "class": "COLLECT",
+      "state": "READY_FOR_RECEIVABLE",
+      "cash_type": "EARNED",
+      "rail": "stripe",
+      "priority": 3
+    },
+    {
+      "id": "refund_claim",
+      "class": "CLAIM",
+      "state": "BUILDING",
+      "cash_type": "CLAIMED",
+      "rail": "provider",
+      "priority": 4
+    },
+    {
+      "id": "rebate_claim",
+      "class": "CLAIM",
+      "state": "BUILDING",
+      "cash_type": "CLAIMED",
+      "rail": "provider",
+      "priority": 5
+    },
+    {
+      "id": "unclaimed_property",
+      "class": "CLAIM",
+      "state": "BUILDING",
+      "cash_type": "CLAIMED",
+      "rail": "official_source",
+      "priority": 6
+    },
+    {
+      "id": "grant",
+      "class": "CLAIM",
+      "state": "ACTIVE_DISCOVERY",
+      "cash_type": "AWARD",
+      "rail": "official_source",
+      "priority": 7
+    },
+    {
+      "id": "financing",
+      "class": "ACCESS",
+      "state": "PLANNED",
+      "cash_type": "LIABILITY_BACKED",
+      "rail": "lender",
+      "priority": 8
+    }
+  ]
+}
