@@ -44,3 +44,9 @@ SCOUT v0.1 adds automated public-opportunity discovery. The first adapter ingest
 
 ## v0.4 — LIQUIDITY SYSTEM PORTFOLIO
 MINT now defines 18 independent liquidity systems across CREATE, CLAIM, ACCESS and SAVE. All converge on the same execution lifecycle and preserve the distinction between earned cash, claimed/awarded cash, asset conversion, liability-backed liquidity and savings.
+
+
+## v0.7 — FIRST DOLLAR RAIL
+MINT now has a provider-neutral first-dollar execution path with a Stripe adapter contract, authorization-controlled request preparation, provider-event normalization, settlement validation, and job reconciliation. The repository performs no live Stripe write by itself and contains no credentials. See `FIRST_DOLLAR_RUNBOOK.md` and `adapters/stripe/`.
+
+**North-star:** net settled USD available to spend. `PAID` is not `SETTLED`.
