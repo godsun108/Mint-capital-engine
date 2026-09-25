@@ -1,24 +1,114 @@
 {
-  "schema":"mint.liquidity.systems.v1",
-  "objective":"settled_usd",
-  "systems":[
-    {"id":"product","class":"CREATE","state":"PLANNED","capital_type":"EARNED"},
-    {"id":"service","class":"CREATE","state":"PLANNED","capital_type":"EARNED"},
-    {"id":"commission","class":"CREATE","state":"PLANNED","capital_type":"EARNED"},
-    {"id":"license","class":"CREATE","state":"PLANNED","capital_type":"EARNED"},
-    {"id":"marketplace","class":"CREATE","state":"PLANNED","capital_type":"EARNED"},
-    {"id":"subscription","class":"CREATE","state":"PLANNED","capital_type":"EARNED"},
-    {"id":"receivable","class":"CLAIM","state":"PLANNED","capital_type":"OWED"},
-    {"id":"refund","class":"CLAIM","state":"PLANNED","capital_type":"CLAIMED"},
-    {"id":"rebate","class":"CLAIM","state":"PLANNED","capital_type":"CLAIMED"},
-    {"id":"unclaimed","class":"CLAIM","state":"PLANNED","capital_type":"CLAIMED"},
-    {"id":"grant","class":"CLAIM","state":"ACTIVE","capital_type":"AWARD"},
-    {"id":"reimburse","class":"CLAIM","state":"PLANNED","capital_type":"CLAIMED"},
-    {"id":"financing","class":"ACCESS","state":"PLANNED","capital_type":"LIABILITY_BACKED"},
-    {"id":"receivable_finance","class":"ACCESS","state":"PLANNED","capital_type":"LIABILITY_BACKED"},
-    {"id":"asset_liquidity","class":"ACCESS","state":"PLANNED","capital_type":"ASSET_CONVERSION"},
-    {"id":"renewal","class":"SAVE","state":"PLANNED","capital_type":"SAVINGS"},
-    {"id":"negotiate","class":"SAVE","state":"PLANNED","capital_type":"SAVINGS"},
-    {"id":"cash_timing","class":"SAVE","state":"PLANNED","capital_type":"SAVINGS"}
+  "schema": "mint.liquidity.systems.v1",
+  "objective": "settled_usd",
+  "systems": [
+    {
+      "id": "product",
+      "class": "CREATE",
+      "state": "BUILDING",
+      "capital_type": "EARNED"
+    },
+    {
+      "id": "service",
+      "class": "CREATE",
+      "state": "BUILDING",
+      "capital_type": "EARNED"
+    },
+    {
+      "id": "commission",
+      "class": "CREATE",
+      "state": "PLANNED",
+      "capital_type": "EARNED"
+    },
+    {
+      "id": "license",
+      "class": "CREATE",
+      "state": "PLANNED",
+      "capital_type": "EARNED"
+    },
+    {
+      "id": "marketplace",
+      "class": "CREATE",
+      "state": "PLANNED",
+      "capital_type": "EARNED"
+    },
+    {
+      "id": "subscription",
+      "class": "CREATE",
+      "state": "PLANNED",
+      "capital_type": "EARNED"
+    },
+    {
+      "id": "receivable",
+      "class": "CLAIM",
+      "state": "BUILDING",
+      "capital_type": "OWED"
+    },
+    {
+      "id": "refund",
+      "class": "CLAIM",
+      "state": "BUILDING",
+      "capital_type": "CLAIMED"
+    },
+    {
+      "id": "rebate",
+      "class": "CLAIM",
+      "state": "BUILDING",
+      "capital_type": "CLAIMED"
+    },
+    {
+      "id": "unclaimed",
+      "class": "CLAIM",
+      "state": "BUILDING",
+      "capital_type": "CLAIMED"
+    },
+    {
+      "id": "grant",
+      "class": "CLAIM",
+      "state": "ACTIVE",
+      "capital_type": "AWARD"
+    },
+    {
+      "id": "reimburse",
+      "class": "CLAIM",
+      "state": "PLANNED",
+      "capital_type": "CLAIMED"
+    },
+    {
+      "id": "financing",
+      "class": "ACCESS",
+      "state": "PLANNED",
+      "capital_type": "LIABILITY_BACKED"
+    },
+    {
+      "id": "receivable_finance",
+      "class": "ACCESS",
+      "state": "PLANNED",
+      "capital_type": "LIABILITY_BACKED"
+    },
+    {
+      "id": "asset_liquidity",
+      "class": "ACCESS",
+      "state": "PLANNED",
+      "capital_type": "ASSET_CONVERSION"
+    },
+    {
+      "id": "renewal",
+      "class": "SAVE",
+      "state": "PLANNED",
+      "capital_type": "SAVINGS"
+    },
+    {
+      "id": "negotiate",
+      "class": "SAVE",
+      "state": "PLANNED",
+      "capital_type": "SAVINGS"
+    },
+    {
+      "id": "cash_timing",
+      "class": "SAVE",
+      "state": "PLANNED",
+      "capital_type": "SAVINGS"
+    }
   ]
 }
