@@ -1,0 +1,30 @@
+{
+  "schema": "mint.stripe.request.v1",
+  "purpose": "Prepare an authorization-controlled external Stripe write",
+  "required": [
+    "mint_job_id",
+    "action",
+    "approval_state"
+  ],
+  "actions": [
+    "CREATE_PRODUCT",
+    "CREATE_PRICE",
+    "CREATE_PAYMENT_LINK",
+    "CREATE_INVOICE"
+  ],
+  "approval_states": [
+    "DRAFT",
+    "AWAITING_APPROVAL",
+    "APPROVED",
+    "EXECUTED",
+    "FAILED"
+  ],
+  "example": {
+    "mint_job_id": "example_job",
+    "action": "CREATE_PAYMENT_LINK",
+    "approval_state": "DRAFT",
+    "description": "Example only; not executable",
+    "amount_usd": "0.00",
+    "currency": "usd"
+  }
+}
