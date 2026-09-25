@@ -1,0 +1,10 @@
+{
+  "schema":"mint.execution.jobs.v1",
+  "jobs":[],
+  "states":["DISCOVERED","VERIFIED","READY","AWAITING_APPROVAL","EXECUTING","AWAITING_PAYMENT","PAID","SETTLED","FAILED","CLOSED"],
+  "rules":{
+    "PAID":"payment processor/customer payment confirmed; not necessarily bank-available",
+    "SETTLED":"funds confirmed available in destination cash account",
+    "liability_backed":"must remain separate from earned revenue"
+  }
+}
