@@ -5,13 +5,13 @@
     {
       "id": "product",
       "class": "CREATE",
-      "state": "BUILDING",
+      "state": "READY_FOR_ADAPTER",
       "capital_type": "EARNED"
     },
     {
       "id": "service",
       "class": "CREATE",
-      "state": "BUILDING",
+      "state": "READY_FOR_ADAPTER",
       "capital_type": "EARNED"
     },
     {
@@ -41,7 +41,7 @@
     {
       "id": "receivable",
       "class": "CLAIM",
-      "state": "BUILDING",
+      "state": "READY_FOR_ADAPTER",
       "capital_type": "OWED"
     },
     {
