@@ -1,0 +1,28 @@
+{
+  "schema": "mint.stripe.event.v1",
+  "required": [
+    "external_id",
+    "provider",
+    "amount_usd",
+    "status",
+    "observed_at"
+  ],
+  "statuses": [
+    "AWAITING_PAYMENT",
+    "PAID",
+    "AVAILABLE",
+    "SETTLED",
+    "REFUNDED",
+    "DISPUTED"
+  ],
+  "example": {
+    "external_id": "example_only",
+    "provider": "stripe",
+    "amount_usd": "0.00",
+    "status": "AWAITING_PAYMENT",
+    "observed_at": "1970-01-01T00:00:00Z",
+    "mint_job_id": "example_job",
+    "mint_opportunity_id": "example_opportunity",
+    "evidence": "provider_observation"
+  }
+}
