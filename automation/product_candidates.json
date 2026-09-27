@@ -1,1 +1,105 @@
-{"schema":"mint.product_candidates.v1","generated_at":null,"items":[],"semantics":"CANDIDATE_ONLY"}
+{
+  "schema": "mint.product_candidates.v1",
+  "generated_at": "2026-09-27T20:21:53.710323+00:00",
+  "items": [
+    {
+      "id": "ip:foundry-scaffold",
+      "source_repo": "godsun108/turbo-foundry",
+      "primitive": "tested project lifecycle and repository scaffold doctrine",
+      "verified": true,
+      "reuse": 0.9,
+      "automation": 0.9,
+      "demand_evidence": 0,
+      "effort": 2,
+      "risk": 0.05,
+      "score": 54.0,
+      "state": "RESEARCH_DEMAND",
+      "external_action_performed": false
+    },
+    {
+      "id": "ip:mint-pipeline",
+      "source_repo": "godsun108/Mint-capital-engine",
+      "primitive": "opportunity scoring, execution-state and settlement-truth framework",
+      "verified": true,
+      "reuse": 0.85,
+      "automation": 0.9,
+      "demand_evidence": 0,
+      "effort": 3,
+      "risk": 0.15,
+      "score": 47.42,
+      "state": "RESEARCH_DEMAND",
+      "external_action_performed": false
+    },
+    {
+      "id": "ip:evidence-workflow",
+      "source_repo": "godsun108/edge-intelligence",
+      "primitive": "provenance-aware claim/evidence/research workflow",
+      "verified": true,
+      "reuse": 0.9,
+      "automation": 0.8,
+      "demand_evidence": 0,
+      "effort": 3,
+      "risk": 0.1,
+      "score": 47.17,
+      "state": "RESEARCH_DEMAND",
+      "external_action_performed": false
+    },
+    {
+      "id": "ip:window-seeker",
+      "source_repo": "godsun108/window-earth",
+      "primitive": "verified-camera discovery and ranking contract",
+      "verified": true,
+      "reuse": 0.8,
+      "automation": 0.8,
+      "demand_evidence": 0,
+      "effort": 4,
+      "risk": 0.15,
+      "score": 42.0,
+      "state": "RESEARCH_DEMAND",
+      "external_action_performed": false
+    },
+    {
+      "id": "ip:forecast-lab",
+      "source_repo": "godsun108/Seldon",
+      "primitive": "time-locked probabilistic forecasting and scoring framework",
+      "verified": true,
+      "reuse": 0.75,
+      "automation": 0.8,
+      "demand_evidence": 0,
+      "effort": 4,
+      "risk": 0.15,
+      "score": 40.75,
+      "state": "RESEARCH_DEMAND",
+      "external_action_performed": false
+    },
+    {
+      "id": "ip:portal-game-engine",
+      "source_repo": "godsun108/The-portal",
+      "primitive": "browser-local persistent game/world mechanics and arcade framework",
+      "verified": true,
+      "reuse": 0.85,
+      "automation": 0.7,
+      "demand_evidence": 0,
+      "effort": 5,
+      "risk": 0.1,
+      "score": 40.75,
+      "state": "RESEARCH_DEMAND",
+      "external_action_performed": false
+    },
+    {
+      "id": "ip:earth-observation-ui",
+      "source_repo": "godsun108/earth-now",
+      "primitive": "provenance-aware public-data globe and observation timeline",
+      "verified": true,
+      "reuse": 0.8,
+      "automation": 0.7,
+      "demand_evidence": 0,
+      "effort": 4,
+      "risk": 0.1,
+      "score": 40.5,
+      "state": "RESEARCH_DEMAND",
+      "external_action_performed": false
+    }
+  ],
+  "semantics": "CANDIDATE_ONLY"
+}
