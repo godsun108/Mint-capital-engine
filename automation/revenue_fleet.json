@@ -1,0 +1,106 @@
+{
+  "schema": "mint.revenue_fleet.v1",
+  "objective": "maximize_lawful_settled_net_cash",
+  "truth_unit": "available_real_usd",
+  "lanes": [
+    {
+      "id": "digital-products",
+      "agents": [
+        "demand-scout",
+        "product-forge",
+        "builder",
+        "publisher",
+        "fulfiller"
+      ],
+      "model": "build_once_sell_many",
+      "automation_target": "full_after_mandate",
+      "capital_required_usd": 0
+    },
+    {
+      "id": "software-products",
+      "agents": [
+        "demand-scout",
+        "software-forge",
+        "tester",
+        "publisher",
+        "fulfiller"
+      ],
+      "model": "small_software_and_tools",
+      "automation_target": "full_after_mandate",
+      "capital_required_usd": 0
+    },
+    {
+      "id": "productized-services",
+      "agents": [
+        "opportunity-scout",
+        "service-engine",
+        "delivery-agent",
+        "qa-agent",
+        "reconciler"
+      ],
+      "model": "bounded_repeatable_deliverables",
+      "automation_target": "full_where_platform_and_contract_allow",
+      "capital_required_usd": 0
+    },
+    {
+      "id": "licensing",
+      "agents": [
+        "license-engine",
+        "packager",
+        "opportunity-scout"
+      ],
+      "model": "license_existing_ip",
+      "automation_target": "prepare_and_route_within_mandate",
+      "capital_required_usd": 0
+    },
+    {
+      "id": "commission",
+      "agents": [
+        "commission-engine",
+        "compliance-checker",
+        "fulfillment-router"
+      ],
+      "model": "verified_authorized_commission_routes",
+      "automation_target": "only_with_verified_authorization",
+      "capital_required_usd": 0
+    },
+    {
+      "id": "claims-grants",
+      "agents": [
+        "claim-engine",
+        "grant-scout",
+        "eligibility-checker",
+        "application-preparer"
+      ],
+      "model": "legitimate_claims_and_grants",
+      "automation_target": "research_and_prepare;attestations_require_human",
+      "capital_required_usd": 0
+    }
+  ],
+  "treasury": {
+    "states": [
+      "discovered",
+      "verified",
+      "offered",
+      "ordered",
+      "paid",
+      "pending",
+      "available",
+      "paid_out"
+    ],
+    "liquid_capital_state": "available",
+    "real_cash_requires": "livemode=true and independently verified available balance",
+    "test_money_is_revenue": false
+  },
+  "allocation": {
+    "priority": "expected_settled_net_cash_per_unit_time",
+    "constraints": [
+      "lawful",
+      "truthful",
+      "platform_terms",
+      "mandate",
+      "zero_or_low_upfront_capital"
+    ],
+    "parallelism": "multiple lanes may operate concurrently"
+  }
+}
