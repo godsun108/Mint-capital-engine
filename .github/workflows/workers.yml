@@ -1,6 +1,12 @@
 name: MINT WORKERS
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "automation/engine.py"
+      - "automation/mandates.json"
+      - "systems/catalog.json"
   schedule:
     - cron: "41 * * * *"
 permissions:
