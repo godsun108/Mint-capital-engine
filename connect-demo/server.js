@@ -161,7 +161,7 @@ const root=path.dirname(fileURLToPath(import.meta.url));
 const server=http.createServer(async(req,res)=>{
   try{
     const u=new URL(req.url,APP_URL);
-    if(req.method==='GET'&&u.pathname==='/health')return send(res,200,{ok:true,stripeConfigured,webhookConfigured:Boolean(process.env.STRIPE_WEBHOOK_SECRET)});
+    if(req.method==='GET'&&u.pathname==='/health')return send(res,200,{ok:true,stripeConfigured,webhookConfigured:Boolean(process.env.STRIPE_WEBHOOK_SECRET)});\n    if(req.method==='GET'&&u.pathname==='/api/stripe-check') { const s=requireStripe(); const products=await s.products.list({limit:1}); return send(res,200,{ok:true,stripeAuthenticated:true,livemode:products.data[0]?.livemode??null,catalogReadable:true}); }
     if(u.pathname.startsWith('/api/')||u.pathname.startsWith('/refresh-onboarding')||u.pathname.startsWith('/webhooks/'))requireStripe();
     if(req.method==='GET'&&u.pathname==='/')return serveFile(res,path.join(root,'public/index.html'),'text/html; charset=utf-8');
     if(req.method==='GET'&&u.pathname==='/success')return serveFile(res,path.join(root,'public/success.html'),'text/html; charset=utf-8');
