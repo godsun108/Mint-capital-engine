@@ -1,0 +1,23 @@
+name: MINT WORKERS
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "41 * * * *"
+permissions:
+  contents: write
+jobs:
+  product-forge:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python automation/worker.py
+      - run: python automation/engine.py
+      - run: |
+          git config user.name "mint-workers"
+          git config user.email "actions@users.noreply.github.com"
+          git add automation/product_candidates.json automation/queue.json
+          git diff --cached --quiet || git commit -m "MINT workers refresh candidate portfolio"
+          git push
