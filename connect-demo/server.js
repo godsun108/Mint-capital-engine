@@ -1,5 +1,7 @@
 import http from 'node:http';
 import {readFile} from 'node:fs/promises';
+import {createReadStream} from 'node:fs';
+import {stat} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 import path from 'node:path';
 import Stripe from 'stripe';
@@ -179,6 +181,21 @@ async function moneyState(res){
   return send(res,200,{ok:true,mode:'test',generatedAt:new Date().toISOString(),totals,transactions:rows});
 }
 
+async function fulfillCheckout(sessionId,res){
+  const s=await requireTestStripe();
+  const session=await s.checkout.sessions.retrieve(sessionId,{expand:['line_items.data.price.product']});
+  if(session.livemode!==false)return send(res,409,{error:'MINT fulfillment safety gate: TEST sessions only.'});
+  if(session.payment_status!=='paid'||session.status!=='complete')return send(res,402,{error:'Verified successful payment is required before fulfillment.',payment_status:session.payment_status,status:session.status});
+  const items=session.line_items?.data||[];
+  const product=items[0]?.price?.product;
+  const productId=typeof product==='string'?product:product?.id;
+  if(productId!=='prod_VL4ZGypBcYFCWH')return send(res,404,{error:'No automatic fulfillment mapping exists for this product.'});
+  const file=path.join(root,'..','products','foundry-express-ts','README.md');
+  await stat(file);
+  res.writeHead(200,{'content-type':'text/markdown; charset=utf-8','content-disposition':'attachment; filename="foundry-express-ts-README.md"','x-mint-fulfillment':'verified-test-payment'});
+  createReadStream(file).pipe(res);
+}
+
 async function thinWebhook(req,res){
   const webhookSecret=process.env.STRIPE_WEBHOOK_SECRET;
   if(!webhookSecret||webhookSecret.includes('REPLACE_ME'))return send(res,500,{error:'Missing STRIPE_WEBHOOK_SECRET. Set the signing secret from your Stripe event destination or Stripe CLI.'});
@@ -232,6 +249,8 @@ const server=http.createServer(async(req,res)=>{
     if(req.method==='POST'&&u.pathname==='/api/checkout')return checkout(req,res);
     m=u.pathname.match(/^\/api\/checkout\/([^/]+)\/verify$/);
     if(req.method==='GET'&&m)return verifyCheckout(decodeURIComponent(m[1]),res);
+    m=u.pathname.match(/^\/api\/fulfill\/([^/]+)$/);
+    if(req.method==='GET'&&m)return fulfillCheckout(decodeURIComponent(m[1]),res);
     if(req.method==='POST'&&u.pathname==='/webhooks/stripe')return thinWebhook(req,res);
     send(res,404,{error:'Not found'});
   }catch(e){console.error(e);send(res,500,{error:e?.message||'Unexpected server error.'})}
