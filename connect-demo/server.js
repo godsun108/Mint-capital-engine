@@ -190,7 +190,7 @@ async function fulfillCheckout(sessionId,res){
   const product=items[0]?.price?.product;
   const productId=typeof product==='string'?product:product?.id;
   if(productId!=='prod_VL4ZGypBcYFCWH')return send(res,404,{error:'No automatic fulfillment mapping exists for this product.'});
-  const file=path.join(root,'..','products','foundry-express-ts','README.md');
+  const file=path.join(root,'deliverables','foundry-express-ts','README.md');
   await stat(file);
   res.writeHead(200,{'content-type':'text/markdown; charset=utf-8','content-disposition':'attachment; filename="foundry-express-ts-README.md"','x-mint-fulfillment':'verified-test-payment'});
   createReadStream(file).pipe(res);
