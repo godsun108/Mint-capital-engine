@@ -1,0 +1,10 @@
+{
+  "schema":"mint.offer_candidates.v1",
+  "semantics":"CANDIDATE_ONLY",
+  "items":[
+    {"id":"candidate:service","kind":"SERVICE","state":"NEEDS_HUMAN_DEFINITION","reason":"Potentially shortest path to earned cash when a bounded deliverable and buyer can be identified."},
+    {"id":"candidate:product","kind":"PRODUCT","state":"NEEDS_HUMAN_DEFINITION","reason":"Usable when a real product, cost, fulfillment method and lawful sales path are known."},
+    {"id":"candidate:commission","kind":"COMMISSION","state":"NEEDS_AUTHORIZATION_VERIFICATION","reason":"Usable only where current license/appointment/program authorization and compensation terms are verified."},
+    {"id":"candidate:receivable","kind":"RECEIVABLE","state":"NEEDS_GENUINE_DEBT","reason":"Usable only for a real amount already owed."}
+  ]
+}
