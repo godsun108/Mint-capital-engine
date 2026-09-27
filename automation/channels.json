@@ -1,0 +1,80 @@
+{
+  "schema": "mint.channel_registry.v1",
+  "objective": "lawful_distribution_to_settled_cash",
+  "channels": [
+    {
+      "id": "github-pages",
+      "state": "AVAILABLE",
+      "cost_model": "zero_incremental",
+      "supports": [
+        "public_offer_page",
+        "demo",
+        "documentation",
+        "download"
+      ],
+      "can_accept_payment": false,
+      "automation": "repository_publish"
+    },
+    {
+      "id": "mint-direct-web",
+      "state": "AVAILABLE_TEST",
+      "cost_model": "existing_hosting",
+      "supports": [
+        "offer_page",
+        "stripe_checkout_route",
+        "automatic_digital_fulfillment"
+      ],
+      "can_accept_payment": "TEST_ONLY",
+      "automation": "deployed_service"
+    },
+    {
+      "id": "stripe-connect",
+      "state": "VERIFIED_TEST",
+      "supports": [
+        "checkout",
+        "application_fee",
+        "destination_transfer",
+        "reconciliation"
+      ],
+      "can_accept_payment": "TEST_ONLY",
+      "automation": "api",
+      "live_activation_requirements": [
+        "truthful_real_offer",
+        "human_approved_price_terms",
+        "explicit_live_payment_mandate"
+      ]
+    },
+    {
+      "id": "external-marketplaces",
+      "state": "DISCOVERY_REQUIRED",
+      "supports": [
+        "buyer_demand",
+        "paid_tasks",
+        "digital_products"
+      ],
+      "can_accept_payment": "UNKNOWN_UNTIL_CONNECTED",
+      "automation": "only_if_marketplace_api_and_terms_allow",
+      "rules": [
+        "no_account_creation_without_authorization",
+        "no_identity_or_credential_fabrication",
+        "no_botting_or_terms_evasion",
+        "no_personal_attestation_by_agent"
+      ]
+    }
+  ],
+  "routing": {
+    "prefer": [
+      "zero_upfront_cost",
+      "existing_verified_access",
+      "api_automation",
+      "automatic_fulfillment",
+      "short_time_to_available_cash"
+    ],
+    "reject": [
+      "fabricated_demand",
+      "prohibited_automation",
+      "unverified_credentials",
+      "required_upfront_spend_without_mandate"
+    ]
+  }
+}
