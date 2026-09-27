@@ -209,7 +209,7 @@ const server=http.createServer(async(req,res)=>{
     }
     if(req.method==='POST'&&u.pathname==='/api/products')return createProduct(req,res);
     if(req.method==='POST'&&u.pathname==='/api/checkout')return checkout(req,res);
-    m=u.pathname.match(/^\\/api\\/checkout\\/([^/]+)\\/verify$/);
+    m=u.pathname.match(/^\/api\/checkout\/([^/]+)\/verify$/);
     if(req.method==='GET'&&m)return verifyCheckout(decodeURIComponent(m[1]),res);
     if(req.method==='POST'&&u.pathname==='/webhooks/stripe')return thinWebhook(req,res);
     send(res,404,{error:'Not found'});
