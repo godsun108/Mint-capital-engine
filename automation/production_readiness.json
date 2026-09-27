@@ -1,0 +1,70 @@
+{
+  "schema": "mint.production_readiness.v1",
+  "generated_at": "2026-09-27",
+  "objective": "produce_lawful_available_real_usd",
+  "gates": [
+    {
+      "id": "demand_evidence",
+      "state": "PASS",
+      "evidence": "sourced external problem signal recorded"
+    },
+    {
+      "id": "deliverable_built",
+      "state": "PASS",
+      "evidence": "products/foundry-express-ts"
+    },
+    {
+      "id": "deliverable_qa",
+      "state": "RUNNING",
+      "evidence": "GitHub Actions run 36348829445"
+    },
+    {
+      "id": "distribution_surface",
+      "state": "PASS",
+      "evidence": "GitHub Pages/direct web registered"
+    },
+    {
+      "id": "test_payment_rail",
+      "state": "PASS",
+      "evidence": "Stripe TEST checkout and reconciliation verified"
+    },
+    {
+      "id": "automatic_fulfillment",
+      "state": "TODO"
+    },
+    {
+      "id": "offer_terms",
+      "state": "HUMAN_APPROVAL_REQUIRED",
+      "requires": [
+        "price",
+        "refund_terms",
+        "delivery_promise"
+      ]
+    },
+    {
+      "id": "live_payment_mandate",
+      "state": "EXPLICIT_APPROVAL_REQUIRED"
+    },
+    {
+      "id": "live_stripe_credentials",
+      "state": "NOT_CONFIGURED_OR_VERIFIED"
+    },
+    {
+      "id": "real_customer",
+      "state": "NOT_OBSERVED"
+    },
+    {
+      "id": "real_payment",
+      "state": "NOT_OBSERVED"
+    },
+    {
+      "id": "available_real_usd",
+      "state": "NOT_OBSERVED"
+    }
+  ],
+  "truth": {
+    "real_revenue_usd": 0,
+    "liquid_capital_usd": 0,
+    "test_activity_is_revenue": false
+  }
+}
