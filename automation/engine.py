@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build bounded MINT autonomy queues. Performs no external actions."""
+"""Build bounded MINT autonomy queues. Performs no external actions.\n\nSchema v4 binds catalog items to mandates by mandate_id.\n"""
 import json
 from pathlib import Path
 
