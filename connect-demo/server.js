@@ -133,6 +133,32 @@ async function checkout(req,res){
   send(res,201,{id:session.id,url:session.url});
 }
 
+async function verifyCheckout(sessionId,res){
+  // Read-only TEST reconciliation endpoint. Never creates, captures, refunds, or transfers funds.
+  const s=await requireTestStripe();
+  const session=await s.checkout.sessions.retrieve(sessionId,{expand:['payment_intent.latest_charge','payment_intent.latest_charge.balance_transaction']});
+  const pi=typeof session.payment_intent==='object'?session.payment_intent:null;
+  const charge=pi&&typeof pi.latest_charge==='object'?pi.latest_charge:null;
+  const bt=charge&&typeof charge.balance_transaction==='object'?charge.balance_transaction:null;
+  let fee=null,transfer=null;
+  if(charge?.application_fee){
+    const x=await s.applicationFees.retrieve(typeof charge.application_fee==='string'?charge.application_fee:charge.application_fee.id);
+    fee={id:x.id,amount:x.amount,currency:x.currency,balance_transaction:typeof x.balance_transaction==='string'?x.balance_transaction:x.balance_transaction?.id||null};
+  }
+  if(charge?.transfer){
+    const x=await s.transfers.retrieve(typeof charge.transfer==='string'?charge.transfer:charge.transfer.id);
+    transfer={id:x.id,amount:x.amount,currency:x.currency,destination:typeof x.destination==='string'?x.destination:x.destination?.id||null};
+  }
+  return send(res,200,{
+    session:{id:session.id,status:session.status,payment_status:session.payment_status,amount_total:session.amount_total,currency:session.currency,livemode:session.livemode,payment_intent:pi?.id||session.payment_intent||null},
+    payment_intent:pi?{id:pi.id,status:pi.status,amount:pi.amount,currency:pi.currency}:null,
+    charge:charge?{id:charge.id,status:charge.status,paid:charge.paid,amount:charge.amount,currency:charge.currency,application_fee:typeof charge.application_fee==='string'?charge.application_fee:charge.application_fee?.id||null,application_fee_amount:charge.application_fee_amount,transfer:typeof charge.transfer==='string'?charge.transfer:charge.transfer?.id||null,destination:typeof charge.destination==='string'?charge.destination:charge.destination?.id||null,balance_transaction:bt?.id||(typeof charge.balance_transaction==='string'?charge.balance_transaction:null)}:null,
+    application_fee:fee,
+    transfer,
+    balance_transaction:bt?{id:bt.id,amount:bt.amount,fee:bt.fee,net:bt.net,type:bt.type,status:bt.status}:null
+  });
+}
+
 async function thinWebhook(req,res){
   const webhookSecret=process.env.STRIPE_WEBHOOK_SECRET;
   if(!webhookSecret||webhookSecret.includes('REPLACE_ME'))return send(res,500,{error:'Missing STRIPE_WEBHOOK_SECRET. Set the signing secret from your Stripe event destination or Stripe CLI.'});
@@ -183,6 +209,8 @@ const server=http.createServer(async(req,res)=>{
     }
     if(req.method==='POST'&&u.pathname==='/api/products')return createProduct(req,res);
     if(req.method==='POST'&&u.pathname==='/api/checkout')return checkout(req,res);
+    m=u.pathname.match(/^\\/api\\/checkout\\/([^/]+)\\/verify$/);
+    if(req.method==='GET'&&m)return verifyCheckout(decodeURIComponent(m[1]),res);
     if(req.method==='POST'&&u.pathname==='/webhooks/stripe')return thinWebhook(req,res);
     send(res,404,{error:'Not found'});
   }catch(e){console.error(e);send(res,500,{error:e?.message||'Unexpected server error.'})}
