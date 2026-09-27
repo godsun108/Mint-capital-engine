@@ -1,0 +1,22 @@
+name: MINT AUTONOMY CONTROL PLANE
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "23 * * * *"
+permissions:
+  contents: write
+jobs:
+  evaluate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python automation/engine.py
+      - run: |
+          git config user.name "mint-autonomy"
+          git config user.email "actions@users.noreply.github.com"
+          git add automation/queue.json
+          git diff --cached --quiet || git commit -m "MINT refresh autonomy queue"
+          git push
