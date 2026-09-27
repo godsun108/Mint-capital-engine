@@ -1,0 +1,24 @@
+name: PRODUCT QA
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "products/foundry-express-ts/**"
+      - ".github/workflows/product-qa.yml"
+permissions:
+  contents: read
+jobs:
+  foundry-express-ts:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: products/foundry-express-ts
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: products/foundry-express-ts/package-lock.json
+      - run: npm install
+      - run: npm run build
