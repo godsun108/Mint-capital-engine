@@ -1,0 +1,21 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"mint.offer.v1",
+  "type":"object",
+  "required":["id","kind","title","deliverable","price_usd","human_approved","status"],
+  "properties":{
+    "id":{"type":"string","minLength":1},
+    "kind":{"enum":["SERVICE","PRODUCT","COMMISSION","RECEIVABLE"]},
+    "title":{"type":"string","minLength":1},
+    "deliverable":{"type":"string","minLength":1},
+    "price_usd":{"type":"number","minimum":0},
+    "estimated_cost_usd":{"type":"number","minimum":0},
+    "delivery_days":{"type":"number","minimum":0},
+    "regulated":{"type":"boolean"},
+    "authorization_note":{"type":"string"},
+    "refund_terms":{"type":"string"},
+    "human_approved":{"const":true},
+    "status":{"enum":["APPROVED","PAUSED","RETIRED"]}
+  },
+  "additionalProperties":true
+}
