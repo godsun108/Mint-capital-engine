@@ -12,6 +12,7 @@ const stripeConfigured=Boolean(secretKey&&!secretKey.includes('REPLACE_ME'));
 // configuration state instead of crashing the entire deployment before secrets exist.
 const stripeClient=stripeConfigured?new Stripe(secretKey):null;
 function requireStripe(){if(!stripeClient)throw new Error('Stripe is not configured. Set STRIPE_SECRET_KEY in the deployment secret store using a Stripe TEST secret key first.');return stripeClient;} // SDK v22.6.2 automatically selects its pinned API version.
+async function requireTestStripe(){const s=requireStripe();const balance=await s.balance.retrieve();if(balance.livemode!==false)throw new Error('MINT safety gate: this operation is TEST-only and the configured Stripe credentials are live.');return s;}
 
 const PORT=Number(process.env.PORT||4242);
 const APP_URL=process.env.APP_URL||('http://localhost:'+PORT);
@@ -37,6 +38,7 @@ function onboardingState(account){
 }
 
 async function createConnectedAccount(req,res){
+  await requireTestStripe();
   const b=await body(req);
   if(!b.userId||!b.displayName||!b.email)return send(res,400,{error:'userId, displayName, and email are required.'});
   // Per the requested V2 Connect contract: do not add top-level type.
@@ -72,6 +74,7 @@ async function onboardingLink(accountId,res){
 }
 
 async function createProduct(req,res){
+  await requireTestStripe();
   const b=await body(req);
   if(!b.name||!b.connectedAccountId||!Number.isFinite(b.price)||b.price<0.5)return send(res,400,{error:'name, connectedAccountId and price >= 0.50 are required.'});
   const currency=String(b.currency||'usd').toLowerCase();
@@ -100,6 +103,7 @@ async function storefront(res){
 }
 
 async function checkout(req,res){
+  await requireTestStripe();
   const b=await body(req);
   if(!b.productId)return send(res,400,{error:'productId is required.'});
   const product=await stripeClient.products.retrieve(b.productId,{expand:['default_price']});
