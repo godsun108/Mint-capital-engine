@@ -1,14 +1,82 @@
 {
-  "schema":"mint.automation.mandates.v1",
-  "mandates":[],
-  "defaults":{
-    "enabled":false,
-    "allowed_channels":[],
-    "min_price_usd":0,
-    "max_price_usd":0,
-    "max_upfront_usd_per_job":0,
-    "max_daily_upfront_usd":0,
-    "auto_publish":false,
-    "auto_fulfill":false
+  "schema": "mint.automation.mandates.v2",
+  "mandates": [
+    {
+      "id": "mandate:digital-products:001",
+      "lane": "digital-products",
+      "enabled": true,
+      "scope": "owned_nonregulated_digital_products",
+      "allowed_channels": [
+        "github-pages",
+        "mint-direct-web"
+      ],
+      "min_price_usd": 1,
+      "max_price_usd": 100,
+      "max_upfront_usd_per_job": 0,
+      "max_daily_upfront_usd": 0,
+      "auto_build": true,
+      "auto_test": true,
+      "auto_publish": true,
+      "auto_fulfill": true,
+      "auto_reconcile": true,
+      "pricing_policy": {
+        "mode": "bounded_optimize",
+        "initial_price_usd": 9,
+        "allowed_prices_usd": [
+          5,
+          9,
+          15,
+          19,
+          29,
+          49,
+          79,
+          99
+        ],
+        "change_requires_verified_observations": true
+      },
+      "delivery_policy": {
+        "type": "automatic_digital",
+        "promise": "Immediate access after verified successful payment, subject to service availability."
+      },
+      "refund_policy": {
+        "type": "standard_digital",
+        "terms": "Refund requests are reviewed against the published offer terms and applicable law. MINT must not represent a no-refund policy where law requires otherwise.",
+        "automatic_refund": false
+      },
+      "claims_policy": {
+        "require_truthful": true,
+        "forbid": [
+          "guaranteed_results",
+          "fabricated_customers",
+          "fabricated_reviews",
+          "fabricated_sales",
+          "unverified_superiority"
+        ]
+      },
+      "live_payment": {
+        "enabled": false,
+        "activation": "requires separately verified LIVE Stripe credentials and explicit live-payment authorization"
+      },
+      "hard_stops": [
+        "spend_money",
+        "borrow",
+        "open_financial_account",
+        "change_payout_destination",
+        "identity_attestation",
+        "legal_or_regulatory_attestation",
+        "regulated_product",
+        "live_payment_without_activation"
+      ]
+    }
+  ],
+  "defaults": {
+    "enabled": false,
+    "allowed_channels": [],
+    "min_price_usd": 0,
+    "max_price_usd": 0,
+    "max_upfront_usd_per_job": 0,
+    "max_daily_upfront_usd": 0,
+    "auto_publish": false,
+    "auto_fulfill": false
   }
 }
