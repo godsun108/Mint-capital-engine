@@ -1,0 +1,47 @@
+{
+  "schema": "mint.offer_candidate.v1",
+  "id": "candidate:foundry-scaffold-001",
+  "source_candidate_id": "ip:foundry-scaffold",
+  "state": "DESIGN_READY_NOT_FOR_SALE",
+  "evidence_basis": [
+    "demand:foundry-scaffold:reddit-webdev:2026-09-20"
+  ],
+  "problem": "Developers can lose time assembling a clean Express + TypeScript project configuration.",
+  "proposed_deliverable": {
+    "type": "digital_software_template",
+    "working_title": "Foundry Express TypeScript Starter",
+    "contents": [
+      "Express + TypeScript starter repository",
+      "development/build/start scripts",
+      "sensible project structure",
+      "environment example",
+      "README quickstart",
+      "basic test and health-route scaffold"
+    ],
+    "fulfillment": "automatic repository/archive delivery after verified payment"
+  },
+  "pricing": {
+    "state": "UNAPPROVED",
+    "currency": "usd",
+    "amount": null
+  },
+  "claims": [
+    "A reusable starter intended to reduce initial Express + TypeScript setup work."
+  ],
+  "forbidden_claims": [
+    "guaranteed time savings",
+    "best starter",
+    "customer-proven",
+    "sales-proven"
+  ],
+  "publication": {
+    "state": "BLOCKED_UNTIL_OFFER_APPROVAL",
+    "candidate_channels": [
+      "github-pages",
+      "mint-direct-web"
+    ]
+  },
+  "live_payment": {
+    "state": "BLOCKED_UNTIL_EXPLICIT_LIVE_MANDATE"
+  }
+}
