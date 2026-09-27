@@ -1,1 +1,136 @@
-{"schema":"mint.autonomy.queue.v1","items":[]}
+{
+  "schema": "mint.autonomy.queue.v2",
+  "offers": [],
+  "portfolio": [
+    {
+      "agent_id": "product-forge",
+      "class": "CREATE",
+      "state": "READY_FOR_MANDATE",
+      "objective": "build_and_sell_repeatable_digital_products",
+      "resources_available": [
+        "github",
+        "github-actions",
+        "public-web",
+        "mint-scout"
+      ],
+      "external_action_performed": false
+    },
+    {
+      "agent_id": "software-forge",
+      "class": "CREATE",
+      "state": "READY_FOR_MANDATE",
+      "objective": "package_small_useful_software",
+      "resources_available": [
+        "github",
+        "github-actions",
+        "public-web",
+        "mint-scout"
+      ],
+      "external_action_performed": false
+    },
+    {
+      "agent_id": "service-engine",
+      "class": "CREATE",
+      "state": "READY_FOR_MANDATE",
+      "objective": "operate_productized_services",
+      "resources_available": [
+        "github",
+        "github-actions",
+        "public-web",
+        "mint-scout"
+      ],
+      "external_action_performed": false
+    },
+    {
+      "agent_id": "license-engine",
+      "class": "CREATE",
+      "state": "RESEARCH",
+      "objective": "identify_and_prepare_licensable_assets",
+      "resources_available": [
+        "github",
+        "github-actions",
+        "public-web",
+        "mint-scout"
+      ],
+      "external_action_performed": false
+    },
+    {
+      "agent_id": "commission-engine",
+      "class": "EARN",
+      "state": "AUTHORIZATION_REQUIRED",
+      "objective": "operate_verified_authorized_commission_routes",
+      "resources_available": [
+        "github",
+        "github-actions",
+        "public-web",
+        "mint-scout"
+      ],
+      "external_action_performed": false
+    },
+    {
+      "agent_id": "claim-engine",
+      "class": "CLAIM",
+      "state": "ACTIVE_DISCOVERY",
+      "objective": "find_and_prepare_legitimate_claims",
+      "resources_available": [
+        "github",
+        "github-actions",
+        "public-web",
+        "mint-scout"
+      ],
+      "external_action_performed": false
+    },
+    {
+      "agent_id": "grant-scout",
+      "class": "CLAIM",
+      "state": "ACTIVE_DISCOVERY",
+      "objective": "find_and_filter_authoritative_grant_opportunities",
+      "resources_available": [
+        "github",
+        "github-actions",
+        "public-web",
+        "mint-scout"
+      ],
+      "external_action_performed": false
+    },
+    {
+      "agent_id": "savings-engine",
+      "class": "SAVE",
+      "state": "READY_FOR_INPUT",
+      "objective": "identify_repeatable_cost_reductions",
+      "resources_available": [
+        "github",
+        "github-actions",
+        "public-web",
+        "mint-scout"
+      ],
+      "external_action_performed": false
+    },
+    {
+      "agent_id": "asset-engine",
+      "class": "ACCESS",
+      "state": "RESEARCH",
+      "objective": "analyze_lawful_asset_liquidity_routes",
+      "resources_available": [
+        "github",
+        "github-actions",
+        "public-web",
+        "mint-scout"
+      ],
+      "external_action_performed": false
+    },
+    {
+      "agent_id": "market-research",
+      "class": "INVEST",
+      "state": "RESEARCH_ONLY",
+      "objective": "research_and_simulate_market_opportunities",
+      "resources_available": [
+        "github",
+        "github-actions",
+        "public-web",
+        "mint-scout"
+      ],
+      "external_action_performed": false
+    }
+  ]
+}
