@@ -7,10 +7,11 @@ import Stripe from 'stripe';
 // One Stripe Client for every Stripe-related request in this application.
 // PLACEHOLDER: set STRIPE_SECRET_KEY in the environment; never commit a real key.
 const secretKey=process.env.STRIPE_SECRET_KEY;
-if(!secretKey||secretKey.includes('REPLACE_ME')){
-  throw new Error('Missing STRIPE_SECRET_KEY. Copy .env.example values into your deployment secret store and set a Stripe TEST secret key.');
-}
-const stripeClient=new Stripe(secretKey); // SDK v22.6.2 automatically selects its pinned API version.
+const stripeConfigured=Boolean(secretKey&&!secretKey.includes('REPLACE_ME'));
+// Construct the client only when configured. This lets /health report a useful
+// configuration state instead of crashing the entire deployment before secrets exist.
+const stripeClient=stripeConfigured?new Stripe(secretKey):null;
+function requireStripe(){if(!stripeClient)throw new Error('Stripe is not configured. Set STRIPE_SECRET_KEY in the deployment secret store using a Stripe TEST secret key first.');return stripeClient;} // SDK v22.6.2 automatically selects its pinned API version.
 
 const PORT=Number(process.env.PORT||4242);
 const APP_URL=process.env.APP_URL||('http://localhost:'+PORT);
@@ -160,6 +161,8 @@ const root=path.dirname(fileURLToPath(import.meta.url));
 const server=http.createServer(async(req,res)=>{
   try{
     const u=new URL(req.url,APP_URL);
+    if(req.method==='GET'&&u.pathname==='/health')return send(res,200,{ok:true,stripeConfigured,webhookConfigured:Boolean(process.env.STRIPE_WEBHOOK_SECRET)});
+    if(u.pathname.startsWith('/api/')||u.pathname.startsWith('/refresh-onboarding')||u.pathname.startsWith('/webhooks/'))requireStripe();
     if(req.method==='GET'&&u.pathname==='/')return serveFile(res,path.join(root,'public/index.html'),'text/html; charset=utf-8');
     if(req.method==='GET'&&u.pathname==='/success')return serveFile(res,path.join(root,'public/success.html'),'text/html; charset=utf-8');
     if(req.method==='GET'&&u.pathname==='/api/storefront')return storefront(res);
