@@ -159,6 +159,26 @@ async function verifyCheckout(sessionId,res){
   });
 }
 
+async function moneyState(res){
+  // Read-only machine ledger derived from Stripe. TEST-only while MINT is proving the rail.
+  const s=await requireTestStripe();
+  const sessions=await s.checkout.sessions.list({limit:25,expand:['data.payment_intent.latest_charge','data.payment_intent.latest_charge.balance_transaction']});
+  const rows=[];
+  let totals={created:0,paid:0,pending:0,settled:0,gross:0,processorFees:0,net:0,applicationFees:0};
+  for(const session of sessions.data){
+    const pi=typeof session.payment_intent==='object'?session.payment_intent:null;
+    const ch=pi&&typeof pi.latest_charge==='object'?pi.latest_charge:null;
+    const bt=ch&&typeof ch.balance_transaction==='object'?ch.balance_transaction:null;
+    const state=session.payment_status!=='paid'?'created':bt?.status==='available'?'settled':'pending';
+    totals[state]=(totals[state]||0)+1;
+    if(session.payment_status==='paid')totals.paid++;
+    if(ch?.paid){totals.gross+=ch.amount||0;totals.applicationFees+=ch.application_fee_amount||0;}
+    if(bt){totals.processorFees+=bt.fee||0;totals.net+=bt.net||0;}
+    rows.push({sessionId:session.id,state,paymentStatus:session.payment_status,amount:session.amount_total,currency:session.currency,livemode:session.livemode,paymentIntent:pi?.id||null,charge:ch?.id||null,destination:typeof ch?.destination==='string'?ch.destination:ch?.destination?.id||null,applicationFeeAmount:ch?.application_fee_amount||0,balanceTransaction:bt?{id:bt.id,status:bt.status,fee:bt.fee,net:bt.net,available_on:bt.available_on}:null});
+  }
+  return send(res,200,{ok:true,mode:'test',generatedAt:new Date().toISOString(),totals,transactions:rows});
+}
+
 async function thinWebhook(req,res){
   const webhookSecret=process.env.STRIPE_WEBHOOK_SECRET;
   if(!webhookSecret||webhookSecret.includes('REPLACE_ME'))return send(res,500,{error:'Missing STRIPE_WEBHOOK_SECRET. Set the signing secret from your Stripe event destination or Stripe CLI.'});
@@ -197,6 +217,7 @@ const server=http.createServer(async(req,res)=>{
     if(req.method==='GET'&&u.pathname==='/')return serveFile(res,path.join(root,'public/index.html'),'text/html; charset=utf-8');
     if(req.method==='GET'&&u.pathname==='/success')return serveFile(res,path.join(root,'public/success.html'),'text/html; charset=utf-8');
     if(req.method==='GET'&&u.pathname==='/api/storefront')return storefront(res);
+    if(req.method==='GET'&&u.pathname==='/api/money-state')return moneyState(res);
     if(req.method==='POST'&&u.pathname==='/api/accounts')return createConnectedAccount(req,res);
     let m=u.pathname.match(/^\/api\/accounts\/([^/]+)\/status$/);
     if(req.method==='GET'&&m)return accountStatus(decodeURIComponent(m[1]),res);
