@@ -1,0 +1,32 @@
+name: MINT FULFILLMENT QA
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/fulfillment-qa.yml"
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify paid TEST fulfillment and unpaid denial
+        shell: bash
+        run: |
+          set -euo pipefail
+          base="https://mint-stripe-connect-v4-production.up.railway.app"
+          paid="cs_test_a1AjLH8oqGwGuYD9ivQUWxWUIIK0EFMxKAMWYLbXDc30q6zgwTwg0tbmha"
+          unpaid="cs_test_a1qDppO7ilWVjvCjMKcUqJ9AgOi3kKfgBBZMT269UcWAPN95ifnN5gnMto"
+
+          curl --fail-with-body --silent --show-error -D /tmp/paid.headers \
+            "$base/api/fulfill/$paid" -o /tmp/paid.body
+          grep -qi '^x-mint-fulfillment: verified-test-payment' /tmp/paid.headers
+          grep -q 'Foundry Express TypeScript Starter' /tmp/paid.body
+
+          code=$(curl --silent --show-error -o /tmp/unpaid.body -w '%{http_code}' \
+            "$base/api/fulfill/$unpaid")
+          test "$code" = "402"
+          grep -qi 'payment' /tmp/unpaid.body
+
+          echo "PASS: paid TEST session received artifact; unpaid TEST session denied with HTTP 402."
