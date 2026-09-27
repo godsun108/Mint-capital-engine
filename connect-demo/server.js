@@ -108,6 +108,7 @@ async function checkout(req,res){
   await requireTestStripe();
   const b=await body(req);
   if(!b.productId)return send(res,400,{error:'productId is required.'});
+  if(b.productId!=='prod_VL4ZGypBcYFCWH')return send(res,403,{error:'Public TEST checkout is limited to the mandate-approved Foundry product.'});
   const product=await stripeClient.products.retrieve(b.productId,{expand:['default_price']});
   const destination=product.metadata?.connected_account_id;
   const price=product.default_price;
