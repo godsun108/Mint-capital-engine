@@ -1,0 +1,14 @@
+{
+  "schema":"mint.automation.mandates.v1",
+  "mandates":[],
+  "defaults":{
+    "enabled":false,
+    "allowed_channels":[],
+    "min_price_usd":0,
+    "max_price_usd":0,
+    "max_upfront_usd_per_job":0,
+    "max_daily_upfront_usd":0,
+    "auto_publish":false,
+    "auto_fulfill":false
+  }
+}
