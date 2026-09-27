@@ -30,16 +30,13 @@
     },
     {
       "id": "automatic_fulfillment",
-      "state": "TODO"
+      "state": "PASS",
+      "evidence": "Railway deployment 7b7496fd-3e2b-4c90-a9bd-85bcb156f105 deployed exact SHA 3ae10b8d88bedb72583dc501c929669fa5e680e2 successfully; GitHub Actions MINT FULFILLMENT QA run 36350389922 passed: paid TEST session received the artifact and unpaid TEST session was denied with HTTP 402."
     },
     {
       "id": "offer_terms",
-      "state": "HUMAN_APPROVAL_REQUIRED",
-      "requires": [
-        "price",
-        "refund_terms",
-        "delivery_promise"
-      ]
+      "state": "PASS",
+      "evidence": "Standing mandate mandate:digital-products:001 authorizes bounded pricing, published delivery promise, and refund terms for owned nonregulated digital products in TEST-only commerce; live payments remain separately gated."
     },
     {
       "id": "live_payment_mandate",
