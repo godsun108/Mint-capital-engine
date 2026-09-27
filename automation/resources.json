@@ -1,1 +1,96 @@
-{"schema":"mint.resources.v1","resources":[{"id":"github","type":"CODE_HOST","available":true,"allowed":["research","build","test","publish_code"],"financial_write":false},{"id":"github-actions","type":"COMPUTE","available":true,"allowed":["scheduled_research","build","scoring","queue_refresh"],"financial_write":false},{"id":"public-web","type":"INFORMATION","available":true,"allowed":["research","public_opportunity_discovery"],"financial_write":false},{"id":"mint-scout","type":"DISCOVERY","available":true,"allowed":["grant_candidate_discovery"],"financial_write":false},{"id":"stripe","type":"PAYMENT_RAIL","available":false,"allowed":["payment_after_connection_and_mandate"],"financial_write":true},{"id":"sovereign","type":"AI_RUNTIME","available":false,"allowed":["research","draft","classification","generation"],"note":"Enable only after a real runtime contract is verified."}]}
+{
+  "schema": "mint.resources.v1",
+  "resources": [
+    {
+      "id": "github",
+      "type": "CODE_HOST",
+      "available": true,
+      "allowed": [
+        "research",
+        "build",
+        "test",
+        "publish_code"
+      ],
+      "financial_write": false
+    },
+    {
+      "id": "github-actions",
+      "type": "COMPUTE",
+      "available": true,
+      "allowed": [
+        "scheduled_research",
+        "build",
+        "scoring",
+        "queue_refresh"
+      ],
+      "financial_write": false
+    },
+    {
+      "id": "public-web",
+      "type": "INFORMATION",
+      "available": true,
+      "allowed": [
+        "research",
+        "public_opportunity_discovery"
+      ],
+      "financial_write": false
+    },
+    {
+      "id": "mint-scout",
+      "type": "DISCOVERY",
+      "available": true,
+      "allowed": [
+        "grant_candidate_discovery"
+      ],
+      "financial_write": false
+    },
+    {
+      "id": "stripe",
+      "type": "PAYMENT_RAIL",
+      "available": true,
+      "allowed": [
+        "test_payment_creation",
+        "test_checkout",
+        "test_reconciliation"
+      ],
+      "financial_write": true,
+      "mode": "TEST",
+      "note": "Verified Stripe TEST rail. LIVE writes remain disabled until truthful offer + explicit mandate."
+    },
+    {
+      "id": "sovereign",
+      "type": "AI_RUNTIME",
+      "available": false,
+      "allowed": [
+        "research",
+        "draft",
+        "classification",
+        "generation"
+      ],
+      "note": "Enable only after a real runtime contract is verified."
+    },
+    {
+      "id": "github-pages",
+      "type": "DISTRIBUTION",
+      "available": true,
+      "allowed": [
+        "publish_static_sales_pages",
+        "publish_free_demos",
+        "host_digital_delivery_metadata"
+      ],
+      "financial_write": false,
+      "note": "GitHub Pages/public repos can distribute owned digital assets; no marketplace demand implied."
+    },
+    {
+      "id": "direct-web",
+      "type": "DISTRIBUTION",
+      "available": true,
+      "allowed": [
+        "serve_public_offer_pages",
+        "route_to_test_checkout"
+      ],
+      "financial_write": false,
+      "note": "Current Railway-hosted MINT service can expose public pages; live checkout remains gated."
+    }
+  ]
+}
