@@ -40,7 +40,8 @@
     },
     {
       "id": "live_payment_mandate",
-      "state": "EXPLICIT_APPROVAL_REQUIRED"
+      "state": "PASS",
+      "evidence": "User explicitly authorized MINT on 2026-09-27 to activate live payments for mandate:digital-products:001; authorization remains bounded by that mandate."
     },
     {
       "id": "live_stripe_credentials",
