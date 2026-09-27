@@ -1,1 +1,21 @@
-{"schema":"mint.demand_evidence.v1","generated_at":null,"observations":[],"rules":{"evidence_must_have_source":true,"no_synthetic_demand":true}}
+{
+  "schema": "mint.demand_evidence.v1",
+  "generated_at": "2026-09-27",
+  "observations": [
+    {
+      "id": "demand:foundry-scaffold:reddit-webdev:2026-09-20",
+      "candidate_id": "ip:foundry-scaffold",
+      "source_url": "https://www.reddit.com/r/webdev/comments/1wlng6f/how_do_you_scaffold_an_express_project/",
+      "source_kind": "community_problem_report",
+      "observed_at": "2026-09-20",
+      "observed_need": "Developer reports spending substantial time configuring an Express + TypeScript project and asks for Vite-like boilerplate/scaffolding.",
+      "evidence_scope": "problem_signal_only",
+      "sale_observed": false,
+      "payment_observed": false
+    }
+  ],
+  "rules": {
+    "evidence_must_have_source": true,
+    "no_synthetic_demand": true
+  }
+}
