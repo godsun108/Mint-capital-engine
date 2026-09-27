@@ -1,10 +1,31 @@
 {
-  "schema": "mint.catalog.v1",
-  "items": [],
+  "schema": "mint.catalog.v2",
+  "items": [
+    {
+      "id": "foundry-express-ts-001",
+      "kind": "PRODUCT",
+      "title": "Foundry Express TypeScript Starter",
+      "description": "A reusable Express + TypeScript starter with strict TypeScript configuration, Express server, JSON middleware, health route, environment example, and development/build/start scripts.",
+      "deliverable_path": "products/foundry-express-ts",
+      "price_usd": 9,
+      "currency": "usd",
+      "estimated_cost_usd": 0,
+      "delivery": "AUTOMATIC_DIGITAL",
+      "delivery_promise": "Immediate access after verified successful payment, subject to service availability.",
+      "refund_terms": "Refund requests are reviewed against the published offer terms and applicable law.",
+      "source_candidate_id": "ip:foundry-scaffold",
+      "demand_evidence_ids": [
+        "demand:foundry-scaffold:reddit-webdev:2026-09-20"
+      ],
+      "mandate_id": "mandate:digital-products:001",
+      "status": "MANDATE_APPROVED_TEST_ONLY",
+      "live_payment_enabled": false
+    }
+  ],
   "rules": {
     "truthful_offer_required": true,
     "delivery_capability_required": true,
-    "external_publish_requires_approval": true,
-    "note": "Empty by design until a real product/service is approved."
+    "external_publish_requires_mandate": true,
+    "live_payment_requires_separate_activation": true
   }
 }
