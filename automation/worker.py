@@ -10,11 +10,12 @@ def score(x):
     return round((reuse*25)+(automation*25)+(demand*30)+(20/effort)-(risk*20),2)
 def main():
     inv=load("automation/ip_inventory.json")
+    demand={x["candidate_id"]:x for x in load("automation/demand_summary.json").get("items",[])}
     now=datetime.datetime.now(datetime.timezone.utc).isoformat()
     candidates=[]
     for x in inv.get("items",[]):
         if not x.get("verified"): continue
-        y=dict(x); y["score"]=score(x); y["state"]="RESEARCH_DEMAND"; y["external_action_performed"]=False
+        y=dict(x); y["demand_evidence"]=float(demand.get(x["id"],{}).get("demand_evidence",0)); y["score"]=score(y); y["state"]="DEMAND_EVIDENCED" if y["demand_evidence"]>0 else "RESEARCH_DEMAND"; y["external_action_performed"]=False
         candidates.append(y)
     candidates.sort(key=lambda z:z["score"],reverse=True)
     (ROOT/"automation"/"product_candidates.json").write_text(json.dumps({"schema":"mint.product_candidates.v1","generated_at":now,"items":candidates,"semantics":"CANDIDATE_ONLY"},indent=2))
