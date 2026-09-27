@@ -1,5 +1,25 @@
 {
   "schema": "mint.build_briefs.v1",
-  "generated_at": "2026-09-27T20:21:53.753452+00:00",
-  "items": []
+  "generated_at": "2026-09-27T21:06:58.461259+00:00",
+  "items": [
+    {
+      "candidate_id": "ip:foundry-scaffold",
+      "source_repo": "godsun108/turbo-foundry",
+      "primitive": "tested project lifecycle and repository scaffold doctrine",
+      "state": "READY_FOR_PRODUCT_DESIGN",
+      "demand_evidence": 0.24,
+      "evidence_sources": [
+        "https://www.reddit.com/r/webdev/comments/1wlng6f/how_do_you_scaffold_an_express_project/"
+      ],
+      "requirements": [
+        "preserve source truth",
+        "define bounded customer problem",
+        "define deliverable",
+        "define automated fulfillment",
+        "estimate marginal cost",
+        "test before publication"
+      ],
+      "external_action_performed": false
+    }
+  ]
 }

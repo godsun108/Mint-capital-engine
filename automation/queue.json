@@ -1,6 +1,18 @@
 {
-  "schema": "mint.autonomy.queue.v2",
-  "offers": [],
+  "schema": "mint.autonomy.queue.v4",
+  "objective": "maximize_lawful_settled_net_cash",
+  "truth_unit": "available_real_usd",
+  "offers": [
+    {
+      "offer_id": "foundry-express-ts-001",
+      "mandate_id": "mandate:digital-products:001",
+      "state": "READY_FOR_TEST_ADAPTER",
+      "publish_permitted": true,
+      "fulfill_permitted": true,
+      "live_payment_permitted": false,
+      "external_action_performed": false
+    }
+  ],
   "portfolio": [
     {
       "agent_id": "product-forge",
@@ -11,7 +23,10 @@
         "github",
         "github-actions",
         "public-web",
-        "mint-scout"
+        "mint-scout",
+        "stripe",
+        "github-pages",
+        "direct-web"
       ],
       "external_action_performed": false
     },
@@ -24,7 +39,10 @@
         "github",
         "github-actions",
         "public-web",
-        "mint-scout"
+        "mint-scout",
+        "stripe",
+        "github-pages",
+        "direct-web"
       ],
       "external_action_performed": false
     },
@@ -37,7 +55,10 @@
         "github",
         "github-actions",
         "public-web",
-        "mint-scout"
+        "mint-scout",
+        "stripe",
+        "github-pages",
+        "direct-web"
       ],
       "external_action_performed": false
     },
@@ -50,7 +71,10 @@
         "github",
         "github-actions",
         "public-web",
-        "mint-scout"
+        "mint-scout",
+        "stripe",
+        "github-pages",
+        "direct-web"
       ],
       "external_action_performed": false
     },
@@ -63,7 +87,10 @@
         "github",
         "github-actions",
         "public-web",
-        "mint-scout"
+        "mint-scout",
+        "stripe",
+        "github-pages",
+        "direct-web"
       ],
       "external_action_performed": false
     },
@@ -76,7 +103,10 @@
         "github",
         "github-actions",
         "public-web",
-        "mint-scout"
+        "mint-scout",
+        "stripe",
+        "github-pages",
+        "direct-web"
       ],
       "external_action_performed": false
     },
@@ -89,7 +119,10 @@
         "github",
         "github-actions",
         "public-web",
-        "mint-scout"
+        "mint-scout",
+        "stripe",
+        "github-pages",
+        "direct-web"
       ],
       "external_action_performed": false
     },
@@ -102,7 +135,10 @@
         "github",
         "github-actions",
         "public-web",
-        "mint-scout"
+        "mint-scout",
+        "stripe",
+        "github-pages",
+        "direct-web"
       ],
       "external_action_performed": false
     },
@@ -115,7 +151,10 @@
         "github",
         "github-actions",
         "public-web",
-        "mint-scout"
+        "mint-scout",
+        "stripe",
+        "github-pages",
+        "direct-web"
       ],
       "external_action_performed": false
     },
@@ -128,8 +167,92 @@
         "github",
         "github-actions",
         "public-web",
-        "mint-scout"
+        "mint-scout",
+        "stripe",
+        "github-pages",
+        "direct-web"
       ],
+      "external_action_performed": false
+    }
+  ],
+  "revenue_lanes": [
+    {
+      "lane_id": "digital-products",
+      "model": "build_once_sell_many",
+      "agents": [
+        "demand-scout",
+        "product-forge",
+        "builder",
+        "publisher",
+        "fulfiller"
+      ],
+      "state": "DISCOVER_AND_VERIFY",
+      "automation_target": "full_after_mandate",
+      "external_action_performed": false
+    },
+    {
+      "lane_id": "software-products",
+      "model": "small_software_and_tools",
+      "agents": [
+        "demand-scout",
+        "software-forge",
+        "tester",
+        "publisher",
+        "fulfiller"
+      ],
+      "state": "DISCOVER_AND_VERIFY",
+      "automation_target": "full_after_mandate",
+      "external_action_performed": false
+    },
+    {
+      "lane_id": "productized-services",
+      "model": "bounded_repeatable_deliverables",
+      "agents": [
+        "opportunity-scout",
+        "service-engine",
+        "delivery-agent",
+        "qa-agent",
+        "reconciler"
+      ],
+      "state": "DISCOVER_AND_VERIFY",
+      "automation_target": "full_where_platform_and_contract_allow",
+      "external_action_performed": false
+    },
+    {
+      "lane_id": "licensing",
+      "model": "license_existing_ip",
+      "agents": [
+        "license-engine",
+        "packager",
+        "opportunity-scout"
+      ],
+      "state": "DISCOVER_AND_VERIFY",
+      "automation_target": "prepare_and_route_within_mandate",
+      "external_action_performed": false
+    },
+    {
+      "lane_id": "commission",
+      "model": "verified_authorized_commission_routes",
+      "agents": [
+        "commission-engine",
+        "compliance-checker",
+        "fulfillment-router"
+      ],
+      "state": "DISCOVER_AND_VERIFY",
+      "automation_target": "only_with_verified_authorization",
+      "external_action_performed": false
+    },
+    {
+      "lane_id": "claims-grants",
+      "model": "legitimate_claims_and_grants",
+      "agents": [
+        "claim-engine",
+        "grant-scout",
+        "eligibility-checker",
+        "application-preparer"
+      ],
+      "state": "DISCOVER_AND_VERIFY",
+      "automation_target": "research_and_prepare;attestations_require_human",
       "external_action_performed": false
     }
   ]

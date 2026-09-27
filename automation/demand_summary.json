@@ -1,5 +1,16 @@
 {
   "schema": "mint.demand_summary.v1",
-  "generated_at": "2026-09-27T20:21:53.665815+00:00",
-  "items": []
+  "generated_at": "2026-09-27T21:06:57.628302+00:00",
+  "items": [
+    {
+      "candidate_id": "ip:foundry-scaffold",
+      "observation_count": 1,
+      "source_kind_count": 1,
+      "demand_evidence": 0.24,
+      "sources": [
+        "https://www.reddit.com/r/webdev/comments/1wlng6f/how_do_you_scaffold_an_express_project/"
+      ],
+      "semantics": "EVIDENCE_NOT_SALES"
+    }
+  ]
 }
