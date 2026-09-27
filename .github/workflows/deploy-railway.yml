@@ -1,0 +1,44 @@
+name: Deploy MINT fulfillment to Railway
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "connect-demo/**"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mint-railway-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy exact Git commit
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+          SERVICE_ID: f15bf19d-942b-4139-8fc0-76a1f8deca36
+          ENVIRONMENT_ID: 5a8fea7a-1511-4bdd-bc05-ee068a84cd71
+          COMMIT_SHA: ${{ github.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$RAILWAY_TOKEN"
+          body=$(jq -nc \
+            --arg service "$SERVICE_ID" \
+            --arg environment "$ENVIRONMENT_ID" \
+            --arg sha "$COMMIT_SHA" \
+            '{query:"mutation serviceInstanceDeployV2($serviceId: String!, $environmentId: String!, $commitSha: String!) { serviceInstanceDeployV2(serviceId: $serviceId, environmentId: $environmentId, commitSha: $commitSha) }",variables:{serviceId:$service,environmentId:$environment,commitSha:$sha}}')
+          response=$(curl --fail-with-body --silent --show-error \
+            --request POST \
+            --url https://backboard.railway.com/graphql/v2 \
+            --header "Authorization: Bearer $RAILWAY_TOKEN" \
+            --header "Content-Type: application/json" \
+            --data "$body")
+          echo "$response" | jq .
+          test "$(echo "$response" | jq '.errors // [] | length')" -eq 0
+          test -n "$(echo "$response" | jq -r '.data.serviceInstanceDeployV2 // empty')"
