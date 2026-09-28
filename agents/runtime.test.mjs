@@ -34,3 +34,25 @@ const exp=createExperiment({id:"e1",hypothesis:"x",offer:"y"});
 exp.settledRevenue=50; exp.costs=[{amount:12}];
 assert.equal(summarizeExperiment(exp).contribution,38);
 console.log("agent orchestration tests passed");
+
+
+import { createExecutor, replaceJob } from "./executor.js";
+import { companySnapshot } from "./dashboard.js";
+import { runSimulation } from "./simulation.js";
+
+let exState=initialState();
+let exJob=plan({id:"gate",agent:"merchant",objective:"launch",budget:5});
+exState.jobs=[exJob];
+const gated=createExecutor({handlers:{merchant:async({api})=>{const g=api.action({type:"publish_publicly",estimatedCost:0}); assert.equal(g.ok,false);}}});
+let er=await gated(exJob,exState,{});
+assert.equal(er.job.status,"WAITING_FOR_HUMAN_APPROVAL");
+assert.equal(er.state.approvals.length,1);
+
+const sim=await runSimulation();
+assert.equal(sim.jobs.length,6);
+assert.equal(sim.jobs.every(j=>j.status==="COMPLETE"),true);
+const snap=companySnapshot(sim,registry);
+assert.equal(snap.agents,30);
+assert.equal(snap.jobs,6);
+assert.ok(snap.totalTrackedCost>0);
+console.log("executor and company simulation tests passed");
