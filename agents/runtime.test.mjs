@@ -56,3 +56,13 @@ assert.equal(snap.agents,30);
 assert.equal(snap.jobs,6);
 assert.ok(snap.totalTrackedCost>0);
 console.log("executor and company simulation tests passed");
+
+
+import { createMission, opportunityCandidate, readyForResearch } from "./mission.js";
+import { event, TYPES } from "./events.js";
+const mission=createMission({id:"m1",objective:"find first dollar",budget:25,successCriteria:["settled payment"]});
+assert.equal(mission.status,"DRAFT");
+const cand=opportunityCandidate({id:"c1",title:"x",problem:"y",evidence:[{type:"external_source",url:"https://example.com"}]});
+assert.equal(readyForResearch(cand),true);
+assert.equal(event({id:"1",type:TYPES.OPPORTUNITY_DISCOVERED,producer:"scout"}).requires_human_approval,false);
+console.log("mission and event contract tests passed");
