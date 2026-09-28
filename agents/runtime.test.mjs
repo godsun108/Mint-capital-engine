@@ -66,3 +66,15 @@ const cand=opportunityCandidate({id:"c1",title:"x",problem:"y",evidence:[{type:"
 assert.equal(readyForResearch(cand),true);
 assert.equal(event({id:"1",type:TYPES.OPPORTUNITY_DISCOVERED,producer:"scout"}).requires_human_approval,false);
 console.log("mission and event contract tests passed");
+
+
+import { approve, reject, pending } from "./approval.js";
+let ap={approvals:[{id:"p1",status:"PENDING"},{id:"p2",status:"PENDING"}]};
+assert.equal(pending(ap).length,2);
+ap=approve(ap,{approvalId:"p1",note:"test approval"});
+assert.equal(pending(ap).length,1);
+assert.equal(ap.approvals[0].status,"APPROVED");
+ap=reject(ap,{approvalId:"p2",note:"test rejection"});
+assert.equal(pending(ap).length,0);
+assert.equal(ap.approvals[1].status,"REJECTED");
+console.log("human approval resolution tests passed");
