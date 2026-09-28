@@ -1,0 +1,320 @@
+{
+  "version": 1,
+  "north_star": "lawful settled net cash produced by useful products and services",
+  "agents": [
+    {
+      "id": "scout",
+      "division": "discovery",
+      "mission": "Discover public opportunities.",
+      "capabilities": [
+        "public_research",
+        "propose_task"
+      ],
+      "approval": "autonomous_read_only"
+    },
+    {
+      "id": "grant-scout",
+      "division": "discovery",
+      "mission": "Find and normalize grant opportunities.",
+      "capabilities": [
+        "public_research",
+        "draft"
+      ],
+      "approval": "autonomous_read_only"
+    },
+    {
+      "id": "rfp-scout",
+      "division": "discovery",
+      "mission": "Find and normalize procurement opportunities.",
+      "capabilities": [
+        "public_research",
+        "draft"
+      ],
+      "approval": "autonomous_read_only"
+    },
+    {
+      "id": "property-scout",
+      "division": "discovery",
+      "mission": "Research property opportunities from lawful public data.",
+      "capabilities": [
+        "public_research",
+        "score"
+      ],
+      "approval": "autonomous_read_only"
+    },
+    {
+      "id": "arbitrage-scout",
+      "division": "discovery",
+      "mission": "Research lawful resale spreads after realistic costs.",
+      "capabilities": [
+        "public_research",
+        "score"
+      ],
+      "approval": "autonomous_read_only"
+    },
+    {
+      "id": "oracle",
+      "division": "intelligence",
+      "mission": "Test hypotheses and estimate economics from evidence.",
+      "capabilities": [
+        "research",
+        "analysis",
+        "experiment"
+      ],
+      "approval": "autonomous_analysis"
+    },
+    {
+      "id": "research-desk",
+      "division": "intelligence",
+      "mission": "Produce sourced research deliverables.",
+      "capabilities": [
+        "public_research",
+        "draft"
+      ],
+      "approval": "autonomous_analysis"
+    },
+    {
+      "id": "competitive-intel",
+      "division": "intelligence",
+      "mission": "Track public competitive signals.",
+      "capabilities": [
+        "public_research",
+        "monitor"
+      ],
+      "approval": "autonomous_read_only"
+    },
+    {
+      "id": "data-refinery",
+      "division": "intelligence",
+      "mission": "Clean and transform lawfully acquired datasets.",
+      "capabilities": [
+        "transform",
+        "analyze"
+      ],
+      "approval": "autonomous_analysis"
+    },
+    {
+      "id": "builder",
+      "division": "production",
+      "mission": "Create bounded software and digital products.",
+      "capabilities": [
+        "code",
+        "draft",
+        "test"
+      ],
+      "approval": "sandbox_write"
+    },
+    {
+      "id": "website-rescue",
+      "division": "production",
+      "mission": "Audit and prepare improvements for websites.",
+      "capabilities": [
+        "public_research",
+        "code",
+        "draft"
+      ],
+      "approval": "sandbox_write"
+    },
+    {
+      "id": "document-factory",
+      "division": "production",
+      "mission": "Create customized business documents from verified inputs.",
+      "capabilities": [
+        "draft",
+        "transform"
+      ],
+      "approval": "sandbox_write"
+    },
+    {
+      "id": "content-engine",
+      "division": "production",
+      "mission": "Create useful evidence-grounded content for approved offers.",
+      "capabilities": [
+        "research",
+        "draft"
+      ],
+      "approval": "sandbox_write"
+    },
+    {
+      "id": "merchant",
+      "division": "commerce",
+      "mission": "Package approved products, pricing experiments and fulfillment.",
+      "capabilities": [
+        "draft",
+        "catalog",
+        "fulfillment"
+      ],
+      "approval": "approved_offer_only"
+    },
+    {
+      "id": "closer",
+      "division": "commerce",
+      "mission": "Serve and qualify inbound prospects for approved offers.",
+      "capabilities": [
+        "inbound_response",
+        "qualify"
+      ],
+      "approval": "approved_offer_only"
+    },
+    {
+      "id": "prospector",
+      "division": "commerce",
+      "mission": "Research qualified B2B prospects and prepare outreach drafts.",
+      "capabilities": [
+        "public_research",
+        "draft_outreach"
+      ],
+      "approval": "human_before_send"
+    },
+    {
+      "id": "newsletter",
+      "division": "media",
+      "mission": "Produce evidence-grounded niche briefings.",
+      "capabilities": [
+        "research",
+        "draft",
+        "publish_prepare"
+      ],
+      "approval": "human_before_publish"
+    },
+    {
+      "id": "directory",
+      "division": "media",
+      "mission": "Maintain verified niche resource directories.",
+      "capabilities": [
+        "public_research",
+        "catalog"
+      ],
+      "approval": "sandbox_write"
+    },
+    {
+      "id": "micro-saas",
+      "division": "products",
+      "mission": "Operate bounded subscription software experiments.",
+      "capabilities": [
+        "code",
+        "test",
+        "measure"
+      ],
+      "approval": "human_before_launch"
+    },
+    {
+      "id": "api-product",
+      "division": "products",
+      "mission": "Package useful transformations as metered APIs.",
+      "capabilities": [
+        "code",
+        "test",
+        "measure"
+      ],
+      "approval": "human_before_launch"
+    },
+    {
+      "id": "creator-backoffice",
+      "division": "products",
+      "mission": "Automate creator operations within explicit permissions.",
+      "capabilities": [
+        "organize",
+        "draft",
+        "measure"
+      ],
+      "approval": "scoped_permission"
+    },
+    {
+      "id": "property-intel",
+      "division": "products",
+      "mission": "Produce factual property research and alerts.",
+      "capabilities": [
+        "public_research",
+        "analyze",
+        "alert_prepare"
+      ],
+      "approval": "autonomous_analysis"
+    },
+    {
+      "id": "mint",
+      "division": "finance",
+      "mission": "Maintain opportunity economics and settlement ledger.",
+      "capabilities": [
+        "score",
+        "ledger",
+        "reconcile"
+      ],
+      "approval": "no_external_money_movement"
+    },
+    {
+      "id": "revenue-analyst",
+      "division": "finance",
+      "mission": "Attribute settled revenue, cost and experiment performance.",
+      "capabilities": [
+        "analyze",
+        "report"
+      ],
+      "approval": "autonomous_analysis"
+    },
+    {
+      "id": "cost-controller",
+      "division": "finance",
+      "mission": "Enforce experiment and compute budget ceilings.",
+      "capabilities": [
+        "budget_check",
+        "halt"
+      ],
+      "approval": "autonomous_guardrail"
+    },
+    {
+      "id": "auditor",
+      "division": "control",
+      "mission": "Verify evidence, outputs and claimed results.",
+      "capabilities": [
+        "audit",
+        "halt",
+        "report"
+      ],
+      "approval": "autonomous_guardrail"
+    },
+    {
+      "id": "compliance",
+      "division": "control",
+      "mission": "Detect actions requiring legal, policy or human review.",
+      "capabilities": [
+        "policy_check",
+        "halt",
+        "escalate"
+      ],
+      "approval": "autonomous_guardrail"
+    },
+    {
+      "id": "security",
+      "division": "control",
+      "mission": "Enforce least privilege and protect secrets.",
+      "capabilities": [
+        "permission_check",
+        "halt"
+      ],
+      "approval": "autonomous_guardrail"
+    },
+    {
+      "id": "governor",
+      "division": "control",
+      "mission": "Route consequential decisions to the human owner.",
+      "capabilities": [
+        "approval_request",
+        "halt",
+        "resume"
+      ],
+      "approval": "human_authority"
+    },
+    {
+      "id": "forge",
+      "division": "control",
+      "mission": "Compare workflows using measured accuracy, cost, latency and economic impact.",
+      "capabilities": [
+        "experiment",
+        "evaluate",
+        "propose_revision"
+      ],
+      "approval": "no_self_permission_escalation"
+    }
+  ]
+}
