@@ -1,0 +1,22 @@
+name: Agent Company Tests
+on:
+  pull_request:
+    paths:
+      - "agents/**"
+      - "products/lead-response/**"
+  push:
+    branches: [main]
+    paths:
+      - "agents/**"
+      - "products/lead-response/**"
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node agents/runtime.test.mjs
+      - run: node products/lead-response/diagnostic.test.mjs
+      - run: node agents/public-snapshot.test.mjs

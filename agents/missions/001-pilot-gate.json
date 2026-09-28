@@ -1,0 +1,39 @@
+{
+  "mission": "001",
+  "gate": "PILOT_LAUNCH",
+  "status": "WAITING_FOR_HUMAN_APPROVAL",
+  "decisions": [
+    {
+      "id": "offer_wording",
+      "required": true,
+      "status": "PENDING"
+    },
+    {
+      "id": "price_variant",
+      "required": true,
+      "status": "PENDING",
+      "options": [
+        "A_49_DIAGNOSTIC",
+        "B_99_DIAGNOSTIC_PLUS_PLAN",
+        "C_FREE_LIMITED_DESIGN_PARTNER"
+      ]
+    },
+    {
+      "id": "acquisition_method",
+      "required": true,
+      "status": "PENDING",
+      "note": "No autonomous outbound messaging."
+    },
+    {
+      "id": "payment_activation",
+      "required": false,
+      "status": "PENDING_IF_PAID"
+    },
+    {
+      "id": "production_deployment",
+      "required": true,
+      "status": "PENDING"
+    }
+  ],
+  "auditorVerdict": "READY_FOR_HUMAN_APPROVED_PILOT_VALIDATION"
+}

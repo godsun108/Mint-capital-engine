@@ -1,0 +1,64 @@
+{
+  "schema": "mint.agent-company.public.v1",
+  "generatedAt": "2026-09-27T21:20:00-04:00",
+  "sourceCommit": "feature-branch-preview",
+  "truth": {
+    "liveBackend": false,
+    "readOnly": true,
+    "settlementAuthority": "MINT"
+  },
+  "company": {
+    "agents": 30,
+    "jobs": 6,
+    "status": {
+      "COMPLETE": 6
+    },
+    "pendingApprovals": 4,
+    "experiments": 1,
+    "settledRevenue": 0,
+    "totalTrackedCost": 0.12,
+    "systemHalted": false
+  },
+  "missions": [
+    {
+      "id": "001",
+      "objective": "First Evidence-Backed Dollar — Lead Response Diagnostic",
+      "status": "WAITING_FOR_HUMAN_APPROVAL",
+      "budget": 25,
+      "successCriteria": [
+        "first verified settled external customer payment"
+      ],
+      "stopConditions": [
+        "unsupported demand",
+        "unresolved compliance issue",
+        "experiment exceeds approved budget"
+      ]
+    }
+  ],
+  "approvals": [
+    {
+      "id": "001-offer",
+      "jobId": "package-001",
+      "action": "approve_offer_wording",
+      "status": "PENDING"
+    },
+    {
+      "id": "001-price",
+      "jobId": "package-001",
+      "action": "approve_price_variant",
+      "status": "PENDING"
+    },
+    {
+      "id": "001-acquisition",
+      "jobId": "package-001",
+      "action": "approve_acquisition_method",
+      "status": "PENDING"
+    },
+    {
+      "id": "001-deploy",
+      "jobId": "build-001",
+      "action": "deploy_production",
+      "status": "PENDING"
+    }
+  ]
+}

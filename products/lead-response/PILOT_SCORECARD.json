@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "mission": "001",
+  "stage": "HUMAN_APPROVED_PILOT",
+  "metrics": [
+    {
+      "id": "pilot_conversations",
+      "target": 5,
+      "kind": "count"
+    },
+    {
+      "id": "diagnostics_completed",
+      "target": 3,
+      "kind": "count"
+    },
+    {
+      "id": "willing_to_pay",
+      "target": 1,
+      "kind": "count"
+    },
+    {
+      "id": "settled_customers",
+      "target": 1,
+      "kind": "count"
+    },
+    {
+      "id": "settled_revenue_usd",
+      "target": 49,
+      "kind": "usd"
+    },
+    {
+      "id": "median_operator_minutes",
+      "target": 60,
+      "direction": "lte",
+      "kind": "minutes"
+    }
+  ],
+  "truth_rules": [
+    "interest is not revenue",
+    "invoice is not revenue",
+    "authorized payment is not settled revenue",
+    "only verified settlement counts",
+    "free design-partner feedback is not a paid conversion"
+  ]
+}
