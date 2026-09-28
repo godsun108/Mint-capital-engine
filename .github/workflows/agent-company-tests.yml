@@ -3,10 +3,12 @@ on:
   pull_request:
     paths:
       - "agents/**"
+      - "products/lead-response/**"
   push:
     branches: [main]
     paths:
       - "agents/**"
+      - "products/lead-response/**"
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -16,3 +18,4 @@ jobs:
         with:
           node-version: 22
       - run: node agents/runtime.test.mjs
+      - run: node products/lead-response/diagnostic.test.mjs
