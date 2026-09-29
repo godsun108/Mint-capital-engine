@@ -111,6 +111,8 @@ async function checkout(req,res){
   // LIVE rail is deliberately direct-to-platform: no Connect account, transfer,
   // application fee, payout, or customer-management privileges are required.
   if(balance.livemode===true){
+    // Fail closed: the request must name the exact mandate-approved live offer.
+    if(b.productId!=='foundry-express-ts-001')return send(res,403,{error:'Live checkout is limited to the mandate-approved Foundry offer.'});
     const session=await s.checkout.sessions.create({
       line_items:[{price_data:{currency:'usd',unit_amount:900,product_data:{name:'Foundry Express TypeScript Starter',description:'Reusable Express + TypeScript starter with strict TypeScript, JSON middleware, a health route, environment example, and dev/build/start scripts.'}},quantity:1}],
       mode:'payment',
@@ -119,7 +121,7 @@ async function checkout(req,res){
       success_url:APP_URL+'/success?session_id={CHECKOUT_SESSION_ID}',
       cancel_url:APP_URL+'/?checkout=cancelled'
     });
-    return send(res,201,{id:session.id,url:session.url,mode:'live'});
+    return send(res,201,{id:session.id,url:session.url,mode:'live',offerId:'foundry-express-ts-001'});
   }
   await requireTestStripe();
   if(!b.productId)return send(res,400,{error:'productId is required.'});
