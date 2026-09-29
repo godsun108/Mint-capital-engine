@@ -105,8 +105,23 @@ async function storefront(res){
 }
 
 async function checkout(req,res){
-  await requireTestStripe();
+  const s=requireStripe();
+  const balance=await s.balance.retrieve();
   const b=await body(req);
+  // LIVE rail is deliberately direct-to-platform: no Connect account, transfer,
+  // application fee, payout, or customer-management privileges are required.
+  if(balance.livemode===true){
+    const session=await s.checkout.sessions.create({
+      line_items:[{price_data:{currency:'usd',unit_amount:900,product_data:{name:'Foundry Express TypeScript Starter',description:'Reusable Express + TypeScript starter with strict TypeScript, JSON middleware, a health route, environment example, and dev/build/start scripts.'}},quantity:1}],
+      mode:'payment',
+      metadata:{mint_offer_id:'foundry-express-ts-001',mint_mandate_id:'mandate:digital-products:001'},
+      payment_intent_data:{metadata:{mint_offer_id:'foundry-express-ts-001',mint_mandate_id:'mandate:digital-products:001'}},
+      success_url:APP_URL+'/success?session_id={CHECKOUT_SESSION_ID}',
+      cancel_url:APP_URL+'/?checkout=cancelled'
+    });
+    return send(res,201,{id:session.id,url:session.url,mode:'live'});
+  }
+  await requireTestStripe();
   if(!b.productId)return send(res,400,{error:'productId is required.'});
   if(b.productId!=='prod_VL4ZGypBcYFCWH')return send(res,403,{error:'Public TEST checkout is limited to the mandate-approved Foundry product.'});
   const product=await stripeClient.products.retrieve(b.productId,{expand:['default_price']});
@@ -138,7 +153,7 @@ async function checkout(req,res){
 
 async function verifyCheckout(sessionId,res){
   // Read-only TEST reconciliation endpoint. Never creates, captures, refunds, or transfers funds.
-  const s=await requireTestStripe();
+  const s=requireStripe();
   const session=await s.checkout.sessions.retrieve(sessionId,{expand:['payment_intent.latest_charge','payment_intent.latest_charge.balance_transaction']});
   const pi=typeof session.payment_intent==='object'?session.payment_intent:null;
   const charge=pi&&typeof pi.latest_charge==='object'?pi.latest_charge:null;
@@ -163,37 +178,39 @@ async function verifyCheckout(sessionId,res){
 }
 
 async function moneyState(res){
-  // Read-only machine ledger derived from Stripe. TEST-only while MINT is proving the rail.
-  const s=await requireTestStripe();
+  // Read-only machine ledger derived from Stripe. Provider availability is not
+  // represented as bank settlement; MINT preserves PAID != SETTLED.
+  const s=requireStripe();
   const sessions=await s.checkout.sessions.list({limit:25,expand:['data.payment_intent.latest_charge','data.payment_intent.latest_charge.balance_transaction']});
   const rows=[];
-  let totals={created:0,paid:0,pending:0,settled:0,gross:0,processorFees:0,net:0,applicationFees:0};
+  let totals={created:0,paid:0,pending:0,provider_available:0,settled:0,gross:0,processorFees:0,net:0,applicationFees:0};
   for(const session of sessions.data){
     const pi=typeof session.payment_intent==='object'?session.payment_intent:null;
     const ch=pi&&typeof pi.latest_charge==='object'?pi.latest_charge:null;
     const bt=ch&&typeof ch.balance_transaction==='object'?ch.balance_transaction:null;
-    const state=session.payment_status!=='paid'?'created':bt?.status==='available'?'settled':'pending';
+    const state=session.payment_status!=='paid'?'created':bt?.status==='available'?'provider_available':'pending';
     totals[state]=(totals[state]||0)+1;
     if(session.payment_status==='paid')totals.paid++;
     if(ch?.paid){totals.gross+=ch.amount||0;totals.applicationFees+=ch.application_fee_amount||0;}
     if(bt){totals.processorFees+=bt.fee||0;totals.net+=bt.net||0;}
     rows.push({sessionId:session.id,state,paymentStatus:session.payment_status,amount:session.amount_total,currency:session.currency,livemode:session.livemode,paymentIntent:pi?.id||null,charge:ch?.id||null,destination:typeof ch?.destination==='string'?ch.destination:ch?.destination?.id||null,applicationFeeAmount:ch?.application_fee_amount||0,balanceTransaction:bt?{id:bt.id,status:bt.status,fee:bt.fee,net:bt.net,available_on:bt.available_on}:null});
   }
-  return send(res,200,{ok:true,mode:'test',generatedAt:new Date().toISOString(),totals,transactions:rows});
+  return send(res,200,{ok:true,mode:(rows.some(r=>r.livemode)?'live':'test'),settledDefinition:'Requires independent destination-cash evidence; Stripe availability alone is not SETTLED.',generatedAt:new Date().toISOString(),totals,transactions:rows});
 }
 
 async function fulfillCheckout(sessionId,res){
-  const s=await requireTestStripe();
+  const s=requireStripe();
   const session=await s.checkout.sessions.retrieve(sessionId,{expand:['line_items.data.price.product']});
-  if(session.livemode!==false)return send(res,409,{error:'MINT fulfillment safety gate: TEST sessions only.'});
   if(session.payment_status!=='paid'||session.status!=='complete')return send(res,402,{error:'Verified successful payment is required before fulfillment.',payment_status:session.payment_status,status:session.status});
   const items=session.line_items?.data||[];
   const product=items[0]?.price?.product;
   const productId=typeof product==='string'?product:product?.id;
-  if(productId!=='prod_VL4ZGypBcYFCWH')return send(res,404,{error:'No automatic fulfillment mapping exists for this product.'});
+  const liveOffer=session.livemode===true&&session.metadata?.mint_offer_id==='foundry-express-ts-001';
+  const testOffer=session.livemode===false&&productId==='prod_VL4ZGypBcYFCWH';
+  if(!liveOffer&&!testOffer)return send(res,404,{error:'No automatic fulfillment mapping exists for this verified offer.'});
   const file=path.join(root,'deliverables','foundry-express-ts','README.md');
   await stat(file);
-  res.writeHead(200,{'content-type':'text/markdown; charset=utf-8','content-disposition':'attachment; filename="foundry-express-ts-README.md"','x-mint-fulfillment':'verified-test-payment'});
+  res.writeHead(200,{'content-type':'text/markdown; charset=utf-8','content-disposition':'attachment; filename="foundry-express-ts-README.md"','x-mint-fulfillment':session.livemode?'verified-live-payment':'verified-test-payment'});
   createReadStream(file).pipe(res);
 }
 
