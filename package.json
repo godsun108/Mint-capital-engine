@@ -19,6 +19,7 @@
     "acquisition:observe": "node automation/observe-acquisition.js",
     "catalog:validate": "node automation/validate-catalog.js",
     "storefronts:build": "node automation/build-storefronts.js",
-    "commerce:prepare": "npm run catalog:validate && npm run storefronts:build"
+    "commerce:prepare": "npm run catalog:validate && npm run storefronts:generate",
+    "storefronts:generate": "node automation/generate-storefronts.js"
   }
 }
