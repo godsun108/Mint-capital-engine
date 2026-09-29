@@ -1,0 +1,35 @@
+name: MINT Product Cycle
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "17 */6 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: mint-product-cycle
+  cancel-in-progress: false
+
+jobs:
+  cycle:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Run evidence-gated product cycle
+        run: npm run product:cycle
+      - name: Persist auditable cycle state
+        run: |
+          if git diff --quiet -- automation/state/product-cycle.json; then
+            echo "No new eligible candidate work."
+            exit 0
+          fi
+          git config user.name "mint-product-cycle"
+          git config user.email "actions@users.noreply.github.com"
+          git add automation/state/product-cycle.json
+          git commit -m "MINT product cycle state"
+          git push
