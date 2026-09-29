@@ -16,9 +16,9 @@ for(const t of targets){
   const body=await r.text();
   let semantic=r.ok?"REACHABLE":"HTTP_ERROR";
   let semanticOk=r.ok;
-  if(t.kind==="HEALTH"&&!r.ok){semantic="UNHEALTHY";semanticOk=false}
+  if(t.kind==="HEALTH"){try{const j=JSON.parse(body);if(!r.ok||j.ok!==true){semantic="UNHEALTHY";semanticOk=false}}catch{semantic="INVALID_HEALTH_JSON";semanticOk=false}}
   if(t.kind==="JSON"){
-   try{JSON.parse(body)}
+   try{const j=JSON.parse(body);if(!r.ok||j.ok!==true){semantic="JSON_NOT_OK";semanticOk=false}}
    catch{semantic="INVALID_JSON";semanticOk=false}
   }
   results.push({...t,http_status:r.status,ok:r.ok&&semanticOk,transport_ok:r.ok,semantic,latency_ms:Date.now()-started,observed_at:new Date().toISOString()});
