@@ -14,6 +14,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+      - name: Restore factory state
+        uses: actions/cache/restore@v4
+        with:
+          path: automation/state
+          key: mint-factory-state-v1-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            mint-factory-state-v1-
       - name: Factory heartbeat
         run: node automation/factory.js
       - name: Preserve factory evidence
@@ -24,3 +31,9 @@ jobs:
           path: automation/state/**
           if-no-files-found: warn
           retention-days: 30
+      - name: Save factory state
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: automation/state
+          key: mint-factory-state-v1-${{ github.run_id }}-${{ github.run_attempt }}
