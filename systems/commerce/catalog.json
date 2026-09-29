@@ -109,6 +109,42 @@
         "github-pages",
         "mint-direct-web"
       ]
+    },
+    "mint-builder-launch-pack-005": {
+      "id": "mint-builder-launch-pack-005",
+      "status": "ACTIVE",
+      "type": "DIGITAL_DOWNLOAD",
+      "name": "MINT Builder Launch Pack",
+      "description": "A four-part builder pack combining the Foundry Express + TypeScript starter, API launch preflight, small-site launch preflight, and practical AI workflow system.",
+      "price": {
+        "currency": "usd",
+        "unit_amount": 1900
+      },
+      "mandate_id": "mandate:digital-products:001",
+      "fulfillment": {
+        "kind": "FILE",
+        "path": "deliverables/mint-builder-launch-pack/README.md",
+        "filename": "mint-builder-launch-pack.md",
+        "content_type": "text/markdown; charset=utf-8"
+      },
+      "acquisition": {
+        "headline": "Build it. Preflight it. Launch it.",
+        "body": "Four separately available MINT builder products packaged together for $19; their current separate prices total $28.",
+        "cta": "Get the Builder Launch Pack"
+      },
+      "channels": [
+        "github-pages",
+        "mint-direct-web"
+      ],
+      "bundle": {
+        "components": [
+          "foundry-express-ts-001",
+          "api-launch-checklist-002",
+          "site-launch-checklist-003",
+          "ai-workflow-kit-004"
+        ],
+        "current_separate_total_cents": 2800
+      }
     }
   }
 }
