@@ -21,6 +21,14 @@ jobs:
           key: mint-factory-state-v1-${{ github.run_id }}-${{ github.run_attempt }}
           restore-keys: |
             mint-factory-state-v1-
+      - name: Report restored state
+        run: |
+          if [ -f automation/state/factory-queue.json ]; then
+            echo "MINT_STATE_RESTORED=true"
+            node -e 'const fs=require("fs");const q=JSON.parse(fs.readFileSync("automation/state/factory-queue.json","utf8"));console.log(JSON.stringify({schema:q.schema,created_at:q.created_at,updated_at:q.updated_at,tasks:q.tasks.map(t=>({task_id:t.task_id,status:t.status,attempts:t.attempts||0}))},null,2))'
+          else
+            echo "MINT_STATE_RESTORED=false"
+          fi
       - name: Factory heartbeat
         run: node automation/factory.js
       - name: Preserve factory evidence
