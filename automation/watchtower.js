@@ -22,7 +22,7 @@ for(const t of targets){
   results.push({...t,http_status:r.status,ok:r.ok&&semanticOk,transport_ok:r.ok,semantic,latency_ms:Date.now()-started,observed_at:new Date().toISOString()});
  }catch(e){results.push({...t,ok:false,transport_ok:false,semantic:"UNREACHABLE",error:String(e?.message||e),latency_ms:Date.now()-started,observed_at:new Date().toISOString()})}
 }
-const report={schema:"mint.watchtower.observation.v1",truth:"Reachability does not prove checkout, payment, fulfillment, traffic, customer activity, settlement, or profitability.",results};
+const report={schema:"mint.watchtower.observation.v1",ok:results.every(x=>x.ok),observed_at:new Date().toISOString(),truth:"Reachability does not prove checkout, payment, fulfillment, traffic, customer activity, settlement, or profitability.",results};
 fs.mkdirSync(path.join(root,"automation/state"),{recursive:true});
 fs.writeFileSync(path.join(root,"automation/state/watchtower.json"),JSON.stringify(report,null,2)+"\n");
 console.log(JSON.stringify(report,null,2));
