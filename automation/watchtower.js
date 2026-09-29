@@ -5,7 +5,8 @@ const targets=[
  {id:"pages-shop",url:"https://godsun108.github.io/Mint-capital-engine/shop/",kind:"PAGE"},
  {id:"railway-health",url:"https://mint-stripe-connect-v4-production.up.railway.app/health",kind:"HEALTH"},
  {id:"acquisition-state",url:"https://mint-stripe-connect-v4-production.up.railway.app/api/acquisition/state",kind:"JSON"},
- {id:"commerce-evidence",url:"https://mint-stripe-connect-v4-production.up.railway.app/api/commerce/evidence",kind:"JSON"}
+ {id:"commerce-evidence",url:"https://mint-stripe-connect-v4-production.up.railway.app/api/commerce/evidence",kind:"JSON"},
+ {id:"fulfillment-evidence",url:"https://mint-stripe-connect-v4-production.up.railway.app/api/fulfillment/evidence",kind:"JSON"}
 ];
 const results=[];
 for(const t of targets){
