@@ -1,0 +1,76 @@
+{
+  "schema": "mint.acquisition.lines.v1",
+  "semantics": "ZERO_SPEND_OWNED_INTENT_SURFACES_NOT_TRAFFIC_OR_CUSTOMERS",
+  "lines": [
+    {
+      "id": "express-typescript-starter",
+      "offer": "foundry-express-ts-001",
+      "intent": "express typescript starter",
+      "angle": "A practical pre-build map of what a small Express + TypeScript starter should contain.",
+      "source": "line-express-ts-starter"
+    },
+    {
+      "id": "express-api-boilerplate",
+      "offer": "foundry-express-ts-001",
+      "intent": "express api boilerplate",
+      "angle": "A concise architecture checklist for a reusable Express API base.",
+      "source": "line-express-api-boilerplate"
+    },
+    {
+      "id": "typescript-api-starter",
+      "offer": "foundry-express-ts-001",
+      "intent": "typescript api starter",
+      "angle": "A minimal TypeScript API launch map with health, env, scripts and middleware.",
+      "source": "line-ts-api-starter"
+    },
+    {
+      "id": "api-production-readiness",
+      "offer": "api-launch-checklist-002",
+      "intent": "api production readiness checklist",
+      "angle": "Free preflight questions for reliability, security basics, operations and customer experience.",
+      "source": "line-api-readiness"
+    },
+    {
+      "id": "rest-api-launch",
+      "offer": "api-launch-checklist-002",
+      "intent": "rest api launch checklist",
+      "angle": "A quick REST API launch preflight before publishing endpoints.",
+      "source": "line-rest-api-launch"
+    },
+    {
+      "id": "website-prelaunch",
+      "offer": "site-launch-checklist-003",
+      "intent": "website pre launch checklist",
+      "angle": "A free final-pass map for messaging, mobile, discovery, trust and customer journey.",
+      "source": "line-site-prelaunch"
+    },
+    {
+      "id": "small-business-website-launch",
+      "offer": "site-launch-checklist-003",
+      "intent": "small website launch checklist",
+      "angle": "A focused launch pass for a small site without enterprise ceremony.",
+      "source": "line-small-site-launch"
+    },
+    {
+      "id": "ai-workflow-template",
+      "offer": "ai-workflow-kit-004",
+      "intent": "ai workflow template",
+      "angle": "A free framework for moving AI work from vague prompt to verified output.",
+      "source": "line-ai-workflow"
+    },
+    {
+      "id": "ai-prompt-workflow",
+      "offer": "ai-workflow-kit-004",
+      "intent": "ai prompt workflow",
+      "angle": "A repeatable DEFINE → RESEARCH → BUILD → CRITIQUE → VERIFY loop.",
+      "source": "line-ai-prompt-workflow"
+    }
+  ],
+  "rules": [
+    "Each line must provide standalone useful content.",
+    "No keyword stuffing or substantially duplicate doorway pages.",
+    "Each source tag is measured independently.",
+    "DRAFT offers may be referenced as coming soon but cannot accept checkout.",
+    "No paid distribution without separate authorization."
+  ]
+}
