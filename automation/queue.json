@@ -6,10 +6,10 @@
     {
       "offer_id": "foundry-express-ts-001",
       "mandate_id": "mandate:digital-products:001",
-      "state": "READY_FOR_TEST_ADAPTER",
+      "state": "READY_FOR_ADAPTER",
       "publish_permitted": true,
       "fulfill_permitted": true,
-      "live_payment_permitted": false,
+      "live_payment_permitted": true,
       "external_action_performed": false
     }
   ],

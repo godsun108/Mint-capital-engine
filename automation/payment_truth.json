@@ -1,50 +1,18 @@
 {
   "schema": "mint.payment_truth.v1",
-  "observed_at": "2026-09-29T02:42:34.345888+00:00",
+  "observed_at": "2026-09-29T13:30:29.829524+00:00",
   "mode": "test",
   "semantics": "TEST_ONLY_NOT_REVENUE",
   "totals": {
-    "created": 1,
-    "paid": 1,
-    "pending": 1,
+    "created": 0,
+    "paid": 0,
+    "pending": 0,
+    "provider_available": 0,
     "settled": 0,
-    "gross": 100,
-    "processorFees": 33,
-    "net": 67,
-    "applicationFees": 10
+    "gross": 0,
+    "processorFees": 0,
+    "net": 0,
+    "applicationFees": 0
   },
-  "transactions": [
-    {
-      "sessionId": "cs_test_a1AjLH8oqGwGuYD9ivQUWxWUIIK0EFMxKAMWYLbXDc30q6zgwTwg0tbmha",
-      "state": "pending",
-      "paymentStatus": "paid",
-      "amount": 100,
-      "currency": "usd",
-      "livemode": false,
-      "paymentIntent": "pi_3UKOUQFzAeeNnbUM1Ypeqw1Y",
-      "charge": "ch_3UKOUQFzAeeNnbUM1f4gpU1g",
-      "destination": "acct_1UKO6SFzAeCrlZxg",
-      "applicationFeeAmount": 10,
-      "balanceTransaction": {
-        "id": "txn_3UKOUQFzAeeNnbUM1wESDWbC",
-        "status": "pending",
-        "fee": 33,
-        "net": 67,
-        "available_on": 1791072000
-      }
-    },
-    {
-      "sessionId": "cs_test_a1qDppO7ilWVjvCjMKcUqJ9AgOi3kKfgBBZMT269UcWAPN95ifnN5gnMto",
-      "state": "created",
-      "paymentStatus": "unpaid",
-      "amount": 100,
-      "currency": "usd",
-      "livemode": false,
-      "paymentIntent": null,
-      "charge": null,
-      "destination": null,
-      "applicationFeeAmount": 0,
-      "balanceTransaction": null
-    }
-  ]
+  "transactions": []
 }
