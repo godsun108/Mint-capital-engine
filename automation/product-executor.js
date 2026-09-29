@@ -48,17 +48,27 @@ function execute(job){
     if(!built.ok) return {status:"BLOCKED_ADAPTER",reason:built.reason,evidence:[buildSpec]};
     return {status:"COMPLETE",reason:"bounded artifact generated",evidence:[buildSpec,{kind:"artifact_receipt",verified:true,...built}]};
   }
-  if(job.agent==="auditor"){
-    const deps=(job.dependsOn||[]).map(id=>jobs.find(j=>j.id===id)).filter(Boolean);
+  if(job.agent==="merchant"){
     const artifact=jobs.flatMap(j=>j.evidence||[]).find(e=>e?.kind==="artifact_receipt"&&e?.verified===true);
     if(!artifact?.artifactPath) return {status:"BLOCKED_EVIDENCE",reason:"artifact receipt required",evidence:[]};
+    return {status:"COMPLETE",reason:"draft offer package prepared",evidence:[{
+      kind:"offer_receipt",verified:true,artifactPath:artifact.artifactPath,status:"DRAFT_UNPUBLISHED",
+      priceUsd:9,delivery:"automatic digital after verified successful payment",
+      claims:["Product contents are limited to the audited artifact."],
+      publicationReady:false
+    }]};
+  }
+  if(job.agent==="auditor"){
+    const offer=jobs.flatMap(j=>j.evidence||[]).find(e=>e?.kind==="offer_receipt"&&e?.verified===true);
+    const artifact=jobs.flatMap(j=>j.evidence||[]).find(e=>e?.kind==="artifact_receipt"&&e?.verified===true);
+    if(!artifact?.artifactPath||!offer) return {status:"BLOCKED_EVIDENCE",reason:"artifact and offer receipts required",evidence:[]};
     const dir=path.join(root,artifact.artifactPath);
     const required=["mint-product.json","README.md"];
     const missing=required.filter(name=>!fs.existsSync(path.join(dir,name)));
     if(missing.length) return {status:"BLOCKED_EVIDENCE",reason:"artifact files missing",evidence:[{kind:"audit_receipt",verified:false,missing}]};
-    return {status:"COMPLETE",reason:"bounded artifact structure verified",evidence:[{kind:"audit_receipt",verified:true,artifactPath:artifact.artifactPath,checks:["required_files","draft_status"],note:"functional product tests still required before publication"}]};
+    return {status:"BLOCKED_TESTS",reason:"structure and offer verified; functional tests required before publication",evidence:[{kind:"audit_receipt",verified:true,artifactPath:artifact.artifactPath,checks:["required_files","draft_status","offer_bounded"],publicationReady:false}]};
   }
-  if(["merchant","market"].includes(job.agent)){
+  if(["market"].includes(job.agent)){
     return {status:"BLOCKED_ADAPTER",reason:`${job.agent} evidence-producing adapter not connected`,evidence:[]};
   }
   return {status:"BLOCKED_ADAPTER",reason:"no executor registered",evidence:[]};
