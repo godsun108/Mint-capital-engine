@@ -24,6 +24,8 @@ jobs:
         run: node --check automation/product-cycle.js && node --check automation/product-executor.js && node --check agents/product-loop.js
       - name: Run evidence-gated product cycle
         run: npm run product:cycle
+        env:
+          MINT_CANDIDATE_FILE: automation/candidates.json
       - name: Execute next evidence-safe work order
         run: npm run product:execute
       - name: Persist auditable cycle state
