@@ -32,6 +32,15 @@ jobs:
           else
             echo "MINT_STATE_RESTORED=false"
           fi
+      - name: Syntax gate
+        run: |
+          node --check automation/factory.js
+          node --check automation/deckhand.js
+          node --check automation/watchtower.js
+          node --check automation/prospector.js
+          node --check automation/merchant.js
+          node --check automation/auditor.js
+          node --check automation/evidence-integrity.js
       - name: Factory heartbeat
         run: node automation/factory.js
       - name: Preserve factory evidence
