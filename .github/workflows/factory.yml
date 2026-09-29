@@ -1,6 +1,13 @@
 name: MINT Autonomous Factory
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'automation/**'
+      - 'systems/commerce/**'
+      - 'connect-demo/**'
+      - '.github/workflows/factory.yml'
   schedule:
     - cron: "41 */6 * * *"
 permissions:
