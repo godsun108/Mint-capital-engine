@@ -1,0 +1,20 @@
+{
+  "schema": "mint.product.scout.v1",
+  "purpose": "Collect attributable public evidence of customer problems suitable for owned nonregulated digital products.",
+  "rules": {
+    "hypothesis_is_not_verified_demand": true,
+    "source_required_for_verified_evidence": true,
+    "minimum_distinct_sources_for_candidate": 2,
+    "max_candidates_per_refresh": 20,
+    "max_upfront_usd": 0,
+    "forbid": ["fabricated_demand","fabricated_customers","fabricated_reviews","regulated_products","private_or_paywalled_scraping"]
+  },
+  "candidate": {
+    "required": ["id","customer","problem","regulated","upfrontCostUsd","evidence"],
+    "evidence_required": ["kind","source","url","observedAt","verified"],
+    "verified_requires_public_source": true
+  },
+  "promotion": {
+    "to_product_cycle": "candidate must contain at least one verified attributable evidence item and satisfy the standing mandate; research-desk must still challenge the evidence before build"
+  }
+}
