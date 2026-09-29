@@ -1,0 +1,47 @@
+{
+  "schema": "mint.product.portfolio.v1",
+  "north_star": "lawful settled net cash produced by useful products and services",
+  "cycle": {
+    "enabled": true,
+    "mode": "evidence_gated",
+    "max_candidates_per_cycle": 3,
+    "max_builds_in_parallel": 1,
+    "max_upfront_usd_per_candidate": 0,
+    "mandate_id": "mandate:digital-products:001"
+  },
+  "lifecycle": [
+    "DISCOVERED",
+    "VALIDATING",
+    "BUILDING",
+    "AUDITING",
+    "LIVE",
+    "SCALING",
+    "RETIRING",
+    "RETIRED"
+  ],
+  "selection": {
+    "require_customer_problem": true,
+    "require_demand_evidence": true,
+    "require_nonregulated": true,
+    "require_owned_deliverable": true,
+    "prefer_existing_capabilities": true,
+    "forbid_duplicate_sku_without_distinct_job": true
+  },
+  "learning_inputs": [
+    "public_demand_evidence",
+    "concierge_questions",
+    "checkout_attribution",
+    "verified_payments",
+    "fulfillment_results",
+    "refund_signals",
+    "settled_net_cash"
+  ],
+  "rules": {
+    "discovery_is_not_launch": true,
+    "build_is_not_live": true,
+    "paid_is_not_settled": true,
+    "no_fabricated_demand": true,
+    "no_permission_escalation": true,
+    "human_gate_for_actions_outside_mandate": true
+  }
+}
