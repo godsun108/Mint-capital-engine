@@ -1,6 +1,6 @@
 import http from 'node:http';
 import {readFile} from 'node:fs/promises';
-import {createReadStream} from 'node:fs';
+import {createReadStream,existsSync,mkdirSync,readFileSync,writeFileSync,renameSync} from 'node:fs';
 import {stat} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 import path from 'node:path';
@@ -26,6 +26,10 @@ if(!Number.isFinite(feeBps)||feeBps<0||feeBps>10000)throw new Error('APPLICATION
 const userToAccount=new Map();
 // Privacy-light, process-local acquisition counters. These intentionally store no IPs, user agents, cookies, or personal identifiers.
 // Railway restarts reset them; the API labels that limitation explicitly and the learning heartbeat may snapshot aggregates externally.
+const fulfillmentDir=process.env.MINT_STATE_DIR||path.join(process.cwd(),'.mint-state');
+const fulfillmentPath=path.join(fulfillmentDir,'fulfillment-receipts.json');
+function readFulfillmentReceipts(){try{return JSON.parse(readFileSync(fulfillmentPath,'utf8'))}catch{return {schema:'mint.fulfillment.receipts.v1',receipts:{}}}}
+function writeFulfillmentReceipts(x){mkdirSync(fulfillmentDir,{recursive:true});const tmp=fulfillmentPath+'.tmp';writeFileSync(tmp,JSON.stringify(x,null,2)+'\n');renameSync(tmp,fulfillmentPath)}
 const acquisitionStartedAt=new Date().toISOString();
 const acquisitionCounters=new Map();
 function countAcquisition(event,source){const key=source+'|'+event;acquisitionCounters.set(key,(acquisitionCounters.get(key)||0)+1);}
@@ -227,6 +231,13 @@ async function fulfillCheckout(sessionId,res){
   if(!fulfillment)return send(res,404,{error:'No automatic fulfillment mapping exists for this verified offer.'});
   const file=path.join(root,fulfillment.path);
   await stat(file);
+  const receipts=readFulfillmentReceipts();
+  const prior=receipts.receipts[session.id];
+  if(!prior){
+    receipts.receipts[session.id]={sessionId:session.id,offerId:session.metadata?.mint_offer_id||productId||null,livemode:session.livemode,paidVerified:true,fulfilledAt:new Date().toISOString(),artifact:fulfillment.path};
+    writeFulfillmentReceipts(receipts);
+    console.log('MINT_COMMERCE',JSON.stringify({event:'FULFILLED',sessionId:session.id,offerId:receipts.receipts[session.id].offerId,livemode:session.livemode,at:receipts.receipts[session.id].fulfilledAt}));
+  }
   res.writeHead(200,{'content-type':fulfillment.content_type||'application/octet-stream','content-disposition':'attachment; filename="'+fulfillment.filename.replace(/["\\]/g,'')+'"','x-mint-fulfillment':session.livemode?'verified-live-payment':'verified-test-payment'});
   createReadStream(file).pipe(res);
 }
@@ -266,6 +277,12 @@ async function acquisitionEvent(req,res){
   countAcquisition(event,source);
   console.log("MINT_ACQUISITION",JSON.stringify({event,source,offerId:"foundry-express-ts-001",at:new Date().toISOString()}));
   return send(res,202,{ok:true,event,source},acquisitionCors);
+}
+
+async function fulfillmentEvidence(res){
+  const x=readFulfillmentReceipts();
+  const receipts=Object.values(x.receipts||{}).filter(r=>r.livemode===true);
+  return send(res,200,{ok:true,schema:'mint.fulfillment.evidence.v1',generatedAt:new Date().toISOString(),semantics:'SERVER_RECORDED_DELIVERY_AFTER_STRIPE_PAID_VERIFICATION',total:receipts.length,receipts});
 }
 
 async function commerceEvidence(res){
@@ -314,6 +331,7 @@ const server=http.createServer(async(req,res)=>{
     if(req.method==='GET'&&u.pathname==='/api/storefront')return storefront(res);
     if(req.method==='GET'&&u.pathname==='/api/money-state')return moneyState(res);
     if(req.method==='GET'&&u.pathname==='/api/commerce/evidence')return commerceEvidence(res);
+    if(req.method==='GET'&&u.pathname==='/api/fulfillment/evidence')return fulfillmentEvidence(res);
     if(req.method==='POST'&&u.pathname==='/api/accounts')return createConnectedAccount(req,res);
     let m=u.pathname.match(/^\/api\/accounts\/([^/]+)\/status$/);
     if(req.method==='GET'&&m)return accountStatus(decodeURIComponent(m[1]),res);
