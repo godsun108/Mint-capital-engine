@@ -1,0 +1,115 @@
+{
+  "schema": "mint.capital.armada.v1",
+  "doctrine": "PIG_NOT_HOG_EVIDENCE_BEFORE_SCALE",
+  "objective": "Increase verified lawful economic resources through a diversified portfolio of measurable, bounded opportunities.",
+  "vessels": [
+    {
+      "id": "foundry",
+      "class": "CASHFLOW",
+      "mission": "Sell owned developer digital products",
+      "status": "ACTIVE",
+      "upfront_spend_usd": 0,
+      "execution": "AUTONOMOUS_WITHIN_EXISTING_DIGITAL_PRODUCTS_MANDATE"
+    },
+    {
+      "id": "lighthouse",
+      "class": "ASSET",
+      "mission": "Create useful free tools and intent content that earn discovery and route qualified attention to owned offers",
+      "status": "ACTIVE",
+      "upfront_spend_usd": 0,
+      "execution": "AUTONOMOUS_OWNED_CHANNELS"
+    },
+    {
+      "id": "dockyard",
+      "class": "CASHFLOW",
+      "mission": "Discover and validate small software, API, automation, and micro-SaaS products",
+      "status": "SCOUTING",
+      "upfront_spend_usd": 0,
+      "execution": "BUILD_ONLY_AFTER_EVIDENCE_GATE"
+    },
+    {
+      "id": "workboat",
+      "class": "CASHFLOW",
+      "mission": "Discover productized services that can be truthfully fulfilled with current capabilities",
+      "status": "SCOUTING",
+      "upfront_spend_usd": 0,
+      "execution": "PREPARE_AND_BUILD_WITHIN_MANDATE"
+    },
+    {
+      "id": "licensor",
+      "class": "ASSET",
+      "mission": "Identify reusable software/content/data assets suitable for lawful licensing",
+      "status": "SCOUTING",
+      "upfront_spend_usd": 0,
+      "execution": "RESEARCH_AND_PREPARE"
+    },
+    {
+      "id": "referral",
+      "class": "CASHFLOW",
+      "mission": "Identify permitted affiliate and referral programs with useful products and clear disclosure requirements",
+      "status": "SCOUTING",
+      "upfront_spend_usd": 0,
+      "execution": "RESEARCH_ONLY_UNTIL_PROGRAM_TERMS_AND_ENROLLMENT_VERIFIED"
+    },
+    {
+      "id": "quartermaster",
+      "class": "RESOURCE",
+      "mission": "Find grants, credits, free tiers, competitions, accelerators, infrastructure benefits, and productive resources",
+      "status": "SCOUTING",
+      "upfront_spend_usd": 0,
+      "execution": "DISCOVER_VERIFY_PREPARE"
+    },
+    {
+      "id": "salvage",
+      "class": "SAVINGS",
+      "mission": "Find legitimate ways to reduce recurring or project costs without reducing critical capability",
+      "status": "SCOUTING",
+      "upfront_spend_usd": 0,
+      "execution": "ANALYZE_AND_RECOMMEND"
+    },
+    {
+      "id": "treasury",
+      "class": "COMPOUNDING",
+      "mission": "Research and model lawful ways existing capital could earn additional returns",
+      "status": "RESEARCH_ONLY",
+      "upfront_spend_usd": 0,
+      "execution": "NO_MONEY_MOVEMENT_WITHOUT_EXPLICIT_AUTHORIZATION"
+    }
+  ],
+  "allocation": {
+    "default_rule": "small_reversible_measurable_experiments",
+    "increase_attention_when": [
+      "verified_external_demand",
+      "verified_resource_award",
+      "verified_savings",
+      "paid_customer",
+      "settled_cash"
+    ],
+    "decrease_attention_when": [
+      "repeated_zero_signal",
+      "platform_or_legal_constraint",
+      "negative_unit_economics",
+      "high_operational_burden",
+      "unverifiable_claims"
+    ],
+    "never_autonomously": [
+      "spend_money",
+      "borrow_money",
+      "open_financial_account",
+      "place_trade_or_investment",
+      "sign_binding_agreement",
+      "certify_owner_specific_facts",
+      "spam_or_impersonate"
+    ]
+  },
+  "truth_ladder": [
+    "DISCOVERED",
+    "VERIFIED_AVAILABLE",
+    "ELIGIBLE_OR_APPLICABLE",
+    "PREPARED",
+    "SUBMITTED_OR_PUBLISHED",
+    "AWARDED_OR_PAID",
+    "PROVIDER_AVAILABLE",
+    "SETTLED_OR_RECEIVED"
+  ]
+}
