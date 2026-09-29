@@ -1,0 +1,91 @@
+{
+  "schema": "mint.commerce.channel-opportunities.v1",
+  "as_of": "2026-09-29",
+  "semantics": "PUBLIC_PLATFORM_AVAILABILITY_NOT_ACCOUNT_OWNERSHIP_NOT_ELIGIBILITY_NOT_PUBLISHED_LISTINGS",
+  "channels": [
+    {
+      "id": "payhip",
+      "status": "VERIFIED_AVAILABLE",
+      "fit": [
+        "DIGITAL_DOWNLOAD"
+      ],
+      "cost_note": "Official pricing advertises Free Forever at $0/month + 5% transaction fee; payment processor fees also apply.",
+      "gate": "ACCOUNT_AND_TERMS_OWNER_ACTION",
+      "url": "https://payhip.com/pricing"
+    },
+    {
+      "id": "ko-fi-shop",
+      "status": "VERIFIED_AVAILABLE",
+      "fit": [
+        "DIGITAL_DOWNLOAD",
+        "PHYSICAL"
+      ],
+      "cost_note": "Official shop page advertises no listing fees and 5% service fee on shop sales; normal processing fees apply.",
+      "gate": "ACCOUNT_PAYMENT_CONNECTION_AND_TERMS_OWNER_ACTION",
+      "url": "https://ko-fi.com/shop"
+    },
+    {
+      "id": "gumroad",
+      "status": "VERIFIED_AVAILABLE",
+      "fit": [
+        "DIGITAL_DOWNLOAD"
+      ],
+      "cost_note": "Official fees page currently states 10% + $0.50 for direct/profile sales plus processing, and 30% for Discover marketplace sales.",
+      "gate": "ACCOUNT_PAYOUT_TAX_TERMS_OWNER_ACTION",
+      "url": "https://gumroad.com/help/article/66-gumroads-fees"
+    },
+    {
+      "id": "itch-io",
+      "status": "VERIFIED_AVAILABLE",
+      "fit": [
+        "DIGITAL_DOWNLOAD",
+        "SOFTWARE",
+        "CREATIVE_ASSET"
+      ],
+      "cost_note": "Official creator docs describe configurable 0%-100% itch.io revenue share plus payment-provider fees.",
+      "gate": "ACCOUNT_PAYMENT_TAX_TERMS_OWNER_ACTION",
+      "url": "https://itch.io/docs/creators/payments"
+    },
+    {
+      "id": "lemon-squeezy",
+      "status": "VERIFIED_AVAILABLE",
+      "fit": [
+        "DIGITAL_DOWNLOAD",
+        "SOFTWARE",
+        "SAAS"
+      ],
+      "cost_note": "Official pricing advertises $0/month ecommerce and 5% + $0.50 base transaction pricing, with possible additional fees.",
+      "gate": "ACCOUNT_APPROVAL_PAYOUT_TERMS_OWNER_ACTION",
+      "url": "https://www.lemonsqueezy.com/pricing"
+    },
+    {
+      "id": "product-hunt",
+      "status": "VERIFIED_AVAILABLE",
+      "fit": [
+        "LIVE_DIGITAL_PRODUCT",
+        "SOFTWARE",
+        "WEB_TOOL"
+      ],
+      "cost_note": "Official launch guide says Product Hunt is free; featuring guidelines prioritize currently available digital products/services.",
+      "gate": "PERSONAL_ACCOUNT_ONBOARDING_AND_POST_OWNER_ACTION",
+      "url": "https://www.producthunt.com/launch"
+    },
+    {
+      "id": "github-marketplace-apps",
+      "status": "VERIFIED_AVAILABLE",
+      "fit": [
+        "GITHUB_APP",
+        "OAUTH_APP"
+      ],
+      "cost_note": "Free app listings have general requirements; paid apps require organization ownership/publisher verification and additional usage thresholds/financial onboarding.",
+      "gate": "APP_PRODUCT_PLUS_ORG_VERIFICATION_TERMS_AND_OWNER_ACTION",
+      "url": "https://docs.github.com/en/apps/github-marketplace/creating-apps-for-github-marketplace/requirements-for-listing-an-app"
+    }
+  ],
+  "rules": [
+    "Verify current official terms again before enrollment or publication.",
+    "Do not claim an account, listing, eligibility, approval, discovery placement, traffic, or sales until evidenced.",
+    "Do not accept platform agreements or owner attestations autonomously.",
+    "Model platform and processing fees before channel activation."
+  ]
+}
