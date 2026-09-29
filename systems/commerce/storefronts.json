@@ -1,0 +1,68 @@
+{
+  "schema": "mint.commerce.storefronts.v1",
+  "semantics": "CONFIGURED_SURFACES_NOT_CLAIMED_DEPLOYED_UNLESS_DEPLOYMENT_EVIDENCE_EXISTS",
+  "storefronts": [
+    {
+      "id": "mint-dev",
+      "status": "ACTIVE",
+      "class": "OWNED_WEB",
+      "brand": "MINT Foundry",
+      "audience": "developers and builders",
+      "offer_types": [
+        "DIGITAL_DOWNLOAD",
+        "SOFTWARE",
+        "MICRO_SAAS"
+      ],
+      "current_offers": [
+        "foundry-express-ts-001"
+      ],
+      "channels": [
+        "github-pages",
+        "mint-direct-web"
+      ]
+    },
+    {
+      "id": "mint-labs",
+      "status": "PLANNED",
+      "class": "OWNED_WEB",
+      "brand": "MINT Labs",
+      "audience": "people seeking useful small web utilities and digital tools",
+      "offer_types": [
+        "FREE_TOOL",
+        "DIGITAL_DOWNLOAD",
+        "SOFTWARE"
+      ],
+      "current_offers": [],
+      "channels": [
+        "github-pages"
+      ]
+    },
+    {
+      "id": "mint-goods",
+      "status": "RESEARCH",
+      "class": "OWNED_WEB",
+      "brand": "MINT Goods",
+      "audience": "physical-product customers",
+      "offer_types": [
+        "PRINT_ON_DEMAND",
+        "SUPPLIER_FULFILLED",
+        "STOCKED_PHYSICAL"
+      ],
+      "current_offers": [],
+      "channels": []
+    }
+  ],
+  "marketplace_policy": {
+    "status": "RESEARCH_ONLY_UNTIL_TERMS_VERIFIED",
+    "requirements": [
+      "official_current_terms",
+      "seller_eligibility",
+      "fee_structure",
+      "listing_automation_rules",
+      "fulfillment_and_return_rules",
+      "payout_requirements",
+      "required_attestations",
+      "offer_channel_permission"
+    ]
+  }
+}
