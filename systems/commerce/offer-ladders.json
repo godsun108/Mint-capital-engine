@@ -1,0 +1,137 @@
+{
+  "schema": "mint.commerce.offer-ladders.v1",
+  "semantics": "PORTFOLIO_DESIGN_NOT_DEMAND_NOT_REVENUE_NOT_AUTHORIZATION_TO_SELL_UNBUILT_CAPACITY",
+  "ladders": [
+    {
+      "id": "developer-launch",
+      "species": [
+        "BUILDER",
+        "SOFTWARE_TEAM"
+      ],
+      "existing": [
+        "foundry-express-ts-001",
+        "api-launch-checklist-002"
+      ],
+      "next_hypotheses": [
+        {
+          "size": "MINNOW",
+          "offer": "free developer preflight tools and field notes",
+          "state": "PARTIALLY_BUILT"
+        },
+        {
+          "size": "PANFISH",
+          "offer": "starter kits and launch kits",
+          "state": "PARTIALLY_BUILT"
+        },
+        {
+          "size": "GAMEFISH",
+          "offer": "complete reusable API/deployment system or developer utility",
+          "state": "RESEARCH"
+        },
+        {
+          "size": "RECURRING",
+          "offer": "hosted developer utility/API/automation",
+          "state": "RESEARCH"
+        },
+        {
+          "size": "TROPHY",
+          "offer": "fixed-scope integration or implementation",
+          "state": "RESEARCH"
+        },
+        {
+          "size": "WHALE",
+          "offer": "team/agency/enterprise licensing and supported integration",
+          "state": "RESEARCH"
+        }
+      ]
+    },
+    {
+      "id": "ai-workflow",
+      "species": [
+        "CREATOR",
+        "OPERATOR",
+        "SMALL_BUSINESS",
+        "AGENCY"
+      ],
+      "existing": [
+        "ai-workflow-kit-004"
+      ],
+      "next_hypotheses": [
+        {
+          "size": "MINNOW",
+          "offer": "free workflow template/tool",
+          "state": "PLANNED"
+        },
+        {
+          "size": "PANFISH",
+          "offer": "practical workflow kit",
+          "state": "DRAFT"
+        },
+        {
+          "size": "GAMEFISH",
+          "offer": "role-specific workflow systems/bundles",
+          "state": "RESEARCH"
+        },
+        {
+          "size": "RECURRING",
+          "offer": "workflow automation/software",
+          "state": "RESEARCH"
+        },
+        {
+          "size": "TROPHY",
+          "offer": "bounded workflow implementation",
+          "state": "RESEARCH"
+        },
+        {
+          "size": "WHALE",
+          "offer": "multi-seat licensing/integration",
+          "state": "RESEARCH"
+        }
+      ]
+    },
+    {
+      "id": "website-launch",
+      "species": [
+        "CREATOR",
+        "SMALL_BUSINESS",
+        "AGENCY"
+      ],
+      "existing": [
+        "site-launch-checklist-003"
+      ],
+      "next_hypotheses": [
+        {
+          "size": "MINNOW",
+          "offer": "free prelaunch checker",
+          "state": "PLANNED"
+        },
+        {
+          "size": "PANFISH",
+          "offer": "launch checklist/templates",
+          "state": "DRAFT"
+        },
+        {
+          "size": "GAMEFISH",
+          "offer": "site launch operating kit",
+          "state": "RESEARCH"
+        },
+        {
+          "size": "TROPHY",
+          "offer": "fixed-scope launch/rebuild service",
+          "state": "RESEARCH"
+        },
+        {
+          "size": "WHALE",
+          "offer": "agency licensing/white-label system where rights permit",
+          "state": "RESEARCH"
+        }
+      ]
+    }
+  ],
+  "rules": [
+    "Validate customer problem and economics before building deep into a ladder.",
+    "Do not activate unbuilt or unsupported service/software/licensing capacity.",
+    "Maintain source attribution by species, size, offer and channel.",
+    "Use evidence to decide whether to climb, widen, bundle or retire a ladder."
+  ]
+}
