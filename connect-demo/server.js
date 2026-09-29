@@ -30,6 +30,8 @@ const acquisitionStartedAt=new Date().toISOString();
 const acquisitionCounters=new Map();
 function countAcquisition(event,source){const key=source+'|'+event;acquisitionCounters.set(key,(acquisitionCounters.get(key)||0)+1);}
 
+const PAGES_ORIGIN='https://godsun108.github.io';
+const acquisitionCors={'access-control-allow-origin':PAGES_ORIGIN,'access-control-allow-methods':'GET, POST, OPTIONS','access-control-allow-headers':'content-type','vary':'Origin'};
 const send=(res,status,data,headers={})=>{res.writeHead(status,{'content-type':'application/json; charset=utf-8',...headers});res.end(JSON.stringify(data))};
 async function body(req){let raw='';for await(const chunk of req)raw+=chunk;if(!raw)return {};try{return JSON.parse(raw)}catch{throw new Error('Request body must be valid JSON.')}}
 
@@ -262,7 +264,7 @@ async function acquisitionEvent(req,res){
   const allowed=new Set(["VISITED","CHECKOUT_STARTED"]);
   if(!allowed.has(event)||!/^[a-z0-9_-]{1,48}$/.test(source))return send(res,400,{error:"Invalid acquisition event."});
   countAcquisition(event,source);\n  console.log("MINT_ACQUISITION",JSON.stringify({event,source,offerId:"foundry-express-ts-001",at:new Date().toISOString()}));
-  return send(res,202,{ok:true,event,source});
+  return send(res,202,{ok:true,event,source},acquisitionCors);
 }
 
 async function acquisitionState(res){\n  const sources={};\n  for(const [key,count] of acquisitionCounters){const [source,event]=key.split('|');sources[source]||={VISITED:0,CHECKOUT_STARTED:0};sources[source][event]=count;}\n  const totals=Object.values(sources).reduce((a,x)=>({VISITED:a.VISITED+(x.VISITED||0),CHECKOUT_STARTED:a.CHECKOUT_STARTED+(x.CHECKOUT_STARTED||0)}),{VISITED:0,CHECKOUT_STARTED:0});\n  return send(res,200,{ok:true,schema:'mint.acquisition.snapshot.v1',semantics:'PROCESS_LOCAL_AGGREGATES_NOT_UNIQUE_VISITORS_NOT_LIFETIME_TOTALS',startedAt:acquisitionStartedAt,generatedAt:new Date().toISOString(),privacy:'No IP, cookie, user-agent, or personal identifier stored by this counter.',totals,sources});\n}\n\nasync function serveFile(res,file,type){const data=await readFile(file);res.writeHead(200,{'content-type':type});res.end(data)}
@@ -283,7 +285,8 @@ const server=http.createServer(async(req,res)=>{
     if(req.method==='GET'&&u.pathname==='/api/acquisition/state')return acquisitionState(res);
     if(req.method==='GET'&&u.pathname==='/health')return send(res,200,{ok:true,stripeConfigured,webhookConfigured:Boolean(process.env.STRIPE_WEBHOOK_SECRET)});
     if(req.method==='GET'&&u.pathname==='/api/stripe-check') { const s=requireStripe(); const balance=await s.balance.retrieve(); const products=await s.products.list({limit:1}); return send(res,200,{ok:true,stripeAuthenticated:true,livemode:balance.livemode,testMode:balance.livemode===false,catalogReadable:true}); }
-    if(u.pathname.startsWith('/api/')||u.pathname.startsWith('/refresh-onboarding')||u.pathname.startsWith('/webhooks/'))requireStripe();
+    if(req.method==='OPTIONS'&&u.pathname==='/api/acquisition/event'){res.writeHead(204,acquisitionCors);return res.end();}
+    if((u.pathname.startsWith('/api/')&&!u.pathname.startsWith('/api/acquisition/'))||u.pathname.startsWith('/refresh-onboarding')||u.pathname.startsWith('/webhooks/'))requireStripe();
     if(req.method==='GET'&&u.pathname==='/')return serveFile(res,path.join(root,'public/index.html'),'text/html; charset=utf-8');
     if(req.method==='GET'&&u.pathname==='/success')return serveFile(res,path.join(root,'public/success.html'),'text/html; charset=utf-8');
     if(req.method==='GET'&&u.pathname==='/api/storefront')return storefront(res);
