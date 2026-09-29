@@ -122,6 +122,7 @@ async function checkout(req,res){
       success_url:APP_URL+'/success?session_id={CHECKOUT_SESSION_ID}',
       cancel_url:APP_URL+'/?checkout=cancelled'
     });
+    console.log('MINT_COMMERCE',JSON.stringify({event:'CHECKOUT_SESSION_CREATED',source,offerId:'foundry-express-ts-001',sessionId:session.id,at:new Date().toISOString()}));
     return send(res,201,{id:session.id,url:session.url,mode:'live',offerId:'foundry-express-ts-001'});
   }
   await requireTestStripe();
