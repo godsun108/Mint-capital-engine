@@ -7,7 +7,7 @@ export function canRun(job,state,registry){
  const unmet=(job.dependsOn||[]).filter(id=>!state.jobs.some(j=>j.id===id&&j.status==="COMPLETE"));
  return unmet.length?{ok:false,reason:"dependencies",unmet}:{ok:true};
 }
-export function plan({id,agent,objective,actions=[],budget=0,dependsOn=[]}){return {...makeWorkOrder({id,agent,objective,actions,budget}),dependsOn};}
+export function plan({id,agent,objective,actions=[],budget=0,dependsOn=[],inputs={}}){const job={...makeWorkOrder({id,agent,objective,actions,budget}),dependsOn};job.inputs=inputs;return job;}
 export function nextJobs(state,registry){return state.jobs.filter(j=>["PROPOSED","APPROVED"].includes(j.status)).filter(j=>canRun(j,state,registry).ok);}
 export function gateAction(job,action,approved=false){
  const spent=(job.costs||[]).reduce((n,x)=>n+(Number(x.amount)||0),0);
