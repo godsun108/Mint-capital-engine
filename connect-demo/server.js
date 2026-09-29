@@ -108,6 +108,7 @@ async function checkout(req,res){
   const s=requireStripe();
   const balance=await s.balance.retrieve();
   const b=await body(req);
+  const source=typeof b.source==='string'&&/^[a-z0-9_-]{1,48}$/.test(b.source)?b.source:'direct';
   // LIVE rail is deliberately direct-to-platform: no Connect account, transfer,
   // application fee, payout, or customer-management privileges are required.
   if(balance.livemode===true){
@@ -116,8 +117,8 @@ async function checkout(req,res){
     const session=await s.checkout.sessions.create({
       line_items:[{price_data:{currency:'usd',unit_amount:900,product_data:{name:'Foundry Express TypeScript Starter',description:'Reusable Express + TypeScript starter with strict TypeScript, JSON middleware, a health route, environment example, and dev/build/start scripts.'}},quantity:1}],
       mode:'payment',
-      metadata:{mint_offer_id:'foundry-express-ts-001',mint_mandate_id:'mandate:digital-products:001'},
-      payment_intent_data:{metadata:{mint_offer_id:'foundry-express-ts-001',mint_mandate_id:'mandate:digital-products:001'}},
+      metadata:{mint_offer_id:'foundry-express-ts-001',mint_mandate_id:'mandate:digital-products:001',mint_source:source},
+      payment_intent_data:{metadata:{mint_offer_id:'foundry-express-ts-001',mint_mandate_id:'mandate:digital-products:001',mint_source:source}},
       success_url:APP_URL+'/success?session_id={CHECKOUT_SESSION_ID}',
       cancel_url:APP_URL+'/?checkout=cancelled'
     });
@@ -195,7 +196,7 @@ async function moneyState(res){
     if(session.payment_status==='paid')totals.paid++;
     if(ch?.paid){totals.gross+=ch.amount||0;totals.applicationFees+=ch.application_fee_amount||0;}
     if(bt){totals.processorFees+=bt.fee||0;totals.net+=bt.net||0;}
-    rows.push({sessionId:session.id,state,paymentStatus:session.payment_status,amount:session.amount_total,currency:session.currency,livemode:session.livemode,paymentIntent:pi?.id||null,charge:ch?.id||null,destination:typeof ch?.destination==='string'?ch.destination:ch?.destination?.id||null,applicationFeeAmount:ch?.application_fee_amount||0,balanceTransaction:bt?{id:bt.id,status:bt.status,fee:bt.fee,net:bt.net,available_on:bt.available_on}:null});
+    rows.push({sessionId:session.id,state,source:session.metadata?.mint_source||'unknown',offerId:session.metadata?.mint_offer_id||null,paymentStatus:session.payment_status,amount:session.amount_total,currency:session.currency,livemode:session.livemode,paymentIntent:pi?.id||null,charge:ch?.id||null,destination:typeof ch?.destination==='string'?ch.destination:ch?.destination?.id||null,applicationFeeAmount:ch?.application_fee_amount||0,balanceTransaction:bt?{id:bt.id,status:bt.status,fee:bt.fee,net:bt.net,available_on:bt.available_on}:null});
   }
   return send(res,200,{ok:true,mode:(rows.some(r=>r.livemode)?'live':'test'),settledDefinition:'Requires independent destination-cash evidence; Stripe availability alone is not SETTLED.',generatedAt:new Date().toISOString(),totals,transactions:rows});
 }
