@@ -21,9 +21,11 @@ jobs:
         with:
           node-version: "22"
       - name: Validate executable
-        run: node --check automation/product-cycle.js && node --check agents/product-loop.js
+        run: node --check automation/product-cycle.js && node --check automation/product-executor.js && node --check agents/product-loop.js
       - name: Run evidence-gated product cycle
         run: npm run product:cycle
+      - name: Execute next evidence-safe work order
+        run: npm run product:execute
       - name: Persist auditable cycle state
         run: |
           git add automation/state/product-cycle.json
