@@ -245,9 +245,9 @@ async function thinWebhook(req,res){
 }
 
 async function acquisitionEvent(req,res){
-  const body=await body(req);
-  const event=String(body.event||"");
-  const source=String(body.source||"direct").toLowerCase();
+  const payload=await body(req);
+  const event=String(payload.event||"");
+  const source=String(payload.source||"direct").toLowerCase();
   const allowed=new Set(["VISITED","CHECKOUT_STARTED"]);
   if(!allowed.has(event)||!/^[a-z0-9_-]{1,48}$/.test(source))return send(res,400,{error:"Invalid acquisition event."});
   console.log("MINT_ACQUISITION",JSON.stringify({event,source,offerId:"foundry-express-ts-001",at:new Date().toISOString()}));
