@@ -9,6 +9,9 @@ jobs:
   factory:
     runs-on: ubuntu-latest
     timeout-minutes: 10
+    concurrency:
+      group: mint-autonomous-factory
+      cancel-in-progress: false
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
