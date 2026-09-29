@@ -22,7 +22,7 @@ jobs:
         run: npm run learn:dance
       - name: Persist learning state
         run: |
-          git add automation/state/commerce-observations.json automation/state/learning.json automation/state/allocation.json automation/state/market-motion.json systems/acquisition/generated/ docs/market/ automation/state/distribution.json
+          git add automation/state/acquisition-observations.json automation/state/commerce-observations.json automation/state/learning.json automation/state/allocation.json automation/state/market-motion.json systems/acquisition/generated/ docs/market/ automation/state/distribution.json
           if git diff --cached --quiet; then exit 0; fi
           git config user.name "mint-learning"
           git config user.email "actions@users.noreply.github.com"
