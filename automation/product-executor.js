@@ -3,6 +3,7 @@ import path from "node:path";
 import { nextJobs } from "../agents/orchestrator.js";
 import { generateArtifact } from "../agents/adapters/artifact-generator.js";
 import { testArtifact } from "../agents/adapters/artifact-test.js";
+import { prepareOwnedCampaign } from "../agents/adapters/market-owned.js";
 
 const root=process.cwd();
 const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),"utf8"));
@@ -74,8 +75,12 @@ function execute(job){
       {kind:"audit_receipt",verified:true,artifactPath:artifact.artifactPath,checks:["required_files","draft_status","offer_bounded","deterministic_tests"],publicationReady:true}
     ]};
   }
-  if(["market"].includes(job.agent)){
-    return {status:"BLOCKED_ADAPTER",reason:`${job.agent} evidence-producing adapter not connected`,evidence:[]};
+  if(job.agent==="market"){
+    const audit=jobs.flatMap(j=>j.evidence||[]).find(e=>e?.kind==="audit_receipt"&&e?.verified===true&&e?.publicationReady===true);
+    if(!audit) return {status:"BLOCKED_EVIDENCE",reason:"publication-ready audit required",evidence:[]};
+    const campaign=prepareOwnedCampaign({offerId:"foundry-express-ts-001",baseUrl:"https://mint-stripe-connect-v4-production.up.railway.app/",source:"github-pages",root});
+    if(!campaign.ok) return {status:"BLOCKED_ADAPTER",reason:campaign.reason,evidence:[]};
+    return {status:"COMPLETE",reason:"zero-spend owned-channel campaign prepared",evidence:[{kind:"campaign_receipt",verified:true,budgetUsd:0,...campaign}]};
   }
   return {status:"BLOCKED_ADAPTER",reason:"no executor registered",evidence:[]};
 }
