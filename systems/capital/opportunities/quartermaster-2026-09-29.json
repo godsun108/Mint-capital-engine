@@ -1,0 +1,74 @@
+{
+  "schema": "mint.capital.opportunities.v1",
+  "captured_at": "2026-09-29",
+  "vessel": "quartermaster",
+  "semantics": "PUBLIC_OFFICIAL_PROGRAMS_NOT_ELIGIBILITY_NOT_AWARDS",
+  "opportunities": [
+    {
+      "id": "aws-activate-founders",
+      "title": "AWS Activate Founders",
+      "status": "VERIFIED_AVAILABLE",
+      "economic_type": "RESOURCE",
+      "advertised_value": "$1,000 initial AWS credits; select participants may qualify up to $5,000",
+      "source": "https://aws.amazon.com/startups/credits/",
+      "eligibility_unverified": [
+        "self-funded",
+        "new to Activate credits",
+        "functioning company website",
+        "founded within past 10 years",
+        "AWS account requirements"
+      ],
+      "approval_required": true,
+      "next_action": "Verify MINT entity/startup facts and AWS account/payment implications before any application."
+    },
+    {
+      "id": "google-startups-start",
+      "title": "Google for Startups Cloud Program — Start tier",
+      "status": "VERIFIED_AVAILABLE",
+      "economic_type": "RESOURCE",
+      "advertised_value": "$2,000 Google Cloud credits",
+      "source": "https://cloud.google.com/startup/pre-funded",
+      "eligibility_unverified": [
+        "digital-native technology startup",
+        "working MVP",
+        "clear business model",
+        "plans to seek venture funding soon",
+        "founded within last 24 months",
+        "credit history"
+      ],
+      "approval_required": true,
+      "next_action": "Verify MINT facts and whether venture-funding-plan criterion truthfully applies before application."
+    },
+    {
+      "id": "microsoft-startups",
+      "title": "Microsoft for Startups",
+      "status": "VERIFIED_AVAILABLE",
+      "economic_type": "RESOURCE",
+      "advertised_value": "Up to $200 initial Startup credits; higher benefits may unlock with verified progress",
+      "source": "https://learn.microsoft.com/en-us/startups/microsoft-for-startups/getting-started-mfs",
+      "eligibility_unverified": [
+        "program acceptance",
+        "account setup",
+        "payment method may be required for Azure activation"
+      ],
+      "approval_required": true,
+      "next_action": "Verify application requirements and MINT facts; do not activate paid billing without approval."
+    },
+    {
+      "id": "github-startups",
+      "title": "GitHub for Startups",
+      "status": "VERIFIED_AVAILABLE",
+      "economic_type": "RESOURCE",
+      "advertised_value": "$10,000 GitHub platform credits for eligible partner-affiliated startups",
+      "source": "https://github.com/enterprise/startups",
+      "eligibility_unverified": [
+        "partner affiliation",
+        "program eligibility",
+        "prior Enterprise credits",
+        "payment method/authorization requirements"
+      ],
+      "approval_required": true,
+      "next_action": "Treat as conditional; investigate qualifying partner route before application."
+    }
+  ]
+}
