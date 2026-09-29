@@ -17,7 +17,8 @@ for(const s of seed){
  if(!existing)q.tasks.push({...s});
  else Object.assign(existing,{objective:s.objective,owner_agent:s.owner_agent,kind:s.kind,command:s.command,allowed_actions:s.allowed_actions,hard_stops:s.hard_stops,expected_evidence:s.expected_evidence,dependencies:s.dependencies,recurring:Boolean(s.recurring)});
 }
-for(const t of q.tasks)if(t.recurring&&t.status==="DONE"){t.status="READY";t.next_action="Recurring task reset for this factory cycle."}\nfor(const t of q.tasks)if(t.status==="FAILED_RETRYABLE"){if((t.failure_streak||0)<maxAttempts){t.status="READY";t.next_action="Bounded retry authorized on a later factory run."}else{t.status="FAILED_TERMINAL";t.next_action="Retry budget exhausted; owner or maintainer review required."}}
+for(const t of q.tasks)if(t.recurring&&t.status==="DONE"){t.status="READY";t.next_action="Recurring task reset for this factory cycle."}
+for(const t of q.tasks)if(t.status==="FAILED_RETRYABLE"){if((t.failure_streak||0)<maxAttempts){t.status="READY";t.next_action="Bounded retry authorized on a later factory run."}else{t.status="FAILED_TERMINAL";t.next_action="Retry budget exhausted; owner or maintainer review required."}}
 const byId=id=>q.tasks.find(t=>t.task_id===id);
 const events=[];
 const startedQueueUpdatedAt=q.updated_at||null;
@@ -31,7 +32,8 @@ for(const t of q.tasks){
   t.status="RUNNING";t.attempts=(t.attempts||0)+1;t.started_at=now();
   const r=spawnSync(process.execPath,[path.join(root,t.command)],{cwd:root,encoding:"utf8",timeout:120000});
   t.finished_at=now();t.exit_code=r.status;t.evidence={stdout:(r.stdout||"").slice(-8000),stderr:(r.stderr||"").slice(-4000)};
-  t.failure_streak=r.status===0?0:(t.failure_streak||0)+1;\n  t.status=r.status===0?"DONE":(t.failure_streak>=maxAttempts?"FAILED_TERMINAL":"FAILED_RETRYABLE");
+  t.failure_streak=r.status===0?0:(t.failure_streak||0)+1;
+  t.status=r.status===0?"DONE":(t.failure_streak>=maxAttempts?"FAILED_TERMINAL":"FAILED_RETRYABLE");
   t.next_action=r.status===0?null:(t.status==="FAILED_TERMINAL"?"Retry budget exhausted; owner or maintainer review required.":"Inspect evidence; retry only on a later run under the bounded retry policy.");
   events.push({task_id:t.task_id,event:t.status,exit_code:r.status,attempt:t.attempts});
  }
