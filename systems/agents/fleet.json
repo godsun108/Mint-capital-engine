@@ -1,0 +1,70 @@
+{
+  "schema": "mint.agents.fleet.v1",
+  "orchestrator": {
+    "id": "coxswain",
+    "role": "execution orchestration",
+    "state": "COMMISSIONED"
+  },
+  "accelerators": [
+    {
+      "id": "prospector",
+      "role": "discover evidenced customer problems and demand",
+      "mode": "PARALLEL_SCOUT",
+      "priority": "HIGH"
+    },
+    {
+      "id": "shipwright",
+      "role": "convert validated specs into complete customer artifacts",
+      "mode": "BOUNDED_BUILD",
+      "priority": "HIGH"
+    },
+    {
+      "id": "red-team",
+      "role": "independent QA, adversarial product/commerce review",
+      "mode": "INDEPENDENT_GATE",
+      "priority": "HIGH"
+    },
+    {
+      "id": "deckhand",
+      "role": "deterministic repetitive generation, sync, indexing and packaging",
+      "mode": "SCRIPT_FIRST",
+      "priority": "HIGH"
+    },
+    {
+      "id": "watchtower",
+      "role": "independently verify deployment, links, telemetry and external outcomes",
+      "mode": "EVIDENCE_CHECK",
+      "priority": "CRITICAL"
+    },
+    {
+      "id": "broker",
+      "role": "prepare B2B licensing, partnership, bundle and distribution opportunities",
+      "mode": "PREPARE_ONLY_UNTIL_AUTHORIZED",
+      "priority": "MEDIUM"
+    },
+    {
+      "id": "archivist",
+      "role": "compact durable project state, evidence and handoff context",
+      "mode": "STATE_COMPACTION",
+      "priority": "HIGH"
+    }
+  ],
+  "design_rules": [
+    "Use scripts/direct calls before agents when deterministic logic suffices.",
+    "Use specialist agents for focused context or parallelism.",
+    "Persist task/evidence state externally.",
+    "Use typed inputs/outputs between agents.",
+    "Apply least privilege and existing owner gates.",
+    "Bound retries, context and model/tool cost.",
+    "Independent verification required for consequential external completion claims."
+  ],
+  "next_build_order": [
+    "watchtower",
+    "deckhand",
+    "red-team",
+    "prospector",
+    "shipwright",
+    "archivist",
+    "broker"
+  ]
+}
