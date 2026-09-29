@@ -25,6 +25,11 @@ function researchReceipt(job){
   return {status:"COMPLETE",reason:"candidate receipts validated",evidence:verified.map(e=>({kind:"source_receipt",source:e.source||e.sourceId||"public",url:e.url||null,citation:e.citation||null,observedAt:e.observedAt||null,verified:true}))};
 }
 
+function cycleJobs(job){
+  const cycleId=state.runs.find(r=>job.id.includes(r.cycleId))?.cycleId;
+  return cycleId?jobs.filter(j=>j.id.includes(cycleId)):[job];
+}
+
 function execute(job){
   if(job.agent==="research-desk") return researchReceipt(job);
   if(job.agent==="oracle"){
@@ -51,7 +56,7 @@ function execute(job){
     return {status:"COMPLETE",reason:"bounded artifact generated",evidence:[buildSpec,{kind:"artifact_receipt",verified:true,...built}]};
   }
   if(job.agent==="merchant"){
-    const artifact=jobs.flatMap(j=>j.evidence||[]).find(e=>e?.kind==="artifact_receipt"&&e?.verified===true);
+    const artifact=cycleJobs(job).flatMap(j=>j.evidence||[]).find(e=>e?.kind==="artifact_receipt"&&e?.verified===true);
     if(!artifact?.artifactPath) return {status:"BLOCKED_EVIDENCE",reason:"artifact receipt required",evidence:[]};
     return {status:"COMPLETE",reason:"draft offer package prepared",evidence:[{
       kind:"offer_receipt",verified:true,artifactPath:artifact.artifactPath,status:"DRAFT_UNPUBLISHED",
@@ -61,8 +66,8 @@ function execute(job){
     }]};
   }
   if(job.agent==="auditor"){
-    const offer=jobs.flatMap(j=>j.evidence||[]).find(e=>e?.kind==="offer_receipt"&&e?.verified===true);
-    const artifact=jobs.flatMap(j=>j.evidence||[]).find(e=>e?.kind==="artifact_receipt"&&e?.verified===true);
+    const offer=cycleJobs(job).flatMap(j=>j.evidence||[]).find(e=>e?.kind==="offer_receipt"&&e?.verified===true);
+    const artifact=cycleJobs(job).flatMap(j=>j.evidence||[]).find(e=>e?.kind==="artifact_receipt"&&e?.verified===true);
     if(!artifact?.artifactPath||!offer) return {status:"BLOCKED_EVIDENCE",reason:"artifact and offer receipts required",evidence:[]};
     const dir=path.join(root,artifact.artifactPath);
     const required=["mint-product.json","README.md"];
@@ -76,7 +81,7 @@ function execute(job){
     ]};
   }
   if(job.agent==="market"){
-    const audit=jobs.flatMap(j=>j.evidence||[]).find(e=>e?.kind==="audit_receipt"&&e?.verified===true&&e?.publicationReady===true);
+    const audit=cycleJobs(job).flatMap(j=>j.evidence||[]).find(e=>e?.kind==="audit_receipt"&&e?.verified===true&&e?.publicationReady===true);
     if(!audit) return {status:"BLOCKED_EVIDENCE",reason:"publication-ready audit required",evidence:[]};
     const campaign=prepareOwnedCampaign({offerId:"foundry-express-ts-001",baseUrl:"https://mint-stripe-connect-v4-production.up.railway.app/",source:"github-pages",root});
     if(!campaign.ok) return {status:"BLOCKED_ADAPTER",reason:campaign.reason,evidence:[]};
