@@ -263,11 +263,19 @@ async function acquisitionEvent(req,res){
   const source=String(payload.source||"direct").toLowerCase();
   const allowed=new Set(["VISITED","CHECKOUT_STARTED"]);
   if(!allowed.has(event)||!/^[a-z0-9_-]{1,48}$/.test(source))return send(res,400,{error:"Invalid acquisition event."});
-  countAcquisition(event,source);\n  console.log("MINT_ACQUISITION",JSON.stringify({event,source,offerId:"foundry-express-ts-001",at:new Date().toISOString()}));
+  countAcquisition(event,source);
+  console.log("MINT_ACQUISITION",JSON.stringify({event,source,offerId:"foundry-express-ts-001",at:new Date().toISOString()}));
   return send(res,202,{ok:true,event,source},acquisitionCors);
 }
 
-async function acquisitionState(res){\n  const sources={};\n  for(const [key,count] of acquisitionCounters){const [source,event]=key.split('|');sources[source]||={VISITED:0,CHECKOUT_STARTED:0};sources[source][event]=count;}\n  const totals=Object.values(sources).reduce((a,x)=>({VISITED:a.VISITED+(x.VISITED||0),CHECKOUT_STARTED:a.CHECKOUT_STARTED+(x.CHECKOUT_STARTED||0)}),{VISITED:0,CHECKOUT_STARTED:0});\n  return send(res,200,{ok:true,schema:'mint.acquisition.snapshot.v1',semantics:'PROCESS_LOCAL_AGGREGATES_NOT_UNIQUE_VISITORS_NOT_LIFETIME_TOTALS',startedAt:acquisitionStartedAt,generatedAt:new Date().toISOString(),privacy:'No IP, cookie, user-agent, or personal identifier stored by this counter.',totals,sources});\n}\n\nasync function serveFile(res,file,type){const data=await readFile(file);res.writeHead(200,{'content-type':type});res.end(data)}
+async function acquisitionState(res){
+  const sources={};
+  for(const [key,count] of acquisitionCounters){const [source,event]=key.split('|');sources[source]||={VISITED:0,CHECKOUT_STARTED:0};sources[source][event]=count;}
+  const totals=Object.values(sources).reduce((a,x)=>({VISITED:a.VISITED+(x.VISITED||0),CHECKOUT_STARTED:a.CHECKOUT_STARTED+(x.CHECKOUT_STARTED||0)}),{VISITED:0,CHECKOUT_STARTED:0});
+  return send(res,200,{ok:true,schema:'mint.acquisition.snapshot.v1',semantics:'PROCESS_LOCAL_AGGREGATES_NOT_UNIQUE_VISITORS_NOT_LIFETIME_TOTALS',startedAt:acquisitionStartedAt,generatedAt:new Date().toISOString(),privacy:'No IP, cookie, user-agent, or personal identifier stored by this counter.',totals,sources});
+}
+
+async function serveFile(res,file,type){const data=await readFile(file);res.writeHead(200,{'content-type':type});res.end(data)}
 const root=path.dirname(fileURLToPath(import.meta.url));
 const commerceCatalogPath=path.join(root,'catalog.json');
 async function liveOffer(id){const catalog=JSON.parse(await readFile(commerceCatalogPath,'utf8'));const offer=catalog?.offers?.[id];if(!offer||offer.status!=='ACTIVE'||!offer.mandate_id) return null;return offer;}
@@ -290,7 +298,8 @@ const server=http.createServer(async(req,res)=>{
     if(req.method==='GET'&&u.pathname==='/')return serveFile(res,path.join(root,'public/index.html'),'text/html; charset=utf-8');
     if(req.method==='GET'&&u.pathname==='/success')return serveFile(res,path.join(root,'public/success.html'),'text/html; charset=utf-8');
     if(req.method==='GET'&&u.pathname==='/api/storefront')return storefront(res);
-    if(req.method==='GET'&&u.pathname==='/api/money-state')return moneyState(res);\n    if(req.method==='POST'&&u.pathname==='/api/accounts')return createConnectedAccount(req,res);
+    if(req.method==='GET'&&u.pathname==='/api/money-state')return moneyState(res);
+    if(req.method==='POST'&&u.pathname==='/api/accounts')return createConnectedAccount(req,res);
     let m=u.pathname.match(/^\/api\/accounts\/([^/]+)\/status$/);
     if(req.method==='GET'&&m)return accountStatus(decodeURIComponent(m[1]),res);
     m=u.pathname.match(/^\/api\/accounts\/([^/]+)\/onboarding-link$/);
