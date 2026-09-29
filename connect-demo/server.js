@@ -273,15 +273,21 @@ async function liveOffer(id){const catalog=JSON.parse(await readFile(commerceCat
 const server=http.createServer(async(req,res)=>{
   try{
     const u=new URL(req.url,APP_URL);
+    const acquisitionCors={'access-control-allow-origin':'https://godsun108.github.io','access-control-allow-methods':'GET, POST, OPTIONS','access-control-allow-headers':'content-type'};
+    if(u.pathname==='/api/acquisition/event'&&req.method==='OPTIONS'){res.writeHead(204,acquisitionCors);return res.end();}
+    if(u.pathname==='/api/acquisition/event'&&req.method==='POST'){
+      const originalWriteHead=res.writeHead.bind(res);
+      res.writeHead=(status,headers={})=>originalWriteHead(status,{...acquisitionCors,...headers});
+      return acquisitionEvent(req,res);
+    }
+    if(req.method==='GET'&&u.pathname==='/api/acquisition/state')return acquisitionState(res);
     if(req.method==='GET'&&u.pathname==='/health')return send(res,200,{ok:true,stripeConfigured,webhookConfigured:Boolean(process.env.STRIPE_WEBHOOK_SECRET)});
     if(req.method==='GET'&&u.pathname==='/api/stripe-check') { const s=requireStripe(); const balance=await s.balance.retrieve(); const products=await s.products.list({limit:1}); return send(res,200,{ok:true,stripeAuthenticated:true,livemode:balance.livemode,testMode:balance.livemode===false,catalogReadable:true}); }
     if(u.pathname.startsWith('/api/')||u.pathname.startsWith('/refresh-onboarding')||u.pathname.startsWith('/webhooks/'))requireStripe();
     if(req.method==='GET'&&u.pathname==='/')return serveFile(res,path.join(root,'public/index.html'),'text/html; charset=utf-8');
     if(req.method==='GET'&&u.pathname==='/success')return serveFile(res,path.join(root,'public/success.html'),'text/html; charset=utf-8');
     if(req.method==='GET'&&u.pathname==='/api/storefront')return storefront(res);
-    if(req.method==='GET'&&u.pathname==='/api/money-state')return moneyState(res);\n    if(req.method==='GET'&&u.pathname==='/api/acquisition/state')return acquisitionState(res);
-    if(req.method==='POST'&&u.pathname==='/api/acquisition/event')return acquisitionEvent(req,res);
-    if(req.method==='POST'&&u.pathname==='/api/accounts')return createConnectedAccount(req,res);
+    if(req.method==='GET'&&u.pathname==='/api/money-state')return moneyState(res);\n    if(req.method==='POST'&&u.pathname==='/api/accounts')return createConnectedAccount(req,res);
     let m=u.pathname.match(/^\/api\/accounts\/([^/]+)\/status$/);
     if(req.method==='GET'&&m)return accountStatus(decodeURIComponent(m[1]),res);
     m=u.pathname.match(/^\/api\/accounts\/([^/]+)\/onboarding-link$/);
