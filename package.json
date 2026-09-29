@@ -11,6 +11,8 @@
     "commerce:observe": "node automation/observe-commerce.js",
     "learn:commerce": "npm run commerce:observe && npm run learn",
     "allocate:attention": "node automation/allocate-attention.js",
-    "learn:allocate": "npm run learn:commerce && npm run allocate:attention"
+    "learn:allocate": "npm run learn:commerce && npm run allocate:attention",
+    "market:motion": "node automation/market-motion.js",
+    "learn:move": "npm run learn:allocate && npm run market:motion"
   }
 }
