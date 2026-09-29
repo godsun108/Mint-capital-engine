@@ -1,0 +1,196 @@
+{
+  "schema": "mint.commerce.production-agents.v1",
+  "doctrine": "PRODUCE_ONCE_DISTRIBUTE_MANY_TRUTHFULLY",
+  "agents": [
+    {
+      "id": "scribe",
+      "produces": [
+        "DOCUMENT",
+        "GUIDE",
+        "CHECKLIST",
+        "WORKSHEET",
+        "REFERENCE_PACK"
+      ],
+      "fulfillment": [
+        "FILE"
+      ],
+      "autonomy": "BUILD_QA_PACKAGE"
+    },
+    {
+      "id": "forge",
+      "produces": [
+        "CODE_TEMPLATE",
+        "STARTER",
+        "COMPONENT",
+        "SCRIPT",
+        "AUTOMATION",
+        "CLI",
+        "LIBRARY"
+      ],
+      "fulfillment": [
+        "FILE",
+        "LICENSE"
+      ],
+      "autonomy": "BUILD_TEST_PACKAGE"
+    },
+    {
+      "id": "dockyard",
+      "produces": [
+        "MICRO_SAAS",
+        "API",
+        "WEB_UTILITY"
+      ],
+      "fulfillment": [
+        "SAAS_ACCESS"
+      ],
+      "autonomy": "BUILD_TEST_ZERO_SPEND_DEPLOY_WHEN_PERMITTED"
+    },
+    {
+      "id": "studio",
+      "produces": [
+        "ORIGINAL_GRAPHIC",
+        "DESIGN_ASSET",
+        "AUDIO_ASSET",
+        "PRESET"
+      ],
+      "fulfillment": [
+        "FILE",
+        "LICENSE"
+      ],
+      "autonomy": "BUILD_ONLY_WITH_RIGHTS_PROVENANCE"
+    },
+    {
+      "id": "architect",
+      "produces": [
+        "TEMPLATE",
+        "DASHBOARD",
+        "SCHEMA",
+        "WORKFLOW_PACK",
+        "OPERATING_SYSTEM"
+      ],
+      "fulfillment": [
+        "FILE",
+        "LICENSE"
+      ],
+      "autonomy": "BUILD_QA_PACKAGE"
+    },
+    {
+      "id": "workboat",
+      "produces": [
+        "PRODUCTIZED_SERVICE"
+      ],
+      "fulfillment": [
+        "SERVICE"
+      ],
+      "autonomy": "PREPARE_ONLY_UNTIL_FULFILLMENT_CAPACITY_VERIFIED"
+    },
+    {
+      "id": "licensor",
+      "produces": [
+        "LICENSE_PACKAGE"
+      ],
+      "fulfillment": [
+        "LICENSE"
+      ],
+      "autonomy": "PREPARE_ONLY_UNTIL_RIGHTS_AND_TERMS_VERIFIED"
+    },
+    {
+      "id": "bundler",
+      "produces": [
+        "BUNDLE"
+      ],
+      "fulfillment": [
+        "FILE",
+        "LICENSE",
+        "SAAS_ACCESS"
+      ],
+      "autonomy": "BUNDLE_ONLY_ACTIVE_COMPATIBLE_OWNED_OFFERS"
+    },
+    {
+      "id": "lighthouse",
+      "produces": [
+        "FREE_TOOL",
+        "FREE_ASSET"
+      ],
+      "fulfillment": [
+        "FILE",
+        "SAAS_ACCESS"
+      ],
+      "autonomy": "BUILD_AND_PUBLISH_ZERO_SPEND_OWNED_CHANNELS"
+    },
+    {
+      "id": "press",
+      "produces": [
+        "PRINT_ON_DEMAND"
+      ],
+      "fulfillment": [
+        "PRINT_ON_DEMAND"
+      ],
+      "autonomy": "DESIGN_RESEARCH_PREPARE_NO_SUPPLIER_COMMITMENT"
+    },
+    {
+      "id": "merchant",
+      "produces": [
+        "SUPPLIER_FULFILLED"
+      ],
+      "fulfillment": [
+        "SUPPLIER_FULFILLED"
+      ],
+      "autonomy": "RESEARCH_PREPARE_NO_BINDING_SUPPLIER_ACTION"
+    },
+    {
+      "id": "warehouse",
+      "produces": [
+        "STOCKED_PHYSICAL"
+      ],
+      "fulfillment": [
+        "STOCKED_PHYSICAL"
+      ],
+      "autonomy": "MODEL_PREPARE_NO_INVENTORY_SPEND"
+    }
+  ],
+  "cross_fleet": [
+    {
+      "id": "cartographer",
+      "job": "discover and verify compatible distribution channels"
+    },
+    {
+      "id": "translator",
+      "job": "prepare channel-specific listings from canonical offer facts"
+    },
+    {
+      "id": "inspector",
+      "job": "fail-closed QA, truth, rights and fulfillment gate"
+    },
+    {
+      "id": "purser",
+      "job": "unit economics and realized-value accounting"
+    },
+    {
+      "id": "porter",
+      "job": "route verified orders to fulfillment"
+    },
+    {
+      "id": "concierge",
+      "job": "verified customer support"
+    },
+    {
+      "id": "signal",
+      "job": "source-attributed funnel and outcome measurement"
+    },
+    {
+      "id": "admiral",
+      "job": "allocate bounded attention from evidence"
+    }
+  ],
+  "hard_stops": [
+    "unauthorized_spend",
+    "unauthorized_inventory_purchase",
+    "binding_marketplace_or_supplier_agreement_without_approval",
+    "owner_attestation_without_approval",
+    "fabricated_inventory_or_reviews_or_sales",
+    "rights_unclear_content",
+    "spam",
+    "platform_rule_circumvention"
+  ]
+}
