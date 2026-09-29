@@ -1,0 +1,20 @@
+{
+  "schema":"mint.product.candidates.v1",
+  "candidates":[
+    {
+      "id":"candidate:foundry-auth-addon:001",
+      "customer":"developers using small Express + TypeScript services",
+      "problem":"Authentication setup may be a repeated adjacent job, but demand is not yet verified.",
+      "regulated":false,
+      "upfrontCostUsd":0,
+      "evidence":[
+        {
+          "type":"hypothesis_seed",
+          "claim":"Adjacent authentication demand must be verified before build.",
+          "verified":false
+        }
+      ],
+      "status":"DISCOVERED"
+    }
+  ]
+}
