@@ -3,7 +3,7 @@ name: MINT Product Cycle
 on:
   workflow_dispatch:
   schedule:
-    - cron: "17 */6 * * *"
+    - cron: "11 1,7,13,19 * * *"
 
 permissions:
   contents: write
@@ -20,6 +20,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
+      - name: Validate executable
+        run: node --check automation/product-cycle.js && node --check agents/product-loop.js
       - name: Run evidence-gated product cycle
         run: npm run product:cycle
       - name: Persist auditable cycle state
