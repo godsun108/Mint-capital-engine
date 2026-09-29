@@ -20,6 +20,8 @@
     "catalog:validate": "node automation/validate-catalog.js",
     "storefronts:build": "node automation/build-storefronts.js",
     "commerce:prepare": "npm run catalog:validate && npm run storefronts:generate",
-    "storefronts:generate": "node automation/generate-storefronts.js"
+    "storefronts:generate": "node automation/generate-storefronts.js",
+    "fleet:readiness": "node automation/fleet-readiness.js",
+    "fleet:prepare": "npm run catalog:validate && npm run storefronts:generate && npm run fleet:readiness"
   }
 }
