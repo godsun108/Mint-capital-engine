@@ -16,6 +16,7 @@
     "learn:move": "npm run learn:allocate && npm run market:motion",
     "market:distribute": "node automation/distribute-owned.js",
     "learn:dance": "npm run acquisition:observe && npm run learn:move && npm run market:distribute",
-    "acquisition:observe": "node automation/observe-acquisition.js"
+    "acquisition:observe": "node automation/observe-acquisition.js",
+    "catalog:validate": "node automation/validate-catalog.js"
   }
 }
