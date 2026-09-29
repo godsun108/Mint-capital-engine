@@ -244,7 +244,7 @@ async function thinWebhook(req,res){
 }
 
 async function acquisitionEvent(req,res){
-  const body=await readJson(req);
+  const body=await body(req);
   const event=String(body.event||"");
   const source=String(body.source||"direct").toLowerCase();
   const allowed=new Set(["VISITED","CHECKOUT_STARTED"]);
