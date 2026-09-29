@@ -1,0 +1,30 @@
+name: MINT Learning Heartbeat
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "26 */6 * * *"
+permissions:
+  contents: write
+concurrency:
+  group: mint-learning
+  cancel-in-progress: false
+jobs:
+  learn:
+    runs-on: ubuntu-latest
+    env:
+      MINT_COMMERCE_URL: https://mint-stripe-connect-v4-production.up.railway.app
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Observe commerce and learn
+        run: npm run learn:commerce
+      - name: Persist learning state
+        run: |
+          git add automation/state/commerce-observations.json automation/state/learning.json
+          if git diff --cached --quiet; then exit 0; fi
+          git config user.name "mint-learning"
+          git config user.email "actions@users.noreply.github.com"
+          git commit -m "MINT learning heartbeat"
+          git push
