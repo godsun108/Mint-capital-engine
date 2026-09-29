@@ -6,7 +6,7 @@ const hardStops=["SPEND_MONEY","BORROW","OPEN_FINANCIAL_ACCOUNT","TRADE_OR_INVES
 const seed=[
  {task_id:"fleet-prepare",objective:"Run deterministic commerce preparation and release gates",owner_agent:"deckhand",kind:"SCRIPT",command:"automation/deckhand.js",status:"READY",allowed_actions:["LOCAL_READ","LOCAL_WRITE","GENERATE","VALIDATE"],hard_stops:hardStops,expected_evidence:"successful process exit",dependencies:[]},
  {task_id:"external-verify",objective:"Verify public MINT surfaces independently",owner_agent:"watchtower",kind:"SCRIPT",command:"automation/watchtower.js",status:"READY",allowed_actions:["PUBLIC_HTTP_GET","LOCAL_WRITE"],hard_stops:hardStops,expected_evidence:"watchtower observation",dependencies:["fleet-prepare"]},
- {task_id:"prospect-next",objective:"Find next evidence-bearing customer problem for a zero-spend test",owner_agent:"prospector",kind:"AGENT_HANDOFF",status:"BACKLOG",allowed_actions:["PUBLIC_RESEARCH","PREPARE"],hard_stops:hardStops,expected_evidence:"opportunity record meeting PROSPECTOR handoff gate",dependencies:["fleet-prepare"]}
+ {task_id:"prospect-next",objective:"Prepare evidence-bearing zero-spend distribution hypotheses for active offers",owner_agent:"prospector",kind:"SCRIPT",command:"automation/prospector.js",status:"BACKLOG",allowed_actions:["LOCAL_READ","LOCAL_WRITE","PREPARE"],hard_stops:hardStops,expected_evidence:"prospector opportunity record",dependencies:["fleet-prepare","external-verify"]}
 ];
 let q;
 try{q=JSON.parse(fs.readFileSync(queuePath,"utf8"))}catch{q={schema:"mint.factory.queue.v1",created_at:now(),tasks:seed}}
