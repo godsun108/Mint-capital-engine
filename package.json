@@ -17,6 +17,8 @@
     "market:distribute": "node automation/distribute-owned.js",
     "learn:dance": "npm run acquisition:observe && npm run learn:move && npm run market:distribute",
     "acquisition:observe": "node automation/observe-acquisition.js",
-    "catalog:validate": "node automation/validate-catalog.js"
+    "catalog:validate": "node automation/validate-catalog.js",
+    "storefronts:build": "node automation/build-storefronts.js",
+    "commerce:prepare": "npm run catalog:validate && npm run storefronts:build"
   }
 }
