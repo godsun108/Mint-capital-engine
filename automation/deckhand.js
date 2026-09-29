@@ -10,7 +10,7 @@ for(const [id,o] of Object.entries(catalog.offers||{})){
  }
 }
 fs.copyFileSync(canonical,runtime);
-const scripts=["automation/validate-catalog.js","automation/generate-storefronts.js","automation/fleet-readiness.js"];
+const scripts=["automation/validate-catalog.js","automation/red-team.js","automation/generate-storefronts.js","automation/fleet-readiness.js"];
 for(const s of scripts){
  const r=spawnSync(process.execPath,[path.join(root,s)],{cwd:root,stdio:"inherit"});
  if(r.status!==0)process.exit(r.status??1);
