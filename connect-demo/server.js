@@ -26,6 +26,7 @@ if(!Number.isFinite(feeBps)||feeBps<0||feeBps>10000)throw new Error('APPLICATION
 const userToAccount=new Map();
 // Privacy-light, process-local acquisition counters. These intentionally store no IPs, user agents, cookies, or personal identifiers.
 // Railway restarts reset them; the API labels that limitation explicitly and the learning heartbeat may snapshot aggregates externally.
+const durableStateConfigured=Boolean(process.env.MINT_STATE_DIR);
 const fulfillmentDir=process.env.MINT_STATE_DIR||path.join(process.cwd(),'.mint-state');
 const fulfillmentPath=path.join(fulfillmentDir,'fulfillment-receipts.json');
 function readFulfillmentReceipts(){try{return JSON.parse(readFileSync(fulfillmentPath,'utf8'))}catch{return {schema:'mint.fulfillment.receipts.v1',receipts:{}}}}
@@ -215,6 +216,7 @@ async function moneyState(res){
 }
 
 async function fulfillCheckout(sessionId,res){
+  if(!durableStateConfigured)return send(res,503,{error:'Durable fulfillment storage is not configured. Set MINT_STATE_DIR to a persistent mounted path before live fulfillment.',code:'MINT_DURABLE_STORAGE_REQUIRED'});
   const s=requireStripe();
   const session=await s.checkout.sessions.retrieve(sessionId,{expand:['line_items.data.price.product']});
   if(session.payment_status!=='paid'||session.status!=='complete')return send(res,402,{error:'Verified successful payment is required before fulfillment.',payment_status:session.payment_status,status:session.status});
@@ -282,7 +284,7 @@ async function acquisitionEvent(req,res){
 async function fulfillmentEvidence(res){
   const x=readFulfillmentReceipts();
   const receipts=Object.values(x.receipts||{}).filter(r=>r.livemode===true);
-  return send(res,200,{ok:true,schema:'mint.fulfillment.evidence.v1',generatedAt:new Date().toISOString(),semantics:'SERVER_RECORDED_DELIVERY_AFTER_STRIPE_PAID_VERIFICATION',total:receipts.length,receipts});
+  return send(res,durableStateConfigured?200:503,{ok:durableStateConfigured,schema:'mint.fulfillment.evidence.v1',durableStorageConfigured:durableStateConfigured,generatedAt:new Date().toISOString(),semantics:'SERVER_RECORDED_DELIVERY_AFTER_STRIPE_PAID_VERIFICATION; LIVE_CERTIFICATION_REQUIRES_PERSISTENT_MINT_STATE_DIR',total:receipts.length,receipts});
 }
 
 async function commerceEvidence(res){
@@ -322,7 +324,7 @@ const server=http.createServer(async(req,res)=>{
       return acquisitionEvent(req,res);
     }
     if(req.method==='GET'&&u.pathname==='/api/acquisition/state')return acquisitionState(res);
-    if(req.method==='GET'&&u.pathname==='/health')return send(res,200,{ok:true,stripeConfigured,webhookConfigured:Boolean(process.env.STRIPE_WEBHOOK_SECRET)});
+    if(req.method==='GET'&&u.pathname==='/health')return send(res,200,{ok:true,stripeConfigured,webhookConfigured:Boolean(process.env.STRIPE_WEBHOOK_SECRET),durableFulfillmentStorage:durableStateConfigured});
     if(req.method==='GET'&&u.pathname==='/api/stripe-check') { const s=requireStripe(); const balance=await s.balance.retrieve(); const products=await s.products.list({limit:1}); return send(res,200,{ok:true,stripeAuthenticated:true,livemode:balance.livemode,testMode:balance.livemode===false,catalogReadable:true}); }
     if(req.method==='OPTIONS'&&u.pathname==='/api/acquisition/event'){res.writeHead(204,acquisitionCors);return res.end();}
     if((u.pathname.startsWith('/api/')&&!u.pathname.startsWith('/api/acquisition/'))||u.pathname.startsWith('/refresh-onboarding')||u.pathname.startsWith('/webhooks/'))requireStripe();
