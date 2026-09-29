@@ -1,0 +1,380 @@
+{
+  "schema": "mint.product.scout.observations.v2",
+  "generatedAt": "2026-09-29T22:35:05.876144+00:00",
+  "semantics": "PUBLIC_SOURCE_OBSERVATIONS_NOT_VERIFIED_DEMAND",
+  "groups": [
+    {
+      "topic": "express-typescript",
+      "query": "express typescript boilerplate starter",
+      "observations": [
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/openamer/openamer/issues/18",
+          "observedAt": "2026-09-29T22:35:06.389224+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Workflow Immune System \u2014 OpenAmer's self-healing UI automation"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/chatmcp/mcpso/issues/1",
+          "observedAt": "2026-09-29T22:35:06.389243+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Submit Your MCP Servers here"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/Faresabdelghany/Waste/issues/134",
+          "observedAt": "2026-09-29T22:35:06.389246+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Prototype: deploy the Pilot image (API + worker under the supervisor) to Render Free \u2192 ADR-0008"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/astral-sh/uv/issues/5903",
+          "observedAt": "2026-09-29T22:35:06.389248+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Using `uv run` as a task runner"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/Scottcjn/rustchain-bounties/issues/100",
+          "observedAt": "2026-09-29T22:35:06.389249+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "[BOUNTY] Discovery Mode \u2014 Find Elyan Labs Software, Open PRs, Earn RTC"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/Jaal-Yantra-Textiles/v2/issues/352",
+          "observedAt": "2026-09-29T22:35:06.389251+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Platform Backlog \u2014 open roadmap items (2026-05)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/markgoodbody-bit/COM/issues/108",
+          "observedAt": "2026-09-29T22:35:06.389253+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "PLEASE START FROM HERE \u2014 pleasestartfromhere.com \u2014 public Door"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/b25bb1004-wq/firstrun/issues/60",
+          "observedAt": "2026-09-29T22:35:06.389257+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "known-10 audit: most 'breaks' on big repos are FirstRun misreads, fix Planner/Scout before any claim"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/trypando/pando/issues/55",
+          "observedAt": "2026-09-29T22:35:06.389258+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Deploy QA on main: 37% of 169 apps deploy; fix detection, builds and runtime so success does not depend on AI"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/goondocks-co/myco/issues/1172",
+          "observedAt": "2026-09-29T22:35:06.389260+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Myco 2.0 (revised): research appendix R01\u2013R21 (2026-09-07)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/thangchung/awesome-dotnet-core/issues/955",
+          "observedAt": "2026-09-29T22:35:06.389262+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Link health report: 6 dead links, 7 deleted repos, 83 archived"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/ljlm0402/typescript-express-starter/issues/272",
+          "observedAt": "2026-09-29T22:35:06.389263+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "[Security] Hardcoded default JWT secret in the Drizzle PostgreSQL template enables token forgery"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/golang/go/issues/21498",
+          "observedAt": "2026-09-29T22:35:06.389265+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "proposal: spec: short function literals"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/ruvnet/ruflo/issues/732",
+          "observedAt": "2026-09-29T22:35:06.389266+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "\ud83d\udccc Flow Nexus Integration Documentation - Complete Guide"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/OmniBlocks/Boxy-gh/issues/63",
+          "observedAt": "2026-09-29T22:35:06.389268+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Boxy commands issue"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/OmniBlocks/monorepo/issues/771",
+          "observedAt": "2026-09-29T22:35:06.389269+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Thoughts on the future of OmniBlocks/Sparkle/Crackle"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/OmniBlocks/monorepo/issues/301",
+          "observedAt": "2026-09-29T22:35:06.389271+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "My Crappy thrifted eMachines PC"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/DeveloPassion/TypedMarkSpecification/issues/123",
+          "observedAt": "2026-09-29T22:35:06.389272+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Refocus the specification: positively-defined Core, extension mechanism, and cleanup plan"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/Asymmetric-al/core/issues/1656",
+          "observedAt": "2026-09-29T22:35:06.389274+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "[Phase 26] Support Hub & Conversation Management \u2014 implementation-ready specification"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/linqinghao/agents-radar/issues/116",
+          "observedAt": "2026-09-29T22:35:06.389275+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "\ud83c\udfa8 Generative UI Ecosystem Digest 2026-09-08"
+        }
+      ]
+    },
+    {
+      "topic": "express-auth",
+      "query": "express typescript authentication middleware",
+      "observations": [
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/chatmcp/mcpso/issues/1",
+          "observedAt": "2026-09-29T22:35:06.923157+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Submit Your MCP Servers here"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/laiqian0239-glitch/yance/issues/1051",
+          "observedAt": "2026-09-29T22:35:06.923182+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Product Final Controller"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "observedAt": "2026-09-29T22:35:06.923185+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/LatinMaestro/DNA-Racing-Intelligence/issues/120",
+          "observedAt": "2026-09-29T22:35:06.923187+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Integration & Specification Closure before further feature expansion"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/BroMarcus/church-app/issues/28",
+          "observedAt": "2026-09-29T22:35:06.923188+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "KINGDOM NETWORK CONTROL ROOM \u2014 Active Work / Blocks / Deployment Queue"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/victornife/jul/issues/62",
+          "observedAt": "2026-09-29T22:35:06.923190+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "[PLAN] Jul.IA repository programme \u2014 current execution and historical delivery"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/pip-frontend/issues/1109",
+          "observedAt": "2026-09-29T22:35:06.923192+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/Nickrock2002/Evershop/issues/3",
+          "observedAt": "2026-09-29T22:35:06.923194+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "evershop-1.0.0.tgz: 142 vulnerabilities (highest severity is: 9.8)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/objectstack-ai/objectstack/issues/6015",
+          "observedAt": "2026-09-29T22:35:06.923195+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "[PM seat] triage (objectstack-wide) \u2014 \u23f3 vacant \u00b7 last session_01W89enF2dYV7K4N2Fbfj33f signed off 2026-09-28 \u00b7 read its close-out brief first \u00b7 state = body + comments newer than it (body over the relay cap)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/appreg-frontend/issues/2",
+          "observedAt": "2026-09-29T22:35:06.923197+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/peleduri/zero-day-pulse/issues/7",
+          "observedAt": "2026-09-29T22:35:06.923199+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "\ud83d\udea8 Zero Day Pulse \u2014 Active Vulnerability Tracker"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/SwiftChainn/SwiftChain_Backend/issues/185",
+          "observedAt": "2026-09-29T22:35:06.923200+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "[Refactor] Consolidate the three duplicate authentication middlewares into one canonical implementation"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/mitodl/ocw-studio/issues/1787",
+          "observedAt": "2026-09-29T22:35:06.923202+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/fdm-monster/fdm-monster-docs/issues/303",
+          "observedAt": "2026-09-29T22:35:06.923204+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "core-3.9.2.tgz: 97 vulnerabilities (highest severity is: 9.8)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/AlBeli-V/WebSite_BizSoft/issues/22",
+          "observedAt": "2026-09-29T22:35:06.923205+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "perf: \u0436\u0443\u0440\u043d\u0430\u043b \u0437\u0430\u043c\u0435\u0440\u043e\u0432 \u043f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0438\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u0438 (ops-perf)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/wa-task-batch-service/issues/87",
+          "observedAt": "2026-09-29T22:35:06.923207+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/Financial-Privacy-Foundation/ZcashCoinholderGrantsProgram/issues/30",
+          "observedAt": "2026-09-29T22:35:06.923208+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Retroactive Grant Application - CipherPay"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/microsoft/Agents-for-js/issues/1311",
+          "observedAt": "2026-09-29T22:35:06.923210+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Update JS SDK Docs"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/x402-foundation/x402/issues/2332",
+          "observedAt": "2026-09-29T22:35:06.923212+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Post-settlement accountability layer: tamper-evident proof of agent action after payment"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/cath-service/issues/3",
+          "observedAt": "2026-09-29T22:35:06.923216+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Dependency Dashboard"
+        }
+      ]
+    }
+  ],
+  "errors": []
+}
