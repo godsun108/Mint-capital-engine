@@ -12,9 +12,11 @@
 </main><script>
 const PRODUCT_ID='foundry-express-ts-001';
 const source=(new URLSearchParams(location.search).get('src')||'direct').toLowerCase();
+const signal=(event)=>fetch('/api/acquisition/event',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({event,source})}).catch(()=>{});
+signal('VISITED');
 document.getElementById('buy').addEventListener('click',async()=>{
  const b=document.getElementById('buy'),e=document.getElementById('error');b.disabled=true;e.textContent='';
- try{const r=await fetch('/api/checkout',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({productId:PRODUCT_ID,source})});const j=await r.json();if(!r.ok)throw new Error(j.error||'Checkout unavailable');location.href=j.url}
+ try{signal('CHECKOUT_STARTED');const r=await fetch('/api/checkout',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({productId:PRODUCT_ID,source})});const j=await r.json();if(!r.ok)throw new Error(j.error||'Checkout unavailable');location.href=j.url}
  catch(x){e.textContent=x.message;b.disabled=false}
 });
 </script></body></html>
