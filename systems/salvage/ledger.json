@@ -1,0 +1,43 @@
+{
+  "schema": "mint.salvage.ledger.v1",
+  "semantics": "PROJECTED_SAVINGS_ARE_NOT_REALIZED_SAVINGS",
+  "totals": {
+    "projected_savings_usd": 0,
+    "verified_available_savings_usd": 0,
+    "realized_savings_usd": 0,
+    "credits_received_usd": 0
+  },
+  "opportunities": [],
+  "required_fields": {
+    "opportunity": [
+      "id",
+      "domain",
+      "current_cost",
+      "alternative",
+      "source",
+      "status",
+      "switching_cost",
+      "capability_tradeoff",
+      "approval_required",
+      "next_action"
+    ],
+    "realization": [
+      "baseline_evidence",
+      "new_cost_evidence",
+      "effective_date",
+      "gross_savings",
+      "switching_cost",
+      "net_realized_savings"
+    ]
+  },
+  "status_values": [
+    "DISCOVERED",
+    "CURRENT_COST_VERIFIED",
+    "ALTERNATIVE_VERIFIED",
+    "SAVINGS_MODELED",
+    "APPROVED_IF_REQUIRED",
+    "IMPLEMENTED",
+    "SAVINGS_OBSERVED",
+    "SAVINGS_REALIZED"
+  ]
+}
