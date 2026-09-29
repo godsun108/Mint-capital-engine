@@ -1,0 +1,26 @@
+{
+  "schema": "mint.brand.product-map.v1",
+  "assignments": {
+    "foundry-express-ts-001": {
+      "brand": "foundry",
+      "status": "WORKING_IDENTITY"
+    },
+    "api-launch-checklist-002": {
+      "brand": "foundry",
+      "status": "WORKING_IDENTITY"
+    },
+    "site-launch-checklist-003": {
+      "brand": "mint",
+      "status": "MASTER_BRAND_UNTIL_CHILD_NAME_CLEARS"
+    },
+    "ai-workflow-kit-004": {
+      "brand": "mint",
+      "status": "MASTER_BRAND_UNTIL_CHILD_NAME_CLEARS"
+    },
+    "mint-builder-launch-pack-005": {
+      "brand": "mint",
+      "status": "MASTER_BRAND"
+    }
+  },
+  "rule": "An unapproved candidate brand never silently replaces the public product identity."
+}
