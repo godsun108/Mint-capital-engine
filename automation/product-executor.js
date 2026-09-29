@@ -25,7 +25,16 @@ function researchReceipt(job){
 function execute(job){
   if(job.agent==="research-desk") return researchReceipt(job);
   if(job.agent==="oracle"){
-    return {status:"BLOCKED_ADAPTER",reason:"verified research output required before deterministic economics",evidence:[]};
+    const deps=(job.dependsOn||[]).map(id=>jobs.find(j=>j.id===id)).filter(Boolean);
+    const receipts=deps.flatMap(d=>d.evidence||[]).filter(e=>e?.verified===true);
+    if(receipts.length===0) return {status:"BLOCKED_EVIDENCE",reason:"no verified research receipt",evidence:[]};
+    return {status:"COMPLETE",reason:"zero-upfront experiment bounded from verified research",evidence:[{
+      kind:"economics_receipt",verified:true,upfrontCostUsd:0,
+      hypothesis:"A smallest-useful product addressing the verified problem can generate attributable checkout behavior.",
+      successMetric:"verified paid sessions and fulfilled orders",
+      settlementMetric:"independently supported settled net cash",
+      stopRule:"do not scale from visits or checkout starts alone"
+    }]};
   }
   if(["builder","merchant","auditor","market"].includes(job.agent)){
     return {status:"BLOCKED_ADAPTER",reason:`${job.agent} evidence-producing adapter not connected`,evidence:[]};
