@@ -36,7 +36,16 @@ function execute(job){
       stopRule:"do not scale from visits or checkout starts alone"
     }]};
   }
-  if(["builder","merchant","auditor","market"].includes(job.agent)){
+  if(job.agent==="builder"){
+    const deps=(job.dependsOn||[]).map(id=>jobs.find(j=>j.id===id)).filter(Boolean);
+    const economics=deps.flatMap(d=>d.evidence||[]).find(e=>e?.kind==="economics_receipt"&&e?.verified===true);
+    if(!economics) return {status:"BLOCKED_EVIDENCE",reason:"verified economics receipt required",evidence:[]};
+    return {status:"BLOCKED_ADAPTER",reason:"build specification ready; artifact generator not connected",evidence:[{
+      kind:"build_spec",verified:true,scope:"smallest useful owned nonregulated digital product",budgetUsd:0,
+      acceptance:["artifact exists","tests pass","claims map to behavior","no secrets","delivery mapping defined"]
+    }]};
+  }
+  if(["merchant","auditor","market"].includes(job.agent)){
     return {status:"BLOCKED_ADAPTER",reason:`${job.agent} evidence-producing adapter not connected`,evidence:[]};
   }
   return {status:"BLOCKED_ADAPTER",reason:"no executor registered",evidence:[]};
