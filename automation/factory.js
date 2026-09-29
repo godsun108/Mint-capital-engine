@@ -1,18 +1,23 @@
 import fs from "node:fs";import path from "node:path";import {spawnSync} from "node:child_process";
 const root=process.cwd(),stateDir=path.join(root,"automation/state"),queuePath=path.join(stateDir,"factory-queue.json"),runPath=path.join(stateDir,"factory-run.json");
 fs.mkdirSync(stateDir,{recursive:true});
-const now=()=>new Date().toISOString(),maxAttempts=3;\nconst runId=process.env.GITHUB_RUN_ID||`local-${Date.now()}`,runAttempt=process.env.GITHUB_RUN_ATTEMPT||"1";
+const now=()=>new Date().toISOString(),maxAttempts=3;
+const runId=process.env.GITHUB_RUN_ID||`local-${Date.now()}`,runAttempt=process.env.GITHUB_RUN_ATTEMPT||"1";
 const hardStops=["SPEND_MONEY","BORROW","OPEN_FINANCIAL_ACCOUNT","TRADE_OR_INVEST","SIGN_OR_ACCEPT_BINDING_TERMS","OWNER_ATTESTATION","IMPERSONATE_OWNER","UNAUTHORIZED_OUTREACH"];
 const seed=[
  {task_id:"fleet-prepare",objective:"Run deterministic commerce preparation and release gates",owner_agent:"deckhand",kind:"SCRIPT",command:"automation/deckhand.js",status:"READY",allowed_actions:["LOCAL_READ","LOCAL_WRITE","GENERATE","VALIDATE"],hard_stops:hardStops,expected_evidence:"successful process exit",dependencies:[]},
  {task_id:"external-verify",objective:"Verify public MINT surfaces independently",owner_agent:"watchtower",kind:"SCRIPT",command:"automation/watchtower.js",status:"READY",allowed_actions:["PUBLIC_HTTP_GET","LOCAL_WRITE"],hard_stops:hardStops,expected_evidence:"watchtower observation",dependencies:["fleet-prepare"]},
- {task_id:"prospect-next",objective:"Prepare evidence-bearing zero-spend distribution hypotheses for active offers",owner_agent:"prospector",kind:"SCRIPT",command:"automation/prospector.js",status:"BACKLOG",allowed_actions:["LOCAL_READ","LOCAL_WRITE","PREPARE"],hard_stops:hardStops,expected_evidence:"prospector opportunity record",dependencies:["fleet-prepare","external-verify"]},\n {task_id:"merchant-prepare",objective:"Convert verified hypotheses into attributed channel-ready assets without publishing",owner_agent:"merchant",kind:"SCRIPT",command:"automation/merchant.js",status:"BACKLOG",allowed_actions:["LOCAL_READ","LOCAL_WRITE","GENERATE","PREPARE"],hard_stops:hardStops,expected_evidence:"merchant asset record with experiment IDs and attribution URLs",dependencies:["prospect-next"]}\n];
+ {task_id:"prospect-next",objective:"Prepare evidence-bearing zero-spend distribution hypotheses for active offers",owner_agent:"prospector",kind:"SCRIPT",command:"automation/prospector.js",status:"BACKLOG",allowed_actions:["LOCAL_READ","LOCAL_WRITE","PREPARE"],hard_stops:hardStops,expected_evidence:"prospector opportunity record",dependencies:["fleet-prepare","external-verify"]},
+ {task_id:"merchant-prepare",objective:"Convert verified hypotheses into attributed channel-ready assets without publishing",owner_agent:"merchant",kind:"SCRIPT",command:"automation/merchant.js",status:"BACKLOG",allowed_actions:["LOCAL_READ","LOCAL_WRITE","GENERATE","PREPARE"],hard_stops:hardStops,expected_evidence:"merchant asset record with experiment IDs and attribution URLs",dependencies:["prospect-next"]}
+];
 let q;
 try{q=JSON.parse(fs.readFileSync(queuePath,"utf8"))}catch{q={schema:"mint.factory.queue.v1",created_at:now(),tasks:seed}}
 for(const s of seed)if(!q.tasks.some(t=>t.task_id===s.task_id))q.tasks.push(s);
 for(const t of q.tasks)if(t.status==="FAILED_RETRYABLE"){if((t.attempts||0)<maxAttempts){t.status="READY";t.next_action="Bounded retry authorized on a later factory run."}else{t.status="FAILED_TERMINAL";t.next_action="Retry budget exhausted; owner or maintainer review required."}}
 const byId=id=>q.tasks.find(t=>t.task_id===id);
-const events=[];\nconst startedQueueUpdatedAt=q.updated_at||null;\nconst restoredState=Boolean(startedQueueUpdatedAt);
+const events=[];
+const startedQueueUpdatedAt=q.updated_at||null;
+const restoredState=Boolean(startedQueueUpdatedAt);
 for(const t of q.tasks){
  if(t.status==="DONE"||t.status.startsWith("BLOCKED")||t.status==="FAILED_TERMINAL")continue;
  const deps=t.dependencies||[];
@@ -28,8 +33,10 @@ for(const t of q.tasks){
  }
 }
 q.updated_at=now();
-fs.writeFileSync(queuePath,JSON.stringify(q,null,2)+"\n");
+fs.writeFileSync(queuePath,JSON.stringify(q,null,2)+"
+");
 const report={schema:"mint.factory.run.v1",run_id:runId,run_attempt:runAttempt,ran_at:now(),restored_state:restoredState,restored_queue_updated_at:startedQueueUpdatedAt,events,counts:Object.fromEntries(["BACKLOG","READY","RUNNING","DONE","BLOCKED_OWNER","BLOCKED_EXTERNAL","FAILED_RETRYABLE","FAILED_TERMINAL"].map(s=>[s,q.tasks.filter(t=>t.status===s).length])),truth:"Factory completion means only the declared task evidence was obtained. It does not imply sales, customers, revenue, settlement, eligibility, legal clearance, or external actions not evidenced here."};
-fs.writeFileSync(runPath,JSON.stringify(report,null,2)+"\n");
+fs.writeFileSync(runPath,JSON.stringify(report,null,2)+"
+");
 console.log(JSON.stringify(report,null,2));
 if(q.tasks.some(t=>t.status==="FAILED_RETRYABLE"||t.status==="FAILED_TERMINAL"))process.exitCode=1;
