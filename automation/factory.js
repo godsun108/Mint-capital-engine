@@ -13,7 +13,7 @@ try{q=JSON.parse(fs.readFileSync(queuePath,"utf8"))}catch{q={schema:"mint.factor
 for(const s of seed)if(!q.tasks.some(t=>t.task_id===s.task_id))q.tasks.push(s);
 for(const t of q.tasks)if(t.status==="FAILED_RETRYABLE"){if((t.attempts||0)<maxAttempts){t.status="READY";t.next_action="Bounded retry authorized on a later factory run."}else{t.status="FAILED_TERMINAL";t.next_action="Retry budget exhausted; owner or maintainer review required."}}
 const byId=id=>q.tasks.find(t=>t.task_id===id);
-const events=[];\nconst startedQueueUpdatedAt=q.updated_at||null;
+const events=[];\nconst startedQueueUpdatedAt=q.updated_at||null;\nconst restoredState=Boolean(startedQueueUpdatedAt);
 for(const t of q.tasks){
  if(t.status==="DONE"||t.status.startsWith("BLOCKED")||t.status==="FAILED_TERMINAL")continue;
  const deps=t.dependencies||[];
@@ -30,7 +30,7 @@ for(const t of q.tasks){
 }
 q.updated_at=now();
 fs.writeFileSync(queuePath,JSON.stringify(q,null,2)+"\n");
-const report={schema:"mint.factory.run.v1",run_id:runId,run_attempt:runAttempt,ran_at:now(),restored_queue_updated_at:startedQueueUpdatedAt,events,counts:Object.fromEntries(["BACKLOG","READY","RUNNING","DONE","BLOCKED_OWNER","BLOCKED_EXTERNAL","FAILED_RETRYABLE","FAILED_TERMINAL"].map(s=>[s,q.tasks.filter(t=>t.status===s).length])),truth:"Factory completion means only the declared task evidence was obtained. It does not imply sales, customers, revenue, settlement, eligibility, legal clearance, or external actions not evidenced here."};
+const report={schema:"mint.factory.run.v1",run_id:runId,run_attempt:runAttempt,ran_at:now(),restored_state:restoredState,restored_queue_updated_at:startedQueueUpdatedAt,events,counts:Object.fromEntries(["BACKLOG","READY","RUNNING","DONE","BLOCKED_OWNER","BLOCKED_EXTERNAL","FAILED_RETRYABLE","FAILED_TERMINAL"].map(s=>[s,q.tasks.filter(t=>t.status===s).length])),truth:"Factory completion means only the declared task evidence was obtained. It does not imply sales, customers, revenue, settlement, eligibility, legal clearance, or external actions not evidenced here."};
 fs.writeFileSync(runPath,JSON.stringify(report,null,2)+"\n");
 console.log(JSON.stringify(report,null,2));
 if(q.tasks.some(t=>t.status==="FAILED_RETRYABLE"||t.status==="FAILED_TERMINAL"))process.exitCode=1;
