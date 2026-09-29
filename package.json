@@ -7,6 +7,8 @@
     "product:cycle:dry": "node automation/product-cycle.js --dry-run",
     "product:execute": "node automation/product-executor.js",
     "market:publish": "node automation/publish-owned-acquisition.js",
-    "learn": "node automation/learn.js"
+    "learn": "node automation/learn.js",
+    "commerce:observe": "node automation/observe-commerce.js",
+    "learn:commerce": "npm run commerce:observe && npm run learn"
   }
 }
