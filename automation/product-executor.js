@@ -43,10 +43,15 @@ function execute(job){
 }
 
 let attempted=0;
-for(const job of runnable.slice(0,1)){
-  const result=execute(job); attempted++;
+for(let step=0;step<6;step++){
+  const ready=nextJobs({jobs,kills:state.kills||{},approvals:state.approvals||[]},registry);
+  const job=ready[0];
+  if(!job) break;
+  const result=execute(job);
+  attempted++;
   const target=jobs.find(j=>j.id===job.id);
   Object.assign(target,{...result,lastAttemptAt:now});
+  if(result.status!=="COMPLETE") break;
 }
 const next={...state,queue:jobs,lastExecutorRunAt:now};
 write(statePath,next);
