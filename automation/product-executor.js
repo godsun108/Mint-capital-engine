@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { nextJobs } from "../agents/orchestrator.js";
 import { generateArtifact } from "../agents/adapters/artifact-generator.js";
+import { testArtifact } from "../agents/adapters/artifact-test.js";
 
 const root=process.cwd();
 const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),"utf8"));
@@ -66,7 +67,12 @@ function execute(job){
     const required=["mint-product.json","README.md"];
     const missing=required.filter(name=>!fs.existsSync(path.join(dir,name)));
     if(missing.length) return {status:"BLOCKED_EVIDENCE",reason:"artifact files missing",evidence:[{kind:"audit_receipt",verified:false,missing}]};
-    return {status:"BLOCKED_TESTS",reason:"structure and offer verified; functional tests required before publication",evidence:[{kind:"audit_receipt",verified:true,artifactPath:artifact.artifactPath,checks:["required_files","draft_status","offer_bounded"],publicationReady:false}]};
+    const tested=testArtifact({artifactPath:artifact.artifactPath,root});
+    if(!tested.ok) return {status:"BLOCKED_TESTS",reason:"artifact tests failed",evidence:[{kind:"test_receipt",verified:false,...tested}]};
+    return {status:"COMPLETE",reason:"artifact and offer passed bounded deterministic audit",evidence:[
+      {kind:"test_receipt",verified:true,...tested},
+      {kind:"audit_receipt",verified:true,artifactPath:artifact.artifactPath,checks:["required_files","draft_status","offer_bounded","deterministic_tests"],publicationReady:true}
+    ]};
   }
   if(["market"].includes(job.agent)){
     return {status:"BLOCKED_ADAPTER",reason:`${job.agent} evidence-producing adapter not connected`,evidence:[]};
