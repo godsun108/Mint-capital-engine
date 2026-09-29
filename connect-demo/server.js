@@ -243,6 +243,16 @@ async function thinWebhook(req,res){
   send(res,200,{received:true,eventId:event.id,type:event.type});
 }
 
+async function acquisitionEvent(req,res){
+  const body=await readJson(req);
+  const event=String(body.event||"");
+  const source=String(body.source||"direct").toLowerCase();
+  const allowed=new Set(["VISITED","CHECKOUT_STARTED"]);
+  if(!allowed.has(event)||!/^[a-z0-9_-]{1,48}$/.test(source))return send(res,400,{error:"Invalid acquisition event."});
+  console.log("MINT_ACQUISITION",JSON.stringify({event,source,offerId:"foundry-express-ts-001",at:new Date().toISOString()}));
+  return send(res,202,{ok:true,event,source});
+}
+
 async function serveFile(res,file,type){const data=await readFile(file);res.writeHead(200,{'content-type':type});res.end(data)}
 const root=path.dirname(fileURLToPath(import.meta.url));
 
@@ -256,6 +266,7 @@ const server=http.createServer(async(req,res)=>{
     if(req.method==='GET'&&u.pathname==='/success')return serveFile(res,path.join(root,'public/success.html'),'text/html; charset=utf-8');
     if(req.method==='GET'&&u.pathname==='/api/storefront')return storefront(res);
     if(req.method==='GET'&&u.pathname==='/api/money-state')return moneyState(res);
+    if(req.method==='POST'&&u.pathname==='/api/acquisition/event')return acquisitionEvent(req,res);
     if(req.method==='POST'&&u.pathname==='/api/accounts')return createConnectedAccount(req,res);
     let m=u.pathname.match(/^\/api\/accounts\/([^/]+)\/status$/);
     if(req.method==='GET'&&m)return accountStatus(decodeURIComponent(m[1]),res);
