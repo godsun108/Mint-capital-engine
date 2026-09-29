@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import { nextJobs } from "../agents/orchestrator.js";
+import { generateArtifact } from "../agents/adapters/artifact-generator.js";
 
 const root=process.cwd();
 const read=p=>JSON.parse(fs.readFileSync(path.join(root,p),"utf8"));
@@ -40,10 +41,12 @@ function execute(job){
     const deps=(job.dependsOn||[]).map(id=>jobs.find(j=>j.id===id)).filter(Boolean);
     const economics=deps.flatMap(d=>d.evidence||[]).find(e=>e?.kind==="economics_receipt"&&e?.verified===true);
     if(!economics) return {status:"BLOCKED_EVIDENCE",reason:"verified economics receipt required",evidence:[]};
-    return {status:"BLOCKED_ADAPTER",reason:"build specification ready; artifact generator not connected",evidence:[{
-      kind:"build_spec",verified:true,scope:"smallest useful owned nonregulated digital product",budgetUsd:0,
-      acceptance:["artifact exists","tests pass","claims map to behavior","no secrets","delivery mapping defined"]
-    }]};
+    const buildSpec={kind:"build_spec",verified:true,scope:"smallest useful owned nonregulated digital product",budgetUsd:0,
+      acceptance:["artifact exists","tests pass","claims map to behavior","no secrets","delivery mapping defined"]};
+    const candidate=state.runs.find(r=>job.id.includes(r.cycleId))?.candidate||job.inputs?.candidate;
+    const built=generateArtifact({candidate,buildSpec,root});
+    if(!built.ok) return {status:"BLOCKED_ADAPTER",reason:built.reason,evidence:[buildSpec]};
+    return {status:"COMPLETE",reason:"bounded artifact generated",evidence:[buildSpec,{kind:"artifact_receipt",verified:true,...built}]};
   }
   if(["merchant","auditor","market"].includes(job.agent)){
     return {status:"BLOCKED_ADAPTER",reason:`${job.agent} evidence-producing adapter not connected`,evidence:[]};
