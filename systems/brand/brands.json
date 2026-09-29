@@ -1,0 +1,80 @@
+{
+  "schema": "mint.brand.registry.v1",
+  "semantics": "BRAND_RECORDS_NOT_TRADEMARK_CLEARANCE_NOT_SEPARATE_LEGAL_ENTITIES",
+  "brands": {
+    "mint": {
+      "brand_id": "mint",
+      "mode": "MASTER",
+      "public_name": "MINT",
+      "descriptor": "Useful things, built to ship.",
+      "status": "ACTIVE",
+      "audience": [
+        "builders",
+        "operators",
+        "customers"
+      ],
+      "products": [
+        "mint-builder-launch-pack-005"
+      ],
+      "naming_status": "IN_USE_NOT_FORMAL_CLEARANCE"
+    },
+    "foundry": {
+      "brand_id": "foundry",
+      "mode": "ENDORSED",
+      "public_name": "Foundry",
+      "descriptor": "Practical developer launch products.",
+      "endorsement": "by MINT",
+      "status": "ACTIVE",
+      "audience": [
+        "builders",
+        "developers",
+        "small software teams"
+      ],
+      "products": [
+        "foundry-express-ts-001",
+        "api-launch-checklist-002"
+      ],
+      "naming_status": "WORKING_NAME_REQUIRES_COLLISION_SCREENING_BEFORE_MAJOR_INVESTMENT"
+    },
+    "launchline": {
+      "brand_id": "launchline",
+      "mode": "STANDALONE_CANDIDATE",
+      "public_name": "Launchline",
+      "descriptor": "Small-site launch and preflight tools.",
+      "status": "CANDIDATE",
+      "audience": [
+        "creators",
+        "small businesses",
+        "agencies"
+      ],
+      "products": [
+        "site-launch-checklist-003"
+      ],
+      "naming_status": "UNSCREENED_CANDIDATE_DO_NOT_TREAT_AS_CLEARED"
+    },
+    "workflow_candidate": {
+      "brand_id": "workflow_candidate",
+      "mode": "STANDALONE_CANDIDATE",
+      "public_name": null,
+      "descriptor": "Practical AI workflow systems.",
+      "status": "NAMING_REQUIRED",
+      "audience": [
+        "creators",
+        "operators",
+        "small businesses",
+        "agencies"
+      ],
+      "products": [
+        "ai-workflow-kit-004"
+      ],
+      "naming_status": "NOT_NAMED"
+    }
+  },
+  "rules": [
+    "Customer relevance beats forced MINT naming.",
+    "Do not present candidate names as cleared brands.",
+    "Search current usage before activating a new public name.",
+    "Escalate appropriate trademark review before consequential brand investment.",
+    "All brands remain connected to truthful seller, support, fulfillment and economic records."
+  ]
+}
