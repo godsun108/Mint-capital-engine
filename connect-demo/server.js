@@ -269,7 +269,7 @@ async function acquisitionEvent(req,res){
 
 async function acquisitionState(res){\n  const sources={};\n  for(const [key,count] of acquisitionCounters){const [source,event]=key.split('|');sources[source]||={VISITED:0,CHECKOUT_STARTED:0};sources[source][event]=count;}\n  const totals=Object.values(sources).reduce((a,x)=>({VISITED:a.VISITED+(x.VISITED||0),CHECKOUT_STARTED:a.CHECKOUT_STARTED+(x.CHECKOUT_STARTED||0)}),{VISITED:0,CHECKOUT_STARTED:0});\n  return send(res,200,{ok:true,schema:'mint.acquisition.snapshot.v1',semantics:'PROCESS_LOCAL_AGGREGATES_NOT_UNIQUE_VISITORS_NOT_LIFETIME_TOTALS',startedAt:acquisitionStartedAt,generatedAt:new Date().toISOString(),privacy:'No IP, cookie, user-agent, or personal identifier stored by this counter.',totals,sources});\n}\n\nasync function serveFile(res,file,type){const data=await readFile(file);res.writeHead(200,{'content-type':type});res.end(data)}
 const root=path.dirname(fileURLToPath(import.meta.url));
-const commerceCatalogPath=path.join(root,'..','systems','commerce','catalog.json');
+const commerceCatalogPath=path.join(root,'catalog.json');
 async function liveOffer(id){const catalog=JSON.parse(await readFile(commerceCatalogPath,'utf8'));const offer=catalog?.offers?.[id];if(!offer||offer.status!=='ACTIVE'||!offer.mandate_id) return null;return offer;}
 
 const server=http.createServer(async(req,res)=>{
