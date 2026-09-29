@@ -7,14 +7,33 @@
     "minimum_distinct_sources_for_candidate": 2,
     "max_candidates_per_refresh": 20,
     "max_upfront_usd": 0,
-    "forbid": ["fabricated_demand","fabricated_customers","fabricated_reviews","regulated_products","private_or_paywalled_scraping"]
+    "forbid": [
+      "fabricated_demand",
+      "fabricated_customers",
+      "fabricated_reviews",
+      "regulated_products",
+      "private_or_paywalled_scraping"
+    ]
   },
   "candidate": {
-    "required": ["id","customer","problem","regulated","upfrontCostUsd","evidence"],
-    "evidence_required": ["kind","source","url","observedAt","verified"],
+    "required": [
+      "id",
+      "customer",
+      "problem",
+      "regulated",
+      "upfrontCostUsd",
+      "evidence"
+    ],
+    "evidence_required": [
+      "kind",
+      "source",
+      "url",
+      "observedAt",
+      "verified"
+    ],
     "verified_requires_public_source": true
   },
   "promotion": {
-    "to_product_cycle": "candidate must contain at least one verified attributable evidence item and satisfy the standing mandate; research-desk must still challenge the evidence before build"
+    "to_product_cycle": "candidate must contain at least two distinct verified attributable public evidence sources and satisfy the standing mandate; research-desk must still challenge the evidence before build"
   }
 }
