@@ -12,11 +12,15 @@ for(const t of targets){
  try{
   const r=await fetch(t.url,{redirect:"follow",signal:AbortSignal.timeout(12000)});
   const body=await r.text();
-  let semantic="REACHABLE";
-  if(t.kind==="HEALTH"&&!r.ok)semantic="UNHEALTHY";
-  if(t.kind==="JSON"){try{JSON.parse(body)}catch{semantic="INVALID_JSON"}}
-  results.push({...t,http_status:r.status,ok:r.ok,semantic,latency_ms:Date.now()-started,observed_at:new Date().toISOString()});
- }catch(e){results.push({...t,ok:false,semantic:"UNREACHABLE",error:String(e?.message||e),latency_ms:Date.now()-started,observed_at:new Date().toISOString()})}
+  let semantic=r.ok?"REACHABLE":"HTTP_ERROR";
+  let semanticOk=r.ok;
+  if(t.kind==="HEALTH"&&!r.ok){semantic="UNHEALTHY";semanticOk=false}
+  if(t.kind==="JSON"){
+   try{JSON.parse(body)}
+   catch{semantic="INVALID_JSON";semanticOk=false}
+  }
+  results.push({...t,http_status:r.status,ok:r.ok&&semanticOk,transport_ok:r.ok,semantic,latency_ms:Date.now()-started,observed_at:new Date().toISOString()});
+ }catch(e){results.push({...t,ok:false,transport_ok:false,semantic:"UNREACHABLE",error:String(e?.message||e),latency_ms:Date.now()-started,observed_at:new Date().toISOString()})}
 }
 const report={schema:"mint.watchtower.observation.v1",truth:"Reachability does not prove checkout, payment, fulfillment, traffic, customer activity, settlement, or profitability.",results};
 fs.mkdirSync(path.join(root,"automation/state"),{recursive:true});
