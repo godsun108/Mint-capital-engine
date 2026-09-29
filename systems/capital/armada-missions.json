@@ -1,0 +1,195 @@
+{
+  "schema": "mint.capital.armada.missions.v1",
+  "launched_at": "2026-09-29",
+  "mode": "ZERO_SPEND_PARALLEL_SCOUTING",
+  "objective": "Produce a diversified queue of lawful, evidence-backed online capital and resource opportunities that MINT can execute or prepare with the user.",
+  "missions": [
+    {
+      "vessel": "foundry",
+      "state": "DEPLOYED",
+      "mission": "Acquire attributable external attention and paid customers for existing owned digital products.",
+      "next": [
+        "measure acquisition sources",
+        "improve conversion from observed evidence",
+        "fulfill verified paid orders"
+      ],
+      "evidence": [
+        "visit_events",
+        "checkout_sessions",
+        "paid_sessions",
+        "fulfillment",
+        "settlement"
+      ]
+    },
+    {
+      "vessel": "lighthouse",
+      "state": "DEPLOYED",
+      "mission": "Produce useful free tools and search-intent assets that attract qualified developer attention.",
+      "next": [
+        "ship additional useful utilities only when each has distinct intent",
+        "measure source-attributed traffic",
+        "route relevant users to matching offers"
+      ],
+      "evidence": [
+        "indexed_surface",
+        "visit_events",
+        "outbound_click_or_checkout_start"
+      ]
+    },
+    {
+      "vessel": "dockyard",
+      "state": "SCOUTING",
+      "mission": "Find painful narrow software/API/automation problems suitable for tiny paid products.",
+      "next": [
+        "collect public problem observations",
+        "require multiple distinct demand sources",
+        "estimate build and support burden",
+        "prototype only after demand gate"
+      ],
+      "evidence": [
+        "public_source",
+        "explicit_problem",
+        "distinct_sources",
+        "existing_alternative_and_price"
+      ]
+    },
+    {
+      "vessel": "workboat",
+      "state": "SCOUTING",
+      "mission": "Find productized online services that can be fulfilled reliably with current tools and automation.",
+      "next": [
+        "identify repetitive buyer jobs",
+        "define fixed truthful deliverable",
+        "verify buyer demand",
+        "prepare fulfillment SOP"
+      ],
+      "evidence": [
+        "buyer_request",
+        "market_price_reference",
+        "fulfillment_test"
+      ]
+    },
+    {
+      "vessel": "licensor",
+      "state": "SCOUTING",
+      "mission": "Inventory owned reusable assets and identify legitimate licensing surfaces.",
+      "next": [
+        "inventory reusable code/content/data",
+        "check ownership and third-party licenses",
+        "define licenseable packages",
+        "identify permitted distribution channels"
+      ],
+      "evidence": [
+        "asset_path",
+        "ownership_or_license_status",
+        "buyer_use_case"
+      ]
+    },
+    {
+      "vessel": "referral",
+      "state": "SCOUTING",
+      "mission": "Find reputable affiliate/referral programs aligned with things MINT can genuinely recommend.",
+      "next": [
+        "verify official program terms",
+        "verify automation/promotion rules",
+        "record commission and payout conditions",
+        "enroll only when permitted and any required owner attestations are approved"
+      ],
+      "evidence": [
+        "official_terms",
+        "commission_terms",
+        "promotion_rules",
+        "eligibility"
+      ]
+    },
+    {
+      "vessel": "quartermaster",
+      "state": "SCOUTING",
+      "mission": "Find legitimate free productive resources, credits, grants, competitions and programs.",
+      "next": [
+        "verify official availability",
+        "check eligibility without guessing",
+        "record deadline and obligations",
+        "prepare non-binding materials"
+      ],
+      "evidence": [
+        "official_source",
+        "eligibility_terms",
+        "value",
+        "deadline",
+        "obligations"
+      ]
+    },
+    {
+      "vessel": "salvage",
+      "state": "SCOUTING",
+      "mission": "Identify avoidable infrastructure and operating costs and free substitutes.",
+      "next": [
+        "inventory known recurring costs when data exists",
+        "find equivalent free/open alternatives",
+        "quantify verified savings",
+        "request approval before consequential cancellation/change"
+      ],
+      "evidence": [
+        "current_cost",
+        "replacement_terms",
+        "verified_savings"
+      ]
+    },
+    {
+      "vessel": "treasury",
+      "state": "RESEARCH_ONLY",
+      "mission": "Model conservative ways existing capital could compound while preserving liquidity and downside awareness.",
+      "next": [
+        "research instruments and yields",
+        "separate yield from risk",
+        "model scenarios",
+        "never execute without explicit authorization"
+      ],
+      "evidence": [
+        "official_terms",
+        "current_rate_or_yield",
+        "liquidity",
+        "principal_risk",
+        "fees",
+        "tax_notes"
+      ]
+    }
+  ],
+  "candidate_schema": {
+    "required": [
+      "vessel",
+      "title",
+      "source",
+      "status",
+      "economic_type",
+      "upfront_cash_usd",
+      "evidence",
+      "constraints",
+      "approval_required",
+      "next_action"
+    ],
+    "status_values": [
+      "DISCOVERED",
+      "VERIFIED_AVAILABLE",
+      "ELIGIBLE_OR_APPLICABLE",
+      "PREPARED",
+      "SUBMITTED_OR_PUBLISHED",
+      "AWARDED_OR_PAID",
+      "PROVIDER_AVAILABLE",
+      "SETTLED_OR_RECEIVED"
+    ]
+  },
+  "global_hard_stops": [
+    "unauthorized_spend",
+    "unauthorized_money_movement",
+    "borrowing_without_approval",
+    "financial_account_opening_without_approval",
+    "binding_agreement_without_approval",
+    "owner_attestation_without_approval",
+    "spam",
+    "impersonation",
+    "fabricated_evidence",
+    "platform_rule_circumvention"
+  ]
+}
