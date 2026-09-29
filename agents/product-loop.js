@@ -11,6 +11,8 @@ export function eligibleCandidate(candidate, mandate) {
   if(candidate?.regulated===true) reasons.push("regulated");
   if((Number(candidate?.upfrontCostUsd)||0)>Number(mandate?.max_upfront_usd_per_job||0)) reasons.push("upfront_cost");
   if(!Array.isArray(candidate?.evidence)||candidate.evidence.length===0) reasons.push("missing_demand_evidence");
+  const verified=(candidate?.evidence||[]).filter(e=>e?.verified===true && (e?.url||e?.sourceId||e?.citation));
+  if(verified.length===0) reasons.push("missing_verified_demand_evidence");
   if(!candidate?.problem||!candidate?.customer) reasons.push("missing_customer_problem");
   return {ok:reasons.length===0,reasons};
 }
