@@ -26,12 +26,12 @@ jobs:
         run: npm run product:cycle
       - name: Persist auditable cycle state
         run: |
-          if git diff --quiet -- automation/state/product-cycle.json; then
-            echo "No new eligible candidate work."
+          git add automation/state/product-cycle.json
+          if git diff --cached --quiet; then
+            echo "No product-cycle state change."
             exit 0
           fi
           git config user.name "mint-product-cycle"
           git config user.email "actions@users.noreply.github.com"
-          git add automation/state/product-cycle.json
           git commit -m "MINT product cycle state"
           git push
