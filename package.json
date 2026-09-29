@@ -1,9 +1,10 @@
 {
-  "name":"mint-capital-engine",
-  "private":true,
-  "type":"module",
-  "scripts":{
-    "product:cycle":"node automation/product-cycle.js",
-    "product:cycle:dry":"node automation/product-cycle.js --dry-run"
+  "name": "mint-capital-engine",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "product:cycle": "node automation/product-cycle.js",
+    "product:cycle:dry": "node automation/product-cycle.js --dry-run",
+    "product:execute": "node automation/product-executor.js"
   }
 }
