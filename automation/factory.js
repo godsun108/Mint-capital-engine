@@ -12,7 +12,11 @@ const seed=[
 ];
 let q;
 try{q=JSON.parse(fs.readFileSync(queuePath,"utf8"))}catch{q={schema:"mint.factory.queue.v1",created_at:now(),tasks:seed}}
-for(const s of seed)if(!q.tasks.some(t=>t.task_id===s.task_id))q.tasks.push(s);
+for(const s of seed){
+ const existing=q.tasks.find(t=>t.task_id===s.task_id);
+ if(!existing)q.tasks.push({...s});
+ else Object.assign(existing,{objective:s.objective,owner_agent:s.owner_agent,kind:s.kind,command:s.command,allowed_actions:s.allowed_actions,hard_stops:s.hard_stops,expected_evidence:s.expected_evidence,dependencies:s.dependencies});
+}
 for(const t of q.tasks)if(t.status==="FAILED_RETRYABLE"){if((t.attempts||0)<maxAttempts){t.status="READY";t.next_action="Bounded retry authorized on a later factory run."}else{t.status="FAILED_TERMINAL";t.next_action="Retry budget exhausted; owner or maintainer review required."}}
 const byId=id=>q.tasks.find(t=>t.task_id===id);
 const events=[];
