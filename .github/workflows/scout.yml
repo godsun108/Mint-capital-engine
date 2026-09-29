@@ -18,10 +18,12 @@ jobs:
         run: python scout/product_scout.py
       - name: Synthesize related public problem evidence
         run: python scout/product_synthesize.py
+      - name: Propose source-backed problems for research
+        run: python scout/product_propose.py
       - name: Commit changed candidates
         run: |
           git config user.name "mint-scout"
           git config user.email "actions@users.noreply.github.com"
-          git add scout/data/candidates.json automation/product-scout-observations.json automation/product-scout-synthesis.json
+          git add scout/data/candidates.json automation/product-scout-observations.json automation/product-scout-synthesis.json automation/product-scout-proposals.json
           git diff --cached --quiet || git commit -m "SCOUT refresh public opportunities"
           git push
