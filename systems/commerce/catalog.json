@@ -28,6 +28,87 @@
         "mint-direct-web",
         "github-pages"
       ]
+    },
+    "api-launch-checklist-002": {
+      "id": "api-launch-checklist-002",
+      "status": "DRAFT",
+      "type": "DIGITAL_DOWNLOAD",
+      "name": "API Launch Checklist",
+      "description": "A compact checklist for reliability, security basics, operations, and customer-facing API readiness before launch.",
+      "price": {
+        "currency": "usd",
+        "unit_amount": 500
+      },
+      "mandate_id": "mandate:digital-products:001",
+      "fulfillment": {
+        "kind": "FILE",
+        "path": "../products/api-launch-checklist/README.md",
+        "filename": "api-launch-checklist.md",
+        "content_type": "text/markdown; charset=utf-8"
+      },
+      "acquisition": {
+        "headline": "Before you ship the API, check the boring things.",
+        "body": "A compact launch pass covering reliability, security basics, operations, documentation, and the customer/API experience.",
+        "cta": "Get the API launch checklist"
+      },
+      "channels": [
+        "github-pages",
+        "mint-direct-web"
+      ]
+    },
+    "site-launch-checklist-003": {
+      "id": "site-launch-checklist-003",
+      "status": "DRAFT",
+      "type": "DIGITAL_DOWNLOAD",
+      "name": "Small Website Launch Checklist",
+      "description": "A practical final-pass checklist for messaging, mobile usability, discovery, trust, and the primary customer journey.",
+      "price": {
+        "currency": "usd",
+        "unit_amount": 500
+      },
+      "mandate_id": "mandate:digital-products:001",
+      "fulfillment": {
+        "kind": "FILE",
+        "path": "../products/site-launch-checklist/README.md",
+        "filename": "site-launch-checklist.md",
+        "content_type": "text/markdown; charset=utf-8"
+      },
+      "acquisition": {
+        "headline": "About to publish? Give the site one last ruthless pass.",
+        "body": "Check messaging, mobile usability, search basics, trust signals, and the primary customer journey before launch.",
+        "cta": "Get the website launch checklist"
+      },
+      "channels": [
+        "github-pages",
+        "mint-direct-web"
+      ]
+    },
+    "ai-workflow-kit-004": {
+      "id": "ai-workflow-kit-004",
+      "status": "DRAFT",
+      "type": "DIGITAL_DOWNLOAD",
+      "name": "Practical AI Workflow Kit",
+      "description": "A reusable framework for defining, researching, building, critiquing, verifying, and improving work with a general-purpose AI assistant.",
+      "price": {
+        "currency": "usd",
+        "unit_amount": 900
+      },
+      "mandate_id": "mandate:digital-products:001",
+      "fulfillment": {
+        "kind": "FILE",
+        "path": "../products/ai-workflow-kit/README.md",
+        "filename": "practical-ai-workflow-kit.md",
+        "content_type": "text/markdown; charset=utf-8"
+      },
+      "acquisition": {
+        "headline": "Stop prompting from scratch.",
+        "body": "A reusable AI workflow for defining the job, researching, building, critiquing, verifying, and recording decisions.",
+        "cta": "Get the practical AI workflow kit"
+      },
+      "channels": [
+        "github-pages",
+        "mint-direct-web"
+      ]
     }
   }
 }
