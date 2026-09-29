@@ -1,0 +1,44 @@
+{
+  "schema": "mint.brand.naming-gate.v1",
+  "states": [
+    "CONCEPT",
+    "CANDIDATES",
+    "CURRENT_USE_SCREENED",
+    "DOMAIN_HANDLE_SCREENED",
+    "TRADEMARK_REVIEW_NEEDED",
+    "APPROVED_FOR_TEST",
+    "ACTIVE",
+    "RETIRED"
+  ],
+  "checks": [
+    {
+      "id": "audience_fit",
+      "required": true
+    },
+    {
+      "id": "category_meaning",
+      "required": true
+    },
+    {
+      "id": "obvious_web_collision_search",
+      "required": true
+    },
+    {
+      "id": "relevant_product_company_collision_search",
+      "required": true
+    },
+    {
+      "id": "domain_handle_check",
+      "required": false
+    },
+    {
+      "id": "trademark_screening",
+      "required": "before consequential commercial investment; scope depends on jurisdiction/category"
+    },
+    {
+      "id": "provenance_relationship",
+      "required": true
+    }
+  ],
+  "rule": "Do not convert an unscreened candidate into an asserted cleared brand."
+}
