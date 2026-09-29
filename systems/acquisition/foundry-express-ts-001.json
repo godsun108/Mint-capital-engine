@@ -1,0 +1,61 @@
+{
+  "schema": "mint.acquisition.plan.v1",
+  "offer_id": "foundry-express-ts-001",
+  "objective": "Acquire verified customers for the live Foundry Express TypeScript Starter while preserving truthful attribution and zero upfront acquisition spend.",
+  "budget_usd": 0,
+  "customer": {
+    "primary": "developers who want to start a small Express + TypeScript service without repeating baseline setup",
+    "jobs": [
+      "start an Express TypeScript API quickly",
+      "avoid recreating strict TypeScript and scripts",
+      "begin with a health route and environment example"
+    ]
+  },
+  "channels": [
+    {
+      "id": "mint-direct-seo",
+      "authorized": true,
+      "spend_usd": 0,
+      "mode": "owned",
+      "intent_topics": [
+        "express typescript starter",
+        "express typescript boilerplate",
+        "typescript express api starter"
+      ]
+    },
+    {
+      "id": "github-pages",
+      "authorized": true,
+      "spend_usd": 0,
+      "mode": "owned"
+    }
+  ],
+  "funnel": [
+    "VISITED",
+    "CHECKOUT_STARTED",
+    "PAID",
+    "FULFILLED",
+    "PROVIDER_AVAILABLE",
+    "SETTLED"
+  ],
+  "attribution": {
+    "campaign_parameter": "src",
+    "allowed_pattern": "^[a-z0-9_-]{1,48}$",
+    "persist_to_checkout_metadata": true
+  },
+  "experiments": [
+    {
+      "id": "foundry-intent-001",
+      "hypothesis": "A problem-first landing page aimed at developers searching for an Express TypeScript starter can produce attributable checkout starts and purchases.",
+      "success_evidence": "verified checkout starts and paid sessions attributed to the campaign",
+      "stop": "no fabricated demand conclusions; revise only from observed evidence"
+    }
+  ],
+  "hard_stops": [
+    "paid_ad_spend_without_authorization",
+    "unsolicited_outbound_without_messaging_mandate",
+    "fabricated_social_proof",
+    "fabricated_scarcity",
+    "unverified_revenue_claims"
+  ]
+}
