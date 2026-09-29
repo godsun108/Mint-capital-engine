@@ -57,7 +57,26 @@ jobs:
           name: mint-factory-evidence-${{ github.run_id }}-${{ github.run_attempt }}
           path: automation/state/**
           if-no-files-found: warn
-          retention-days: 30
+          retention-days: 90
+      - name: Publish certification summary
+        if: always()
+        run: |
+          node - <<'NODE' >> "$GITHUB_STEP_SUMMARY"
+          const fs=require("fs");
+          const read=n=>{try{return JSON.parse(fs.readFileSync("automation/state/"+n,"utf8"))}catch{return null}};
+          const run=read("factory-run.json"),audit=read("auditor.json"),integrity=read("evidence-integrity.json"),watch=read("watchtower.json");
+          console.log("# MINT Factory Certification");
+          console.log("");
+          console.log("| Signal | State |");
+          console.log("|---|---|");
+          console.log("| Factory failures | "+(run?((run.counts?.FAILED_RETRYABLE||0)+(run.counts?.FAILED_TERMINAL||0)):"UNKNOWN")+" |");
+          console.log("| WATCHTOWER | "+(watch?.ok===true?"GREEN":"NOT GREEN")+" |");
+          console.log("| Evidence integrity | "+(integrity?.ok===true?"GREEN":"NOT GREEN")+" |");
+          console.log("| Next constraint | "+(audit?.next_constraint||"UNKNOWN")+" |");
+          console.log("| Commerce | "+(audit?.stages?.commerce?.status||"UNPROVEN")+" |");
+          console.log("");
+          console.log("> Commerce is never inferred from infrastructure health.");
+          NODE
       - name: Save factory state
         if: always()
         uses: actions/cache/save@v4
