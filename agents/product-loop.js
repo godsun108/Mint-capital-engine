@@ -29,7 +29,7 @@ export function productCycle({cycleId,candidate,mandate}) {
     plan({id:`${prefix}-audit`,agent:"auditor",objective:"Verify evidence, product behavior, delivery, claims, permissions and mandate fit. Halt on uncertainty.",budget:0,dependsOn:[`${prefix}-package`]}),
     plan({id:`${prefix}-market`,agent:"market",objective:"Prepare attributable zero-spend acquisition for the audited approved offer using only mandate-authorized channels.",budget:0,dependsOn:[`${prefix}-audit`]})
   ];
-  return {cycleId,status:"VALIDATING",gate,jobs};
+  return {cycleId,status:"VALIDATING",gate,candidate,jobs};
 }
 
 export function portfolioDecision(metrics={}) {
