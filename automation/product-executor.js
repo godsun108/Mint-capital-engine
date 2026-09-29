@@ -13,11 +13,21 @@ const orchestrationState={jobs,kills:state.kills||{},approvals:state.approvals||
 const runnable=nextJobs(orchestrationState,registry);
 const now=new Date().toISOString();
 
+function researchReceipt(job){
+  const candidate=job.inputs?.candidate;
+  const evidence=Array.isArray(candidate?.evidence)?candidate.evidence:[];
+  const verified=evidence.filter(e=>e?.verified===true && (e?.url||e?.sourceId||e?.citation));
+  if(!candidate?.customer||!candidate?.problem) return {status:"BLOCKED_EVIDENCE",reason:"missing customer/problem",evidence:[]};
+  if(verified.length===0) return {status:"BLOCKED_EVIDENCE",reason:"no attributable verified evidence",evidence:[]};
+  return {status:"COMPLETE",reason:"candidate receipts validated",evidence:verified.map(e=>({kind:"source_receipt",source:e.source||e.sourceId||"public",url:e.url||null,citation:e.citation||null,observedAt:e.observedAt||null,verified:true}))};
+}
+
 function execute(job){
+  if(job.agent==="research-desk") return researchReceipt(job);
   if(job.agent==="oracle"){
     return {status:"BLOCKED_ADAPTER",reason:"verified research output required before deterministic economics",evidence:[]};
   }
-  if(["research-desk","builder","merchant","auditor","market"].includes(job.agent)){
+  if(["builder","merchant","auditor","market"].includes(job.agent)){
     return {status:"BLOCKED_ADAPTER",reason:`${job.agent} evidence-producing adapter not connected`,evidence:[]};
   }
   return {status:"BLOCKED_ADAPTER",reason:"no executor registered",evidence:[]};
