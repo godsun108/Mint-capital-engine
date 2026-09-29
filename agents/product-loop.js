@@ -22,7 +22,7 @@ export function productCycle({cycleId,candidate,mandate}) {
   if(!gate.ok) return {cycleId,status:"REJECTED",gate,jobs:[]};
   const prefix=`product-${cycleId}`;
   const jobs=[
-    plan({id:`${prefix}-verify`,agent:"research-desk",objective:"Verify candidate demand, customer problem, alternatives, claims constraints and evidence. Reject unsupported demand.",budget:0}),
+    plan({id:`${prefix}-verify`,agent:"research-desk",objective:"Verify candidate demand, customer problem, alternatives, claims constraints and evidence. Reject unsupported demand.",budget:0,inputs:{candidate}}),
     plan({id:`${prefix}-economics`,agent:"oracle",objective:"Define a falsifiable zero-upfront-cost product experiment and bounded economics.",budget:0,dependsOn:[`${prefix}-verify`]}),
     plan({id:`${prefix}-build`,agent:"builder",objective:"Build the smallest useful owned non-regulated digital product that satisfies the verified problem.",budget:0,dependsOn:[`${prefix}-economics`]}),
     plan({id:`${prefix}-package`,agent:"merchant",objective:"Package truthful offer, price, delivery, refund terms and fulfillment mapping within the standing mandate.",budget:0,dependsOn:[`${prefix}-build`]}),
