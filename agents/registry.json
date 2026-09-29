@@ -147,6 +147,34 @@
       "approval": "approved_offer_only"
     },
     {
+      "id": "market",
+      "division": "commerce",
+      "mission": "Acquire demand for approved offers through truthful zero-dollar marketing experiments and prepare paid campaigns for authorization.",
+      "capabilities": [
+        "market_research",
+        "seo",
+        "content_distribution",
+        "landing_page_experiment",
+        "draft_ads",
+        "measure"
+      ],
+      "approval": "zero_spend_autonomous_paid_spend_human"
+    },
+    {
+      "id": "concierge",
+      "division": "commerce",
+      "mission": "Serve inbound customers for approved offers using verified catalog and policy facts, route buyers to checkout, and escalate consequential requests.",
+      "capabilities": [
+        "inbound_customer_chat",
+        "product_questions",
+        "support",
+        "checkout_guidance",
+        "feedback_capture",
+        "escalate"
+      ],
+      "approval": "approved_offer_inbound_only"
+    },
+    {
       "id": "closer",
       "division": "commerce",
       "mission": "Serve and qualify inbound prospects for approved offers.",
