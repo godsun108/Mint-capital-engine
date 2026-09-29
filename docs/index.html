@@ -18,4 +18,13 @@
 </div></section>
 <section class="section"><h2>Start here. Then make it yours.</h2><div class="code">$ npm install<br>$ npm run dev<br><br>// Express + TypeScript foundation<br>// health route<br>// environment example<br>// build + start scripts</div></section>
 <section class="bottom"><div class="eyebrow">FOUNDRY</div><h2>Less setup. More building.</h2><p>Get the reusable starter and move on to the code that matters.</p><a class="cta" href="https://mint-stripe-connect-v4-production.up.railway.app/?src=github-pages">Get Foundry for $9 →</a></section>
-<footer class="foot">MINT · Owned acquisition surface · No guaranteed results or sales claims.</footer></div></body></html>
+<footer class="foot">MINT · Owned acquisition surface · No guaranteed results or sales claims.</footer></div><script>
+const MINT_COMMERCE='https://mint-stripe-connect-v4-production.up.railway.app';
+const qs=new URLSearchParams(location.search);
+const raw=(qs.get('src')||'github-pages').toLowerCase();
+const source=/^[a-z0-9_-]{1,48}$/.test(raw)?raw:'github-pages';
+fetch(MINT_COMMERCE+'/api/acquisition/event',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({event:'VISITED',source})}).catch(()=>{});
+for(const a of document.querySelectorAll('a.cta')){
+ const u=new URL(a.href);u.searchParams.set('src',source);a.href=u.toString();
+}
+</script></body></html>
