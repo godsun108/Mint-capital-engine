@@ -117,18 +117,19 @@ async function checkout(req,res){
   // LIVE rail is deliberately direct-to-platform: no Connect account, transfer,
   // application fee, payout, or customer-management privileges are required.
   if(balance.livemode===true){
-    // Fail closed: the request must name the exact mandate-approved live offer.
-    if(b.productId!=='foundry-express-ts-001')return send(res,403,{error:'Live checkout is limited to the mandate-approved Foundry offer.'});
+    // Fail closed: live offers must exist in the repository catalog, be ACTIVE, and carry an explicit mandate.
+    const offer=await liveOffer(String(b.productId||''));
+    if(!offer)return send(res,403,{error:'Offer is not active and mandate-approved for live checkout.'});
     const session=await s.checkout.sessions.create({
-      line_items:[{price_data:{currency:'usd',unit_amount:900,product_data:{name:'Foundry Express TypeScript Starter',description:'Reusable Express + TypeScript starter with strict TypeScript, JSON middleware, a health route, environment example, and dev/build/start scripts.'}},quantity:1}],
+      line_items:[{price_data:{currency:offer.price.currency,unit_amount:offer.price.unit_amount,product_data:{name:offer.name,description:offer.description}},quantity:1}],
       mode:'payment',
-      metadata:{mint_offer_id:'foundry-express-ts-001',mint_mandate_id:'mandate:digital-products:001',mint_source:source},
-      payment_intent_data:{metadata:{mint_offer_id:'foundry-express-ts-001',mint_mandate_id:'mandate:digital-products:001',mint_source:source}},
+      metadata:{mint_offer_id:offer.id,mint_mandate_id:offer.mandate_id,mint_source:source},
+      payment_intent_data:{metadata:{mint_offer_id:offer.id,mint_mandate_id:offer.mandate_id,mint_source:source}},
       success_url:APP_URL+'/success?session_id={CHECKOUT_SESSION_ID}',
       cancel_url:APP_URL+'/?checkout=cancelled'
     });
-    console.log('MINT_COMMERCE',JSON.stringify({event:'CHECKOUT_SESSION_CREATED',source,offerId:'foundry-express-ts-001',sessionId:session.id,at:new Date().toISOString()}));
-    return send(res,201,{id:session.id,url:session.url,mode:'live',offerId:'foundry-express-ts-001'});
+    console.log('MINT_COMMERCE',JSON.stringify({event:'CHECKOUT_SESSION_CREATED',source,offerId:offer.id,sessionId:session.id,at:new Date().toISOString()}));
+    return send(res,201,{id:session.id,url:session.url,mode:'live',offerId:offer.id});
   }
   await requireTestStripe();
   if(!b.productId)return send(res,400,{error:'productId is required.'});
@@ -214,12 +215,17 @@ async function fulfillCheckout(sessionId,res){
   const items=session.line_items?.data||[];
   const product=items[0]?.price?.product;
   const productId=typeof product==='string'?product:product?.id;
-  const liveOffer=session.livemode===true&&session.metadata?.mint_offer_id==='foundry-express-ts-001';
-  const testOffer=session.livemode===false&&productId==='prod_VL4ZGypBcYFCWH';
-  if(!liveOffer&&!testOffer)return send(res,404,{error:'No automatic fulfillment mapping exists for this verified offer.'});
-  const file=path.join(root,'deliverables','foundry-express-ts','README.md');
+  let fulfillment=null;
+  if(session.livemode===true){
+    const offer=await liveOffer(session.metadata?.mint_offer_id);
+    if(offer?.fulfillment?.kind==='FILE') fulfillment=offer.fulfillment;
+  } else if(productId==='prod_VL4ZGypBcYFCWH'){
+    fulfillment={kind:'FILE',path:'deliverables/foundry-express-ts/README.md',filename:'foundry-express-ts-README.md',content_type:'text/markdown; charset=utf-8'};
+  }
+  if(!fulfillment)return send(res,404,{error:'No automatic fulfillment mapping exists for this verified offer.'});
+  const file=path.join(root,fulfillment.path);
   await stat(file);
-  res.writeHead(200,{'content-type':'text/markdown; charset=utf-8','content-disposition':'attachment; filename="foundry-express-ts-README.md"','x-mint-fulfillment':session.livemode?'verified-live-payment':'verified-test-payment'});
+  res.writeHead(200,{'content-type':fulfillment.content_type||'application/octet-stream','content-disposition':'attachment; filename="'+fulfillment.filename.replace(/["\\]/g,'')+'"','x-mint-fulfillment':session.livemode?'verified-live-payment':'verified-test-payment'});
   createReadStream(file).pipe(res);
 }
 
@@ -261,6 +267,8 @@ async function acquisitionEvent(req,res){
 
 async function acquisitionState(res){\n  const sources={};\n  for(const [key,count] of acquisitionCounters){const [source,event]=key.split('|');sources[source]||={VISITED:0,CHECKOUT_STARTED:0};sources[source][event]=count;}\n  const totals=Object.values(sources).reduce((a,x)=>({VISITED:a.VISITED+(x.VISITED||0),CHECKOUT_STARTED:a.CHECKOUT_STARTED+(x.CHECKOUT_STARTED||0)}),{VISITED:0,CHECKOUT_STARTED:0});\n  return send(res,200,{ok:true,schema:'mint.acquisition.snapshot.v1',semantics:'PROCESS_LOCAL_AGGREGATES_NOT_UNIQUE_VISITORS_NOT_LIFETIME_TOTALS',startedAt:acquisitionStartedAt,generatedAt:new Date().toISOString(),privacy:'No IP, cookie, user-agent, or personal identifier stored by this counter.',totals,sources});\n}\n\nasync function serveFile(res,file,type){const data=await readFile(file);res.writeHead(200,{'content-type':type});res.end(data)}
 const root=path.dirname(fileURLToPath(import.meta.url));
+const commerceCatalogPath=path.join(root,'..','systems','commerce','catalog.json');
+async function liveOffer(id){const catalog=JSON.parse(await readFile(commerceCatalogPath,'utf8'));const offer=catalog?.offers?.[id];if(!offer||offer.status!=='ACTIVE'||!offer.mandate_id) return null;return offer;}
 
 const server=http.createServer(async(req,res)=>{
   try{
