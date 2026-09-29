@@ -23,4 +23,12 @@ const results=pending.map((candidate,i)=>{
 });
 const next={...state,lastRunAt:now,runs:[...state.runs,...results],queue:[...state.queue,...results.flatMap(r=>r.jobs||[])]};
 if(!dry) write(statePath,next);
-console.log(JSON.stringify({ok:true,dryRun:dry,candidatesSeen:candidates.length,candidatesStarted:results.length,results},null,2));
+const accepted=results.filter(r=>r.status==="VALIDATING").length;
+const rejected=results.filter(r=>r.status==="REJECTED").length;
+const jobsQueued=results.reduce((n,r)=>n+(r.jobs?.length||0),0);
+console.log(JSON.stringify({
+  ok:true,
+  dryRun:dry,
+  heartbeat:{at:now,candidatesSeen:candidates.length,candidatesStarted:results.length,accepted,rejected,jobsQueued,totalQueue:next.queue.length},
+  results
+},null,2));
