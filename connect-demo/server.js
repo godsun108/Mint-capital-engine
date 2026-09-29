@@ -268,6 +268,20 @@ async function acquisitionEvent(req,res){
   return send(res,202,{ok:true,event,source},acquisitionCors);
 }
 
+async function commerceEvidence(res){
+  const s=requireStripe();
+  const sessions=await s.checkout.sessions.list({limit:100,expand:['data.payment_intent.latest_charge','data.payment_intent.latest_charge.balance_transaction']});
+  const rows=sessions.data.filter(x=>x.metadata?.mint_offer_id).map(session=>{
+    const pi=typeof session.payment_intent==='object'?session.payment_intent:null;
+    const ch=pi&&typeof pi.latest_charge==='object'?pi.latest_charge:null;
+    const bt=ch&&typeof ch.balance_transaction==='object'?ch.balance_transaction:null;
+    const paid=session.status==='complete'&&session.payment_status==='paid'&&Boolean(ch?.paid);
+    return {sessionId:session.id,offerId:session.metadata?.mint_offer_id||null,source:session.metadata?.mint_source||'unknown',livemode:session.livemode,checkoutComplete:session.status==='complete',paid,amount:session.amount_total,currency:session.currency,chargeId:ch?.id||null,providerAvailable:bt?.status==='available',created:session.created};
+  });
+  const live=rows.filter(x=>x.livemode===true);
+  return send(res,200,{ok:true,schema:'mint.commerce.evidence.v1',generatedAt:new Date().toISOString(),semantics:'STRIPE_SERVER_VERIFIED_CHECKOUT_AND_PAYMENT_ONLY; FULFILLMENT_AND_BANK_SETTLEMENT_REQUIRE_SEPARATE_EVIDENCE',totals:{sessions:live.length,paid:live.filter(x=>x.paid).length,providerAvailable:live.filter(x=>x.providerAvailable).length},transactions:live});
+}
+
 async function acquisitionState(res){
   const sources={};
   for(const [key,count] of acquisitionCounters){const [source,event]=key.split('|');sources[source]||={VISITED:0,CHECKOUT_STARTED:0};sources[source][event]=count;}
@@ -299,6 +313,7 @@ const server=http.createServer(async(req,res)=>{
     if(req.method==='GET'&&u.pathname==='/success')return serveFile(res,path.join(root,'public/success.html'),'text/html; charset=utf-8');
     if(req.method==='GET'&&u.pathname==='/api/storefront')return storefront(res);
     if(req.method==='GET'&&u.pathname==='/api/money-state')return moneyState(res);
+    if(req.method==='GET'&&u.pathname==='/api/commerce/evidence')return commerceEvidence(res);
     if(req.method==='POST'&&u.pathname==='/api/accounts')return createConnectedAccount(req,res);
     let m=u.pathname.match(/^\/api\/accounts\/([^/]+)\/status$/);
     if(req.method==='GET'&&m)return accountStatus(decodeURIComponent(m[1]),res);
