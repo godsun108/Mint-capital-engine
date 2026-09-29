@@ -6,7 +6,7 @@ Intelligence: Oracle, Research Desk, Competitive Intel, Data Refinery.
 
 Production: Builder, Website Rescue, Document Factory, Content Engine.
 
-Commerce: Merchant, Closer, Prospector.
+Commerce: Merchant, MARKET, CONCIERGE, Closer, Prospector.
 
 Media: Newsletter, Directory.
 
