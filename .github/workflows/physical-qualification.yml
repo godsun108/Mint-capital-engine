@@ -1,0 +1,23 @@
+name: Physical Product Qualification
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "automation/physical-qualification.mjs"
+      - "connect-demo/physical-commerce.json"
+      - ".github/workflows/physical-qualification.yml"
+permissions:
+  contents: read
+jobs:
+  qualify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node automation/physical-qualification.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: physical-product-qualification
+          path: connect-demo/exports/physical/qualification.json
