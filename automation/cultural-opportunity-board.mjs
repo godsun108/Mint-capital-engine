@@ -1,0 +1,10 @@
+import fs from 'node:fs';
+const x=JSON.parse(fs.readFileSync('connect-demo/cultural-intelligence.json','utf8'));
+if(x.status!=='RESEARCH_ONLY_NO_AUTO_PUBLICATION')throw Error('Unapproved culture engine activation');
+if(x.sources.some(s=>!s.url.startsWith('https://')))throw Error('Source URL missing');
+if(x.signal_examples.some(s=>s.status!=='IDEA_NOT_VALIDATED'&&s.status!=='CREATIVE_STRATEGY_NOT_DEMAND_PROOF'))throw Error('Unverified signal promoted');
+const out={schema:'mint.cultural.opportunity-board.v1',state:'IDEATION_ONLY',as_of:x.as_of,ideas:x.signal_examples.map(s=>({signal:s.id,source_urls:x.sources.map(t=>t.url),concepts:s.product_translation,stage:'RESEARCH',buyer_intent_evidence:null,rights_clearance:null,supplier_sku:null,estimated_net_margin:null,publishable:false})),approval_gates:x.workflow};
+fs.mkdirSync('connect-demo/exports/culture',{recursive:true});
+fs.writeFileSync('connect-demo/exports/culture/opportunities.json',JSON.stringify(out,null,2)+'\n');
+if(out.ideas.some(i=>i.publishable||i.estimated_net_margin!==null))throw Error('Unverified concept published');
+console.log('CULTURE ENGINE QA PASS: '+out.ideas.length+' sourced hypotheses; zero unauthorized listings');
