@@ -1,0 +1,23 @@
+name: Physical Creative Preflight
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "automation/physical-creative-preflight.mjs"
+      - "connect-demo/physical-commerce.json"
+      - ".github/workflows/physical-creative-preflight.yml"
+permissions:
+  contents: read
+jobs:
+  briefs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node automation/physical-creative-preflight.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: physical-creative-briefs
+          path: connect-demo/exports/physical/creative-briefs.json
