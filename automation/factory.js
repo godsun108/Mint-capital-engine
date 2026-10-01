@@ -21,7 +21,12 @@ for(const s of seed){
 }
 for(const t of q.tasks)if(t.recurring&&(t.status==="DONE"||t.status==="BACKLOG"||t.status==="READY")){t.status="READY";t.next_action="Recurring task reset for this factory cycle."}
 for(const t of q.tasks)if(t.status==="FAILED_RETRYABLE"){if((t.failure_streak||0)<maxAttempts){t.status="READY";t.next_action="Bounded retry authorized on a later factory run."}else{t.status="FAILED_TERMINAL";t.next_action="Retry budget exhausted; owner or maintainer review required."}}
-const byId=id=>q.tasks.find(t=>t.task_id===id);\nconst known=new Set(q.tasks.map(t=>t.task_id));\nfor(const t of q.tasks)for(const d of t.dependencies||[])if(!known.has(d))throw new Error(`Unknown dependency ${d} for ${t.task_id}`);\nconst visiting=new Set(),visited=new Set();\nfunction visit(id){if(visited.has(id))return;if(visiting.has(id))throw new Error(`Dependency cycle at ${id}`);visiting.add(id);for(const d of byId(id)?.dependencies||[])visit(d);visiting.delete(id);visited.add(id)}\nfor(const t of q.tasks)visit(t.task_id);
+const byId=id=>q.tasks.find(t=>t.task_id===id);
+const known=new Set(q.tasks.map(t=>t.task_id));
+for(const t of q.tasks)for(const d of t.dependencies||[])if(!known.has(d))throw new Error(`Unknown dependency ${d} for ${t.task_id}`);
+const visiting=new Set(),visited=new Set();
+function visit(id){if(visited.has(id))return;if(visiting.has(id))throw new Error(`Dependency cycle at ${id}`);visiting.add(id);for(const d of byId(id)?.dependencies||[])visit(d);visiting.delete(id);visited.add(id)}
+for(const t of q.tasks)visit(t.task_id);
 const events=[];
 const startedQueueUpdatedAt=q.updated_at||null;
 const restoredState=Boolean(startedQueueUpdatedAt);
