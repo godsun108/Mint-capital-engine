@@ -1,0 +1,8 @@
+import fs from 'node:fs';
+const culture=JSON.parse(fs.readFileSync('connect-demo/cultural-intelligence.json','utf8'));
+const pod=JSON.parse(fs.readFileSync('connect-demo/physical-pod-comparison.json','utf8'));
+const concepts=culture.signal_examples.flatMap(s=>s.product_translation.map((idea,i)=>({id:s.id+'-'+String(i+1).padStart(2,'0'),signal:s.id,concept:idea,source_date:culture.as_of,format:/tote/i.test(idea)?'PHYSICAL_POD':'DIGITAL_OR_CREATIVE',supplier_reference:/tote/i.test(idea)?pod.candidates.map(x=>x.id):[],buyer_evidence:null,rights_status:'NOT_REVIEWED',sample_status:'NOT_REVIEWED',margin_status:'UNKNOWN',publication:'BLOCKED'})));
+const out={schema:'mint.culture-to-commerce.experiments.v1',status:'CONCEPTS_ONLY',experiments:concepts,first_pilot:{concept_id:concepts.find(x=>x.format==='PHYSICAL_POD')?.id||null,reason:'Connect original textile-inspired creative with existing tote supplier research; do not infer sales demand',next_steps:['Create original design brief','Check design rights and supplier print specifications','Get actual variant and destination shipping quote','Prepare mockup explicitly labeled concept','Validate platform eligibility and owner approval']},controls:{no_publication:true,no_spend:true,no_sales_claims:true}};
+fs.mkdirSync('connect-demo/exports/culture',{recursive:true});fs.writeFileSync('connect-demo/exports/culture/commerce-experiments.json',JSON.stringify(out,null,2)+'\n');
+if(!out.first_pilot.concept_id||concepts.some(x=>x.publication!=='BLOCKED'))throw Error('Concept qualification gate failed');
+console.log('CULTURE-TO-COMMERCE QA PASS: '+concepts.length+' experiments, one proposed POD pilot, zero published');
