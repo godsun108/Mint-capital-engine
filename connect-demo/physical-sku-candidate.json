@@ -1,0 +1,35 @@
+{
+  "schema": "mint.physical.sku-candidate.v1",
+  "status": "PUBLIC_CATALOG_EXAMPLE_NOT_SELLABLE",
+  "as_of": "2026-10-01",
+  "candidate_id": "pod-printful-aop-tote-001",
+  "supplier": "Printful",
+  "product": "All-Over Print Tote Bag",
+  "variant": "15 x 15 inch, all-over synthetic",
+  "supplier_catalog_url": "https://www.printful.com/custom/accessories/all/all-over-print-tote",
+  "source_urls": [
+    "https://www.printful.com/custom/accessories/all/all-over-print-tote",
+    "https://www.printful.com/shipping",
+    "https://help.printful.com/hc/en-us/articles/50262099109777-How-does-Printful-s-product-pricing-work"
+  ],
+  "public_reference_price_cents": 1760,
+  "public_shipping_starts_at_cents": 469,
+  "estimated_minimum_supplier_cost_cents": 2229,
+  "currency": "USD",
+  "limitations": [
+    "Public catalog starting prices are indicative and may vary by fulfillment region, technique, taxes and customization",
+    "Shipping starts-at is not a destination-specific checkout quote",
+    "No supplier account, actual variant ID, inventory sync or sample verified",
+    "No customer demand or artwork rights established"
+  ],
+  "customer_price_scenarios_cents": [
+    2900,
+    3400,
+    3900
+  ],
+  "fees": "UNKNOWN_MUST_BE_QUOTED",
+  "sample_status": "NOT_ORDERED",
+  "artwork_status": "NOT_CREATED",
+  "marketplace_eligibility": "UNVERIFIED",
+  "publishable": false
+}
