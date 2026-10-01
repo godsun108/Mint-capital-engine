@@ -19,6 +19,13 @@ for(const s of seed){
  if(!existing)q.tasks.push({...s});
  else Object.assign(existing,{objective:s.objective,owner_agent:s.owner_agent,kind:s.kind,command:s.command,allowed_actions:s.allowed_actions,hard_stops:s.hard_stops,expected_evidence:s.expected_evidence,dependencies:s.dependencies,recurring:Boolean(s.recurring)});
 }
+// One-time, evidence-preserving retry after correcting auditor's self-referential readiness check.
+const auditTask=q.tasks.find(t=>t.task_id==="audit-funnel");
+if(auditTask?.status==="FAILED_TERMINAL"&&auditTask.audit_fix_revision!=="self-readiness-v1"){
+ auditTask.previous_terminal_failure={attempts:auditTask.attempts||0,failure_streak:auditTask.failure_streak||0,at:now()};
+ auditTask.audit_fix_revision="self-readiness-v1";auditTask.failure_streak=0;auditTask.status="READY";
+ auditTask.next_action="Retry once after auditor self-readiness fix; prior terminal evidence preserved.";
+}
 for(const t of q.tasks)if(t.recurring&&(t.status==="DONE"||t.status==="BACKLOG"||t.status==="READY")){t.status="READY";t.next_action="Recurring task reset for this factory cycle."}
 for(const t of q.tasks)if(t.status==="FAILED_RETRYABLE"){if((t.failure_streak||0)<maxAttempts){t.status="READY";t.next_action="Bounded retry authorized on a later factory run."}else{t.status="FAILED_TERMINAL";t.next_action="Retry budget exhausted; owner or maintainer review required."}}
 const byId=id=>q.tasks.find(t=>t.task_id===id);
