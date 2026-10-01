@@ -1,0 +1,22 @@
+name: Marketplace Export QA
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "connect-demo/catalog.json"
+      - "connect-demo/marketplace-export.json"
+      - "connect-demo/exports/**"
+      - "connect-demo/deliverables/**"
+      - "tests/marketplace-export.test.mjs"
+      - ".github/workflows/marketplace-export-qa.yml"
+permissions:
+  contents: read
+jobs:
+  export-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node tests/marketplace-export.test.mjs
