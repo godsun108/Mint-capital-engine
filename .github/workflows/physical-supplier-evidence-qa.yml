@@ -1,0 +1,19 @@
+name: Physical Supplier Evidence QA
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "connect-demo/physical-supplier-evidence.json"
+      - "automation/physical-supplier-evidence-qa.mjs"
+      - ".github/workflows/physical-supplier-evidence-qa.yml"
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node automation/physical-supplier-evidence-qa.mjs
