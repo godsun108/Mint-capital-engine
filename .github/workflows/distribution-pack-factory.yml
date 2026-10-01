@@ -1,0 +1,28 @@
+name: Distribution Pack Factory
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "automation/build-distribution-packs.mjs"
+      - "connect-demo/catalog.json"
+      - "connect-demo/deliverables/**"
+      - ".github/workflows/distribution-pack-factory.yml"
+permissions:
+  contents: read
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Generate offer-specific listing and educational drafts
+        run: node automation/build-distribution-packs.mjs
+      - name: Validate complete active-offer coverage
+        run: |
+          node --input-type=module -e "import fs from 'node:fs';import assert from 'node:assert/strict';const c=JSON.parse(fs.readFileSync('connect-demo/catalog.json'));const m=JSON.parse(fs.readFileSync('connect-demo/exports/generated/manifest.json'));assert.equal(m.state,'DRAFT_NOT_PUBLISHED');assert.equal(m.offers.length,Object.values(c.offers).filter(o=>o.status==='ACTIVE'&&o.mandate_id).length);for(const o of m.offers){assert(fs.existsSync(o.file));assert.equal(o.state,'DRAFT_NOT_PUBLISHED')}console.log('DISTRIBUTION PACK QA OK')"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: draft-distribution-packs
+          path: connect-demo/exports/generated/
