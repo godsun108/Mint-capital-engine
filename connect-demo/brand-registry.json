@@ -1,0 +1,59 @@
+{
+  "schema": "mint.portfolio.brands.v1",
+  "status": "INTERNAL_HYPOTHESES_NOT_CLEARED",
+  "brands": [
+    {
+      "id": "mint",
+      "display_name": "MINT",
+      "state": "EXISTING_ENGINE_BRAND",
+      "offers": [
+        "foundry-express-ts-001",
+        "api-launch-checklist-002",
+        "site-launch-checklist-003",
+        "ai-workflow-kit-004",
+        "mint-builder-launch-pack-005"
+      ]
+    },
+    {
+      "id": "launchlight",
+      "display_name": "Launchlight",
+      "state": "WORKING_NAME_NOT_CLEARED",
+      "offers": [
+        "site-launch-checklist-003",
+        "api-launch-checklist-002"
+      ]
+    },
+    {
+      "id": "daymark-studio",
+      "display_name": "Daymark Studio",
+      "state": "WORKING_NAME_NOT_CLEARED",
+      "offers": []
+    },
+    {
+      "id": "foundry-express",
+      "display_name": "Foundry Express",
+      "state": "WORKING_NAME_NOT_CLEARED",
+      "offers": [
+        "foundry-express-ts-001"
+      ]
+    }
+  ],
+  "rules": {
+    "canonical_catalog": "connect-demo/catalog.json",
+    "multiple_brand_associations_are_positioning_hypotheses_not_distinct_sales": true,
+    "public_rebrand_requires": [
+      "name_clearance",
+      "owner_approval",
+      "consistent_checkout_and_fulfillment_disclosure"
+    ],
+    "sales_dedupe": [
+      "provider",
+      "provider_transaction_id"
+    ],
+    "record_dimensions": [
+      "canonical_offer_id",
+      "brand_id",
+      "channel_id"
+    ]
+  }
+}
