@@ -1,0 +1,47 @@
+{
+  "schema": "mint.pod.production-qualification.v1",
+  "date": "2026-10-01",
+  "product_family": "Orbital Garden",
+  "status": "PUBLIC_PRODUCT_SPECS_VERIFIED_PRINT_TEMPLATE_PENDING",
+  "candidates": [
+    {
+      "product": "Cotton Color Tote Bag Westford Mill W101",
+      "url": "https://www.printful.com/custom/bags/totes/cotton-color-tote-bag-westford-mill-w101",
+      "material": "100% cotton",
+      "dimensions_inches": "15 x 16.5",
+      "decoration": "DTFlex front/back or embroidery",
+      "public_us_start_price_cents": 1018,
+      "public_shipping_from_cents": 469,
+      "art_direction": "Contained central front design; no assumption of full bleed",
+      "template": "NOT_RETRIEVED",
+      "variant": "NOT_SELECTED"
+    },
+    {
+      "product": "All-Over Print Tote Bag",
+      "printful_product_code": "#603",
+      "url": "https://www.printful.com/custom/bags/totes/all-over-print-tote",
+      "material": "100% polyester",
+      "dimensions_inches": "15 x 15",
+      "decoration": "All-over synthetic; print-cut-sew",
+      "public_us_start_price_cents": 1760,
+      "public_shipping_from_cents": 469,
+      "art_direction": "Recompose background to full bleed; keep focal motif inside Printful template safe zone",
+      "template": "NOT_RETRIEVED",
+      "variant": "NOT_SELECTED"
+    }
+  ],
+  "official_aop_guidelines": "https://www.printful.com/creating-aop-file",
+  "production_export_notes": [
+    "Printful AOP guidance calls for PNG or JPEG, not direct assumption that existing SVG is accepted",
+    "Actual product-specific print area, bleed, safe zone, resolution and template must be verified in Design Maker",
+    "Public starting prices are not checkout quotes"
+  ],
+  "next_gate": [
+    "Select exact product variant and color in authorized Printful Design Maker",
+    "Retrieve product-specific print template",
+    "Export artwork to actual template",
+    "Generate supplier mockup and quote",
+    "Owner approves sample spend and listing"
+  ],
+  "publishable": false
+}
