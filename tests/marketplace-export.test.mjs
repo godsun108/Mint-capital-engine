@@ -12,4 +12,14 @@ assert(fs.existsSync(new URL('connect-demo/'+offer.fulfillment.path,root)));
 assert(exportPlan.channels.every(c=>c.id==='mint-direct'||!c.state.includes('PUBLISHED')));
 assert(exportPlan.publishing_requires.includes('owner_channel_approval'));
 for(const channel of exportPlan.channels)if(channel.export)assert(fs.existsSync(new URL('connect-demo/'+channel.export,root)));
+const brands=read('connect-demo/brand-registry.json');
+assert.equal(brands.schema,'mint.portfolio.brands.v1');
+assert.equal(brands.status,'INTERNAL_HYPOTHESES_NOT_CLEARED');
+assert.equal(new Set(brands.brands.map(b=>b.id)).size,brands.brands.length);
+for(const brand of brands.brands){
+ assert(brand.id&&brand.display_name&&brand.state);
+ for(const id of brand.offers)assert(catalog.offers[id],`Unknown canonical offer ${id} for brand ${brand.id}`);
+}
+assert(brands.rules.public_rebrand_requires.includes('owner_approval'));
+assert.deepEqual(brands.rules.sales_dedupe,['provider','provider_transaction_id']);
 console.log('MARKETPLACE EXPORT PREFLIGHT OK (NO EXTERNAL PUBLISHING)');
