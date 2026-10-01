@@ -1,0 +1,149 @@
+{
+  "schema": "mint.physical-commerce.v0.1",
+  "status": "RESEARCH_AND_SANDBOX_ONLY",
+  "north_star": "Provider-confirmed contribution margin after product, shipping, platform, payment, returns, advertising and support costs",
+  "business_models": [
+    "supplier_fulfilled_dropshipping",
+    "print_on_demand",
+    "affiliate_referral",
+    "wholesale_resale",
+    "made_to_order",
+    "owned_brand_inventory_later"
+  ],
+  "marketplaces": [
+    {
+      "id": "owned_store",
+      "status": "CANDIDATE"
+    },
+    {
+      "id": "ebay",
+      "status": "POLICY_AND_ACCOUNT_REVIEW_REQUIRED"
+    },
+    {
+      "id": "amazon",
+      "status": "POLICY_AND_ACCOUNT_REVIEW_REQUIRED"
+    },
+    {
+      "id": "etsy",
+      "status": "HANDMADE_DESIGN_PRODUCTION_PARTNER_ELIGIBILITY_REQUIRED"
+    },
+    {
+      "id": "walmart_marketplace",
+      "status": "SELLER_ELIGIBILITY_REQUIRED"
+    },
+    {
+      "id": "tiktok_shop",
+      "status": "SELLER_AND_FULFILLMENT_POLICY_REVIEW_REQUIRED"
+    },
+    {
+      "id": "facebook_instagram_shop",
+      "status": "COMMERCE_ELIGIBILITY_REQUIRED"
+    },
+    {
+      "id": "pinterest",
+      "status": "DISCOVERY_CHANNEL_REVIEW_REQUIRED"
+    }
+  ],
+  "product_hypotheses": [
+    {
+      "category": "home_organization",
+      "reason": "Practical visual demonstrations and clear problem solving"
+    },
+    {
+      "category": "pet_accessories",
+      "reason": "Repeatable everyday use cases; exclude ingestibles and safety-critical goods initially"
+    },
+    {
+      "category": "desk_and_workspace",
+      "reason": "Useful bundles and instructional content"
+    },
+    {
+      "category": "gardening_accessories",
+      "reason": "Fits educational content and hobby search intent"
+    },
+    {
+      "category": "print_on_demand_designs",
+      "reason": "No bulk inventory if original designs and rights are verified"
+    }
+  ],
+  "candidate_requirements": [
+    "supplier_identity_and_contact_verified",
+    "legitimate_supply_and_resale_rights",
+    "marketplace_model_permitted",
+    "sample_or_independent_quality_review",
+    "shipping_origin_and_estimate_disclosed",
+    "return_and_refund_process",
+    "accurate_stock_and_price_sync",
+    "product_safety_and_IP_review",
+    "positive_expected_contribution_margin"
+  ],
+  "scoring_inputs": [
+    "public_search_intent",
+    "competition_and_differentiation",
+    "landed_cost",
+    "gross_margin",
+    "shipping_time_variance",
+    "returns_risk",
+    "creative_demonstrability",
+    "supplier_reliability"
+  ],
+  "agents": [
+    {
+      "id": "demand-scout",
+      "task": "Find documented purchase-intent signals and unmet needs"
+    },
+    {
+      "id": "supplier-auditor",
+      "task": "Verify suppliers, policies, landed costs and samples"
+    },
+    {
+      "id": "channel-manager",
+      "task": "Check marketplace-specific eligibility and prepare listings"
+    },
+    {
+      "id": "creative-studio",
+      "task": "Generate accurate images/video scripts and organic educational ads; no fabricated product photos"
+    },
+    {
+      "id": "catalog-syndicator",
+      "task": "Map one approved SKU to permitted channel-specific listings"
+    },
+    {
+      "id": "order-router",
+      "task": "Propose supplier order only after verified payment and inventory check; human approval initially"
+    },
+    {
+      "id": "returns-concierge",
+      "task": "Manage inbound shipping and refund cases under approved policy"
+    },
+    {
+      "id": "margin-controller",
+      "task": "Reconcile payment, COGS, shipping, fees, ad spend, returns and refunds"
+    }
+  ],
+  "funnel": [
+    "research",
+    "supplier_qualified",
+    "sample_reviewed",
+    "channel_approved",
+    "owner_approved",
+    "sandbox_listing",
+    "published",
+    "provider_paid",
+    "supplier_accepted",
+    "tracking_verified",
+    "delivered",
+    "return_window_reconciled"
+  ],
+  "controls": {
+    "zero_paid_ads_initially": true,
+    "no_retail_marketplace_arbitrage_without_platform_permission": true,
+    "no_counterfeit_or_trademark_infringement": true,
+    "no_misleading_shipping_or_inventory_claims": true,
+    "no_unapproved_public_posts": true,
+    "no_unapproved_supplier_orders": true,
+    "no_financial_account_creation_by_agents": true,
+    "no_customer_personal_data_in_public_repo": true,
+    "no_claim_of_verified_demand_without_evidence": true
+  }
+}
