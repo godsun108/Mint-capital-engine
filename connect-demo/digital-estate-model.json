@@ -1,0 +1,106 @@
+{
+  "schema": "mint.organization.digital-estate.v0.1",
+  "status": "DESIGN_ONLY_NOT_LEGAL_ENTITY_RECORD",
+  "principles": [
+    "Digital nodes mirror verified legal arrangements; they do not establish trusts or companies",
+    "Owner approves appointments, contracts, spending, payouts and publication",
+    "One canonical commerce ledger and product catalog"
+  ],
+  "entity_types": [
+    {
+      "type": "estate_governance",
+      "purpose": "Record governing documents, beneficiaries, decisions and verification status"
+    },
+    {
+      "type": "trust",
+      "purpose": "Represent verified trust relationships and fiduciary authority; never infer legal status"
+    },
+    {
+      "type": "holding_company",
+      "purpose": "Represent ownership interests only with supporting documents"
+    },
+    {
+      "type": "management_company",
+      "purpose": "Provide approved shared services and worker supervision"
+    },
+    {
+      "type": "operating_company",
+      "purpose": "Own or license products, brands and customer relationships as documented"
+    },
+    {
+      "type": "store",
+      "purpose": "Channel-specific sales identity and product assortment"
+    },
+    {
+      "type": "worker",
+      "purpose": "Human or AI representative with narrow role, supervisor and audit log"
+    }
+  ],
+  "worker_template": {
+    "worker_id": null,
+    "kind": "AI_OR_HUMAN",
+    "represented_entity_id": null,
+    "supervisor_worker_id": null,
+    "role": null,
+    "permitted_actions": [],
+    "prohibited_actions": [
+      "sign_contract",
+      "open_financial_account",
+      "transfer_funds",
+      "publish_unapproved_claims"
+    ],
+    "credential_scope": "LEAST_PRIVILEGE",
+    "audit_log_required": true,
+    "active": false
+  },
+  "commerce_modules": [
+    {
+      "id": "affiliates",
+      "state": "SPECIFICATION_ONLY",
+      "features": [
+        "unique_referral_code",
+        "approved_creator_enrollment",
+        "click_attribution",
+        "provider_confirmed_conversion",
+        "refund_adjustment",
+        "commission_hold",
+        "payout_approval",
+        "fraud_review",
+        "affiliate_disclosure"
+      ],
+      "restrictions": [
+        "No commissions on test transactions",
+        "No self-referral abuse",
+        "No automated payout without owner approval"
+      ]
+    },
+    {
+      "id": "subscriptions",
+      "state": "SPECIFICATION_ONLY",
+      "features": [
+        "clear_recurring_terms",
+        "billing_interval",
+        "entitlement",
+        "provider_webhook_validation",
+        "renewal_status",
+        "cancellation",
+        "dunning",
+        "refund_policy",
+        "customer_portal"
+      ],
+      "restrictions": [
+        "No recurring billing without explicit customer consent",
+        "No subscription offering until ongoing value and support are ready"
+      ]
+    }
+  ],
+  "relationship_fields": [
+    "parent_entity_id",
+    "legal_document_reference",
+    "verification_state",
+    "brand_id",
+    "store_id",
+    "canonical_offer_id"
+  ],
+  "accounting": "Provider transaction IDs deduplicated across brand, store, affiliate and subscription views"
+}
