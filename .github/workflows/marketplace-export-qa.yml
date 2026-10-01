@@ -5,6 +5,7 @@ on:
     paths:
       - "connect-demo/catalog.json"
       - "connect-demo/marketplace-export.json"
+      - "connect-demo/brand-registry.json"
       - "connect-demo/exports/**"
       - "connect-demo/deliverables/**"
       - "tests/marketplace-export.test.mjs"
