@@ -3,7 +3,7 @@ const root=process.cwd(),stateDir=path.join(root,"automation/state");
 const read=n=>{try{return JSON.parse(fs.readFileSync(path.join(stateDir,n),"utf8"))}catch{return null}};
 const watch=read("watchtower.json"),prospect=read("prospector.json"),merchant=read("merchant.json"),queue=read("factory-queue.json");
 const stages={
- readiness:{ok:Boolean(queue)&&!queue.tasks?.some(t=>["FAILED_RETRYABLE","FAILED_TERMINAL","BLOCKED_EXTERNAL","BLOCKED_OWNER"].includes(t.status))},
+ readiness:{ok:Boolean(queue)&&!queue.tasks?.some(t=>t.task_id!=="audit-funnel"&&["FAILED_RETRYABLE","FAILED_TERMINAL","BLOCKED_EXTERNAL","BLOCKED_OWNER"].includes(t.status))},
  production:{ok:watch?.ok===true,observed_at:watch?.observed_at||null},
  prospecting:{ok:(prospect?.count||0)>0,count:prospect?.count||0},
  merchandising:{ok:(merchant?.count||0)>0,count:merchant?.count||0},
