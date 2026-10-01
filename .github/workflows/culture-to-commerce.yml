@@ -1,0 +1,24 @@
+name: Culture to Commerce Experiments
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "automation/culture-to-commerce.mjs"
+      - "connect-demo/cultural-intelligence.json"
+      - "connect-demo/physical-pod-comparison.json"
+      - ".github/workflows/culture-to-commerce.yml"
+permissions:
+  contents: read
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node automation/culture-to-commerce.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: culture-commerce-experiments
+          path: connect-demo/exports/culture/commerce-experiments.json
