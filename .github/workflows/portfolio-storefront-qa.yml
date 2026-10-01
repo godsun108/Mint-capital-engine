@@ -1,0 +1,25 @@
+name: Portfolio Storefront QA
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "connect-demo/public/offers.html"
+      - "connect-demo/public/index.html"
+      - "connect-demo/public/checklist.html"
+      - "connect-demo/server.js"
+      - "connect-demo/catalog.json"
+      - "connect-demo/deliverables/**"
+      - "tests/portfolio-storefront.test.mjs"
+      - ".github/workflows/portfolio-storefront-qa.yml"
+permissions:
+  contents: read
+jobs:
+  storefront:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node --check connect-demo/server.js
+      - run: node tests/portfolio-storefront.test.mjs
