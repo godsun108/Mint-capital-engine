@@ -1,0 +1,63 @@
+{
+  "schema": "mint.physical.supplier-evidence.v1",
+  "as_of": "2026-10-01",
+  "status": "PUBLIC_DOCUMENTATION_VERIFIED_NOT_ACCOUNT_OR_SKU_VERIFIED",
+  "suppliers": [
+    {
+      "id": "printful",
+      "model": "print_on_demand",
+      "evidence": [
+        {
+          "claim": "Free plan advertised at $0 monthly; product fulfillment billed per order",
+          "url": "https://www.printful.com/pricing"
+        },
+        {
+          "claim": "Seller is charged for fulfillment; end customer pays seller separately",
+          "url": "https://help.printful.com/hc/en-us/articles/50264607936785-How-does-the-Printful-billing-system-work"
+        },
+        {
+          "claim": "Published fulfillment estimates and product-specific shipping tables",
+          "url": "https://www.printful.com/shipping"
+        }
+      ],
+      "verification": "OFFICIAL_PUBLIC_PAGES",
+      "sku_id": null,
+      "landed_cost_cents": null,
+      "account_connected": false,
+      "sample_tested": false
+    },
+    {
+      "id": "gelato",
+      "model": "print_on_demand",
+      "evidence": [
+        {
+          "claim": "Official integration page lists supported store integrations and direct API/manual order paths",
+          "url": "https://www.gelato.com/integrations"
+        },
+        {
+          "claim": "Official support page describes integrations and alternatives",
+          "url": "https://support.gelato.com/en/articles/8996020-gelato-s-available-integrations"
+        }
+      ],
+      "verification": "OFFICIAL_PUBLIC_PAGES",
+      "sku_id": null,
+      "landed_cost_cents": null,
+      "account_connected": false,
+      "sample_tested": false
+    }
+  ],
+  "pilot_category": "print_on_demand_designs",
+  "pilot_product_hypothesis": "Original-design poster or tote; select exact blank SKU only after provider catalog, print specifications, shipping destination, sample and rights review",
+  "blockers": [
+    "seller_account_authentication",
+    "exact_blank_sku",
+    "original_rights_cleared_design",
+    "current_base_price",
+    "shipping_destination_quote",
+    "marketplace_fees",
+    "returns_terms",
+    "sample_review",
+    "owner_approval"
+  ],
+  "claim_limit": "Evidence establishes supplier capability, not profitability, stock availability, customer demand or permission for every marketplace."
+}
