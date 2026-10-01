@@ -1,0 +1,76 @@
+{
+  "schema": "mint.cultural-intelligence.v1",
+  "as_of": "2026-10-01",
+  "status": "RESEARCH_ONLY_NO_AUTO_PUBLICATION",
+  "sources": [
+    {
+      "name": "TikTok Creative Center",
+      "url": "https://ads.tiktok.com/creative/creativeCenter/trends",
+      "kind": "public_trend_discovery",
+      "refresh": "manual_or_authorized_API"
+    },
+    {
+      "name": "Google Trends US",
+      "url": "https://trends.google.com/trending?geo=US&hl=en-US",
+      "kind": "search_interest_not_sales",
+      "refresh": "manual_or_authorized_API"
+    },
+    {
+      "name": "TikTok Next 2026",
+      "url": "https://ads.tiktok.com/business/en-US/next",
+      "kind": "annual_context"
+    },
+    {
+      "name": "Vogue craft revival Oct 1 2026",
+      "url": "https://www.vogue.com/article/customers-are-crafting-more-should-brands-get-involved",
+      "kind": "editorial_signal"
+    }
+  ],
+  "signal_examples": [
+    {
+      "id": "analog-craft-revival",
+      "observation": "Crafting, sewing, upcycling and repair are receiving contemporary editorial and platform attention",
+      "product_translation": [
+        "original stitch-pattern printable",
+        "original abstract textile-inspired tote artwork",
+        "repair and craft planning templates"
+      ],
+      "status": "IDEA_NOT_VALIDATED"
+    },
+    {
+      "id": "intentional-purchasing",
+      "observation": "TikTok 2026 report emphasizes demonstrated value, real process and community",
+      "product_translation": [
+        "honest product demonstration scripts",
+        "materials and care comparison cards"
+      ],
+      "status": "CREATIVE_STRATEGY_NOT_DEMAND_PROOF"
+    },
+    {
+      "id": "niche-interest-identity",
+      "observation": "TikTok 2026 report highlights layered interests and small communities",
+      "product_translation": [
+        "original niche hobby motifs without third-party marks"
+      ],
+      "status": "IDEA_NOT_VALIDATED"
+    }
+  ],
+  "workflow": [
+    "capture dated source URL and region",
+    "cluster theme, audience and longevity",
+    "check buyer-intent separately from views",
+    "screen copyright, trademark, publicity, platform and safety",
+    "draft original concept",
+    "verify supplier SKU, margin and fulfillment",
+    "independent QA and owner approval",
+    "publish through authorized account only",
+    "measure actual conversion and net contribution"
+  ],
+  "hard_blocks": [
+    "No unlicensed names, lyrics, logos, characters, recognizable likenesses or copyrighted screenshots",
+    "No implied celebrity/brand endorsement",
+    "No fake trend numbers or customer demand",
+    "No automatic live product creation or paid ad spend"
+  ],
+  "refresh_policy": "Run on explicit research update; automated collection only through permitted authenticated sources with terms and rate limits."
+}
