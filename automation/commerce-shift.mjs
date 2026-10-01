@@ -1,0 +1,12 @@
+import {readFileSync} from 'node:fs';
+import path from 'node:path';
+const root=path.resolve('connect-demo');
+const estate=JSON.parse(readFileSync(path.join(root,'digital-estate-model.json'),'utf8'));
+const division=JSON.parse(readFileSync(path.join(root,'commerce-management.json'),'utf8'));
+const catalog=JSON.parse(readFileSync(path.join(root,'catalog.json'),'utf8'));
+const roles=division.roles.map(role=>({worker_id:'rep:'+role.id,kind:'AI_SPECIFICATION',represented_entity_id:'operating-company:digital-goods:proposed',supervisor_worker_id:role.id==='commerce-director'?'owner':'rep:commerce-director',role:role.id,permissions:role.permissions,owner_gates:role.requires_owner,active:false}));
+const active=Object.values(catalog.offers).filter(x=>x.status==='ACTIVE'&&x.mandate_id).map(x=>({id:x.id,name:x.name,price_usd:x.price.unit_amount/100}));
+const result={schema:'mint.commerce.shift-plan.v1',generated_at:new Date().toISOString(),execution:'READ_ONLY_NO_EXTERNAL_ACTION',legal_structure:'PROPOSED_NOT_VERIFIED',roles,active_offers:active,priorities:[{owner:'rep:marketplace-manager',task:'Prepare Gumroad listing package; account and platform terms remain owner actions',state:'DRAFT_ONLY'},{owner:'rep:social-distribution-manager',task:'Prepare educational organic campaign for owned offers catalog',state:'DRAFT_ONLY'},{owner:'rep:revenue-controller',task:'Reconcile provider-confirmed sales only; never infer revenue from visits',state:'EVIDENCE_REQUIRED'},{owner:'rep:product-manager',task:'Review customer feedback before expanding the catalog',state:'EVIDENCE_REQUIRED'}],affiliate_program:estate.commerce_modules.find(x=>x.id==='affiliates').state,subscription_program:estate.commerce_modules.find(x=>x.id==='subscriptions').state};
+if(new Set(roles.map(x=>x.worker_id)).size!==roles.length)throw Error('duplicate worker ID');
+if(roles.some(x=>x.active))throw Error('unapproved workers activated');
+console.log(JSON.stringify(result,null,2));
