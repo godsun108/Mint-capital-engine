@@ -1,0 +1,23 @@
+name: Physical Commerce Preflight
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "connect-demo/physical-commerce.json"
+      - "automation/physical-commerce-preflight.mjs"
+      - ".github/workflows/physical-commerce-preflight.yml"
+permissions:
+  contents: read
+jobs:
+  research-board:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node automation/physical-commerce-preflight.mjs
+      - uses: actions/upload-artifact@v4
+        with:
+          name: physical-commerce-research-board
+          path: connect-demo/exports/physical/research-board.json
