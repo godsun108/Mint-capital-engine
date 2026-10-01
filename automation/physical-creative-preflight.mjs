@@ -1,0 +1,7 @@
+import fs from 'node:fs';
+const model=JSON.parse(fs.readFileSync('connect-demo/physical-commerce.json','utf8'));
+const data={schema:'mint.physical.creative-briefs.v1',state:'DRAFT_NOT_PUBLISHED',disclaimer:'Category-level concepts only; not actual SKU claims, ads or validated demand',briefs:model.product_hypotheses.map((x,i)=>({candidate_id:'physical-'+String(i+1).padStart(3,'0'),category:x.category,angle:'Demonstrate a real use case for '+x.category.replaceAll('_',' '),formats:['short_demo_video','educational_carousel','product_comparison_after_verification','search_listing_after_verification'],draft_hooks:['What problem does this category solve?','What should a buyer check before choosing one?'],requires_before_publication:['verified_exact_SKU','rights_cleared_product_media','substantiated_features','actual_price_and_stock','supplier_and_shipping_confirmation','platform_policy_check','owner_approval'],claims_prohibited_without_evidence:['guaranteed_outcome','verified_review','lowest_price','fast_delivery','medical_or_safety_claim'],channel_links:[],status:'IDEATION_ONLY'}))};
+fs.mkdirSync('connect-demo/exports/physical',{recursive:true});
+fs.writeFileSync('connect-demo/exports/physical/creative-briefs.json',JSON.stringify(data,null,2)+'\n');
+if(data.briefs.length!==model.product_hypotheses.length||data.briefs.some(x=>x.status!=='IDEATION_ONLY'||x.channel_links.length))throw Error('Unsafe creative activation');
+console.log('CREATIVE PREFLIGHT QA PASS: '+data.briefs.length+' category briefs; no live advertising');
