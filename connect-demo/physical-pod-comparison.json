@@ -1,0 +1,31 @@
+{
+  "schema": "mint.physical.pod-comparison.v1",
+  "as_of": "2026-10-01",
+  "status": "PUBLIC_PRICE_REFERENCES_NOT_LIVE_OFFERS",
+  "candidates": [
+    {
+      "id": "aop-tote",
+      "product": "Printful All-Over Print Tote Bag 15x15",
+      "public_base_cents": 1760,
+      "us_shipping_reference_cents": 469,
+      "subtotal_reference_cents": 2229,
+      "source": "https://www.printful.com/custom/accessories/all/all-over-print-tote"
+    },
+    {
+      "id": "cotton-tote",
+      "product": "Printful Cotton Color Tote Bag Westford Mill W101",
+      "public_base_cents": 1018,
+      "us_shipping_reference_cents": 469,
+      "subtotal_reference_cents": 1487,
+      "source": "https://www.printful.com/custom/bags/personalized",
+      "shipping_caveat": "Bag category US single-item rate; exact variant and destination quote pending"
+    }
+  ],
+  "assumptions": [
+    "Reference subtotal excludes taxes, fees, returns, advertising and any customization surcharge",
+    "No specific supplier variant has been ordered or sampled",
+    "No marketplace account is connected",
+    "Public prices may change; refresh before listing"
+  ],
+  "next_gate": "Verify actual blank SKU, print area, US destination shipping, design quality, marketplace fees, sample and seller authorization"
+}
