@@ -46,10 +46,8 @@ for(const t of q.tasks){
  }
 }
 q.updated_at=now();
-fs.writeFileSync(queuePath,JSON.stringify(q,null,2)+"
-");
+fs.writeFileSync(queuePath,JSON.stringify(q,null,2)+"\n");
 const report={schema:"mint.factory.run.v1",run_id:runId,run_attempt:runAttempt,ran_at:now(),restored_state:restoredState,restored_queue_updated_at:startedQueueUpdatedAt,events,counts:Object.fromEntries(["BACKLOG","READY","RUNNING","DONE","BLOCKED_OWNER","BLOCKED_EXTERNAL","FAILED_RETRYABLE","FAILED_TERMINAL"].map(s=>[s,q.tasks.filter(t=>t.status===s).length])),truth:"Factory completion means only the declared task evidence was obtained. It does not imply sales, customers, revenue, settlement, eligibility, legal clearance, or external actions not evidenced here."};
-fs.writeFileSync(runPath,JSON.stringify(report,null,2)+"
-");
+fs.writeFileSync(runPath,JSON.stringify(report,null,2)+"\n");
 console.log(JSON.stringify(report,null,2));
 if(q.tasks.some(t=>t.status==="FAILED_RETRYABLE"||t.status==="FAILED_TERMINAL"))process.exitCode=1;
