@@ -1,0 +1,14 @@
+{
+  "schema": "mint.marketplace.export.v1",
+  "status": "PREPARED_NOT_PUBLISHED",
+  "canonical_offer_id": "site-launch-checklist-003",
+  "source_catalog": "connect-demo/catalog.json",
+  "channels": [
+    {"id":"mint-direct","state":"LIVE_PAGE_VISUALLY_VERIFIED","url":"https://mint-stripe-connect-v4-production.up.railway.app/checklist","attribution_url":"https://mint-stripe-connect-v4-production.up.railway.app/checklist?src=mint_direct","fulfillment":"MINT"},
+    {"id":"gumroad","state":"ACCOUNT_AND_TERMS_UNVERIFIED","export":"exports/gumroad-site-checklist.md","checkout":"PLATFORM_OWNED","fulfillment":"PLATFORM_OWNED"},
+    {"id":"etsy","state":"ACCOUNT_AND_LISTING_ELIGIBILITY_UNVERIFIED","export":"exports/etsy-site-checklist.md","checkout":"PLATFORM_OWNED","fulfillment":"PLATFORM_OWNED"},
+    {"id":"notion","state":"TEMPLATE_QA_AND_CREATOR_ELIGIBILITY_UNVERIFIED","product":"prototypes/notion-command-center","checkout":"UNDECIDED","fulfillment":"UNDECIDED"}
+  ],
+  "publishing_requires":["owner_channel_approval","platform_account_access","platform_policy_review","verified_asset_preview","support_refund_terms"],
+  "reconciliation":"Do not combine marketplace sales with Mint Stripe totals without distinct provider IDs and refund/fee records."
+}
