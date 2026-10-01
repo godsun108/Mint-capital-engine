@@ -1,0 +1,27 @@
+name: Commerce Representative Shift
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "automation/commerce-shift.mjs"
+      - "connect-demo/commerce-management.json"
+      - "connect-demo/digital-estate-model.json"
+      - "connect-demo/catalog.json"
+      - ".github/workflows/commerce-shift.yml"
+permissions:
+  contents: read
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Validate and generate read-only representative shift
+        run: node automation/commerce-shift.mjs > commerce-shift.json
+      - name: Upload auditable shift artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: commerce-representative-shift
+          path: commerce-shift.json
