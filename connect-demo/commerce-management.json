@@ -1,0 +1,154 @@
+{
+  "schema": "mint.commerce.management.v1",
+  "status": "INTERNAL_NOT_CONNECTED",
+  "principle": "One canonical catalog and ledger; multiple brand and channel identities",
+  "roles": [
+    {
+      "id": "commerce-director",
+      "purpose": "Assign channel goals, prioritize approved offers, resolve exceptions",
+      "permissions": [
+        "read_catalog",
+        "read_verified_metrics",
+        "draft_plan"
+      ],
+      "requires_owner": [
+        "new_accounts",
+        "channel_activation",
+        "spend"
+      ]
+    },
+    {
+      "id": "marketplace-manager",
+      "purpose": "Prepare and QA platform-compliant listings and pricing",
+      "permissions": [
+        "read_catalog",
+        "draft_listing",
+        "check_eligibility"
+      ],
+      "requires_owner": [
+        "accept_platform_terms",
+        "publish_listing",
+        "alter_live_price"
+      ]
+    },
+    {
+      "id": "social-distribution-manager",
+      "purpose": "Build educational posts and attributable channel calendars",
+      "permissions": [
+        "draft_content",
+        "create_tracking_links",
+        "analyze_public_signals"
+      ],
+      "requires_owner": [
+        "publish_to_external_account",
+        "unsolicited_outreach",
+        "paid_campaign"
+      ]
+    },
+    {
+      "id": "customer-concierge",
+      "purpose": "Answer inbound questions accurately and escalate disputes",
+      "permissions": [
+        "read_public_offer",
+        "draft_response"
+      ],
+      "requires_owner": [
+        "refund",
+        "account_access",
+        "commitments_outside_terms"
+      ]
+    },
+    {
+      "id": "conversion-manager",
+      "purpose": "Compare traffic and checkout funnel evidence, propose experiments",
+      "permissions": [
+        "read_aggregate_funnel",
+        "draft_test"
+      ],
+      "requires_owner": [
+        "live_site_change",
+        "tracking_consent_change"
+      ]
+    },
+    {
+      "id": "product-manager",
+      "purpose": "Turn customer feedback into candidate revisions through existing QA lifecycle",
+      "permissions": [
+        "draft_product_change",
+        "request_independent_qa"
+      ],
+      "requires_owner": [
+        "release_new_offer",
+        "modify_paid_deliverable"
+      ]
+    },
+    {
+      "id": "revenue-controller",
+      "purpose": "Reconcile provider transactions, fulfillment, fees and refunds without double counting",
+      "permissions": [
+        "read_provider_evidence",
+        "flag_discrepancy"
+      ],
+      "requires_owner": [
+        "payout",
+        "transfer",
+        "refund",
+        "financial_commitment"
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "id": "mint-owned-pages",
+      "kind": "owned_discovery",
+      "status": "DEPLOYED_CHECK_LATEST_RELEASE",
+      "brand_id": "mint",
+      "credential_policy": "No credentials in repo"
+    },
+    {
+      "id": "mint-railway-stripe",
+      "kind": "direct_checkout",
+      "status": "LIVE_PROVIDER_CONNECTED",
+      "brand_id": "mint",
+      "credential_policy": "Existing environment secret only"
+    },
+    {
+      "id": "instagram",
+      "kind": "social",
+      "status": "NOT_CONNECTED",
+      "brand_id": null,
+      "credential_policy": "Owner authenticates through platform"
+    },
+    {
+      "id": "gumroad",
+      "kind": "marketplace",
+      "status": "NOT_CONNECTED",
+      "brand_id": null,
+      "credential_policy": "Owner opens and verifies seller account"
+    },
+    {
+      "id": "etsy",
+      "kind": "marketplace",
+      "status": "NOT_CONNECTED_ELIGIBILITY_UNVERIFIED",
+      "brand_id": null,
+      "credential_policy": "Owner opens and verifies seller account"
+    }
+  ],
+  "governance": {
+    "never_store_passwords_in_git": true,
+    "never_claim_sales_from_clicks": true,
+    "no_autonomous_paid_ads": true,
+    "no_bulk_unsolicited_messages": true,
+    "canonical_offer_source": "connect-demo/catalog.json",
+    "dedupe": [
+      "provider",
+      "provider_transaction_id"
+    ],
+    "account_activation_requires": [
+      "owner_approval",
+      "platform_verification",
+      "payout_and_tax_setup_by_owner",
+      "policy_and_brand_review"
+    ]
+  }
+}
