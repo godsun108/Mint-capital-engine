@@ -30,7 +30,8 @@ jobs:
         run: npm run product:execute
       - name: Persist auditable cycle state
         run: |
-          git add automation/state/product-cycle.json products/ systems/acquisition/generated/
+          git add automation/state/product-cycle.json products/
+          if [ -d systems/acquisition/generated ]; then git add systems/acquisition/generated/; fi
           if git diff --cached --quiet; then
             echo "No product-cycle state change."
             exit 0
