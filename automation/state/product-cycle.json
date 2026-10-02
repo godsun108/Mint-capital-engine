@@ -1,0 +1,23 @@
+{
+  "schema": "mint.product.cycle.state.v1",
+  "runs": [
+    {
+      "candidateId": "candidate:foundry-auth-addon:001",
+      "candidateFingerprint": "810f8d72fa76f307163d2ceda69404483b4cb5fad91b5db7e30476e5fb7f6ac7",
+      "at": "2026-10-02T13:48:43.401Z",
+      "cycleId": "20261002-0001",
+      "status": "REJECTED",
+      "gate": {
+        "ok": false,
+        "reasons": [
+          "missing_verified_demand_evidence",
+          "insufficient_distinct_demand_sources"
+        ]
+      },
+      "jobs": []
+    }
+  ],
+  "queue": [],
+  "lastRunAt": "2026-10-02T13:48:43.401Z",
+  "lastExecutorRunAt": "2026-10-02T13:48:43.659Z"
+}
