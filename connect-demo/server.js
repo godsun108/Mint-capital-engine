@@ -6,6 +6,7 @@ import {fileURLToPath} from 'node:url';
 import path from 'node:path';
 import Stripe from 'stripe';
 import {handleRequestError} from './request-error.js';
+import {startRuntime,getRuntimeState} from './fge-runtime.js';
 
 // One Stripe Client for every Stripe-related request in this application.
 // PLACEHOLDER: set STRIPE_SECRET_KEY in the environment; never commit a real key.
@@ -302,6 +303,16 @@ async function commerceEvidence(res){
   return send(res,200,{ok:true,schema:'mint.commerce.evidence.v1',generatedAt:new Date().toISOString(),semantics:'STRIPE_SERVER_VERIFIED_CHECKOUT_AND_PAYMENT_ONLY; FULFILLMENT_AND_BANK_SETTLEMENT_REQUIRE_SEPARATE_EVIDENCE',totals:{sessions:live.length,paid:live.filter(x=>x.paid).length,providerAvailable:live.filter(x=>x.providerAvailable).length},transactions:live});
 }
 
+async function fgeObserve(){
+  const sources={};
+  for(const [key,count] of acquisitionCounters){const [source,event]=key.split('|');sources[source]||={visits:0,checkoutStarted:0,paid:0,fulfilled:0};if(event==='VISITED')sources[source].visits+=count;if(event==='CHECKOUT_STARTED')sources[source].checkoutStarted+=count;}
+  if(!stripeClient)return {sources};
+  const sessions=await stripeClient.checkout.sessions.list({limit:100,expand:['data.payment_intent.latest_charge']});
+  for(const session of sessions.data||[]){if(session.livemode!==true||!session.metadata?.mint_offer_id)continue;const source=session.metadata?.mint_source||'unknown';sources[source]||={visits:0,checkoutStarted:0,paid:0,fulfilled:0};const pi=typeof session.payment_intent==='object'?session.payment_intent:null;const ch=pi&&typeof pi.latest_charge==='object'?pi.latest_charge:null;if(session.status==='complete'&&session.payment_status==='paid'&&Boolean(ch?.paid))sources[source].paid+=1;}
+  const receipts=Object.values(readFulfillmentReceipts().receipts||{}).filter(x=>x.livemode===true);for(const receipt of receipts){const source=receipt.source||receipt.mint_source||'unknown';sources[source]||={visits:0,checkoutStarted:0,paid:0,fulfilled:0};sources[source].fulfilled+=1;}
+  return {sources};
+}
+
 async function acquisitionState(res){
   const sources={};
   for(const [key,count] of acquisitionCounters){const [source,event]=key.split('|');sources[source]||={VISITED:0,CHECKOUT_STARTED:0};sources[source][event]=count;}
@@ -325,7 +336,8 @@ const server=http.createServer(async(req,res)=>{
       return await acquisitionEvent(req,res);
     }
     if(req.method==='GET'&&u.pathname==='/api/acquisition/state')return acquisitionState(res);
-    if(req.method==='GET'&&u.pathname==='/health')return send(res,200,{ok:true,stripeConfigured,webhookConfigured:Boolean(process.env.STRIPE_WEBHOOK_SECRET),durableFulfillmentStorage:durableStateConfigured});
+    if(req.method==='GET'&&u.pathname==='/health')return send(res,200,{ok:true,stripeConfigured,webhookConfigured:Boolean(process.env.STRIPE_WEBHOOK_SECRET),durableFulfillmentStorage:durableStateConfigured,fgeEnabled:process.env.FGE_ENABLED==='true'});
+    if(req.method==='GET'&&u.pathname==='/api/fge/state')return send(res,200,{ok:true,runtime:getRuntimeState()});
     if(req.method==='GET'&&u.pathname==='/api/stripe-check') { const s=requireStripe(); const balance=await s.balance.retrieve(); const products=await s.products.list({limit:1}); return send(res,200,{ok:true,stripeAuthenticated:true,livemode:balance.livemode,testMode:balance.livemode===false,catalogReadable:true}); }
     if(req.method==='OPTIONS'&&u.pathname==='/api/acquisition/event'){res.writeHead(204,acquisitionCors);return res.end();}
     if((u.pathname.startsWith('/api/')&&!u.pathname.startsWith('/api/acquisition/'))||u.pathname.startsWith('/refresh-onboarding')||u.pathname.startsWith('/webhooks/'))requireStripe();
@@ -359,4 +371,4 @@ const server=http.createServer(async(req,res)=>{
     handleRequestError(e,res,send);
   }
 });
-server.listen(PORT,()=>console.log('MINT Stripe Connect demo listening on '+APP_URL));
+server.listen(PORT,()=>{console.log('MINT Stripe Connect demo listening on '+APP_URL);startRuntime({observe:fgeObserve});});
