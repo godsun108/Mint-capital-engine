@@ -5,6 +5,7 @@ import {stat} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
 import path from 'node:path';
 import Stripe from 'stripe';
+import {handleRequestError} from './request-error.js';
 
 // One Stripe Client for every Stripe-related request in this application.
 // PLACEHOLDER: set STRIPE_SECRET_KEY in the environment; never commit a real key.
@@ -355,10 +356,7 @@ const server=http.createServer(async(req,res)=>{
     if(req.method==='POST'&&u.pathname==='/webhooks/stripe')return await thinWebhook(req,res);
     send(res,404,{error:'Not found'});
   }catch(e){
-    const missingStripeResource=e?.type==='StripeInvalidRequestError'&&e?.code==='resource_missing';
-    console.error('MINT_REQUEST_ERROR',JSON.stringify({type:e?.type||'unknown',code:e?.code||'unknown',status:missingStripeResource?404:500}));
-    if(!res.headersSent)send(res,missingStripeResource?404:500,{error:missingStripeResource?'Stripe resource not found for the configured account and mode.':'Unexpected server error.'});
-    else res.end();
+    handleRequestError(e,res,send);
   }
 });
 server.listen(PORT,()=>console.log('MINT Stripe Connect demo listening on '+APP_URL));
