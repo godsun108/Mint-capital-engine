@@ -6,7 +6,7 @@ const templates=[
  {key:'transparent',text:'Foundry builds small, practical builder resources. The Express + TypeScript starter is a one-time $9 digital resource—not hosted SaaS and not a promise of technical or commercial results.'}
 ];
 export function produceCandidates({existing=[]}={}){
- const used=new Set(existing.map(x=>x.template));
- return templates.filter(x=>!used.has(x.key)).map(x=>({...x,brand:'foundry',channel:'bluesky',sourceTag:'fge_bluesky_'+x.key,url:DEFAULT_URL+'?src=fge_bluesky_'+x.key,state:'draft'}));
+ const used=new Set(existing.map(x=>x.template||x.key));
+ return templates.filter(x=>!used.has(x.key)).map(x=>({...x,template:x.key,brand:'foundry',channel:'bluesky',sourceTag:'fge_bluesky_'+x.key,url:DEFAULT_URL+'?src=fge_bluesky_'+x.key,state:'draft'}));
 }
 export function renderCandidate(x){const text=x.text+' '+x.url;if(text.length>300)throw new Error('Bluesky candidate exceeds 300 characters');return text}
