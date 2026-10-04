@@ -27,9 +27,9 @@ test('headers already sent: terminate response rather than write a second header
   assert.equal(result.ended,true);
 });
 test('HTTP request boundary awaits async handlers and delegates errors',()=>{
-  assert.match(source,/return await verifyCheckout\\(decodeURIComponent\\(m\\[1\\]\\),res\\);/);
-  assert.match(source,/handleRequestError\\(e,res,send\\)/);
+  assert.ok(source.includes('return await verifyCheckout(decodeURIComponent(m[1]),res);'));
+  assert.ok(source.includes('handleRequestError(e,res,send)'));
   for(const name of ['storefront','moneyState','commerceEvidence','fulfillmentEvidence','createConnectedAccount','accountStatus','onboardingLink','createProduct','checkout','verifyCheckout','fulfillCheckout','thinWebhook','acquisitionEvent']){
-    assert.match(source,new RegExp('return await '+name+'\\\\('),name+' route must be awaited');
+    assert.ok(source.includes('return await '+name+'('),name+' route must be awaited');
   }
 });
