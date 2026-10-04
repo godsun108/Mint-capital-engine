@@ -1,0 +1,40 @@
+import fs from 'node:fs';
+import path from 'node:path';
+
+const STATE_DIR=process.env.MINT_STATE_DIR||'.state';
+const STATE_FILE=path.join(STATE_DIR,'fge-runtime.json');
+const INTERVAL_MS=Math.max(60_000,Number(process.env.FGE_INTERVAL_MS||900_000));
+const AUTONOMY=(process.env.FGE_AUTONOMY||'observe').toLowerCase();
+
+function load(){
+  try{return JSON.parse(fs.readFileSync(STATE_FILE,'utf8'))}catch{return {version:1,runs:[],experiments:{},queue:[],lastRun:null}}
+}
+function save(s){fs.mkdirSync(STATE_DIR,{recursive:true});const tmp=STATE_FILE+'.tmp';fs.writeFileSync(tmp,JSON.stringify(s,null,2));fs.renameSync(tmp,STATE_FILE)}
+function now(){return new Date().toISOString()}
+function sourceTag(v){return /^[a-z0-9_-]{1,48}$/.test(v||'')?v:'unknown'}
+
+export function decide(funnel={}){
+  const {visits=0,checkoutStarted=0,paid=0,fulfilled=0}=funnel;
+  if(fulfilled>paid)return {state:'error',action:'investigate_evidence_invariant'};
+  if(paid>fulfilled)return {state:'incident',action:'repair_fulfillment_before_growth'};
+  if(paid>0&&fulfilled>=paid)return {state:'winner',action:'repeat_verified_source'};
+  if(checkoutStarted>0)return {state:'checkout',action:'inspect_checkout_to_paid'};
+  if(visits>0)return {state:'traffic',action:'improve_offer_or_intent_match'};
+  return {state:'cold',action:'increase_qualified_distribution'};
+}
+
+export function runCycle(input={}){
+  const s=load(), started=now();
+  const sources=Object.entries(input.sources||{}).map(([source,funnel])=>({source:sourceTag(source),funnel,decision:decide(funnel)}));
+  const cycle={id:'fge:'+started,started,autonomy:AUTONOMY,sources};
+  s.lastRun=started;s.runs=[...(s.runs||[]),cycle].slice(-200);
+  for(const x of sources)s.experiments[x.source]={...(s.experiments[x.source]||{}),lastObserved:started,lastFunnel:x.funnel,lastDecision:x.decision};
+  save(s);return cycle;
+}
+
+export function getRuntimeState(){return load()}
+export function startRuntime({observe}={}){
+  if(process.env.FGE_ENABLED!=='true')return null;
+  const tick=async()=>{try{const evidence=observe?await observe():{};const cycle=runCycle(evidence);console.log('FGE_CYCLE',JSON.stringify({id:cycle.id,sources:cycle.sources.length,autonomy:AUTONOMY}))}catch(e){console.error('FGE_CYCLE_ERROR',JSON.stringify({message:e?.message||'unknown'}))}};
+  tick();const timer=setInterval(tick,INTERVAL_MS);timer.unref?.();return timer;
+}
