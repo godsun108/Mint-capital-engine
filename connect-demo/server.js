@@ -332,28 +332,33 @@ const server=http.createServer(async(req,res)=>{
     if(req.method==='GET'&&u.pathname==='/checklist')return serveFile(res,path.join(root,'public/checklist.html'),'text/html; charset=utf-8');
     if(req.method==='GET'&&u.pathname==='/offers')return serveFile(res,path.join(root,'public/offers.html'),'text/html; charset=utf-8');
     if(req.method==='GET'&&u.pathname==='/success')return serveFile(res,path.join(root,'public/success.html'),'text/html; charset=utf-8');
-    if(req.method==='GET'&&u.pathname==='/api/storefront')return storefront(res);
-    if(req.method==='GET'&&u.pathname==='/api/money-state')return moneyState(res);
-    if(req.method==='GET'&&u.pathname==='/api/commerce/evidence')return commerceEvidence(res);
-    if(req.method==='GET'&&u.pathname==='/api/fulfillment/evidence')return fulfillmentEvidence(res);
-    if(req.method==='POST'&&u.pathname==='/api/accounts')return createConnectedAccount(req,res);
+    if(req.method==='GET'&&u.pathname==='/api/storefront')return await storefront(res);
+    if(req.method==='GET'&&u.pathname==='/api/money-state')return await moneyState(res);
+    if(req.method==='GET'&&u.pathname==='/api/commerce/evidence')return await commerceEvidence(res);
+    if(req.method==='GET'&&u.pathname==='/api/fulfillment/evidence')return await fulfillmentEvidence(res);
+    if(req.method==='POST'&&u.pathname==='/api/accounts')return await createConnectedAccount(req,res);
     let m=u.pathname.match(/^\/api\/accounts\/([^/]+)\/status$/);
-    if(req.method==='GET'&&m)return accountStatus(decodeURIComponent(m[1]),res);
+    if(req.method==='GET'&&m)return await accountStatus(decodeURIComponent(m[1]),res);
     m=u.pathname.match(/^\/api\/accounts\/([^/]+)\/onboarding-link$/);
-    if(req.method==='POST'&&m)return onboardingLink(decodeURIComponent(m[1]),res);
+    if(req.method==='POST'&&m)return await onboardingLink(decodeURIComponent(m[1]),res);
     if(req.method==='GET'&&u.pathname==='/refresh-onboarding'){
       const id=u.searchParams.get('accountId');if(!id)return send(res,400,{error:'accountId is required.'});
       const link=await stripeClient.v2.core.accountLinks.create({account:id,use_case:{type:'account_onboarding',account_onboarding:{configurations:['recipient'],refresh_url:APP_URL+'/refresh-onboarding?accountId='+encodeURIComponent(id),return_url:APP_URL+'/?accountId='+encodeURIComponent(id)}}});
       res.writeHead(303,{location:link.url});return res.end();
     }
-    if(req.method==='POST'&&u.pathname==='/api/products')return createProduct(req,res);
-    if(req.method==='POST'&&u.pathname==='/api/checkout')return checkout(req,res);
+    if(req.method==='POST'&&u.pathname==='/api/products')return await createProduct(req,res);
+    if(req.method==='POST'&&u.pathname==='/api/checkout')return await checkout(req,res);
     m=u.pathname.match(/^\/api\/checkout\/([^/]+)\/verify$/);
-    if(req.method==='GET'&&m)return verifyCheckout(decodeURIComponent(m[1]),res);
+    if(req.method==='GET'&&m)return await verifyCheckout(decodeURIComponent(m[1]),res);
     m=u.pathname.match(/^\/api\/fulfill\/([^/]+)$/);
-    if(req.method==='GET'&&m)return fulfillCheckout(decodeURIComponent(m[1]),res);
-    if(req.method==='POST'&&u.pathname==='/webhooks/stripe')return thinWebhook(req,res);
+    if(req.method==='GET'&&m)return await fulfillCheckout(decodeURIComponent(m[1]),res);
+    if(req.method==='POST'&&u.pathname==='/webhooks/stripe')return await thinWebhook(req,res);
     send(res,404,{error:'Not found'});
-  }catch(e){console.error(e);send(res,500,{error:e?.message||'Unexpected server error.'})}
+  }catch(e){
+    const missingStripeResource=e?.type==='StripeInvalidRequestError'&&e?.code==='resource_missing';
+    console.error('MINT_REQUEST_ERROR',JSON.stringify({type:e?.type||'unknown',code:e?.code||'unknown',status:missingStripeResource?404:500}));
+    if(!res.headersSent)send(res,missingStripeResource?404:500,{error:missingStripeResource?'Stripe resource not found for the configured account and mode.':'Unexpected server error.'});
+    else res.end();
+  }
 });
 server.listen(PORT,()=>console.log('MINT Stripe Connect demo listening on '+APP_URL));
