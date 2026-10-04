@@ -13,6 +13,7 @@ function load(){
 function save(s){fs.mkdirSync(STATE_DIR,{recursive:true});const tmp=STATE_FILE+'.tmp';fs.writeFileSync(tmp,JSON.stringify(s,null,2));fs.renameSync(tmp,STATE_FILE)}
 function now(){return new Date().toISOString()}
 function sourceTag(v){return /^[a-z0-9_-]{1,48}$/.test(v||'')?v:'unknown'}
+function earnedDollars(sources){return sources.reduce((n,x)=>n+((x.funnel?.paid||0)*9),0)}
 
 export function decide(funnel={}){
   const {visits=0,checkoutStarted=0,paid=0,fulfilled=0}=funnel;
@@ -30,7 +31,9 @@ export function runCycle(input={}){
   const existing=(s.queue||[]).filter(x=>x.brand==='foundry'&&x.channel==='bluesky');
   const generated=produceCandidates({existing});
   if(generated.length)s.queue=[...(s.queue||[]),...generated.map(x=>({...x,createdAt:started}))].slice(-100);
-  const cycle={id:'fge:'+started,started,autonomy:AUTONOMY,sources,publisher:{generated:generated.length,queued:(s.queue||[]).length}};
+  const earned=earnedDollars(sources);
+  const funding={targetUsd:20,verifiedPaidEstimateUsd:earned,remainingUsd:Math.max(0,20-earned),eligible:earned>=20,note:'Estimate uses current $9 primary offer count; Stripe transaction amounts remain authoritative.'};
+  const cycle={id:'fge:'+started,started,autonomy:AUTONOMY,sources,publisher:{generated:generated.length,queued:(s.queue||[]).length},funding};
   s.lastRun=started;s.runs=[...(s.runs||[]),cycle].slice(-200);
   for(const x of sources)s.experiments[x.source]={...(s.experiments[x.source]||{}),lastObserved:started,lastFunnel:x.funnel,lastDecision:x.decision};
   save(s);return cycle;
@@ -39,6 +42,6 @@ export function runCycle(input={}){
 export function getRuntimeState(){return load()}
 export function startRuntime({observe}={}){
   if(process.env.FGE_ENABLED!=='true')return null;
-  const tick=async()=>{try{const evidence=observe?await observe():{};const cycle=runCycle(evidence);console.log('FGE_CYCLE',JSON.stringify({id:cycle.id,sources:cycle.sources.length,autonomy:AUTONOMY,publisher:cycle.publisher}))}catch(e){console.error('FGE_CYCLE_ERROR',JSON.stringify({message:e?.message||'unknown'}))}};
+  const tick=async()=>{try{const evidence=observe?await observe():{};const cycle=runCycle(evidence);console.log('FGE_CYCLE',JSON.stringify({id:cycle.id,sources:cycle.sources.length,autonomy:AUTONOMY,publisher:cycle.publisher,funding:cycle.funding}))}catch(e){console.error('FGE_CYCLE_ERROR',JSON.stringify({message:e?.message||'unknown'}))}};
   tick();const timer=setInterval(tick,INTERVAL_MS);timer.unref?.();return timer;
 }
