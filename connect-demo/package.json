@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node --watch server.js",
-    "test": "node --test error-guard.test.js fge-runtime.test.js"
+    "test": "node --test error-guard.test.js fge-runtime.test.js fge-publisher.test.js"
   },
   "engines": {
     "node": ">=20"
