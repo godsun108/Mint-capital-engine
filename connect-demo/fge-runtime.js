@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {produceCandidates} from './fge-publisher.js';
 import {prepareDistribution,nextReady} from './fge-distributor.js';
+import {dispatchBluesky,blueskyConfigured} from './fge-bluesky.js';
 
 const STATE_DIR=process.env.MINT_STATE_DIR||'.state';
 const STATE_FILE=path.join(STATE_DIR,'fge-runtime.json');
@@ -26,7 +27,7 @@ export function decide(funnel={}){
   return {state:'cold',action:'increase_qualified_distribution'};
 }
 
-export function runCycle(input={}){
+export async function runCycle(input={}){
   const s=load(), started=now();
   const sources=Object.entries(input.sources||{}).map(([source,funnel])=>({source:sourceTag(source),funnel,decision:decide(funnel)}));
   const existing=(s.queue||[]).filter(x=>x.brand==='foundry'&&x.channel==='bluesky');
@@ -34,7 +35,13 @@ export function runCycle(input={}){
   if(generated.length)s.queue=[...(s.queue||[]),...generated.map(x=>({...x,createdAt:started}))].slice(-100);
   s.queue=prepareDistribution(s.queue||[]);
   const ready=s.queue.filter(x=>x.state==='ready');
-  const distributor={ready:ready.length,next:nextReady(s.queue)?.sourceTag||null,mode:'zero_cost_bridge'};
+  let distributor={ready:ready.length,next:nextReady(s.queue)?.sourceTag||null,mode:'zero_cost_bluesky',providerConfigured:blueskyConfigured()};
+  const job=nextReady(s.queue);
+  if(job&&process.env.FGE_OWNED_PUBLISH_ENABLED==='true'){
+    const result=await dispatchBluesky(job);
+    if(result.ok){s.queue=s.queue.map(x=>x===job?{...x,...result}:x);distributor={...distributor,dispatched:job.sourceTag,result:{state:result.state,externalId:result.externalId}}}
+    else distributor={...distributor,blocked:result.reason};
+  }
   const earned=earnedDollars(sources);
   const funding={targetUsd:20,verifiedPaidEstimateUsd:earned,remainingUsd:Math.max(0,20-earned),eligible:earned>=20,note:'Estimate uses current $9 primary offer count; Stripe transaction amounts remain authoritative.'};
   const cycle={id:'fge:'+started,started,autonomy:AUTONOMY,sources,publisher:{generated:generated.length,queued:(s.queue||[]).length},distributor,funding};
@@ -46,6 +53,6 @@ export function runCycle(input={}){
 export function getRuntimeState(){return load()}
 export function startRuntime({observe}={}){
   if(process.env.FGE_ENABLED!=='true')return null;
-  const tick=async()=>{try{const evidence=observe?await observe():{};const cycle=runCycle(evidence);console.log('FGE_CYCLE',JSON.stringify({id:cycle.id,sources:cycle.sources.length,autonomy:AUTONOMY,publisher:cycle.publisher,distributor:cycle.distributor,funding:cycle.funding}))}catch(e){console.error('FGE_CYCLE_ERROR',JSON.stringify({message:e?.message||'unknown'}))}};
+  const tick=async()=>{try{const evidence=observe?await observe():{};const cycle=await runCycle(evidence);console.log('FGE_CYCLE',JSON.stringify({id:cycle.id,sources:cycle.sources.length,autonomy:AUTONOMY,publisher:cycle.publisher,distributor:cycle.distributor,funding:cycle.funding}))}catch(e){console.error('FGE_CYCLE_ERROR',JSON.stringify({message:e?.message||'unknown'}))}};
   tick();const timer=setInterval(tick,INTERVAL_MS);timer.unref?.();return timer;
 }

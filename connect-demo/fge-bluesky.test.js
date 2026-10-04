@@ -1,0 +1,2 @@
+import test from 'node:test';import assert from 'node:assert/strict';import {dispatchBluesky} from './fge-bluesky.js';
+test('provider fails closed without secrets',async()=>{const oldH=process.env.BLUESKY_HANDLE,oldP=process.env.BLUESKY_APP_PASSWORD;delete process.env.BLUESKY_HANDLE;delete process.env.BLUESKY_APP_PASSWORD;const r=await dispatchBluesky({brand:'foundry',channel:'bluesky',payload:{text:'x'}});assert.equal(r.reason,'provider_not_configured');if(oldH)process.env.BLUESKY_HANDLE=oldH;if(oldP)process.env.BLUESKY_APP_PASSWORD=oldP});
