@@ -2,23 +2,14 @@
   "ok": true,
   "schema": "mint.acquisition.snapshot.v1",
   "semantics": "PROCESS_LOCAL_AGGREGATES_NOT_UNIQUE_VISITORS_NOT_LIFETIME_TOTALS",
-  "startedAt": "2026-10-04T03:44:55.400Z",
-  "generatedAt": "2026-10-04T06:06:39.265Z",
+  "startedAt": "2026-10-04T12:27:40.921Z",
+  "generatedAt": "2026-10-04T12:38:21.139Z",
   "privacy": "No IP, cookie, user-agent, or personal identifier stored by this counter.",
   "totals": {
-    "VISITED": 2,
+    "VISITED": 0,
     "CHECKOUT_STARTED": 0
   },
-  "sources": {
-    "direct": {
-      "VISITED": 1,
-      "CHECKOUT_STARTED": 0
-    },
-    "foundry_cross_sell": {
-      "VISITED": 1,
-      "CHECKOUT_STARTED": 0
-    }
-  },
-  "capturedAt": "2026-10-04T06:06:39.309Z",
+  "sources": {},
+  "capturedAt": "2026-10-04T12:38:21.190Z",
   "captureSemantics": "SNAPSHOT_OF_PROCESS_LOCAL_AGGREGATES_NOT_UNIQUE_VISITORS"
 }
