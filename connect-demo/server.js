@@ -238,7 +238,7 @@ async function fulfillCheckout(sessionId,res){
   const receipts=readFulfillmentReceipts();
   const prior=receipts.receipts[session.id];
   if(!prior){
-    receipts.receipts[session.id]={sessionId:session.id,offerId:session.metadata?.mint_offer_id||productId||null,livemode:session.livemode,paidVerified:true,fulfilledAt:new Date().toISOString(),artifact:fulfillment.path};
+    receipts.receipts[session.id]={sessionId:session.id,offerId:session.metadata?.mint_offer_id||productId||null,source:session.metadata?.mint_source||'unknown',livemode:session.livemode,paidVerified:true,fulfilledAt:new Date().toISOString(),artifact:fulfillment.path};
     writeFulfillmentReceipts(receipts);
     console.log('MINT_COMMERCE',JSON.stringify({event:'FULFILLED',sessionId:session.id,offerId:receipts.receipts[session.id].offerId,livemode:session.livemode,at:receipts.receipts[session.id].fulfilledAt}));
   }
@@ -345,6 +345,8 @@ const server=http.createServer(async(req,res)=>{
     if(req.method==='GET'&&u.pathname==='/checklist')return serveFile(res,path.join(root,'public/checklist.html'),'text/html; charset=utf-8');
     if(req.method==='GET'&&u.pathname==='/offers')return serveFile(res,path.join(root,'public/offers.html'),'text/html; charset=utf-8');
     if(req.method==='GET'&&u.pathname==='/success')return serveFile(res,path.join(root,'public/success.html'),'text/html; charset=utf-8');
+    if(req.method==='GET'&&u.pathname==='/robots.txt')return serveFile(res,path.join(root,'public/robots.txt'),'text/plain; charset=utf-8');
+    if(req.method==='GET'&&u.pathname==='/sitemap.xml')return serveFile(res,path.join(root,'public/sitemap.xml'),'application/xml; charset=utf-8');
     if(req.method==='GET'&&u.pathname==='/api/storefront')return await storefront(res);
     if(req.method==='GET'&&u.pathname==='/api/money-state')return await moneyState(res);
     if(req.method==='GET'&&u.pathname==='/api/commerce/evidence')return await commerceEvidence(res);
