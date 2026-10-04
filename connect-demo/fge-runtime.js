@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {produceCandidates} from './fge-publisher.js';
+import {prepareDistribution,nextReady} from './fge-distributor.js';
 
 const STATE_DIR=process.env.MINT_STATE_DIR||'.state';
 const STATE_FILE=path.join(STATE_DIR,'fge-runtime.json');
@@ -31,9 +32,12 @@ export function runCycle(input={}){
   const existing=(s.queue||[]).filter(x=>x.brand==='foundry'&&x.channel==='bluesky');
   const generated=produceCandidates({existing});
   if(generated.length)s.queue=[...(s.queue||[]),...generated.map(x=>({...x,createdAt:started}))].slice(-100);
+  s.queue=prepareDistribution(s.queue||[]);
+  const ready=s.queue.filter(x=>x.state==='ready');
+  const distributor={ready:ready.length,next:nextReady(s.queue)?.sourceTag||null,mode:'zero_cost_bridge'};
   const earned=earnedDollars(sources);
   const funding={targetUsd:20,verifiedPaidEstimateUsd:earned,remainingUsd:Math.max(0,20-earned),eligible:earned>=20,note:'Estimate uses current $9 primary offer count; Stripe transaction amounts remain authoritative.'};
-  const cycle={id:'fge:'+started,started,autonomy:AUTONOMY,sources,publisher:{generated:generated.length,queued:(s.queue||[]).length},funding};
+  const cycle={id:'fge:'+started,started,autonomy:AUTONOMY,sources,publisher:{generated:generated.length,queued:(s.queue||[]).length},distributor,funding};
   s.lastRun=started;s.runs=[...(s.runs||[]),cycle].slice(-200);
   for(const x of sources)s.experiments[x.source]={...(s.experiments[x.source]||{}),lastObserved:started,lastFunnel:x.funnel,lastDecision:x.decision};
   save(s);return cycle;
@@ -42,6 +46,6 @@ export function runCycle(input={}){
 export function getRuntimeState(){return load()}
 export function startRuntime({observe}={}){
   if(process.env.FGE_ENABLED!=='true')return null;
-  const tick=async()=>{try{const evidence=observe?await observe():{};const cycle=runCycle(evidence);console.log('FGE_CYCLE',JSON.stringify({id:cycle.id,sources:cycle.sources.length,autonomy:AUTONOMY,publisher:cycle.publisher,funding:cycle.funding}))}catch(e){console.error('FGE_CYCLE_ERROR',JSON.stringify({message:e?.message||'unknown'}))}};
+  const tick=async()=>{try{const evidence=observe?await observe():{};const cycle=runCycle(evidence);console.log('FGE_CYCLE',JSON.stringify({id:cycle.id,sources:cycle.sources.length,autonomy:AUTONOMY,publisher:cycle.publisher,distributor:cycle.distributor,funding:cycle.funding}))}catch(e){console.error('FGE_CYCLE_ERROR',JSON.stringify({message:e?.message||'unknown'}))}};
   tick();const timer=setInterval(tick,INTERVAL_MS);timer.unref?.();return timer;
 }
