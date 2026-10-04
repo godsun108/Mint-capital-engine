@@ -321,7 +321,7 @@ const server=http.createServer(async(req,res)=>{
     if(u.pathname==='/api/acquisition/event'&&req.method==='POST'){
       const originalWriteHead=res.writeHead.bind(res);
       res.writeHead=(status,headers={})=>originalWriteHead(status,{...acquisitionCors,...headers});
-      return acquisitionEvent(req,res);
+      return await acquisitionEvent(req,res);
     }
     if(req.method==='GET'&&u.pathname==='/api/acquisition/state')return acquisitionState(res);
     if(req.method==='GET'&&u.pathname==='/health')return send(res,200,{ok:true,stripeConfigured,webhookConfigured:Boolean(process.env.STRIPE_WEBHOOK_SECRET),durableFulfillmentStorage:durableStateConfigured});
