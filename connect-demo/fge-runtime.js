@@ -1,5 +1,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import {produceCandidates} from './fge-publisher.js';
 
 const STATE_DIR=process.env.MINT_STATE_DIR||'.state';
 const STATE_FILE=path.join(STATE_DIR,'fge-runtime.json');
@@ -26,7 +27,10 @@ export function decide(funnel={}){
 export function runCycle(input={}){
   const s=load(), started=now();
   const sources=Object.entries(input.sources||{}).map(([source,funnel])=>({source:sourceTag(source),funnel,decision:decide(funnel)}));
-  const cycle={id:'fge:'+started,started,autonomy:AUTONOMY,sources};
+  const existing=(s.queue||[]).filter(x=>x.brand==='foundry'&&x.channel==='bluesky');
+  const generated=produceCandidates({existing});
+  if(generated.length)s.queue=[...(s.queue||[]),...generated.map(x=>({...x,createdAt:started}))].slice(-100);
+  const cycle={id:'fge:'+started,started,autonomy:AUTONOMY,sources,publisher:{generated:generated.length,queued:(s.queue||[]).length}};
   s.lastRun=started;s.runs=[...(s.runs||[]),cycle].slice(-200);
   for(const x of sources)s.experiments[x.source]={...(s.experiments[x.source]||{}),lastObserved:started,lastFunnel:x.funnel,lastDecision:x.decision};
   save(s);return cycle;
@@ -35,6 +39,6 @@ export function runCycle(input={}){
 export function getRuntimeState(){return load()}
 export function startRuntime({observe}={}){
   if(process.env.FGE_ENABLED!=='true')return null;
-  const tick=async()=>{try{const evidence=observe?await observe():{};const cycle=runCycle(evidence);console.log('FGE_CYCLE',JSON.stringify({id:cycle.id,sources:cycle.sources.length,autonomy:AUTONOMY}))}catch(e){console.error('FGE_CYCLE_ERROR',JSON.stringify({message:e?.message||'unknown'}))}};
+  const tick=async()=>{try{const evidence=observe?await observe():{};const cycle=runCycle(evidence);console.log('FGE_CYCLE',JSON.stringify({id:cycle.id,sources:cycle.sources.length,autonomy:AUTONOMY,publisher:cycle.publisher}))}catch(e){console.error('FGE_CYCLE_ERROR',JSON.stringify({message:e?.message||'unknown'}))}};
   tick();const timer=setInterval(tick,INTERVAL_MS);timer.unref?.();return timer;
 }
