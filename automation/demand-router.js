@@ -17,7 +17,8 @@ for(const item of loop.items||[]){
  if(brand){
   for(const [channel,cfg] of Object.entries(brand[1].channels||{})){
    if(cfg.status!=="APPROVED") continue;
-   rows.push({offer_id:item.offer_id,candidate_id:item.candidate_id,brand:brand[0],route:channel,class:"THIRD_PARTY_APPROVED_BRAND_CHANNEL",permission:"APPROVED_CHANNEL_BUT_PUBLISH_POLICY_APPLIES",action:"PREPARE_PRESENTATION",cost_usd:0,source_count:item.problem_sources?.length||0,score:80});
+   const publishedEvidence=cfg.routing?.state==="PUBLISHED_EVIDENCED_REVERIFY_PROVIDER_STATE" && cfg.evidence?.listing_publication==="PREVIOUSLY_EVIDENCED";
+   rows.push({offer_id:item.offer_id,candidate_id:item.candidate_id,brand:brand[0],route:channel,class:"THIRD_PARTY_APPROVED_BRAND_CHANNEL",permission:publishedEvidence?"PUBLISHED_EVIDENCED_REVERIFY_PROVIDER_STATE":"APPROVED_CHANNEL_BUT_PUBLISH_POLICY_APPLIES",action:publishedEvidence?"MEASURE_AND_REVERIFY":"PREPARE_PRESENTATION",cost_usd:0,source_count:item.problem_sources?.length||0,score:publishedEvidence?90:80,evidence_note:publishedEvidence?cfg.evidence?.evidence_note:undefined});
   }
  }
  for(const s of item.problem_sources||[]){
