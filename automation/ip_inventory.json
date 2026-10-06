@@ -1,6 +1,6 @@
 {
   "schema": "mint.ip_inventory.v1",
-  "generated_at": "2026-09-27",
+  "generated_at": "2026-10-06",
   "semantics": "CANDIDATE_INPUT_ONLY",
   "items": [
     {
@@ -79,6 +79,138 @@
       "demand_evidence": 0,
       "effort": 3,
       "risk": 0.15
+    },
+    {
+      "id": "ip:sovereign-forge",
+      "source_repo": "godsun108/Sovereign-Core",
+      "primitive": "procedural standalone SVG, browser-game, music-score and website generation",
+      "verified": true,
+      "reuse": 0.9,
+      "automation": 0.95,
+      "demand_evidence": 0,
+      "effort": 2,
+      "risk": 0.12
+    },
+    {
+      "id": "ip:sovereign-venture-economics",
+      "source_repo": "godsun108/Sovereign-Core",
+      "primitive": "venture lifecycle, experiment contract and unit-economics evaluation",
+      "verified": true,
+      "reuse": 0.95,
+      "automation": 0.95,
+      "demand_evidence": 0,
+      "effort": 2,
+      "risk": 0.05
+    },
+    {
+      "id": "ip:vhe-digital-goods",
+      "source_repo": "godsun108/virtual-human-engine",
+      "primitive": "rights-gated digital goods catalog for art, music, samples, presets, avatar and game assets",
+      "verified": true,
+      "reuse": 0.85,
+      "automation": 0.85,
+      "demand_evidence": 0,
+      "effort": 3,
+      "risk": 0.25
+    },
+    {
+      "id": "ip:vhe-affiliate-engine",
+      "source_repo": "godsun108/virtual-human-engine",
+      "primitive": "approval-gated affiliate offer model with disclosure and expected revenue-per-click calculation",
+      "verified": true,
+      "reuse": 0.8,
+      "automation": 0.8,
+      "demand_evidence": 0,
+      "effort": 3,
+      "risk": 0.3
+    },
+    {
+      "id": "ip:vhe-subscription-services",
+      "source_repo": "godsun108/virtual-human-engine",
+      "primitive": "subscription tiers and bounded virtual services for briefings, education, curation and research digests",
+      "verified": true,
+      "reuse": 0.8,
+      "automation": 0.8,
+      "demand_evidence": 0,
+      "effort": 4,
+      "risk": 0.3
+    },
+    {
+      "id": "ip:civic-evidence-packets",
+      "source_repo": "godsun108/civic-ledger",
+      "primitive": "strict source, claim and evidence-packet validation with provenance and revision controls",
+      "verified": true,
+      "reuse": 0.9,
+      "automation": 0.85,
+      "demand_evidence": 0,
+      "effort": 3,
+      "risk": 0.1
+    },
+    {
+      "id": "ip:civic-editorial-contract",
+      "source_repo": "godsun108/civic-media-engine",
+      "primitive": "evidence-linked editorial brief and publication-event contracts with disclosure gates",
+      "verified": true,
+      "reuse": 0.8,
+      "automation": 0.75,
+      "demand_evidence": 0,
+      "effort": 4,
+      "risk": 0.2
+    },
+    {
+      "id": "ip:portal-arcade-catalog",
+      "source_repo": "godsun108/The-portal",
+      "primitive": "large browser arcade catalog with persistent world-state, unlock and artifact mechanics",
+      "verified": true,
+      "reuse": 0.9,
+      "automation": 0.7,
+      "demand_evidence": 0,
+      "effort": 4,
+      "risk": 0.1
+    },
+    {
+      "id": "ip:alchemy-press",
+      "source_repo": "godsun108/alchemy-kitchen",
+      "primitive": "offline cookbook PDF renderer producing interior, cover-spread and preflight artifacts",
+      "verified": true,
+      "reuse": 0.8,
+      "automation": 0.8,
+      "demand_evidence": 0,
+      "effort": 3,
+      "risk": 0.15
+    },
+    {
+      "id": "ip:dreams-goal-os",
+      "source_repo": "godsun108/dreams-to-reality",
+      "primitive": "goal operating-system blueprint spanning declarations, goals, milestones, quests, habits and daily reviews",
+      "verified": true,
+      "reuse": 0.75,
+      "automation": 0.7,
+      "demand_evidence": 0,
+      "effort": 4,
+      "risk": 0.1
+    },
+    {
+      "id": "ip:command-software-contract",
+      "source_repo": "godsun108/Command-center",
+      "primitive": "software product specification and release contract from specified through runtime verified",
+      "verified": true,
+      "reuse": 0.9,
+      "automation": 0.9,
+      "demand_evidence": 0,
+      "effort": 2,
+      "risk": 0.08
+    },
+    {
+      "id": "ip:earth-dynamic-archive",
+      "source_repo": "godsun108/earth-now",
+      "primitive": "provenance-aware scheduled Earth-event normalization and durable observation archive contract",
+      "verified": true,
+      "reuse": 0.8,
+      "automation": 0.8,
+      "demand_evidence": 0,
+      "effort": 4,
+      "risk": 0.12
     }
   ]
 }
