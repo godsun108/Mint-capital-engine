@@ -1,0 +1,26 @@
+{
+  "schema": "mint.owned.campaign.v1",
+  "offerId": "foundry-express-ts-001",
+  "source": "github-pages",
+  "budgetUsd": 0,
+  "status": "READY_OWNED_CHANNEL",
+  "destination": "https://mint-stripe-connect-v4-production.up.railway.app/?src=github-pages",
+  "message": {
+    "headline": "View this MINT offer.",
+    "body": "See the verified offer details on the MINT storefront.",
+    "cta": "View offer"
+  },
+  "measurement": [
+    "VISITED",
+    "CHECKOUT_STARTED",
+    "PAID",
+    "FULFILLED",
+    "PROVIDER_AVAILABLE",
+    "SETTLED"
+  ],
+  "prohibited": [
+    "fabricated_social_proof",
+    "fabricated_scarcity",
+    "guaranteed_results"
+  ]
+}
