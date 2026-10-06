@@ -1,8 +1,8 @@
 {
   "schema": "mint.pod.production-qualification.v1",
-  "date": "2026-10-01",
+  "date": "2026-10-06",
   "product_family": "Orbital Garden",
-  "status": "PUBLIC_PRODUCT_SPECS_VERIFIED_PRINT_TEMPLATE_PENDING",
+  "status": "PRINTFUL_274_GEOMETRY_AND_VECTOR_QA_VERIFIED_MOCKUP_PENDING",
   "candidates": [
     {
       "product": "Cotton Color Tote Bag Westford Mill W101",
@@ -17,17 +17,33 @@
       "variant": "NOT_SELECTED"
     },
     {
-      "product": "All-Over Print Tote Bag",
-      "printful_product_code": "#603",
-      "url": "https://www.printful.com/custom/bags/totes/all-over-print-tote",
+      "product": "All-Over Print Large Tote Bag w/ Pocket",
+      "printful_product_id": 274,
+      "variant_ids": [
+        9039,
+        9040,
+        9041
+      ],
       "material": "100% polyester",
-      "dimensions_inches": "15 x 15",
-      "decoration": "All-over synthetic; print-cut-sew",
-      "public_us_start_price_cents": 1760,
-      "public_shipping_from_cents": 469,
-      "art_direction": "Recompose background to full bleed; keep focal motif inside Printful template safe zone",
-      "template": "NOT_RETRIEVED",
-      "variant": "NOT_SELECTED"
+      "decoration": "cut-sew / all-over synthetic",
+      "main_print": {
+        "inches": "21 x 37",
+        "pixels": "3150 x 5550",
+        "dpi": 150,
+        "art": "orbital-garden-aop-production.svg"
+      },
+      "inside_pocket": {
+        "inches": "10 x 17.5",
+        "pixels": "1500 x 2625",
+        "dpi": 150,
+        "art": "orbital-garden-pocket-production.svg"
+      },
+      "api_discovery": "VERIFIED",
+      "vector_geometry_qa": "PASS",
+      "supplier_upload_validation": "PENDING",
+      "supplier_mockup": "PENDING",
+      "sample_qa": "PENDING",
+      "current_cost_quote": "PENDING"
     }
   ],
   "official_aop_guidelines": "https://www.printful.com/creating-aop-file",
@@ -37,11 +53,11 @@
     "Public starting prices are not checkout quotes"
   ],
   "next_gate": [
-    "Select exact product variant and color in authorized Printful Design Maker",
-    "Retrieve product-specific print template",
-    "Export artwork to actual template",
-    "Generate supplier mockup and quote",
-    "Owner approves sample spend and listing"
+    "Validate accepted raster/export against Printful product 274",
+    "Generate supplier mockup from approved production art",
+    "Capture current product + shipping quote and fees",
+    "Owner approves any sample spend",
+    "Physical sample QA before publication"
   ],
   "publishable": false
 }
