@@ -57,7 +57,7 @@ export async function variantPrices(productId) {
   return variants.map(v => ({ id:v.id, name:v.name, price:v.price ?? null, currency:v.currency ?? null, in_stock:v.in_stock ?? null, availability_status:v.availability_status ?? null }));
 }
 
-export async function tokenScopes() {
+export async function mockupPreflight(productId) {\n  const [templates, styles] = await Promise.all([mockupTemplates(productId), mockupStyles(productId)]);\n  return {productId:Number(productId), mode:"READ_ONLY_PREFLIGHT", templates, styles, createEndpoint:"POST /v2/mockup-tasks", createExecuted:false};\n}\n\nexport async function tokenScopes() {
   if (!process.env.PRINTFUL_TOKEN) throw new Error("PRINTFUL_TOKEN required");
   return get("/oauth/scopes");
 }
