@@ -10,7 +10,9 @@
     "foundry": {
       "name": "Foundry",
       "role": "DEVELOPER_TOOLS",
-      "offers": ["foundry-express-ts-001"],
+      "offers": [
+        "foundry-express-ts-001"
+      ],
       "channels": {
         "gumroad": {
           "status": "APPROVED",
@@ -19,9 +21,11 @@
           "permalink": "foundry-express-ts"
         },
         "bluesky": {
-          "status": "UNASSIGNED",
+          "status": "APPROVED",
           "purpose": "ACQUISITION",
-          "note": "Do not publish Foundry promotions through an unrelated identity. Assign a Foundry-owned account before automation."
+          "account": "foundrytools.bsky.social",
+          "publisher": "metricool",
+          "brandId": "7192616"
         }
       }
     },
@@ -29,20 +33,31 @@
       "name": "Luna Vale",
       "role": "VIRTUAL_CREATOR",
       "channels": {
-        "instagram": {"status": "RESERVED", "purpose": "LUNA_ONLY"}
+        "instagram": {
+          "status": "RESERVED",
+          "purpose": "LUNA_ONLY"
+        }
       }
     },
     "mechanical-obsessions": {
       "name": "Mechanical Obsessions",
       "role": "MECHANICAL_MEDIA",
       "channels": {
-        "youtube": {"status": "RESERVED", "purpose": "MECHANICAL_OBSESSIONS_ONLY"}
+        "youtube": {
+          "status": "RESERVED",
+          "purpose": "MECHANICAL_OBSESSIONS_ONLY"
+        }
       }
     }
   },
   "policy": {
     "crossBrandPublishingDefault": "DENY",
-    "requiredBeforeAutopublish": ["brand", "offer", "channel", "channel_status=APPROVED"],
+    "requiredBeforeAutopublish": [
+      "brand",
+      "offer",
+      "channel",
+      "channel_status=APPROVED"
+    ],
     "unknownChannelAction": "BLOCK_AND_REQUEST_ASSIGNMENT"
   }
 }
