@@ -3,8 +3,26 @@ import json, urllib.parse, urllib.request
 from pathlib import Path
 from datetime import datetime, timezone
 OUT=Path(__file__).resolve().parents[1]/"automation"/"product-scout-observations.json"
-QUERIES=[("express-typescript","express typescript boilerplate starter"),("express-auth","express typescript authentication middleware")]
-UA="MINT-Product-SCOUT/0.2"
+QUERIES=[
+("express-typescript","express typescript boilerplate starter"),
+("express-auth","express typescript authentication middleware"),
+("venture-economics","unit economics experiment tracker product validation"),
+("procedural-assets","procedural svg generator website generator browser game generator"),
+("software-release-contract","software release checklist runtime verification deployment"),
+("offer-scoring","affiliate offer scoring audience fit trust risk"),
+("evidence-packets","evidence packet provenance claims sources research"),
+("digital-goods","digital goods catalog rights licensing download"),
+("research-workflow","research evidence provenance workflow citations"),
+("cookbook-export","recipe cookbook pdf export printable"),
+("browser-arcade","browser game starter persistent state arcade"),
+("earth-data","earth event data archive api earthquakes wildfires"),
+("camera-discovery","public webcam camera discovery api geolocation"),
+("forecasting","probabilistic forecasting scoring calibration tool"),
+("goal-os","goal planner milestones quests daily review"),
+("editorial-evidence","editorial workflow evidence citations disclosure"),
+("subscription-service","subscription research digest membership service")
+]
+UA="MINT-Product-SCOUT/0.3"
 def fetch(url):
  req=urllib.request.Request(url,headers={"User-Agent":UA,"Accept":"application/vnd.github+json"})
  with urllib.request.urlopen(req,timeout=25) as r:return json.load(r)
