@@ -41,6 +41,7 @@
     "no_synthetic_demand": true,
     "return_loop_min_observations": 2,
     "return_loop_requires_cataloged_solution": true,
-    "community_presentation_requires_channel_permission_or_authorization": true
+    "community_presentation_requires_channel_permission_or_authorization": true,
+    "owned_return_surface_requires_ready_to_present": true
   }
 }
