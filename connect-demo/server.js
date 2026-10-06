@@ -80,8 +80,22 @@ async function gumroadSales(res){
   }catch(e){return send(res,502,{ok:false,provider:'gumroad',error:e.message});}
 }
 
-const acquisitionCounters=new Map();
-function countAcquisition(event,source,offerId){const key=offerId+'|'+source+'|'+event;acquisitionCounters.set(key,(acquisitionCounters.get(key)||0)+1);}
+const acquisitionPath=path.join(fulfillmentDir,'acquisition-aggregates.json');
+function readAcquisitionCounters(){
+  if(!durableStateConfigured)return new Map();
+  try{
+    const x=JSON.parse(readFileSync(acquisitionPath,'utf8'));
+    return new Map(Object.entries(x.counters||{}).map(([k,v])=>[k,Number(v)||0]));
+  }catch{return new Map();}
+}
+const acquisitionCounters=readAcquisitionCounters();
+function persistAcquisitionCounters(){
+  if(!durableStateConfigured)return;
+  mkdirSync(fulfillmentDir,{recursive:true});
+  const out={schema:'mint.acquisition.aggregates.v1',updatedAt:new Date().toISOString(),privacy:'Aggregate offer/source/event counts only. No IP, cookie, user-agent, or personal identifier.',counters:Object.fromEntries(acquisitionCounters)};
+  const tmp=acquisitionPath+'.tmp';writeFileSync(tmp,JSON.stringify(out,null,2)+'\n');renameSync(tmp,acquisitionPath);
+}
+function countAcquisition(event,source,offerId){const key=offerId+'|'+source+'|'+event;acquisitionCounters.set(key,(acquisitionCounters.get(key)||0)+1);persistAcquisitionCounters();}
 
 async function gumroadCallback(u,res){
   const error=u.searchParams.get('error');
@@ -394,7 +408,7 @@ async function acquisitionState(res){
   const sources={},offers={};
   for(const [key,count] of acquisitionCounters){const [offerId,source,event]=key.split('|');sources[source]||={VISITED:0,CHECKOUT_STARTED:0};sources[source][event]+=count;offers[offerId]||={VISITED:0,CHECKOUT_STARTED:0,sources:{}};offers[offerId][event]+=count;offers[offerId].sources[source]||={VISITED:0,CHECKOUT_STARTED:0};offers[offerId].sources[source][event]+=count;}
   const totals=Object.values(sources).reduce((a,x)=>({VISITED:a.VISITED+(x.VISITED||0),CHECKOUT_STARTED:a.CHECKOUT_STARTED+(x.CHECKOUT_STARTED||0)}),{VISITED:0,CHECKOUT_STARTED:0});
-  return send(res,200,{ok:true,schema:'mint.acquisition.snapshot.v2',semantics:'PROCESS_LOCAL_OFFER_AND_SOURCE_AGGREGATES_NOT_UNIQUE_VISITORS_NOT_LIFETIME_TOTALS',startedAt:acquisitionStartedAt,generatedAt:new Date().toISOString(),privacy:'No IP, cookie, user-agent, or personal identifier stored by this counter.',totals,sources,offers});
+  return send(res,200,{ok:true,schema:'mint.acquisition.snapshot.v3',semantics:durableStateConfigured?'DURABLE_OFFER_AND_SOURCE_AGGREGATES_NOT_UNIQUE_VISITORS':'PROCESS_LOCAL_FALLBACK_NOT_UNIQUE_VISITORS_NOT_LIFETIME_TOTALS',startedAt:acquisitionStartedAt,generatedAt:new Date().toISOString(),durableStorageConfigured:durableStateConfigured,privacy:'No IP, cookie, user-agent, or personal identifier stored by this counter.',totals,sources,offers});
 }
 
 async function serveFile(res,file,type){const data=await readFile(file);res.writeHead(200,{'content-type':type});res.end(data)}
@@ -413,7 +427,7 @@ const server=http.createServer(async(req,res)=>{
       return await acquisitionEvent(req,res);
     }
     if(req.method==='GET'&&u.pathname==='/api/acquisition/state')return acquisitionState(res);
-    if(req.method==='GET'&&u.pathname==='/health')return send(res,200,{ok:true,stripeConfigured,webhookConfigured:Boolean(process.env.STRIPE_WEBHOOK_SECRET),durableFulfillmentStorage:durableStateConfigured,fgeEnabled:process.env.FGE_ENABLED==='true',gumroad:{callbackReady:true,configured:gumroadConfigured,redirectUri:gumroadRedirectUri}});
+    if(req.method==='GET'&&u.pathname==='/health')return send(res,200,{ok:true,stripeConfigured,webhookConfigured:Boolean(process.env.STRIPE_WEBHOOK_SECRET),durableFulfillmentStorage:durableStateConfigured,durableAcquisitionStorage:durableStateConfigured,fgeEnabled:process.env.FGE_ENABLED==='true',gumroad:{callbackReady:true,configured:gumroadConfigured,redirectUri:gumroadRedirectUri}});
     if(req.method==='GET'&&u.pathname==='/integrations/gumroad/callback')return await gumroadCallback(u,res);
     if(req.method==='GET'&&u.pathname==='/api/gumroad/check')return await gumroadCheck(res);
     if(req.method==='GET'&&u.pathname==='/api/gumroad/products')return await gumroadProducts(res);
