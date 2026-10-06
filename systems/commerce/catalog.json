@@ -145,6 +145,52 @@
         ],
         "current_separate_total_cents": 2800
       }
+    },
+    "orbital-garden-tote-001": {
+      "id": "orbital-garden-tote-001",
+      "status": "STAGED_NOT_PUBLIC",
+      "type": "PHYSICAL_POD",
+      "name": "Orbital Garden Abstract Geometric Tote",
+      "description": "All-over-print large tote with pocket featuring the Orbital Garden geometric artwork.",
+      "price": {
+        "currency": "usd",
+        "unit_amount": 4900
+      },
+      "mandate_id": "mandate:physical-products:controlled-launch:001",
+      "fulfillment": {
+        "kind": "PRINTFUL_POD",
+        "provider": "printful",
+        "store_id": 18863336,
+        "catalog_product_id": 274,
+        "catalog_variant_id": 9039,
+        "product_options": [
+          {
+            "name": "stitch_color",
+            "value": "black"
+          }
+        ],
+        "placement": "default",
+        "technique": "cut-sew",
+        "artwork": {
+          "url": "https://raw.githubusercontent.com/godsun108/Mint-capital-engine/04479b1/connect-demo/public/printful/orbital-garden-main-3150x5550.png",
+          "sha256": "6743eb6621ecfdce3fd3bcb2547e65feb9eec363dbe69e8c7da4b08b803bc10d"
+        }
+      },
+      "acquisition": {
+        "headline": "Carry a little orbit with you.",
+        "body": "Orbital Garden turns an original geometric system into a functional large tote with an interior pocket.",
+        "cta": "Get Orbital Garden"
+      },
+      "channels": [
+        "mint-direct-web"
+      ],
+      "launch_policy": {
+        "mode": "CONTROLLED_PRE_SAMPLE_LAUNCH",
+        "physical_quality_verified": false,
+        "scale_allowed": false,
+        "publication_requires_owner_approval": true,
+        "freeze_on_quality_exception": true
+      }
     }
   }
 }
