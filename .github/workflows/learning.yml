@@ -8,6 +8,7 @@ on:
       - "automation/allocate-attention.js"
       - "automation/market-motion.js"
       - "automation/prospector.js"
+      - "automation/learn.js"
   schedule:
     - cron: "26 */6 * * *"
 permissions:
