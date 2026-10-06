@@ -1,14 +1,15 @@
 {
   "schema": "mint.allocation.state.v1",
-  "generatedAt": "2026-10-06T18:30:57.764Z",
+  "generatedAt": "2026-10-06T19:06:01.839Z",
   "semantics": "ZERO_SPEND_ATTENTION_ALLOCATION_ONLY_NO_MONEY_MOVEMENT",
   "allocations": {
     "foundry-express-ts-001": {
       "offerId": "foundry-express-ts-001",
       "state": "VALIDATING",
       "reason": "verified_demand_route_available",
-      "action": "CONTINUE_BOUNDED_VALIDATION",
-      "attentionWeight": 2,
+      "evidenceStage": "EXPLORE",
+      "action": "EXPLORE_AUTHORIZED_ZERO_SPEND_ROUTES",
+      "attentionWeight": 1,
       "authorizedRoutes": [
         "github-pages",
         "mint-direct-web"
