@@ -11,6 +11,8 @@ if(!baseUrl) throw new Error("MINT_COMMERCE_URL is required");
 const channels=["github-pages","mint-direct-web","github-pages-intent"];
 const previousPath=path.join(root,"automation","state","market-motion.json");
 const previous=fs.existsSync(previousPath)?JSON.parse(fs.readFileSync(previousPath,"utf8")):{results:[]};
+const experimentsPath=path.join(root,"automation","state","message-experiments.json");
+const experiments=fs.existsSync(experimentsPath)?JSON.parse(fs.readFileSync(experimentsPath,"utf8")):{briefs:[]};
 const results=[];
 const previousAttempts=previous.explorationAttempts||{};
 const explorationAttempts={...previousAttempts};
@@ -27,8 +29,10 @@ for(const [offerId,a] of Object.entries(allocation.allocations||{})){
  const reviewRecommended=isExplore&&explorationAttempts[offerId]>=4;
  for(const source of selected){
   const offerUrl=new URL("/offers",baseUrl); offerUrl.searchParams.set("offer",offerId);
-  const r=prepareOwnedCampaign({offerId,baseUrl:offerUrl.toString(),source,root});
-  results.push({offerId,attentionWeight:weight,explorationAttempt:explorationAttempts[offerId],reviewRecommended,...r});
+  const brief=(experiments.briefs||[]).find(x=>x.offerId===offerId&&x.state==="MESSAGE_EXPERIMENT_READY");
+  const message=brief?.experiment||null;
+  const r=prepareOwnedCampaign({offerId,baseUrl:offerUrl.toString(),source,root,message});
+  results.push({offerId,attentionWeight:weight,explorationAttempt:explorationAttempts[offerId],reviewRecommended,messageExperimentApplied:Boolean(message),...r});
  }
 }
 const out=path.join(root,"automation","state","market-motion.json");
