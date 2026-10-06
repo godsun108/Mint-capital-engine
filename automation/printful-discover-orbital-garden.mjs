@@ -1,5 +1,5 @@
 import fs from "node:fs";
-import { catalogProducts, catalogProduct, layoutTemplates, printFiles, capabilities } from "./providers/printful-readonly.mjs";
+import { catalogProducts, catalogProduct, layoutTemplates, mockupStyles, capabilities } from "./providers/printful-readonly.mjs";
 
 const terms = (process.argv.slice(2).length ? process.argv.slice(2) : ["all-over print tote","all over print tote","tote"]).map(x=>x.toLowerCase());
 let offset=0, all=[];
@@ -22,12 +22,10 @@ for(const m of matches){
  const id=Number(m.id); const detail=await catalogProduct(id);
  const variants=detail?.result?.variants||detail?.result?.product?.variants||[];
  const techniques=[...new Set(variants.flatMap(v=>v?.techniques||[]).map(t=>typeof t==="string"?t:t?.key).filter(Boolean))];
- const evidence={catalog:m,id,title:m.title||m.model||m.name,techniques,layouts:{},printfiles:{}};
- for(const technique of techniques.length?techniques:[null]){
-   const key=technique||"default";
-   try{evidence.layouts[key]=await layoutTemplates(id,technique)}catch(e){evidence.layouts[key]={error:e.message}}
-   try{evidence.printfiles[key]=await printFiles(id,technique)}catch(e){evidence.printfiles[key]={error:e.message}}
- }
+ const placements=[...new Set(variants.flatMap(v=>v?.files||[]).map(x=>x?.type).filter(Boolean))];
+ const evidence={catalog:m,id,title:m.title||m.model||m.name,techniques,placements,geometry:null,mockupStyles:null};
+ try{evidence.geometry=await layoutTemplates(id,placements)}catch(e){evidence.geometry={error:e.message}}
+ try{evidence.mockupStyles=await mockupStyles(id,placements)}catch(e){evidence.mockupStyles={error:e.message}}
  out.matches.push(evidence);
 }
 fs.mkdirSync("connect-demo/exports/physical",{recursive:true});
