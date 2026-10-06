@@ -26,17 +26,24 @@ export async function catalogProduct(productId) {
   return get(`/products/${Number(productId)}`);
 }
 
-export async function layoutTemplates(productId, technique) {
+export async function layoutTemplates(productId, placements = []) {
   if (!Number.isInteger(Number(productId))) throw new Error("productId required");
-  const q = technique ? `?technique=${encodeURIComponent(technique)}` : "";
-  return get(`/mockup-generator/templates/${Number(productId)}${q}`);
+  const p = Array.isArray(placements) ? placements.filter(Boolean) : [placements].filter(Boolean);
+  const q = new URLSearchParams({ limit: "100" });
+  if (p.length) q.set("placements", p.join(","));
+  return get(`/v2/catalog-products/${Number(productId)}/mockup-templates?${q}`);
 }
 
-export async function printFiles(productId, technique) {
+export async function mockupStyles(productId, placements = []) {
   if (!Number.isInteger(Number(productId))) throw new Error("productId required");
-  const q = technique ? `?technique=${encodeURIComponent(technique)}` : "";
-  return get(`/mockup-generator/printfiles/${Number(productId)}${q}`);
+  const p = Array.isArray(placements) ? placements.filter(Boolean) : [placements].filter(Boolean);
+  const q = new URLSearchParams({ limit: "100", default_mockup_styles: "true" });
+  if (p.length) q.set("placements", p.join(","));
+  return get(`/v2/catalog-products/${Number(productId)}/mockup-styles?${q}`);
 }
+
+// Legacy print-file geometry is intentionally not used for new catalog products.
+// v2 mockup styles/templates expose print-area and positioning evidence without writes.
 
 export async function productTemplates({ limit = 100, offset = 0 } = {}) {
   if (!process.env.PRINTFUL_TOKEN) throw new Error("PRINTFUL_TOKEN required for account product templates");
