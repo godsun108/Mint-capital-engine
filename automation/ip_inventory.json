@@ -211,6 +211,17 @@
       "demand_evidence": 0,
       "effort": 4,
       "risk": 0.12
+    },
+    {
+      "id": "ip:vhe-offer-scoring",
+      "source_repo": "godsun108/virtual-human-engine",
+      "primitive": "offer scoring across audience fit, character fit, commercial value, rights confidence and trust risk",
+      "verified": true,
+      "reuse": 0.85,
+      "automation": 0.9,
+      "demand_evidence": 0,
+      "effort": 2,
+      "risk": 0.2
     }
   ]
 }
