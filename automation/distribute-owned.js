@@ -18,7 +18,7 @@ for(const r of motion.results||[]){
 const endpoint="https://mint-stripe-connect-v4-production.up.railway.app/api/acquisition/event";
 const raw=(new URLSearchParams(location.search).get("src")||${JSON.stringify(source)}).toLowerCase();
 const src=/^[a-z0-9_-]{1,48}$/.test(raw)?raw:${JSON.stringify(source)};
-fetch(endpoint,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({event:"VISITED",source:src})}).catch(()=>{});
+fetch(endpoint,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({event:"VISITED",source:src,offerId:${JSON.stringify(r.offerId)}})}).catch(()=>{});
 </script></body></html>`;
  fs.writeFileSync(path.join(dir,"index.html"),html);
  published.push({offerId:r.offerId,source,path:path.relative(root,path.join(dir,"index.html")),destination:campaign.destination});
