@@ -1,6 +1,6 @@
 import fs from "node:fs";
 const API=process.env.PRINTFUL_API_BASE||"https://api.printful.com";
-if(!process.env.PRINTFUL_TOKEN) throw Error("PRINTFUL_TOKEN required");
+if(!process.env.PRINTFUL_TOKEN) throw Error("PRINTFUL_TOKEN required");\nif(!process.env.PRINTFUL_STORE_ID) throw Error("PRINTFUL_STORE_ID required by /v2/mockup-tasks; configure repository secret before retry");
 const req=JSON.parse(fs.readFileSync("connect-demo/exports/physical/orbital-garden-mockup-request.json","utf8"));
 if(req.status!=="PINNED_ART_VALIDATED_NOT_SUBMITTED"||req.guards?.orders!==false||req.guards?.spend!==false) throw Error("safety contract failed");
 const body=req.payload;
