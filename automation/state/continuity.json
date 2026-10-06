@@ -1,0 +1,46 @@
+{
+  "schema": "mint.continuity.officer.v1",
+  "generatedAt": "2026-10-06T20:42:23.917Z",
+  "semantics": "OWNER_CONTINUITY_SUMMARY_NOT_REVENUE_INFERENCE",
+  "sixMonthAbsenceTest": {
+    "status": "ATTENTION",
+    "nextConstraint": "RUN_BOUNDED_MESSAGE_EXPERIMENT",
+    "reasons": [
+      "no observed customer behavior in the current acquisition snapshot",
+      "reversible message experiment ready"
+    ]
+  },
+  "signals": {
+    "durableAcquisitionMemory": true,
+    "evidenceAvailable": true,
+    "authorizedZeroSpendRoutes": 2,
+    "visits": 0,
+    "checkoutStarted": 0,
+    "paid": 0,
+    "settled": 0,
+    "net": 0,
+    "activeAllocations": 1,
+    "reviewRecommended": 1,
+    "messageExperimentsReady": 1
+  },
+  "ownerGates": [
+    "paid_spend_increase",
+    "borrowing_or_credit",
+    "regulated_activity",
+    "identity_or_legal_attestation",
+    "financial_account_changes",
+    "permission_escalation"
+  ],
+  "doctrine": [
+    "truth_before_theater",
+    "evidence_before_confidence",
+    "operational_before_victory",
+    "reversible_autonomy_before_irreversible_action"
+  ],
+  "evidenceNotes": [
+    "DURABLE_OFFER_AND_SOURCE_AGGREGATES_NOT_UNIQUE_VISITORS",
+    "acquisition aggregates are not unique visitors",
+    "payment truth semantics control revenue claims",
+    "zero behavior does not prove zero demand"
+  ]
+}
