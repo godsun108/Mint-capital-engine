@@ -31,3 +31,4 @@ for(const r of motion.results||[]){
 const out={schema:"mint.message.experiments.v1",generatedAt:new Date().toISOString(),semantics:"REVERSIBLE_ZERO_SPEND_MESSAGE_TEST_BRIEFS_NOT_CATALOG_MUTATIONS",briefs};
 const file=path.join(root,"automation","state","message-experiments.json");fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,JSON.stringify(out,null,2)+"\n");
 console.log(JSON.stringify(out,null,2));
+
