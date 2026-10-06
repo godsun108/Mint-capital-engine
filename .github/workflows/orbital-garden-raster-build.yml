@@ -1,0 +1,41 @@
+name: Orbital Garden Raster Build
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  raster:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install SVG rasterizer
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq librsvg2-bin
+      - name: Render exact production PNGs
+        run: |
+          mkdir -p connect-demo/exports/physical
+          rsvg-convert -w 3150 -h 5550 connect-demo/prototypes/pod/orbital-garden-aop-production.svg -o connect-demo/exports/physical/orbital-garden-main-3150x5550.png
+          rsvg-convert -w 1500 -h 2625 connect-demo/prototypes/pod/orbital-garden-pocket-production.svg -o connect-demo/exports/physical/orbital-garden-pocket-1500x2625.png
+      - name: Verify PNG dimensions, size and hashes
+        run: |
+          python3 - <<'PY'
+          import hashlib,json,struct,os
+          files=[("main","connect-demo/exports/physical/orbital-garden-main-3150x5550.png",3150,5550),("pocket","connect-demo/exports/physical/orbital-garden-pocket-1500x2625.png",1500,2625)]
+          out={"schema":"mint.orbital-garden.raster-qa.v1","status":"PASS","files":[]}
+          for role,p,ew,eh in files:
+              b=open(p,"rb").read()
+              if b[:8]!=b"\x89PNG\r\n\x1a\n": raise SystemExit("not png")
+              w,h=struct.unpack(">II",b[16:24])
+              if (w,h)!=(ew,eh): raise SystemExit(f"dimension mismatch {role}: {(w,h)}")
+              if len(b)>50*1024*1024: raise SystemExit(f"over 50MiB {role}")
+              out["files"].append({"role":role,"path":p,"width":w,"height":h,"bytes":len(b),"sha256":hashlib.sha256(b).hexdigest()})
+          open("connect-demo/exports/physical/orbital-garden-raster-qa.json","w").write(json.dumps(out,indent=2)+"\n")
+          print("ORBITAL GARDEN RASTER QA PASS: exact PNG dimensions, hashes, and <=50MiB verified")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: orbital-garden-production-rasters
+          path: |
+            connect-demo/exports/physical/orbital-garden-main-3150x5550.png
+            connect-demo/exports/physical/orbital-garden-pocket-1500x2625.png
+            connect-demo/exports/physical/orbital-garden-raster-qa.json
+          if-no-files-found: error
