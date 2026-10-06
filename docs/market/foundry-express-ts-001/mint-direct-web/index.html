@@ -2,5 +2,5 @@
 const endpoint="https://mint-stripe-connect-v4-production.up.railway.app/api/acquisition/event";
 const raw=(new URLSearchParams(location.search).get("src")||"mint-direct-web").toLowerCase();
 const src=/^[a-z0-9_-]{1,48}$/.test(raw)?raw:"mint-direct-web";
-fetch(endpoint,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({event:"VISITED",source:src})}).catch(()=>{});
+fetch(endpoint,{method:"POST",headers:{"content-type":"application/json"},body:JSON.stringify({event:"VISITED",source:src,offerId:"foundry-express-ts-001"})}).catch(()=>{});
 </script></body></html>
