@@ -9,11 +9,18 @@ const baseUrl=process.env.MINT_COMMERCE_URL;
 if(!baseUrl) throw new Error("MINT_COMMERCE_URL is required");
 
 const channels=["github-pages","mint-direct-web","github-pages-intent"];
+const previousPath=path.join(root,"automation","state","market-motion.json");
+const previous=fs.existsSync(previousPath)?JSON.parse(fs.readFileSync(previousPath,"utf8")):{results:[]};
 const results=[];
 for(const [offerId,a] of Object.entries(allocation.allocations||{})){
  const weight=Math.max(0,Math.min(3,Number(a.attentionWeight)||0));
  if(weight===0){results.push({offerId,action:"STOPPED",reason:a.reason});continue;}
- for(const source of channels.slice(0,weight)){
+ const authorized=(a.authorizedRoutes||[]).filter(x=>channels.includes(x));
+ const pool=authorized.length?authorized:channels;
+ const prior=(previous.results||[]).filter(x=>x.offerId===offerId).map(x=>x.campaignPath?.split("/").pop()?.replace(/\.json$/,"")).filter(Boolean);
+ const start=pool.length?Math.max(0,(pool.indexOf(prior[0])+1)%pool.length):0;
+ const selected=Array.from({length:Math.min(weight,pool.length)},(_,i)=>pool[(start+i)%pool.length]);
+ for(const source of selected){
   const offerUrl=new URL("/offers",baseUrl); offerUrl.searchParams.set("offer",offerId);
   const r=prepareOwnedCampaign({offerId,baseUrl:offerUrl.toString(),source,root});
   results.push({offerId,attentionWeight:weight,...r});
