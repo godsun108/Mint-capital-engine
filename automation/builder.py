@@ -10,8 +10,8 @@ def main():
     briefs=[]
     for cid,src in inventory.items():
         d=demand.get(cid)
-        if not d or int(d.get("observation_count",0)) < 2: continue
-        briefs.append({"candidate_id":cid,"source_repo":src["source_repo"],"primitive":src["primitive"],"state":"READY_FOR_PRODUCT_DESIGN","demand_evidence":d["demand_evidence"],"evidence_sources":d["sources"],"requirements":["preserve source truth","define bounded customer problem","define deliverable","define automated fulfillment","estimate marginal cost","test before publication"],"external_action_performed":False})
+        if not d or d.get("stage") not in {"DEMAND_EVIDENCED","COMMERCIAL_INTENT_EVIDENCED","PAID_DEMAND"}: continue
+        briefs.append({"candidate_id":cid,"source_repo":src["source_repo"],"primitive":src["primitive"],"state":"READY_FOR_PRODUCT_DESIGN","demand_stage":d["stage"],"demand_evidence":d["demand_evidence"],"evidence_sources":d["sources"],"requirements":["preserve source truth","define bounded customer problem","define deliverable","define automated fulfillment","estimate marginal cost","test before publication"],"external_action_performed":False})
     briefs.sort(key=lambda x:x["demand_evidence"],reverse=True)
     (ROOT/"automation"/"build_briefs.json").write_text(json.dumps({"schema":"mint.build_briefs.v1","generated_at":datetime.datetime.now(datetime.timezone.utc).isoformat(),"items":briefs},indent=2))
 if __name__=="__main__": main()
