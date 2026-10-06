@@ -1,0 +1,25 @@
+name: Orbital Garden Pinned Mockup Gate
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate pinned-art request without submission
+        run: npm run orbital-garden:mockup-contract
+      - name: Prove pinned artwork is publicly retrievable and byte-identical
+        run: |
+          curl --fail --location --silent --show-error "https://raw.githubusercontent.com/godsun108/Mint-capital-engine/04479b1/connect-demo/public/printful/orbital-garden-main-3150x5550.png" -o /tmp/orbital.png
+          echo "6743eb6621ecfdce3fd3bcb2547e65feb9eec363dbe69e8c7da4b08b803bc10d  /tmp/orbital.png" | sha256sum -c -
+          echo "ORBITAL GARDEN PINNED ART GATE PASS: public fetch hash matches; request NOT submitted"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: orbital-garden-pinned-mockup-contract
+          path: connect-demo/exports/physical/orbital-garden-mockup-request.json
+          if-no-files-found: error
