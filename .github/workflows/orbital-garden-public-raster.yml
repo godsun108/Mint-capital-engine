@@ -1,0 +1,29 @@
+name: Orbital Garden Public Raster
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install SVG rasterizer
+        run: sudo apt-get update -qq && sudo apt-get install -y -qq librsvg2-bin
+      - name: Build and verify immutable-addressable main raster
+        run: |
+          mkdir -p connect-demo/public/printful
+          rsvg-convert -w 3150 -h 5550 connect-demo/prototypes/pod/orbital-garden-aop-production.svg -o connect-demo/public/printful/orbital-garden-main-3150x5550.png
+          python3 - <<'PY'
+          import hashlib,struct,json,os
+          p="connect-demo/public/printful/orbital-garden-main-3150x5550.png"; b=open(p,"rb").read()
+          assert b[:8]==b"\x89PNG\r\n\x1a\n"
+          w,h=struct.unpack(">II",b[16:24]); assert (w,h)==(3150,5550); assert len(b)<=50*1024*1024
+          print("PUBLIC RASTER QA PASS",w,h,len(b),hashlib.sha256(b).hexdigest())
+          PY
+      - name: Commit public raster only if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add connect-demo/public/printful/orbital-garden-main-3150x5550.png
+          if git diff --cached --quiet; then echo "Raster unchanged"; else git commit -m "Publish verified Orbital Garden main raster"; git push; fi
