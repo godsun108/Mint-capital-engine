@@ -18,7 +18,9 @@ const allocations=Object.values(allocation?.allocations||{});
 const readyRoutes=(router?.routes||[]).filter(x=>x.permission==="AUTHORIZED"&&x.action==="PUBLISH_AND_MEASURE").length;
 const reviews=(motion?.results||[]).filter(x=>x.reviewRecommended).length;
 const experimentBriefs=(experiments?.briefs||[]).length;
+const durableAcquisitionMemory=acquisition?.durableStorageConfigured===true || acquisition?.captureSemantics==="SNAPSHOT_OF_DURABLE_AGGREGATES_NOT_UNIQUE_VISITORS";
 const signals={
+ durableAcquisitionMemory,
  evidenceAvailable:Boolean(acquisition&&commerce&&learning&&allocation&&motion&&payment),
  authorizedZeroSpendRoutes:readyRoutes,
  visits:Number(acq.VISITED)||0,
@@ -33,8 +35,9 @@ const signals={
 let status="HEALTHY",nextConstraint="OBSERVE_REAL_MARKET_RESPONSE";
 const reasons=[];
 if(!signals.evidenceAvailable){status="CRITICAL";nextConstraint="RESTORE_EVIDENCE_PIPELINE";reasons.push("required continuity evidence missing");}
+else if(!signals.durableAcquisitionMemory){status="ATTENTION";nextConstraint="CERTIFY_DURABLE_EVIDENCE_MEMORY";reasons.push("acquisition memory is not yet certified durable in persisted runtime evidence");}
 else if(signals.authorizedZeroSpendRoutes===0){status="ATTENTION";nextConstraint="RESTORE_AUTHORIZED_DISTRIBUTION";reasons.push("no authorized zero-spend acquisition route");}
-else if(signals.visits===0&&signals.checkoutStarted===0&&signals.paid===0){status="ATTENTION";nextConstraint=signals.reviewRecommended?"ADAPT_OFFER_MESSAGE":"ACQUIRE_REAL_VISITS";reasons.push("no observed customer behavior in current process-local snapshot");}
+else if(signals.visits===0&&signals.checkoutStarted===0&&signals.paid===0){status="ATTENTION";nextConstraint=signals.reviewRecommended?"ADAPT_OFFER_MESSAGE":"ACQUIRE_REAL_VISITS";reasons.push("no observed customer behavior in the current acquisition snapshot");}
 if(signals.messageExperimentsReady>0){status=status==="CRITICAL"?status:"ATTENTION";nextConstraint="RUN_BOUNDED_MESSAGE_EXPERIMENT";reasons.push("reversible message experiment ready");}
 const ownerGates=[
  "paid_spend_increase",
