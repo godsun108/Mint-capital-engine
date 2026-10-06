@@ -1,6 +1,6 @@
 {
   "schema": "mint.continuity.officer.v1",
-  "generatedAt": "2026-10-06T20:46:37.839Z",
+  "generatedAt": "2026-10-06T23:07:25.076Z",
   "semantics": "OWNER_CONTINUITY_SUMMARY_NOT_REVENUE_INFERENCE",
   "sixMonthAbsenceTest": {
     "status": "ATTENTION",
@@ -21,7 +21,8 @@
     "net": 0,
     "activeAllocations": 1,
     "reviewRecommended": 1,
-    "messageExperimentsReady": 1
+    "messageExperimentsReady": 1,
+    "messageExperimentsObserving": 0
   },
   "ownerGates": [
     "paid_spend_increase",
