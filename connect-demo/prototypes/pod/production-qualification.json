@@ -2,7 +2,7 @@
   "schema": "mint.pod.production-qualification.v1",
   "date": "2026-10-06",
   "product_family": "Orbital Garden",
-  "status": "PRINTFUL_274_SUPPLIER_RENDER_VERIFIED_SAMPLE_AND_ECONOMICS_PENDING",
+  "status": "PRINTFUL_274_RENDER_AND_ECONOMICS_VERIFIED_SAMPLE_QA_PENDING",
   "candidates": [
     {
       "product": "Cotton Color Tote Bag Westford Mill W101",
@@ -43,7 +43,19 @@
       "supplier_upload_validation": "PASS",
       "supplier_mockup": "PASS_TASK_979593343_FRONT_VARIANT_9039_STYLE_16394",
       "sample_qa": "PENDING",
-      "current_cost_quote": "PENDING"
+      "current_cost_quote": {
+        "supplier_base_usd": 23.88,
+        "standard_us_shipping_usd": 4.69,
+        "evidence_date": "2026-10-06"
+      },
+      "economics": {
+        "candidate_retail_usd": 49,
+        "stripe_model": "2.9% + $0.30 domestic online card",
+        "returns_support_reserve_usd": 2.45,
+        "modeled_contribution_usd": 16.259,
+        "modeled_contribution_margin": 0.33181632653061227,
+        "status": "PASS"
+      }
     }
   ],
   "official_aop_guidelines": "https://www.printful.com/creating-aop-file",
@@ -53,10 +65,10 @@
     "Public starting prices are not checkout quotes"
   ],
   "next_gate": [
-    "Preserve and visually review supplier render",
-    "Capture current product + shipping quote and fees",
     "Owner approves any sample spend",
-    "Physical sample QA before publication"
+    "Physical sample QA before publication",
+    "Finalize accurate listing measurements/material/care and channel disclosures",
+    "Explicit owner publication approval"
   ],
   "publishable": false
 }
