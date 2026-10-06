@@ -1,0 +1,21 @@
+name: Orbital Garden Mockup Contract
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Validate exact mockup request without submission
+        run: npm run orbital-garden:mockup-contract
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: orbital-garden-mockup-request-contract
+          path: connect-demo/exports/physical/orbital-garden-mockup-request.json
+          if-no-files-found: error
