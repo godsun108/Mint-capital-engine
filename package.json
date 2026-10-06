@@ -27,6 +27,8 @@
     "brand:foundry": "node automation/brand-context.js foundry-express-ts-001",
     "watchtower": "node automation/watchtower.js",
     "deckhand": "node automation/deckhand.js",
-    "factory": "node automation/factory.js"
+    "factory": "node automation/factory.js",
+    "printful:safety": "node automation/providers/printful-readonly.test.mjs",
+    "printful:discover": "node automation/printful-discover-orbital-garden.mjs"
   }
 }
