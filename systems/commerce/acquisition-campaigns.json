@@ -1,0 +1,32 @@
+{
+  "schema": "mint.acquisition.campaign.v1",
+  "campaigns": {
+    "foundry-express-bluesky-001": {
+      "status": "READY_TO_SCHEDULE",
+      "brand": "foundry",
+      "offer_id": "foundry-express-ts-001",
+      "channel": "bluesky",
+      "account": "foundrytools.bsky.social",
+      "destination": {
+        "provider": "gumroad",
+        "product_permalink": "foundry-express-ts",
+        "canonical_url": "https://8559900232969.gumroad.com/l/foundry-express-ts"
+      },
+      "creative": {
+        "text": "Skip the blank Express + TypeScript setup. Foundry Express gives you strict TypeScript, Express, JSON middleware, a /health route, env example, and dev/build/start scripts in one reusable starter. $9. Build faster. Ship sooner."
+      },
+      "measurement": {
+        "revenue_source": "gumroad_sales_api",
+        "baseline_verified_sales": 0,
+        "baseline_verified_revenue_usd": 0,
+        "attribution": "CHANNEL_LEVEL_UNTIL_GUMROAD_REFERRER_OR_CAMPAIGN_SIGNAL_IS_VERIFIED",
+        "success_event": "NEW_NON_REFUNDED_GUMROAD_SALE"
+      },
+      "guardrails": [
+        "No guaranteed revenue or performance claims",
+        "Do not publish through Luna or Mechanical Obsessions identities",
+        "Do not claim a sale until Gumroad sale evidence exists"
+      ]
+    }
+  }
+}
