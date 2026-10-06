@@ -298,6 +298,8 @@ async function fulfillCheckout(sessionId,res){
     const receipts=readFulfillmentReceipts();
     const prior=receipts.receipts[session.id];
     if(prior)return send(res,200,{ok:true,idempotent:true,receipt:prior});
+    const checkoutReady=Boolean(session.customer_details?.name&&session.customer_details?.email&&session.customer_details?.address?.line1&&session.customer_details?.address?.city&&session.customer_details?.address?.postal_code&&session.customer_details?.address?.country);
+    if(!checkoutReady)return send(res,422,{ok:false,orderCreated:false,spend:false,error:'Paid physical checkout is missing required shipping details.'});
     // Physical fulfillment remains fail-closed until the order adapter is separately enabled.
     // This branch proves paid-session routing without creating an order or spending money.
     const receipt={sessionId:session.id,offerId:session.metadata?.mint_offer_id||null,source:session.metadata?.mint_source||'unknown',livemode:session.livemode,paidVerified:true,fulfillmentKind:'PRINTFUL_POD',provider:'printful',providerOrderId:null,state:'PAID_AWAITING_PRINTFUL_ORDER_ADAPTER',catalogProductId:fulfillment.catalog_product_id,catalogVariantId:fulfillment.catalog_variant_id,createdAt:new Date().toISOString()};
