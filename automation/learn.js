@@ -5,11 +5,19 @@ import {portfolioDecision} from "../agents/product-loop.js";
 const root=process.cwd();
 const statePath=path.join(root,"automation","state","learning.json");
 const inputPath=path.join(root,"automation","state","commerce-observations.json");
+const acquisitionPath=path.join(root,"automation","state","acquisition-observations.json");
 const read=p=>fs.existsSync(p)?JSON.parse(fs.readFileSync(p,"utf8")):null;
 const input=read(inputPath)||{schema:"mint.commerce.observations.v1",offers:{}};
+const acquisition=read(acquisitionPath)||{offers:{}};
 const previous=read(statePath)||{schema:"mint.learning.state.v1",offers:{}};
 const now=new Date().toISOString();
 const offers={...previous.offers};
+
+// Soft funnel evidence is offer-attributed but never promoted to payment or settlement truth.
+for(const [offerId,a] of Object.entries(acquisition.offers||{})){
+ const prior=offers[offerId]||{offerId};
+ offers[offerId]={...prior,offerId,acquisition:{visits:Number(a.VISITED)||0,checkoutStarted:Number(a.CHECKOUT_STARTED)||0,sources:a.sources||{},semantics:"PROCESS_LOCAL_FUNNEL_SIGNAL_NOT_UNIQUE_VISITORS_NOT_PAYMENT_EVIDENCE"},updatedAt:now};
+}
 
 for(const [offerId,m] of Object.entries(input.offers||{})){
  const metrics={
@@ -18,7 +26,7 @@ for(const [offerId,m] of Object.entries(input.offers||{})){
   deliveryFailure:m.deliveryFailure===true
  };
  const decision=portfolioDecision(metrics);
- offers[offerId]={offerId,metrics,decision,updatedAt:now,
+ offers[offerId]={...(offers[offerId]||{}),offerId,metrics,decision,updatedAt:now,
   semantics:"VERIFIED_INPUTS_ONLY_NO_FORECASTS",
   learnings:{
    acquisitionProven:metrics.paid>0,
