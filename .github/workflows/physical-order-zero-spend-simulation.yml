@@ -1,0 +1,20 @@
+name: PRESS Physical Order Zero-Spend Simulation
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "automation/physical-order-orchestrator.mjs"
+      - "automation/physical-order-simulation.mjs"
+      - "automation/physical-order-state-machine.mjs"
+      - "automation/providers/printful-order-contract.mjs"
+      - "automation/providers/printful-order-submit.mjs"
+jobs:
+  simulate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Run zero-spend physical order simulation
+        run: node automation/physical-order-simulation.mjs
