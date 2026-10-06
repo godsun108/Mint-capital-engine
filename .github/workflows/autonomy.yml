@@ -16,11 +16,23 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: python automation/engine.py
-      - run: |
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Evaluate autonomy queue
+        run: python automation/engine.py
+      - name: Observe, learn, allocate, adapt, and distribute
+        env:
+          MINT_COMMERCE_URL: https://mint-stripe-connect-v4-production.up.railway.app
+        run: npm run learn:dance
+      - name: Six-month continuity certification
+        run: node automation/continuity-officer.js
+      - name: Persist autonomous company state
+        run: |
           git config user.name "mint-autonomy"
           git config user.email "actions@users.noreply.github.com"
-          git add automation/queue.json
+          git add automation/queue.json automation/state/acquisition-observations.json automation/state/commerce-observations.json automation/state/learning.json automation/state/allocation.json automation/state/market-motion.json automation/state/message-experiments.json automation/state/continuity.json docs/market/ automation/state/distribution.json
+          if [ -d systems/acquisition/generated ]; then git add systems/acquisition/generated/; fi
           if git diff --cached --quiet; then exit 0; fi
           git commit -m "MINT refresh autonomy queue"
           # Other autonomous writers may advance main while this run evaluates.
