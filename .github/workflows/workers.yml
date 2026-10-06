@@ -15,6 +15,7 @@ on:
       - "automation/mandates.json"
       - "systems/catalog.json"
       - "systems/commerce/catalog.json"
+      - "systems/commerce/brand-channel-registry.json"
   schedule:
     - cron: "41 * * * *"
 permissions:
