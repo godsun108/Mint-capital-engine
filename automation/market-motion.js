@@ -14,7 +14,8 @@ for(const [offerId,a] of Object.entries(allocation.allocations||{})){
  const weight=Math.max(0,Math.min(3,Number(a.attentionWeight)||0));
  if(weight===0){results.push({offerId,action:"STOPPED",reason:a.reason});continue;}
  for(const source of channels.slice(0,weight)){
-  const r=prepareOwnedCampaign({offerId,baseUrl,source,root});
+  const offerUrl=new URL("/offers",baseUrl); offerUrl.searchParams.set("offer",offerId);
+  const r=prepareOwnedCampaign({offerId,baseUrl:offerUrl.toString(),source,root});
   results.push({offerId,attentionWeight:weight,...r});
  }
 }
