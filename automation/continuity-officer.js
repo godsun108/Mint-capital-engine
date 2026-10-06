@@ -17,7 +17,8 @@ const acq=acquisition?.totals||{};
 const allocations=Object.values(allocation?.allocations||{});
 const readyRoutes=(router?.routes||[]).filter(x=>x.permission==="AUTHORIZED"&&x.action==="PUBLISH_AND_MEASURE").length;
 const reviews=(motion?.results||[]).filter(x=>x.reviewRecommended).length;
-const experimentBriefs=(experiments?.briefs||[]).length;
+const readyExperimentBriefs=(experiments?.briefs||[]).filter(x=>x.state==="MESSAGE_EXPERIMENT_READY").length;
+const observingExperiments=(experiments?.briefs||[]).filter(x=>x.state==="OBSERVING").length;
 const durableAcquisitionMemory=acquisition?.durableStorageConfigured===true || acquisition?.captureSemantics==="SNAPSHOT_OF_DURABLE_AGGREGATES_NOT_UNIQUE_VISITORS";
 const signals={
  durableAcquisitionMemory,
@@ -30,7 +31,8 @@ const signals={
  net:Number(totals.net)||0,
  activeAllocations:allocations.filter(x=>x.attentionWeight>0).length,
  reviewRecommended:reviews,
- messageExperimentsReady:experimentBriefs
+ messageExperimentsReady:readyExperimentBriefs,
+ messageExperimentsObserving:observingExperiments
 };
 let status="HEALTHY",nextConstraint="OBSERVE_REAL_MARKET_RESPONSE";
 const reasons=[];
@@ -39,6 +41,7 @@ else if(!signals.durableAcquisitionMemory){status="ATTENTION";nextConstraint="CE
 else if(signals.authorizedZeroSpendRoutes===0){status="ATTENTION";nextConstraint="RESTORE_AUTHORIZED_DISTRIBUTION";reasons.push("no authorized zero-spend acquisition route");}
 else if(signals.visits===0&&signals.checkoutStarted===0&&signals.paid===0){status="ATTENTION";nextConstraint=signals.reviewRecommended?"ADAPT_OFFER_MESSAGE":"ACQUIRE_REAL_VISITS";reasons.push("no observed customer behavior in the current acquisition snapshot");}
 if(signals.messageExperimentsReady>0){status=status==="CRITICAL"?status:"ATTENTION";nextConstraint="RUN_BOUNDED_MESSAGE_EXPERIMENT";reasons.push("reversible message experiment ready");}
+else if(signals.messageExperimentsObserving>0 && signals.visits===0 && signals.checkoutStarted===0 && signals.paid===0){status=status==="CRITICAL"?status:"ATTENTION";nextConstraint="OBSERVE_MESSAGE_EXPERIMENT_RESPONSE";reasons.push("bounded message experiment applied; awaiting real market response");}
 const ownerGates=[
  "paid_spend_increase",
  "borrowing_or_credit",
