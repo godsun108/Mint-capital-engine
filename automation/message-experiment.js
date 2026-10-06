@@ -6,9 +6,12 @@ const read=p=>fs.existsSync(path.join(root,p))?JSON.parse(fs.readFileSync(path.j
 const motion=read("automation/state/market-motion.json")||{results:[],explorationAttempts:{}};
 const returns=read("automation/state/return-loop.json")||{items:[]};
 const catalog=read("systems/commerce/catalog.json")||{offers:{}};
+const previousExperiments=read("automation/state/message-experiments.json")||{briefs:[]};
 const briefs=[]; // adaptation briefs are generated only after bounded exploration
 for(const r of motion.results||[]){
  if(!r.reviewRecommended) continue;
+ const prior=(previousExperiments.briefs||[]).find(x=>x.offerId===r.offerId);
+ if(r.messageExperimentApplied && prior){briefs.push({...prior,state:"OBSERVING",appliedAt:prior.appliedAt||new Date().toISOString()});continue;}
  const offer=catalog.offers?.[r.offerId];
  if(!offer||offer.status!=="ACTIVE") continue;
  const loop=(returns.items||[]).find(x=>x.offer_id===r.offerId);
@@ -21,7 +24,7 @@ for(const r of motion.results||[]){
   current:offer.acquisition||{},
   experiment:{
    hypothesis:"Lead with the verified customer problem before describing the implementation.",
-   headline:needs[0]?String(needs[0]).slice(0,120):offer.acquisition?.headline,
+   headline:needs[0]?`${String(needs[0]).replace(/\s+/g," ").split(/[.!?]/)[0].slice(0,96).replace(/\s+\S*$/,"").trim()}.`:offer.acquisition?.headline,
    body:needs.length?`Built for a recurring problem observed in public developer discussions: ${needs.join(" / ")}. ${offer.description}`:offer.acquisition?.body,
    cta:offer.acquisition?.cta||"View offer"
   },
