@@ -62,6 +62,24 @@ async function gumroadCheck(res){
   }
 }
 
+async function gumroadProducts(res){
+  if(!gumroadAccessToken)return send(res,503,{ok:false,provider:'gumroad',configured:false,error:'GUMROAD_ACCESS_TOKEN is not configured.'});
+  try{
+    const payload=await gumroadApi('/products');
+    const products=(payload?.products||[]).map(p=>({id:p.id,name:p.name,permalink:p.custom_permalink||p.url||p.short_url||null,price:p.formatted_price||null,published:p.published??null}));
+    return send(res,200,{ok:true,provider:'gumroad',count:products.length,products});
+  }catch(e){return send(res,502,{ok:false,provider:'gumroad',error:e.message});}
+}
+
+async function gumroadSales(res){
+  if(!gumroadAccessToken)return send(res,503,{ok:false,provider:'gumroad',configured:false,error:'GUMROAD_ACCESS_TOKEN is not configured.'});
+  try{
+    const payload=await gumroadApi('/sales');
+    const sales=(payload?.sales||[]).map(s=>({id:s.id,product_id:s.product_id,product_name:s.product_name,price:s.formatted_display_price||null,currency:s.currency||null,created_at:s.created_at,refunded:Boolean(s.refunded),chargeback:Boolean(s.chargebacked)}));
+    return send(res,200,{ok:true,provider:'gumroad',count:sales.length,sales});
+  }catch(e){return send(res,502,{ok:false,provider:'gumroad',error:e.message});}
+}
+
 const acquisitionCounters=new Map();
 function countAcquisition(event,source){const key=source+'|'+event;acquisitionCounters.set(key,(acquisitionCounters.get(key)||0)+1);}
 
@@ -382,6 +400,8 @@ const server=http.createServer(async(req,res)=>{
     if(req.method==='GET'&&u.pathname==='/health')return send(res,200,{ok:true,stripeConfigured,webhookConfigured:Boolean(process.env.STRIPE_WEBHOOK_SECRET),durableFulfillmentStorage:durableStateConfigured,fgeEnabled:process.env.FGE_ENABLED==='true',gumroad:{callbackReady:true,configured:gumroadConfigured,redirectUri:gumroadRedirectUri}});
     if(req.method==='GET'&&u.pathname==='/integrations/gumroad/callback')return await gumroadCallback(u,res);
     if(req.method==='GET'&&u.pathname==='/api/gumroad/check')return await gumroadCheck(res);
+    if(req.method==='GET'&&u.pathname==='/api/gumroad/products')return await gumroadProducts(res);
+    if(req.method==='GET'&&u.pathname==='/api/gumroad/sales')return await gumroadSales(res);
     if(req.method==='GET'&&u.pathname==='/api/fge/state')return send(res,200,{ok:true,runtime:getRuntimeState()});
     if(req.method==='GET'&&u.pathname==='/api/stripe-check') { const s=requireStripe(); const balance=await s.balance.retrieve(); const products=await s.products.list({limit:1}); return send(res,200,{ok:true,stripeAuthenticated:true,livemode:balance.livemode,testMode:balance.livemode===false,catalogReadable:true}); }
     if(req.method==='OPTIONS'&&u.pathname==='/api/acquisition/event'){res.writeHead(204,acquisitionCors);return res.end();}
