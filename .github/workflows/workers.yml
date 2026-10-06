@@ -5,6 +5,10 @@ on:
     branches: [main]
     paths:
       - "automation/engine.py"
+      - "automation/ip_inventory.json"
+      - "automation/demand_evidence.json"
+      - "automation/worker.py"
+      - "automation/builder.py"
       - "automation/mandates.json"
       - "systems/catalog.json"
   schedule:
