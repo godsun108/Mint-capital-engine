@@ -38,10 +38,29 @@ const acquisitionStartedAt=new Date().toISOString();
 // Gumroad OAuth bridge. Credentials belong in the deployment secret store, never Git.
 // The callback is intentionally useful before credentials exist: Gumroad can register
 // this stable HTTPS redirect URI now; token exchange is enabled only after secrets land.
+const gumroadAccessToken=process.env.GUMROAD_ACCESS_TOKEN||'';
 const gumroadClientId=process.env.GUMROAD_CLIENT_ID||'';
 const gumroadClientSecret=process.env.GUMROAD_CLIENT_SECRET||'';
 const gumroadRedirectUri=process.env.GUMROAD_REDIRECT_URI||(APP_URL+'/integrations/gumroad/callback');
-const gumroadConfigured=Boolean(gumroadClientId&&gumroadClientSecret);
+const gumroadOauthConfigured=Boolean(gumroadClientId&&gumroadClientSecret);
+const gumroadConfigured=Boolean(gumroadAccessToken||gumroadOauthConfigured);
+
+async function gumroadApi(pathname){
+  if(!gumroadAccessToken)throw new Error('Gumroad access token is not configured.');
+  const response=await fetch('https://api.gumroad.com/v2'+pathname,{headers:{authorization:'Bearer '+gumroadAccessToken,accept:'application/json'}});
+  const payload=await response.json().catch(()=>({}));
+  if(!response.ok||payload?.success===false)throw new Error('Gumroad API request failed with HTTP '+response.status+'.');
+  return payload;
+}
+async function gumroadCheck(res){
+  if(!gumroadAccessToken)return send(res,503,{ok:false,provider:'gumroad',configured:false,error:'GUMROAD_ACCESS_TOKEN is not configured.'});
+  try{
+    const user=await gumroadApi('/user');
+    return send(res,200,{ok:true,provider:'gumroad',configured:true,authenticated:true,user:{id:user?.user?.user_id||user?.user?.id||null,name:user?.user?.name||null}});
+  }catch(e){
+    return send(res,502,{ok:false,provider:'gumroad',configured:true,authenticated:false,error:e.message});
+  }
+}
 
 const acquisitionCounters=new Map();
 function countAcquisition(event,source){const key=source+'|'+event;acquisitionCounters.set(key,(acquisitionCounters.get(key)||0)+1);}
@@ -51,7 +70,7 @@ async function gumroadCallback(u,res){
   if(error)return send(res,400,{ok:false,provider:'gumroad',error});
   const code=u.searchParams.get('code');
   if(!code)return send(res,200,{ok:true,provider:'gumroad',callbackReady:true,configured:gumroadConfigured,redirectUri:gumroadRedirectUri,message:'Gumroad OAuth callback is reachable. Authorization code required for token exchange.'});
-  if(!gumroadConfigured)return send(res,503,{ok:false,provider:'gumroad',callbackReady:true,configured:false,error:'Set GUMROAD_CLIENT_ID and GUMROAD_CLIENT_SECRET in the deployment secret store before authorizing.'});
+  if(!gumroadOauthConfigured)return send(res,503,{ok:false,provider:'gumroad',callbackReady:true,configured:false,error:'Set GUMROAD_CLIENT_ID and GUMROAD_CLIENT_SECRET in the deployment secret store before OAuth authorization.'});
   const form=new URLSearchParams({client_id:gumroadClientId,client_secret:gumroadClientSecret,code,grant_type:'authorization_code',redirect_uri:gumroadRedirectUri});
   const response=await fetch('https://app.gumroad.com/oauth/token',{method:'POST',headers:{'content-type':'application/x-www-form-urlencoded','accept':'application/json'},body:form});
   const payload=await response.json().catch(()=>({}));
@@ -362,6 +381,7 @@ const server=http.createServer(async(req,res)=>{
     if(req.method==='GET'&&u.pathname==='/api/acquisition/state')return acquisitionState(res);
     if(req.method==='GET'&&u.pathname==='/health')return send(res,200,{ok:true,stripeConfigured,webhookConfigured:Boolean(process.env.STRIPE_WEBHOOK_SECRET),durableFulfillmentStorage:durableStateConfigured,fgeEnabled:process.env.FGE_ENABLED==='true',gumroad:{callbackReady:true,configured:gumroadConfigured,redirectUri:gumroadRedirectUri}});
     if(req.method==='GET'&&u.pathname==='/integrations/gumroad/callback')return await gumroadCallback(u,res);
+    if(req.method==='GET'&&u.pathname==='/api/gumroad/check')return await gumroadCheck(res);
     if(req.method==='GET'&&u.pathname==='/api/fge/state')return send(res,200,{ok:true,runtime:getRuntimeState()});
     if(req.method==='GET'&&u.pathname==='/api/stripe-check') { const s=requireStripe(); const balance=await s.balance.retrieve(); const products=await s.products.list({limit:1}); return send(res,200,{ok:true,stripeAuthenticated:true,livemode:balance.livemode,testMode:balance.livemode===false,catalogReadable:true}); }
     if(req.method==='OPTIONS'&&u.pathname==='/api/acquisition/event'){res.writeHead(204,acquisitionCors);return res.end();}
