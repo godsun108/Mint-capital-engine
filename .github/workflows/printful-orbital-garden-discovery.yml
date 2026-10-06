@@ -20,6 +20,10 @@ jobs:
           PRINTFUL_TOKEN: ${{ secrets.PRINTFUL_TOKEN }}
           PRINTFUL_STORE_ID: ${{ secrets.PRINTFUL_STORE_ID }}
       - uses: actions/upload-artifact@v4
+        if: always()
         with:
           name: orbital-garden-printful-discovery
-          path: connect-demo/exports/physical/orbital-garden-printful-discovery.json
+          path: |
+            connect-demo/exports/physical/orbital-garden-printful-discovery.json
+            connect-demo/exports/physical/printful-catalog-snapshot.json
+          if-no-files-found: warn
