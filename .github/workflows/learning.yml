@@ -38,4 +38,14 @@ jobs:
           git config user.name "mint-learning"
           git config user.email "actions@users.noreply.github.com"
           git commit -m "MINT learning heartbeat"
-          git push
+          # Other autonomous workflows may advance main while this run is learning.
+          # Rebase our state-only commit and retry rather than losing the observation.
+          for attempt in 1 2 3; do
+            if git push; then exit 0; fi
+            echo "Push raced with another worker; rebasing attempt $attempt/3"
+            git fetch origin main
+            git rebase origin/main
+            sleep $((attempt * 2))
+          done
+          echo "Unable to persist learning state after bounded retries"
+          exit 1
