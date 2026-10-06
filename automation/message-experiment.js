@@ -6,7 +6,7 @@ const read=p=>fs.existsSync(path.join(root,p))?JSON.parse(fs.readFileSync(path.j
 const motion=read("automation/state/market-motion.json")||{results:[],explorationAttempts:{}};
 const returns=read("automation/state/return-loop.json")||{items:[]};
 const catalog=read("systems/commerce/catalog.json")||{offers:{}};
-const briefs=[];
+const briefs=[]; // adaptation briefs are generated only after bounded exploration
 for(const r of motion.results||[]){
  if(!r.reviewRecommended) continue;
  const offer=catalog.offers?.[r.offerId];
