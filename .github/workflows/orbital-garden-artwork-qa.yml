@@ -1,0 +1,21 @@
+name: Orbital Garden Artwork QA
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  qa:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Verify artwork geometry and provenance
+        run: npm run orbital-garden:qa
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: orbital-garden-artwork-qa
+          path: connect-demo/exports/physical/orbital-garden-artwork-qa.json
+          if-no-files-found: error
