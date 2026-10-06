@@ -1,0 +1,48 @@
+{
+  "schema": "mint.brand.channel.registry.v1",
+  "semantics": "MINT_IS_THE_ENGINE; CUSTOMER_FACING_BRANDS_OWN_CHANNELS; AUTOMATION_MUST_FAIL_CLOSED_ON_UNAPPROVED_CHANNELS",
+  "engine": {
+    "id": "mint",
+    "role": "COMMERCE_AND_AUTOMATION_ENGINE",
+    "customerFacingByDefault": false
+  },
+  "brands": {
+    "foundry": {
+      "name": "Foundry",
+      "role": "DEVELOPER_TOOLS",
+      "offers": ["foundry-express-ts-001"],
+      "channels": {
+        "gumroad": {
+          "status": "APPROVED",
+          "purpose": "SELL_AND_FULFILL",
+          "product": "Foundry Express TypeScript Starter",
+          "permalink": "foundry-express-ts"
+        },
+        "bluesky": {
+          "status": "UNASSIGNED",
+          "purpose": "ACQUISITION",
+          "note": "Do not publish Foundry promotions through an unrelated identity. Assign a Foundry-owned account before automation."
+        }
+      }
+    },
+    "luna": {
+      "name": "Luna Vale",
+      "role": "VIRTUAL_CREATOR",
+      "channels": {
+        "instagram": {"status": "RESERVED", "purpose": "LUNA_ONLY"}
+      }
+    },
+    "mechanical-obsessions": {
+      "name": "Mechanical Obsessions",
+      "role": "MECHANICAL_MEDIA",
+      "channels": {
+        "youtube": {"status": "RESERVED", "purpose": "MECHANICAL_OBSESSIONS_ONLY"}
+      }
+    }
+  },
+  "policy": {
+    "crossBrandPublishingDefault": "DENY",
+    "requiredBeforeAutopublish": ["brand", "offer", "channel", "channel_status=APPROVED"],
+    "unknownChannelAction": "BLOCK_AND_REQUEST_ASSIGNMENT"
+  }
+}
