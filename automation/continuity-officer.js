@@ -49,6 +49,6 @@ const out={schema:"mint.continuity.officer.v1",generatedAt:new Date().toISOStrin
  sixMonthAbsenceTest:{status,nextConstraint,reasons},
  signals,ownerGates,
  doctrine:["truth_before_theater","evidence_before_confidence","operational_before_victory","reversible_autonomy_before_irreversible_action"],
- evidenceNotes:["acquisition counters are process-local, not unique visitors or lifetime totals","payment truth semantics control revenue claims","zero behavior does not prove zero demand"]};
+ evidenceNotes:[acquisition?.semantics||"acquisition telemetry semantics unavailable","acquisition aggregates are not unique visitors","payment truth semantics control revenue claims","zero behavior does not prove zero demand"]};
 const file=path.join(root,"automation","state","continuity.json");fs.mkdirSync(path.dirname(file),{recursive:true});fs.writeFileSync(file,JSON.stringify(out,null,2)+"\n");
 console.log(JSON.stringify(out,null,2));
