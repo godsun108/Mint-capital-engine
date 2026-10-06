@@ -16,7 +16,7 @@
 </main><script>
 const PRODUCT_ID='foundry-express-ts-001';
 const source=(new URLSearchParams(location.search).get('src')||'direct').toLowerCase();
-const signal=(event)=>fetch('/api/acquisition/event',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({event,source})}).catch(()=>{});
+const signal=(event)=>fetch('/api/acquisition/event',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({event,source,offerId:PRODUCT_ID})}).catch(()=>{});
 signal('VISITED');
 document.getElementById('buy').addEventListener('click',async()=>{
  const b=document.getElementById('buy'),e=document.getElementById('error');b.disabled=true;e.textContent='';
