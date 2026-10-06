@@ -18,13 +18,21 @@ for(const r of router.routes||[]){
 const offerIds=new Set([...Object.keys(learning.offers||{}),...routed.keys()]);
 for(const offerId of offerIds){
  const x=learning.offers?.[offerId];
+ const visits=Number(x?.acquisition?.visits)||0;
+ const checkouts=Number(x?.acquisition?.checkoutStarted)||0;
+ const paid=Number(x?.metrics?.paid)||0;
+ const settled=Number(x?.metrics?.settledNetUsd)||0;
+ const evidenceStage=settled>0?"ECONOMIC":paid>0?"PAID":checkouts>0?"INTENT":visits>0?"BEHAVIOR":"EXPLORE";
  const state=x?.decision?.state || (routed.has(offerId)?"VALIDATING":"LIVE");
  const reason=x?.decision?.reason || (routed.has(offerId)?"verified_demand_route_available":"unknown");
  let action="HOLD_BASELINE",weight=1;
  if(state==="SCALING"){action="INCREASE_ZERO_SPEND_ATTENTION";weight=3;}
- else if(state==="VALIDATING"){action="CONTINUE_BOUNDED_VALIDATION";weight=Math.min(2,Math.max(1,(routed.get(offerId)||[]).length));}
+ else if(state==="VALIDATING"){
+  if(evidenceStage==="EXPLORE"){action="EXPLORE_AUTHORIZED_ZERO_SPEND_ROUTES";weight=1;}
+  else {action="CONTINUE_BOUNDED_VALIDATION";weight=Math.min(2,Math.max(1,(routed.get(offerId)||[]).length));}
+ }
  else if(state==="RETIRING"||state==="RETIRED"){action="STOP_NEW_ACQUISITION";weight=0;}
- out.allocations[offerId]={offerId,state,reason,action,attentionWeight:weight,
+ out.allocations[offerId]={offerId,state,reason,evidenceStage,action,attentionWeight:weight,
   authorizedRoutes:routed.get(offerId)||[],
   constraints:["no_paid_spend","no_price_change_without_evidence","no_permission_escalation"]};
 }
