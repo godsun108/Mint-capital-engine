@@ -1,18 +1,24 @@
 {
-  "schema": "mint.demand_summary.v1",
-  "generated_at": "2026-10-06T18:15:33.099429+00:00",
+  "schema": "mint.demand_summary.v2",
+  "generated_at": "2026-10-06T19:54:11.118534+00:00",
   "items": [
     {
       "candidate_id": "ip:foundry-scaffold",
+      "stage": "REPEATED_PROBLEM",
       "observation_count": 3,
       "source_kind_count": 2,
-      "demand_evidence": 0.6,
+      "source_domain_count": 1,
+      "recent_observation_count": 2,
+      "sale_observation_count": 0,
+      "payment_observation_count": 0,
+      "commercial_signal_count": 0,
+      "demand_evidence": 0.4,
       "sources": [
         "https://www.reddit.com/r/webdev/comments/1wlng6f/how_do_you_scaffold_an_express_project/",
         "https://www.reddit.com/r/node/comments/1todv0p/my_express_5_typescript_6_boilerplate_after_years/",
         "https://www.reddit.com/r/microsaas/comments/1wymhtd/opensource_boilerplate_a_backtobasics_nodeexpress/"
       ],
-      "semantics": "EVIDENCE_NOT_SALES"
+      "semantics": "EVIDENCE_STAGE_NOT_SALES_UNLESS_EXPLICITLY_OBSERVED"
     }
   ]
 }
