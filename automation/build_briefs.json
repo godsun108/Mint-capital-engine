@@ -1,5 +1,27 @@
 {
   "schema": "mint.build_briefs.v1",
-  "generated_at": "2026-10-06T17:38:27.931537+00:00",
-  "items": []
+  "generated_at": "2026-10-06T17:39:19.788591+00:00",
+  "items": [
+    {
+      "candidate_id": "ip:foundry-scaffold",
+      "source_repo": "godsun108/turbo-foundry",
+      "primitive": "tested project lifecycle and repository scaffold doctrine",
+      "state": "READY_FOR_PRODUCT_DESIGN",
+      "demand_evidence": 0.6,
+      "evidence_sources": [
+        "https://www.reddit.com/r/webdev/comments/1wlng6f/how_do_you_scaffold_an_express_project/",
+        "https://www.reddit.com/r/node/comments/1todv0p/my_express_5_typescript_6_boilerplate_after_years/",
+        "https://www.reddit.com/r/microsaas/comments/1wymhtd/opensource_boilerplate_a_backtobasics_nodeexpress/"
+      ],
+      "requirements": [
+        "preserve source truth",
+        "define bounded customer problem",
+        "define deliverable",
+        "define automated fulfillment",
+        "estimate marginal cost",
+        "test before publication"
+      ],
+      "external_action_performed": false
+    }
+  ]
 }
