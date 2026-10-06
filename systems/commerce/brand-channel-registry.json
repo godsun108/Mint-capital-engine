@@ -18,7 +18,19 @@
           "status": "APPROVED",
           "purpose": "SELL_AND_FULFILL",
           "product": "Foundry Express TypeScript Starter",
-          "permalink": "foundry-express-ts"
+          "permalink": "foundry-express-ts",
+          "evidence": {
+            "account_setup": "EVIDENCED",
+            "credential_configured": "EVIDENCED_IN_PRODUCTION_RUNTIME",
+            "authentication": "PREVIOUSLY_VERIFIED",
+            "listing_publication": "PREVIOUSLY_EVIDENCED",
+            "evidence_note": "Prior operator verification established authenticated Gumroad access and a published Foundry Express TypeScript Starter listing. Re-verify provider state before inferring current availability, traffic, sales, payouts, or settlement."
+          },
+          "routing": {
+            "state": "PUBLISHED_EVIDENCED_REVERIFY_PROVIDER_STATE",
+            "autonomous_action": "MEASURE_AND_REVERIFY",
+            "revenue_inference": "DENY_WITHOUT_PROVIDER_PAYMENT_EVIDENCE"
+          }
         },
         "bluesky": {
           "status": "APPROVED",
