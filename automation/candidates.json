@@ -28,8 +28,8 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/TravisPooley/vulhub/issues/4",
-          "observedAt": "2026-10-06T18:36:14.738142+00:00",
+          "url": "https://github.com/Meeovi/AlternateFramework/issues/4",
+          "observedAt": "2026-10-06T22:47:18.589611+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -37,55 +37,39 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "observedAt": "2026-10-06T18:36:14.738192+00:00",
+          "observedAt": "2026-10-06T22:47:18.589632+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/mitodl/mitxpro/issues/2711",
-          "observedAt": "2026-10-06T18:36:14.738196+00:00",
+          "url": "https://github.com/TravisPooley/vulhub/issues/4",
+          "observedAt": "2026-10-06T22:47:18.589651+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/Vonage-Community/blog-mcp_tooling-n8n_whatsapp_receptionist/issues/1",
-          "observedAt": "2026-10-06T18:36:14.738165+00:00",
+          "url": "https://github.com/hmcts/juror-er-portal/issues/1",
+          "observedAt": "2026-10-06T22:47:18.589657+00:00",
           "verified": true,
-          "claim": "sdk-1.22.0.tgz: 23 vulnerabilities (highest severity is: 8.1)"
+          "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/Richg44/grafana/issues/16",
-          "observedAt": "2026-10-06T18:36:14.738169+00:00",
+          "url": "https://github.com/hmcts/sptribs-frontend/issues/444",
+          "observedAt": "2026-10-06T22:47:18.589659+00:00",
           "verified": true,
-          "claim": "llm-0.22.1.tgz: 19 vulnerabilities (highest severity is: 9.1)"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/Datarails/mcp-outlet/issues/18",
-          "observedAt": "2026-10-06T18:36:14.738178+00:00",
-          "verified": true,
-          "claim": "sdk-1.12.0.tgz: 13 vulnerabilities (highest severity is: 9.1) reachable"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/amaybaum-prod/supabase/issues/26",
-          "observedAt": "2026-10-06T18:36:14.738188+00:00",
-          "verified": true,
-          "claim": "studio-0.0.9.tgz: 166 vulnerabilities (highest severity is: 10.0) [master] (reachable)"
+          "claim": "Dependency Dashboard"
         }
       ],
       "status": "DISCOVERED_SOURCE_BACKED",
       "provenance": {
         "proposalId": "proposal:express-auth:001",
-        "promotedAt": "2026-10-06T18:36:22.791852+00:00",
+        "promotedAt": "2026-10-06T22:47:26.441567+00:00",
         "semantics": "SOURCE_BACKED_CANDIDATE_RESEARCH_STILL_REQUIRED"
       }
     }
