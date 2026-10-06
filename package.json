@@ -33,6 +33,7 @@
     "orbital-garden:qa": "node automation/orbital-garden-artwork-qa.mjs",
     "orbital-garden:readiness": "node automation/orbital-garden-readiness.mjs",
     "orbital-garden:mockup-preflight": "node automation/orbital-garden-mockup-preflight.mjs",
-    "orbital-garden:mockup-contract": "node automation/orbital-garden-mockup-request-contract.mjs"
+    "orbital-garden:mockup-contract": "node automation/orbital-garden-mockup-request-contract.mjs",
+    "orbital-garden:submit-mockup": "node automation/orbital-garden-mockup-request-contract.mjs && node automation/orbital-garden-submit-mockup.mjs"
   }
 }
