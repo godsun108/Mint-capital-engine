@@ -193,6 +193,7 @@ async function checkout(req,res){
     const session=await s.checkout.sessions.create({
       line_items:[{price_data:{currency:offer.price.currency,unit_amount:offer.price.unit_amount,product_data:{name:offer.name,description:offer.description}},quantity:1}],
       mode:'payment',
+      ...(offer.type==='PHYSICAL_POD'?{shipping_address_collection:{allowed_countries:['US']}}:{}),
       metadata:{mint_offer_id:offer.id,mint_mandate_id:offer.mandate_id,mint_source:source},
       payment_intent_data:{metadata:{mint_offer_id:offer.id,mint_mandate_id:offer.mandate_id,mint_source:source}},
       success_url:APP_URL+'/success?session_id={CHECKOUT_SESSION_ID}',
