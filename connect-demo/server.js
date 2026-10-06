@@ -294,6 +294,17 @@ async function fulfillCheckout(sessionId,res){
     fulfillment={kind:'FILE',path:'deliverables/foundry-express-ts/README.md',filename:'foundry-express-ts-README.md',content_type:'text/markdown; charset=utf-8'};
   }
   if(!fulfillment)return send(res,404,{error:'No automatic fulfillment mapping exists for this verified offer.'});
+  if(fulfillment.kind==='PRINTFUL_POD'){
+    const receipts=readFulfillmentReceipts();
+    const prior=receipts.receipts[session.id];
+    if(prior)return send(res,200,{ok:true,idempotent:true,receipt:prior});
+    // Physical fulfillment remains fail-closed until the order adapter is separately enabled.
+    // This branch proves paid-session routing without creating an order or spending money.
+    const receipt={sessionId:session.id,offerId:session.metadata?.mint_offer_id||null,source:session.metadata?.mint_source||'unknown',livemode:session.livemode,paidVerified:true,fulfillmentKind:'PRINTFUL_POD',provider:'printful',providerOrderId:null,state:'PAID_AWAITING_PRINTFUL_ORDER_ADAPTER',catalogProductId:fulfillment.catalog_product_id,catalogVariantId:fulfillment.catalog_variant_id,createdAt:new Date().toISOString()};
+    receipts.receipts[session.id]=receipt;writeFulfillmentReceipts(receipts);
+    console.log('MINT_COMMERCE',JSON.stringify({event:'PHYSICAL_FULFILLMENT_STAGED',sessionId:session.id,offerId:receipt.offerId,at:receipt.createdAt}));
+    return send(res,202,{ok:true,spend:false,orderCreated:false,receipt});
+  }
   const file=path.join(root,fulfillment.path);
   await stat(file);
   const receipts=readFulfillmentReceipts();
