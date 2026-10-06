@@ -3,11 +3,11 @@ const file=new URL("../systems/commerce/catalog.json",import.meta.url);
 const catalog=JSON.parse(fs.readFileSync(file,"utf8"));
 const errors=[];
 const digitalKinds=new Set(["FILE","LICENSE","SAAS_ACCESS","SERVICE"]);
-const physicalKinds=new Set(["PRINT_ON_DEMAND","SUPPLIER_FULFILLED","STOCKED_PHYSICAL"]);
+const physicalKinds=new Set(["PRINT_ON_DEMAND","PRINTFUL_POD","SUPPLIER_FULFILLED","STOCKED_PHYSICAL"]);
 for(const [key,o] of Object.entries(catalog.offers||{})){
  const p="offers."+key;
  if(o.id!==key) errors.push(p+": id mismatch");
- if(!["ACTIVE","DRAFT","RESEARCH","RETIRED"].includes(o.status)) errors.push(p+": invalid status");
+ if(!["ACTIVE","DRAFT","RESEARCH","RETIRED","STAGED_NOT_PUBLIC"].includes(o.status)) errors.push(p+": invalid status");
  if(!o.name||!o.description) errors.push(p+": missing name/description");
  if(!o.mandate_id) errors.push(p+": missing mandate_id");
  if(!Number.isInteger(o.price?.unit_amount)||o.price.unit_amount<0) errors.push(p+": invalid unit amount");
