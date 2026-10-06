@@ -19,6 +19,13 @@ for(const s of seed){
  if(!existing)q.tasks.push({...s});
  else Object.assign(existing,{objective:s.objective,owner_agent:s.owner_agent,kind:s.kind,command:s.command,allowed_actions:s.allowed_actions,hard_stops:s.hard_stops,expected_evidence:s.expected_evidence,dependencies:s.dependencies,recurring:Boolean(s.recurring)});
 }
+// One-time, evidence-preserving retry after the deterministic preparation/control-plane repair.
+const fleetTask=q.tasks.find(t=>t.task_id==="fleet-prepare");
+if(fleetTask?.status==="FAILED_TERMINAL"&&fleetTask.recovery_revision!=="deckhand-control-plane-v1"){
+ fleetTask.previous_terminal_failure={attempts:fleetTask.attempts||0,failure_streak:fleetTask.failure_streak||0,at:now()};
+ fleetTask.recovery_revision="deckhand-control-plane-v1";fleetTask.failure_streak=0;fleetTask.status="READY";
+ fleetTask.next_action="Retry once after verified deterministic preparation/control-plane repair; prior terminal evidence preserved.";
+}
 // One-time, evidence-preserving retry after correcting auditor's self-referential readiness check.
 const auditTask=q.tasks.find(t=>t.task_id==="audit-funnel");
 if(auditTask?.status==="FAILED_TERMINAL"&&auditTask.audit_fix_revision!=="self-readiness-v1"){
