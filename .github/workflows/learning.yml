@@ -9,6 +9,8 @@ on:
       - "automation/market-motion.js"
       - "automation/prospector.js"
       - "automation/learn.js"
+      - "automation/message-experiment.js"
+      - "package.json"
   schedule:
     - cron: "26 * * * *"
 permissions:
