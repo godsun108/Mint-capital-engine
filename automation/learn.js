@@ -8,7 +8,7 @@ const inputPath=path.join(root,"automation","state","commerce-observations.json"
 const acquisitionPath=path.join(root,"automation","state","acquisition-observations.json");
 const read=p=>fs.existsSync(p)?JSON.parse(fs.readFileSync(p,"utf8")):null;
 const input=read(inputPath)||{schema:"mint.commerce.observations.v1",offers:{}};
-const acquisition=read(acquisitionPath)||{offers:{}}; // offer-attributed funnel evidence when snapshot v2 is available
+const acquisition=read(acquisitionPath)||{offers:{}}; // offer-attributed funnel evidence; durability is inherited from the runtime snapshot
 const previous=read(statePath)||{schema:"mint.learning.state.v1",offers:{}};
 const now=new Date().toISOString();
 const offers={...previous.offers};
@@ -16,7 +16,8 @@ const offers={...previous.offers};
 // Soft funnel evidence is offer-attributed but never promoted to payment or settlement truth.
 for(const [offerId,a] of Object.entries(acquisition.offers||{})){
  const prior=offers[offerId]||{offerId};
- offers[offerId]={...prior,offerId,acquisition:{visits:Number(a.VISITED)||0,checkoutStarted:Number(a.CHECKOUT_STARTED)||0,sources:a.sources||{},semantics:"PROCESS_LOCAL_FUNNEL_SIGNAL_NOT_UNIQUE_VISITORS_NOT_PAYMENT_EVIDENCE"},updatedAt:now};
+ const durable=acquisition.durableStorageConfigured===true || acquisition.captureSemantics==="SNAPSHOT_OF_DURABLE_AGGREGATES_NOT_UNIQUE_VISITORS";
+ offers[offerId]={...prior,offerId,acquisition:{visits:Number(a.VISITED)||0,checkoutStarted:Number(a.CHECKOUT_STARTED)||0,sources:a.sources||{},durableStorageConfigured:durable,semantics:durable?"DURABLE_AGGREGATE_FUNNEL_SIGNAL_NOT_UNIQUE_VISITORS_NOT_PAYMENT_EVIDENCE":"PROCESS_LOCAL_FUNNEL_SIGNAL_NOT_UNIQUE_VISITORS_NOT_PAYMENT_EVIDENCE"},updatedAt:now};
 }
 
 for(const [offerId,m] of Object.entries(input.offers||{})){
