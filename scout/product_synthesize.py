@@ -18,7 +18,7 @@ def main():
  data=json.loads(OBS.read_text()) if OBS.exists() else {"groups":[]}
  clusters=[]
  for g in data.get("groups",[]):
-  obs=[o for o in g.get("observations",[]) if o.get("verified") is True and o.get("url")]
+  obs=[o for o in g.get("observations",[]) if (o.get("sourceVerified") is True or o.get("verified") is True) and o.get("url")]
   unique={o["url"]:o for o in obs}
   obs=list(unique.values())
   pairs=[]
