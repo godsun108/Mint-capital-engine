@@ -8,7 +8,7 @@ const inputPath=path.join(root,"automation","state","commerce-observations.json"
 const acquisitionPath=path.join(root,"automation","state","acquisition-observations.json");
 const read=p=>fs.existsSync(p)?JSON.parse(fs.readFileSync(p,"utf8")):null;
 const input=read(inputPath)||{schema:"mint.commerce.observations.v1",offers:{}};
-const acquisition=read(acquisitionPath)||{offers:{}};
+const acquisition=read(acquisitionPath)||{offers:{}}; // offer-attributed funnel evidence when snapshot v2 is available
 const previous=read(statePath)||{schema:"mint.learning.state.v1",offers:{}};
 const now=new Date().toISOString();
 const offers={...previous.offers};
