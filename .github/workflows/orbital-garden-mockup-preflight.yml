@@ -1,0 +1,26 @@
+name: Orbital Garden Mockup Preflight
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Prove Printful safety contract
+        run: npm run printful:safety
+      - name: Capture exact mockup templates/styles without creating task
+        env:
+          PRINTFUL_TOKEN: ${{ secrets.PRINTFUL_TOKEN }}
+          PRINTFUL_STORE_ID: ${{ secrets.PRINTFUL_STORE_ID }}
+        run: npm run orbital-garden:mockup-preflight
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: orbital-garden-mockup-preflight
+          path: connect-demo/exports/physical/orbital-garden-mockup-preflight.json
+          if-no-files-found: error
