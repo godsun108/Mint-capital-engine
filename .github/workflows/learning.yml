@@ -1,6 +1,13 @@
 name: MINT Learning Heartbeat
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "automation/state/demand-router.json"
+      - "automation/allocate-attention.js"
+      - "automation/market-motion.js"
+      - "automation/prospector.js"
   schedule:
     - cron: "26 */6 * * *"
 permissions:
