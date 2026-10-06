@@ -1,6 +1,6 @@
 {
   "schema": "mint.product_candidates.v1",
-  "generated_at": "2026-10-06T17:34:58.285063+00:00",
+  "generated_at": "2026-10-06T17:38:27.887921+00:00",
   "items": [
     {
       "id": "ip:foundry-scaffold",
@@ -13,7 +13,8 @@
       "effort": 2,
       "risk": 0.05,
       "score": 61.2,
-      "state": "DEMAND_EVIDENCED",
+      "demand_observation_count": 1,
+      "state": "PROBLEM_SIGNAL",
       "external_action_performed": false
     },
     {
@@ -27,6 +28,7 @@
       "effort": 2,
       "risk": 0.05,
       "score": 56.5,
+      "demand_observation_count": 0,
       "state": "RESEARCH_DEMAND",
       "external_action_performed": false
     },
@@ -41,6 +43,7 @@
       "effort": 2,
       "risk": 0.12,
       "score": 53.85,
+      "demand_observation_count": 0,
       "state": "RESEARCH_DEMAND",
       "external_action_performed": false
     },
@@ -55,6 +58,7 @@
       "effort": 2,
       "risk": 0.08,
       "score": 53.4,
+      "demand_observation_count": 0,
       "state": "RESEARCH_DEMAND",
       "external_action_performed": false
     },
@@ -69,6 +73,7 @@
       "effort": 2,
       "risk": 0.2,
       "score": 49.75,
+      "demand_observation_count": 0,
       "state": "RESEARCH_DEMAND",
       "external_action_performed": false
     },
@@ -83,6 +88,7 @@
       "effort": 3,
       "risk": 0.1,
       "score": 48.42,
+      "demand_observation_count": 0,
       "state": "RESEARCH_DEMAND",
       "external_action_performed": false
     },
@@ -97,6 +103,7 @@
       "effort": 3,
       "risk": 0.15,
       "score": 47.42,
+      "demand_observation_count": 0,
       "state": "RESEARCH_DEMAND",
       "external_action_performed": false
     },
@@ -111,6 +118,7 @@
       "effort": 3,
       "risk": 0.1,
       "score": 47.17,
+      "demand_observation_count": 0,
       "state": "RESEARCH_DEMAND",
       "external_action_performed": false
     },
@@ -125,6 +133,7 @@
       "effort": 3,
       "risk": 0.25,
       "score": 44.17,
+      "demand_observation_count": 0,
       "state": "RESEARCH_DEMAND",
       "external_action_performed": false
     },
@@ -139,6 +148,7 @@
       "effort": 3,
       "risk": 0.15,
       "score": 43.67,
+      "demand_observation_count": 0,
       "state": "RESEARCH_DEMAND",
       "external_action_performed": false
     },
@@ -153,6 +163,7 @@
       "effort": 4,
       "risk": 0.1,
       "score": 43.0,
+      "demand_observation_count": 0,
       "state": "RESEARCH_DEMAND",
       "external_action_performed": false
     },
@@ -167,6 +178,7 @@
       "effort": 4,
       "risk": 0.12,
       "score": 42.6,
+      "demand_observation_count": 0,
       "state": "RESEARCH_DEMAND",
       "external_action_performed": false
     },
@@ -181,6 +193,7 @@
       "effort": 4,
       "risk": 0.15,
       "score": 42.0,
+      "demand_observation_count": 0,
       "state": "RESEARCH_DEMAND",
       "external_action_performed": false
     },
@@ -195,6 +208,7 @@
       "effort": 4,
       "risk": 0.15,
       "score": 40.75,
+      "demand_observation_count": 0,
       "state": "RESEARCH_DEMAND",
       "external_action_performed": false
     },
@@ -209,6 +223,7 @@
       "effort": 5,
       "risk": 0.1,
       "score": 40.75,
+      "demand_observation_count": 0,
       "state": "RESEARCH_DEMAND",
       "external_action_performed": false
     },
@@ -223,6 +238,7 @@
       "effort": 3,
       "risk": 0.3,
       "score": 40.67,
+      "demand_observation_count": 0,
       "state": "RESEARCH_DEMAND",
       "external_action_performed": false
     },
@@ -237,6 +253,7 @@
       "effort": 4,
       "risk": 0.1,
       "score": 40.5,
+      "demand_observation_count": 0,
       "state": "RESEARCH_DEMAND",
       "external_action_performed": false
     },
@@ -251,6 +268,7 @@
       "effort": 4,
       "risk": 0.2,
       "score": 39.75,
+      "demand_observation_count": 0,
       "state": "RESEARCH_DEMAND",
       "external_action_performed": false
     },
@@ -265,6 +283,7 @@
       "effort": 4,
       "risk": 0.1,
       "score": 39.25,
+      "demand_observation_count": 0,
       "state": "RESEARCH_DEMAND",
       "external_action_performed": false
     },
@@ -279,6 +298,7 @@
       "effort": 4,
       "risk": 0.3,
       "score": 39.0,
+      "demand_observation_count": 0,
       "state": "RESEARCH_DEMAND",
       "external_action_performed": false
     }
