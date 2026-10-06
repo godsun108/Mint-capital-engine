@@ -81,7 +81,7 @@ async function gumroadSales(res){
 }
 
 const acquisitionCounters=new Map();
-function countAcquisition(event,source){const key=source+'|'+event;acquisitionCounters.set(key,(acquisitionCounters.get(key)||0)+1);}
+function countAcquisition(event,source,offerId){const key=offerId+'|'+source+'|'+event;acquisitionCounters.set(key,(acquisitionCounters.get(key)||0)+1);}
 
 async function gumroadCallback(u,res){
   const error=u.searchParams.get('error');
@@ -351,11 +351,13 @@ async function acquisitionEvent(req,res){
   const payload=await body(req);
   const event=String(payload.event||"");
   const source=String(payload.source||"direct").toLowerCase();
+  const offerId=String(payload.offerId||"");
   const allowed=new Set(["VISITED","CHECKOUT_STARTED"]);
-  if(!allowed.has(event)||!/^[a-z0-9_-]{1,48}$/.test(source))return send(res,400,{error:"Invalid acquisition event."});
-  countAcquisition(event,source);
-  console.log("MINT_ACQUISITION",JSON.stringify({event,source,offerId:"foundry-express-ts-001",at:new Date().toISOString()}));
-  return send(res,202,{ok:true,event,source},acquisitionCors);
+  if(!allowed.has(event)||!/^[a-z0-9_-]{1,48}$/.test(source)||!/^[a-z0-9_-]{1,80}$/.test(offerId))return send(res,400,{error:"Invalid acquisition event."});
+  const offer=await liveOffer(offerId); if(!offer)return send(res,403,{error:"Unknown or inactive offer."});
+  countAcquisition(event,source,offerId);
+  console.log("MINT_ACQUISITION",JSON.stringify({event,source,offerId,at:new Date().toISOString()}));
+  return send(res,202,{ok:true,event,source,offerId},acquisitionCors);
 }
 
 async function fulfillmentEvidence(res){
@@ -389,10 +391,10 @@ async function fgeObserve(){
 }
 
 async function acquisitionState(res){
-  const sources={};
-  for(const [key,count] of acquisitionCounters){const [source,event]=key.split('|');sources[source]||={VISITED:0,CHECKOUT_STARTED:0};sources[source][event]=count;}
+  const sources={},offers={};
+  for(const [key,count] of acquisitionCounters){const [offerId,source,event]=key.split('|');sources[source]||={VISITED:0,CHECKOUT_STARTED:0};sources[source][event]+=count;offers[offerId]||={VISITED:0,CHECKOUT_STARTED:0,sources:{}};offers[offerId][event]+=count;offers[offerId].sources[source]||={VISITED:0,CHECKOUT_STARTED:0};offers[offerId].sources[source][event]+=count;}
   const totals=Object.values(sources).reduce((a,x)=>({VISITED:a.VISITED+(x.VISITED||0),CHECKOUT_STARTED:a.CHECKOUT_STARTED+(x.CHECKOUT_STARTED||0)}),{VISITED:0,CHECKOUT_STARTED:0});
-  return send(res,200,{ok:true,schema:'mint.acquisition.snapshot.v1',semantics:'PROCESS_LOCAL_AGGREGATES_NOT_UNIQUE_VISITORS_NOT_LIFETIME_TOTALS',startedAt:acquisitionStartedAt,generatedAt:new Date().toISOString(),privacy:'No IP, cookie, user-agent, or personal identifier stored by this counter.',totals,sources});
+  return send(res,200,{ok:true,schema:'mint.acquisition.snapshot.v2',semantics:'PROCESS_LOCAL_OFFER_AND_SOURCE_AGGREGATES_NOT_UNIQUE_VISITORS_NOT_LIFETIME_TOTALS',startedAt:acquisitionStartedAt,generatedAt:new Date().toISOString(),privacy:'No IP, cookie, user-agent, or personal identifier stored by this counter.',totals,sources,offers});
 }
 
 async function serveFile(res,file,type){const data=await readFile(file);res.writeHead(200,{'content-type':type});res.end(data)}
