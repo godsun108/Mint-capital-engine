@@ -1,0 +1,86 @@
+{
+  "schema": "mint.demand_router.v1",
+  "generated_at": "2026-10-06T18:15:33.922Z",
+  "semantics": "ROUTING_OPPORTUNITIES_NOT_TRAFFIC_NOT_CUSTOMERS",
+  "routes": [
+    {
+      "offer_id": "foundry-express-ts-001",
+      "candidate_id": "ip:foundry-scaffold",
+      "route": "github-pages",
+      "class": "OWNED",
+      "permission": "AUTHORIZED",
+      "action": "PUBLISH_AND_MEASURE",
+      "cost_usd": 0,
+      "source_count": 3,
+      "score": 100
+    },
+    {
+      "offer_id": "foundry-express-ts-001",
+      "candidate_id": "ip:foundry-scaffold",
+      "route": "mint-direct-web",
+      "class": "OWNED",
+      "permission": "AUTHORIZED",
+      "action": "PUBLISH_AND_MEASURE",
+      "cost_usd": 0,
+      "source_count": 3,
+      "score": 100
+    },
+    {
+      "offer_id": "foundry-express-ts-001",
+      "candidate_id": "ip:foundry-scaffold",
+      "brand": "foundry",
+      "route": "gumroad",
+      "class": "THIRD_PARTY_APPROVED_BRAND_CHANNEL",
+      "permission": "APPROVED_CHANNEL_BUT_PUBLISH_POLICY_APPLIES",
+      "action": "PREPARE_PRESENTATION",
+      "cost_usd": 0,
+      "source_count": 3,
+      "score": 80
+    },
+    {
+      "offer_id": "foundry-express-ts-001",
+      "candidate_id": "ip:foundry-scaffold",
+      "brand": "foundry",
+      "route": "bluesky",
+      "class": "THIRD_PARTY_APPROVED_BRAND_CHANNEL",
+      "permission": "APPROVED_CHANNEL_BUT_PUBLISH_POLICY_APPLIES",
+      "action": "PREPARE_PRESENTATION",
+      "cost_usd": 0,
+      "source_count": 3,
+      "score": 80
+    },
+    {
+      "offer_id": "foundry-express-ts-001",
+      "candidate_id": "ip:foundry-scaffold",
+      "route": "reddit.com",
+      "class": "PROBLEM_ORIGIN_COMMUNITY",
+      "permission": "UNVERIFIED_FOR_PROMOTION",
+      "action": "VERIFY_RULES_AND_PREPARE_ONLY",
+      "cost_usd": 0,
+      "source_url": "https://www.reddit.com/r/webdev/comments/1wlng6f/how_do_you_scaffold_an_express_project/",
+      "score": 60
+    },
+    {
+      "offer_id": "foundry-express-ts-001",
+      "candidate_id": "ip:foundry-scaffold",
+      "route": "reddit.com",
+      "class": "PROBLEM_ORIGIN_COMMUNITY",
+      "permission": "UNVERIFIED_FOR_PROMOTION",
+      "action": "VERIFY_RULES_AND_PREPARE_ONLY",
+      "cost_usd": 0,
+      "source_url": "https://www.reddit.com/r/node/comments/1todv0p/my_express_5_typescript_6_boilerplate_after_years/",
+      "score": 60
+    },
+    {
+      "offer_id": "foundry-express-ts-001",
+      "candidate_id": "ip:foundry-scaffold",
+      "route": "reddit.com",
+      "class": "PROBLEM_ORIGIN_COMMUNITY",
+      "permission": "UNVERIFIED_FOR_PROMOTION",
+      "action": "VERIFY_RULES_AND_PREPARE_ONLY",
+      "cost_usd": 0,
+      "source_url": "https://www.reddit.com/r/microsaas/comments/1wymhtd/opensource_boilerplate_a_backtobasics_nodeexpress/",
+      "score": 60
+    }
+  ]
+}
