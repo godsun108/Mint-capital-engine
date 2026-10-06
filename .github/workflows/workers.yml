@@ -11,6 +11,7 @@ on:
       - "automation/builder.py"
       - "automation/return-loop.js"
       - "automation/publish-return-loop-owned.js"
+      - "automation/demand-router.js"
       - "automation/mandates.json"
       - "systems/catalog.json"
       - "systems/commerce/catalog.json"
@@ -57,9 +58,11 @@ jobs:
         run: node automation/return-loop.js
       - name: Publish Return Loop on authorized owned surfaces
         run: node automation/publish-return-loop-owned.js
+      - name: Demand Router
+        run: node automation/demand-router.js
       - run: |
           git config user.name "mint-workers"
           git config user.email "actions@users.noreply.github.com"
-          git add automation/demand_summary.json automation/payment_truth.json automation/product_candidates.json automation/build_briefs.json automation/queue.json automation/state/return-loop.json automation/state/return-loop-owned.json docs/solutions
+          git add automation/demand_summary.json automation/payment_truth.json automation/product_candidates.json automation/build_briefs.json automation/queue.json automation/state/return-loop.json automation/state/return-loop-owned.json automation/state/demand-router.json docs/solutions
           git diff --cached --quiet || git commit -m "MINT workers refresh economic work"
           git push
