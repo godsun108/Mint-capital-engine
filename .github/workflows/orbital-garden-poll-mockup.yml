@@ -1,0 +1,25 @@
+name: Orbital Garden Poll Mockup
+on:
+  workflow_dispatch:
+jobs:
+  poll:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Poll Printful mockup task
+        env:
+          PRINTFUL_TOKEN: ${{ secrets.PRINTFUL_TOKEN }}
+          PRINTFUL_STORE_ID: ${{ secrets.PRINTFUL_STORE_ID }}
+          PRINTFUL_MOCKUP_TASK_ID: "979593343"
+        run: node automation/orbital-garden-poll-mockup.mjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: orbital-garden-mockup-result
+          path: connect-demo/exports/physical/orbital-garden-mockup-result.json
+          if-no-files-found: error
