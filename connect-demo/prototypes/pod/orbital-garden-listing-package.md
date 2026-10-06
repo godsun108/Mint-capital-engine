@@ -1,6 +1,6 @@
 # Orbital Garden — supplier inquiry and listing package
 
-**State:** PREPARED_NOT_PUBLISHED. This is a concept package, not an offer to buy.
+**State:** PRODUCTION_CANDIDATE_NOT_PUBLISHED. Printful 274 geometry + vector QA verified; supplier mockup, current economics and sample QA remain gated.
 
 ## Printful product inquiry (copy-ready)
 Hello Printful team, we're evaluating a single original-design tote pilot and need to identify the correct blank/variant before submitting artwork. Please confirm:
@@ -15,7 +15,7 @@ Do not assume that a public starting price is the actual quote. Do not place an 
 ## Original product concept
 Working name: Orbital Garden / Geometric Carry Tote.
 One-line creative: A warm, abstract study in orbit, balance and everyday movement.
-Source artwork: `orbital-garden-concept.svg`. This is a square vector concept, NOT a verified tote print file. It must be adapted to the supplier's actual template, seams and print method.
+Source lineage: `orbital-garden-concept.svg` → `orbital-garden-aop-repeat-concept.svg` → verified-geometry candidates `orbital-garden-aop-production.svg` and `orbital-garden-pocket-production.svg`. Automated geometry/provenance QA passed. Supplier upload/mockup/sample approval has not yet occurred.
 
 ## Draft listing (not for publication)
 **Title:** Orbital Garden Abstract Geometric Tote — Original Earth-Tone Design
@@ -25,8 +25,8 @@ Source artwork: `orbital-garden-concept.svg`. This is a square vector concept, N
 
 ## Required publication fields
 - [ ] Seller channel authorized and applicable production-partner disclosure reviewed.
-- [ ] Supplier product ID and exact variant selected.
-- [ ] Supplier print template and accepted file export verified.
+- [x] Supplier product ID verified: Printful 274; variants observed: 9039 / 9040 / 9041.
+- [~] Supplier geometry verified; accepted final upload/export validation still pending.
 - [ ] Rights/originality and similarity review completed.
 - [ ] Supplier mockup generated from approved production art.
 - [ ] Physical sample QA (print alignment, color, stitching, fabric and wash/care) recorded.
