@@ -3,7 +3,8 @@ const file=new URL("../systems/commerce/catalog.json",import.meta.url);
 const catalog=JSON.parse(fs.readFileSync(file,"utf8"));
 const errors=[];
 const digitalKinds=new Set(["FILE","LICENSE","SAAS_ACCESS","SERVICE"]);
-const physicalKinds=new Set(["PRINT_ON_DEMAND","PRINTFUL_POD","SUPPLIER_FULFILLED","STOCKED_PHYSICAL"]);
+const physicalKinds=new Set(["PRINT_ON_DEMAND","SUPPLIER_FULFILLED","STOCKED_PHYSICAL"]);
+const providerPodKinds=new Set(["PRINTFUL_POD"]);
 for(const [key,o] of Object.entries(catalog.offers||{})){
  const p="offers."+key;
  if(o.id!==key) errors.push(p+": id mismatch");
@@ -14,7 +15,7 @@ for(const [key,o] of Object.entries(catalog.offers||{})){
  if(!/^[a-z]{3}$/.test(o.price?.currency||"")) errors.push(p+": invalid currency");
  if(!Array.isArray(o.channels)) errors.push(p+": channels must be an array");
  const kind=o.fulfillment?.kind;
- if(!digitalKinds.has(kind)&&!physicalKinds.has(kind)) errors.push(p+": unknown fulfillment kind");
+ if(!digitalKinds.has(kind)&&!physicalKinds.has(kind)&&!providerPodKinds.has(kind)) errors.push(p+": unknown fulfillment kind");
  if(kind==="FILE"){
    if(!o.fulfillment.path||!o.fulfillment.filename) errors.push(p+": FILE fulfillment missing path/filename");
  }
@@ -22,6 +23,12 @@ for(const [key,o] of Object.entries(catalog.offers||{})){
    for(const field of ["inventory_model","shipping_responsibility","return_policy","supplier_status","fulfillment_sla_evidence","unit_landed_cost_evidence"]){
      if(o.physical?.[field]==null) errors.push(p+": physical."+field+" required");
    }
+ }
+ if(providerPodKinds.has(kind)){
+   for(const field of ["provider","store_id","catalog_product_id","catalog_variant_id","artwork"]){
+     if(o.fulfillment?.[field]==null) errors.push(p+": fulfillment."+field+" required for provider POD");
+   }
+   if(o.status==="STAGED_NOT_PUBLIC"&&!o.launch_policy?.publication_requires_owner_approval) errors.push(p+": staged provider POD must require owner approval before publication");
  }
  if(o.status==="ACTIVE"&&!o.acquisition?.headline) errors.push(p+": ACTIVE offer missing acquisition message");
 }
