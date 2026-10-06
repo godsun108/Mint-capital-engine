@@ -2,7 +2,7 @@
   "schema": "mint.pod.production-qualification.v1",
   "date": "2026-10-06",
   "product_family": "Orbital Garden",
-  "status": "PRINTFUL_274_RENDER_AND_ECONOMICS_VERIFIED_SAMPLE_QA_PENDING",
+  "status": "PRINTFUL_274_CONTROLLED_LAUNCH_PATH_SAMPLE_DEFERRED",
   "candidates": [
     {
       "product": "Cotton Color Tote Bag Westford Mill W101",
@@ -65,10 +65,27 @@
     "Public starting prices are not checkout quotes"
   ],
   "next_gate": [
-    "Owner approves any sample spend",
-    "Physical sample QA before publication",
-    "Finalize accurate listing measurements/material/care and channel disclosures",
-    "Explicit owner publication approval"
+    "Complete owned storefront -> Stripe -> Printful fulfillment loop",
+    "Verify order tracking and exception handling without spending",
+    "Explicit owner publication approval",
+    "Fund Orbital Garden #001 sample from factory revenue when practical",
+    "Physical sample QA before scale"
   ],
-  "publishable": false
+  "publishable": false,
+  "sample_qa": {
+    "status": "DEFERRED_BY_OWNER_FOR_CASH_PRESERVATION",
+    "required_before_first_sale": false,
+    "required_before_scale": true,
+    "reason": "Preserve cash while completing the real sale and fulfillment loop. First physical sample remains a milestone artifact and should be funded by factory revenue when practical.",
+    "milestone": "ORBITAL_GARDEN_001_FIRST_PHYSICAL_PRODUCTION_ARTIFACT"
+  },
+  "launch_policy": {
+    "mode": "CONTROLLED_PRE_SAMPLE_LAUNCH",
+    "physical_quality_verified": false,
+    "allowed": true,
+    "scale_allowed": false,
+    "customer_claims_must_not_imply_personal_physical_inspection": true,
+    "first_fulfilled_order_is_operational_evidence": true,
+    "freeze_on_quality_exception": true
+  }
 }
