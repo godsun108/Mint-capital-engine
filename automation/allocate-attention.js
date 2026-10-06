@@ -8,6 +8,7 @@ const router=read("automation/state/demand-router.json")||{routes:[]};
 const out={schema:"mint.allocation.state.v1",generatedAt:new Date().toISOString(),
  semantics:"ZERO_SPEND_ATTENTION_ALLOCATION_ONLY_NO_MONEY_MOVEMENT",allocations:{}};
 
+// Demand Router is the evidence-bearing source for authorized zero-spend routes.
 const routed=new Map();
 for(const r of router.routes||[]){
  if(r.permission!=="AUTHORIZED"||r.action!=="PUBLISH_AND_MEASURE") continue;
