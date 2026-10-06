@@ -12,6 +12,7 @@ on:
       - "automation/return-loop.js"
       - "automation/mandates.json"
       - "systems/catalog.json"
+      - "systems/commerce/catalog.json"
   schedule:
     - cron: "41 * * * *"
 permissions:
