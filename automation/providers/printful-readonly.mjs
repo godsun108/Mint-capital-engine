@@ -50,6 +50,13 @@ export async function productTemplates({ limit = 100, offset = 0 } = {}) {
   return get(`/product-templates?limit=${limit}&offset=${offset}`);
 }
 
+export async function variantPrices(productId) {
+  if (!Number.isInteger(Number(productId))) throw new Error("productId required");
+  const d = await catalogProduct(productId);
+  const variants = d?.result?.variants || d?.result?.product?.variants || [];
+  return variants.map(v => ({ id:v.id, name:v.name, price:v.price ?? null, currency:v.currency ?? null, in_stock:v.in_stock ?? null, availability_status:v.availability_status ?? null }));
+}
+
 export async function tokenScopes() {
   if (!process.env.PRINTFUL_TOKEN) throw new Error("PRINTFUL_TOKEN required");
   return get("/oauth/scopes");
