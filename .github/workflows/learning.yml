@@ -10,6 +10,8 @@ on:
       - "automation/prospector.js"
       - "automation/learn.js"
       - "automation/message-experiment.js"
+      - "automation/observe-acquisition.js"
+      - "automation/continuity-officer.js"
       - "package.json"
   schedule:
     - cron: "26 * * * *"
