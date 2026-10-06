@@ -1,6 +1,10 @@
 name: MINT SCOUT
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "scout/product_*.py"
   schedule:
     - cron: "41 */6 * * *"
 permissions:
