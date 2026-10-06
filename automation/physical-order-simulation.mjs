@@ -1,0 +1,7 @@
+import assert from "node:assert/strict";
+import {orchestratePhysicalOrder} from "./physical-order-orchestrator.mjs";
+const session={id:"cs_test_press_001",status:"complete",payment_status:"paid",currency:"usd",amount_total:4900,metadata:{mint_offer_id:"orbital-garden-tote-001"},customer_details:{name:"PRESS Test",email:"test@example.invalid",address:{line1:"1 Test Way",line2:null,city:"Testville",state:"FL",postal_code:"34990",country:"US"}}};
+const offer={id:"orbital-garden-tote-001",fulfillment:{kind:"PRINTFUL_POD",catalog_product_id:274,catalog_variant_id:9039,placement:"default",artwork:{url:"https://raw.githubusercontent.com/godsun108/Mint-capital-engine/04479b1/connect-demo/public/printful/orbital-garden-main-3150x5550.png",sha256:"6743eb6621ecfdce3fd3bcb2547e65feb9eec363dbe69e8c7da4b08b803bc10d"}}};
+const r=await orchestratePhysicalOrder({session,offer});
+assert.equal(r.mode,"ZERO_SPEND_SIMULATION");assert.equal(r.order.state,"CONTRACT_READY");assert.equal(r.dryRun.orderCreated,false);assert.equal(r.dryRun.spend,false);assert.equal(r.contract.external_id,"mint-cs_test_press_001");assert.equal(r.contract.items[0].variant_id,9039);
+console.log("PRESS PHYSICAL ORDER ZERO-SPEND SIMULATION PASS",JSON.stringify({state:r.order.state,externalId:r.contract.external_id,variant:r.contract.items[0].variant_id,orderCreated:r.dryRun.orderCreated,spend:r.dryRun.spend}));
