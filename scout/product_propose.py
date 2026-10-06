@@ -18,7 +18,7 @@ def main():
  for cluster in syn.get("clusters",[]):
   if not cluster.get("promotionEligible"): continue
   topic=cluster.get("topic"); group=groups.get(topic,{})
-  by_url={o.get("url"):o for o in group.get("observations",[]) if o.get("verified") is True and o.get("url")}
+  by_url={o.get("url"):o for o in group.get("observations",[]) if (o.get("sourceVerified") is True or o.get("verified") is True) and o.get("url")}
   used=[]
   for pair in cluster.get("relatedPairs",[]):
    for url in (pair.get("a"),pair.get("b")):
