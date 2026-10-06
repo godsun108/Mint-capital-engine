@@ -1,6 +1,6 @@
 {
   "schema": "mint.demand_router.v1",
-  "generated_at": "2026-10-06T19:54:23.252Z",
+  "generated_at": "2026-10-06T21:44:32.873Z",
   "semantics": "ROUTING_OPPORTUNITIES_NOT_TRAFFIC_NOT_CUSTOMERS",
   "routes": [
     {
@@ -31,11 +31,12 @@
       "brand": "foundry",
       "route": "gumroad",
       "class": "THIRD_PARTY_APPROVED_BRAND_CHANNEL",
-      "permission": "APPROVED_CHANNEL_BUT_PUBLISH_POLICY_APPLIES",
-      "action": "PREPARE_PRESENTATION",
+      "permission": "PUBLISHED_EVIDENCED_REVERIFY_PROVIDER_STATE",
+      "action": "MEASURE_AND_REVERIFY",
       "cost_usd": 0,
       "source_count": 3,
-      "score": 80
+      "score": 90,
+      "evidence_note": "Prior operator verification established authenticated Gumroad access and a published Foundry Express TypeScript Starter listing. Re-verify provider state before inferring current availability, traffic, sales, payouts, or settlement."
     },
     {
       "offer_id": "foundry-express-ts-001",
