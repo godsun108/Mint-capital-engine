@@ -1,0 +1,23 @@
+name: Orbital Garden Economics
+on:
+  workflow_dispatch:
+jobs:
+  economics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Current supplier economics
+        env:
+          PRINTFUL_TOKEN: ${{ secrets.PRINTFUL_TOKEN }}
+          PRINTFUL_STORE_ID: ${{ secrets.PRINTFUL_STORE_ID }}
+        run: npm run orbital-garden:economics
+      - uses: actions/upload-artifact@v4
+        with:
+          name: orbital-garden-economics
+          path: connect-demo/exports/physical/orbital-garden-economics.json
+          if-no-files-found: error
