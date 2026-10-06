@@ -1,7 +1,7 @@
 import fs from "node:fs";
 import { catalogProducts, catalogProduct, layoutTemplates, printFiles, capabilities } from "./providers/printful-readonly.mjs";
 
-const terms = (process.argv.slice(2).length ? process.argv.slice(2) : ["w101","westford","cotton color tote","cotton tote"]).map(x=>x.toLowerCase());
+const terms = (process.argv.slice(2).length ? process.argv.slice(2) : ["all-over print tote","all over print tote","tote"]).map(x=>x.toLowerCase());
 let offset=0, all=[];
 for(let page=0;page<30;page++){
   const data=await catalogProducts({limit:100,offset});
