@@ -1,0 +1,17 @@
+import fs from "node:fs";
+import { variantPrices, capabilities } from "./providers/printful-readonly.mjs";
+const productId=274, variantId=9039;
+const prices=await variantPrices(productId);
+const v=prices.find(x=>Number(x.id)===variantId);
+if(!v||v.price==null) throw Error("Current supplier price unavailable for variant 9039");
+const supplier=Number(v.price);
+const candidates=[39,44,49,54,59];
+const feeRate=Number(process.env.SELLER_FEE_RATE||0);
+const feeFixed=Number(process.env.SELLER_FEE_FIXED||0);
+const shipping=process.env.SHIPPING_SUBSIDY==null?null:Number(process.env.SHIPPING_SUBSIDY);
+const returns=process.env.RETURNS_SUPPORT_ALLOWANCE==null?null:Number(process.env.RETURNS_SUPPORT_ALLOWANCE);
+const rows=candidates.map(salePrice=>{const knownFees=salePrice*feeRate+feeFixed;const knownMargin=salePrice-supplier-knownFees;const fullMargin=shipping==null||returns==null?null:knownMargin-shipping-returns;return {salePrice,supplierBaseCost:supplier,sellerFees:knownFees,shippingSubsidy:shipping,returnsSupportAllowance:returns,knownMarginBeforeShippingReturns:knownMargin,fullContributionMargin:fullMargin,fullContributionMarginPct:fullMargin==null?null:fullMargin/salePrice};});
+const out={schema:"mint.orbital-garden.economics.v1",observedAt:new Date().toISOString(),productId,variantId,currency:v.currency||"USD",supplierPriceEvidence:v,assumptions:{sellerFeeRate:feeRate,sellerFeeFixed:feeFixed,shippingSubsidy:shipping,returnsSupportAllowance:returns},candidates:rows,gates:{supplierBasePrice:"PASS",shippingQuote:shipping==null?"PENDING":"PROVIDED",sellerFees:feeRate===0&&feeFixed===0?"PENDING_OR_ZERO":"PROVIDED",returnsSupportAllowance:returns==null?"PENDING":"PROVIDED",positiveContributionMarginVerified:rows.some(x=>x.fullContributionMargin>0)?"PASS":"PENDING"},publication:"BLOCKED"};
+if(capabilities.orders||capabilities.spend||capabilities.productWrites) throw Error("Unsafe Printful capability");
+fs.mkdirSync("connect-demo/exports/physical",{recursive:true});fs.writeFileSync("connect-demo/exports/physical/orbital-garden-economics.json",JSON.stringify(out,null,2)+"\n");
+console.log("ORBITAL GARDEN ECONOMICS:",JSON.stringify(out));
