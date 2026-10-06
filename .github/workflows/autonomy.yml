@@ -5,6 +5,9 @@ on:
     - cron: "23 * * * *"
 permissions:
   contents: write
+concurrency:
+  group: mint-autonomy-control-plane
+  cancel-in-progress: false
 jobs:
   evaluate:
     runs-on: ubuntu-latest
@@ -18,5 +21,16 @@ jobs:
           git config user.name "mint-autonomy"
           git config user.email "actions@users.noreply.github.com"
           git add automation/queue.json
-          git diff --cached --quiet || git commit -m "MINT refresh autonomy queue"
-          git push
+          if git diff --cached --quiet; then exit 0; fi
+          git commit -m "MINT refresh autonomy queue"
+          # Other autonomous writers may advance main while this run evaluates.
+          # Preserve the queue by rebasing and retrying; never force-push.
+          for attempt in 1 2 3; do
+            if git push; then exit 0; fi
+            echo "Push raced with another worker; rebasing attempt $attempt/3"
+            git fetch origin main
+            git rebase origin/main
+            sleep $((attempt * 2))
+          done
+          echo "Unable to persist autonomy queue after bounded retries"
+          exit 1
