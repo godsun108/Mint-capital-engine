@@ -34,8 +34,32 @@ const fulfillmentPath=path.join(fulfillmentDir,'fulfillment-receipts.json');
 function readFulfillmentReceipts(){try{return JSON.parse(readFileSync(fulfillmentPath,'utf8'))}catch{return {schema:'mint.fulfillment.receipts.v1',receipts:{}}}}
 function writeFulfillmentReceipts(x){mkdirSync(fulfillmentDir,{recursive:true});const tmp=fulfillmentPath+'.tmp';writeFileSync(tmp,JSON.stringify(x,null,2)+'\n');renameSync(tmp,fulfillmentPath)}
 const acquisitionStartedAt=new Date().toISOString();
+
+// Gumroad OAuth bridge. Credentials belong in the deployment secret store, never Git.
+// The callback is intentionally useful before credentials exist: Gumroad can register
+// this stable HTTPS redirect URI now; token exchange is enabled only after secrets land.
+const gumroadClientId=process.env.GUMROAD_CLIENT_ID||'';
+const gumroadClientSecret=process.env.GUMROAD_CLIENT_SECRET||'';
+const gumroadRedirectUri=process.env.GUMROAD_REDIRECT_URI||(APP_URL+'/integrations/gumroad/callback');
+const gumroadConfigured=Boolean(gumroadClientId&&gumroadClientSecret);
+
 const acquisitionCounters=new Map();
 function countAcquisition(event,source){const key=source+'|'+event;acquisitionCounters.set(key,(acquisitionCounters.get(key)||0)+1);}
+
+async function gumroadCallback(u,res){
+  const error=u.searchParams.get('error');
+  if(error)return send(res,400,{ok:false,provider:'gumroad',error});
+  const code=u.searchParams.get('code');
+  if(!code)return send(res,200,{ok:true,provider:'gumroad',callbackReady:true,configured:gumroadConfigured,redirectUri:gumroadRedirectUri,message:'Gumroad OAuth callback is reachable. Authorization code required for token exchange.'});
+  if(!gumroadConfigured)return send(res,503,{ok:false,provider:'gumroad',callbackReady:true,configured:false,error:'Set GUMROAD_CLIENT_ID and GUMROAD_CLIENT_SECRET in the deployment secret store before authorizing.'});
+  const form=new URLSearchParams({client_id:gumroadClientId,client_secret:gumroadClientSecret,code,grant_type:'authorization_code',redirect_uri:gumroadRedirectUri});
+  const response=await fetch('https://app.gumroad.com/oauth/token',{method:'POST',headers:{'content-type':'application/x-www-form-urlencoded','accept':'application/json'},body:form});
+  const payload=await response.json().catch(()=>({}));
+  if(!response.ok||!payload.access_token)return send(res,502,{ok:false,provider:'gumroad',error:'OAuth token exchange failed.',status:response.status});
+  // Deliberately do not print, persist, or return the access token. Durable secret
+  // storage is a separate deployment concern; fail closed rather than leak a token.
+  return send(res,200,{ok:true,provider:'gumroad',authorized:true,tokenReceived:true,tokenPersisted:false,next:'Store the returned token through the deployment secret workflow; this callback intentionally does not expose it.'});
+}
 
 const PAGES_ORIGIN='https://godsun108.github.io';
 const acquisitionCors={'access-control-allow-origin':PAGES_ORIGIN,'access-control-allow-methods':'GET, POST, OPTIONS','access-control-allow-headers':'content-type','vary':'Origin'};
@@ -336,7 +360,8 @@ const server=http.createServer(async(req,res)=>{
       return await acquisitionEvent(req,res);
     }
     if(req.method==='GET'&&u.pathname==='/api/acquisition/state')return acquisitionState(res);
-    if(req.method==='GET'&&u.pathname==='/health')return send(res,200,{ok:true,stripeConfigured,webhookConfigured:Boolean(process.env.STRIPE_WEBHOOK_SECRET),durableFulfillmentStorage:durableStateConfigured,fgeEnabled:process.env.FGE_ENABLED==='true'});
+    if(req.method==='GET'&&u.pathname==='/health')return send(res,200,{ok:true,stripeConfigured,webhookConfigured:Boolean(process.env.STRIPE_WEBHOOK_SECRET),durableFulfillmentStorage:durableStateConfigured,fgeEnabled:process.env.FGE_ENABLED==='true',gumroad:{callbackReady:true,configured:gumroadConfigured,redirectUri:gumroadRedirectUri}});
+    if(req.method==='GET'&&u.pathname==='/integrations/gumroad/callback')return await gumroadCallback(u,res);
     if(req.method==='GET'&&u.pathname==='/api/fge/state')return send(res,200,{ok:true,runtime:getRuntimeState()});
     if(req.method==='GET'&&u.pathname==='/api/stripe-check') { const s=requireStripe(); const balance=await s.balance.retrieve(); const products=await s.products.list({limit:1}); return send(res,200,{ok:true,stripeAuthenticated:true,livemode:balance.livemode,testMode:balance.livemode===false,catalogReadable:true}); }
     if(req.method==='OPTIONS'&&u.pathname==='/api/acquisition/event'){res.writeHead(204,acquisitionCors);return res.end();}
