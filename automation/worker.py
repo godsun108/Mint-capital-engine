@@ -15,7 +15,7 @@ def main():
     candidates=[]
     for x in inv.get("items",[]):
         if not x.get("verified"): continue
-        y=dict(x); y["demand_evidence"]=float(demand.get(x["id"],{}).get("demand_evidence",0)); y["score"]=score(y); y["state"]="DEMAND_EVIDENCED" if y["demand_evidence"]>0 else "RESEARCH_DEMAND"; y["external_action_performed"]=False
+        y=dict(x); y["demand_evidence"]=float(demand.get(x["id"],{}).get("demand_evidence",0)); y["score"]=score(y); y["demand_observation_count"]=int(demand.get(x["id"],{}).get("observation_count",0)); y["state"]="DEMAND_EVIDENCED" if y["demand_observation_count"]>=2 else ("PROBLEM_SIGNAL" if y["demand_observation_count"]>0 else "RESEARCH_DEMAND"); y["external_action_performed"]=False
         candidates.append(y)
     candidates.sort(key=lambda z:z["score"],reverse=True)
     (ROOT/"automation"/"product_candidates.json").write_text(json.dumps({"schema":"mint.product_candidates.v1","generated_at":now,"items":candidates,"semantics":"CANDIDATE_ONLY"},indent=2))
