@@ -1,0 +1,55 @@
+{
+  "schema": "mint.return_loop.v1",
+  "generated_at": "2026-10-06T17:46:10.637Z",
+  "semantics": "SOURCE_AWARE_SOLUTION_PRESENTATION_PREPARATION_NOT_OUTREACH",
+  "items": [
+    {
+      "candidate_id": "ip:foundry-scaffold",
+      "offer_id": "foundry-express-ts-001",
+      "offer_name": "Foundry Express TypeScript Starter",
+      "state": "READY_TO_PRESENT",
+      "problem_sources": [
+        {
+          "url": "https://www.reddit.com/r/webdev/comments/1wlng6f/how_do_you_scaffold_an_express_project/",
+          "kind": "community_problem_report",
+          "observed_need": "Developer reports spending substantial time configuring an Express + TypeScript project and asks for Vite-like boilerplate/scaffolding."
+        },
+        {
+          "url": "https://www.reddit.com/r/node/comments/1todv0p/my_express_5_typescript_6_boilerplate_after_years/",
+          "kind": "community_problem_report",
+          "observed_need": "Developer reports repeatedly spending the first day of new Node API projects wiring the same Express and TypeScript setup before business logic."
+        },
+        {
+          "url": "https://www.reddit.com/r/microsaas/comments/1wymhtd/opensource_boilerplate_a_backtobasics_nodeexpress/",
+          "kind": "community_product_problem_report",
+          "observed_need": "Developer identifies a gap between bloated commercial templates and under-tested quick starters and proposes a modular Node/Express starter emphasizing tests, deployment pipelines and documentation."
+        }
+      ],
+      "presentation": {
+        "headline": "Skip the blank Express + TypeScript setup.",
+        "body": "A $9 reusable starter with strict TypeScript, Express, JSON middleware, a health route, environment example, and dev/build/start scripts.",
+        "destination": "https://mint-stripe-connect-v4-production.up.railway.app/offers?offer=foundry-express-ts-001&src=return_loop",
+        "disclosure": "Relevant solution from MINT; no guaranteed outcome or fabricated endorsement."
+      },
+      "channel_policy": {
+        "owned_channels": [
+          "github-pages",
+          "mint-direct-web"
+        ],
+        "community_return": "PREPARE_ONLY_UNLESS_CHANNEL_RULES_AND_AUTHORIZATION_ALLOW_AUTOMATION",
+        "unsolicited_direct_message": false,
+        "impersonation": false,
+        "spam": false
+      },
+      "measurement": [
+        "REAL_VISIT",
+        "CHECKOUT",
+        "PAID",
+        "FULFILLED",
+        "PROVIDER_AVAILABLE",
+        "SETTLED"
+      ],
+      "external_action_performed": false
+    }
+  ]
+}
