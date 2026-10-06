@@ -1,0 +1,26 @@
+name: Orbital Garden Readiness
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  readiness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Safety contract
+        run: npm run printful:safety
+      - name: Capture current product economics and token scopes
+        env:
+          PRINTFUL_TOKEN: ${{ secrets.PRINTFUL_TOKEN }}
+          PRINTFUL_STORE_ID: ${{ secrets.PRINTFUL_STORE_ID }}
+        run: npm run orbital-garden:readiness
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: orbital-garden-readiness
+          path: connect-demo/exports/physical/orbital-garden-readiness.json
+          if-no-files-found: error
