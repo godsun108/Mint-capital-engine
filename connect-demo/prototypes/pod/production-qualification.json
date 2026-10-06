@@ -2,7 +2,7 @@
   "schema": "mint.pod.production-qualification.v1",
   "date": "2026-10-06",
   "product_family": "Orbital Garden",
-  "status": "PRINTFUL_274_GEOMETRY_AND_VECTOR_QA_VERIFIED_MOCKUP_PENDING",
+  "status": "PRINTFUL_274_SUPPLIER_RENDER_VERIFIED_SAMPLE_AND_ECONOMICS_PENDING",
   "candidates": [
     {
       "product": "Cotton Color Tote Bag Westford Mill W101",
@@ -40,8 +40,8 @@
       },
       "api_discovery": "VERIFIED",
       "vector_geometry_qa": "PASS",
-      "supplier_upload_validation": "PENDING",
-      "supplier_mockup": "PENDING",
+      "supplier_upload_validation": "PASS",
+      "supplier_mockup": "PASS_TASK_979593343_FRONT_VARIANT_9039_STYLE_16394",
       "sample_qa": "PENDING",
       "current_cost_quote": "PENDING"
     }
@@ -53,8 +53,7 @@
     "Public starting prices are not checkout quotes"
   ],
   "next_gate": [
-    "Validate accepted raster/export against Printful product 274",
-    "Generate supplier mockup from approved production art",
+    "Preserve and visually review supplier render",
     "Capture current product + shipping quote and fees",
     "Owner approves any sample spend",
     "Physical sample QA before publication"
