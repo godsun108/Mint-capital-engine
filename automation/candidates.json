@@ -28,24 +28,72 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/Meeovi/AlternateFramework/issues/4",
-          "observedAt": "2026-10-06T22:47:18.589611+00:00",
+          "url": "https://github.com/sumathi-thirumani/court-interpreter-scheduling/issues/133",
+          "observedAt": "2026-10-07T06:26:23.567919+00:00",
           "verified": true,
-          "claim": "Dependency Dashboard"
+          "claim": "[Security Remediation] [npm] [Vue CLI]"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/sumathi-thirumani/court-interpreter-scheduling/issues/122",
+          "observedAt": "2026-10-07T06:26:23.567922+00:00",
+          "verified": true,
+          "claim": "[Security Remediation] [npm] [Vue CLI]"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/sumathi-thirumani/court-interpreter-scheduling/issues/111",
+          "observedAt": "2026-10-07T06:26:23.567924+00:00",
+          "verified": true,
+          "claim": "[Security Remediation] [npm] [Vue CLI]"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/sumathi-thirumani/court-interpreter-scheduling/issues/100",
+          "observedAt": "2026-10-07T06:26:23.567926+00:00",
+          "verified": true,
+          "claim": "[Security Remediation] [npm] [Vue CLI]"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/sumathi-thirumani/court-interpreter-scheduling/issues/90",
+          "observedAt": "2026-10-07T06:26:23.567933+00:00",
+          "verified": true,
+          "claim": "[Security Remediation] [npm] [Vue CLI]"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "observedAt": "2026-10-06T22:47:18.589632+00:00",
+          "observedAt": "2026-10-07T06:26:23.567936+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/TravisPooley/vulhub/issues/4",
-          "observedAt": "2026-10-06T22:47:18.589651+00:00",
+          "url": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
+          "observedAt": "2026-10-07T06:26:23.567938+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/cath-service/issues/3",
+          "observedAt": "2026-10-07T06:26:23.567940+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/pip-frontend/issues/1109",
+          "observedAt": "2026-10-07T06:26:23.567945+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -53,7 +101,15 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/hmcts/juror-er-portal/issues/1",
-          "observedAt": "2026-10-06T22:47:18.589657+00:00",
+          "observedAt": "2026-10-07T06:26:23.567947+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/appreg-frontend/issues/2",
+          "observedAt": "2026-10-07T06:26:23.567951+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -61,7 +117,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/hmcts/sptribs-frontend/issues/444",
-          "observedAt": "2026-10-06T22:47:18.589659+00:00",
+          "observedAt": "2026-10-07T06:26:23.567953+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         }
@@ -69,7 +125,7 @@
       "status": "DISCOVERED_SOURCE_BACKED",
       "provenance": {
         "proposalId": "proposal:express-auth:001",
-        "promotedAt": "2026-10-06T22:47:26.441567+00:00",
+        "promotedAt": "2026-10-07T06:26:29.804151+00:00",
         "semantics": "SOURCE_BACKED_CANDIDATE_RESEARCH_STILL_REQUIRED"
       }
     }
