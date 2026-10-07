@@ -1,13 +1,13 @@
 {
   "schema": "mint.distribution.state.v1",
-  "generatedAt": "2026-10-06T23:07:25.022Z",
+  "generatedAt": "2026-10-07T00:49:32.839Z",
   "semantics": "GENERATED_OWNED_SURFACES_PUBLIC_ONLY_IF_HOST_DEPLOYS_DOCS",
   "published": [
     {
       "offerId": "foundry-express-ts-001",
-      "source": "github-pages",
-      "path": "docs/market/foundry-express-ts-001/github-pages/index.html",
-      "destination": "https://mint-stripe-connect-v4-production.up.railway.app/offers?offer=foundry-express-ts-001&src=github-pages"
+      "source": "mint-direct-web",
+      "path": "docs/market/foundry-express-ts-001/mint-direct-web/index.html",
+      "destination": "https://mint-stripe-connect-v4-production.up.railway.app/offers?offer=foundry-express-ts-001&src=mint-direct-web"
     }
   ]
 }

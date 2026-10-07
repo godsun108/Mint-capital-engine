@@ -1,21 +1,21 @@
 {
   "schema": "mint.market.motion.v1",
-  "generatedAt": "2026-10-06T23:07:24.762Z",
+  "generatedAt": "2026-10-07T00:49:32.618Z",
   "semantics": "ZERO_SPEND_OWNED_CHANNEL_PREPARATION_ONLY",
   "explorationAttempts": {
-    "foundry-express-ts-001": 7
+    "foundry-express-ts-001": 8
   },
   "reviewPolicy": "FOUR_ZERO_BEHAVIOR_EXPLORATION_CYCLES_RECOMMEND_OFFER_OR_MESSAGE_REVIEW_NOT_AUTOMATIC_RETIREMENT",
   "results": [
     {
       "offerId": "foundry-express-ts-001",
       "attentionWeight": 1,
-      "explorationAttempt": 7,
+      "explorationAttempt": 8,
       "reviewRecommended": true,
-      "messageExperimentApplied": false,
+      "messageExperimentApplied": true,
       "ok": true,
-      "campaignPath": "systems/acquisition/generated/foundry-express-ts-001/github-pages.json",
-      "destination": "https://mint-stripe-connect-v4-production.up.railway.app/offers?offer=foundry-express-ts-001&src=github-pages",
+      "campaignPath": "systems/acquisition/generated/foundry-express-ts-001/mint-direct-web.json",
+      "destination": "https://mint-stripe-connect-v4-production.up.railway.app/offers?offer=foundry-express-ts-001&src=mint-direct-web",
       "status": "READY_OWNED_CHANNEL"
     }
   ]
