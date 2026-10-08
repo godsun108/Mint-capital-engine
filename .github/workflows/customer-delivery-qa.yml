@@ -1,0 +1,26 @@
+name: Customer delivery artifact QA
+on:
+  pull_request:
+    paths: ['products/**', 'connect-demo/deliverables/**', 'connect-demo/catalog.json', 'systems/commerce/catalog.json', 'automation/build-customer-packages.py', 'tests/customer-packages.test.py', '.github/workflows/customer-delivery-qa.yml']
+  push:
+    branches: [main]
+    paths: ['products/**', 'connect-demo/deliverables/**', 'connect-demo/catalog.json', 'systems/commerce/catalog.json', 'automation/build-customer-packages.py', 'tests/customer-packages.test.py', '.github/workflows/customer-delivery-qa.yml']
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: python3 tests/customer-packages.test.py
+      - run: node tests/portfolio-storefront.test.mjs
+      - name: Build the actual downloadable starter
+        run: |
+          python3 -m zipfile -e connect-demo/deliverables/foundry-express-ts/foundry-express-ts-starter.zip "$RUNNER_TEMP/customer-starter"
+          cd "$RUNNER_TEMP/customer-starter"
+          npm install --ignore-scripts --no-audit --no-fund
+          npm run build
