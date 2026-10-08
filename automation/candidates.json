@@ -28,24 +28,8 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/pip-frontend/issues/1109",
-          "observedAt": "2026-10-07T23:18:29.845675+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
           "url": "https://github.com/hmcts/appreg-frontend/issues/2",
-          "observedAt": "2026-10-07T23:18:29.845677+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/hmcts/juror-er-portal/issues/1",
-          "observedAt": "2026-10-07T23:18:29.845689+00:00",
+          "observedAt": "2026-10-08T06:38:08.744528+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -53,7 +37,31 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "observedAt": "2026-10-07T23:18:29.845703+00:00",
+          "observedAt": "2026-10-08T06:38:08.744533+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/juror-er-portal/issues/1",
+          "observedAt": "2026-10-08T06:38:08.744545+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/orgtoar/redwood-test/issues/286",
+          "observedAt": "2026-10-08T06:38:08.744547+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/mitodl/mitxpro/issues/2711",
+          "observedAt": "2026-10-08T06:38:08.744550+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         }
@@ -61,7 +69,7 @@
       "status": "DISCOVERED_SOURCE_BACKED",
       "provenance": {
         "proposalId": "proposal:express-auth:001",
-        "promotedAt": "2026-10-07T23:18:36.840748+00:00",
+        "promotedAt": "2026-10-08T06:38:18.211631+00:00",
         "semantics": "SOURCE_BACKED_CANDIDATE_RESEARCH_STILL_REQUIRED"
       }
     }
