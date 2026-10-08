@@ -181,16 +181,24 @@ async function createProduct(req,res){
 }
 
 async function storefront(res){
-  // List V2 connected accounts from Stripe itself and retrieve current status for each.
-  const accountPage=await stripeClient.v2.core.accounts.list();
+  // Connected-account status is supplementary to the owned product catalog. If
+  // Stripe withholds that permission, keep the public storefront usable and
+  // expose a truthful degraded status instead of returning a generic 500.
   const accounts=[];
-  for(const a of accountPage.data||[]){
-    const current=await stripeClient.v2.core.accounts.retrieve(a.id,{include:['configuration.recipient','requirements']});
-    accounts.push({...current,...onboardingState(current)});
+  let accountsStatus='available';
+  try{
+    const accountPage=await stripeClient.v2.core.accounts.list();
+    for(const a of accountPage.data||[]){
+      const current=await stripeClient.v2.core.accounts.retrieve(a.id,{include:['configuration.recipient','requirements']});
+      accounts.push({...current,...onboardingState(current)});
+    }
+  }catch(e){
+    accountsStatus='unavailable';
+    console.warn('MINT_STOREFRONT_DEGRADED',JSON.stringify({type:e?.type||'unknown',code:e?.code||'unknown'}));
   }
   // Expand default_price so the browser can render the platform catalog without another secret-key request.
   const products=await stripeClient.products.list({limit:100,active:true,expand:['data.default_price']});
-  send(res,200,{accounts,products:products.data});
+  send(res,200,{accounts,accountsStatus,products:products.data});
 }
 
 async function checkout(req,res){
