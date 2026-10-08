@@ -3,10 +3,10 @@
 A compact launch pack for builders taking a small technical product from blank project to published customer experience.
 
 ## Included
-1. **Foundry Express + TypeScript Starter guide** — a reusable Express/TypeScript starting structure.
-2. **API Launch Checklist** — runtime, request-boundary, failure-test, deployment and API-customer preflight.
-3. **Small Website Launch Checklist** — messaging, mobile, discovery, trust and customer-journey final pass.
-4. **Practical AI Workflow Kit** — reusable DEFINE → RESEARCH → BUILD → CRITIQUE → VERIFY → SHIP → MEASURE workflow.
+1. **Foundry Express + TypeScript Starter** — complete source files in `foundry-express-ts/`.
+2. **API Launch Checklist** (`api-launch-checklist/README.md`) — runtime, request-boundary, failure-test, deployment and API-customer preflight.
+3. **Small Website Launch Checklist** (`site-launch-checklist/README.md`) — messaging, mobile, discovery, trust and customer-journey final pass.
+4. **Practical AI Workflow Kit** (`ai-workflow-kit/README.md`) — reusable DEFINE → RESEARCH → BUILD → CRITIQUE → VERIFY → SHIP → MEASURE workflow.
 
 ## Suggested sequence
 
