@@ -28,16 +28,24 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/appreg-frontend/issues/2",
-          "observedAt": "2026-10-08T06:38:08.744528+00:00",
+          "url": "https://github.com/guy915/Co-Scientist/issues/453",
+          "observedAt": "2026-10-08T14:01:47.356089+00:00",
           "verified": true,
-          "claim": "Dependency Dashboard"
+          "claim": "Campaign board: launch finish"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "observedAt": "2026-10-08T06:38:08.744533+00:00",
+          "url": "https://github.com/guy915/Co-Scientist/issues/332",
+          "observedAt": "2026-10-08T14:01:47.356118+00:00",
+          "verified": true,
+          "claim": "Campaign board: re-architecture"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/mitodl/mitxpro/issues/2711",
+          "observedAt": "2026-10-08T14:01:47.356123+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -45,31 +53,71 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/hmcts/juror-er-portal/issues/1",
-          "observedAt": "2026-10-08T06:38:08.744545+00:00",
+          "observedAt": "2026-10-08T14:01:47.356125+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/orgtoar/redwood-test/issues/286",
-          "observedAt": "2026-10-08T06:38:08.744547+00:00",
+          "url": "https://github.com/hmcts/appreg-frontend/issues/2",
+          "observedAt": "2026-10-08T14:01:47.356126+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/mitodl/mitxpro/issues/2711",
-          "observedAt": "2026-10-08T06:38:08.744550+00:00",
+          "url": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "observedAt": "2026-10-08T14:01:47.356131+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/wa-message-cron-service/issues/205",
+          "observedAt": "2026-10-08T14:01:47.356132+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/pip-frontend/issues/1109",
+          "observedAt": "2026-10-08T14:01:47.356134+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/wa-task-batch-service/issues/87",
+          "observedAt": "2026-10-08T14:01:47.356137+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/UK-Export-Finance/dtfs2/issues/4589",
+          "observedAt": "2026-10-08T14:01:47.356128+00:00",
+          "verified": true,
+          "claim": "tfm-api-1.0.0.tgz: 45 vulnerabilities (highest severity is: 10.0)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/UK-Export-Finance/dtfs2/issues/2925",
+          "observedAt": "2026-10-08T14:01:47.356129+00:00",
+          "verified": true,
+          "claim": "tfm-ui-1.0.0.tgz: 49 vulnerabilities (highest severity is: 10.0)"
         }
       ],
       "status": "DISCOVERED_SOURCE_BACKED",
       "provenance": {
         "proposalId": "proposal:express-auth:001",
-        "promotedAt": "2026-10-08T06:38:18.211631+00:00",
+        "promotedAt": "2026-10-08T14:01:56.873488+00:00",
         "semantics": "SOURCE_BACKED_CANDIDATE_RESEARCH_STILL_REQUIRED"
       }
     }
