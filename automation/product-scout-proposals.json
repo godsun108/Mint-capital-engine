@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.proposals.v1",
-  "generatedAt": "2026-10-08T14:01:56.833419+00:00",
+  "generatedAt": "2026-10-08T23:33:18.397906+00:00",
   "semantics": "RESEARCH_PROPOSALS_NOT_PRODUCT_CANDIDATES",
   "proposals": [
     {
@@ -13,24 +13,16 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/guy915/Co-Scientist/issues/453",
-          "observedAt": "2026-10-08T14:01:47.356089+00:00",
+          "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "observedAt": "2026-10-08T23:33:09.446140+00:00",
           "verified": true,
-          "claim": "Campaign board: launch finish"
+          "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/guy915/Co-Scientist/issues/332",
-          "observedAt": "2026-10-08T14:01:47.356118+00:00",
-          "verified": true,
-          "claim": "Campaign board: re-architecture"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/mitodl/mitxpro/issues/2711",
-          "observedAt": "2026-10-08T14:01:47.356123+00:00",
+          "url": "https://github.com/Stooa/Stooa/issues/186",
+          "observedAt": "2026-10-08T23:33:09.446145+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -38,15 +30,15 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/hmcts/juror-er-portal/issues/1",
-          "observedAt": "2026-10-08T14:01:47.356125+00:00",
+          "observedAt": "2026-10-08T23:33:09.446160+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/appreg-frontend/issues/2",
-          "observedAt": "2026-10-08T14:01:47.356126+00:00",
+          "url": "https://github.com/mitodl/mitxpro/issues/2711",
+          "observedAt": "2026-10-08T23:33:09.446162+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -54,7 +46,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
-          "observedAt": "2026-10-08T14:01:47.356131+00:00",
+          "observedAt": "2026-10-08T23:33:09.446164+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -62,71 +54,9 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/hmcts/wa-message-cron-service/issues/205",
-          "observedAt": "2026-10-08T14:01:47.356132+00:00",
+          "observedAt": "2026-10-08T23:33:09.446165+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/hmcts/pip-frontend/issues/1109",
-          "observedAt": "2026-10-08T14:01:47.356134+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/hmcts/wa-task-batch-service/issues/87",
-          "observedAt": "2026-10-08T14:01:47.356137+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/UK-Export-Finance/dtfs2/issues/4589",
-          "observedAt": "2026-10-08T14:01:47.356128+00:00",
-          "verified": true,
-          "claim": "tfm-api-1.0.0.tgz: 45 vulnerabilities (highest severity is: 10.0)"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/UK-Export-Finance/dtfs2/issues/2925",
-          "observedAt": "2026-10-08T14:01:47.356129+00:00",
-          "verified": true,
-          "claim": "tfm-ui-1.0.0.tgz: 49 vulnerabilities (highest severity is: 10.0)"
-        }
-      ],
-      "guardrails": [
-        "proposal_is_not_verified_demand",
-        "research_must_define_customer_and_problem",
-        "no_build_before_product_gate"
-      ]
-    },
-    {
-      "id": "proposal:venture-economics:001",
-      "topic": "venture-economics",
-      "status": "PROPOSED_FOR_RESEARCH",
-      "regulated": false,
-      "upfrontCostUsd": 0,
-      "evidence": [
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/thomaschurchadams-eng/work-feel/issues/160",
-          "observedAt": "2026-10-08T14:01:48.340369+00:00",
-          "verified": true,
-          "claim": "CUAI Agent Bus \u2014 Runtime Handoffs"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/yasinkaya701/bouncampus/issues/8",
-          "observedAt": "2026-10-08T14:01:48.340377+00:00",
-          "verified": true,
-          "claim": "[Agent Bus] BOUNCAMPUS multi-agent coordination channel"
         }
       ],
       "guardrails": [
@@ -146,7 +76,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/AtomChen0425/Global_Trends/issues/191",
-          "observedAt": "2026-10-08T14:01:49.299508+00:00",
+          "observedAt": "2026-10-08T23:33:11.277258+00:00",
           "verified": true,
           "claim": "\ud83c\udf10 Global Tech Briefing - 2026-08-27"
         },
@@ -154,9 +84,39 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/AtomChen0425/Global_Trends/issues/125",
-          "observedAt": "2026-10-08T14:01:49.299514+00:00",
+          "observedAt": "2026-10-08T23:33:11.277264+00:00",
           "verified": true,
           "claim": "\ud83c\udf10 Global Tech Briefing - 2026-06-21"
+        }
+      ],
+      "guardrails": [
+        "proposal_is_not_verified_demand",
+        "research_must_define_customer_and_problem",
+        "no_build_before_product_gate"
+      ]
+    },
+    {
+      "id": "proposal:software-release-contract:001",
+      "topic": "software-release-contract",
+      "status": "PROPOSED_FOR_RESEARCH",
+      "regulated": false,
+      "upfrontCostUsd": 0,
+      "evidence": [
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/cody-hutson/pmo-platform/issues/7818",
+          "observedAt": "2026-10-08T23:33:12.181122+00:00",
+          "verified": true,
+          "claim": "Stage 7 Dev Testing \u2014 #7199 (controls-fail-loud)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/cody-hutson/pmo-platform/issues/7683",
+          "observedAt": "2026-10-08T23:33:12.181134+00:00",
+          "verified": true,
+          "claim": "Stage 4 Release Planning \u2014 controls-fail-loud"
         }
       ],
       "guardrails": [
@@ -176,7 +136,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/lamontaes/Political-Game-Git/issues/2424",
-          "observedAt": "2026-10-08T14:01:51.385877+00:00",
+          "observedAt": "2026-10-08T23:33:13.078004+00:00",
           "verified": true,
           "claim": "Team status board (continued from #2052)"
         },
@@ -184,9 +144,39 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Uuriko/project-room/issues/266",
-          "observedAt": "2026-10-08T14:01:51.385879+00:00",
+          "observedAt": "2026-10-08T23:33:13.078006+00:00",
           "verified": true,
           "claim": "Claims board (continued from #11)"
+        }
+      ],
+      "guardrails": [
+        "proposal_is_not_verified_demand",
+        "research_must_define_customer_and_problem",
+        "no_build_before_product_gate"
+      ]
+    },
+    {
+      "id": "proposal:evidence-packets:001",
+      "topic": "evidence-packets",
+      "status": "PROPOSED_FOR_RESEARCH",
+      "regulated": false,
+      "upfrontCostUsd": 0,
+      "evidence": [
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1354",
+          "observedAt": "2026-10-08T23:33:14.201982+00:00",
+          "verified": true,
+          "claim": "\ud83d\udd31 TEAM NAYA \u2014 Priority One execution feed (successor to #554)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1873",
+          "observedAt": "2026-10-08T23:33:14.201983+00:00",
+          "verified": true,
+          "claim": "[TEAM FEED] Innovation"
         }
       ],
       "guardrails": [
@@ -205,18 +195,18 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/PiFlow/aweform/issues/197",
-          "observedAt": "2026-10-08T14:01:54.892672+00:00",
+          "url": "https://github.com/grandchallenge/ADAPTIVE-INTELLIGENCE-ATLAS/issues/342",
+          "observedAt": "2026-10-08T23:33:16.302134+00:00",
           "verified": true,
-          "claim": "Firstmate coordination"
+          "claim": "ATLAS-EDITORIAL-P13-A \u2014 agent chapter review (ATLAS-PART-POLITY)"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/d-hinders/Haven-AI/issues/1289",
-          "observedAt": "2026-10-08T14:01:54.892684+00:00",
+          "url": "https://github.com/grandchallenge/ADAPTIVE-INTELLIGENCE-ATLAS/issues/336",
+          "observedAt": "2026-10-08T23:33:16.302155+00:00",
           "verified": true,
-          "claim": "\ud83e\udd1d Agent coordination channel (standing)"
+          "claim": "ATLAS-EDITORIAL-P09 \u2014 agent chapter review (ATLAS-PART-MEM)"
         }
       ],
       "guardrails": [
@@ -236,7 +226,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/IamTugy/recipes/issues/21",
-          "observedAt": "2026-10-08T14:01:55.812663+00:00",
+          "observedAt": "2026-10-08T23:33:17.161975+00:00",
           "verified": true,
           "claim": "Cookbook/collection PDF export"
         },
@@ -244,7 +234,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mathnauleau/commeat/issues/3",
-          "observedAt": "2026-10-08T14:01:55.812684+00:00",
+          "observedAt": "2026-10-08T23:33:17.161996+00:00",
           "verified": true,
           "claim": "Later: Print full cookbook PDF"
         },
@@ -252,7 +242,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mealie-recipes/mealie/issues/1306",
-          "observedAt": "2026-10-08T14:01:55.812687+00:00",
+          "observedAt": "2026-10-08T23:33:17.162000+00:00",
           "verified": true,
           "claim": "[v1.0.0b] [Task] - Export Recipes and Cookbooks to PDF"
         },
@@ -260,7 +250,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Benkendorfer/recipe-manager/issues/7",
-          "observedAt": "2026-10-08T14:01:55.812686+00:00",
+          "observedAt": "2026-10-08T23:33:17.161998+00:00",
           "verified": true,
           "claim": "Import recipes from PDF files"
         },
@@ -268,7 +258,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7826",
-          "observedAt": "2026-10-08T14:01:55.812691+00:00",
+          "observedAt": "2026-10-08T23:33:17.162003+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -276,7 +266,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7825",
-          "observedAt": "2026-10-08T14:01:55.812692+00:00",
+          "observedAt": "2026-10-08T23:33:17.162005+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -284,7 +274,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7824",
-          "observedAt": "2026-10-08T14:01:55.812694+00:00",
+          "observedAt": "2026-10-08T23:33:17.162006+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         }
