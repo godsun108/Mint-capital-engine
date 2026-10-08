@@ -16,6 +16,7 @@ on:
       - "systems/catalog.json"
       - "systems/commerce/catalog.json"
       - "systems/commerce/brand-channel-registry.json"
+      - ".github/workflows/workers.yml"
   schedule:
     - cron: "41 * * * *"
 permissions:
@@ -40,13 +41,14 @@ jobs:
           url="https://mint-stripe-connect-v4-production.up.railway.app/api/money-state"
           with urllib.request.urlopen(url, timeout=20) as r:
               state=json.load(r)
-          if state.get("mode") != "test":
-              raise SystemExit("Safety stop: expected TEST money ledger")
+          mode=state.get("mode")
+          if mode not in {"test", "live"}:
+              raise SystemExit(f"Safety stop: unknown money ledger mode: {mode!r}")
           out={
             "schema":"mint.payment_truth.v1",
             "observed_at":datetime.datetime.now(datetime.timezone.utc).isoformat(),
-            "mode":"test",
-            "semantics":"TEST_ONLY_NOT_REVENUE",
+            "mode":mode,
+            "semantics":"TEST_ONLY_NOT_REVENUE" if mode=="test" else "LIVE_PROVIDER_OBSERVATION_NOT_SETTLEMENT",
             "totals":state.get("totals",{}),
             "transactions":state.get("transactions",[])
           }
