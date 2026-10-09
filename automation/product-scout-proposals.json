@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.proposals.v1",
-  "generatedAt": "2026-10-09T06:40:47.714551+00:00",
+  "generatedAt": "2026-10-09T13:48:25.779669+00:00",
   "semantics": "RESEARCH_PROPOSALS_NOT_PRODUCT_CANDIDATES",
   "proposals": [
     {
@@ -13,86 +13,42 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "observedAt": "2026-10-09T06:40:38.708672+00:00",
+          "url": "https://github.com/hmcts/pip-frontend/issues/1109",
+          "observedAt": "2026-10-09T13:48:19.703117+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/Meeovi/meeovi-learning/issues/3",
-          "observedAt": "2026-10-09T06:40:38.708675+00:00",
+          "url": "https://github.com/hmcts/juror-er-portal/issues/1",
+          "observedAt": "2026-10-09T13:48:19.703119+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/Meeovi/AlternateFramework/issues/4",
-          "observedAt": "2026-10-09T06:40:38.708681+00:00",
+          "url": "https://github.com/hmcts/appreg-frontend/issues/2",
+          "observedAt": "2026-10-09T13:48:19.703120+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
-        }
-      ],
-      "guardrails": [
-        "proposal_is_not_verified_demand",
-        "research_must_define_customer_and_problem",
-        "no_build_before_product_gate"
-      ]
-    },
-    {
-      "id": "proposal:procedural-assets:001",
-      "topic": "procedural-assets",
-      "status": "PROPOSED_FOR_RESEARCH",
-      "regulated": false,
-      "upfrontCostUsd": 0,
-      "evidence": [
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/AtomChen0425/Global_Trends/issues/191",
-          "observedAt": "2026-10-09T06:40:40.624128+00:00",
-          "verified": true,
-          "claim": "\ud83c\udf10 Global Tech Briefing - 2026-08-27"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/AtomChen0425/Global_Trends/issues/125",
-          "observedAt": "2026-10-09T06:40:40.624136+00:00",
+          "url": "https://github.com/TravisPooley/vulhub/issues/4",
+          "observedAt": "2026-10-09T13:48:19.703131+00:00",
           "verified": true,
-          "claim": "\ud83c\udf10 Global Tech Briefing - 2026-06-21"
-        }
-      ],
-      "guardrails": [
-        "proposal_is_not_verified_demand",
-        "research_must_define_customer_and_problem",
-        "no_build_before_product_gate"
-      ]
-    },
-    {
-      "id": "proposal:software-release-contract:001",
-      "topic": "software-release-contract",
-      "status": "PROPOSED_FOR_RESEARCH",
-      "regulated": false,
-      "upfrontCostUsd": 0,
-      "evidence": [
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/cody-hutson/pmo-platform/issues/8242",
-          "observedAt": "2026-10-09T06:40:42.380339+00:00",
-          "verified": true,
-          "claim": "Stage 5 Solutioning \u2014 #7418 (ci-wiring-and-required-checks)"
+          "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/cody-hutson/pmo-platform/issues/8238",
-          "observedAt": "2026-10-09T06:40:42.380347+00:00",
+          "url": "https://github.com/Stooa/Stooa/issues/186",
+          "observedAt": "2026-10-09T13:48:19.703135+00:00",
           "verified": true,
-          "claim": "Stage 5 Solutioning \u2014 #7036 (ci-wiring-and-required-checks)"
+          "claim": "Dependency Dashboard"
         }
       ],
       "guardrails": [
@@ -112,7 +68,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/lamontaes/Political-Game-Git/issues/2424",
-          "observedAt": "2026-10-09T06:40:43.332282+00:00",
+          "observedAt": "2026-10-09T13:48:22.912673+00:00",
           "verified": true,
           "claim": "Team status board (continued from #2052)"
         },
@@ -120,7 +76,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Uuriko/project-room/issues/266",
-          "observedAt": "2026-10-09T06:40:43.332285+00:00",
+          "observedAt": "2026-10-09T13:48:22.912675+00:00",
           "verified": true,
           "claim": "Claims board (continued from #11)"
         }
@@ -141,18 +97,18 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/bugabinga/mothergod/issues/3",
-          "observedAt": "2026-10-09T06:40:46.334364+00:00",
+          "url": "https://github.com/PiFlow/aweform/issues/197",
+          "observedAt": "2026-10-09T13:48:25.150065+00:00",
           "verified": true,
-          "claim": "\ud83d\udccb Operations log"
+          "claim": "Firstmate coordination"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/FreeForCharity/FFC-Cloudflare-Automation/issues/719",
-          "observedAt": "2026-10-09T06:40:46.334384+00:00",
+          "url": "https://github.com/d-hinders/Haven-AI/issues/1289",
+          "observedAt": "2026-10-09T13:48:25.150076+00:00",
           "verified": true,
-          "claim": "Agentic OS Conductor Log"
+          "claim": "\ud83e\udd1d Agent coordination channel (standing)"
         }
       ],
       "guardrails": [
