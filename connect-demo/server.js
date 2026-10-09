@@ -450,6 +450,9 @@ const server=http.createServer(async(req,res)=>{
     if(req.method==='GET'&&u.pathname==='/')return serveFile(res,path.join(root,'public/index.html'),'text/html; charset=utf-8');
     if(req.method==='GET'&&u.pathname==='/checklist')return serveFile(res,path.join(root,'public/checklist.html'),'text/html; charset=utf-8');
     if(req.method==='GET'&&u.pathname==='/offers')return serveFile(res,path.join(root,'public/offers.html'),'text/html; charset=utf-8');
+    if(req.method==='GET'&&u.pathname==='/api-launch-checklist')return serveFile(res,path.join(root,'public/api-launch-checklist.html'),'text/html; charset=utf-8');
+    if(req.method==='GET'&&u.pathname==='/ai-workflow-kit')return serveFile(res,path.join(root,'public/ai-workflow-kit.html'),'text/html; charset=utf-8');
+    if(req.method==='GET'&&u.pathname==='/builder-launch-pack')return serveFile(res,path.join(root,'public/builder-launch-pack.html'),'text/html; charset=utf-8');
     if(req.method==='GET'&&u.pathname==='/success')return serveFile(res,path.join(root,'public/success.html'),'text/html; charset=utf-8');
     if(req.method==='GET'&&u.pathname==='/robots.txt')return serveFile(res,path.join(root,'public/robots.txt'),'text/plain; charset=utf-8');
     if(req.method==='GET'&&u.pathname==='/sitemap.xml')return serveFile(res,path.join(root,'public/sitemap.xml'),'application/xml; charset=utf-8');
