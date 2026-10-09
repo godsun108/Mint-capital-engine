@@ -1,4 +1,5 @@
 import http from 'node:http';
+import {paymentWebhook} from './payment-webhook.js';
 import {readFile} from 'node:fs/promises';
 import {createReadStream,existsSync,mkdirSync,readFileSync,writeFileSync,renameSync} from 'node:fs';
 import {stat} from 'node:fs/promises';
@@ -438,7 +439,7 @@ const server=http.createServer(async(req,res)=>{
       return await acquisitionEvent(req,res);
     }
     if(req.method==='GET'&&u.pathname==='/api/acquisition/state')return acquisitionState(res);
-    if(req.method==='GET'&&u.pathname==='/health')return send(res,200,{ok:true,stripeConfigured,webhookConfigured:Boolean(process.env.STRIPE_WEBHOOK_SECRET),durableFulfillmentStorage:durableStateConfigured,durableAcquisitionStorage:durableStateConfigured,fgeEnabled:process.env.FGE_ENABLED==='true',gumroad:{callbackReady:true,configured:gumroadConfigured,redirectUri:gumroadRedirectUri}});
+    if(req.method==='GET'&&u.pathname==='/health')return send(res,200,{ok:true,stripeConfigured,webhookConfigured:Boolean(process.env.MINT_CHECKOUT_WEBHOOK_SECRET),accountWebhookConfigured:Boolean(process.env.STRIPE_WEBHOOK_SECRET),durableFulfillmentStorage:durableStateConfigured,durableAcquisitionStorage:durableStateConfigured,fgeEnabled:process.env.FGE_ENABLED==='true',gumroad:{callbackReady:true,configured:gumroadConfigured,redirectUri:gumroadRedirectUri}});
     if(req.method==='GET'&&u.pathname==='/integrations/gumroad/callback')return await gumroadCallback(u,res);
     if(req.method==='GET'&&u.pathname==='/api/gumroad/check')return await gumroadCheck(res);
     if(req.method==='GET'&&u.pathname==='/api/gumroad/products')return await gumroadProducts(res);
@@ -476,6 +477,7 @@ const server=http.createServer(async(req,res)=>{
     if(req.method==='GET'&&m)return await verifyCheckout(decodeURIComponent(m[1]),res);
     m=u.pathname.match(/^\/api\/fulfill\/([^/]+)$/);
     if(req.method==='GET'&&m)return await fulfillCheckout(decodeURIComponent(m[1]),res);
+    if(req.method==='POST'&&u.pathname==='/webhooks/stripe/payments')return await paymentWebhook(req,res,{stripe:requireStripe(),secret:process.env.MINT_CHECKOUT_WEBHOOK_SECRET,stateDir:process.env.MINT_STATE_DIR,root,findOffer:liveOffer});
     if(req.method==='POST'&&u.pathname==='/webhooks/stripe')return await thinWebhook(req,res);
     send(res,404,{error:'Not found'});
   }catch(e){
