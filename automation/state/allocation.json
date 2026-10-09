@@ -1,6 +1,6 @@
 {
   "schema": "mint.allocation.state.v1",
-  "generatedAt": "2026-10-09T13:30:29.672Z",
+  "generatedAt": "2026-10-09T16:21:28.911Z",
   "semantics": "ZERO_SPEND_ATTENTION_ALLOCATION_ONLY_NO_MONEY_MOVEMENT",
   "allocations": {
     "foundry-express-ts-001": {
@@ -14,6 +14,20 @@
         "github-pages",
         "mint-direct-web"
       ],
+      "constraints": [
+        "no_paid_spend",
+        "no_price_change_without_evidence",
+        "no_permission_escalation"
+      ]
+    },
+    "mint-builder-launch-pack-005": {
+      "offerId": "mint-builder-launch-pack-005",
+      "state": "LIVE",
+      "reason": "insufficient_evidence_to_change",
+      "evidenceStage": "EXPLORE",
+      "action": "HOLD_BASELINE",
+      "attentionWeight": 1,
+      "authorizedRoutes": [],
       "constraints": [
         "no_paid_spend",
         "no_price_change_without_evidence",

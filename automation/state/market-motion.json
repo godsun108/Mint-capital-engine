@@ -1,12 +1,24 @@
 {
   "schema": "mint.market.motion.v1",
-  "generatedAt": "2026-10-09T13:30:29.819Z",
+  "generatedAt": "2026-10-09T16:21:29.025Z",
   "semantics": "ZERO_SPEND_OWNED_CHANNEL_PREPARATION_ONLY",
   "explorationAttempts": {
-    "foundry-express-ts-001": 0
+    "foundry-express-ts-001": 0,
+    "mint-builder-launch-pack-005": 1
   },
   "reviewPolicy": "FOUR_ZERO_BEHAVIOR_EXPLORATION_CYCLES_RECOMMEND_OFFER_OR_MESSAGE_REVIEW_NOT_AUTOMATIC_RETIREMENT",
   "results": [
+    {
+      "offerId": "foundry-express-ts-001",
+      "attentionWeight": 2,
+      "explorationAttempt": 0,
+      "reviewRecommended": false,
+      "messageExperimentApplied": false,
+      "ok": true,
+      "campaignPath": "systems/acquisition/generated/foundry-express-ts-001/mint-direct-web.json",
+      "destination": "https://mint-stripe-connect-v4-production.up.railway.app/offers?offer=foundry-express-ts-001&src=mint-direct-web",
+      "status": "READY_OWNED_CHANNEL"
+    },
     {
       "offerId": "foundry-express-ts-001",
       "attentionWeight": 2,
@@ -19,14 +31,14 @@
       "status": "READY_OWNED_CHANNEL"
     },
     {
-      "offerId": "foundry-express-ts-001",
-      "attentionWeight": 2,
-      "explorationAttempt": 0,
+      "offerId": "mint-builder-launch-pack-005",
+      "attentionWeight": 1,
+      "explorationAttempt": 1,
       "reviewRecommended": false,
       "messageExperimentApplied": false,
       "ok": true,
-      "campaignPath": "systems/acquisition/generated/foundry-express-ts-001/mint-direct-web.json",
-      "destination": "https://mint-stripe-connect-v4-production.up.railway.app/offers?offer=foundry-express-ts-001&src=mint-direct-web",
+      "campaignPath": "systems/acquisition/generated/mint-builder-launch-pack-005/github-pages.json",
+      "destination": "https://mint-stripe-connect-v4-production.up.railway.app/offers?offer=mint-builder-launch-pack-005&src=github-pages",
       "status": "READY_OWNED_CHANNEL"
     }
   ]
