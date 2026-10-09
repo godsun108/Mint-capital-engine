@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.proposals.v1",
-  "generatedAt": "2026-10-09T13:48:25.779669+00:00",
+  "generatedAt": "2026-10-09T22:53:27.248981+00:00",
   "semantics": "RESEARCH_PROPOSALS_NOT_PRODUCT_CANDIDATES",
   "proposals": [
     {
@@ -13,8 +13,24 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/pip-frontend/issues/1109",
-          "observedAt": "2026-10-09T13:48:19.703117+00:00",
+          "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "observedAt": "2026-10-09T22:53:21.245100+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/wa-message-cron-service/issues/205",
+          "observedAt": "2026-10-09T22:53:21.245121+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
+          "observedAt": "2026-10-09T22:53:21.245123+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -22,31 +38,31 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/hmcts/juror-er-portal/issues/1",
-          "observedAt": "2026-10-09T13:48:19.703119+00:00",
+          "observedAt": "2026-10-09T22:53:21.245124+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/appreg-frontend/issues/2",
-          "observedAt": "2026-10-09T13:48:19.703120+00:00",
+          "url": "https://github.com/hmcts/wa-task-batch-service/issues/87",
+          "observedAt": "2026-10-09T22:53:21.245126+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/TravisPooley/vulhub/issues/4",
-          "observedAt": "2026-10-09T13:48:19.703131+00:00",
+          "url": "https://github.com/hmcts/pip-frontend/issues/1109",
+          "observedAt": "2026-10-09T22:53:21.245130+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/Stooa/Stooa/issues/186",
-          "observedAt": "2026-10-09T13:48:19.703135+00:00",
+          "url": "https://github.com/mitodl/mitxpro/issues/2711",
+          "observedAt": "2026-10-09T22:53:21.245132+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         }
@@ -68,7 +84,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/lamontaes/Political-Game-Git/issues/2424",
-          "observedAt": "2026-10-09T13:48:22.912673+00:00",
+          "observedAt": "2026-10-09T22:53:24.000803+00:00",
           "verified": true,
           "claim": "Team status board (continued from #2052)"
         },
@@ -76,7 +92,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Uuriko/project-room/issues/266",
-          "observedAt": "2026-10-09T13:48:22.912675+00:00",
+          "observedAt": "2026-10-09T22:53:24.000805+00:00",
           "verified": true,
           "claim": "Claims board (continued from #11)"
         }
@@ -88,8 +104,8 @@
       ]
     },
     {
-      "id": "proposal:research-workflow:001",
-      "topic": "research-workflow",
+      "id": "proposal:cookbook-export:001",
+      "topic": "cookbook-export",
       "status": "PROPOSED_FOR_RESEARCH",
       "regulated": false,
       "upfrontCostUsd": 0,
@@ -97,18 +113,58 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/PiFlow/aweform/issues/197",
-          "observedAt": "2026-10-09T13:48:25.150065+00:00",
+          "url": "https://github.com/IamTugy/recipes/issues/21",
+          "observedAt": "2026-10-09T22:53:26.718703+00:00",
           "verified": true,
-          "claim": "Firstmate coordination"
+          "claim": "Cookbook/collection PDF export"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/d-hinders/Haven-AI/issues/1289",
-          "observedAt": "2026-10-09T13:48:25.150076+00:00",
+          "url": "https://github.com/mathnauleau/commeat/issues/3",
+          "observedAt": "2026-10-09T22:53:26.718722+00:00",
           "verified": true,
-          "claim": "\ud83e\udd1d Agent coordination channel (standing)"
+          "claim": "Later: Print full cookbook PDF"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/mealie-recipes/mealie/issues/1306",
+          "observedAt": "2026-10-09T22:53:26.718727+00:00",
+          "verified": true,
+          "claim": "[v1.0.0b] [Task] - Export Recipes and Cookbooks to PDF"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/Benkendorfer/recipe-manager/issues/7",
+          "observedAt": "2026-10-09T22:53:26.718725+00:00",
+          "verified": true,
+          "claim": "Import recipes from PDF files"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/guevara/read-it-later/issues/7826",
+          "observedAt": "2026-10-09T22:53:26.718731+00:00",
+          "verified": true,
+          "claim": "Rust Language Cheat Sheet"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/guevara/read-it-later/issues/7825",
+          "observedAt": "2026-10-09T22:53:26.718733+00:00",
+          "verified": true,
+          "claim": "Rust Language Cheat Sheet"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/guevara/read-it-later/issues/7824",
+          "observedAt": "2026-10-09T22:53:26.718735+00:00",
+          "verified": true,
+          "claim": "Rust Language Cheat Sheet"
         }
       ],
       "guardrails": [
