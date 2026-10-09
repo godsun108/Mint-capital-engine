@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.synthesis.v1",
-  "generatedAt": "2026-10-08T23:33:18.349770+00:00",
+  "generatedAt": "2026-10-09T06:40:47.650638+00:00",
   "clusters": [
     {
       "topic": "express-typescript",
@@ -17,77 +17,17 @@
       "relatedPairs": [
         {
           "a": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "b": "https://github.com/Stooa/Stooa/issues/186",
+          "b": "https://github.com/Meeovi/meeovi-learning/issues/3",
           "similarity": 1.0
         },
         {
           "a": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "b": "https://github.com/hmcts/juror-er-portal/issues/1",
+          "b": "https://github.com/Meeovi/AlternateFramework/issues/4",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "b": "https://github.com/mitodl/mitxpro/issues/2711",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "b": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "b": "https://github.com/hmcts/wa-message-cron-service/issues/205",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/Stooa/Stooa/issues/186",
-          "b": "https://github.com/hmcts/juror-er-portal/issues/1",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/Stooa/Stooa/issues/186",
-          "b": "https://github.com/mitodl/mitxpro/issues/2711",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/Stooa/Stooa/issues/186",
-          "b": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/Stooa/Stooa/issues/186",
-          "b": "https://github.com/hmcts/wa-message-cron-service/issues/205",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/juror-er-portal/issues/1",
-          "b": "https://github.com/mitodl/mitxpro/issues/2711",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/juror-er-portal/issues/1",
-          "b": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/juror-er-portal/issues/1",
-          "b": "https://github.com/hmcts/wa-message-cron-service/issues/205",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/mitodl/mitxpro/issues/2711",
-          "b": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/mitodl/mitxpro/issues/2711",
-          "b": "https://github.com/hmcts/wa-message-cron-service/issues/205",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
-          "b": "https://github.com/hmcts/wa-message-cron-service/issues/205",
+          "a": "https://github.com/Meeovi/meeovi-learning/issues/3",
+          "b": "https://github.com/Meeovi/AlternateFramework/issues/4",
           "similarity": 1.0
         }
       ],
@@ -122,9 +62,9 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/cody-hutson/pmo-platform/issues/7818",
-          "b": "https://github.com/cody-hutson/pmo-platform/issues/7683",
-          "similarity": 0.286
+          "a": "https://github.com/cody-hutson/pmo-platform/issues/8242",
+          "b": "https://github.com/cody-hutson/pmo-platform/issues/8238",
+          "similarity": 0.6
         }
       ],
       "promotionEligible": true,
@@ -148,14 +88,8 @@
       "topic": "evidence-packets",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [
-        {
-          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1354",
-          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1873",
-          "similarity": 0.222
-        }
-      ],
-      "promotionEligible": true,
+      "relatedPairs": [],
+      "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -172,9 +106,9 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/grandchallenge/ADAPTIVE-INTELLIGENCE-ATLAS/issues/342",
-          "b": "https://github.com/grandchallenge/ADAPTIVE-INTELLIGENCE-ATLAS/issues/336",
-          "similarity": 0.429
+          "a": "https://github.com/bugabinga/mothergod/issues/3",
+          "b": "https://github.com/FreeForCharity/FFC-Cloudflare-Automation/issues/719",
+          "similarity": 0.25
         }
       ],
       "promotionEligible": true,
@@ -182,41 +116,10 @@
     },
     {
       "topic": "cookbook-export",
-      "observationCount": 9,
-      "distinctSources": 9,
-      "relatedPairs": [
-        {
-          "a": "https://github.com/IamTugy/recipes/issues/21",
-          "b": "https://github.com/mathnauleau/commeat/issues/3",
-          "similarity": 0.286
-        },
-        {
-          "a": "https://github.com/IamTugy/recipes/issues/21",
-          "b": "https://github.com/mealie-recipes/mealie/issues/1306",
-          "similarity": 0.25
-        },
-        {
-          "a": "https://github.com/Benkendorfer/recipe-manager/issues/7",
-          "b": "https://github.com/mealie-recipes/mealie/issues/1306",
-          "similarity": 0.25
-        },
-        {
-          "a": "https://github.com/guevara/read-it-later/issues/7826",
-          "b": "https://github.com/guevara/read-it-later/issues/7825",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/guevara/read-it-later/issues/7826",
-          "b": "https://github.com/guevara/read-it-later/issues/7824",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/guevara/read-it-later/issues/7825",
-          "b": "https://github.com/guevara/read-it-later/issues/7824",
-          "similarity": 1.0
-        }
-      ],
-      "promotionEligible": true,
+      "observationCount": 0,
+      "distinctSources": 0,
+      "relatedPairs": [],
+      "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
