@@ -1,10 +1,10 @@
 {
   "schema": "mint.payment_truth.v1",
-  "observed_at": "2026-10-09T09:35:19.505417+00:00",
+  "observed_at": "2026-10-09T16:31:33.074923+00:00",
   "mode": "live",
   "semantics": "LIVE_PROVIDER_OBSERVATION_NOT_SETTLEMENT",
   "totals": {
-    "created": 0,
+    "created": 1,
     "paid": 0,
     "pending": 0,
     "provider_available": 0,
@@ -14,5 +14,21 @@
     "net": 0,
     "applicationFees": 0
   },
-  "transactions": []
+  "transactions": [
+    {
+      "sessionId": "cs_live_a16f7m1Gcgb69v7KwjbI3JdH96PJtT9chN4hQeNrCq55oWATLRqHWNVtvT",
+      "state": "created",
+      "source": "qa_checkout_20261009",
+      "offerId": "mint-builder-launch-pack-005",
+      "paymentStatus": "unpaid",
+      "amount": 1900,
+      "currency": "usd",
+      "livemode": true,
+      "paymentIntent": null,
+      "charge": null,
+      "destination": null,
+      "applicationFeeAmount": 0,
+      "balanceTransaction": null
+    }
+  ]
 }
