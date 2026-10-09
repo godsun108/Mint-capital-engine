@@ -1,27 +1,24 @@
 {
   "schema": "mint.continuity.officer.v1",
-  "generatedAt": "2026-10-08T23:27:27.738Z",
+  "generatedAt": "2026-10-09T02:17:59.112Z",
   "semantics": "OWNER_CONTINUITY_SUMMARY_NOT_REVENUE_INFERENCE",
   "sixMonthAbsenceTest": {
-    "status": "ATTENTION",
-    "nextConstraint": "RUN_BOUNDED_MESSAGE_EXPERIMENT",
-    "reasons": [
-      "no observed customer behavior in the current acquisition snapshot",
-      "reversible message experiment ready"
-    ]
+    "status": "HEALTHY",
+    "nextConstraint": "OBSERVE_REAL_MARKET_RESPONSE",
+    "reasons": []
   },
   "signals": {
     "durableAcquisitionMemory": true,
     "evidenceAvailable": true,
     "authorizedZeroSpendRoutes": 2,
-    "visits": 0,
+    "visits": 4,
     "checkoutStarted": 0,
     "paid": 0,
     "settled": 0,
     "net": 0,
     "activeAllocations": 1,
-    "reviewRecommended": 1,
-    "messageExperimentsReady": 1,
+    "reviewRecommended": 0,
+    "messageExperimentsReady": 0,
     "messageExperimentsObserving": 0
   },
   "ownerGates": [

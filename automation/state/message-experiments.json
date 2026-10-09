@@ -1,39 +1,6 @@
 {
   "schema": "mint.message.experiments.v1",
-  "generatedAt": "2026-10-08T23:27:27.565Z",
+  "generatedAt": "2026-10-09T02:17:58.913Z",
   "semantics": "REVERSIBLE_ZERO_SPEND_MESSAGE_TEST_BRIEFS_NOT_CATALOG_MUTATIONS",
-  "briefs": [
-    {
-      "offerId": "foundry-express-ts-001",
-      "state": "MESSAGE_EXPERIMENT_READY",
-      "trigger": "FOUR_ZERO_BEHAVIOR_EXPLORATION_CYCLES",
-      "immutable": {
-        "price": {
-          "currency": "usd",
-          "unit_amount": 900
-        },
-        "product": "Foundry Express TypeScript Starter",
-        "mandate_id": "mandate:digital-products:001"
-      },
-      "current": {
-        "headline": "Skip the blank Express + TypeScript setup.",
-        "body": "A $9 reusable starter with strict TypeScript, Express, JSON middleware, a health route, environment example, and dev/build/start scripts.",
-        "cta": "View the Foundry starter"
-      },
-      "experiment": {
-        "hypothesis": "Lead with the verified customer problem before describing the implementation.",
-        "headline": "Developer reports spending substantial time configuring an Express + TypeScript project and.",
-        "body": "Built for a recurring problem observed in public developer discussions: Developer reports spending substantial time configuring an Express + TypeScript project and asks for Vite-like boilerplate/scaffolding. / Developer reports repeatedly spending the first day of new Node API projects wiring the same Express and TypeScript setup before business logic. / Developer identifies a gap between bloated commercial templates and under-tested quick starters and proposes a modular Node/Express starter emphasizing tests, deployment pipelines and documentation.. Reusable Express + TypeScript starter with strict TypeScript, JSON middleware, a health route, environment example, and dev/build/start scripts.",
-        "cta": "View the Foundry starter"
-      },
-      "constraints": [
-        "zero_paid_spend",
-        "no_price_change",
-        "no_product_change",
-        "no_permission_escalation",
-        "no_fabricated_social_proof",
-        "reversible_test_only"
-      ]
-    }
-  ]
+  "briefs": []
 }

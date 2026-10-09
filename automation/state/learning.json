@@ -1,5 +1,22 @@
 {
   "schema": "mint.learning.state.v1",
-  "generatedAt": "2026-10-08T23:27:27.229Z",
-  "offers": {}
+  "generatedAt": "2026-10-09T02:17:58.494Z",
+  "offers": {
+    "foundry-express-ts-001": {
+      "offerId": "foundry-express-ts-001",
+      "acquisition": {
+        "visits": 4,
+        "checkoutStarted": 0,
+        "sources": {
+          "direct": {
+            "VISITED": 4,
+            "CHECKOUT_STARTED": 0
+          }
+        },
+        "durableStorageConfigured": true,
+        "semantics": "DURABLE_AGGREGATE_FUNNEL_SIGNAL_NOT_UNIQUE_VISITORS_NOT_PAYMENT_EVIDENCE"
+      },
+      "updatedAt": "2026-10-09T02:17:58.494Z"
+    }
+  }
 }
