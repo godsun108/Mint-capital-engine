@@ -1,6 +1,39 @@
 {
   "schema": "mint.message.experiments.v1",
-  "generatedAt": "2026-10-09T21:03:42.744Z",
+  "generatedAt": "2026-10-10T00:06:15.659Z",
   "semantics": "REVERSIBLE_ZERO_SPEND_MESSAGE_TEST_BRIEFS_NOT_CATALOG_MUTATIONS",
-  "briefs": []
+  "briefs": [
+    {
+      "offerId": "mint-builder-launch-pack-005",
+      "state": "MESSAGE_EXPERIMENT_READY",
+      "trigger": "FOUR_ZERO_BEHAVIOR_EXPLORATION_CYCLES",
+      "immutable": {
+        "price": {
+          "currency": "usd",
+          "unit_amount": 1900
+        },
+        "product": "MINT Builder Launch Pack",
+        "mandate_id": "mandate:digital-products:001"
+      },
+      "current": {
+        "headline": "Build it. Preflight it. Launch it.",
+        "body": "Four separately available MINT builder products packaged together for $19; their current separate prices total $28.",
+        "cta": "Get the Builder Launch Pack"
+      },
+      "experiment": {
+        "hypothesis": "Lead with the verified customer problem before describing the implementation.",
+        "headline": "Build it. Preflight it. Launch it.",
+        "body": "Four separately available MINT builder products packaged together for $19; their current separate prices total $28.",
+        "cta": "Get the Builder Launch Pack"
+      },
+      "constraints": [
+        "zero_paid_spend",
+        "no_price_change",
+        "no_product_change",
+        "no_permission_escalation",
+        "no_fabricated_social_proof",
+        "reversible_test_only"
+      ]
+    }
+  ]
 }
