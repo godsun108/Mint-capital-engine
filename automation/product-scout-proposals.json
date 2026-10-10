@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.proposals.v1",
-  "generatedAt": "2026-10-10T06:22:26.517848+00:00",
+  "generatedAt": "2026-10-10T13:01:56.366736+00:00",
   "semantics": "RESEARCH_PROPOSALS_NOT_PRODUCT_CANDIDATES",
   "proposals": [
     {
@@ -14,31 +14,31 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/cedarjs/cedar/issues/66",
-          "observedAt": "2026-10-10T06:22:19.437444+00:00",
+          "observedAt": "2026-10-10T13:01:46.822979+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/Stooa/Stooa/issues/186",
-          "observedAt": "2026-10-10T06:22:19.437458+00:00",
+          "url": "https://github.com/TravisPooley/vulhub/issues/4",
+          "observedAt": "2026-10-10T13:01:46.822981+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/Meeovi/meeovi-learning/issues/3",
-          "observedAt": "2026-10-10T06:22:19.437470+00:00",
+          "url": "https://github.com/hmcts/pip-frontend/issues/1109",
+          "observedAt": "2026-10-10T13:01:46.822991+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/wa-message-cron-service/issues/205",
-          "observedAt": "2026-10-10T06:22:19.437473+00:00",
+          "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "observedAt": "2026-10-10T13:01:46.822993+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -46,15 +46,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/hmcts/sptribs-frontend/issues/444",
-          "observedAt": "2026-10-10T06:22:19.437474+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/hmcts/appreg-frontend/issues/2",
-          "observedAt": "2026-10-10T06:22:19.437477+00:00",
+          "observedAt": "2026-10-10T13:01:46.822994+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         }
@@ -76,7 +68,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/lamontaes/Political-Game-Git/issues/2424",
-          "observedAt": "2026-10-10T06:22:22.393313+00:00",
+          "observedAt": "2026-10-10T13:01:50.870957+00:00",
           "verified": true,
           "claim": "Team status board (continued from #2052)"
         },
@@ -84,39 +76,9 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Uuriko/project-room/issues/266",
-          "observedAt": "2026-10-10T06:22:22.393315+00:00",
+          "observedAt": "2026-10-10T13:01:50.870959+00:00",
           "verified": true,
           "claim": "Claims board (continued from #11)"
-        }
-      ],
-      "guardrails": [
-        "proposal_is_not_verified_demand",
-        "research_must_define_customer_and_problem",
-        "no_build_before_product_gate"
-      ]
-    },
-    {
-      "id": "proposal:research-workflow:001",
-      "topic": "research-workflow",
-      "status": "PROPOSED_FOR_RESEARCH",
-      "regulated": false,
-      "upfrontCostUsd": 0,
-      "evidence": [
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/auguspp/decision-kernel/issues/508",
-          "observedAt": "2026-10-10T06:22:25.197836+00:00",
-          "verified": true,
-          "claim": "Kernel 2.0\uff5c\u4e3b\u8ba1\u5212 v1.0 \u4e0e\u8de8\u4f1a\u8bdd\u63a5\u7eed\uff1b\u67b6\u6784\u590d\u7528/\u6301\u7eed\u5b66\u4e60"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/auguspp/decision-kernel/issues/297",
-          "observedAt": "2026-10-10T06:22:25.197839+00:00",
-          "verified": true,
-          "claim": "\u5f53\u524d\u5165\u53e3\uff5cKernel 2.0\u5148\u5b9a\u8ba1\u5212\u2192#508\uff1b\u4f53\u68c0/C/D\u539f\u8d23\u4efb\u4fdd\u7559"
         }
       ],
       "guardrails": [
@@ -136,7 +98,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/IamTugy/recipes/issues/21",
-          "observedAt": "2026-10-10T06:22:25.812321+00:00",
+          "observedAt": "2026-10-10T13:01:55.183063+00:00",
           "verified": true,
           "claim": "Cookbook/collection PDF export"
         },
@@ -144,7 +106,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mathnauleau/commeat/issues/3",
-          "observedAt": "2026-10-10T06:22:25.812357+00:00",
+          "observedAt": "2026-10-10T13:01:55.183081+00:00",
           "verified": true,
           "claim": "Later: Print full cookbook PDF"
         },
@@ -152,7 +114,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mealie-recipes/mealie/issues/1306",
-          "observedAt": "2026-10-10T06:22:25.812365+00:00",
+          "observedAt": "2026-10-10T13:01:55.183085+00:00",
           "verified": true,
           "claim": "[v1.0.0b] [Task] - Export Recipes and Cookbooks to PDF"
         },
@@ -160,7 +122,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Benkendorfer/recipe-manager/issues/7",
-          "observedAt": "2026-10-10T06:22:25.812361+00:00",
+          "observedAt": "2026-10-10T13:01:55.183083+00:00",
           "verified": true,
           "claim": "Import recipes from PDF files"
         },
@@ -168,7 +130,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7826",
-          "observedAt": "2026-10-10T06:22:25.812371+00:00",
+          "observedAt": "2026-10-10T13:01:55.183088+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -176,7 +138,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7825",
-          "observedAt": "2026-10-10T06:22:25.812372+00:00",
+          "observedAt": "2026-10-10T13:01:55.183089+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -184,7 +146,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7824",
-          "observedAt": "2026-10-10T06:22:25.812374+00:00",
+          "observedAt": "2026-10-10T13:01:55.183091+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         }
