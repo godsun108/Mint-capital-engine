@@ -1,11 +1,11 @@
 {
   "schema": "mint.message.experiments.v1",
-  "generatedAt": "2026-10-10T00:06:15.659Z",
+  "generatedAt": "2026-10-10T01:00:33.640Z",
   "semantics": "REVERSIBLE_ZERO_SPEND_MESSAGE_TEST_BRIEFS_NOT_CATALOG_MUTATIONS",
   "briefs": [
     {
       "offerId": "mint-builder-launch-pack-005",
-      "state": "MESSAGE_EXPERIMENT_READY",
+      "state": "OBSERVING",
       "trigger": "FOUR_ZERO_BEHAVIOR_EXPLORATION_CYCLES",
       "immutable": {
         "price": {
@@ -33,7 +33,8 @@
         "no_permission_escalation",
         "no_fabricated_social_proof",
         "reversible_test_only"
-      ]
+      ],
+      "appliedAt": "2026-10-10T01:00:33.640Z"
     }
   ]
 }

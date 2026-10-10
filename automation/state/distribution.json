@@ -1,14 +1,8 @@
 {
   "schema": "mint.distribution.state.v1",
-  "generatedAt": "2026-10-10T00:06:15.769Z",
+  "generatedAt": "2026-10-10T01:00:33.778Z",
   "semantics": "GENERATED_OWNED_SURFACES_PUBLIC_ONLY_IF_HOST_DEPLOYS_DOCS",
   "published": [
-    {
-      "offerId": "foundry-express-ts-001",
-      "source": "github-pages",
-      "path": "docs/market/foundry-express-ts-001/github-pages/index.html",
-      "destination": "https://mint-stripe-connect-v4-production.up.railway.app/offers?offer=foundry-express-ts-001&src=github-pages"
-    },
     {
       "offerId": "foundry-express-ts-001",
       "source": "mint-direct-web",
@@ -16,10 +10,16 @@
       "destination": "https://mint-stripe-connect-v4-production.up.railway.app/offers?offer=foundry-express-ts-001&src=mint-direct-web"
     },
     {
-      "offerId": "mint-builder-launch-pack-005",
+      "offerId": "foundry-express-ts-001",
       "source": "github-pages",
-      "path": "docs/market/mint-builder-launch-pack-005/github-pages/index.html",
-      "destination": "https://mint-stripe-connect-v4-production.up.railway.app/offers?offer=mint-builder-launch-pack-005&src=github-pages"
+      "path": "docs/market/foundry-express-ts-001/github-pages/index.html",
+      "destination": "https://mint-stripe-connect-v4-production.up.railway.app/offers?offer=foundry-express-ts-001&src=github-pages"
+    },
+    {
+      "offerId": "mint-builder-launch-pack-005",
+      "source": "mint-direct-web",
+      "path": "docs/market/mint-builder-launch-pack-005/mint-direct-web/index.html",
+      "destination": "https://mint-stripe-connect-v4-production.up.railway.app/offers?offer=mint-builder-launch-pack-005&src=mint-direct-web"
     }
   ]
 }
