@@ -1,0 +1,19 @@
+name: Aurel Apparel Preflight
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "connect-demo/aurel-apparel-pilot.json"
+      - "automation/aurel-apparel-preflight.mjs"
+      - ".github/workflows/aurel-apparel-preflight.yml"
+permissions:
+  contents: read
+jobs:
+  qualify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node automation/aurel-apparel-preflight.mjs
