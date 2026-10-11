@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.synthesis.v1",
-  "generatedAt": "2026-10-11T06:25:10.705149+00:00",
+  "generatedAt": "2026-10-11T13:30:29.555263+00:00",
   "clusters": [
     {
       "topic": "express-typescript",
@@ -16,53 +16,18 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "b": "https://github.com/mitodl/mitxpro/issues/2711",
+          "a": "https://github.com/DevSecNinja/OpenArchiver/issues/14",
+          "b": "https://github.com/Stooa/Stooa/issues/186",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "b": "https://github.com/hmcts/juror-er-portal/issues/1",
+          "a": "https://github.com/DevSecNinja/OpenArchiver/issues/14",
+          "b": "https://github.com/cedarjs/cedar/issues/66",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "b": "https://github.com/hmcts/appreg-frontend/issues/2",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "b": "https://github.com/hmcts/wa-message-cron-service/issues/205",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/mitodl/mitxpro/issues/2711",
-          "b": "https://github.com/hmcts/juror-er-portal/issues/1",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/mitodl/mitxpro/issues/2711",
-          "b": "https://github.com/hmcts/appreg-frontend/issues/2",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/mitodl/mitxpro/issues/2711",
-          "b": "https://github.com/hmcts/wa-message-cron-service/issues/205",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/juror-er-portal/issues/1",
-          "b": "https://github.com/hmcts/appreg-frontend/issues/2",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/juror-er-portal/issues/1",
-          "b": "https://github.com/hmcts/wa-message-cron-service/issues/205",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/appreg-frontend/issues/2",
-          "b": "https://github.com/hmcts/wa-message-cron-service/issues/205",
+          "a": "https://github.com/Stooa/Stooa/issues/186",
+          "b": "https://github.com/cedarjs/cedar/issues/66",
           "similarity": 1.0
         }
       ],
@@ -89,14 +54,8 @@
       "topic": "software-release-contract",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [
-        {
-          "a": "https://github.com/azizu06/farsight/issues/24",
-          "b": "https://github.com/moshehason/117-LAB-TEST/issues/3",
-          "similarity": 0.182
-        }
-      ],
-      "promotionEligible": true,
+      "relatedPairs": [],
+      "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -117,8 +76,14 @@
       "topic": "evidence-packets",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/azizu06/farsight/issues/24",
+          "b": "https://github.com/Achi1984/meridian/issues/571",
+          "similarity": 0.182
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -178,56 +143,310 @@
     },
     {
       "topic": "browser-arcade",
-      "observationCount": 0,
-      "distinctSources": 0,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "observationCount": 20,
+      "distinctSources": 20,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/878",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/877",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/878",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/876",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/878",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/875",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/878",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/874",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/878",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/873",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/878",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/871",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/878",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/870",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/878",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/869",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/877",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/876",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/877",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/875",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/877",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/874",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/877",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/873",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/877",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/871",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/877",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/870",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/877",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/869",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/876",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/875",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/876",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/874",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/876",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/873",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/876",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/871",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/876",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/870",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/876",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/869",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/875",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/874",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/875",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/873",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/875",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/871",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/875",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/870",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/875",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/869",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/874",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/873",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/874",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/871",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/874",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/870",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/874",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/869",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/873",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/871",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/873",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/870",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/873",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/869",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/871",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/870",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/871",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/869",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/870",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/869",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/ZeroK-RTS/CrashReports/issues/44043",
+          "b": "https://github.com/ZeroK-RTS/CrashReports/issues/33579",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/ZeroK-RTS/CrashReports/issues/44043",
+          "b": "https://github.com/ZeroK-RTS/CrashReports/issues/17622",
+          "similarity": 0.2
+        },
+        {
+          "a": "https://github.com/ZeroK-RTS/CrashReports/issues/44043",
+          "b": "https://github.com/ZeroK-RTS/CrashReports/issues/16457",
+          "similarity": 0.2
+        },
+        {
+          "a": "https://github.com/ZeroK-RTS/CrashReports/issues/33579",
+          "b": "https://github.com/ZeroK-RTS/CrashReports/issues/17622",
+          "similarity": 0.2
+        },
+        {
+          "a": "https://github.com/ZeroK-RTS/CrashReports/issues/33579",
+          "b": "https://github.com/ZeroK-RTS/CrashReports/issues/16457",
+          "similarity": 0.2
+        },
+        {
+          "a": "https://github.com/ZeroK-RTS/CrashReports/issues/17622",
+          "b": "https://github.com/ZeroK-RTS/CrashReports/issues/16457",
+          "similarity": 1.0
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "earth-data",
-      "observationCount": 0,
-      "distinctSources": 0,
+      "observationCount": 1,
+      "distinctSources": 1,
       "relatedPairs": [],
       "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "camera-discovery",
-      "observationCount": 0,
-      "distinctSources": 0,
+      "observationCount": 5,
+      "distinctSources": 5,
       "relatedPairs": [],
       "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "forecasting",
-      "observationCount": 0,
-      "distinctSources": 0,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "observationCount": 20,
+      "distinctSources": 20,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/NeoFii/DailyArXiv/issues/168",
+          "b": "https://github.com/xllm-io/daily-papers/issues/55",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/NeoFii/DailyArXiv/issues/168",
+          "b": "https://github.com/xllm-io/daily-papers/issues/51",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/xllm-io/daily-papers/issues/55",
+          "b": "https://github.com/xllm-io/daily-papers/issues/51",
+          "similarity": 1.0
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "goal-os",
-      "observationCount": 0,
-      "distinctSources": 0,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "observationCount": 12,
+      "distinctSources": 12,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/A-iCan/AiCan_2.0/issues/2398",
+          "b": "https://github.com/A-iCan/AiCan_2.0/issues/525",
+          "similarity": 0.2
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "editorial-evidence",
-      "observationCount": 0,
-      "distinctSources": 0,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "observationCount": 20,
+      "distinctSources": 20,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/bizzal70/Audit_User_Agent/issues/1",
+          "b": "https://github.com/bizzal70/itsalreadypriced/issues/1",
+          "similarity": 0.429
+        },
+        {
+          "a": "https://github.com/bizzal70/Audit_User_Agent/issues/1",
+          "b": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
+          "similarity": 0.4
+        },
+        {
+          "a": "https://github.com/bizzal70/itsalreadypriced/issues/1",
+          "b": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
+          "similarity": 0.286
+        },
+        {
+          "a": "https://github.com/FreeForCharity/FFC-Cloudflare-Automation/issues/719",
+          "b": "https://github.com/bugabinga/mothergod/issues/3",
+          "similarity": 0.25
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "subscription-service",
-      "observationCount": 0,
-      "distinctSources": 0,
+      "observationCount": 20,
+      "distinctSources": 20,
       "relatedPairs": [],
       "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
