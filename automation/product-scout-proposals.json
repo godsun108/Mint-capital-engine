@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.proposals.v1",
-  "generatedAt": "2026-10-11T13:30:29.605895+00:00",
+  "generatedAt": "2026-10-11T22:27:17.738229+00:00",
   "semantics": "RESEARCH_PROPOSALS_NOT_PRODUCT_CANDIDATES",
   "proposals": [
     {
@@ -13,16 +13,32 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/DevSecNinja/OpenArchiver/issues/14",
-          "observedAt": "2026-10-11T13:30:19.105101+00:00",
+          "url": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
+          "observedAt": "2026-10-11T22:27:09.370434+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/Stooa/Stooa/issues/186",
-          "observedAt": "2026-10-11T13:30:19.105113+00:00",
+          "url": "https://github.com/hmcts/appreg-frontend/issues/2",
+          "observedAt": "2026-10-11T22:27:09.370453+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/mitodl/mitxpro/issues/2711",
+          "observedAt": "2026-10-11T22:27:09.370459+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/wa-task-batch-service/issues/87",
+          "observedAt": "2026-10-11T22:27:09.370467+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -30,7 +46,23 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/cedarjs/cedar/issues/66",
-          "observedAt": "2026-10-11T13:30:19.105116+00:00",
+          "observedAt": "2026-10-11T22:27:09.370480+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/DevSecNinja/OpenArchiver/issues/14",
+          "observedAt": "2026-10-11T22:27:09.370486+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "observedAt": "2026-10-11T22:27:09.370492+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         }
@@ -52,7 +84,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/lamontaes/Political-Game-Git/issues/2424",
-          "observedAt": "2026-10-11T13:30:22.178273+00:00",
+          "observedAt": "2026-10-11T22:27:12.722181+00:00",
           "verified": true,
           "claim": "Team status board (continued from #2052)"
         },
@@ -60,39 +92,9 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Uuriko/project-room/issues/266",
-          "observedAt": "2026-10-11T13:30:22.178274+00:00",
+          "observedAt": "2026-10-11T22:27:12.722183+00:00",
           "verified": true,
           "claim": "Claims board (continued from #11)"
-        }
-      ],
-      "guardrails": [
-        "proposal_is_not_verified_demand",
-        "research_must_define_customer_and_problem",
-        "no_build_before_product_gate"
-      ]
-    },
-    {
-      "id": "proposal:evidence-packets:001",
-      "topic": "evidence-packets",
-      "status": "PROPOSED_FOR_RESEARCH",
-      "regulated": false,
-      "upfrontCostUsd": 0,
-      "evidence": [
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/azizu06/farsight/issues/24",
-          "observedAt": "2026-10-11T13:30:22.966958+00:00",
-          "verified": true,
-          "claim": "Message Board - Claude/Devin/ChatGPT Agents Only"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/Achi1984/meridian/issues/571",
-          "observedAt": "2026-10-11T13:30:22.966964+00:00",
-          "verified": true,
-          "claim": "CROSS-MODEL-MAILBOX V2: Meridian ChatGPT \u2194 Claude review handoff"
         }
       ],
       "guardrails": [
@@ -112,7 +114,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/IamTugy/recipes/issues/21",
-          "observedAt": "2026-10-11T13:30:25.207297+00:00",
+          "observedAt": "2026-10-11T22:27:16.133273+00:00",
           "verified": true,
           "claim": "Cookbook/collection PDF export"
         },
@@ -120,7 +122,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mathnauleau/commeat/issues/3",
-          "observedAt": "2026-10-11T13:30:25.207320+00:00",
+          "observedAt": "2026-10-11T22:27:16.133295+00:00",
           "verified": true,
           "claim": "Later: Print full cookbook PDF"
         },
@@ -128,7 +130,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mealie-recipes/mealie/issues/1306",
-          "observedAt": "2026-10-11T13:30:25.207323+00:00",
+          "observedAt": "2026-10-11T22:27:16.133299+00:00",
           "verified": true,
           "claim": "[v1.0.0b] [Task] - Export Recipes and Cookbooks to PDF"
         },
@@ -136,7 +138,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Benkendorfer/recipe-manager/issues/7",
-          "observedAt": "2026-10-11T13:30:25.207322+00:00",
+          "observedAt": "2026-10-11T22:27:16.133297+00:00",
           "verified": true,
           "claim": "Import recipes from PDF files"
         },
@@ -144,7 +146,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7826",
-          "observedAt": "2026-10-11T13:30:25.207326+00:00",
+          "observedAt": "2026-10-11T22:27:16.133304+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -152,7 +154,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7825",
-          "observedAt": "2026-10-11T13:30:25.207328+00:00",
+          "observedAt": "2026-10-11T22:27:16.133306+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -160,7 +162,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7824",
-          "observedAt": "2026-10-11T13:30:25.207329+00:00",
+          "observedAt": "2026-10-11T22:27:16.133308+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         }
@@ -182,7 +184,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/AnandChowdhary/gitclaw/issues/878",
-          "observedAt": "2026-10-11T13:30:26.077507+00:00",
+          "observedAt": "2026-10-11T22:27:17.134370+00:00",
           "verified": true,
           "claim": "GitClaw telegram thread channel-mad-libs-e2e-20260604t072208z"
         },
@@ -190,7 +192,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/AnandChowdhary/gitclaw/issues/877",
-          "observedAt": "2026-10-11T13:30:26.077508+00:00",
+          "observedAt": "2026-10-11T22:27:17.134373+00:00",
           "verified": true,
           "claim": "GitClaw telegram thread channel-tool-drill-e2e-20260604t070042z"
         },
@@ -198,7 +200,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/AnandChowdhary/gitclaw/issues/876",
-          "observedAt": "2026-10-11T13:30:26.077510+00:00",
+          "observedAt": "2026-10-11T22:27:17.134375+00:00",
           "verified": true,
           "claim": "GitClaw telegram thread channel-soul-drill-e2e-20260604t063934z"
         },
@@ -206,7 +208,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/AnandChowdhary/gitclaw/issues/875",
-          "observedAt": "2026-10-11T13:30:26.077512+00:00",
+          "observedAt": "2026-10-11T22:27:17.134382+00:00",
           "verified": true,
           "claim": "GitClaw telegram thread channel-skill-drill-e2e-20260604t061809z"
         },
@@ -214,7 +216,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/AnandChowdhary/gitclaw/issues/874",
-          "observedAt": "2026-10-11T13:30:26.077514+00:00",
+          "observedAt": "2026-10-11T22:27:17.134384+00:00",
           "verified": true,
           "claim": "GitClaw telegram thread channel-this-or-that-e2e-20260604t055745z"
         },
@@ -222,7 +224,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/AnandChowdhary/gitclaw/issues/873",
-          "observedAt": "2026-10-11T13:30:26.077516+00:00",
+          "observedAt": "2026-10-11T22:27:17.134386+00:00",
           "verified": true,
           "claim": "GitClaw telegram thread channel-riddle-e2e-20260604t053459z"
         },
@@ -230,7 +232,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/AnandChowdhary/gitclaw/issues/871",
-          "observedAt": "2026-10-11T13:30:26.077518+00:00",
+          "observedAt": "2026-10-11T22:27:17.134388+00:00",
           "verified": true,
           "claim": "GitClaw telegram thread channel-icebreaker-e2e-20260604t045516z"
         },
@@ -238,7 +240,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/AnandChowdhary/gitclaw/issues/870",
-          "observedAt": "2026-10-11T13:30:26.077520+00:00",
+          "observedAt": "2026-10-11T22:27:17.134391+00:00",
           "verified": true,
           "claim": "GitClaw telegram thread channel-fortune-cookie-e2e-20260604t043343z"
         },
@@ -246,7 +248,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/AnandChowdhary/gitclaw/issues/869",
-          "observedAt": "2026-10-11T13:30:26.077522+00:00",
+          "observedAt": "2026-10-11T22:27:17.134393+00:00",
           "verified": true,
           "claim": "GitClaw telegram thread channel-arcade-e2e-20260604t040837z"
         },
@@ -254,7 +256,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/ZeroK-RTS/CrashReports/issues/44043",
-          "observedAt": "2026-10-11T13:30:26.077527+00:00",
+          "observedAt": "2026-10-11T22:27:17.134399+00:00",
           "verified": true,
           "claim": "Spring LuaError [104.0.1-1544-ge1f249f] "
         },
@@ -262,7 +264,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/ZeroK-RTS/CrashReports/issues/33579",
-          "observedAt": "2026-10-11T13:30:26.077528+00:00",
+          "observedAt": "2026-10-11T22:27:17.134402+00:00",
           "verified": true,
           "claim": "Spring LuaError [104.0.1-1544-ge1f249f] "
         },
@@ -270,7 +272,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/ZeroK-RTS/CrashReports/issues/17622",
-          "observedAt": "2026-10-11T13:30:26.077529+00:00",
+          "observedAt": "2026-10-11T22:27:17.134404+00:00",
           "verified": true,
           "claim": "Spring Crash [104.0.1-287-gf7b0fcc] "
         },
@@ -278,131 +280,9 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/ZeroK-RTS/CrashReports/issues/16457",
-          "observedAt": "2026-10-11T13:30:26.077531+00:00",
+          "observedAt": "2026-10-11T22:27:17.134406+00:00",
           "verified": true,
           "claim": "Spring Crash [104.0.1-287-gf7b0fcc] "
-        }
-      ],
-      "guardrails": [
-        "proposal_is_not_verified_demand",
-        "research_must_define_customer_and_problem",
-        "no_build_before_product_gate"
-      ]
-    },
-    {
-      "id": "proposal:forecasting:001",
-      "topic": "forecasting",
-      "status": "PROPOSED_FOR_RESEARCH",
-      "regulated": false,
-      "upfrontCostUsd": 0,
-      "evidence": [
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/NeoFii/DailyArXiv/issues/168",
-          "observedAt": "2026-10-11T13:30:27.475516+00:00",
-          "verified": true,
-          "claim": "Latest 50 Papers - September 30, 2026"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/xllm-io/daily-papers/issues/55",
-          "observedAt": "2026-10-11T13:30:27.475519+00:00",
-          "verified": true,
-          "claim": "Latest 20 Papers - September 29, 2026"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/xllm-io/daily-papers/issues/51",
-          "observedAt": "2026-10-11T13:30:27.475525+00:00",
-          "verified": true,
-          "claim": "Latest 20 Papers - September 23, 2026"
-        }
-      ],
-      "guardrails": [
-        "proposal_is_not_verified_demand",
-        "research_must_define_customer_and_problem",
-        "no_build_before_product_gate"
-      ]
-    },
-    {
-      "id": "proposal:goal-os:001",
-      "topic": "goal-os",
-      "status": "PROPOSED_FOR_RESEARCH",
-      "regulated": false,
-      "upfrontCostUsd": 0,
-      "evidence": [
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/A-iCan/AiCan_2.0/issues/2398",
-          "observedAt": "2026-10-11T13:30:27.997249+00:00",
-          "verified": true,
-          "claim": "TEAM BUS v2 - Single Source of Truth"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/A-iCan/AiCan_2.0/issues/525",
-          "observedAt": "2026-10-11T13:30:27.997254+00:00",
-          "verified": true,
-          "claim": "Team Bus (Issue #216 Rotation) - Coordination SSOT"
-        }
-      ],
-      "guardrails": [
-        "proposal_is_not_verified_demand",
-        "research_must_define_customer_and_problem",
-        "no_build_before_product_gate"
-      ]
-    },
-    {
-      "id": "proposal:editorial-evidence:001",
-      "topic": "editorial-evidence",
-      "status": "PROPOSED_FOR_RESEARCH",
-      "regulated": false,
-      "upfrontCostUsd": 0,
-      "evidence": [
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/bizzal70/Audit_User_Agent/issues/1",
-          "observedAt": "2026-10-11T13:30:28.700840+00:00",
-          "verified": true,
-          "claim": "\ud83d\uddde\ufe0f Daily content review digest"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/bizzal70/itsalreadypriced/issues/1",
-          "observedAt": "2026-10-11T13:30:28.700842+00:00",
-          "verified": true,
-          "claim": "\ud83d\udd0e Daily content review \u2014 It's Already Priced \u2014 Blog + X"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
-          "observedAt": "2026-10-11T13:30:28.700866+00:00",
-          "verified": true,
-          "claim": "\ud83e\udded Daily content opportunities"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/FreeForCharity/FFC-Cloudflare-Automation/issues/719",
-          "observedAt": "2026-10-11T13:30:28.700844+00:00",
-          "verified": true,
-          "claim": "Agentic OS Conductor Log"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/bugabinga/mothergod/issues/3",
-          "observedAt": "2026-10-11T13:30:28.700853+00:00",
-          "verified": true,
-          "claim": "\ud83d\udccb Operations log"
         }
       ],
       "guardrails": [
