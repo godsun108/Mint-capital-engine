@@ -380,7 +380,9 @@ async function acquisitionEvent(req,res){
   const offerId=String(payload.offerId||"");
   const allowed=new Set(["VISITED","CHECKOUT_STARTED"]);
   if(!allowed.has(event)||!/^[a-z0-9_-]{1,48}$/.test(source)||!/^[a-z0-9_-]{1,80}$/.test(offerId))return send(res,400,{error:"Invalid acquisition event."});
-  const offer=await liveOffer(offerId); if(!offer)return send(res,403,{error:"Unknown or inactive offer."});
+  // The portfolio is a page, never a purchasable offer.
+  const portfolioVisit=offerId==='portfolio'&&event==='VISITED';
+  const offer=portfolioVisit?null:await liveOffer(offerId); if(!portfolioVisit&&!offer)return send(res,403,{error:"Unknown or inactive offer."});
   countAcquisition(event,source,offerId);
   console.log("MINT_ACQUISITION",JSON.stringify({event,source,offerId,at:new Date().toISOString()}));
   return send(res,202,{ok:true,event,source,offerId},acquisitionCors);
@@ -408,7 +410,7 @@ async function commerceEvidence(res){
 
 async function fgeObserve(){
   const sources={};
-  for(const [key,count] of acquisitionCounters){const [source,event]=key.split('|');sources[source]||={visits:0,checkoutStarted:0,paid:0,fulfilled:0};if(event==='VISITED')sources[source].visits+=count;if(event==='CHECKOUT_STARTED')sources[source].checkoutStarted+=count;}
+  for(const [key,count] of acquisitionCounters){const [,source,event]=key.split('|');sources[source]||={visits:0,checkoutStarted:0,paid:0,fulfilled:0};if(event==='VISITED')sources[source].visits+=count;if(event==='CHECKOUT_STARTED')sources[source].checkoutStarted+=count;}
   if(!stripeClient)return {sources};
   const sessions=await stripeClient.checkout.sessions.list({limit:100,expand:['data.payment_intent.latest_charge']});
   for(const session of sessions.data||[]){if(session.livemode!==true||!session.metadata?.mint_offer_id)continue;const source=session.metadata?.mint_source||'unknown';sources[source]||={visits:0,checkoutStarted:0,paid:0,fulfilled:0};const pi=typeof session.payment_intent==='object'?session.payment_intent:null;const ch=pi&&typeof pi.latest_charge==='object'?pi.latest_charge:null;if(session.status==='complete'&&session.payment_status==='paid'&&Boolean(ch?.paid))sources[source].paid+=1;}

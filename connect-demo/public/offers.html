@@ -6,6 +6,8 @@
 
 </div><p class="muted">USD, one-time digital downloads. Delivery occurs only after verified successful payment. No guaranteed commercial or technical outcomes.</p></main><script>
 const raw=(new URLSearchParams(location.search).get('src')||'portfolio').toLowerCase();const source=/^[a-z0-9_-]{1,48}$/.test(raw)?raw:'portfolio';
-const signal=(event,offerId)=>{if(!offerId)return Promise.resolve();return fetch('/api/acquisition/event',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({event,source,offerId})}).catch(()=>{});};
+const signal=(event,offerId)=>{if(!offerId)return Promise.resolve();return fetch('/api/acquisition/event',{method:'POST',keepalive:true,headers:{'content-type':'application/json'},body:JSON.stringify({event,source,offerId})}).catch(()=>{});};
+// One page-view event, not five product visits or a unique-person count.
+void signal('VISITED','portfolio');
 for(const b of document.querySelectorAll('button[data-offer]'))b.addEventListener('click',async()=>{const e=b.nextElementSibling;b.disabled=true;e.textContent='';try{const r=await fetch('/api/checkout',{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({productId:b.dataset.offer,source})});const j=await r.json();if(!r.ok||!j.url)throw Error(j.error||'Checkout unavailable');await signal('CHECKOUT_STARTED',b.dataset.offer);location.href=j.url}catch(x){e.textContent=x.message;b.disabled=false}});
 </script></body></html>
