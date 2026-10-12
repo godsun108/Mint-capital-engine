@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.proposals.v1",
-  "generatedAt": "2026-10-12T06:30:22.590232+00:00",
+  "generatedAt": "2026-10-12T16:05:08.046926+00:00",
   "semantics": "RESEARCH_PROPOSALS_NOT_PRODUCT_CANDIDATES",
   "proposals": [
     {
@@ -13,16 +13,16 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/cedarjs/cedar/issues/66",
-          "observedAt": "2026-10-12T06:30:08.171977+00:00",
+          "url": "https://github.com/hmcts/wa-message-cron-service/issues/205",
+          "observedAt": "2026-10-12T16:04:57.728697+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "observedAt": "2026-10-12T06:30:08.171991+00:00",
+          "url": "https://github.com/hmcts/appreg-frontend/issues/2",
+          "observedAt": "2026-10-12T16:04:57.728705+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -30,7 +30,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
-          "observedAt": "2026-10-12T06:30:08.172005+00:00",
+          "observedAt": "2026-10-12T16:04:57.728713+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         }
@@ -51,18 +51,18 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/G-ACE-inc/server-core/issues/10",
-          "observedAt": "2026-10-12T06:30:11.200864+00:00",
+          "url": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
+          "observedAt": "2026-10-12T16:05:02.018999+00:00",
           "verified": true,
-          "claim": "[CONTROL PLANE] GitHub Project Control Bridge \u2014 CHAT execution path"
+          "claim": "Central message board \u2014 Hermes, Claude, Codex and operator coordination"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/heukshow/aicity-os/issues/292",
-          "observedAt": "2026-10-12T06:30:11.200869+00:00",
+          "url": "https://github.com/d6g8k5htny-coder/main/issues/307",
+          "observedAt": "2026-10-12T16:05:02.019014+00:00",
           "verified": true,
-          "claim": "COSHUMA Work execution bridge"
+          "claim": "Agent Message Board (continued from #229): bottlenecks, coordination and working guidance"
         }
       ],
       "guardrails": [
@@ -82,7 +82,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/lamontaes/Political-Game-Git/issues/2424",
-          "observedAt": "2026-10-12T06:30:12.250429+00:00",
+          "observedAt": "2026-10-12T16:05:02.965691+00:00",
           "verified": true,
           "claim": "Team status board (continued from #2052)"
         },
@@ -90,7 +90,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Uuriko/project-room/issues/266",
-          "observedAt": "2026-10-12T06:30:12.250432+00:00",
+          "observedAt": "2026-10-12T16:05:02.965692+00:00",
           "verified": true,
           "claim": "Claims board (continued from #11)"
         }
@@ -111,48 +111,26 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1713",
-          "observedAt": "2026-10-12T06:30:13.305570+00:00",
+          "url": "https://github.com/chernim-cherno-analytics/oborot-saas/issues/2",
+          "observedAt": "2026-10-12T16:05:03.941334+00:00",
           "verified": true,
-          "claim": "[NAYA 5] LEARN-engine \u2014 gates-wiring-bridge-to-10-10"
+          "claim": "AI Coordination: Claude \u2194 Codex"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1715",
-          "observedAt": "2026-10-12T06:30:13.305690+00:00",
+          "url": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
+          "observedAt": "2026-10-12T16:05:03.941339+00:00",
           "verified": true,
-          "claim": "[NAYA 5] SUCCESSOR-REUSE-engine \u2014 cold-reuse-to-10-10"
-        }
-      ],
-      "guardrails": [
-        "proposal_is_not_verified_demand",
-        "research_must_define_customer_and_problem",
-        "no_build_before_product_gate"
-      ]
-    },
-    {
-      "id": "proposal:research-workflow:001",
-      "topic": "research-workflow",
-      "status": "PROPOSED_FOR_RESEARCH",
-      "regulated": false,
-      "upfrontCostUsd": 0,
-      "evidence": [
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/partio-io/cli/issues/742",
-          "observedAt": "2026-10-12T06:30:15.419075+00:00",
-          "verified": true,
-          "claim": "Minion review log"
+          "claim": "Central message board \u2014 Hermes, Claude, Codex and operator coordination"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/bugabinga/mothergod/issues/3",
-          "observedAt": "2026-10-12T06:30:15.419084+00:00",
+          "url": "https://github.com/d6g8k5htny-coder/main/issues/307",
+          "observedAt": "2026-10-12T16:05:03.941352+00:00",
           "verified": true,
-          "claim": "\ud83d\udccb Operations log"
+          "claim": "Agent Message Board (continued from #229): bottlenecks, coordination and working guidance"
         }
       ],
       "guardrails": [
@@ -172,7 +150,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/IamTugy/recipes/issues/21",
-          "observedAt": "2026-10-12T06:30:16.376250+00:00",
+          "observedAt": "2026-10-12T16:05:06.985666+00:00",
           "verified": true,
           "claim": "Cookbook/collection PDF export"
         },
@@ -180,7 +158,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mathnauleau/commeat/issues/3",
-          "observedAt": "2026-10-12T06:30:16.376273+00:00",
+          "observedAt": "2026-10-12T16:05:06.985687+00:00",
           "verified": true,
           "claim": "Later: Print full cookbook PDF"
         },
@@ -188,7 +166,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mealie-recipes/mealie/issues/1306",
-          "observedAt": "2026-10-12T06:30:16.376278+00:00",
+          "observedAt": "2026-10-12T16:05:06.985690+00:00",
           "verified": true,
           "claim": "[v1.0.0b] [Task] - Export Recipes and Cookbooks to PDF"
         },
@@ -196,7 +174,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Benkendorfer/recipe-manager/issues/7",
-          "observedAt": "2026-10-12T06:30:16.376276+00:00",
+          "observedAt": "2026-10-12T16:05:06.985689+00:00",
           "verified": true,
           "claim": "Import recipes from PDF files"
         },
@@ -204,7 +182,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7826",
-          "observedAt": "2026-10-12T06:30:16.376284+00:00",
+          "observedAt": "2026-10-12T16:05:06.985693+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -212,7 +190,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7825",
-          "observedAt": "2026-10-12T06:30:16.376286+00:00",
+          "observedAt": "2026-10-12T16:05:06.985695+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -220,217 +198,9 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7824",
-          "observedAt": "2026-10-12T06:30:16.376289+00:00",
+          "observedAt": "2026-10-12T16:05:06.985697+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
-        }
-      ],
-      "guardrails": [
-        "proposal_is_not_verified_demand",
-        "research_must_define_customer_and_problem",
-        "no_build_before_product_gate"
-      ]
-    },
-    {
-      "id": "proposal:browser-arcade:001",
-      "topic": "browser-arcade",
-      "status": "PROPOSED_FOR_RESEARCH",
-      "regulated": false,
-      "upfrontCostUsd": 0,
-      "evidence": [
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/AnandChowdhary/gitclaw/issues/878",
-          "observedAt": "2026-10-12T06:30:17.462220+00:00",
-          "verified": true,
-          "claim": "GitClaw telegram thread channel-mad-libs-e2e-20260604t072208z"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/AnandChowdhary/gitclaw/issues/877",
-          "observedAt": "2026-10-12T06:30:17.462222+00:00",
-          "verified": true,
-          "claim": "GitClaw telegram thread channel-tool-drill-e2e-20260604t070042z"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/AnandChowdhary/gitclaw/issues/876",
-          "observedAt": "2026-10-12T06:30:17.462225+00:00",
-          "verified": true,
-          "claim": "GitClaw telegram thread channel-soul-drill-e2e-20260604t063934z"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/AnandChowdhary/gitclaw/issues/875",
-          "observedAt": "2026-10-12T06:30:17.462227+00:00",
-          "verified": true,
-          "claim": "GitClaw telegram thread channel-skill-drill-e2e-20260604t061809z"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/AnandChowdhary/gitclaw/issues/874",
-          "observedAt": "2026-10-12T06:30:17.462229+00:00",
-          "verified": true,
-          "claim": "GitClaw telegram thread channel-this-or-that-e2e-20260604t055745z"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/AnandChowdhary/gitclaw/issues/873",
-          "observedAt": "2026-10-12T06:30:17.462231+00:00",
-          "verified": true,
-          "claim": "GitClaw telegram thread channel-riddle-e2e-20260604t053459z"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/AnandChowdhary/gitclaw/issues/871",
-          "observedAt": "2026-10-12T06:30:17.462233+00:00",
-          "verified": true,
-          "claim": "GitClaw telegram thread channel-icebreaker-e2e-20260604t045516z"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/AnandChowdhary/gitclaw/issues/870",
-          "observedAt": "2026-10-12T06:30:17.462236+00:00",
-          "verified": true,
-          "claim": "GitClaw telegram thread channel-fortune-cookie-e2e-20260604t043343z"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/AnandChowdhary/gitclaw/issues/869",
-          "observedAt": "2026-10-12T06:30:17.462238+00:00",
-          "verified": true,
-          "claim": "GitClaw telegram thread channel-arcade-e2e-20260604t040837z"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/ZeroK-RTS/CrashReports/issues/44043",
-          "observedAt": "2026-10-12T06:30:17.462244+00:00",
-          "verified": true,
-          "claim": "Spring LuaError [104.0.1-1544-ge1f249f] "
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/ZeroK-RTS/CrashReports/issues/33579",
-          "observedAt": "2026-10-12T06:30:17.462246+00:00",
-          "verified": true,
-          "claim": "Spring LuaError [104.0.1-1544-ge1f249f] "
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/ZeroK-RTS/CrashReports/issues/17622",
-          "observedAt": "2026-10-12T06:30:17.462248+00:00",
-          "verified": true,
-          "claim": "Spring Crash [104.0.1-287-gf7b0fcc] "
-        }
-      ],
-      "guardrails": [
-        "proposal_is_not_verified_demand",
-        "research_must_define_customer_and_problem",
-        "no_build_before_product_gate"
-      ]
-    },
-    {
-      "id": "proposal:forecasting:001",
-      "topic": "forecasting",
-      "status": "PROPOSED_FOR_RESEARCH",
-      "regulated": false,
-      "upfrontCostUsd": 0,
-      "evidence": [
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/NeoFii/DailyArXiv/issues/168",
-          "observedAt": "2026-10-12T06:30:19.524861+00:00",
-          "verified": true,
-          "claim": "Latest 50 Papers - September 30, 2026"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/xllm-io/daily-papers/issues/55",
-          "observedAt": "2026-10-12T06:30:19.524866+00:00",
-          "verified": true,
-          "claim": "Latest 20 Papers - September 29, 2026"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/xllm-io/daily-papers/issues/51",
-          "observedAt": "2026-10-12T06:30:19.524878+00:00",
-          "verified": true,
-          "claim": "Latest 20 Papers - September 23, 2026"
-        }
-      ],
-      "guardrails": [
-        "proposal_is_not_verified_demand",
-        "research_must_define_customer_and_problem",
-        "no_build_before_product_gate"
-      ]
-    },
-    {
-      "id": "proposal:goal-os:001",
-      "topic": "goal-os",
-      "status": "PROPOSED_FOR_RESEARCH",
-      "regulated": false,
-      "upfrontCostUsd": 0,
-      "evidence": [
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/A-iCan/AiCan_2.0/issues/2398",
-          "observedAt": "2026-10-12T06:30:20.373385+00:00",
-          "verified": true,
-          "claim": "TEAM BUS v2 - Single Source of Truth"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/A-iCan/AiCan_2.0/issues/525",
-          "observedAt": "2026-10-12T06:30:20.373393+00:00",
-          "verified": true,
-          "claim": "Team Bus (Issue #216 Rotation) - Coordination SSOT"
-        }
-      ],
-      "guardrails": [
-        "proposal_is_not_verified_demand",
-        "research_must_define_customer_and_problem",
-        "no_build_before_product_gate"
-      ]
-    },
-    {
-      "id": "proposal:editorial-evidence:001",
-      "topic": "editorial-evidence",
-      "status": "PROPOSED_FOR_RESEARCH",
-      "regulated": false,
-      "upfrontCostUsd": 0,
-      "evidence": [
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/bugabinga/mothergod/issues/3",
-          "observedAt": "2026-10-12T06:30:21.426433+00:00",
-          "verified": true,
-          "claim": "\ud83d\udccb Operations log"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/FreeForCharity/FFC-Cloudflare-Automation/issues/719",
-          "observedAt": "2026-10-12T06:30:21.426473+00:00",
-          "verified": true,
-          "claim": "Agentic OS Conductor Log"
         }
       ],
       "guardrails": [
