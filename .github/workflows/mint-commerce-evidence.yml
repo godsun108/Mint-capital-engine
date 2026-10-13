@@ -45,12 +45,22 @@ jobs:
               elif path=='/api/commerce/evidence':
                   safe.update({'totals':obj.get('totals'),'semantics':obj.get('semantics')})
               elif path=='/api/fulfillment/evidence':
-                  safe.update({'total':obj.get('total'),'durableStorageConfigured':obj.get('durableStorageConfigured')})
+                  # Fail CI if the public endpoint leaks payment/download locator IDs.
+                  forbidden={'receipts','sessionId','session_id','customerEmail','customer_details','paymentIntentId'}
+                  def forbidden_keys(value):
+                      if isinstance(value,dict):
+                          return any(k in forbidden or forbidden_keys(v) for k,v in value.items())
+                      if isinstance(value,list):return any(forbidden_keys(v) for v in value)
+                      return False
+                  if forbidden_keys(obj) or obj.get('schema')!='mint.fulfillment.evidence.v2' or obj.get('customerDeliveryVerified') is not False or not isinstance(obj.get('verifiedLiveDownloadStarts'),int):
+                      print('MINT_FULFILLMENT_PUBLIC_PRIVACY_CHECK_FAILED')
+                      sys.exit(1)
+                  safe.update({'verifiedLiveDownloadStarts':obj['verifiedLiveDownloadStarts'],'customerDeliveryVerified':False,'durableStorageConfigured':obj.get('durableStorageConfigured')})
               print('MINT_EVIDENCE',json.dumps(safe,sort_keys=True))
               import os
               summary=os.environ.get('GITHUB_STEP_SUMMARY')
               if summary:
                   with open(summary,'a',encoding='utf-8') as f:
-                      f.write('| '+path+' | '+str(code)+' | '+str(safe.get('totals',safe.get('total','—'))).replace('|','/')+' |\\n')
+                      f.write('| '+path+' | '+str(code)+' | '+str(safe.get('totals',safe.get('verifiedLiveDownloadStarts','—'))).replace('|','/')+' |\\n')
               if code!=200:sys.exit(1)
           PY
