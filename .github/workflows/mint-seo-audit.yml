@@ -49,7 +49,7 @@ jobs:
           if len(urls)!=len(set(urls)):issues.append('Duplicate sitemap URLs')
           robots=(root/'robots.txt').read_text()
           if os.environ['SITE']+'/sitemap.xml' not in robots:issues.append('Robots sitemap mismatch')
-          paths={'/':'index.html','/offers':'offers.html','/checklist':'checklist.html','/api-launch-checklist':'api-launch-checklist.html','/ai-workflow-kit':'ai-workflow-kit.html','/builder-launch-pack':'builder-launch-pack.html'}
+          paths={'/':'index.html','/offers':'offers.html','/checklist':'checklist.html','/api-launch-checklist':'api-launch-checklist.html','/ai-workflow-kit':'ai-workflow-kit.html','/builder-launch-pack':'builder-launch-pack.html','/guides/express-typescript-api-preflight':'express-typescript-api-preflight.html'}
           for route,filename in paths.items():
               url=os.environ['SITE']+route
               if url not in urls:issues.append('Missing sitemap entry: '+route)
