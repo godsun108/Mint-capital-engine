@@ -37,3 +37,14 @@ for(const [name,sessionValue,offerValue] of [
  ['unsafe integer amount',{...session,amount_total:Number.MAX_SAFE_INTEGER+1},offer],
  ['unpaid async payment',{...session,payment_status:'no_payment_required'},offer]
 ])test('rejects '+name,()=>assert.equal(isApprovedLivePurchase(sessionValue,offerValue),false));
+
+test('rejects absent mandate on both offer and checkout metadata',()=>{
+ const o=structuredClone(offer);delete o.mandate_id;
+ const checkout=structuredClone(session);delete checkout.metadata.mint_mandate_id;
+ assert.equal(isApprovedLivePurchase(checkout,o),false);
+});
+test('rejects empty mandate on both offer and checkout metadata',()=>{
+ const o={...offer,mandate_id:''};
+ const checkout={...session,metadata:{...session.metadata,mint_mandate_id:''}};
+ assert.equal(isApprovedLivePurchase(checkout,o),false);
+});
