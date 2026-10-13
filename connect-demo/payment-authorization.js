@@ -8,6 +8,7 @@ export function isApprovedLivePurchase(session,offer){
     offer?.status==='ACTIVE' &&
     offer?.type==='DIGITAL_DOWNLOAD' &&
     offer?.fulfillment?.kind==='FILE' &&
+    typeof offer?.mandate_id==='string' && offer.mandate_id.length>0 &&
     session?.metadata?.mint_offer_id===offer?.id &&
     session?.metadata?.mint_mandate_id===offer?.mandate_id &&
     Number.isSafeInteger(session?.amount_total) &&
