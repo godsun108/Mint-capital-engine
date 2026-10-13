@@ -34,6 +34,7 @@ jobs:
           node --check payment-authorization.test.js
       - name: Run unit and webhook safety tests
         run: |
+          set -o pipefail
           npm test 2>&1 | tee /tmp/mint-test-output.log
       - name: Record regression result
         if: always()
