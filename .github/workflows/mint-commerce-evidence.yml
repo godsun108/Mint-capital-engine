@@ -1,0 +1,42 @@
+name: MINT commerce evidence snapshot
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - '.github/workflows/mint-commerce-evidence.yml'
+jobs:
+  evidence:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Read public aggregate evidence without printing customer records
+        run: |
+          python3 - <<'PY'
+          import json, urllib.request, urllib.error, sys
+          base='https://mint-stripe-connect-v4-production.up.railway.app'
+          paths=['/health','/api/acquisition/state','/api/commerce/evidence','/api/fulfillment/evidence']
+          for path in paths:
+              try:
+                  with urllib.request.urlopen(urllib.request.Request(base+path,headers={'User-Agent':'MINT-Evidence-Snapshot/1.0'}),timeout=20) as r:
+                      code=r.status
+                      obj=json.loads(r.read(200000))
+              except urllib.error.HTTPError as e:
+                  code=e.code
+                  try: obj=json.loads(e.read(200000))
+                  except: obj={}
+              except Exception as e:
+                  print(path, 'transport_error',type(e).__name__)
+                  sys.exit(1)
+              # Only aggregate numbers and booleans; no session IDs, transaction IDs or customer data.
+              safe={'path':path,'http':code,'ok':obj.get('ok')}
+              if path=='/health':
+                  safe.update({k:obj.get(k) for k in ['stripeConfigured','webhookConfigured','durableFulfillmentStorage','durableAcquisitionStorage']})
+              elif path=='/api/acquisition/state':
+                  safe.update({'semantics':obj.get('semantics'),'totals':obj.get('totals'),'durableStorageConfigured':obj.get('durableStorageConfigured')})
+              elif path=='/api/commerce/evidence':
+                  safe.update({'totals':obj.get('totals'),'semantics':obj.get('semantics')})
+              elif path=='/api/fulfillment/evidence':
+                  safe.update({'total':obj.get('total'),'durableStorageConfigured':obj.get('durableStorageConfigured')})
+              print('MINT_EVIDENCE',json.dumps(safe,sort_keys=True))
+              if code!=200:sys.exit(1)
+          PY
