@@ -36,6 +36,14 @@ jobs:
         run: |
           set -o pipefail
           npm test 2>&1 | tee /tmp/mint-test-output.log
+      - name: Upload test output for audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: mint-commerce-test-output
+          path: /tmp/mint-test-output.log
+          if-no-files-found: warn
+          retention-days: 14
       - name: Record regression result
         if: always()
         run: |
