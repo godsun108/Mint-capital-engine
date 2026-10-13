@@ -341,6 +341,9 @@ async function fulfillCheckout(sessionId,res){
   const file=path.resolve(root,fulfillment.path);
   // Never let a catalog artifact path escape the application's deliverables directory.
   if(!file.startsWith(path.resolve(root,'deliverables')+path.sep))return send(res,403,{error:'Invalid fulfillment artifact path.'});
+  const realBase=await (await import('node:fs/promises')).realpath(path.resolve(root,'deliverables'));
+  const realFile=await (await import('node:fs/promises')).realpath(file);
+  if(!realFile.startsWith(realBase+path.sep))return send(res,403,{error:'Invalid fulfillment artifact path.'});
   if(!(await stat(file)).isFile())return send(res,404,{error:'Fulfillment artifact unavailable.'});
   const receipts=readFulfillmentReceipts();
   const prior=receipts.receipts[session.id];
