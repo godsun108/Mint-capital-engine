@@ -1,0 +1,41 @@
+name: MINT commerce regression tests
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'connect-demo/server.js'
+      - 'connect-demo/payment-webhook.js'
+      - 'connect-demo/payment-webhook.test.js'
+      - 'connect-demo/package.json'
+      - 'connect-demo/package-lock.json'
+      - '.github/workflows/mint-commerce-regression.yml'
+  pull_request:
+    paths:
+      - 'connect-demo/server.js'
+      - 'connect-demo/payment-webhook.js'
+      - 'connect-demo/payment-webhook.test.js'
+      - 'connect-demo/package.json'
+      - 'connect-demo/package-lock.json'
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 6
+    defaults:
+      run:
+        working-directory: connect-demo
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: connect-demo/package-lock.json
+      - run: npm ci --ignore-scripts
+      - name: Check server and payment handler syntax
+        run: |
+          node --check server.js
+          node --check payment-webhook.js
+      - name: Run unit and webhook safety tests
+        run: npm test
