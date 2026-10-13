@@ -19,7 +19,7 @@ jobs:
           python3 - <<'PY'
           import json, urllib.request, urllib.error, sys
           base='https://mint-stripe-connect-v4-production.up.railway.app'
-          paths=['/health','/api/acquisition/state','/api/commerce/evidence','/api/fulfillment/evidence']
+          paths=['/health','/api/acquisition/state','/api/commerce/evidence','/api/fulfillment/evidence','/api/money-state']
           import os
           if os.environ.get('GITHUB_STEP_SUMMARY'):
               with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf-8') as f:
@@ -57,6 +57,17 @@ jobs:
                       print('MINT_COMMERCE_PUBLIC_PRIVACY_CHECK_FAILED')
                       sys.exit(1)
                   safe.update({'totals':obj.get('totals'),'semantics':obj.get('semantics')})
+              elif path=='/api/money-state':
+                  forbidden={'transactions','sessionId','session_id','paymentIntent','charge','customerEmail','balanceTransaction'}
+                  def contains_private_keys(value):
+                      if isinstance(value,dict):
+                          return any(k in forbidden or contains_private_keys(v) for k,v in value.items())
+                      if isinstance(value,list):return any(contains_private_keys(v) for v in value)
+                      return False
+                  if contains_private_keys(obj) or not isinstance(obj.get('totals'),dict):
+                      print('MINT_MONEY_STATE_PUBLIC_PRIVACY_CHECK_FAILED')
+                      sys.exit(1)
+                  safe.update({'totals':obj.get('totals'),'mode':obj.get('mode')})
               elif path=='/api/fulfillment/evidence':
                   # Fail CI if the public endpoint leaks payment/download locator IDs.
                   forbidden={'receipts','sessionId','session_id','customerEmail','customer_details','paymentIntentId'}
