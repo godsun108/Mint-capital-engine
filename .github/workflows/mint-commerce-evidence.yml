@@ -43,6 +43,19 @@ jobs:
               elif path=='/api/acquisition/state':
                   safe.update({'semantics':obj.get('semantics'),'totals':obj.get('totals'),'durableStorageConfigured':obj.get('durableStorageConfigured')})
               elif path=='/api/commerce/evidence':
+                  # Fail closed if public commerce data exposes payment locators.
+                  if obj.get('schema')!='mint.commerce.evidence.v2' or 'transactions' in obj or not isinstance(obj.get('totals'),dict):
+                      print('MINT_COMMERCE_PUBLIC_PRIVACY_CHECK_FAILED')
+                      sys.exit(1)
+                  forbidden={'sessionId','session_id','chargeId','paymentIntentId','customerEmail','customer_details','receipts','transactions'}
+                  def has_sensitive_keys(value):
+                      if isinstance(value,dict):
+                          return any(k in forbidden or has_sensitive_keys(v) for k,v in value.items())
+                      if isinstance(value,list):return any(has_sensitive_keys(v) for v in value)
+                      return False
+                  if has_sensitive_keys(obj) or any(type(obj['totals'].get(k)) is not int for k in ['sessions','paid','providerAvailable']):
+                      print('MINT_COMMERCE_PUBLIC_PRIVACY_CHECK_FAILED')
+                      sys.exit(1)
                   safe.update({'totals':obj.get('totals'),'semantics':obj.get('semantics')})
               elif path=='/api/fulfillment/evidence':
                   # Fail CI if the public endpoint leaks payment/download locator IDs.
