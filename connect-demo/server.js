@@ -1,5 +1,6 @@
 import http from 'node:http';
 import {paymentWebhook} from './payment-webhook.js';
+import {isApprovedLivePurchase} from './payment-authorization.js';
 import {readFile} from 'node:fs/promises';
 import {createReadStream,existsSync,mkdirSync,readFileSync,writeFileSync,renameSync} from 'node:fs';
 import {stat} from 'node:fs/promises';
@@ -316,12 +317,7 @@ async function fulfillCheckout(sessionId,res){
   let fulfillment=null;
   if(session.livemode===true){
     const offer=await liveOffer(session.metadata?.mint_offer_id);
-    // A paid Stripe session alone is insufficient: bind fulfillment to the
-    // approved catalog mandate, exact amount, currency, and live mode.
-    if(!offer||session.metadata?.mint_mandate_id!==offer.mandate_id||
-       session.amount_total!==offer.price.unit_amount||
-       session.currency!==offer.price.currency||
-       session.livemode!==true){
+    if(!isApprovedLivePurchase(session,offer)){
       return send(res,403,{error:'Paid session does not match an approved live catalog offer.'});
     }
     if(offer.fulfillment?.kind==='FILE'||offer.fulfillment?.kind==='PRINTFUL_POD') fulfillment=offer.fulfillment;
