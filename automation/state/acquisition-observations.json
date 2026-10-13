@@ -2,17 +2,17 @@
   "ok": true,
   "schema": "mint.acquisition.snapshot.v3",
   "semantics": "DURABLE_OFFER_AND_SOURCE_AGGREGATES_NOT_UNIQUE_VISITORS",
-  "startedAt": "2026-10-13T08:54:06.691Z",
-  "generatedAt": "2026-10-13T09:34:03.672Z",
+  "startedAt": "2026-10-13T16:06:37.982Z",
+  "generatedAt": "2026-10-13T16:07:26.158Z",
   "durableStorageConfigured": true,
   "privacy": "No IP, cookie, user-agent, or personal identifier stored by this counter.",
   "totals": {
-    "VISITED": 7,
+    "VISITED": 11,
     "CHECKOUT_STARTED": 0
   },
   "sources": {
     "direct": {
-      "VISITED": 5,
+      "VISITED": 9,
       "CHECKOUT_STARTED": 0
     },
     "qa_offers_20261012": {
@@ -26,11 +26,11 @@
   },
   "offers": {
     "foundry-express-ts-001": {
-      "VISITED": 5,
+      "VISITED": 9,
       "CHECKOUT_STARTED": 0,
       "sources": {
         "direct": {
-          "VISITED": 5,
+          "VISITED": 9,
           "CHECKOUT_STARTED": 0
         }
       }
@@ -50,6 +50,6 @@
       }
     }
   },
-  "capturedAt": "2026-10-13T09:34:03.720Z",
+  "capturedAt": "2026-10-13T16:07:26.221Z",
   "captureSemantics": "SNAPSHOT_OF_DURABLE_AGGREGATES_NOT_UNIQUE_VISITORS"
 }

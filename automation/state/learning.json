@@ -1,22 +1,22 @@
 {
   "schema": "mint.learning.state.v1",
-  "generatedAt": "2026-10-13T09:34:04.789Z",
+  "generatedAt": "2026-10-13T16:07:27.205Z",
   "offers": {
     "foundry-express-ts-001": {
       "offerId": "foundry-express-ts-001",
       "acquisition": {
-        "visits": 5,
+        "visits": 9,
         "checkoutStarted": 0,
         "sources": {
           "direct": {
-            "VISITED": 5,
+            "VISITED": 9,
             "CHECKOUT_STARTED": 0
           }
         },
         "durableStorageConfigured": true,
         "semantics": "DURABLE_AGGREGATE_FUNNEL_SIGNAL_NOT_UNIQUE_VISITORS_NOT_PAYMENT_EVIDENCE"
       },
-      "updatedAt": "2026-10-13T09:34:04.789Z"
+      "updatedAt": "2026-10-13T16:07:27.205Z"
     },
     "mint-builder-launch-pack-005": {
       "offerId": "mint-builder-launch-pack-005",
@@ -32,7 +32,7 @@
         "state": "LIVE",
         "reason": "insufficient_evidence_to_change"
       },
-      "updatedAt": "2026-10-13T09:34:04.789Z",
+      "updatedAt": "2026-10-13T16:07:27.205Z",
       "semantics": "VERIFIED_INPUTS_ONLY_NO_FORECASTS",
       "learnings": {
         "acquisitionProven": false,
@@ -59,7 +59,7 @@
         "durableStorageConfigured": true,
         "semantics": "DURABLE_AGGREGATE_FUNNEL_SIGNAL_NOT_UNIQUE_VISITORS_NOT_PAYMENT_EVIDENCE"
       },
-      "updatedAt": "2026-10-13T09:34:04.789Z"
+      "updatedAt": "2026-10-13T16:07:27.205Z"
     }
   }
 }
