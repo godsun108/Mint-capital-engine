@@ -1,0 +1,54 @@
+name: MINT fulfillment artifact integrity
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'connect-demo/catalog.json'
+      - 'connect-demo/deliverables/**'
+      - '.github/workflows/mint-fulfillment-artifact-audit.yml'
+  schedule:
+    - cron: '31 11 * * 1'
+permissions:
+  contents: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate every active digital offer has a nonempty safe deliverable
+        run: |
+          python3 - <<'PY'
+          import json,pathlib,zipfile,sys
+          root=pathlib.Path('connect-demo').resolve()
+          catalog=json.loads((root/'catalog.json').read_text())
+          failures=[]
+          active=0
+          for key,offer in catalog.get('offers',{}).items():
+              if offer.get('status')!='ACTIVE':continue
+              active+=1
+              fulfillment=offer.get('fulfillment',{})
+              rel=fulfillment.get('path','')
+              artifact=(root/rel).resolve()
+              if offer.get('id')!=key or offer.get('type')!='DIGITAL_DOWNLOAD' or fulfillment.get('kind')!='FILE':
+                  failures.append(key+': catalog identity or fulfillment kind invalid')
+                  continue
+              if not artifact.is_relative_to(root/'deliverables') or not artifact.is_file():
+                  failures.append(key+': missing or unsafe artifact path')
+                  continue
+              if artifact.stat().st_size==0:failures.append(key+': empty artifact')
+              if artifact.suffix.lower()=='.zip':
+                  try:
+                      with zipfile.ZipFile(artifact) as z:
+                          if z.testzip() is not None or not z.namelist():failures.append(key+': corrupt or empty ZIP')
+                          if any(n.startswith('/') or '..' in pathlib.PurePosixPath(n).parts for n in z.namelist()):failures.append(key+': unsafe ZIP entries')
+                  except (zipfile.BadZipFile,OSError) as e:failures.append(key+': unreadable ZIP')
+              print(key, 'artifact_exists=',artifact.is_file(),'bytes=',artifact.stat().st_size)
+          if not active:failures.append('no active offers')
+          summary='## MINT artifact audit\\n\\nActive digital offers: '+str(active)+'\\n\\n'+('PASS: all active artifacts exist and are readable' if not failures else 'FAIL: '+', '.join(failures))+'\\n'
+          import os
+          if os.getenv('GITHUB_STEP_SUMMARY'):
+              with open(os.environ['GITHUB_STEP_SUMMARY'],'a') as f:f.write(summary)
+          for f in failures:print('ERROR',f)
+          sys.exit(bool(failures))
+          PY
