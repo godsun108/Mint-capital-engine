@@ -260,6 +260,8 @@ async function verifyCheckout(sessionId,res){
   // Read-only TEST reconciliation endpoint. Never creates, captures, refunds, or transfers funds.
   const s=requireStripe();
   const session=await s.checkout.sessions.retrieve(sessionId,{expand:['payment_intent.latest_charge','payment_intent.latest_charge.balance_transaction']});
+  // Never disclose live payment identifiers through this public diagnostic endpoint.
+  if(session.livemode!==false)return send(res,403,{error:'Checkout diagnostics are available for test-mode sessions only.'});
   const pi=typeof session.payment_intent==='object'?session.payment_intent:null;
   const charge=pi&&typeof pi.latest_charge==='object'?pi.latest_charge:null;
   const bt=charge&&typeof charge.balance_transaction==='object'?charge.balance_transaction:null;
