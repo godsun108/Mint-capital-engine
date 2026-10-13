@@ -6,6 +6,7 @@ on:
   push:
     paths:
       - '.github/workflows/mint-commerce-evidence.yml'
+      - 'connect-demo/server.js'
 concurrency:
   group: mint-commerce-evidence
   cancel-in-progress: false
