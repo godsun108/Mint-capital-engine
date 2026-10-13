@@ -283,14 +283,13 @@ async function verifyCheckout(sessionId,res){
 }
 
 async function moneyState(res){
-  // Read-only machine ledger derived from Stripe. Provider availability is not
+  // Public aggregate-only machine ledger derived from Stripe. No transaction or payment locator IDs. Provider availability is not
   // represented as bank settlement; MINT preserves PAID != SETTLED.
   const s=requireStripe();
   // Determine mode from Stripe even when no checkout sessions exist.
   const balance=await s.balance.retrieve();
   if(typeof balance.livemode!=='boolean')throw new Error('Stripe did not return an authoritative account mode.');
   const sessions=await s.checkout.sessions.list({limit:25,expand:['data.payment_intent.latest_charge','data.payment_intent.latest_charge.balance_transaction']});
-  const rows=[];
   let totals={created:0,paid:0,pending:0,provider_available:0,settled:0,gross:0,processorFees:0,net:0,applicationFees:0};
   for(const session of sessions.data){
     const pi=typeof session.payment_intent==='object'?session.payment_intent:null;
@@ -301,9 +300,8 @@ async function moneyState(res){
     if(session.payment_status==='paid')totals.paid++;
     if(ch?.paid){totals.gross+=ch.amount||0;totals.applicationFees+=ch.application_fee_amount||0;}
     if(bt){totals.processorFees+=bt.fee||0;totals.net+=bt.net||0;}
-    rows.push({sessionId:session.id,state,source:session.metadata?.mint_source||'unknown',offerId:session.metadata?.mint_offer_id||null,paymentStatus:session.payment_status,amount:session.amount_total,currency:session.currency,livemode:session.livemode,paymentIntent:pi?.id||null,charge:ch?.id||null,destination:typeof ch?.destination==='string'?ch.destination:ch?.destination?.id||null,applicationFeeAmount:ch?.application_fee_amount||0,balanceTransaction:bt?{id:bt.id,status:bt.status,fee:bt.fee,net:bt.net,available_on:bt.available_on}:null});
   }
-  return send(res,200,{ok:true,mode:(balance.livemode?'live':'test'),settledDefinition:'Requires independent destination-cash evidence; Stripe availability alone is not SETTLED.',generatedAt:new Date().toISOString(),totals,transactions:rows});
+  return send(res,200,{ok:true,mode:(balance.livemode?'live':'test'),settledDefinition:'Requires independent destination-cash evidence; Stripe availability alone is not SETTLED.',generatedAt:new Date().toISOString(),totals});
 }
 
 async function fulfillCheckout(sessionId,res){
