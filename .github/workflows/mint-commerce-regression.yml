@@ -5,6 +5,8 @@ on:
     paths:
       - 'connect-demo/server.js'
       - 'connect-demo/payment-webhook.js'
+      - 'connect-demo/payment-authorization.js'
+      - 'connect-demo/payment-authorization.test.js'
       - 'connect-demo/payment-webhook.test.js'
       - 'connect-demo/package.json'
       - 'connect-demo/package-lock.json'
