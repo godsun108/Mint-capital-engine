@@ -1,6 +1,6 @@
 {
   "schema": "mint.learning.state.v1",
-  "generatedAt": "2026-10-13T02:07:11.411Z",
+  "generatedAt": "2026-10-13T07:49:30.213Z",
   "offers": {
     "foundry-express-ts-001": {
       "offerId": "foundry-express-ts-001",
@@ -16,7 +16,7 @@
         "durableStorageConfigured": true,
         "semantics": "DURABLE_AGGREGATE_FUNNEL_SIGNAL_NOT_UNIQUE_VISITORS_NOT_PAYMENT_EVIDENCE"
       },
-      "updatedAt": "2026-10-13T02:07:11.411Z"
+      "updatedAt": "2026-10-13T07:49:30.213Z"
     },
     "mint-builder-launch-pack-005": {
       "offerId": "mint-builder-launch-pack-005",
@@ -25,14 +25,14 @@
         "fulfilled": 0,
         "refunds": 0,
         "settledNetUsd": 0,
-        "verifiedObservations": 1,
+        "verifiedObservations": 2,
         "deliveryFailure": false
       },
       "decision": {
         "state": "LIVE",
         "reason": "insufficient_evidence_to_change"
       },
-      "updatedAt": "2026-10-13T02:07:11.411Z",
+      "updatedAt": "2026-10-13T07:49:30.213Z",
       "semantics": "VERIFIED_INPUTS_ONLY_NO_FORECASTS",
       "learnings": {
         "acquisitionProven": false,
@@ -44,10 +44,14 @@
     "portfolio": {
       "offerId": "portfolio",
       "acquisition": {
-        "visits": 1,
+        "visits": 2,
         "checkoutStarted": 0,
         "sources": {
           "qa_offers_20261012": {
+            "VISITED": 1,
+            "CHECKOUT_STARTED": 0
+          },
+          "portfolio": {
             "VISITED": 1,
             "CHECKOUT_STARTED": 0
           }
@@ -55,7 +59,7 @@
         "durableStorageConfigured": true,
         "semantics": "DURABLE_AGGREGATE_FUNNEL_SIGNAL_NOT_UNIQUE_VISITORS_NOT_PAYMENT_EVIDENCE"
       },
-      "updatedAt": "2026-10-13T02:07:11.411Z"
+      "updatedAt": "2026-10-13T07:49:30.213Z"
     }
   }
 }

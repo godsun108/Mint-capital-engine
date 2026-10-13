@@ -1,10 +1,10 @@
 {
   "schema": "mint.commerce.observations.v1",
-  "generatedAt": "2026-10-13T02:07:11.273Z",
+  "generatedAt": "2026-10-13T07:49:30.069Z",
   "semantics": "PROVIDER_OBSERVATIONS_NOT_SETTLEMENT_EVIDENCE",
   "offers": {
     "mint-builder-launch-pack-005": {
-      "verifiedObservations": 1,
+      "verifiedObservations": 2,
       "paid": 0,
       "fulfilled": 0,
       "refunds": 0,
@@ -12,6 +12,7 @@
       "deliveryFailure": false,
       "providerAvailable": 0,
       "sources": {
+        "github_smoke_20261012": 1,
         "qa_checkout_20261009": 1
       }
     }
