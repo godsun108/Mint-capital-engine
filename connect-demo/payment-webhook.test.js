@@ -7,10 +7,10 @@ import {Readable} from 'node:stream';
 import Stripe from 'stripe';
 import {paymentWebhook,processPaymentEvent} from './payment-webhook.js';
 function fixture(t){
- const root=mkdtempSync(path.join(os.tmpdir(),'mint-webhook-'));t.after(()=>rmSync(root,{recursive:true,force:true}));writeFileSync(path.join(root,'product.zip'),'fixture');
+ const root=mkdtempSync(path.join(os.tmpdir(),'mint-webhook-'));t.after(()=>rmSync(root,{recursive:true,force:true}));mkdirSync(path.join(root,'deliverables'));writeFileSync(path.join(root,'deliverables','product.zip'),'fixture');
  const session={id:'cs_live_fixture',livemode:true,status:'complete',payment_status:'paid',amount_total:1900,currency:'usd',metadata:{mint_offer_id:'bundle',mint_mandate_id:'approved'}};
  const event={id:'evt_fixture',type:'checkout.session.completed',livemode:true,data:{object:{id:session.id}}};
- const offer={id:'bundle',mandate_id:'approved',price:{unit_amount:1900,currency:'usd'},fulfillment:{kind:'FILE',path:'product.zip'}};
+ const offer={id:'bundle',status:'ACTIVE',type:'DIGITAL_DOWNLOAD',mandate_id:'approved',price:{unit_amount:1900,currency:'usd'},fulfillment:{kind:'FILE',path:'deliverables/product.zip'}};
  const stripe=new Stripe('sk_test_fixture');stripe.checkout.sessions.retrieve=async()=>session;
  return {session,event,offer,deps:{stripe,root,stateDir:root,findOffer:async()=>offer}};
 }
