@@ -1,3 +1,5 @@
+import {approvedArtifactPath} from './artifact-path.js';
+import {isApprovedLivePurchase} from './payment-authorization.js';
 import {mkdirSync, readFileSync, writeFileSync, renameSync, unlinkSync} from 'node:fs';
 import {stat} from 'node:fs/promises';
 import path from 'node:path';
@@ -16,12 +18,9 @@ export async function processPaymentEvent(event,{stripe,stateDir,root,findOffer}
   // Test events cannot provision a live catalog purchase.
   if(session.livemode!==true)return {ignored:true,reason:'test_mode'};
   const offer=await findOffer(session.metadata?.mint_offer_id);
-  if(!offer||session.metadata?.mint_mandate_id!==offer.mandate_id)throw new Error('Unrecognized paid offer');
-  if(session.amount_total!==offer.price.unit_amount||session.currency!==offer.price.currency)throw new Error('Payment amount or currency mismatch');
-  if(offer.fulfillment?.kind!=='FILE')throw new Error('Automatic physical fulfillment is not enabled');
-  const artifact=path.resolve(root,offer.fulfillment.path);
-  if(!artifact.startsWith(path.resolve(root)+path.sep))throw new Error('Invalid artifact path');
-  if(!(await stat(artifact)).isFile())throw new Error('Download artifact unavailable');
+  if(!isApprovedLivePurchase(session,offer))throw new Error('Paid checkout is not authorized for this catalog offer');
+  const artifact=await approvedArtifactPath(root,offer.fulfillment.path);
+  if(!artifact)throw new Error('Download artifact unavailable or outside approved directory');
   const dir=path.join(stateDir,'payment-entitlements');mkdirSync(dir,{recursive:true});
   const file=path.join(dir,id+'.json');
   try {const prior=JSON.parse(readFileSync(file,'utf8'));return {ready:true,idempotent:true,sessionId:prior.sessionId};}
