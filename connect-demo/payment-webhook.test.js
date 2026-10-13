@@ -20,6 +20,17 @@ test('paid duplicate/concurrent events create one readiness record, never a deli
  const r=JSON.parse(readFileSync(path.join(deps.root,'payment-entitlements',files[0])));assert.equal(r.state,'READY_FOR_DOWNLOAD');assert.equal(r.customerDeliveryVerified,false);
  assert.equal((await processPaymentEvent(event,deps)).idempotent,true);
 });
+test('simulated paid webhook produces a downloadable approved artifact without claiming delivery',async t=>{
+ const {event,deps}=fixture(t);
+ const result=await processPaymentEvent(event,deps);
+ assert.equal(result.ready,true);
+ const receipt=JSON.parse(readFileSync(path.join(deps.stateDir,'payment-entitlements',event.data.object.id+'.json'),'utf8'));
+ assert.equal(receipt.paidVerified,true);
+ assert.equal(receipt.customerDeliveryVerified,false);
+ const {approvedArtifactPath}=await import('./artifact-path.js');
+ const resolved=await approvedArtifactPath(deps.root,receipt.artifact);
+ assert.equal(readFileSync(resolved,'utf8'),'fixture');
+});
 test('unpaid completion waits; asynchronous paid success becomes ready',async t=>{
  const {event,deps,session}=fixture(t);session.payment_status='unpaid';assert.deepEqual(await processPaymentEvent(event,deps),{pending:true});
  session.payment_status='paid';event.type='checkout.session.async_payment_succeeded';assert.equal((await processPaymentEvent(event,deps)).ready,true);
