@@ -344,7 +344,7 @@ async function fulfillCheckout(sessionId,res){
   const realBase=await (await import('node:fs/promises')).realpath(path.resolve(root,'deliverables'));
   const realFile=await (await import('node:fs/promises')).realpath(file);
   if(!realFile.startsWith(realBase+path.sep))return send(res,403,{error:'Invalid fulfillment artifact path.'});
-  if(!(await stat(file)).isFile())return send(res,404,{error:'Fulfillment artifact unavailable.'});
+  if(!(await stat(realFile)).isFile())return send(res,404,{error:'Fulfillment artifact unavailable.'});
   const receipts=readFulfillmentReceipts();
   const prior=receipts.receipts[session.id];
   if(!prior){
@@ -353,7 +353,7 @@ async function fulfillCheckout(sessionId,res){
     console.log('MINT_COMMERCE',JSON.stringify({event:'DOWNLOAD_STARTED',offerId:receipts.receipts[session.id].offerId,livemode:session.livemode,at:receipts.receipts[session.id].downloadStartedAt}));
   }
   res.writeHead(200,{'content-type':fulfillment.content_type||'application/octet-stream','content-disposition':'attachment; filename="'+fulfillment.filename.replace(/["\\]/g,'')+'"','x-mint-fulfillment':session.livemode?'verified-live-payment':'verified-test-payment'});
-  createReadStream(file).pipe(res);
+  createReadStream(realFile).pipe(res);
 }
 
 async function thinWebhook(req,res){
