@@ -1,0 +1,35 @@
+name: MINT live checkout session smoke
+on:
+  push:
+    paths:
+      - '.github/workflows/mint-checkout-smoke.yml'
+  workflow_dispatch:
+jobs:
+  checkout-session:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Verify checkout session creation without payment
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          import json, urllib.request, urllib.error, sys
+          endpoint='https://mint-stripe-connect-v4-production.up.railway.app/api/checkout'
+          payload=json.dumps({'productId':'mint-builder-launch-pack-005','source':'github_smoke_20261012'}).encode()
+          req=urllib.request.Request(endpoint,data=payload,headers={'Content-Type':'application/json','User-Agent':'MINT-Checkout-Smoke/1.0'},method='POST')
+          try:
+              with urllib.request.urlopen(req,timeout=20) as resp:
+                  status=resp.status
+                  result=json.loads(resp.read(32768))
+          except urllib.error.HTTPError as err:
+              status=err.code
+              result=json.loads(err.read(32768) or b'{}')
+          except Exception as err:
+              print('CHECKOUT_SMOKE transport failure:',type(err).__name__)
+              sys.exit(1)
+          # Never print the checkout URL or session ID.
+          valid=status==201 and result.get('mode')=='live' and result.get('offerId')=='mint-builder-launch-pack-005' and isinstance(result.get('url'),str) and result['url'].startswith('https://')
+          print('CHECKOUT_SMOKE',json.dumps({'http_status':status,'session_created':valid,'mode':result.get('mode'),'offer_id':result.get('offerId'),'error':str(result.get('error',''))[:180]}))
+          if not valid: sys.exit(1)
+          PY
