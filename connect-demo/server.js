@@ -451,6 +451,7 @@ const server=http.createServer(async(req,res)=>{
     if(req.method==='OPTIONS'&&u.pathname==='/api/acquisition/event'){res.writeHead(204,acquisitionCors);return res.end();}
     if((u.pathname.startsWith('/api/')&&!u.pathname.startsWith('/api/acquisition/'))||u.pathname.startsWith('/refresh-onboarding')||u.pathname.startsWith('/webhooks/'))requireStripe();
     if(req.method==='GET'&&u.pathname==='/')return serveFile(res,path.join(root,'public/index.html'),'text/html; charset=utf-8');
+    if(req.method==='GET'&&u.pathname==='/guides/express-typescript-api-preflight')return serveFile(res,path.join(root,'public/express-typescript-api-preflight.html'),'text/html; charset=utf-8');
     if(req.method==='GET'&&u.pathname==='/checklist')return serveFile(res,path.join(root,'public/checklist.html'),'text/html; charset=utf-8');
     if(req.method==='GET'&&u.pathname==='/offers')return serveFile(res,path.join(root,'public/offers.html'),'text/html; charset=utf-8');
     if(req.method==='GET'&&u.pathname==='/api-launch-checklist')return serveFile(res,path.join(root,'public/api-launch-checklist.html'),'text/html; charset=utf-8');
