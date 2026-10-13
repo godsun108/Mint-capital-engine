@@ -345,9 +345,9 @@ async function fulfillCheckout(sessionId,res){
   const receipts=readFulfillmentReceipts();
   const prior=receipts.receipts[session.id];
   if(!prior){
-    receipts.receipts[session.id]={sessionId:session.id,offerId:session.metadata?.mint_offer_id||productId||null,source:session.metadata?.mint_source||'unknown',livemode:session.livemode,paidVerified:true,fulfilledAt:new Date().toISOString(),artifact:fulfillment.path};
+    receipts.receipts[session.id]={sessionId:session.id,offerId:session.metadata?.mint_offer_id||productId||null,source:session.metadata?.mint_source||'unknown',livemode:session.livemode,paidVerified:true,downloadStartedAt:new Date().toISOString(),customerDeliveryVerified:false,artifact:fulfillment.path};
     writeFulfillmentReceipts(receipts);
-    console.log('MINT_COMMERCE',JSON.stringify({event:'FULFILLED',sessionId:session.id,offerId:receipts.receipts[session.id].offerId,livemode:session.livemode,at:receipts.receipts[session.id].fulfilledAt}));
+    console.log('MINT_COMMERCE',JSON.stringify({event:'DOWNLOAD_STARTED',offerId:receipts.receipts[session.id].offerId,livemode:session.livemode,at:receipts.receipts[session.id].downloadStartedAt}));
   }
   res.writeHead(200,{'content-type':fulfillment.content_type||'application/octet-stream','content-disposition':'attachment; filename="'+fulfillment.filename.replace(/["\\]/g,'')+'"','x-mint-fulfillment':session.livemode?'verified-live-payment':'verified-test-payment'});
   createReadStream(file).pipe(res);
@@ -397,7 +397,9 @@ async function acquisitionEvent(req,res){
 async function fulfillmentEvidence(res){
   const x=readFulfillmentReceipts();
   const receipts=Object.values(x.receipts||{}).filter(r=>r.livemode===true);
-  return send(res,durableStateConfigured?200:503,{ok:durableStateConfigured,schema:'mint.fulfillment.evidence.v1',durableStorageConfigured:durableStateConfigured,generatedAt:new Date().toISOString(),semantics:'SERVER_RECORDED_DELIVERY_AFTER_STRIPE_PAID_VERIFICATION; LIVE_CERTIFICATION_REQUIRES_PERSISTENT_MINT_STATE_DIR',total:receipts.length,receipts});
+  // This endpoint is public. Session IDs act as download locators: never publish them.
+  const downloadStarts=receipts.filter(r=>r.downloadStartedAt||r.fulfilledAt).length;
+  return send(res,durableStateConfigured?200:503,{ok:durableStateConfigured,schema:'mint.fulfillment.evidence.v2',durableStorageConfigured:durableStateConfigured,generatedAt:new Date().toISOString(),semantics:'AGGREGATE_SERVER_RECORDED_DOWNLOAD_STARTS_AFTER_STRIPE_VERIFICATION; NOT CUSTOMER_RECEIPT_OR COMPLETED_TRANSFER',verifiedLiveDownloadStarts:downloadStarts,customerDeliveryVerified:false});
 }
 
 async function commerceEvidence(res){
