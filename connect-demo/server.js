@@ -1,6 +1,7 @@
 import http from 'node:http';
 import {paymentWebhook} from './payment-webhook.js';
 import {isApprovedLivePurchase} from './payment-authorization.js';
+import {approvedArtifactPath} from './artifact-path.js';
 import {readFile} from 'node:fs/promises';
 import {createReadStream,existsSync,mkdirSync,readFileSync,writeFileSync,renameSync} from 'node:fs';
 import {stat} from 'node:fs/promises';
@@ -338,13 +339,8 @@ async function fulfillCheckout(sessionId,res){
     console.log('MINT_COMMERCE',JSON.stringify({event:'PHYSICAL_FULFILLMENT_STAGED',sessionId:session.id,offerId:receipt.offerId,at:receipt.createdAt}));
     return send(res,202,{ok:true,spend:false,orderCreated:false,receipt});
   }
-  const file=path.resolve(root,fulfillment.path);
-  // Never let a catalog artifact path escape the application's deliverables directory.
-  if(!file.startsWith(path.resolve(root,'deliverables')+path.sep))return send(res,403,{error:'Invalid fulfillment artifact path.'});
-  const realBase=await (await import('node:fs/promises')).realpath(path.resolve(root,'deliverables'));
-  const realFile=await (await import('node:fs/promises')).realpath(file);
-  if(!realFile.startsWith(realBase+path.sep))return send(res,403,{error:'Invalid fulfillment artifact path.'});
-  if(!(await stat(realFile)).isFile())return send(res,404,{error:'Fulfillment artifact unavailable.'});
+  const realFile=await approvedArtifactPath(root,fulfillment.path);
+  if(!realFile)return send(res,403,{error:'Fulfillment artifact unavailable or outside approved directory.'});
   const receipts=readFulfillmentReceipts();
   const prior=receipts.receipts[session.id];
   if(!prior){
