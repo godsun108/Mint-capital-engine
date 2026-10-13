@@ -37,4 +37,17 @@ test('real SDK signature verification accepts valid payload and rejects forgery/
  assert.equal((await call(deps.stripe.webhooks.generateTestHeaderString({payload,secret,timestamp:1}))).code,400);
  assert.equal((await call(deps.stripe.webhooks.generateTestHeaderString({payload,secret}))).code,200);
 });
+test('webhook rejects a symlink artifact escaping deliverables',async t=>{
+ const {event,deps,offer}=fixture(t);
+ writeFileSync(path.join(deps.root,'outside.txt'),'private');
+ const {symlinkSync}=await import('node:fs');
+ symlinkSync(path.join(deps.root,'outside.txt'),path.join(deps.root,'deliverables','escape.txt'));
+ offer.fulfillment.path='deliverables/escape.txt';
+ await assert.rejects(processPaymentEvent(event,deps));
+});
+test('webhook rejects inactive catalog offer',async t=>{
+ const {event,deps,offer}=fixture(t);
+ offer.status='STAGED';
+ await assert.rejects(processPaymentEvent(event,deps));
+});
 test('test payment does not create live entitlement',async t=>{const {event,deps,session}=fixture(t);session.livemode=event.livemode=false;assert.equal((await processPaymentEvent(event,deps)).ignored,true);});
