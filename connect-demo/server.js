@@ -316,7 +316,15 @@ async function fulfillCheckout(sessionId,res){
   let fulfillment=null;
   if(session.livemode===true){
     const offer=await liveOffer(session.metadata?.mint_offer_id);
-    if(offer?.fulfillment?.kind==='FILE'||offer?.fulfillment?.kind==='PRINTFUL_POD') fulfillment=offer.fulfillment;
+    // A paid Stripe session alone is insufficient: bind fulfillment to the
+    // approved catalog mandate, exact amount, currency, and live mode.
+    if(!offer||session.metadata?.mint_mandate_id!==offer.mandate_id||
+       session.amount_total!==offer.price.unit_amount||
+       session.currency!==offer.price.currency||
+       session.livemode!==true){
+      return send(res,403,{error:'Paid session does not match an approved live catalog offer.'});
+    }
+    if(offer.fulfillment?.kind==='FILE'||offer.fulfillment?.kind==='PRINTFUL_POD') fulfillment=offer.fulfillment;
   } else if(productId==='prod_VL4ZGypBcYFCWH'){
     fulfillment={kind:'FILE',path:'deliverables/foundry-express-ts/README.md',filename:'foundry-express-ts-README.md',content_type:'text/markdown; charset=utf-8'};
   }
