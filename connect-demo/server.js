@@ -405,15 +405,18 @@ async function fulfillmentEvidence(res){
 async function commerceEvidence(res){
   const s=requireStripe();
   const sessions=await s.checkout.sessions.list({limit:100,expand:['data.payment_intent.latest_charge','data.payment_intent.latest_charge.balance_transaction']});
-  const rows=sessions.data.filter(x=>x.metadata?.mint_offer_id).map(session=>{
+  // Public evidence must not expose checkout session IDs, charges, customer data, or payment locators.
+  const live=(sessions.data||[]).filter(x=>x.livemode===true&&x.metadata?.mint_offer_id);
+  let paid=0,providerAvailable=0;
+  for(const session of live){
     const pi=typeof session.payment_intent==='object'?session.payment_intent:null;
     const ch=pi&&typeof pi.latest_charge==='object'?pi.latest_charge:null;
     const bt=ch&&typeof ch.balance_transaction==='object'?ch.balance_transaction:null;
-    const paid=session.status==='complete'&&session.payment_status==='paid'&&Boolean(ch?.paid);
-    return {sessionId:session.id,offerId:session.metadata?.mint_offer_id||null,source:session.metadata?.mint_source||'unknown',livemode:session.livemode,checkoutComplete:session.status==='complete',paid,amount:session.amount_total,currency:session.currency,chargeId:ch?.id||null,providerAvailable:bt?.status==='available',created:session.created};
-  });
-  const live=rows.filter(x=>x.livemode===true);
-  return send(res,200,{ok:true,schema:'mint.commerce.evidence.v1',generatedAt:new Date().toISOString(),semantics:'STRIPE_SERVER_VERIFIED_CHECKOUT_AND_PAYMENT_ONLY; FULFILLMENT_AND_BANK_SETTLEMENT_REQUIRE_SEPARATE_EVIDENCE',totals:{sessions:live.length,paid:live.filter(x=>x.paid).length,providerAvailable:live.filter(x=>x.providerAvailable).length},transactions:live});
+    const verified=session.status==='complete'&&session.payment_status==='paid'&&ch?.paid===true;
+    if(verified)paid++;
+    if(verified&&bt?.status==='available')providerAvailable++;
+  }
+  return send(res,200,{ok:true,schema:'mint.commerce.evidence.v2',generatedAt:new Date().toISOString(),semantics:'STRIPE_SERVER_VERIFIED_CHECKOUT_AND_PAYMENT_ONLY; LAST_100_CHECKOUT_SESSIONS; FULFILLMENT_AND_BANK_SETTLEMENT_REQUIRE_SEPARATE_EVIDENCE',totals:{sessions:live.length,paid,providerAvailable}});
 }
 
 async function fgeObserve(){
