@@ -27,3 +27,13 @@ for(const [name,mutate] of [
  const o=structuredClone(offer);mutate(o);
  assert.equal(isApprovedLivePurchase(session,o),false);
 });
+
+for(const [name,sessionValue,offerValue] of [
+ ['missing session',null,offer],
+ ['missing offer',session,null],
+ ['missing session metadata',{...session,metadata:null},offer],
+ ['missing price',session,{...offer,price:null}],
+ ['fractional amount',{...session,amount_total:1900.5},offer],
+ ['unsafe integer amount',{...session,amount_total:Number.MAX_SAFE_INTEGER+1},offer],
+ ['unpaid async payment',{...session,payment_status:'no_payment_required'},offer]
+])test('rejects '+name,()=>assert.equal(isApprovedLivePurchase(sessionValue,offerValue),false));
