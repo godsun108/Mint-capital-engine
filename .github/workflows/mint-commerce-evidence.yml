@@ -1,9 +1,14 @@
 name: MINT commerce evidence snapshot
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '17 12 * * *' # Daily at 12:17 UTC; GitHub schedules are best effort.
   push:
     paths:
       - '.github/workflows/mint-commerce-evidence.yml'
+concurrency:
+  group: mint-commerce-evidence
+  cancel-in-progress: false
 jobs:
   evidence:
     runs-on: ubuntu-latest
@@ -15,6 +20,10 @@ jobs:
           import json, urllib.request, urllib.error, sys
           base='https://mint-stripe-connect-v4-production.up.railway.app'
           paths=['/health','/api/acquisition/state','/api/commerce/evidence','/api/fulfillment/evidence']
+          import os
+          if os.environ.get('GITHUB_STEP_SUMMARY'):
+              with open(os.environ['GITHUB_STEP_SUMMARY'],'a',encoding='utf-8') as f:
+                  f.write('## MINT production evidence (aggregate only)\\n\\n| Endpoint | HTTP | Aggregate |\\n|---|---:|---|\\n')
           for path in paths:
               try:
                   with urllib.request.urlopen(urllib.request.Request(base+path,headers={'User-Agent':'MINT-Evidence-Snapshot/1.0'}),timeout=20) as r:
@@ -38,5 +47,10 @@ jobs:
               elif path=='/api/fulfillment/evidence':
                   safe.update({'total':obj.get('total'),'durableStorageConfigured':obj.get('durableStorageConfigured')})
               print('MINT_EVIDENCE',json.dumps(safe,sort_keys=True))
+              import os
+              summary=os.environ.get('GITHUB_STEP_SUMMARY')
+              if summary:
+                  with open(summary,'a',encoding='utf-8') as f:
+                      f.write('| '+path+' | '+str(code)+' | '+str(safe.get('totals',safe.get('total','—'))).replace('|','/')+' |\\n')
               if code!=200:sys.exit(1)
           PY
