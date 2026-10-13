@@ -489,7 +489,7 @@ const server=http.createServer(async(req,res)=>{
     if(req.method==='POST'&&u.pathname==='/api/products')return await createProduct(req,res);
     if(req.method==='POST'&&u.pathname==='/api/checkout')return await checkout(req,res);
     m=u.pathname.match(/^\/api\/checkout\/([^/]+)\/verify$/);
-    if(req.method==='GET'&&m)return await verifyCheckout(decodeURIComponent(m[1]),res);
+    if(req.method==='GET'&&m)return send(res,403,{error:'Checkout diagnostics are unavailable on the public API.'});
     m=u.pathname.match(/^\/api\/fulfill\/([^/]+)$/);
     if(req.method==='GET'&&m)return await fulfillCheckout(decodeURIComponent(m[1]),res);
     if(req.method==='POST'&&u.pathname==='/webhooks/stripe/payments')return await paymentWebhook(req,res,{stripe:requireStripe(),secret:process.env.MINT_CHECKOUT_WEBHOOK_SECRET,stateDir:process.env.MINT_STATE_DIR,root,findOffer:liveOffer});
