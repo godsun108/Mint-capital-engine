@@ -3,23 +3,12 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'connect-demo/server.js'
-      - 'connect-demo/payment-webhook.js'
-      - 'connect-demo/payment-authorization.js'
-      - 'connect-demo/payment-authorization.test.js'
-      - 'connect-demo/payment-webhook.test.js'
-      - 'connect-demo/package.json'
-      - 'connect-demo/package-lock.json'
+      - 'connect-demo/**'
       - '.github/workflows/mint-commerce-regression.yml'
   pull_request:
     paths:
-      - 'connect-demo/server.js'
-      - 'connect-demo/payment-webhook.js'
-      - 'connect-demo/payment-authorization.js'
-      - 'connect-demo/payment-authorization.test.js'
-      - 'connect-demo/payment-webhook.test.js'
-      - 'connect-demo/package.json'
-      - 'connect-demo/package-lock.json'
+      - 'connect-demo/**'
+      - '.github/workflows/mint-commerce-regression.yml'
 permissions:
   contents: read
 jobs:
@@ -44,4 +33,11 @@ jobs:
           node --check payment-authorization.js
           node --check payment-authorization.test.js
       - name: Run unit and webhook safety tests
-        run: npm test
+        run: |
+          npm test 2>&1 | tee /tmp/mint-test-output.log
+      - name: Record regression result
+        if: always()
+        run: |
+          echo '## MINT commerce regression' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Commit: `${{ github.sha }}`' >> "$GITHUB_STEP_SUMMARY"
+          echo 'Review the Run unit and webhook safety tests step for authoritative results.' >> "$GITHUB_STEP_SUMMARY"
