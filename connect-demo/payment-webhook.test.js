@@ -63,4 +63,22 @@ test('webhook rejects inactive catalog offer',async t=>{
  await assert.rejects(processPaymentEvent(event,deps));
  assert.equal(readdirSync(deps.root).includes('payment-entitlements'),false);
 });
+test('webhook rejects wrong offer identity without creating entitlement',async t=>{
+ const {event,deps,session}=fixture(t);
+ session.metadata.mint_offer_id='another-offer';
+ await assert.rejects(processPaymentEvent(event,deps));
+ assert.equal(readdirSync(deps.root).includes('payment-entitlements'),false);
+});
+test('webhook rejects wrong amount without creating entitlement',async t=>{
+ const {event,deps,session}=fixture(t);
+ session.amount_total=1;
+ await assert.rejects(processPaymentEvent(event,deps));
+ assert.equal(readdirSync(deps.root).includes('payment-entitlements'),false);
+});
+test('unpaid webhook creates no entitlement',async t=>{
+ const {event,deps,session}=fixture(t);
+ session.payment_status='unpaid';
+ assert.equal((await processPaymentEvent(event,deps)).pending,true);
+ assert.equal(readdirSync(deps.root).includes('payment-entitlements'),false);
+});
 test('test payment does not create live entitlement',async t=>{const {event,deps,session}=fixture(t);session.livemode=event.livemode=false;assert.equal((await processPaymentEvent(event,deps)).ignored,true);});
