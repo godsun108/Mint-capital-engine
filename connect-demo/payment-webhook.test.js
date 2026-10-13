@@ -44,10 +44,12 @@ test('webhook rejects a symlink artifact escaping deliverables',async t=>{
  symlinkSync(path.join(deps.root,'outside.txt'),path.join(deps.root,'deliverables','escape.txt'));
  offer.fulfillment.path='deliverables/escape.txt';
  await assert.rejects(processPaymentEvent(event,deps));
+ assert.equal(readdirSync(deps.root).includes('payment-entitlements'),false);
 });
 test('webhook rejects inactive catalog offer',async t=>{
  const {event,deps,offer}=fixture(t);
  offer.status='STAGED';
  await assert.rejects(processPaymentEvent(event,deps));
+ assert.equal(readdirSync(deps.root).includes('payment-entitlements'),false);
 });
 test('test payment does not create live entitlement',async t=>{const {event,deps,session}=fixture(t);session.livemode=event.livemode=false;assert.equal((await processPaymentEvent(event,deps)).ignored,true);});
