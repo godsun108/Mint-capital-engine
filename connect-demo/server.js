@@ -458,6 +458,7 @@ const server=http.createServer(async(req,res)=>{
     if(req.method==='GET'&&u.pathname==='/ai-workflow-kit')return serveFile(res,path.join(root,'public/ai-workflow-kit.html'),'text/html; charset=utf-8');
     if(req.method==='GET'&&u.pathname==='/builder-launch-pack')return serveFile(res,path.join(root,'public/builder-launch-pack.html'),'text/html; charset=utf-8');
     if(req.method==='GET'&&u.pathname==='/success')return serveFile(res,path.join(root,'public/success.html'),'text/html; charset=utf-8');
+    if(req.method==='GET'&&u.pathname==='/google7257004c8359b712.html')return serveFile(res,path.join(root,'public/google7257004c8359b712.html'),'text/html; charset=utf-8');
     if(req.method==='GET'&&u.pathname==='/robots.txt')return serveFile(res,path.join(root,'public/robots.txt'),'text/plain; charset=utf-8');
     if(req.method==='GET'&&u.pathname==='/sitemap.xml')return serveFile(res,path.join(root,'public/sitemap.xml'),'application/xml; charset=utf-8');
     if(req.method==='GET'&&u.pathname==='/api/storefront')return await storefront(res);
