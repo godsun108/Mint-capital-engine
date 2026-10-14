@@ -28,24 +28,64 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/sptribs-frontend/issues/444",
-          "observedAt": "2026-10-14T12:21:13.069057+00:00",
+          "url": "https://github.com/hmcts/juror-er-portal/issues/1",
+          "observedAt": "2026-10-14T17:35:43.823507+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
-          "observedAt": "2026-10-14T12:21:13.069071+00:00",
+          "url": "https://github.com/hmcts/sptribs-frontend/issues/444",
+          "observedAt": "2026-10-14T17:35:43.823510+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "observedAt": "2026-10-14T17:35:43.823511+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/appreg-frontend/issues/2",
+          "observedAt": "2026-10-14T17:35:43.823517+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/wa-task-batch-service/issues/87",
+          "observedAt": "2026-10-14T17:35:43.823521+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/holmmi/doorbell/issues/21",
+          "observedAt": "2026-10-14T17:35:43.823515+00:00",
+          "verified": true,
+          "claim": "Backend: Update rental listing"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/holmmi/doorbell/issues/20",
+          "observedAt": "2026-10-14T17:35:43.823516+00:00",
+          "verified": true,
+          "claim": "Backend: Create rental listing"
         }
       ],
       "status": "DISCOVERED_SOURCE_BACKED",
       "provenance": {
         "proposalId": "proposal:express-auth:001",
-        "promotedAt": "2026-10-14T12:21:19.541427+00:00",
+        "promotedAt": "2026-10-14T17:35:53.995225+00:00",
         "semantics": "SOURCE_BACKED_CANDIDATE_RESEARCH_STILL_REQUIRED"
       }
     }
