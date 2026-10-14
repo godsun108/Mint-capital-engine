@@ -28,32 +28,32 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/juror-er-portal/issues/1",
-          "observedAt": "2026-10-14T17:35:43.823507+00:00",
+          "url": "https://github.com/opensearch-project/agent-health/issues/159",
+          "observedAt": "2026-10-14T21:55:53.350643+00:00",
           "verified": true,
-          "claim": "Dependency Dashboard"
+          "claim": "sdk-1.29.0.tgz: 7 vulnerabilities (highest severity is: 8.6)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/opensearch-project/agent-health/issues/513",
+          "observedAt": "2026-10-14T21:55:53.350651+00:00",
+          "verified": true,
+          "claim": "pi-coding-agent-0.84.4.tgz: 21 vulnerabilities (highest severity is: 8.6)"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/hmcts/sptribs-frontend/issues/444",
-          "observedAt": "2026-10-14T17:35:43.823510+00:00",
+          "observedAt": "2026-10-14T21:55:53.350653+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "observedAt": "2026-10-14T17:35:43.823511+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/hmcts/appreg-frontend/issues/2",
-          "observedAt": "2026-10-14T17:35:43.823517+00:00",
+          "url": "https://github.com/hmcts/pip-frontend/issues/1109",
+          "observedAt": "2026-10-14T21:55:53.350656+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -61,31 +61,39 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/hmcts/wa-task-batch-service/issues/87",
-          "observedAt": "2026-10-14T17:35:43.823521+00:00",
+          "observedAt": "2026-10-14T21:55:53.350659+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/holmmi/doorbell/issues/21",
-          "observedAt": "2026-10-14T17:35:43.823515+00:00",
+          "url": "https://github.com/hmcts/opal-frontend-common-node-lib/issues/3",
+          "observedAt": "2026-10-14T21:55:53.350663+00:00",
           "verified": true,
-          "claim": "Backend: Update rental listing"
+          "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/holmmi/doorbell/issues/20",
-          "observedAt": "2026-10-14T17:35:43.823516+00:00",
+          "url": "https://github.com/mitodl/mitxpro/issues/2711",
+          "observedAt": "2026-10-14T21:55:53.350665+00:00",
           "verified": true,
-          "claim": "Backend: Create rental listing"
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/appreg-frontend/issues/2",
+          "observedAt": "2026-10-14T21:55:53.350668+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
         }
       ],
       "status": "DISCOVERED_SOURCE_BACKED",
       "provenance": {
         "proposalId": "proposal:express-auth:001",
-        "promotedAt": "2026-10-14T17:35:53.995225+00:00",
+        "promotedAt": "2026-10-14T21:56:01.532559+00:00",
         "semantics": "SOURCE_BACKED_CANDIDATE_RESEARCH_STILL_REQUIRED"
       }
     }
