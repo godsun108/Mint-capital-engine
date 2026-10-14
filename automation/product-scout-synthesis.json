@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.synthesis.v1",
-  "generatedAt": "2026-10-13T14:33:46.692444+00:00",
+  "generatedAt": "2026-10-14T12:21:19.430071+00:00",
   "clusters": [
     {
       "topic": "express-typescript",
@@ -14,8 +14,14 @@
       "topic": "express-auth",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/hmcts/sptribs-frontend/issues/444",
+          "b": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
+          "similarity": 1.0
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -40,9 +46,14 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/d6g8k5htny-coder/main/issues/307",
+          "a": "https://github.com/G-ACE-inc/server-core/issues/10",
+          "b": "https://github.com/heukshow/aicity-os/issues/292",
+          "similarity": 0.2
+        },
+        {
+          "a": "https://github.com/vistrowtechnologies-bit/Voice/issues/2",
           "b": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
-          "similarity": 0.214
+          "similarity": 0.2
         }
       ],
       "promotionEligible": true,
@@ -68,9 +79,9 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/d6g8k5htny-coder/main/issues/307",
-          "b": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
-          "similarity": 0.214
+          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2472",
+          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2471",
+          "similarity": 1.0
         }
       ],
       "promotionEligible": true,
@@ -90,9 +101,9 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/objectstack-ai/objectstack/issues/6367",
-          "b": "https://github.com/objectstack-ai/objectstack/issues/7623",
-          "similarity": 0.25
+          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2472",
+          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2471",
+          "similarity": 1.0
         }
       ],
       "promotionEligible": true,

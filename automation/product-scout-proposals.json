@@ -1,8 +1,38 @@
 {
   "schema": "mint.product.scout.proposals.v1",
-  "generatedAt": "2026-10-13T14:33:46.759640+00:00",
+  "generatedAt": "2026-10-14T12:21:19.490550+00:00",
   "semantics": "RESEARCH_PROPOSALS_NOT_PRODUCT_CANDIDATES",
   "proposals": [
+    {
+      "id": "proposal:express-auth:001",
+      "topic": "express-auth",
+      "status": "PROPOSED_FOR_RESEARCH",
+      "regulated": false,
+      "upfrontCostUsd": 0,
+      "evidence": [
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/sptribs-frontend/issues/444",
+          "observedAt": "2026-10-14T12:21:13.069057+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
+          "observedAt": "2026-10-14T12:21:13.069071+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        }
+      ],
+      "guardrails": [
+        "proposal_is_not_verified_demand",
+        "research_must_define_customer_and_problem",
+        "no_build_before_product_gate"
+      ]
+    },
     {
       "id": "proposal:software-release-contract:001",
       "topic": "software-release-contract",
@@ -13,16 +43,32 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/d6g8k5htny-coder/main/issues/307",
-          "observedAt": "2026-10-13T14:33:42.148156+00:00",
+          "url": "https://github.com/G-ACE-inc/server-core/issues/10",
+          "observedAt": "2026-10-14T12:21:15.770945+00:00",
           "verified": true,
-          "claim": "Agent Message Board (continued from #229): bottlenecks, coordination and working guidance"
+          "claim": "[CONTROL PLANE] GitHub Project Control Bridge \u2014 CHAT execution path"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/heukshow/aicity-os/issues/292",
+          "observedAt": "2026-10-14T12:21:15.770968+00:00",
+          "verified": true,
+          "claim": "COSHUMA Work execution bridge"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/vistrowtechnologies-bit/Voice/issues/2",
+          "observedAt": "2026-10-14T12:21:15.770951+00:00",
+          "verified": true,
+          "claim": "Agent bridge: Claude \u21c4 Codex"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
-          "observedAt": "2026-10-13T14:33:42.148161+00:00",
+          "observedAt": "2026-10-14T12:21:15.770987+00:00",
           "verified": true,
           "claim": "Central message board \u2014 Hermes, Claude, Codex and operator coordination"
         }
@@ -44,7 +90,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/lamontaes/Political-Game-Git/issues/2424",
-          "observedAt": "2026-10-13T14:33:42.928153+00:00",
+          "observedAt": "2026-10-14T12:21:16.486260+00:00",
           "verified": true,
           "claim": "Team status board (continued from #2052)"
         },
@@ -52,7 +98,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Uuriko/project-room/issues/266",
-          "observedAt": "2026-10-13T14:33:42.928154+00:00",
+          "observedAt": "2026-10-14T12:21:16.486262+00:00",
           "verified": true,
           "claim": "Claims board (continued from #11)"
         }
@@ -73,18 +119,18 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/d6g8k5htny-coder/main/issues/307",
-          "observedAt": "2026-10-13T14:33:43.787467+00:00",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2472",
+          "observedAt": "2026-10-14T12:21:17.284360+00:00",
           "verified": true,
-          "claim": "Agent Message Board (continued from #229): bottlenecks, coordination and working guidance"
+          "claim": "Lane 5 \u2014 worker sign-in/out feed"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
-          "observedAt": "2026-10-13T14:33:43.787469+00:00",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2471",
+          "observedAt": "2026-10-14T12:21:17.284386+00:00",
           "verified": true,
-          "claim": "Central message board \u2014 Hermes, Claude, Codex and operator coordination"
+          "claim": "Lane 4 \u2014 worker sign-in/out feed"
         }
       ],
       "guardrails": [
@@ -103,18 +149,18 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/objectstack-ai/objectstack/issues/6367",
-          "observedAt": "2026-10-13T14:33:45.516172+00:00",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2472",
+          "observedAt": "2026-10-14T12:21:18.686946+00:00",
           "verified": true,
-          "claim": "[PM seat] domain:engine \u2014 \ud83d\udfe2 os-support-ai"
+          "claim": "Lane 5 \u2014 worker sign-in/out feed"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/objectstack-ai/objectstack/issues/7623",
-          "observedAt": "2026-10-13T14:33:45.516178+00:00",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2471",
+          "observedAt": "2026-10-14T12:21:18.686953+00:00",
           "verified": true,
-          "claim": "[PM seat] domain:skills \u2014 \ud83d\udfe2 huangyiirene \u00b7 session_013zGKMG1cRedVzWtqGGGZW9"
+          "claim": "Lane 4 \u2014 worker sign-in/out feed"
         }
       ],
       "guardrails": [
@@ -134,7 +180,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/IamTugy/recipes/issues/21",
-          "observedAt": "2026-10-13T14:33:46.203728+00:00",
+          "observedAt": "2026-10-14T12:21:19.278038+00:00",
           "verified": true,
           "claim": "Cookbook/collection PDF export"
         },
@@ -142,7 +188,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mathnauleau/commeat/issues/3",
-          "observedAt": "2026-10-13T14:33:46.203735+00:00",
+          "observedAt": "2026-10-14T12:21:19.278044+00:00",
           "verified": true,
           "claim": "Later: Print full cookbook PDF"
         },
@@ -150,7 +196,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mealie-recipes/mealie/issues/1306",
-          "observedAt": "2026-10-13T14:33:46.203740+00:00",
+          "observedAt": "2026-10-14T12:21:19.278047+00:00",
           "verified": true,
           "claim": "[v1.0.0b] [Task] - Export Recipes and Cookbooks to PDF"
         },
@@ -158,7 +204,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Benkendorfer/recipe-manager/issues/7",
-          "observedAt": "2026-10-13T14:33:46.203737+00:00",
+          "observedAt": "2026-10-14T12:21:19.278045+00:00",
           "verified": true,
           "claim": "Import recipes from PDF files"
         },
@@ -166,7 +212,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7826",
-          "observedAt": "2026-10-13T14:33:46.203744+00:00",
+          "observedAt": "2026-10-14T12:21:19.278051+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -174,7 +220,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7825",
-          "observedAt": "2026-10-13T14:33:46.203746+00:00",
+          "observedAt": "2026-10-14T12:21:19.278053+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -182,7 +228,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7824",
-          "observedAt": "2026-10-13T14:33:46.203749+00:00",
+          "observedAt": "2026-10-14T12:21:19.278055+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         }
