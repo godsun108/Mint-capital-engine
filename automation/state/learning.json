@@ -1,22 +1,22 @@
 {
   "schema": "mint.learning.state.v1",
-  "generatedAt": "2026-10-15T05:57:57.768Z",
+  "generatedAt": "2026-10-15T10:05:47.724Z",
   "offers": {
     "foundry-express-ts-001": {
       "offerId": "foundry-express-ts-001",
       "acquisition": {
-        "visits": 9,
+        "visits": 10,
         "checkoutStarted": 0,
         "sources": {
           "direct": {
-            "VISITED": 9,
+            "VISITED": 10,
             "CHECKOUT_STARTED": 0
           }
         },
         "durableStorageConfigured": true,
         "semantics": "DURABLE_AGGREGATE_FUNNEL_SIGNAL_NOT_UNIQUE_VISITORS_NOT_PAYMENT_EVIDENCE"
       },
-      "updatedAt": "2026-10-15T05:57:57.768Z"
+      "updatedAt": "2026-10-15T10:05:47.724Z"
     },
     "mint-builder-launch-pack-005": {
       "offerId": "mint-builder-launch-pack-005",
@@ -59,7 +59,7 @@
         "durableStorageConfigured": true,
         "semantics": "DURABLE_AGGREGATE_FUNNEL_SIGNAL_NOT_UNIQUE_VISITORS_NOT_PAYMENT_EVIDENCE"
       },
-      "updatedAt": "2026-10-15T05:57:57.768Z"
+      "updatedAt": "2026-10-15T10:05:47.724Z"
     }
   }
 }
