@@ -1,0 +1,20 @@
+name: AEON Star Chart Checks
+on:
+  pull_request:
+    paths:
+      - 'automation/aeon-star-chart.py'
+      - 'tests/test_aeon_star_chart.py'
+      - '.github/workflows/aeon-star-chart-checks.yml'
+  workflow_dispatch:
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Check syntax
+        run: python -m py_compile automation/aeon-star-chart.py
+      - name: Run catalog and timezone regression tests
+        run: python -m unittest discover -s tests -p 'test_aeon_star_chart.py' -v

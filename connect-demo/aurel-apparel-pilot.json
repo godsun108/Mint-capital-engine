@@ -1,0 +1,120 @@
+{
+  "schema": "mint.apparel.pilot.v1",
+  "state": "RESEARCH_NO_LIVE_LISTINGS",
+  "brand": {
+    "name": "Aurel",
+    "naming_status": "UNCLEARED",
+    "materials_policy": "PREFER_VERIFIED_HEMP_ORGANIC_COTTON_LINEN_OR_OTHER_NATURAL_FIBERS"
+  },
+  "preserved_assets": [
+    "Orbital Garden original tote: do not modify or replace"
+  ],
+  "candidates": [
+    {
+      "id": "aurel-hoodie-001",
+      "kind": "HOODIE",
+      "design": "Heavyweight relaxed pullover; restrained embroidered Aurel emblem",
+      "fiber_target": [
+        "hemp",
+        "organic cotton",
+        "cotton"
+      ],
+      "matching_group": "aurel-essential-set-001",
+      "supplier": null,
+      "variant_id": null,
+      "fiber_composition_verified": false,
+      "certification_evidence": null,
+      "base_cost_usd": null,
+      "shipping_quote_usd": null,
+      "artwork_file": null,
+      "rights_review": "PENDING",
+      "mockup_status": "PENDING",
+      "publication": "BLOCKED"
+    },
+    {
+      "id": "aurel-sweatpant-001",
+      "kind": "SWEATPANT",
+      "design": "Relaxed straight-leg fleece with matching tone and subtle emblem",
+      "fiber_target": [
+        "hemp",
+        "organic cotton",
+        "cotton"
+      ],
+      "matching_group": "aurel-essential-set-001",
+      "supplier": null,
+      "variant_id": null,
+      "fiber_composition_verified": false,
+      "certification_evidence": null,
+      "base_cost_usd": null,
+      "shipping_quote_usd": null,
+      "artwork_file": null,
+      "rights_review": "PENDING",
+      "mockup_status": "PENDING",
+      "publication": "BLOCKED"
+    },
+    {
+      "id": "aurel-tee-ranch-001",
+      "kind": "TEE",
+      "design": "I LOVE RANCH — original bold typographic composition",
+      "fiber_target": [
+        "organic cotton",
+        "cotton"
+      ],
+      "supplier": null,
+      "variant_id": null,
+      "fiber_composition_verified": false,
+      "certification_evidence": null,
+      "base_cost_usd": null,
+      "shipping_quote_usd": null,
+      "artwork_file": null,
+      "rights_review": "PENDING",
+      "mockup_status": "PENDING",
+      "publication": "BLOCKED"
+    },
+    {
+      "id": "aurel-tee-good-guy-001",
+      "kind": "TEE",
+      "design": "GOOD GUY. MOMS LOVE ME. — original typography",
+      "fiber_target": [
+        "organic cotton",
+        "cotton"
+      ],
+      "supplier": null,
+      "variant_id": null,
+      "fiber_composition_verified": false,
+      "certification_evidence": null,
+      "base_cost_usd": null,
+      "shipping_quote_usd": null,
+      "artwork_file": null,
+      "rights_review": "PENDING",
+      "mockup_status": "PENDING",
+      "publication": "BLOCKED"
+    },
+    {
+      "id": "aurel-tee-not-famous-001",
+      "kind": "TEE",
+      "design": "I'M NOT FAMOUS ANYMORE — original typography",
+      "fiber_target": [
+        "organic cotton",
+        "cotton"
+      ],
+      "supplier": null,
+      "variant_id": null,
+      "fiber_composition_verified": false,
+      "certification_evidence": null,
+      "base_cost_usd": null,
+      "shipping_quote_usd": null,
+      "artwork_file": null,
+      "rights_review": "PENDING",
+      "mockup_status": "PENDING",
+      "publication": "BLOCKED"
+    }
+  ],
+  "controls": {
+    "no_spend": true,
+    "no_publish": true,
+    "no_unverified_material_claims": true,
+    "no_token_redemption_claims": true,
+    "owner_approval_required": true
+  }
+}

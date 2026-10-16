@@ -1,0 +1,115 @@
+{
+  "metadata": {
+    "status": "COMPUTED PLANETARY POSITIONS ONLY — NOT A COMPLETE STAR MAP OR EMBROIDERY FILE",
+    "method": "Swiss Ephemeris pyswisseph 20230604, FLG_MOSEPH, apparent equatorial coordinates transformed with swe.azalt to geometric altitude and azimuth. Default atmospheric parameters supplied to az-alt routine; alt_deg is geometric true altitude.",
+    "coordinates": "Approximate city centers; exact venue unspecified. Values rounded to 0.001 degree; do not claim arcsecond accuracy.",
+    "azimuth": "Degrees clockwise from north",
+    "caveats": [
+      "Fixed stars/constellation outlines NOT computed; do not invent them from image-generation output.",
+      "Both snapshots are afternoon local time; above-horizon does not mean visible to naked eye.",
+      "Observer elevation approximate. Validate independently with JPL Horizons before production."
+    ]
+  },
+  "origin": {
+    "local": "1993-12-06 15:05 PST",
+    "utc": "1993-12-06T23:05:00Z",
+    "place": "Las Vegas, Nevada",
+    "lat": 36.1699,
+    "lon": -115.1398,
+    "objects": [
+      {
+        "name": "Sun",
+        "az_deg": 229.343,
+        "alt_deg": 12.65,
+        "above_horizon": true
+      },
+      {
+        "name": "Moon",
+        "az_deg": 304.087,
+        "alt_deg": -37.808,
+        "above_horizon": false
+      },
+      {
+        "name": "Mercury",
+        "az_deg": 242.179,
+        "alt_deg": 4.618,
+        "above_horizon": true
+      },
+      {
+        "name": "Venus",
+        "az_deg": 237.835,
+        "alt_deg": 7.374,
+        "above_horizon": true
+      },
+      {
+        "name": "Mars",
+        "az_deg": 224.408,
+        "alt_deg": 15.181,
+        "above_horizon": true
+      },
+      {
+        "name": "Jupiter",
+        "az_deg": 261.945,
+        "alt_deg": -9.902,
+        "above_horizon": false
+      },
+      {
+        "name": "Saturn",
+        "az_deg": 154.885,
+        "alt_deg": 35.558,
+        "above_horizon": true
+      }
+    ]
+  },
+  "becoming": {
+    "local": "2026-12-06 15:05 EST",
+    "utc": "2026-12-06T20:05:00Z",
+    "place": "Port St. Lucie, Florida",
+    "lat": 27.273,
+    "lon": -80.3582,
+    "objects": [
+      {
+        "name": "Sun",
+        "az_deg": 224.152,
+        "alt_deg": 25.054,
+        "above_horizon": true
+      },
+      {
+        "name": "Moon",
+        "az_deg": 240.706,
+        "alt_deg": 5.919,
+        "above_horizon": true
+      },
+      {
+        "name": "Mercury",
+        "az_deg": 236.554,
+        "alt_deg": 17.129,
+        "above_horizon": true
+      },
+      {
+        "name": "Venus",
+        "az_deg": 259.375,
+        "alt_deg": -1.316,
+        "above_horizon": false
+      },
+      {
+        "name": "Mars",
+        "az_deg": 310.074,
+        "alt_deg": -34.352,
+        "above_horizon": false
+      },
+      {
+        "name": "Jupiter",
+        "az_deg": 317.551,
+        "alt_deg": -38.347,
+        "above_horizon": false
+      },
+      {
+        "name": "Saturn",
+        "az_deg": 97.839,
+        "alt_deg": 16.501,
+        "above_horizon": true
+      }
+    ]
+  }
+}
