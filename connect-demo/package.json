@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node --watch server.js",
-    "test": "node --test artifact-path.test.js error-guard.test.js fge-runtime.test.js fge-publisher.test.js fge-bluesky.test.js payment-webhook.test.js payment-authorization.test.js acquisition.test.js"
+    "test": "node --test artifact-path.test.js error-guard.test.js fge-runtime.test.js fge-publisher.test.js fge-bluesky.test.js payment-webhook.test.js payment-authorization.test.js acquisition.test.js success-page.test.js"
   },
   "engines": {
     "node": ">=20"

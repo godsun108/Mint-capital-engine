@@ -23,9 +23,11 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-          cache: npm
-          cache-dependency-path: connect-demo/package-lock.json
-      - run: npm ci --ignore-scripts
+      # No lockfile exists for connect-demo yet. Avoid cache setup failure and
+      # use a bounded, script-free install until a reviewed lockfile is added.
+      # Note: transitive dependencies are not frozen without a lockfile.
+      - name: Install test dependencies without a lockfile
+        run: npm install --ignore-scripts --no-package-lock --no-audit --no-fund
       - name: Check server and payment handler syntax
         run: |
           node --check server.js
