@@ -69,9 +69,9 @@ export async function runCycle(input={}){
     save(s);
     try{
       const result=await dispatchBluesky(job);
-      if(result.ok){s.queue=s.queue.map(x=>x===job?{...x,...result,dispatchStartedAt}:x);distributor={...distributor,dispatched:job.sourceTag,result:{state:result.state,externalId:result.externalId}}}
-      else {s.queue=s.queue.map(x=>x===job?{...x,state:'delivery_unknown',dispatchStartedAt,blockedReason:result.reason}:x);distributor={...distributor,blocked:'delivery_requires_reconciliation',providerReason:result.reason};}
-    }catch(e){s.queue=s.queue.map(x=>x===job?{...x,state:'delivery_unknown',dispatchStartedAt,blockedReason:'provider_outcome_unknown'}:x);distributor={...distributor,blocked:'delivery_requires_reconciliation'};}
+      if(result.ok){s.queue=s.queue.map(x=>x.sourceTag===job.sourceTag&&x.state==='dispatching'?{...x,...result,dispatchStartedAt}:x);distributor={...distributor,dispatched:job.sourceTag,result:{state:result.state,externalId:result.externalId}}}
+      else {s.queue=s.queue.map(x=>x.sourceTag===job.sourceTag&&x.state==='dispatching'?{...x,state:'delivery_unknown',dispatchStartedAt,blockedReason:result.reason}:x);distributor={...distributor,blocked:'delivery_requires_reconciliation',providerReason:result.reason};}
+    }catch(e){s.queue=s.queue.map(x=>x.sourceTag===job.sourceTag&&x.state==='dispatching'?{...x,state:'delivery_unknown',dispatchStartedAt,blockedReason:'provider_outcome_unknown'}:x);distributor={...distributor,blocked:'delivery_requires_reconciliation'};}
 
   }
   const earned=earnedDollars(sources);
