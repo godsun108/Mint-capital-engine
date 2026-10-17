@@ -30,6 +30,7 @@ test('publishing rejects contradictory counters',()=>{
  assert.equal(acquisitionGate([{source:'organic',funnel,decision:decide(funnel)}]).reason,'inconsistent_funnel_counts');
 });
 
+process.env.FGE_LIVE_FULFILLMENT_VERIFIED='true';
 test('observe mode cannot publish',()=>assert.equal(publishingPolicy({autonomy:'observe',enabled:true}).reason,'observe_mode'));
 test('publishing requires explicit enable',()=>assert.equal(publishingPolicy({autonomy:'execute',enabled:false}).reason,'publishing_disabled'));
 test('one published post blocks more posts for 24 hours',()=>assert.equal(publishingPolicy({autonomy:'execute',enabled:true,at:100000000,queue:[{state:'published',publishedAt:new Date(99999000).toISOString()}]}).reason,'daily_post_limit'));
