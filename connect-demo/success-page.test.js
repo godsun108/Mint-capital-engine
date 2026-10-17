@@ -47,6 +47,12 @@ test('server rejection never triggers download',async()=>{
   const x=await simulate({status:403});
   assert.equal(x.clicks,0);assert.match(x.state.textContent,/Denied/);
 });
+test('unavailable fulfillment storage never triggers download',async()=>{
+  const x=await simulate({status:503,error:'Durable fulfillment storage is not configured.'});
+  assert.equal(x.clicks,0);
+  assert.match(x.state.textContent,/Durable fulfillment storage/);
+  assert.equal(x.btn.disabled,false);
+});
 test('empty artifact never triggers download',async()=>{
   const x=await simulate({size:0});
   assert.equal(x.clicks,0);assert.match(x.state.textContent,/empty/i);
