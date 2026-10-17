@@ -5,3 +5,10 @@ test('checkout without payment is not called revenue',()=>assert.equal(decide({v
 test('paid without fulfillment stops growth',()=>assert.equal(decide({paid:1,fulfilled:0}).state,'incident'));
 test('paid and fulfilled identifies repeatable winner',()=>assert.equal(decide({paid:1,fulfilled:1}).state,'winner'));
 test('impossible fulfillment evidence is error',()=>assert.equal(decide({paid:0,fulfilled:1}).state,'error'));
+
+test('delivery incident decision takes precedence over checkout activity',()=>{
+ assert.equal(decide({visits:20,checkoutStarted:4,paid:2,fulfilled:1}).action,'repair_fulfillment_before_growth');
+});
+test('inconsistent fulfillment evidence is an error even with traffic',()=>{
+ assert.equal(decide({visits:20,paid:0,fulfilled:1}).action,'investigate_evidence_invariant');
+});
