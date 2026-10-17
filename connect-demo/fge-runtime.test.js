@@ -42,3 +42,8 @@ test('publishing requires fulfillment verification',()=>{
  try{assert.equal(publishingPolicy({autonomy:'execute',enabled:true}).reason,'fulfillment_verification_required')}
  finally{if(previous===undefined)delete process.env.FGE_LIVE_FULFILLMENT_VERIFIED;else process.env.FGE_LIVE_FULFILLMENT_VERIFIED=previous}
 });
+
+test('unresolved dispatch blocks unattended retries even after 24 hours',()=>{
+ assert.equal(publishingPolicy({autonomy:'execute',enabled:true,queue:[{state:'dispatching',dispatchStartedAt:'2020-01-01T00:00:00Z'}]}).reason,'delivery_requires_reconciliation');
+ assert.equal(publishingPolicy({autonomy:'execute',enabled:true,queue:[{state:'delivery_unknown',dispatchStartedAt:'2020-01-01T00:00:00Z'}]}).reason,'delivery_requires_reconciliation');
+});
