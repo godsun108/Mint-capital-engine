@@ -34,3 +34,10 @@ test('observe mode cannot publish',()=>assert.equal(publishingPolicy({autonomy:'
 test('publishing requires explicit enable',()=>assert.equal(publishingPolicy({autonomy:'execute',enabled:false}).reason,'publishing_disabled'));
 test('one published post blocks more posts for 24 hours',()=>assert.equal(publishingPolicy({autonomy:'execute',enabled:true,at:100000000,queue:[{state:'published',publishedAt:new Date(99999000).toISOString()}]}).reason,'daily_post_limit'));
 test('execute mode allows first daily post',()=>assert.equal(publishingPolicy({autonomy:'execute',enabled:true,queue:[]}).allowed,true));
+
+test('publishing requires fulfillment verification',()=>{
+ const previous=process.env.FGE_LIVE_FULFILLMENT_VERIFIED;
+ delete process.env.FGE_LIVE_FULFILLMENT_VERIFIED;
+ try{assert.equal(publishingPolicy({autonomy:'execute',enabled:true}).reason,'fulfillment_verification_required')}
+ finally{if(previous===undefined)delete process.env.FGE_LIVE_FULFILLMENT_VERIFIED;else process.env.FGE_LIVE_FULFILLMENT_VERIFIED=previous}
+});
