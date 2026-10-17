@@ -2,13 +2,13 @@
   "ok": true,
   "schema": "mint.acquisition.snapshot.v3",
   "semantics": "DURABLE_OFFER_AND_SOURCE_AGGREGATES_NOT_UNIQUE_VISITORS",
-  "startedAt": "2026-10-17T17:09:00.940Z",
-  "generatedAt": "2026-10-17T17:20:23.896Z",
+  "startedAt": "2026-10-17T17:31:34.561Z",
+  "generatedAt": "2026-10-17T19:32:01.781Z",
   "durableStorageConfigured": true,
   "privacy": "No IP, cookie, user-agent, or personal identifier stored by this counter.",
   "totals": {
-    "VISITED": 25,
-    "CHECKOUT_STARTED": 3
+    "VISITED": 28,
+    "CHECKOUT_STARTED": 4
   },
   "sources": {
     "direct": {
@@ -24,8 +24,8 @@
       "CHECKOUT_STARTED": 3
     },
     "foundry_cross_sell": {
-      "VISITED": 2,
-      "CHECKOUT_STARTED": 0
+      "VISITED": 5,
+      "CHECKOUT_STARTED": 1
     }
   },
   "offers": {
@@ -40,7 +40,7 @@
       }
     },
     "portfolio": {
-      "VISITED": 13,
+      "VISITED": 16,
       "CHECKOUT_STARTED": 0,
       "sources": {
         "qa_offers_20261012": {
@@ -52,7 +52,7 @@
           "CHECKOUT_STARTED": 0
         },
         "foundry_cross_sell": {
-          "VISITED": 2,
+          "VISITED": 5,
           "CHECKOUT_STARTED": 0
         }
       }
@@ -86,8 +86,18 @@
           "CHECKOUT_STARTED": 1
         }
       }
+    },
+    "mint-builder-launch-pack-005": {
+      "VISITED": 0,
+      "CHECKOUT_STARTED": 1,
+      "sources": {
+        "foundry_cross_sell": {
+          "VISITED": 0,
+          "CHECKOUT_STARTED": 1
+        }
+      }
     }
   },
-  "capturedAt": "2026-10-17T17:20:23.953Z",
+  "capturedAt": "2026-10-17T19:32:01.830Z",
   "captureSemantics": "SNAPSHOT_OF_DURABLE_AGGREGATES_NOT_UNIQUE_VISITORS"
 }

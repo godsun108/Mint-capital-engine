@@ -1,6 +1,6 @@
 {
   "schema": "mint.continuity.officer.v1",
-  "generatedAt": "2026-10-17T17:20:25.607Z",
+  "generatedAt": "2026-10-17T19:32:03.500Z",
   "semantics": "OWNER_CONTINUITY_SUMMARY_NOT_REVENUE_INFERENCE",
   "sixMonthAbsenceTest": {
     "status": "HEALTHY",
@@ -11,15 +11,15 @@
     "durableAcquisitionMemory": true,
     "evidenceAvailable": true,
     "authorizedZeroSpendRoutes": 2,
-    "visits": 25,
-    "checkoutStarted": 3,
+    "visits": 28,
+    "checkoutStarted": 4,
     "paid": 0,
     "settled": 0,
     "net": 0,
     "activeAllocations": 6,
-    "reviewRecommended": 1,
+    "reviewRecommended": 0,
     "messageExperimentsReady": 0,
-    "messageExperimentsObserving": 1
+    "messageExperimentsObserving": 0
   },
   "ownerGates": [
     "paid_spend_increase",
