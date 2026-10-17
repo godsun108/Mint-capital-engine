@@ -41,8 +41,9 @@ export function publishingPolicy({autonomy,enabled,queue=[],at=Date.now()}={}){
   if(autonomy!=='execute')return {allowed:false,reason:'observe_mode'};
   if(!enabled)return {allowed:false,reason:'publishing_disabled'};
   if(process.env.FGE_LIVE_FULFILLMENT_VERIFIED!=='true')return {allowed:false,reason:'fulfillment_verification_required'};
-  const sent=queue.filter(x=>x.state==='sent'||x.state==='published'||x.state==='dispatched');
-  const recent=sent.map(x=>Date.parse(x.publishedAt||x.dispatchedAt||x.sentAt||'')).filter(t=>Number.isFinite(t)&&t<=at&&t>at-86400000);
+  const sent=queue.filter(x=>['sent','published','dispatched','dispatching','delivery_unknown'].includes(x.state));
+  const recent=sent.map(x=>Date.parse(x.publishedAt||x.dispatchStartedAt||x.dispatchedAt||x.sentAt||'')).filter(t=>Number.isFinite(t)&&t<=at&&t>at-86400000);
+  if(sent.some(x=>x.state==='dispatching'||x.state==='delivery_unknown'))return {allowed:false,reason:'delivery_requires_reconciliation'};
   if(recent.length>=1)return {allowed:false,reason:'daily_post_limit'};
   return {allowed:true};
 }
@@ -62,9 +63,16 @@ export async function runCycle(input={}){
   const policy=publishingPolicy({autonomy:AUTONOMY,enabled:process.env.FGE_OWNED_PUBLISH_ENABLED==='true',queue:s.queue});
   if(job&&gate.allowed&&!policy.allowed)distributor={...distributor,blocked:policy.reason};
   if(job&&gate.allowed&&policy.allowed){
-    const result=await dispatchBluesky(job);
-    if(result.ok){s.queue=s.queue.map(x=>x===job?{...x,...result}:x);distributor={...distributor,dispatched:job.sourceTag,result:{state:result.state,externalId:result.externalId}}}
-    else distributor={...distributor,blocked:result.reason};
+    // Persist intent before external I/O: a crash or timeout must not replay a potentially published post.
+    const dispatchStartedAt=now();
+    s.queue=s.queue.map(x=>x===job?{...x,state:'dispatching',dispatchStartedAt}:x);
+    save(s);
+    try{
+      const result=await dispatchBluesky(job);
+      if(result.ok){s.queue=s.queue.map(x=>x===job?{...x,...result,dispatchStartedAt}:x);distributor={...distributor,dispatched:job.sourceTag,result:{state:result.state,externalId:result.externalId}}}
+      else {s.queue=s.queue.map(x=>x===job?{...x,state:'delivery_unknown',dispatchStartedAt,blockedReason:result.reason}:x);distributor={...distributor,blocked:'delivery_requires_reconciliation',providerReason:result.reason};}
+    }catch(e){s.queue=s.queue.map(x=>x===job?{...x,state:'delivery_unknown',dispatchStartedAt,blockedReason:'provider_outcome_unknown'}:x);distributor={...distributor,blocked:'delivery_requires_reconciliation'};}
+
   }
   const earned=earnedDollars(sources);
   const funding={targetUsd:20,verifiedPaidEstimateUsd:earned,remainingUsd:Math.max(0,20-earned),eligible:earned>=20,note:'Estimate uses current $9 primary offer count; Stripe transaction amounts remain authoritative.'};
