@@ -1,25 +1,27 @@
 {
   "schema": "mint.continuity.officer.v1",
-  "generatedAt": "2026-10-17T14:16:44.656Z",
+  "generatedAt": "2026-10-17T17:19:44.751Z",
   "semantics": "OWNER_CONTINUITY_SUMMARY_NOT_REVENUE_INFERENCE",
   "sixMonthAbsenceTest": {
-    "status": "HEALTHY",
-    "nextConstraint": "OBSERVE_REAL_MARKET_RESPONSE",
-    "reasons": []
+    "status": "ATTENTION",
+    "nextConstraint": "RUN_BOUNDED_MESSAGE_EXPERIMENT",
+    "reasons": [
+      "reversible message experiment ready"
+    ]
   },
   "signals": {
     "durableAcquisitionMemory": true,
     "evidenceAvailable": true,
     "authorizedZeroSpendRoutes": 2,
-    "visits": 19,
+    "visits": 25,
     "checkoutStarted": 3,
     "paid": 0,
     "settled": 0,
     "net": 0,
     "activeAllocations": 6,
     "reviewRecommended": 1,
-    "messageExperimentsReady": 0,
-    "messageExperimentsObserving": 1
+    "messageExperimentsReady": 1,
+    "messageExperimentsObserving": 0
   },
   "ownerGates": [
     "paid_spend_increase",

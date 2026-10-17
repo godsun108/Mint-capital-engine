@@ -1,6 +1,6 @@
 {
   "schema": "mint.learning.state.v1",
-  "generatedAt": "2026-10-17T14:16:44.010Z",
+  "generatedAt": "2026-10-17T17:19:44.054Z",
   "offers": {
     "foundry-express-ts-001": {
       "offerId": "foundry-express-ts-001",
@@ -16,7 +16,7 @@
         "durableStorageConfigured": true,
         "semantics": "DURABLE_AGGREGATE_FUNNEL_SIGNAL_NOT_UNIQUE_VISITORS_NOT_PAYMENT_EVIDENCE"
       },
-      "updatedAt": "2026-10-17T14:16:44.010Z"
+      "updatedAt": "2026-10-17T17:19:44.054Z"
     },
     "mint-builder-launch-pack-005": {
       "offerId": "mint-builder-launch-pack-005",
@@ -44,7 +44,7 @@
     "portfolio": {
       "offerId": "portfolio",
       "acquisition": {
-        "visits": 7,
+        "visits": 13,
         "checkoutStarted": 0,
         "sources": {
           "qa_offers_20261012": {
@@ -52,7 +52,7 @@
             "CHECKOUT_STARTED": 0
           },
           "portfolio": {
-            "VISITED": 4,
+            "VISITED": 10,
             "CHECKOUT_STARTED": 0
           },
           "foundry_cross_sell": {
@@ -63,7 +63,7 @@
         "durableStorageConfigured": true,
         "semantics": "DURABLE_AGGREGATE_FUNNEL_SIGNAL_NOT_UNIQUE_VISITORS_NOT_PAYMENT_EVIDENCE"
       },
-      "updatedAt": "2026-10-17T14:16:44.010Z"
+      "updatedAt": "2026-10-17T17:19:44.054Z"
     },
     "ai-workflow-kit-004": {
       "offerId": "ai-workflow-kit-004",
@@ -79,7 +79,7 @@
         "durableStorageConfigured": true,
         "semantics": "DURABLE_AGGREGATE_FUNNEL_SIGNAL_NOT_UNIQUE_VISITORS_NOT_PAYMENT_EVIDENCE"
       },
-      "updatedAt": "2026-10-17T14:16:44.010Z"
+      "updatedAt": "2026-10-17T17:19:44.054Z"
     },
     "site-launch-checklist-003": {
       "offerId": "site-launch-checklist-003",
@@ -95,7 +95,7 @@
         "durableStorageConfigured": true,
         "semantics": "DURABLE_AGGREGATE_FUNNEL_SIGNAL_NOT_UNIQUE_VISITORS_NOT_PAYMENT_EVIDENCE"
       },
-      "updatedAt": "2026-10-17T14:16:44.010Z"
+      "updatedAt": "2026-10-17T17:19:44.054Z"
     },
     "api-launch-checklist-002": {
       "offerId": "api-launch-checklist-002",
@@ -111,7 +111,7 @@
         "durableStorageConfigured": true,
         "semantics": "DURABLE_AGGREGATE_FUNNEL_SIGNAL_NOT_UNIQUE_VISITORS_NOT_PAYMENT_EVIDENCE"
       },
-      "updatedAt": "2026-10-17T14:16:44.010Z"
+      "updatedAt": "2026-10-17T17:19:44.054Z"
     }
   }
 }
