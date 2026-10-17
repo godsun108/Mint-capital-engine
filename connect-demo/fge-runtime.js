@@ -37,7 +37,11 @@ export async function runCycle(input={}){
   const ready=s.queue.filter(x=>x.state==='ready');
   let distributor={ready:ready.length,next:nextReady(s.queue)?.sourceTag||null,mode:'zero_cost_bluesky',providerConfigured:blueskyConfigured()};
   const job=nextReady(s.queue);
-  if(job&&process.env.FGE_OWNED_PUBLISH_ENABLED==='true'){
+  const incidents=sources.filter(x=>['incident','error'].includes(x.decision.state));
+  if(incidents.length){
+    distributor={...distributor,blocked:'customer_delivery_or_evidence_incident',incidentSources:incidents.map(x=>x.source)};
+  }
+  if(job&&incidents.length===0&&process.env.FGE_OWNED_PUBLISH_ENABLED==='true'){
     const result=await dispatchBluesky(job);
     if(result.ok){s.queue=s.queue.map(x=>x===job?{...x,...result}:x);distributor={...distributor,dispatched:job.sourceTag,result:{state:result.state,externalId:result.externalId}}}
     else distributor={...distributor,blocked:result.reason};
