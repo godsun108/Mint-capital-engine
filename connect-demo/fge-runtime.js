@@ -27,6 +27,14 @@ export function decide(funnel={}){
   return {state:'cold',action:'increase_qualified_distribution'};
 }
 
+export function acquisitionGate(sources=[]){
+  if(!Array.isArray(sources)||sources.length===0)return {allowed:false,reason:'missing_funnel_evidence'};
+  if(sources.some(x=>!x||!x.decision))return {allowed:false,reason:'invalid_funnel_evidence'};
+  const incidents=sources.filter(x=>['incident','error'].includes(x.decision.state));
+  if(incidents.length)return {allowed:false,reason:'customer_delivery_or_evidence_incident',incidentSources:incidents.map(x=>x.source)};
+  return {allowed:true};
+}
+
 export async function runCycle(input={}){
   const s=load(), started=now();
   const sources=Object.entries(input.sources||{}).map(([source,funnel])=>({source:sourceTag(source),funnel,decision:decide(funnel)}));
@@ -37,11 +45,9 @@ export async function runCycle(input={}){
   const ready=s.queue.filter(x=>x.state==='ready');
   let distributor={ready:ready.length,next:nextReady(s.queue)?.sourceTag||null,mode:'zero_cost_bluesky',providerConfigured:blueskyConfigured()};
   const job=nextReady(s.queue);
-  const incidents=sources.filter(x=>['incident','error'].includes(x.decision.state));
-  if(incidents.length){
-    distributor={...distributor,blocked:'customer_delivery_or_evidence_incident',incidentSources:incidents.map(x=>x.source)};
-  }
-  if(job&&incidents.length===0&&process.env.FGE_OWNED_PUBLISH_ENABLED==='true'){
+  const gate=acquisitionGate(sources);
+  if(!gate.allowed)distributor={...distributor,blocked:gate.reason,...(gate.incidentSources?{incidentSources:gate.incidentSources}:{})};
+  if(job&&gate.allowed&&process.env.FGE_OWNED_PUBLISH_ENABLED==='true'){
     const result=await dispatchBluesky(job);
     if(result.ok){s.queue=s.queue.map(x=>x===job?{...x,...result}:x);distributor={...distributor,dispatched:job.sourceTag,result:{state:result.state,externalId:result.externalId}}}
     else distributor={...distributor,blocked:result.reason};
