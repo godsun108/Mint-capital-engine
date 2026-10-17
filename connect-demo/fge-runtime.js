@@ -29,7 +29,9 @@ export function decide(funnel={}){
 
 export function acquisitionGate(sources=[]){
   if(!Array.isArray(sources)||sources.length===0)return {allowed:false,reason:'missing_funnel_evidence'};
-  if(sources.some(x=>!x||!x.decision))return {allowed:false,reason:'invalid_funnel_evidence'};
+  if(sources.some(x=>!x||!x.decision||!x.funnel||typeof x.funnel!=='object'))return {allowed:false,reason:'invalid_funnel_evidence'};
+  if(sources.some(x=>['visits','checkoutStarted','paid','fulfilled'].some(k=>!Number.isSafeInteger(x.funnel[k])||x.funnel[k]<0)))return {allowed:false,reason:'incomplete_or_invalid_counts'};
+  if(sources.some(x=>x.funnel.fulfilled>x.funnel.paid||x.funnel.paid>x.funnel.checkoutStarted||x.funnel.checkoutStarted>x.funnel.visits))return {allowed:false,reason:'inconsistent_funnel_counts'};
   const incidents=sources.filter(x=>['incident','error'].includes(x.decision.state));
   if(incidents.length)return {allowed:false,reason:'customer_delivery_or_evidence_incident',incidentSources:incidents.map(x=>x.source)};
   return {allowed:true};
