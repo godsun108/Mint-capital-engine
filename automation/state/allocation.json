@@ -1,6 +1,6 @@
 {
   "schema": "mint.allocation.state.v1",
-  "generatedAt": "2026-10-17T09:30:11.635Z",
+  "generatedAt": "2026-10-17T10:57:47.774Z",
   "semantics": "ZERO_SPEND_ATTENTION_ALLOCATION_ONLY_NO_MONEY_MOVEMENT",
   "allocations": {
     "foundry-express-ts-001": {
@@ -39,6 +39,48 @@
       "state": "LIVE",
       "reason": "unknown",
       "evidenceStage": "BEHAVIOR",
+      "action": "HOLD_BASELINE",
+      "attentionWeight": 1,
+      "authorizedRoutes": [],
+      "constraints": [
+        "no_paid_spend",
+        "no_price_change_without_evidence",
+        "no_permission_escalation"
+      ]
+    },
+    "ai-workflow-kit-004": {
+      "offerId": "ai-workflow-kit-004",
+      "state": "LIVE",
+      "reason": "unknown",
+      "evidenceStage": "INTENT",
+      "action": "HOLD_BASELINE",
+      "attentionWeight": 1,
+      "authorizedRoutes": [],
+      "constraints": [
+        "no_paid_spend",
+        "no_price_change_without_evidence",
+        "no_permission_escalation"
+      ]
+    },
+    "site-launch-checklist-003": {
+      "offerId": "site-launch-checklist-003",
+      "state": "LIVE",
+      "reason": "unknown",
+      "evidenceStage": "INTENT",
+      "action": "HOLD_BASELINE",
+      "attentionWeight": 1,
+      "authorizedRoutes": [],
+      "constraints": [
+        "no_paid_spend",
+        "no_price_change_without_evidence",
+        "no_permission_escalation"
+      ]
+    },
+    "api-launch-checklist-002": {
+      "offerId": "api-launch-checklist-002",
+      "state": "LIVE",
+      "reason": "unknown",
+      "evidenceStage": "INTENT",
       "action": "HOLD_BASELINE",
       "attentionWeight": 1,
       "authorizedRoutes": [],
