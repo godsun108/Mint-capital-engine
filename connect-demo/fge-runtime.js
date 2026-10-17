@@ -37,6 +37,15 @@ export function acquisitionGate(sources=[]){
   return {allowed:true};
 }
 
+export function publishingPolicy({autonomy,enabled,queue=[],at=Date.now()}={}){
+  if(autonomy!=='execute')return {allowed:false,reason:'observe_mode'};
+  if(!enabled)return {allowed:false,reason:'publishing_disabled'};
+  const sent=queue.filter(x=>x.state==='sent'||x.state==='published'||x.state==='dispatched');
+  const recent=sent.map(x=>Date.parse(x.publishedAt||x.dispatchedAt||x.sentAt||'')).filter(t=>Number.isFinite(t)&&t<=at&&t>at-86400000);
+  if(recent.length>=1)return {allowed:false,reason:'daily_post_limit'};
+  return {allowed:true};
+}
+
 export async function runCycle(input={}){
   const s=load(), started=now();
   const sources=Object.entries(input.sources||{}).map(([source,funnel])=>({source:sourceTag(source),funnel,decision:decide(funnel)}));
@@ -49,7 +58,9 @@ export async function runCycle(input={}){
   const job=nextReady(s.queue);
   const gate=acquisitionGate(sources);
   if(!gate.allowed)distributor={...distributor,blocked:gate.reason,...(gate.incidentSources?{incidentSources:gate.incidentSources}:{})};
-  if(job&&gate.allowed&&process.env.FGE_OWNED_PUBLISH_ENABLED==='true'){
+  const policy=publishingPolicy({autonomy:AUTONOMY,enabled:process.env.FGE_OWNED_PUBLISH_ENABLED==='true',queue:s.queue});
+  if(job&&gate.allowed&&!policy.allowed)distributor={...distributor,blocked:policy.reason};
+  if(job&&gate.allowed&&policy.allowed){
     const result=await dispatchBluesky(job);
     if(result.ok){s.queue=s.queue.map(x=>x===job?{...x,...result}:x);distributor={...distributor,dispatched:job.sourceTag,result:{state:result.state,externalId:result.externalId}}}
     else distributor={...distributor,blocked:result.reason};
