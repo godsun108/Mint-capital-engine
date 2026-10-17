@@ -1,4 +1,4 @@
-import test from 'node:test';import assert from 'node:assert/strict';import {decide,acquisitionGate} from './fge-runtime.js';
+import test from 'node:test';import assert from 'node:assert/strict';import {decide,acquisitionGate,publishingPolicy} from './fge-runtime.js';
 test('cold traffic requests distribution',()=>assert.equal(decide({}).action,'increase_qualified_distribution'));
 test('traffic without checkout targets offer/intent',()=>assert.equal(decide({visits:3}).state,'traffic'));
 test('checkout without payment is not called revenue',()=>assert.equal(decide({visits:3,checkoutStarted:1}).state,'checkout'));
@@ -29,3 +29,8 @@ test('publishing rejects contradictory counters',()=>{
  const funnel={visits:1,checkoutStarted:2,paid:0,fulfilled:0};
  assert.equal(acquisitionGate([{source:'organic',funnel,decision:decide(funnel)}]).reason,'inconsistent_funnel_counts');
 });
+
+test('observe mode cannot publish',()=>assert.equal(publishingPolicy({autonomy:'observe',enabled:true}).reason,'observe_mode'));
+test('publishing requires explicit enable',()=>assert.equal(publishingPolicy({autonomy:'execute',enabled:false}).reason,'publishing_disabled'));
+test('one published post blocks more posts for 24 hours',()=>assert.equal(publishingPolicy({autonomy:'execute',enabled:true,at:100000000,queue:[{state:'published',publishedAt:new Date(99999000).toISOString()}]}).reason,'daily_post_limit'));
+test('execute mode allows first daily post',()=>assert.equal(publishingPolicy({autonomy:'execute',enabled:true,queue:[]}).allowed,true));
