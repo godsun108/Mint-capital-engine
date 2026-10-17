@@ -40,6 +40,7 @@ export function acquisitionGate(sources=[]){
 export function publishingPolicy({autonomy,enabled,queue=[],at=Date.now()}={}){
   if(autonomy!=='execute')return {allowed:false,reason:'observe_mode'};
   if(!enabled)return {allowed:false,reason:'publishing_disabled'};
+  if(process.env.FGE_LIVE_FULFILLMENT_VERIFIED!=='true')return {allowed:false,reason:'fulfillment_verification_required'};
   const sent=queue.filter(x=>x.state==='sent'||x.state==='published'||x.state==='dispatched');
   const recent=sent.map(x=>Date.parse(x.publishedAt||x.dispatchedAt||x.sentAt||'')).filter(t=>Number.isFinite(t)&&t<=at&&t>at-86400000);
   if(recent.length>=1)return {allowed:false,reason:'daily_post_limit'};
