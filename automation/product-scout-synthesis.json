@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.synthesis.v1",
-  "generatedAt": "2026-10-17T15:55:37.073998+00:00",
+  "generatedAt": "2026-10-17T20:56:41.695476+00:00",
   "clusters": [
     {
       "topic": "express-typescript",
@@ -16,18 +16,33 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/hmcts/juror-er-portal/issues/1",
-          "b": "https://github.com/hmcts/wa-task-batch-service/issues/87",
+          "a": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "b": "https://github.com/DevSecNinja/OpenArchiver/issues/14",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/hmcts/juror-er-portal/issues/1",
-          "b": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
+          "a": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "b": "https://github.com/orgtoar/redwood-test/issues/286",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/hmcts/wa-task-batch-service/issues/87",
-          "b": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
+          "a": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "b": "https://github.com/hmcts/juror-er-portal/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/DevSecNinja/OpenArchiver/issues/14",
+          "b": "https://github.com/orgtoar/redwood-test/issues/286",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/DevSecNinja/OpenArchiver/issues/14",
+          "b": "https://github.com/hmcts/juror-er-portal/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/orgtoar/redwood-test/issues/286",
+          "b": "https://github.com/hmcts/juror-er-portal/issues/1",
           "similarity": 1.0
         }
       ],
@@ -38,14 +53,8 @@
       "topic": "venture-economics",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [
-        {
-          "a": "https://github.com/JDeun/SchemaRouter/issues/200",
-          "b": "https://github.com/keanji-x/neige-calm/issues/2597",
-          "similarity": 0.182
-        }
-      ],
-      "promotionEligible": true,
+      "relatedPairs": [],
+      "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -82,8 +91,14 @@
       "topic": "evidence-packets",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/tvofi/heatpump_optimizer/issues/201",
+          "b": "https://github.com/pymedphys/pymedphys/issues/2075",
+          "similarity": 0.2
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -100,8 +115,8 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/pymedphys/pymedphys/issues/2075",
-          "b": "https://github.com/tvofi/heatpump_optimizer/issues/201",
+          "a": "https://github.com/tvofi/heatpump_optimizer/issues/201",
+          "b": "https://github.com/pymedphys/pymedphys/issues/2075",
           "similarity": 0.2
         }
       ],
@@ -110,41 +125,10 @@
     },
     {
       "topic": "cookbook-export",
-      "observationCount": 10,
-      "distinctSources": 10,
-      "relatedPairs": [
-        {
-          "a": "https://github.com/IamTugy/recipes/issues/21",
-          "b": "https://github.com/mathnauleau/commeat/issues/3",
-          "similarity": 0.286
-        },
-        {
-          "a": "https://github.com/IamTugy/recipes/issues/21",
-          "b": "https://github.com/mealie-recipes/mealie/issues/1306",
-          "similarity": 0.25
-        },
-        {
-          "a": "https://github.com/Benkendorfer/recipe-manager/issues/7",
-          "b": "https://github.com/mealie-recipes/mealie/issues/1306",
-          "similarity": 0.25
-        },
-        {
-          "a": "https://github.com/guevara/read-it-later/issues/7826",
-          "b": "https://github.com/guevara/read-it-later/issues/7825",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/guevara/read-it-later/issues/7826",
-          "b": "https://github.com/guevara/read-it-later/issues/7824",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/guevara/read-it-later/issues/7825",
-          "b": "https://github.com/guevara/read-it-later/issues/7824",
-          "similarity": 1.0
-        }
-      ],
-      "promotionEligible": true,
+      "observationCount": 0,
+      "distinctSources": 0,
+      "relatedPairs": [],
+      "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
