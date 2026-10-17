@@ -4,7 +4,7 @@ import {readFileSync} from 'node:fs';
 import vm from 'node:vm';
 
 const html=readFileSync(new URL('./public/success.html',import.meta.url),'utf8');
-const script=html.match(/<script>([\\s\\S]*?)<\\/script>/)?.[1];
+const script=html.split('<script>')[1]?.split('</script>')[0];
 assert.ok(script,'Success page inline script exists');
 
 async function simulate({session='cs_live_ABC123',status=200,size=8,error='Denied'}={}){
