@@ -27,6 +27,26 @@ export function decide(funnel={}){
   return {state:'cold',action:'increase_qualified_distribution'};
 }
 
+export function acquisitionGate(sources=[]){
+  if(!Array.isArray(sources)||sources.length===0)return {allowed:false,reason:'missing_funnel_evidence'};
+  if(sources.some(x=>!x||!x.decision||!x.funnel||typeof x.funnel!=='object'))return {allowed:false,reason:'invalid_funnel_evidence'};
+  if(sources.some(x=>['visits','checkoutStarted','paid','fulfilled'].some(k=>!Number.isSafeInteger(x.funnel[k])||x.funnel[k]<0)))return {allowed:false,reason:'incomplete_or_invalid_counts'};
+  if(sources.some(x=>x.funnel.fulfilled>x.funnel.paid||x.funnel.paid>x.funnel.checkoutStarted||x.funnel.checkoutStarted>x.funnel.visits))return {allowed:false,reason:'inconsistent_funnel_counts'};
+  const incidents=sources.filter(x=>['incident','error'].includes(x.decision.state));
+  if(incidents.length)return {allowed:false,reason:'customer_delivery_or_evidence_incident',incidentSources:incidents.map(x=>x.source)};
+  return {allowed:true};
+}
+
+export function publishingPolicy({autonomy,enabled,queue=[],at=Date.now()}={}){
+  if(autonomy!=='execute')return {allowed:false,reason:'observe_mode'};
+  if(!enabled)return {allowed:false,reason:'publishing_disabled'};
+  if(process.env.FGE_LIVE_FULFILLMENT_VERIFIED!=='true')return {allowed:false,reason:'fulfillment_verification_required'};
+  const sent=queue.filter(x=>x.state==='sent'||x.state==='published'||x.state==='dispatched');
+  const recent=sent.map(x=>Date.parse(x.publishedAt||x.dispatchedAt||x.sentAt||'')).filter(t=>Number.isFinite(t)&&t<=at&&t>at-86400000);
+  if(recent.length>=1)return {allowed:false,reason:'daily_post_limit'};
+  return {allowed:true};
+}
+
 export async function runCycle(input={}){
   const s=load(), started=now();
   const sources=Object.entries(input.sources||{}).map(([source,funnel])=>({source:sourceTag(source),funnel,decision:decide(funnel)}));
@@ -37,7 +57,11 @@ export async function runCycle(input={}){
   const ready=s.queue.filter(x=>x.state==='ready');
   let distributor={ready:ready.length,next:nextReady(s.queue)?.sourceTag||null,mode:'zero_cost_bluesky',providerConfigured:blueskyConfigured()};
   const job=nextReady(s.queue);
-  if(job&&process.env.FGE_OWNED_PUBLISH_ENABLED==='true'){
+  const gate=acquisitionGate(sources);
+  if(!gate.allowed)distributor={...distributor,blocked:gate.reason,...(gate.incidentSources?{incidentSources:gate.incidentSources}:{})};
+  const policy=publishingPolicy({autonomy:AUTONOMY,enabled:process.env.FGE_OWNED_PUBLISH_ENABLED==='true',queue:s.queue});
+  if(job&&gate.allowed&&!policy.allowed)distributor={...distributor,blocked:policy.reason};
+  if(job&&gate.allowed&&policy.allowed){
     const result=await dispatchBluesky(job);
     if(result.ok){s.queue=s.queue.map(x=>x===job?{...x,...result}:x);distributor={...distributor,dispatched:job.sourceTag,result:{state:result.state,externalId:result.externalId}}}
     else distributor={...distributor,blocked:result.reason};

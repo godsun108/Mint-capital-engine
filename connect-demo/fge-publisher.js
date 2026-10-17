@@ -1,4 +1,4 @@
-const DEFAULT_URL=process.env.FGE_PRODUCT_URL||'https://mint-stripe-connect-v4-production.up.railway.app/';
+const DEFAULT_URL=process.env.FGE_PRODUCT_URL||'https://mint-stripe-connect-v4-production.up.railway.app/offers';
 const templates=[
  {key:'health',text:'A health route is boring right up until you need to know whether your API is alive. Foundry’s Express + TypeScript starter includes one alongside strict TS, env setup & scripts. $9, one-time.'},
  {key:'strict',text:'Strict TypeScript helps surface mismatched assumptions while you build. Foundry’s $9 Express + TS starter starts strict, with the basic server setup already mapped.'},

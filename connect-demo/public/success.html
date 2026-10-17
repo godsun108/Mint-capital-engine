@@ -1,4 +1,56 @@
-<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>MINT · Payment verified delivery</title><style>body{font:16px system-ui;display:grid;place-items:center;min-height:100vh;margin:0;background:#f5f5f3}.card{background:white;padding:32px;border:1px solid #ddd;border-radius:16px;max-width:560px}a,button{color:#111}button{padding:12px 16px;border:0;border-radius:9px;background:#111;color:#fff;cursor:pointer}.muted{color:#666}</style></head><body><div class="card"><h1>Verify & deliver</h1><p id="state">Verifying payment with MINT…</p><button id="download" hidden>Download purchased artifact</button><p class="muted">Delivery is unlocked only after server-side Stripe verification. MINT fulfillment v1.1.</p><p><a href="/">Return to storefront</a></p></div><script>
-const sid=new URLSearchParams(location.search).get('session_id');const state=document.getElementById('state'),btn=document.getElementById('download');
-(async()=>{if(!sid){state.textContent='Missing Checkout session ID.';return}try{const r=await fetch('/api/checkout/'+encodeURIComponent(sid)+'/verify');const j=await r.json();if(!r.ok)throw new Error(j.error||'Verification failed');if(j.session?.status==='complete'&&j.session?.payment_status==='paid'){state.textContent='Payment verified. Your digital delivery is ready.';btn.hidden=false;btn.onclick=()=>location.href='/api/fulfill/'+encodeURIComponent(sid)}else state.textContent='Payment is not yet verified as complete.'}catch(e){state.textContent=e.message}})();
-</script></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MINT · Secure digital delivery</title>
+<style>
+body{font:16px system-ui;display:grid;place-items:center;min-height:100vh;margin:0;background:#f5f5f3;color:#111}
+.card{background:#fff;padding:32px;border:1px solid #ddd;border-radius:16px;max-width:560px}
+button{padding:12px 16px;border:0;border-radius:9px;background:#111;color:#fff;cursor:pointer}
+button:disabled{opacity:.6;cursor:wait}.muted{color:#666}
+</style>
+</head>
+<body><main class="card">
+<h1>Secure digital delivery</h1>
+<p id="state" role="status" aria-live="polite">To access your purchase, verify payment and download your file.</p>
+<button id="download" hidden>Verify payment &amp; download</button>
+<p class="muted">Payment is checked by our server before any file is released. If a bank payment is still processing, please try again later. Keep your Stripe confirmation for support.</p>
+<p><a href="/offers">Return to products</a></p>
+</main>
+<script>
+const sid=new URLSearchParams(location.search).get('session_id');
+const state=document.getElementById('state');
+const btn=document.getElementById('download');
+if(!sid||!/^cs_(live|test)_[A-Za-z0-9]+$/.test(sid)){
+  state.textContent='No valid checkout session was provided. Please return to the store or contact support with your Stripe receipt.';
+}else{
+  btn.hidden=false;
+  btn.addEventListener('click',async()=>{
+    btn.disabled=true;
+    state.textContent='Checking payment securely…';
+    try{
+      // The server independently verifies Stripe payment, offer approval and artifact path.
+      // Do not use /api/checkout/:id/verify here: that diagnostic is TEST-only.
+      const response=await fetch('/api/fulfill/'+encodeURIComponent(sid),{cache:'no-store'});
+      if(!response.ok){
+        let detail={};
+        try{detail=await response.json()}catch{}
+        if(response.status===402){state.textContent='Payment is still pending. Please try again after Stripe confirms it.';return}
+        throw new Error(detail.error||'Unable to prepare your download. Please contact support with your Stripe receipt.');
+      }
+      const blob=await response.blob();
+      if(!blob.size)throw new Error('The file was empty. Please contact support.');
+      const disposition=response.headers.get('content-disposition')||'';
+      const match=disposition.match(/filename="([^"]+)"/);
+      const filename=match?match[1]:'mint-purchase-download';
+      const url=URL.createObjectURL(blob);
+      const anchor=document.createElement('a');anchor.href=url;anchor.download=filename;
+      document.body.appendChild(anchor);anchor.click();anchor.remove();
+      setTimeout(()=>URL.revokeObjectURL(url),60000);
+      state.textContent='Your download has been started. Check your browser downloads.';
+    }catch(error){state.textContent=error.message||'Download could not be completed. Please try again.'}
+    finally{btn.disabled=false}
+  });
+}
+</script>
+</body></html>

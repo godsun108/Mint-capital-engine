@@ -23,9 +23,8 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-          cache: npm
-          cache-dependency-path: connect-demo/package-lock.json
-      - run: npm ci --ignore-scripts
+      # This repository has no package-lock.json; npm ci and setup-node cache cannot work without it.
+      - run: npm install --ignore-scripts --no-audit --no-fund
       - name: Check server and payment handler syntax
         run: |
           node --check server.js
