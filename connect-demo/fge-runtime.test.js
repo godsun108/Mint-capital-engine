@@ -16,7 +16,16 @@ test('inconsistent fulfillment evidence is an error even with traffic',()=>{
 test('autonomous promotion blocks absent funnel evidence',()=>assert.deepEqual(acquisitionGate([]),{allowed:false,reason:'missing_funnel_evidence'}));
 test('autonomous promotion blocks invalid funnel evidence',()=>assert.equal(acquisitionGate([null]).reason,'invalid_funnel_evidence'));
 test('autonomous promotion blocks unresolved customer incident',()=>{
- const gate=acquisitionGate([{source:'organic',decision:decide({paid:1,fulfilled:0})}]);
+ const gate=acquisitionGate([{source:'organic',funnel:{visits:1,checkoutStarted:1,paid:1,fulfilled:0},decision:decide({paid:1,fulfilled:0})}]);
  assert.equal(gate.allowed,false);assert.deepEqual(gate.incidentSources,['organic']);
 });
-test('autonomous promotion allows observed healthy funnel',()=>assert.equal(acquisitionGate([{source:'organic',decision:decide({visits:2})}]).allowed,true));
+test('autonomous promotion allows observed healthy funnel',()=>assert.equal(acquisitionGate([{source:'organic',funnel:{visits:2,checkoutStarted:0,paid:0,fulfilled:0},decision:decide({visits:2})}]).allowed,true));
+
+test('publishing requires complete counters',()=>{
+ const result=acquisitionGate([{source:'organic',funnel:{visits:2},decision:decide({visits:2})}]);
+ assert.equal(result.reason,'incomplete_or_invalid_counts');
+});
+test('publishing rejects contradictory counters',()=>{
+ const funnel={visits:1,checkoutStarted:2,paid:0,fulfilled:0};
+ assert.equal(acquisitionGate([{source:'organic',funnel,decision:decide(funnel)}]).reason,'inconsistent_funnel_counts');
+});
