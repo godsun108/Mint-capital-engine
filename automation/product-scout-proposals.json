@@ -1,38 +1,8 @@
 {
   "schema": "mint.product.scout.proposals.v1",
-  "generatedAt": "2026-10-18T11:41:22.120429+00:00",
+  "generatedAt": "2026-10-18T16:08:03.229969+00:00",
   "semantics": "RESEARCH_PROPOSALS_NOT_PRODUCT_CANDIDATES",
   "proposals": [
-    {
-      "id": "proposal:express-auth:001",
-      "topic": "express-auth",
-      "status": "PROPOSED_FOR_RESEARCH",
-      "regulated": false,
-      "upfrontCostUsd": 0,
-      "evidence": [
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "observedAt": "2026-10-18T11:41:15.080930+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/mitodl/mitxpro/issues/2711",
-          "observedAt": "2026-10-18T11:41:15.080938+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        }
-      ],
-      "guardrails": [
-        "proposal_is_not_verified_demand",
-        "research_must_define_customer_and_problem",
-        "no_build_before_product_gate"
-      ]
-    },
     {
       "id": "proposal:venture-economics:001",
       "topic": "venture-economics",
@@ -44,7 +14,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
-          "observedAt": "2026-10-18T11:41:15.853904+00:00",
+          "observedAt": "2026-10-18T16:07:59.082873+00:00",
           "verified": true,
           "claim": "Central message board \u2014 Hermes, Claude, Codex and operator coordination"
         },
@@ -52,7 +22,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/d6g8k5htny-coder/main/issues/419",
-          "observedAt": "2026-10-18T11:41:15.853912+00:00",
+          "observedAt": "2026-10-18T16:07:59.082892+00:00",
           "verified": true,
           "claim": "Agent Message Board (continued from #307): successor coordination board to #307"
         }
@@ -74,7 +44,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2641",
-          "observedAt": "2026-10-18T11:41:16.550613+00:00",
+          "observedAt": "2026-10-18T16:07:59.644467+00:00",
           "verified": true,
           "claim": "[NAYA] Team coordination feed \u2014 live board (successor to #2537)"
         },
@@ -82,63 +52,9 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/554",
-          "observedAt": "2026-10-18T11:41:16.550631+00:00",
+          "observedAt": "2026-10-18T16:07:59.644485+00:00",
           "verified": true,
           "claim": "\ud83d\udd31 TEAM NAYA \u2014 Naya \u2194 Coda Direct Communication Board"
-        }
-      ],
-      "guardrails": [
-        "proposal_is_not_verified_demand",
-        "research_must_define_customer_and_problem",
-        "no_build_before_product_gate"
-      ]
-    },
-    {
-      "id": "proposal:evidence-packets:001",
-      "topic": "evidence-packets",
-      "status": "PROPOSED_FOR_RESEARCH",
-      "regulated": false,
-      "upfrontCostUsd": 0,
-      "evidence": [
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2471",
-          "observedAt": "2026-10-18T11:41:19.101535+00:00",
-          "verified": true,
-          "claim": "Lane 4 \u2014 worker sign-in/out feed"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2472",
-          "observedAt": "2026-10-18T11:41:19.101538+00:00",
-          "verified": true,
-          "claim": "Lane 5 \u2014 worker sign-in/out feed"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1713",
-          "observedAt": "2026-10-18T11:41:19.101543+00:00",
-          "verified": true,
-          "claim": "[NAYA 5] LEARN-engine \u2014 gates-wiring-bridge-to-10-10"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1715",
-          "observedAt": "2026-10-18T11:41:19.101634+00:00",
-          "verified": true,
-          "claim": "[NAYA 5] SUCCESSOR-REUSE-engine \u2014 cold-reuse-to-10-10"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1714",
-          "observedAt": "2026-10-18T11:41:19.101636+00:00",
-          "verified": true,
-          "claim": "[NAYA 5] COLD-RETRIEVE-engine \u2014 retrieval-to-10-10"
         }
       ],
       "guardrails": [
@@ -157,42 +73,18 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1714",
-          "observedAt": "2026-10-18T11:41:20.666147+00:00",
+          "url": "https://github.com/shamailsik-prog/cursor-init/issues/30",
+          "observedAt": "2026-10-18T16:08:02.540532+00:00",
           "verified": true,
-          "claim": "[NAYA 5] COLD-RETRIEVE-engine \u2014 retrieval-to-10-10"
+          "claim": "Audit remediation: 48 findings"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1713",
-          "observedAt": "2026-10-18T11:41:20.666176+00:00",
+          "url": "https://github.com/tvofi/heatpump_optimizer/issues/201",
+          "observedAt": "2026-10-18T16:08:02.540559+00:00",
           "verified": true,
-          "claim": "[NAYA 5] LEARN-engine \u2014 gates-wiring-bridge-to-10-10"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1715",
-          "observedAt": "2026-10-18T11:41:20.666179+00:00",
-          "verified": true,
-          "claim": "[NAYA 5] SUCCESSOR-REUSE-engine \u2014 cold-reuse-to-10-10"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2471",
-          "observedAt": "2026-10-18T11:41:20.666169+00:00",
-          "verified": true,
-          "claim": "Lane 4 \u2014 worker sign-in/out feed"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2472",
-          "observedAt": "2026-10-18T11:41:20.666170+00:00",
-          "verified": true,
-          "claim": "Lane 5 \u2014 worker sign-in/out feed"
+          "claim": "Audit \u2014 (tracking)"
         }
       ],
       "guardrails": [
@@ -212,7 +104,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/IamTugy/recipes/issues/21",
-          "observedAt": "2026-10-18T11:41:21.384228+00:00",
+          "observedAt": "2026-10-18T16:08:03.020383+00:00",
           "verified": true,
           "claim": "Cookbook/collection PDF export"
         },
@@ -220,7 +112,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mathnauleau/commeat/issues/3",
-          "observedAt": "2026-10-18T11:41:21.384232+00:00",
+          "observedAt": "2026-10-18T16:08:03.020387+00:00",
           "verified": true,
           "claim": "Later: Print full cookbook PDF"
         },
@@ -228,7 +120,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mealie-recipes/mealie/issues/1306",
-          "observedAt": "2026-10-18T11:41:21.384235+00:00",
+          "observedAt": "2026-10-18T16:08:03.020391+00:00",
           "verified": true,
           "claim": "[v1.0.0b] [Task] - Export Recipes and Cookbooks to PDF"
         },
@@ -236,7 +128,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Benkendorfer/recipe-manager/issues/7",
-          "observedAt": "2026-10-18T11:41:21.384233+00:00",
+          "observedAt": "2026-10-18T16:08:03.020389+00:00",
           "verified": true,
           "claim": "Import recipes from PDF files"
         },
@@ -244,7 +136,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7826",
-          "observedAt": "2026-10-18T11:41:21.384237+00:00",
+          "observedAt": "2026-10-18T16:08:03.020395+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -252,7 +144,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7825",
-          "observedAt": "2026-10-18T11:41:21.384239+00:00",
+          "observedAt": "2026-10-18T16:08:03.020397+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -260,7 +152,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7824",
-          "observedAt": "2026-10-18T11:41:21.384240+00:00",
+          "observedAt": "2026-10-18T16:08:03.020399+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         }
