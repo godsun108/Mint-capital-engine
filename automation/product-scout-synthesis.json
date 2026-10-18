@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.synthesis.v1",
-  "generatedAt": "2026-10-18T16:08:03.168614+00:00",
+  "generatedAt": "2026-10-18T21:01:18.957503+00:00",
   "clusters": [
     {
       "topic": "express-typescript",
@@ -14,8 +14,39 @@
       "topic": "express-auth",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
+          "b": "https://github.com/hmcts/juror-er-portal/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
+          "b": "https://github.com/mitodl/mitxpro/issues/2711",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
+          "b": "https://github.com/hmcts/wa-task-batch-service/issues/87",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/juror-er-portal/issues/1",
+          "b": "https://github.com/mitodl/mitxpro/issues/2711",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/juror-er-portal/issues/1",
+          "b": "https://github.com/hmcts/wa-task-batch-service/issues/87",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/mitodl/mitxpro/issues/2711",
+          "b": "https://github.com/hmcts/wa-task-batch-service/issues/87",
+          "similarity": 1.0
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -84,9 +115,29 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/shamailsik-prog/cursor-init/issues/30",
-          "b": "https://github.com/tvofi/heatpump_optimizer/issues/201",
-          "similarity": 0.25
+          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2471",
+          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2472",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1713",
+          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1714",
+          "similarity": 0.2
+        },
+        {
+          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1713",
+          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1715",
+          "similarity": 0.2
+        },
+        {
+          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1714",
+          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1715",
+          "similarity": 0.2
+        },
+        {
+          "a": "https://github.com/ShamikM88/open-cam-framework/issues/245",
+          "b": "https://github.com/bugabinga/mothergod/issues/3",
+          "similarity": 0.2
         }
       ],
       "promotionEligible": true,
@@ -94,8 +145,8 @@
     },
     {
       "topic": "cookbook-export",
-      "observationCount": 11,
-      "distinctSources": 11,
+      "observationCount": 10,
+      "distinctSources": 10,
       "relatedPairs": [
         {
           "a": "https://github.com/IamTugy/recipes/issues/21",
