@@ -1,11 +1,11 @@
 {
   "schema": "mint.product.scout.proposals.v1",
-  "generatedAt": "2026-10-17T20:56:41.757446+00:00",
+  "generatedAt": "2026-10-18T05:06:43.208902+00:00",
   "semantics": "RESEARCH_PROPOSALS_NOT_PRODUCT_CANDIDATES",
   "proposals": [
     {
-      "id": "proposal:express-auth:001",
-      "topic": "express-auth",
+      "id": "proposal:venture-economics:001",
+      "topic": "venture-economics",
       "status": "PROPOSED_FOR_RESEARCH",
       "regulated": false,
       "upfrontCostUsd": 0,
@@ -13,34 +13,18 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "observedAt": "2026-10-17T20:56:37.043435+00:00",
+          "url": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
+          "observedAt": "2026-10-18T05:06:34.957412+00:00",
           "verified": true,
-          "claim": "Dependency Dashboard"
+          "claim": "Central message board \u2014 Hermes, Claude, Codex and operator coordination"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/DevSecNinja/OpenArchiver/issues/14",
-          "observedAt": "2026-10-17T20:56:37.043439+00:00",
+          "url": "https://github.com/d6g8k5htny-coder/main/issues/419",
+          "observedAt": "2026-10-18T05:06:34.957418+00:00",
           "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/orgtoar/redwood-test/issues/286",
-          "observedAt": "2026-10-17T20:56:37.043441+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/hmcts/juror-er-portal/issues/1",
-          "observedAt": "2026-10-17T20:56:37.043445+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
+          "claim": "Agent Message Board (continued from #307): successor coordination board to #307"
         }
       ],
       "guardrails": [
@@ -60,7 +44,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2641",
-          "observedAt": "2026-10-17T20:56:38.240556+00:00",
+          "observedAt": "2026-10-18T05:06:35.701400+00:00",
           "verified": true,
           "claim": "[NAYA] Team coordination feed \u2014 live board (successor to #2537)"
         },
@@ -68,7 +52,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/554",
-          "observedAt": "2026-10-17T20:56:38.240575+00:00",
+          "observedAt": "2026-10-18T05:06:35.701423+00:00",
           "verified": true,
           "claim": "\ud83d\udd31 TEAM NAYA \u2014 Naya \u2194 Coda Direct Communication Board"
         }
@@ -80,8 +64,8 @@
       ]
     },
     {
-      "id": "proposal:evidence-packets:001",
-      "topic": "evidence-packets",
+      "id": "proposal:cookbook-export:001",
+      "topic": "cookbook-export",
       "status": "PROPOSED_FOR_RESEARCH",
       "regulated": false,
       "upfrontCostUsd": 0,
@@ -89,18 +73,58 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/tvofi/heatpump_optimizer/issues/201",
-          "observedAt": "2026-10-17T20:56:40.200846+00:00",
+          "url": "https://github.com/IamTugy/recipes/issues/21",
+          "observedAt": "2026-10-18T05:06:40.314022+00:00",
           "verified": true,
-          "claim": "Audit \u2014 (tracking)"
+          "claim": "Cookbook/collection PDF export"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/pymedphys/pymedphys/issues/2075",
-          "observedAt": "2026-10-17T20:56:40.200866+00:00",
+          "url": "https://github.com/mathnauleau/commeat/issues/3",
+          "observedAt": "2026-10-18T05:06:40.314026+00:00",
           "verified": true,
-          "claim": "DICOM de-identification: tracking issue"
+          "claim": "Later: Print full cookbook PDF"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/mealie-recipes/mealie/issues/1306",
+          "observedAt": "2026-10-18T05:06:40.314029+00:00",
+          "verified": true,
+          "claim": "[v1.0.0b] [Task] - Export Recipes and Cookbooks to PDF"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/Benkendorfer/recipe-manager/issues/7",
+          "observedAt": "2026-10-18T05:06:40.314028+00:00",
+          "verified": true,
+          "claim": "Import recipes from PDF files"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/guevara/read-it-later/issues/7826",
+          "observedAt": "2026-10-18T05:06:40.314032+00:00",
+          "verified": true,
+          "claim": "Rust Language Cheat Sheet"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/guevara/read-it-later/issues/7825",
+          "observedAt": "2026-10-18T05:06:40.314034+00:00",
+          "verified": true,
+          "claim": "Rust Language Cheat Sheet"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/guevara/read-it-later/issues/7824",
+          "observedAt": "2026-10-18T05:06:40.314035+00:00",
+          "verified": true,
+          "claim": "Rust Language Cheat Sheet"
         }
       ],
       "guardrails": [
@@ -110,8 +134,8 @@
       ]
     },
     {
-      "id": "proposal:research-workflow:001",
-      "topic": "research-workflow",
+      "id": "proposal:browser-arcade:001",
+      "topic": "browser-arcade",
       "status": "PROPOSED_FOR_RESEARCH",
       "regulated": false,
       "upfrontCostUsd": 0,
@@ -119,18 +143,96 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/tvofi/heatpump_optimizer/issues/201",
-          "observedAt": "2026-10-17T20:56:41.549238+00:00",
+          "url": "https://github.com/AnandChowdhary/gitclaw/issues/878",
+          "observedAt": "2026-10-18T05:06:40.952859+00:00",
           "verified": true,
-          "claim": "Audit \u2014 (tracking)"
+          "claim": "GitClaw telegram thread channel-mad-libs-e2e-20260604t072208z"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/pymedphys/pymedphys/issues/2075",
-          "observedAt": "2026-10-17T20:56:41.549250+00:00",
+          "url": "https://github.com/AnandChowdhary/gitclaw/issues/877",
+          "observedAt": "2026-10-18T05:06:40.952860+00:00",
           "verified": true,
-          "claim": "DICOM de-identification: tracking issue"
+          "claim": "GitClaw telegram thread channel-tool-drill-e2e-20260604t070042z"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/AnandChowdhary/gitclaw/issues/876",
+          "observedAt": "2026-10-18T05:06:40.952862+00:00",
+          "verified": true,
+          "claim": "GitClaw telegram thread channel-soul-drill-e2e-20260604t063934z"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/AnandChowdhary/gitclaw/issues/875",
+          "observedAt": "2026-10-18T05:06:40.952863+00:00",
+          "verified": true,
+          "claim": "GitClaw telegram thread channel-skill-drill-e2e-20260604t061809z"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/AnandChowdhary/gitclaw/issues/874",
+          "observedAt": "2026-10-18T05:06:40.952865+00:00",
+          "verified": true,
+          "claim": "GitClaw telegram thread channel-this-or-that-e2e-20260604t055745z"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/AnandChowdhary/gitclaw/issues/873",
+          "observedAt": "2026-10-18T05:06:40.952866+00:00",
+          "verified": true,
+          "claim": "GitClaw telegram thread channel-riddle-e2e-20260604t053459z"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/AnandChowdhary/gitclaw/issues/871",
+          "observedAt": "2026-10-18T05:06:40.952867+00:00",
+          "verified": true,
+          "claim": "GitClaw telegram thread channel-icebreaker-e2e-20260604t045516z"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/AnandChowdhary/gitclaw/issues/870",
+          "observedAt": "2026-10-18T05:06:40.952869+00:00",
+          "verified": true,
+          "claim": "GitClaw telegram thread channel-fortune-cookie-e2e-20260604t043343z"
+        }
+      ],
+      "guardrails": [
+        "proposal_is_not_verified_demand",
+        "research_must_define_customer_and_problem",
+        "no_build_before_product_gate"
+      ]
+    },
+    {
+      "id": "proposal:forecasting:001",
+      "topic": "forecasting",
+      "status": "PROPOSED_FOR_RESEARCH",
+      "regulated": false,
+      "upfrontCostUsd": 0,
+      "evidence": [
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/NeoFii/DailyArXiv/issues/168",
+          "observedAt": "2026-10-18T05:06:42.807655+00:00",
+          "verified": true,
+          "claim": "Latest 50 Papers - September 30, 2026"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/xllm-io/daily-papers/issues/55",
+          "observedAt": "2026-10-18T05:06:42.807658+00:00",
+          "verified": true,
+          "claim": "Latest 20 Papers - September 29, 2026"
         }
       ],
       "guardrails": [
