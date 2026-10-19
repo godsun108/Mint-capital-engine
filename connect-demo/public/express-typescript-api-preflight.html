@@ -5,7 +5,7 @@
 <link rel="canonical" href="https://mint-stripe-connect-v4-production.up.railway.app/guides/express-typescript-api-preflight">
 <meta property="og:type" content="article"><meta property="og:title" content="Express + TypeScript API Preflight Guide"><meta property="og:description" content="A free practical guide to preparing a small Express TypeScript API for deployment.">
 <style>body{margin:0;background:#0c1511;color:#edf7ef;font:17px/1.65 system-ui,sans-serif}main{max-width:780px;margin:auto;padding:42px 22px 90px}a{color:#b5efc5}h1{font-size:clamp(32px,6vw,54px);line-height:1.1}h2{margin-top:34px}pre{overflow:auto;background:#17231c;border:1px solid #3d5646;border-radius:10px;padding:18px;font-size:14px}code{font-family:ui-monospace,monospace}li{margin:8px 0}.muted{color:#b5c9bb}.offer{border:1px solid #48624f;border-radius:12px;padding:22px;margin-top:38px}</style></head>
-<body><main><p><a href="/">Foundry by MINT</a> / Free builder guide</p>
+<body><main><p><a data-preserve-source href="/">Foundry by MINT</a> / Free builder guide</p>
 <h1>Express + TypeScript API preflight</h1><p class="muted">A practical checklist and minimal implementation for a small Node.js API. This guide is free; you don't need to purchase anything to follow it.</p>
 <h2>1. Start with strict types</h2><p>Install Express, TypeScript, and their types. Use Node.js 20 or later and enable strict checking.</p>
 <pre><code>npm init -y
@@ -38,5 +38,16 @@ app.listen(port, () =&gt; console.log('API listening'));</code></pre>
 <li>Verify the deployment environment supplies <code>PORT</code> and all required secrets.</li>
 <li>Check logs and monitoring, then document a rollback procedure.</li></ul>
 <h2>5. Release gate</h2><p>Do not consider the API ready solely because its health route works. Confirm functional tests, authorization, dependency security, error handling, monitoring, and recovery. Adapt these checks to your application and threat model.</p>
-<section class="offer"><h2>Optional: skip the blank-project setup</h2><p>The <strong>Foundry Express + TypeScript Starter</strong> is a $9 downloadable starting point with strict TypeScript, JSON middleware, a health route, an environment example, and build scripts. The free guide above stands on its own.</p><p><a href="/?src=seo_express_ts">See the $9 starter and what it includes →</a></p></section>
-<p class="muted">Last reviewed October 2026. This guide is educational, not a guarantee of security or deployment success.</p></main></body></html>
+<section class="offer"><h2>Optional: skip the blank-project setup</h2><p>The <strong>Foundry Express + TypeScript Starter</strong> is a $9 downloadable starting point with strict TypeScript, JSON middleware, a health route, an environment example, and build scripts. The free guide above stands on its own.</p><p><a data-preserve-source href="/?src=seo_express_ts">See the $9 starter and what it includes →</a></p></section>
+<p class="muted">Last reviewed October 2026. This guide is educational, not a guarantee of security or deployment success.</p></main><script>
+(() => {
+  const raw = new URLSearchParams(location.search).get('src') || '';
+  const source = raw.toLowerCase();
+  if (!/^[a-z0-9_-]{1,48}$/.test(source)) return;
+  for (const link of document.querySelectorAll('a[data-preserve-source]')) {
+    const target = new URL(link.getAttribute('href'), location.origin);
+    target.searchParams.set('src', source);
+    link.setAttribute('href', target.pathname + target.search);
+  }
+})();
+</script></body></html>
