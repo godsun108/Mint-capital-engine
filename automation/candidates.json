@@ -28,8 +28,16 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/Stooa/Stooa/issues/186",
-          "observedAt": "2026-10-19T05:17:43.321509+00:00",
+          "url": "https://github.com/mitodl/mitxpro/issues/2711",
+          "observedAt": "2026-10-19T13:55:40.361771+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/sptribs-frontend/issues/444",
+          "observedAt": "2026-10-19T13:55:40.361783+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -37,23 +45,23 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
-          "observedAt": "2026-10-19T05:17:43.321514+00:00",
+          "observedAt": "2026-10-19T13:55:40.361785+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/mitodl/mitxpro/issues/2711",
-          "observedAt": "2026-10-19T05:17:43.321516+00:00",
+          "url": "https://github.com/hmcts/appreg-frontend/issues/2",
+          "observedAt": "2026-10-19T13:55:40.361789+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/TravisPooley/vulhub/issues/4",
-          "observedAt": "2026-10-19T05:17:43.321525+00:00",
+          "url": "https://github.com/hmcts/pip-frontend/issues/1109",
+          "observedAt": "2026-10-19T13:55:40.361798+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         }
@@ -61,7 +69,7 @@
       "status": "DISCOVERED_SOURCE_BACKED",
       "provenance": {
         "proposalId": "proposal:express-auth:001",
-        "promotedAt": "2026-10-19T05:17:49.519012+00:00",
+        "promotedAt": "2026-10-19T13:55:50.716769+00:00",
         "semantics": "SOURCE_BACKED_CANDIDATE_RESEARCH_STILL_REQUIRED"
       }
     }
