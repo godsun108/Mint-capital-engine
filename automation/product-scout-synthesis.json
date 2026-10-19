@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.synthesis.v1",
-  "generatedAt": "2026-10-18T21:01:18.957503+00:00",
+  "generatedAt": "2026-10-19T05:17:49.411450+00:00",
   "clusters": [
     {
       "topic": "express-typescript",
@@ -16,33 +16,33 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
-          "b": "https://github.com/hmcts/juror-er-portal/issues/1",
+          "a": "https://github.com/Stooa/Stooa/issues/186",
+          "b": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
+          "a": "https://github.com/Stooa/Stooa/issues/186",
           "b": "https://github.com/mitodl/mitxpro/issues/2711",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
-          "b": "https://github.com/hmcts/wa-task-batch-service/issues/87",
+          "a": "https://github.com/Stooa/Stooa/issues/186",
+          "b": "https://github.com/TravisPooley/vulhub/issues/4",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/hmcts/juror-er-portal/issues/1",
+          "a": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
           "b": "https://github.com/mitodl/mitxpro/issues/2711",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/hmcts/juror-er-portal/issues/1",
-          "b": "https://github.com/hmcts/wa-task-batch-service/issues/87",
+          "a": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "b": "https://github.com/TravisPooley/vulhub/issues/4",
           "similarity": 1.0
         },
         {
           "a": "https://github.com/mitodl/mitxpro/issues/2711",
-          "b": "https://github.com/hmcts/wa-task-batch-service/issues/87",
+          "b": "https://github.com/TravisPooley/vulhub/issues/4",
           "similarity": 1.0
         }
       ],
@@ -58,6 +58,11 @@
           "a": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
           "b": "https://github.com/d6g8k5htny-coder/main/issues/419",
           "similarity": 0.25
+        },
+        {
+          "a": "https://github.com/JDeun/SchemaRouter/issues/200",
+          "b": "https://github.com/keanji-x/neige-calm/issues/2597",
+          "similarity": 0.182
         }
       ],
       "promotionEligible": true,
@@ -81,8 +86,24 @@
       "topic": "software-release-contract",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/caosos/Desktop-Agent/issues/3",
+          "b": "https://github.com/LTstripes/hermes-finance/issues/554",
+          "similarity": 0.188
+        },
+        {
+          "a": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
+          "b": "https://github.com/d6g8k5htny-coder/main/issues/419",
+          "similarity": 0.25
+        },
+        {
+          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2154",
+          "b": "https://github.com/Swooshz-com/swooshz-quote-auto-generator/issues/212",
+          "similarity": 0.182
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -115,28 +136,23 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2471",
-          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2472",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1713",
-          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1714",
-          "similarity": 0.2
-        },
-        {
-          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1713",
-          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1715",
-          "similarity": 0.2
-        },
-        {
           "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1714",
           "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1715",
           "similarity": 0.2
         },
         {
-          "a": "https://github.com/ShamikM88/open-cam-framework/issues/245",
-          "b": "https://github.com/bugabinga/mothergod/issues/3",
+          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1714",
+          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1713",
+          "similarity": 0.2
+        },
+        {
+          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2472",
+          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2471",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1715",
+          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1713",
           "similarity": 0.2
         }
       ],
@@ -145,41 +161,10 @@
     },
     {
       "topic": "cookbook-export",
-      "observationCount": 10,
-      "distinctSources": 10,
-      "relatedPairs": [
-        {
-          "a": "https://github.com/IamTugy/recipes/issues/21",
-          "b": "https://github.com/mathnauleau/commeat/issues/3",
-          "similarity": 0.286
-        },
-        {
-          "a": "https://github.com/IamTugy/recipes/issues/21",
-          "b": "https://github.com/mealie-recipes/mealie/issues/1306",
-          "similarity": 0.25
-        },
-        {
-          "a": "https://github.com/Benkendorfer/recipe-manager/issues/7",
-          "b": "https://github.com/mealie-recipes/mealie/issues/1306",
-          "similarity": 0.25
-        },
-        {
-          "a": "https://github.com/guevara/read-it-later/issues/7826",
-          "b": "https://github.com/guevara/read-it-later/issues/7825",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/guevara/read-it-later/issues/7826",
-          "b": "https://github.com/guevara/read-it-later/issues/7824",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/guevara/read-it-later/issues/7825",
-          "b": "https://github.com/guevara/read-it-later/issues/7824",
-          "similarity": 1.0
-        }
-      ],
-      "promotionEligible": true,
+      "observationCount": 0,
+      "distinctSources": 0,
+      "relatedPairs": [],
+      "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
