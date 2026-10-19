@@ -1,6 +1,6 @@
 {
   "schema": "mint.learning.state.v1",
-  "generatedAt": "2026-10-19T07:55:52.276Z",
+  "generatedAt": "2026-10-19T10:57:01.433Z",
   "offers": {
     "foundry-express-ts-001": {
       "offerId": "foundry-express-ts-001",
@@ -20,7 +20,7 @@
         "durableStorageConfigured": true,
         "semantics": "DURABLE_AGGREGATE_FUNNEL_SIGNAL_NOT_UNIQUE_VISITORS_NOT_PAYMENT_EVIDENCE"
       },
-      "updatedAt": "2026-10-19T07:55:52.276Z"
+      "updatedAt": "2026-10-19T10:57:01.433Z"
     },
     "mint-builder-launch-pack-005": {
       "offerId": "mint-builder-launch-pack-005",
@@ -36,7 +36,7 @@
         "state": "LIVE",
         "reason": "insufficient_evidence_to_change"
       },
-      "updatedAt": "2026-10-19T07:55:52.276Z",
+      "updatedAt": "2026-10-19T10:57:01.433Z",
       "semantics": "VERIFIED_INPUTS_ONLY_NO_FORECASTS",
       "learnings": {
         "acquisitionProven": false,
@@ -60,7 +60,7 @@
     "portfolio": {
       "offerId": "portfolio",
       "acquisition": {
-        "visits": 20,
+        "visits": 21,
         "checkoutStarted": 0,
         "sources": {
           "qa_offers_20261012": {
@@ -76,14 +76,14 @@
             "CHECKOUT_STARTED": 0
           },
           "foundrytools_ts_starter": {
-            "VISITED": 4,
+            "VISITED": 5,
             "CHECKOUT_STARTED": 0
           }
         },
         "durableStorageConfigured": true,
         "semantics": "DURABLE_AGGREGATE_FUNNEL_SIGNAL_NOT_UNIQUE_VISITORS_NOT_PAYMENT_EVIDENCE"
       },
-      "updatedAt": "2026-10-19T07:55:52.276Z"
+      "updatedAt": "2026-10-19T10:57:01.433Z"
     },
     "ai-workflow-kit-004": {
       "offerId": "ai-workflow-kit-004",
@@ -99,7 +99,7 @@
         "durableStorageConfigured": true,
         "semantics": "DURABLE_AGGREGATE_FUNNEL_SIGNAL_NOT_UNIQUE_VISITORS_NOT_PAYMENT_EVIDENCE"
       },
-      "updatedAt": "2026-10-19T07:55:52.276Z"
+      "updatedAt": "2026-10-19T10:57:01.433Z"
     },
     "site-launch-checklist-003": {
       "offerId": "site-launch-checklist-003",
@@ -115,7 +115,7 @@
         "durableStorageConfigured": true,
         "semantics": "DURABLE_AGGREGATE_FUNNEL_SIGNAL_NOT_UNIQUE_VISITORS_NOT_PAYMENT_EVIDENCE"
       },
-      "updatedAt": "2026-10-19T07:55:52.276Z"
+      "updatedAt": "2026-10-19T10:57:01.433Z"
     },
     "api-launch-checklist-002": {
       "offerId": "api-launch-checklist-002",
@@ -131,7 +131,7 @@
         "durableStorageConfigured": true,
         "semantics": "DURABLE_AGGREGATE_FUNNEL_SIGNAL_NOT_UNIQUE_VISITORS_NOT_PAYMENT_EVIDENCE"
       },
-      "updatedAt": "2026-10-19T07:55:52.276Z"
+      "updatedAt": "2026-10-19T10:57:01.433Z"
     }
   }
 }
