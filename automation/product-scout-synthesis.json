@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.synthesis.v1",
-  "generatedAt": "2026-10-19T22:37:40.008334+00:00",
+  "generatedAt": "2026-10-20T05:15:14.167298+00:00",
   "clusters": [
     {
       "topic": "express-typescript",
@@ -72,14 +72,8 @@
       "topic": "evidence-packets",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [
-        {
-          "a": "https://github.com/Ken0u/badminton-match-analyzer/issues/74",
-          "b": "https://github.com/Uuriko/project-room/issues/3299",
-          "similarity": 0.182
-        }
-      ],
-      "promotionEligible": true,
+      "relatedPairs": [],
+      "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {

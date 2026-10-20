@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.proposals.v1",
-  "generatedAt": "2026-10-19T22:37:40.068734+00:00",
+  "generatedAt": "2026-10-20T05:15:14.230054+00:00",
   "semantics": "RESEARCH_PROPOSALS_NOT_PRODUCT_CANDIDATES",
   "proposals": [
     {
@@ -14,7 +14,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/okou-ai/okou/issues/41550",
-          "observedAt": "2026-10-19T22:37:34.786015+00:00",
+          "observedAt": "2026-10-20T05:15:08.042311+00:00",
           "verified": true,
           "claim": "refactor(api): keep Discord ingress claims in their owner"
         },
@@ -22,7 +22,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/okou-ai/okou/issues/41549",
-          "observedAt": "2026-10-19T22:37:34.786018+00:00",
+          "observedAt": "2026-10-20T05:15:08.042313+00:00",
           "verified": true,
           "claim": "refactor(api): keep changed-migration failure writes in their owner"
         }
@@ -44,7 +44,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/d6g8k5htny-coder/main/issues/419",
-          "observedAt": "2026-10-19T22:37:35.936761+00:00",
+          "observedAt": "2026-10-20T05:15:09.592613+00:00",
           "verified": true,
           "claim": "Agent Message Board (continued from #307): successor coordination board to #307"
         },
@@ -52,7 +52,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
-          "observedAt": "2026-10-19T22:37:35.936771+00:00",
+          "observedAt": "2026-10-20T05:15:09.592625+00:00",
           "verified": true,
           "claim": "Central message board \u2014 Hermes, Claude, Codex and operator coordination"
         }
@@ -74,7 +74,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2641",
-          "observedAt": "2026-10-19T22:37:36.555042+00:00",
+          "observedAt": "2026-10-20T05:15:10.368066+00:00",
           "verified": true,
           "claim": "[NAYA] Team coordination feed \u2014 live board (successor to #2537)"
         },
@@ -82,39 +82,9 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/554",
-          "observedAt": "2026-10-19T22:37:36.555051+00:00",
+          "observedAt": "2026-10-20T05:15:10.368072+00:00",
           "verified": true,
           "claim": "\ud83d\udd31 TEAM NAYA \u2014 Naya \u2194 Coda Direct Communication Board"
-        }
-      ],
-      "guardrails": [
-        "proposal_is_not_verified_demand",
-        "research_must_define_customer_and_problem",
-        "no_build_before_product_gate"
-      ]
-    },
-    {
-      "id": "proposal:evidence-packets:001",
-      "topic": "evidence-packets",
-      "status": "PROPOSED_FOR_RESEARCH",
-      "regulated": false,
-      "upfrontCostUsd": 0,
-      "evidence": [
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/Ken0u/badminton-match-analyzer/issues/74",
-          "observedAt": "2026-10-19T22:37:38.237832+00:00",
-          "verified": true,
-          "claim": "Agent coordination requests and worker status"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/Uuriko/project-room/issues/3299",
-          "observedAt": "2026-10-19T22:37:38.237873+00:00",
-          "verified": true,
-          "claim": "Agent coordination log \u2014 Jill (Muse) \u21c4 Codex \u21c4 other fleets"
         }
       ],
       "guardrails": [
@@ -134,7 +104,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/IamTugy/recipes/issues/21",
-          "observedAt": "2026-10-19T22:37:39.859555+00:00",
+          "observedAt": "2026-10-20T05:15:14.036156+00:00",
           "verified": true,
           "claim": "Cookbook/collection PDF export"
         },
@@ -142,7 +112,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mathnauleau/commeat/issues/3",
-          "observedAt": "2026-10-19T22:37:39.859559+00:00",
+          "observedAt": "2026-10-20T05:15:14.036161+00:00",
           "verified": true,
           "claim": "Later: Print full cookbook PDF"
         },
@@ -150,7 +120,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mealie-recipes/mealie/issues/1306",
-          "observedAt": "2026-10-19T22:37:39.859563+00:00",
+          "observedAt": "2026-10-20T05:15:14.036165+00:00",
           "verified": true,
           "claim": "[v1.0.0b] [Task] - Export Recipes and Cookbooks to PDF"
         },
@@ -158,7 +128,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Benkendorfer/recipe-manager/issues/7",
-          "observedAt": "2026-10-19T22:37:39.859561+00:00",
+          "observedAt": "2026-10-20T05:15:14.036163+00:00",
           "verified": true,
           "claim": "Import recipes from PDF files"
         },
@@ -166,7 +136,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7826",
-          "observedAt": "2026-10-19T22:37:39.859567+00:00",
+          "observedAt": "2026-10-20T05:15:14.036169+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -174,7 +144,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7825",
-          "observedAt": "2026-10-19T22:37:39.859569+00:00",
+          "observedAt": "2026-10-20T05:15:14.036171+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -182,7 +152,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7824",
-          "observedAt": "2026-10-19T22:37:39.859571+00:00",
+          "observedAt": "2026-10-20T05:15:14.036173+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         }
