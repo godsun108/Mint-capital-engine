@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.synthesis.v1",
-  "generatedAt": "2026-10-20T12:09:12.141460+00:00",
+  "generatedAt": "2026-10-20T17:31:02.208855+00:00",
   "clusters": [
     {
       "topic": "express-typescript",
@@ -22,23 +22,38 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/hmcts/pip-frontend/issues/1109",
-          "b": "https://github.com/hmcts/appreg-frontend/issues/2",
+          "a": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "b": "https://github.com/hmcts/sptribs-frontend/issues/444",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/hmcts/pip-frontend/issues/1109",
-          "b": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "a": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "b": "https://github.com/TravisPooley/vulhub/issues/4",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/objectstack-ai/objectstack/issues/6021",
-          "b": "https://github.com/objectstack-ai/objectstack/issues/12708",
-          "similarity": 0.25
+          "a": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "b": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "similarity": 1.0
         },
         {
-          "a": "https://github.com/hmcts/appreg-frontend/issues/2",
-          "b": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "a": "https://github.com/modelcontextprotocol/modelcontextprotocol/issues/3370",
+          "b": "https://github.com/chatmcp/mcpso/issues/1",
+          "similarity": 0.182
+        },
+        {
+          "a": "https://github.com/hmcts/sptribs-frontend/issues/444",
+          "b": "https://github.com/TravisPooley/vulhub/issues/4",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/sptribs-frontend/issues/444",
+          "b": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/TravisPooley/vulhub/issues/4",
+          "b": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
           "similarity": 1.0
         }
       ],
@@ -49,8 +64,14 @@
       "topic": "venture-economics",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/d6g8k5htny-coder/main/issues/419",
+          "b": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
+          "similarity": 0.25
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -59,8 +80,8 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2641",
-          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/554",
+          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/554",
+          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2641",
           "similarity": 0.273
         }
       ],
@@ -71,14 +92,8 @@
       "topic": "software-release-contract",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [
-        {
-          "a": "https://github.com/d6g8k5htny-coder/main/issues/419",
-          "b": "https://github.com/d6g8k5htny-coder/main/issues/307",
-          "similarity": 0.455
-        }
-      ],
-      "promotionEligible": true,
+      "relatedPairs": [],
+      "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -95,24 +110,24 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1714",
+          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2471",
+          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2472",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1715",
           "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1713",
           "similarity": 0.2
         },
         {
-          "a": "https://github.com/grandchallenge/MATH-PROGRAMME/issues/1858",
-          "b": "https://github.com/grandchallenge/MATH-PROGRAMME/issues/1857",
-          "similarity": 0.636
+          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1715",
+          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1714",
+          "similarity": 0.2
         },
         {
-          "a": "https://github.com/grandchallenge/MATH-PROGRAMME/issues/1858",
-          "b": "https://github.com/grandchallenge/MATH-PROGRAMME/issues/1852",
-          "similarity": 0.636
-        },
-        {
-          "a": "https://github.com/grandchallenge/MATH-PROGRAMME/issues/1857",
-          "b": "https://github.com/grandchallenge/MATH-PROGRAMME/issues/1852",
-          "similarity": 0.636
+          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1713",
+          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1714",
+          "similarity": 0.2
         }
       ],
       "promotionEligible": true,
@@ -132,29 +147,29 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1714",
+          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2471",
+          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2472",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1715",
           "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1713",
           "similarity": 0.2
         },
         {
-          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1714",
-          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1715",
+          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1715",
+          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1714",
           "similarity": 0.2
         },
         {
           "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1713",
-          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1715",
+          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1714",
           "similarity": 0.2
         },
         {
-          "a": "https://github.com/d6g8k5htny-coder/main/issues/419",
-          "b": "https://github.com/d6g8k5htny-coder/main/issues/307",
-          "similarity": 0.455
-        },
-        {
-          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2472",
-          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2471",
-          "similarity": 1.0
+          "a": "https://github.com/d-hinders/Haven-AI/issues/1289",
+          "b": "https://github.com/d6g8k5htny-coder/main/issues/419",
+          "similarity": 0.222
         }
       ],
       "promotionEligible": true,
@@ -162,41 +177,10 @@
     },
     {
       "topic": "cookbook-export",
-      "observationCount": 11,
-      "distinctSources": 11,
-      "relatedPairs": [
-        {
-          "a": "https://github.com/IamTugy/recipes/issues/21",
-          "b": "https://github.com/mathnauleau/commeat/issues/3",
-          "similarity": 0.286
-        },
-        {
-          "a": "https://github.com/IamTugy/recipes/issues/21",
-          "b": "https://github.com/mealie-recipes/mealie/issues/1306",
-          "similarity": 0.25
-        },
-        {
-          "a": "https://github.com/Benkendorfer/recipe-manager/issues/7",
-          "b": "https://github.com/mealie-recipes/mealie/issues/1306",
-          "similarity": 0.25
-        },
-        {
-          "a": "https://github.com/guevara/read-it-later/issues/7826",
-          "b": "https://github.com/guevara/read-it-later/issues/7825",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/guevara/read-it-later/issues/7826",
-          "b": "https://github.com/guevara/read-it-later/issues/7824",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/guevara/read-it-later/issues/7825",
-          "b": "https://github.com/guevara/read-it-later/issues/7824",
-          "similarity": 1.0
-        }
-      ],
-      "promotionEligible": true,
+      "observationCount": 0,
+      "distinctSources": 0,
+      "relatedPairs": [],
+      "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
