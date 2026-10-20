@@ -28,56 +28,48 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "observedAt": "2026-10-20T17:30:52.976666+00:00",
+          "url": "https://github.com/opensearch-project/agent-health/issues/159",
+          "observedAt": "2026-10-20T21:51:30.385772+00:00",
+          "verified": true,
+          "claim": "sdk-1.29.0.tgz: 16 vulnerabilities (highest severity is: 8.6)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/Richg44/grafana/issues/16",
+          "observedAt": "2026-10-20T21:51:30.385785+00:00",
+          "verified": true,
+          "claim": "llm-0.22.1.tgz: 21 vulnerabilities (highest severity is: 9.1)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/pip-frontend/issues/1109",
+          "observedAt": "2026-10-20T21:51:30.385775+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/sptribs-frontend/issues/444",
-          "observedAt": "2026-10-20T17:30:52.976692+00:00",
+          "url": "https://github.com/hmcts/wa-task-batch-service/issues/87",
+          "observedAt": "2026-10-20T21:51:30.385794+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/TravisPooley/vulhub/issues/4",
-          "observedAt": "2026-10-20T17:30:52.976695+00:00",
+          "url": "https://github.com/hmcts/wa-message-cron-service/issues/205",
+          "observedAt": "2026-10-20T21:51:30.385806+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
-          "observedAt": "2026-10-20T17:30:52.976698+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/issues/3370",
-          "observedAt": "2026-10-20T17:30:52.976676+00:00",
-          "verified": true,
-          "claim": "Origin validation rejects browser-based MCP clients on authenticated remote servers"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/chatmcp/mcpso/issues/1",
-          "observedAt": "2026-10-20T17:30:52.976678+00:00",
-          "verified": true,
-          "claim": "Submit Your MCP Servers here"
         }
       ],
       "status": "DISCOVERED_SOURCE_BACKED",
       "provenance": {
         "proposalId": "proposal:express-auth:001",
-        "promotedAt": "2026-10-20T17:31:02.289275+00:00",
+        "promotedAt": "2026-10-20T21:51:36.303767+00:00",
         "semantics": "SOURCE_BACKED_CANDIDATE_RESEARCH_STILL_REQUIRED"
       }
     }
