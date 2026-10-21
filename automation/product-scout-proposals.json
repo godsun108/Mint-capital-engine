@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.proposals.v1",
-  "generatedAt": "2026-10-20T21:51:36.254609+00:00",
+  "generatedAt": "2026-10-21T05:17:54.485718+00:00",
   "semantics": "RESEARCH_PROPOSALS_NOT_PRODUCT_CANDIDATES",
   "proposals": [
     {
@@ -14,7 +14,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/okou-ai/okou/issues/41550",
-          "observedAt": "2026-10-20T21:51:29.787015+00:00",
+          "observedAt": "2026-10-21T05:17:45.376614+00:00",
           "verified": true,
           "claim": "refactor(api): keep Discord ingress claims in their owner"
         },
@@ -22,7 +22,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/okou-ai/okou/issues/41549",
-          "observedAt": "2026-10-20T21:51:29.787019+00:00",
+          "observedAt": "2026-10-21T05:17:45.376615+00:00",
           "verified": true,
           "claim": "refactor(api): keep changed-migration failure writes in their owner"
         }
@@ -43,24 +43,32 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/opensearch-project/agent-health/issues/159",
-          "observedAt": "2026-10-20T21:51:30.385772+00:00",
+          "url": "https://github.com/objectstack-ai/objectstack/issues/12708",
+          "observedAt": "2026-10-21T05:17:46.460712+00:00",
           "verified": true,
-          "claim": "sdk-1.29.0.tgz: 16 vulnerabilities (highest severity is: 8.6)"
+          "claim": "[PM seat] director(\u9879\u76ee\u603b\u76d1) \u2014 \u23f3 vacant \u00b7 \u7b2c 45 \u573a(os-justin)\u5df2\u6536\u73ed \u00b7 \u7b2c 43 \u573a\u7eed\u573a 5(os-zhuang)\u3001\u7b2c 44 \u573a(os-project-manager)\u4e0e\u7b2c 46 \u573a(huangyiirene)\u65e0\u6536\u73ed\u7b80\u62a5 \u00b7 \u53f0\u8d26\u5728\u8bc4\u8bba"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/Richg44/grafana/issues/16",
-          "observedAt": "2026-10-20T21:51:30.385785+00:00",
+          "url": "https://github.com/objectstack-ai/objectstack/issues/6021",
+          "observedAt": "2026-10-21T05:17:46.460723+00:00",
           "verified": true,
-          "claim": "llm-0.22.1.tgz: 21 vulnerabilities (highest severity is: 9.1)"
+          "claim": "[PM seat] domain:services \u2014 \ud83d\udfe2 os-justin"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
+          "observedAt": "2026-10-21T05:17:46.460725+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/hmcts/pip-frontend/issues/1109",
-          "observedAt": "2026-10-20T21:51:30.385775+00:00",
+          "observedAt": "2026-10-21T05:17:46.460726+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -68,17 +76,47 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/hmcts/wa-task-batch-service/issues/87",
-          "observedAt": "2026-10-20T21:51:30.385794+00:00",
+          "observedAt": "2026-10-21T05:17:46.460729+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/wa-message-cron-service/issues/205",
-          "observedAt": "2026-10-20T21:51:30.385806+00:00",
+          "url": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "observedAt": "2026-10-21T05:17:46.460730+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
+        }
+      ],
+      "guardrails": [
+        "proposal_is_not_verified_demand",
+        "research_must_define_customer_and_problem",
+        "no_build_before_product_gate"
+      ]
+    },
+    {
+      "id": "proposal:venture-economics:001",
+      "topic": "venture-economics",
+      "status": "PROPOSED_FOR_RESEARCH",
+      "regulated": false,
+      "upfrontCostUsd": 0,
+      "evidence": [
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/d6g8k5htny-coder/main/issues/419",
+          "observedAt": "2026-10-21T05:17:47.572189+00:00",
+          "verified": true,
+          "claim": "Agent Message Board (continued from #307): successor coordination board to #307"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
+          "observedAt": "2026-10-21T05:17:47.572192+00:00",
+          "verified": true,
+          "claim": "Central message board \u2014 Hermes, Claude, Codex and operator coordination"
         }
       ],
       "guardrails": [
@@ -98,7 +136,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2641",
-          "observedAt": "2026-10-20T21:51:31.761173+00:00",
+          "observedAt": "2026-10-21T05:17:48.402272+00:00",
           "verified": true,
           "claim": "[NAYA] Team coordination feed \u2014 live board (successor to #2537)"
         },
@@ -106,7 +144,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/554",
-          "observedAt": "2026-10-20T21:51:31.761186+00:00",
+          "observedAt": "2026-10-21T05:17:48.402297+00:00",
           "verified": true,
           "claim": "\ud83d\udd31 TEAM NAYA \u2014 Naya \u2194 Coda Direct Communication Board"
         }
@@ -127,18 +165,34 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1714",
-          "observedAt": "2026-10-20T21:51:34.004228+00:00",
+          "url": "https://github.com/darklordVirtual/REMORA-research/issues/707",
+          "observedAt": "2026-10-21T05:17:51.078277+00:00",
           "verified": true,
-          "claim": "[NAYA 5] COLD-RETRIEVE-engine \u2014 retrieval-to-10-10"
+          "claim": "REMORA active work control board"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1713",
-          "observedAt": "2026-10-20T21:51:34.004271+00:00",
+          "url": "https://github.com/jerryyyu/shengji/issues/707",
+          "observedAt": "2026-10-21T05:17:51.078291+00:00",
           "verified": true,
-          "claim": "[NAYA 5] LEARN-engine \u2014 gates-wiring-bridge-to-10-10"
+          "claim": "Investigation board: active areas (successor to #679)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/Ken0u/badminton-match-analyzer/issues/74",
+          "observedAt": "2026-10-21T05:17:51.078278+00:00",
+          "verified": true,
+          "claim": "Agent coordination requests and worker status"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/d6g8k5htny-coder/main/issues/419",
+          "observedAt": "2026-10-21T05:17:51.078285+00:00",
+          "verified": true,
+          "claim": "Agent Message Board (continued from #307): successor coordination board to #307"
         }
       ],
       "guardrails": [
@@ -158,15 +212,23 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1714",
-          "observedAt": "2026-10-20T21:51:35.497332+00:00",
+          "observedAt": "2026-10-21T05:17:52.875466+00:00",
           "verified": true,
           "claim": "[NAYA 5] COLD-RETRIEVE-engine \u2014 retrieval-to-10-10"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1715",
+          "observedAt": "2026-10-21T05:17:52.875472+00:00",
+          "verified": true,
+          "claim": "[NAYA 5] SUCCESSOR-REUSE-engine \u2014 cold-reuse-to-10-10"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1713",
-          "observedAt": "2026-10-20T21:51:35.497353+00:00",
+          "observedAt": "2026-10-21T05:17:52.875473+00:00",
           "verified": true,
           "claim": "[NAYA 5] LEARN-engine \u2014 gates-wiring-bridge-to-10-10"
         }
@@ -188,7 +250,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mealie-recipes/mealie/issues/1306",
-          "observedAt": "2026-10-20T21:51:36.053350+00:00",
+          "observedAt": "2026-10-21T05:17:53.743154+00:00",
           "verified": true,
           "claim": "[v1.0.0b] [Task] - Export Recipes and Cookbooks to PDF"
         },
@@ -196,7 +258,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/IamTugy/recipes/issues/21",
-          "observedAt": "2026-10-20T21:51:36.053370+00:00",
+          "observedAt": "2026-10-21T05:17:53.743158+00:00",
           "verified": true,
           "claim": "Cookbook/collection PDF export"
         },
@@ -204,7 +266,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Benkendorfer/recipe-manager/issues/7",
-          "observedAt": "2026-10-20T21:51:36.053376+00:00",
+          "observedAt": "2026-10-21T05:17:53.743162+00:00",
           "verified": true,
           "claim": "Import recipes from PDF files"
         },
@@ -212,7 +274,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mathnauleau/commeat/issues/3",
-          "observedAt": "2026-10-20T21:51:36.053374+00:00",
+          "observedAt": "2026-10-21T05:17:53.743160+00:00",
           "verified": true,
           "claim": "Later: Print full cookbook PDF"
         },
@@ -220,7 +282,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7826",
-          "observedAt": "2026-10-20T21:51:36.053380+00:00",
+          "observedAt": "2026-10-21T05:17:53.743165+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -228,7 +290,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7825",
-          "observedAt": "2026-10-20T21:51:36.053382+00:00",
+          "observedAt": "2026-10-21T05:17:53.743166+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -236,7 +298,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7824",
-          "observedAt": "2026-10-20T21:51:36.053384+00:00",
+          "observedAt": "2026-10-21T05:17:53.743168+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         }

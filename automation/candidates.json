@@ -28,24 +28,32 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/opensearch-project/agent-health/issues/159",
-          "observedAt": "2026-10-20T21:51:30.385772+00:00",
+          "url": "https://github.com/objectstack-ai/objectstack/issues/12708",
+          "observedAt": "2026-10-21T05:17:46.460712+00:00",
           "verified": true,
-          "claim": "sdk-1.29.0.tgz: 16 vulnerabilities (highest severity is: 8.6)"
+          "claim": "[PM seat] director(\u9879\u76ee\u603b\u76d1) \u2014 \u23f3 vacant \u00b7 \u7b2c 45 \u573a(os-justin)\u5df2\u6536\u73ed \u00b7 \u7b2c 43 \u573a\u7eed\u573a 5(os-zhuang)\u3001\u7b2c 44 \u573a(os-project-manager)\u4e0e\u7b2c 46 \u573a(huangyiirene)\u65e0\u6536\u73ed\u7b80\u62a5 \u00b7 \u53f0\u8d26\u5728\u8bc4\u8bba"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/Richg44/grafana/issues/16",
-          "observedAt": "2026-10-20T21:51:30.385785+00:00",
+          "url": "https://github.com/objectstack-ai/objectstack/issues/6021",
+          "observedAt": "2026-10-21T05:17:46.460723+00:00",
           "verified": true,
-          "claim": "llm-0.22.1.tgz: 21 vulnerabilities (highest severity is: 9.1)"
+          "claim": "[PM seat] domain:services \u2014 \ud83d\udfe2 os-justin"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
+          "observedAt": "2026-10-21T05:17:46.460725+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/hmcts/pip-frontend/issues/1109",
-          "observedAt": "2026-10-20T21:51:30.385775+00:00",
+          "observedAt": "2026-10-21T05:17:46.460726+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -53,15 +61,15 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/hmcts/wa-task-batch-service/issues/87",
-          "observedAt": "2026-10-20T21:51:30.385794+00:00",
+          "observedAt": "2026-10-21T05:17:46.460729+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/wa-message-cron-service/issues/205",
-          "observedAt": "2026-10-20T21:51:30.385806+00:00",
+          "url": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "observedAt": "2026-10-21T05:17:46.460730+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         }
@@ -69,7 +77,7 @@
       "status": "DISCOVERED_SOURCE_BACKED",
       "provenance": {
         "proposalId": "proposal:express-auth:001",
-        "promotedAt": "2026-10-20T21:51:36.303767+00:00",
+        "promotedAt": "2026-10-21T05:17:54.518745+00:00",
         "semantics": "SOURCE_BACKED_CANDIDATE_RESEARCH_STILL_REQUIRED"
       }
     }

@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.synthesis.v1",
-  "generatedAt": "2026-10-20T21:51:36.197418+00:00",
+  "generatedAt": "2026-10-21T05:17:54.442235+00:00",
   "clusters": [
     {
       "topic": "express-typescript",
@@ -22,9 +22,24 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/opensearch-project/agent-health/issues/159",
-          "b": "https://github.com/Richg44/grafana/issues/16",
-          "similarity": 0.429
+          "a": "https://github.com/objectstack-ai/objectstack/issues/12708",
+          "b": "https://github.com/objectstack-ai/objectstack/issues/6021",
+          "similarity": 0.222
+        },
+        {
+          "a": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
+          "b": "https://github.com/hmcts/pip-frontend/issues/1109",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
+          "b": "https://github.com/hmcts/wa-task-batch-service/issues/87",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
+          "b": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "similarity": 1.0
         },
         {
           "a": "https://github.com/hmcts/pip-frontend/issues/1109",
@@ -33,12 +48,12 @@
         },
         {
           "a": "https://github.com/hmcts/pip-frontend/issues/1109",
-          "b": "https://github.com/hmcts/wa-message-cron-service/issues/205",
+          "b": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
           "similarity": 1.0
         },
         {
           "a": "https://github.com/hmcts/wa-task-batch-service/issues/87",
-          "b": "https://github.com/hmcts/wa-message-cron-service/issues/205",
+          "b": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
           "similarity": 1.0
         }
       ],
@@ -49,8 +64,14 @@
       "topic": "venture-economics",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/d6g8k5htny-coder/main/issues/419",
+          "b": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
+          "similarity": 0.25
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -89,9 +110,19 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1714",
-          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1713",
+          "a": "https://github.com/darklordVirtual/REMORA-research/issues/707",
+          "b": "https://github.com/jerryyyu/shengji/issues/707",
+          "similarity": 0.222
+        },
+        {
+          "a": "https://github.com/Ken0u/badminton-match-analyzer/issues/74",
+          "b": "https://github.com/d6g8k5htny-coder/main/issues/419",
           "similarity": 0.2
+        },
+        {
+          "a": "https://github.com/d6g8k5htny-coder/main/issues/419",
+          "b": "https://github.com/jerryyyu/shengji/issues/707",
+          "similarity": 0.182
         }
       ],
       "promotionEligible": true,
@@ -112,6 +143,16 @@
       "relatedPairs": [
         {
           "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1714",
+          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1715",
+          "similarity": 0.2
+        },
+        {
+          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1714",
+          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1713",
+          "similarity": 0.2
+        },
+        {
+          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1715",
           "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1713",
           "similarity": 0.2
         }
