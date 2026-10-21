@@ -1,14 +1,8 @@
 {
   "schema": "mint.distribution.state.v1",
-  "generatedAt": "2026-10-21T19:25:25.987Z",
+  "generatedAt": "2026-10-21T22:28:12.350Z",
   "semantics": "GENERATED_OWNED_SURFACES_PUBLIC_ONLY_IF_HOST_DEPLOYS_DOCS",
   "published": [
-    {
-      "offerId": "foundry-express-ts-001",
-      "source": "mint-direct-web",
-      "path": "docs/market/foundry-express-ts-001/mint-direct-web/index.html",
-      "destination": "https://mint-stripe-connect-v4-production.up.railway.app/offers?offer=foundry-express-ts-001&src=mint-direct-web"
-    },
     {
       "offerId": "foundry-express-ts-001",
       "source": "github-pages",
@@ -16,34 +10,40 @@
       "destination": "https://mint-stripe-connect-v4-production.up.railway.app/offers?offer=foundry-express-ts-001&src=github-pages"
     },
     {
-      "offerId": "mint-builder-launch-pack-005",
+      "offerId": "foundry-express-ts-001",
       "source": "mint-direct-web",
-      "path": "docs/market/mint-builder-launch-pack-005/mint-direct-web/index.html",
-      "destination": "https://mint-stripe-connect-v4-production.up.railway.app/offers?offer=mint-builder-launch-pack-005&src=mint-direct-web"
+      "path": "docs/market/foundry-express-ts-001/mint-direct-web/index.html",
+      "destination": "https://mint-stripe-connect-v4-production.up.railway.app/offers?offer=foundry-express-ts-001&src=mint-direct-web"
+    },
+    {
+      "offerId": "mint-builder-launch-pack-005",
+      "source": "github-pages-intent",
+      "path": "docs/market/mint-builder-launch-pack-005/github-pages-intent/index.html",
+      "destination": "https://mint-stripe-connect-v4-production.up.railway.app/offers?offer=mint-builder-launch-pack-005&src=github-pages-intent"
     },
     {
       "offerId": "portfolio",
-      "source": "github-pages-intent",
-      "path": "docs/market/portfolio/github-pages-intent/index.html",
-      "destination": "https://mint-stripe-connect-v4-production.up.railway.app/offers?offer=portfolio&src=github-pages-intent"
+      "source": "github-pages",
+      "path": "docs/market/portfolio/github-pages/index.html",
+      "destination": "https://mint-stripe-connect-v4-production.up.railway.app/offers?offer=portfolio&src=github-pages"
     },
     {
       "offerId": "ai-workflow-kit-004",
-      "source": "github-pages",
-      "path": "docs/market/ai-workflow-kit-004/github-pages/index.html",
-      "destination": "https://mint-stripe-connect-v4-production.up.railway.app/offers?offer=ai-workflow-kit-004&src=github-pages"
+      "source": "mint-direct-web",
+      "path": "docs/market/ai-workflow-kit-004/mint-direct-web/index.html",
+      "destination": "https://mint-stripe-connect-v4-production.up.railway.app/offers?offer=ai-workflow-kit-004&src=mint-direct-web"
     },
     {
       "offerId": "site-launch-checklist-003",
-      "source": "github-pages",
-      "path": "docs/market/site-launch-checklist-003/github-pages/index.html",
-      "destination": "https://mint-stripe-connect-v4-production.up.railway.app/offers?offer=site-launch-checklist-003&src=github-pages"
+      "source": "mint-direct-web",
+      "path": "docs/market/site-launch-checklist-003/mint-direct-web/index.html",
+      "destination": "https://mint-stripe-connect-v4-production.up.railway.app/offers?offer=site-launch-checklist-003&src=mint-direct-web"
     },
     {
       "offerId": "api-launch-checklist-002",
-      "source": "github-pages",
-      "path": "docs/market/api-launch-checklist-002/github-pages/index.html",
-      "destination": "https://mint-stripe-connect-v4-production.up.railway.app/offers?offer=api-launch-checklist-002&src=github-pages"
+      "source": "mint-direct-web",
+      "path": "docs/market/api-launch-checklist-002/mint-direct-web/index.html",
+      "destination": "https://mint-stripe-connect-v4-production.up.railway.app/offers?offer=api-launch-checklist-002&src=mint-direct-web"
     }
   ]
 }
