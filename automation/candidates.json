@@ -28,24 +28,56 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "observedAt": "2026-10-21T17:38:15.357937+00:00",
+          "url": "https://github.com/hmcts/juror-er-portal/issues/1",
+          "observedAt": "2026-10-21T21:58:18.512400+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/sptribs-frontend/issues/444",
-          "observedAt": "2026-10-21T17:38:15.357939+00:00",
+          "url": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "observedAt": "2026-10-21T21:58:18.512403+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "observedAt": "2026-10-21T21:58:18.512418+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
+          "observedAt": "2026-10-21T21:58:18.512421+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/amaybaum-prod/supabase/issues/26",
+          "observedAt": "2026-10-21T21:58:18.512405+00:00",
+          "verified": true,
+          "claim": "studio-0.0.9.tgz: 177 vulnerabilities (highest severity is: 10.0) [master] (reachable)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/opensearch-project/agent-health/issues/159",
+          "observedAt": "2026-10-21T21:58:18.512417+00:00",
+          "verified": true,
+          "claim": "sdk-1.29.0.tgz: 18 vulnerabilities (highest severity is: 8.6)"
         }
       ],
       "status": "DISCOVERED_SOURCE_BACKED",
       "provenance": {
         "proposalId": "proposal:express-auth:001",
-        "promotedAt": "2026-10-21T17:38:23.204459+00:00",
+        "promotedAt": "2026-10-21T21:58:23.315722+00:00",
         "semantics": "SOURCE_BACKED_CANDIDATE_RESEARCH_STILL_REQUIRED"
       }
     }
