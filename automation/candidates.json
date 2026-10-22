@@ -28,32 +28,24 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/juror-er-portal/issues/1",
-          "observedAt": "2026-10-21T21:58:18.512400+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
-          "observedAt": "2026-10-21T21:58:18.512403+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
           "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "observedAt": "2026-10-21T21:58:18.512418+00:00",
+          "observedAt": "2026-10-22T05:20:24.069203+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
-          "observedAt": "2026-10-21T21:58:18.512421+00:00",
+          "url": "https://github.com/orgtoar/redwood-test/issues/286",
+          "observedAt": "2026-10-22T05:20:24.069237+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/mitodl/mitxpro/issues/2711",
+          "observedAt": "2026-10-22T05:20:24.069238+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -61,23 +53,39 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/amaybaum-prod/supabase/issues/26",
-          "observedAt": "2026-10-21T21:58:18.512405+00:00",
+          "observedAt": "2026-10-22T05:20:24.069239+00:00",
           "verified": true,
           "claim": "studio-0.0.9.tgz: 177 vulnerabilities (highest severity is: 10.0) [master] (reachable)"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/opensearch-project/agent-health/issues/159",
-          "observedAt": "2026-10-21T21:58:18.512417+00:00",
+          "url": "https://github.com/storm-software/storm-stack/issues/258",
+          "observedAt": "2026-10-22T05:20:24.069249+00:00",
           "verified": true,
-          "claim": "sdk-1.29.0.tgz: 18 vulnerabilities (highest severity is: 8.6)"
+          "claim": "@storm-stack/core-0.47.0.tgz: 131 vulnerabilities (highest severity is: 9.8)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/AReid987/career-compass/issues/65",
+          "observedAt": "2026-10-22T05:20:24.069250+00:00",
+          "verified": true,
+          "claim": "nx-plugin-vite-2.2.1.tgz: 54 vulnerabilities (highest severity is: 9.8)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/UK-Export-Finance/dtfs2/issues/4589",
+          "observedAt": "2026-10-22T05:20:24.069253+00:00",
+          "verified": true,
+          "claim": "tfm-api-1.0.0.tgz: 47 vulnerabilities (highest severity is: 10.0)"
         }
       ],
       "status": "DISCOVERED_SOURCE_BACKED",
       "provenance": {
         "proposalId": "proposal:express-auth:001",
-        "promotedAt": "2026-10-21T21:58:23.315722+00:00",
+        "promotedAt": "2026-10-22T05:20:31.791764+00:00",
         "semantics": "SOURCE_BACKED_CANDIDATE_RESEARCH_STILL_REQUIRED"
       }
     }

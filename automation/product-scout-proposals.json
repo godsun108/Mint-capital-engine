@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.proposals.v1",
-  "generatedAt": "2026-10-21T21:58:23.286065+00:00",
+  "generatedAt": "2026-10-22T05:20:31.760412+00:00",
   "semantics": "RESEARCH_PROPOSALS_NOT_PRODUCT_CANDIDATES",
   "proposals": [
     {
@@ -13,8 +13,24 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2793",
+          "observedAt": "2026-10-22T05:20:22.828173+00:00",
+          "verified": true,
+          "claim": "Team Naya live board \u2014 coordination venue (successor to #2765)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1354",
+          "observedAt": "2026-10-22T05:20:22.828198+00:00",
+          "verified": true,
+          "claim": "\ud83d\udd31 TEAM NAYA \u2014 Priority One execution feed (successor to #554)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
           "url": "https://github.com/okou-ai/okou/issues/41550",
-          "observedAt": "2026-10-21T21:58:17.641916+00:00",
+          "observedAt": "2026-10-22T05:20:22.828192+00:00",
           "verified": true,
           "claim": "refactor(api): keep Discord ingress claims in their owner"
         },
@@ -22,7 +38,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/okou-ai/okou/issues/41549",
-          "observedAt": "2026-10-21T21:58:17.641917+00:00",
+          "observedAt": "2026-10-22T05:20:22.828193+00:00",
           "verified": true,
           "claim": "refactor(api): keep changed-migration failure writes in their owner"
         }
@@ -43,32 +59,24 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/juror-er-portal/issues/1",
-          "observedAt": "2026-10-21T21:58:18.512400+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
-          "observedAt": "2026-10-21T21:58:18.512403+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
           "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "observedAt": "2026-10-21T21:58:18.512418+00:00",
+          "observedAt": "2026-10-22T05:20:24.069203+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
-          "observedAt": "2026-10-21T21:58:18.512421+00:00",
+          "url": "https://github.com/orgtoar/redwood-test/issues/286",
+          "observedAt": "2026-10-22T05:20:24.069237+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/mitodl/mitxpro/issues/2711",
+          "observedAt": "2026-10-22T05:20:24.069238+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -76,17 +84,33 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/amaybaum-prod/supabase/issues/26",
-          "observedAt": "2026-10-21T21:58:18.512405+00:00",
+          "observedAt": "2026-10-22T05:20:24.069239+00:00",
           "verified": true,
           "claim": "studio-0.0.9.tgz: 177 vulnerabilities (highest severity is: 10.0) [master] (reachable)"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/opensearch-project/agent-health/issues/159",
-          "observedAt": "2026-10-21T21:58:18.512417+00:00",
+          "url": "https://github.com/storm-software/storm-stack/issues/258",
+          "observedAt": "2026-10-22T05:20:24.069249+00:00",
           "verified": true,
-          "claim": "sdk-1.29.0.tgz: 18 vulnerabilities (highest severity is: 8.6)"
+          "claim": "@storm-stack/core-0.47.0.tgz: 131 vulnerabilities (highest severity is: 9.8)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/AReid987/career-compass/issues/65",
+          "observedAt": "2026-10-22T05:20:24.069250+00:00",
+          "verified": true,
+          "claim": "nx-plugin-vite-2.2.1.tgz: 54 vulnerabilities (highest severity is: 9.8)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/UK-Export-Finance/dtfs2/issues/4589",
+          "observedAt": "2026-10-22T05:20:24.069253+00:00",
+          "verified": true,
+          "claim": "tfm-api-1.0.0.tgz: 47 vulnerabilities (highest severity is: 10.0)"
         }
       ],
       "guardrails": [
@@ -105,18 +129,56 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/554",
-          "observedAt": "2026-10-21T21:58:20.280746+00:00",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2641",
+          "observedAt": "2026-10-22T05:20:26.284126+00:00",
           "verified": true,
-          "claim": "\ud83d\udd31 TEAM NAYA \u2014 Naya \u2194 Coda Direct Communication Board"
+          "claim": "[NAYA] Team coordination feed \u2014 live board (successor to #2537)"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2641",
-          "observedAt": "2026-10-21T21:58:20.280748+00:00",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/554",
+          "observedAt": "2026-10-22T05:20:26.284132+00:00",
           "verified": true,
-          "claim": "[NAYA] Team coordination feed \u2014 live board (successor to #2537)"
+          "claim": "\ud83d\udd31 TEAM NAYA \u2014 Naya \u2194 Coda Direct Communication Board"
+        }
+      ],
+      "guardrails": [
+        "proposal_is_not_verified_demand",
+        "research_must_define_customer_and_problem",
+        "no_build_before_product_gate"
+      ]
+    },
+    {
+      "id": "proposal:evidence-packets:001",
+      "topic": "evidence-packets",
+      "status": "PROPOSED_FOR_RESEARCH",
+      "regulated": false,
+      "upfrontCostUsd": 0,
+      "evidence": [
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1715",
+          "observedAt": "2026-10-22T05:20:29.150189+00:00",
+          "verified": true,
+          "claim": "[NAYA 5] SUCCESSOR-REUSE-engine \u2014 cold-reuse-to-10-10"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1714",
+          "observedAt": "2026-10-22T05:20:29.150195+00:00",
+          "verified": true,
+          "claim": "[NAYA 5] COLD-RETRIEVE-engine \u2014 retrieval-to-10-10"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1713",
+          "observedAt": "2026-10-22T05:20:29.150200+00:00",
+          "verified": true,
+          "claim": "[NAYA 5] LEARN-engine \u2014 gates-wiring-bridge-to-10-10"
         }
       ],
       "guardrails": [
