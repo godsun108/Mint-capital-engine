@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.observations.v2",
-  "generatedAt": "2026-10-22T05:20:21.685526+00:00",
+  "generatedAt": "2026-10-22T12:23:14.955366+00:00",
   "semantics": "PUBLIC_SOURCE_OBSERVATIONS_NOT_VERIFIED_DEMAND",
   "groups": [
     {
@@ -10,26 +10,8 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/okou-ai/okou/issues/37510",
-          "observedAt": "2026-10-22T05:20:22.828149+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "refactor(api): remove db/tx handle passing and shrink transactions in billing and IM integrations"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2793",
-          "observedAt": "2026-10-22T05:20:22.828173+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "Team Naya live board \u2014 coordination venue (successor to #2765)"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
           "url": "https://github.com/pachaninm-lab/pachanin-demo/issues/5469",
-          "observedAt": "2026-10-22T05:20:22.828175+00:00",
+          "observedAt": "2026-10-22T12:23:15.918121+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "PC-CROP TEAM HUB \u00b7 MASTER v2.1 \u00b7 dual-account coordination"
@@ -38,7 +20,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/zatyrical/plasticwebsite/issues/7",
-          "observedAt": "2026-10-22T05:20:22.828178+00:00",
+          "observedAt": "2026-10-22T12:23:15.918138+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "3\u201317 October SEO sprint: Singapore procedure visibility, enquiries and AI citations"
@@ -47,7 +29,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/JagPat/PMCvitan/issues/482",
-          "observedAt": "2026-10-22T05:20:22.828180+00:00",
+          "observedAt": "2026-10-22T12:23:15.918141+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "PMCvitan UX/Auth implementation coordination"
@@ -55,8 +37,44 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
+          "url": "https://github.com/Scarfsail/hass-helman/issues/495",
+          "observedAt": "2026-10-22T12:23:15.918144+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Complexity reduction plan: shake the tree (FE + BE), 17 epics, 14 bugs, phased execution"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2793",
+          "observedAt": "2026-10-22T12:23:15.918149+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Team Naya live board \u2014 coordination venue (successor to #2765)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/okou-ai/okou/issues/37510",
+          "observedAt": "2026-10-22T12:23:15.918151+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "refactor(api): remove db/tx handle passing and shrink transactions in billing and IM integrations"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/scottonchain/microcredit-agent-testbed/issues/17",
+          "observedAt": "2026-10-22T12:23:15.918153+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "BOOTSTRAP-001: paid AI work and resource access, then human earnings"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
           "url": "https://github.com/Kevinjohn/capacitylens/issues/1482",
-          "observedAt": "2026-10-22T05:20:22.828181+00:00",
+          "observedAt": "2026-10-22T12:23:15.918155+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "Plan: move CapacityLens to AdonisJS 7 on a long-lived fork"
@@ -64,8 +82,26 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
+          "url": "https://github.com/Jaal-Yantra-Textiles/v2/issues/352",
+          "observedAt": "2026-10-22T12:23:15.918157+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Platform Backlog \u2014 open roadmap items (2026-05)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/DeveloPassion/TypedMarkSpecification/issues/123",
+          "observedAt": "2026-10-22T12:23:15.918159+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Refocus the specification: positively-defined Core, extension mechanism, and cleanup plan"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
           "url": "https://github.com/amillimatrix-eng/CARBON-Creation-Hub/issues/31",
-          "observedAt": "2026-10-22T05:20:22.828183+00:00",
+          "observedAt": "2026-10-22T12:23:15.918161+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "ROOT INTAKE \u2014 ledger truth, capability-loss recovery, and model-to-Root throughput"
@@ -74,7 +110,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/chatmcp/mcpso/issues/1",
-          "observedAt": "2026-10-22T05:20:22.828184+00:00",
+          "observedAt": "2026-10-22T12:23:15.918163+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "Submit Your MCP Servers here"
@@ -83,7 +119,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/QSLC/SovereignHQ-Control/issues/7",
-          "observedAt": "2026-10-22T05:20:22.828185+00:00",
+          "observedAt": "2026-10-22T12:23:15.918165+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "25-repository security, CI, merge and archive verification sweep"
@@ -91,17 +127,8 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/Jaal-Yantra-Textiles/v2/issues/352",
-          "observedAt": "2026-10-22T05:20:22.828186+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "Platform Backlog \u2014 open roadmap items (2026-05)"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
           "url": "https://github.com/FredoAi/fredo/issues/3070",
-          "observedAt": "2026-10-22T05:20:22.828187+00:00",
+          "observedAt": "2026-10-22T12:23:15.918166+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "As a Fredo user, I can create and edit a simple wireframe inside Fredo, so that I can visualize an app idea without leaving the desktop or learning a design tool."
@@ -110,7 +137,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/sheephess9527/reranker.uk/issues/28",
-          "observedAt": "2026-10-22T05:20:22.828188+00:00",
+          "observedAt": "2026-10-22T12:23:15.918168+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "Release watch: 9 new reranker releases"
@@ -118,17 +145,8 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/Scarfsail/hass-helman/issues/495",
-          "observedAt": "2026-10-22T05:20:22.828190+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "Complexity reduction plan: shake the tree (FE + BE), 17 epics, 14 bugs, phased execution"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
           "url": "https://github.com/okou-ai/okou/issues/41570",
-          "observedAt": "2026-10-22T05:20:22.828191+00:00",
+          "observedAt": "2026-10-22T12:23:15.918170+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "Epic #38371 controller evidence continuation after #41177"
@@ -137,7 +155,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/okou-ai/okou/issues/41550",
-          "observedAt": "2026-10-22T05:20:22.828192+00:00",
+          "observedAt": "2026-10-22T12:23:15.918172+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "refactor(api): keep Discord ingress claims in their owner"
@@ -146,7 +164,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/okou-ai/okou/issues/41549",
-          "observedAt": "2026-10-22T05:20:22.828193+00:00",
+          "observedAt": "2026-10-22T12:23:15.918174+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "refactor(api): keep changed-migration failure writes in their owner"
@@ -155,7 +173,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Asymmetric-al/core/issues/1656",
-          "observedAt": "2026-10-22T05:20:22.828194+00:00",
+          "observedAt": "2026-10-22T12:23:15.918176+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "[Phase 26] Support Hub & Conversation Management \u2014 implementation-ready specification"
@@ -164,28 +182,10 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/graphcal-lang/graphcal/issues/512",
-          "observedAt": "2026-10-22T05:20:22.828196+00:00",
+          "observedAt": "2026-10-22T12:23:15.918178+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "DAG visualizer"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/markgoodbody-bit/COM/issues/108",
-          "observedAt": "2026-10-22T05:20:22.828197+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "PLEASE START FROM HERE \u2014 pleasestartfromhere.com \u2014 public Door"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1354",
-          "observedAt": "2026-10-22T05:20:22.828198+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "\ud83d\udd31 TEAM NAYA \u2014 Priority One execution feed (successor to #554)"
         }
       ]
     },
@@ -196,35 +196,17 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "observedAt": "2026-10-22T05:20:24.069203+00:00",
+          "url": "https://github.com/meggarmind/RESIDIO/issues/412",
+          "observedAt": "2026-10-22T12:23:16.687077+00:00",
           "sourceVerified": true,
           "demandVerified": false,
-          "title": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/okou-ai/okou/issues/37510",
-          "observedAt": "2026-10-22T05:20:24.069225+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "refactor(api): remove db/tx handle passing and shrink transactions in billing and IM integrations"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/camster91/family-planner/issues/128",
-          "observedAt": "2026-10-22T05:20:24.069227+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "[Program] Fridge tablet household command centre \u2014 end-to-end roadmap"
+          "title": "Session state: live handoff record"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/pachaninm-lab/pachanin-demo/issues/5469",
-          "observedAt": "2026-10-22T05:20:24.069229+00:00",
+          "observedAt": "2026-10-22T12:23:16.687094+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "PC-CROP TEAM HUB \u00b7 MASTER v2.1 \u00b7 dual-account coordination"
@@ -232,8 +214,62 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
+          "url": "https://github.com/simetrixch/hostyour-deploy/issues/95",
+          "observedAt": "2026-10-22T12:23:16.687098+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Plan, continued: packages, so everyone sees which worker owns which files"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/Stanley471/FantasyXI/issues/402",
+          "observedAt": "2026-10-22T12:23:16.687100+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Implement Prometheus metrics endpoint and OpenTelemetry middleware for backend services"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/camster91/family-planner/issues/128",
+          "observedAt": "2026-10-22T12:23:16.687102+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "[Program] Fridge tablet household command centre \u2014 end-to-end roadmap"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/Datarails/mcp-outlet/issues/18",
+          "observedAt": "2026-10-22T12:23:16.687104+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "sdk-1.12.0.tgz: 18 vulnerabilities (highest severity is: 9.1) reachable"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/SoullabTech/Sovereign/issues/1875",
+          "observedAt": "2026-10-22T12:23:16.687106+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "[DESIGN / HOLD] SOULLAB-FWE-01 \u2014 first whole experience, Home \u2192 Writer\u2019s Studio \u2192 Return"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/home-lang/home/issues/66",
+          "observedAt": "2026-10-22T12:23:16.687109+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Bun parity: remaining open items to reach 100% test-suite pass"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
           "url": "https://github.com/objectstack-ai/objectstack/issues/6015",
-          "observedAt": "2026-10-22T05:20:24.069230+00:00",
+          "observedAt": "2026-10-22T12:23:16.687111+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "[PM seat] triage (objectstack-wide) \u2014 \ud83d\udfe2 Routine \u00b7 session_01AavokzJ5DndAwitDXvKy4U \u00b7 trig_01NcnCtMS2tH46nUg1a5TaMJ (hourly) \u00b7 state = body + the round records newer than it"
@@ -241,17 +277,44 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/objectstack-ai/objectstack/issues/12708",
-          "observedAt": "2026-10-22T05:20:24.069231+00:00",
+          "url": "https://github.com/FrancescoGuerriero/SalonAI/issues/280",
+          "observedAt": "2026-10-22T12:23:16.687112+00:00",
           "sourceVerified": true,
           "demandVerified": false,
-          "title": "[PM seat] director(\u9879\u76ee\u603b\u76d1) \u2014 \u23f3 vacant \u00b7 \u7b2c 47 \u573a(os-bill)\u5df2\u6536\u73ed \u00b7 \u7b2c 43 \u573a\u7eed\u573a 5(os-zhuang)\u3001\u7b2c 44 \u573a(os-project-manager)\u4e0e\u7b2c 46 \u573a(huangyiirene)\u65e0\u6536\u73ed\u7b80\u62a5 \u00b7 \u53f0\u8d26\u5728\u8bc4\u8bba"
+          "title": "Roadmap v3.0 \u2014 Zenoti benchmark implementation reconciliation"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/cubaloop/notrack-ecosystem/issues/1",
+          "observedAt": "2026-10-22T12:23:16.687118+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "\ud83d\udc19 [PUBLIC ANNOUNCEMENT] We are a 100% AI-Only Engineering Squad \u2014 Hire Us to Upgrade Our Hardware & Compute!"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/okou-ai/okou/issues/37510",
+          "observedAt": "2026-10-22T12:23:16.687122+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "refactor(api): remove db/tx handle passing and shrink transactions in billing and IM integrations"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/sbox-cool/sbox-network-storage-server/issues/150",
+          "observedAt": "2026-10-22T12:23:16.687124+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "@sbox-ns/sdk: one JS/TS package to build custom backends for the unmodified game library (protocol, endpoint kit, storage, client, modules)"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/rorymclark-prog/ImbewuField/issues/35",
-          "observedAt": "2026-10-22T05:20:24.069233+00:00",
+          "observedAt": "2026-10-22T12:23:16.687126+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "Coordination ledger \u2014 Claude \u21c4 Codex (append-only)"
@@ -259,89 +322,17 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/ksyunnnn/synsk.me/issues/187",
-          "observedAt": "2026-10-22T05:20:24.069234+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "\u30bb\u30ad\u30e5\u30ea\u30c6\u30a3\u30c1\u30a7\u30c3\u30af"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/Zoverions/AXIOM-MESH/issues/1575",
-          "observedAt": "2026-10-22T05:20:24.069235+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "Watch findings integration backlog \u2014 architecture/security conformance"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/orgtoar/redwood-test/issues/286",
-          "observedAt": "2026-10-22T05:20:24.069237+00:00",
+          "url": "https://github.com/hmcts/appreg-frontend/issues/2",
+          "observedAt": "2026-10-22T12:23:16.687127+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/mitodl/mitxpro/issues/2711",
-          "observedAt": "2026-10-22T05:20:24.069238+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/amaybaum-prod/supabase/issues/26",
-          "observedAt": "2026-10-22T05:20:24.069239+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "studio-0.0.9.tgz: 177 vulnerabilities (highest severity is: 10.0) [master] (reachable)"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/lukiod/radar/issues/4",
-          "observedAt": "2026-10-22T05:20:24.069241+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "Radar"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/schlessera/brain-kit/issues/1364",
-          "observedAt": "2026-10-22T05:20:24.069242+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "ui-server: make login buckets, passkey challenges, sync locks and send order per-app"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/pdcarlson/Frapp/issues/1629",
-          "observedAt": "2026-10-22T05:20:24.069243+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "Hygiene Scan \u2014 ledger"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/chase-sets/chase-sets/issues/4388",
-          "observedAt": "2026-10-22T05:20:24.069246+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "[channels] Epic: Multi-Channel Hub - providers, BYO contract, sync engine"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/peleduri/zero-day-pulse/issues/7",
-          "observedAt": "2026-10-22T05:20:24.069247+00:00",
+          "observedAt": "2026-10-22T12:23:16.687129+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "\ud83d\udea8 Zero Day Pulse \u2014 Active Vulnerability Tracker"
@@ -349,8 +340,17 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
+          "url": "https://github.com/chase-sets/chase-sets/issues/4388",
+          "observedAt": "2026-10-22T12:23:16.687131+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "[channels] Epic: Multi-Channel Hub - providers, BYO contract, sync engine"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
           "url": "https://github.com/storm-software/storm-stack/issues/258",
-          "observedAt": "2026-10-22T05:20:24.069249+00:00",
+          "observedAt": "2026-10-22T12:23:16.687133+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "@storm-stack/core-0.47.0.tgz: 131 vulnerabilities (highest severity is: 9.8)"
@@ -359,7 +359,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/AReid987/career-compass/issues/65",
-          "observedAt": "2026-10-22T05:20:24.069250+00:00",
+          "observedAt": "2026-10-22T12:23:16.687135+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "nx-plugin-vite-2.2.1.tgz: 54 vulnerabilities (highest severity is: 9.8)"
@@ -367,11 +367,11 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/UK-Export-Finance/dtfs2/issues/4589",
-          "observedAt": "2026-10-22T05:20:24.069253+00:00",
+          "url": "https://github.com/Kevinjohn/capacitylens/issues/1482",
+          "observedAt": "2026-10-22T12:23:16.687137+00:00",
           "sourceVerified": true,
           "demandVerified": false,
-          "title": "tfm-api-1.0.0.tgz: 47 vulnerabilities (highest severity is: 10.0)"
+          "title": "Plan: move CapacityLens to AdonisJS 7 on a long-lived fork"
         }
       ]
     },
@@ -382,26 +382,8 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/tehki/myaso/issues/360",
-          "observedAt": "2026-10-22T05:20:25.270311+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "Moon Games Integration R1 \u2014 ten-department CI, PR and release gate"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/Uuriko/project-room/issues/3299",
-          "observedAt": "2026-10-22T05:20:25.270332+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "Agent coordination log \u2014 Jill (Muse) \u21c4 Codex \u21c4 other fleets"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
           "url": "https://github.com/caosos/Desktop-Agent/issues/3",
-          "observedAt": "2026-10-22T05:20:25.270334+00:00",
+          "observedAt": "2026-10-22T12:23:17.390635+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "Owner directive: Aria Mission Control \u2014 Work coordinator ownership and acceptance gaps"
@@ -409,53 +391,8 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/LowcountryDigitalWorks/gas-engine/issues/31",
-          "observedAt": "2026-10-22T05:20:25.270336+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "GAS-ROADMAP-002 \u2014 Competitor-informed evergreen capability roadmap"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/pachaninm-lab/pachanin-demo/issues/5469",
-          "observedAt": "2026-10-22T05:20:25.270337+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "PC-CROP TEAM HUB \u00b7 MASTER v2.1 \u00b7 dual-account coordination"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/pyatkoff/max-search-bot/issues/55",
-          "observedAt": "2026-10-22T05:20:25.270338+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "Autonomous roadmap: stabilize dialogue core \u2192 handoff \u2192 resilience \u2192 scale"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/HenriqueMichelini/careeros/issues/242",
-          "observedAt": "2026-10-22T05:20:25.270340+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "CareerOS \u2014 SaaS Product Migration"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/tvofi/heatpump_optimizer/issues/201",
-          "observedAt": "2026-10-22T05:20:25.270341+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "Audit \u2014 (tracking)"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
           "url": "https://github.com/bugabinga/mothergod/issues/3",
-          "observedAt": "2026-10-22T05:20:25.270343+00:00",
+          "observedAt": "2026-10-22T12:23:17.390651+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "\ud83d\udccb Operations log"
@@ -463,35 +400,53 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/Luke-Bradford/eBull/issues/2437",
-          "observedAt": "2026-10-22T05:20:25.270344+00:00",
+          "url": "https://github.com/6076446993/The-Crucible/issues/49",
+          "observedAt": "2026-10-22T12:23:17.390654+00:00",
           "sourceVerified": true,
           "demandVerified": false,
-          "title": "UMBRELLA: what has to be true before any strategy can hold money \u2014 three standing refusals, then breadth, then conditioning"
+          "title": "THE CRUCIBLE \u2014 Unified Master Plan | P0 custody recovery first \u00b7 development, learning & industry standards"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/aicokecolatsai-commits/colaclaw/issues/2",
-          "observedAt": "2026-10-22T05:20:25.270345+00:00",
+          "url": "https://github.com/pachaninm-lab/pachanin-demo/issues/5469",
+          "observedAt": "2026-10-22T12:23:17.390660+00:00",
           "sourceVerified": true,
           "demandVerified": false,
-          "title": "02_\u67e5\u627e\u6587\u737b\u9f8d\u8766"
+          "title": "PC-CROP TEAM HUB \u00b7 MASTER v2.1 \u00b7 dual-account coordination"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/James3014/Nexus-new/issues/1196",
-          "observedAt": "2026-10-22T05:20:25.270346+00:00",
+          "url": "https://github.com/tehki/myaso/issues/360",
+          "observedAt": "2026-10-22T12:23:17.390662+00:00",
           "sourceVerified": true,
           "demandVerified": false,
-          "title": "P1 Research: close architecture-changing Hybrid mechanism hypotheses before final design"
+          "title": "Moon Games Integration R1 \u2014 ten-department CI, PR and release gate"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/ClubBoss/sharky-standalone-direction/issues/287",
+          "observedAt": "2026-10-22T12:23:17.390664+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "S12.V \u2014 Exact-native whole-product visual trust (pre-Human)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/equinor/neqsim/issues/2499",
+          "observedAt": "2026-10-22T12:23:17.390665+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "[Campaign] Daily documentation quality and repair"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/zwrose/superheroes/issues/695",
-          "observedAt": "2026-10-22T05:20:25.270348+00:00",
+          "observedAt": "2026-10-22T12:23:17.390667+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "chore(superheroes): vet-proposals collector \u2014 standing (Tier-2 items awaiting the owner's word)"
@@ -499,26 +454,71 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/P00NSMASHER/github-value-hunt-ledger/issues/323",
-          "observedAt": "2026-10-22T05:20:25.270349+00:00",
+          "url": "https://github.com/Luke-Bradford/eBull/issues/2437",
+          "observedAt": "2026-10-22T12:23:17.390669+00:00",
           "sourceVerified": true,
           "demandVerified": false,
-          "title": "RETALLY unified first-customer launch gate and final acceptance ledger"
+          "title": "UMBRELLA: what has to be true before any strategy can hold money \u2014 three standing refusals, then breadth, then conditioning"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/mojtaba2020/Crypto_Intelligence_OS_Core/issues/81",
-          "observedAt": "2026-10-22T05:20:25.270350+00:00",
+          "url": "https://github.com/pyatkoff/max-search-bot/issues/55",
+          "observedAt": "2026-10-22T12:23:17.390671+00:00",
           "sourceVerified": true,
           "demandVerified": false,
-          "title": "Stage-6 P0 operator evidence packet \u2014 authenticate source vintages and isolation before any run"
+          "title": "Autonomous roadmap: stabilize dialogue core \u2192 handoff \u2192 resilience \u2192 scale"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/Uuriko/project-room/issues/3299",
+          "observedAt": "2026-10-22T12:23:17.390673+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Agent coordination log \u2014 Jill (Muse) \u21c4 Codex \u21c4 other fleets"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hoffmannherdecke/kraken-eur-scanner/issues/99",
+          "observedAt": "2026-10-22T12:23:17.390675+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Nach Recovery: Ausfallsicherheit und Drittanbieter-Resilienz gezielt verbessern"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/EffortlessMetrics/adze-swarm/issues/853",
+          "observedAt": "2026-10-22T12:23:17.390677+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "roadmap: 0.10.0 architecture and product hardening freeze"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/CGProductionHouse/CG-Dynamics/issues/381",
+          "observedAt": "2026-10-22T12:23:17.390679+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "CG Systems Supervisor live report"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/tvofi/heatpump_optimizer/issues/201",
+          "observedAt": "2026-10-22T12:23:17.390681+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Audit \u2014 (tracking)"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/schlessera/brain-kit/issues/2319",
-          "observedAt": "2026-10-22T05:20:25.270352+00:00",
+          "observedAt": "2026-10-22T12:23:17.390683+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "ci: skip unchanged workspace builds by a complete input stamp instead of rebuilding in every runtime hook"
@@ -526,38 +526,38 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/newsdayads/tigeriq-ai-lab/issues/280",
-          "observedAt": "2026-10-22T05:20:25.270353+00:00",
+          "url": "https://github.com/mastermindx-market-intelligence/mastermind-terminal/issues/599",
+          "observedAt": "2026-10-22T12:23:17.390685+00:00",
           "sourceVerified": true,
           "demandVerified": false,
-          "title": "[CENTRAL][\u0110I\u1ec0U PH\u1ed0I] H\u00e0ng \u0111\u1ee3i th\u1ef1c thi an to\u00e0n + l\u00f4 vi\u1ec7c Owner t\u1ea1m ho\u00e3n"
+          "title": "[Options Alpha recovery] Shared options evidence, distinct tactical and campaign workflows"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/6076446993/The-Crucible/issues/41",
-          "observedAt": "2026-10-22T05:20:25.270362+00:00",
+          "url": "https://github.com/thomaschurchadams-eng/work-feel/issues/160",
+          "observedAt": "2026-10-22T12:23:17.390689+00:00",
           "sourceVerified": true,
           "demandVerified": false,
-          "title": "Development plan: Crucible orchestration, governance and efficiency \u2014 concept-led research"
+          "title": "CUAI Agent Bus \u2014 Runtime Handoffs"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/JDeun/SchemaRouter/issues/200",
-          "observedAt": "2026-10-22T05:20:25.270363+00:00",
+          "url": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
+          "observedAt": "2026-10-22T12:23:17.390692+00:00",
           "sourceVerified": true,
           "demandVerified": false,
-          "title": "[TRACKER] SchemaRouter research, roadmap, and session-resume work items"
+          "title": "\ud83e\udded Daily content opportunities"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/equinor/neqsim/issues/2499",
-          "observedAt": "2026-10-22T05:20:25.270364+00:00",
+          "url": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
+          "observedAt": "2026-10-22T12:23:17.390694+00:00",
           "sourceVerified": true,
           "demandVerified": false,
-          "title": "[Campaign] Daily documentation quality and repair"
+          "title": "Central message board \u2014 Hermes, Claude, Codex and operator coordination"
         }
       ]
     },
@@ -569,7 +569,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/a91453/railway-game-ios/issues/231",
-          "observedAt": "2026-10-22T05:20:26.284104+00:00",
+          "observedAt": "2026-10-22T12:23:18.268673+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "\u5de5\u4f5c\u767b\u8a18\uff1a\u8ab0\u5728\u505a\u4ec0\u9ebc\u3001\u9810\u7559\u7684\u5b58\u6a94\u7248\u672c\u3001\u6c7a\u7b56\u7de8\u865f\u8207 golden schema"
@@ -578,7 +578,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2641",
-          "observedAt": "2026-10-22T05:20:26.284126+00:00",
+          "observedAt": "2026-10-22T12:23:18.268689+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "[NAYA] Team coordination feed \u2014 live board (successor to #2537)"
@@ -587,7 +587,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/anevum/anevum-web/issues/335",
-          "observedAt": "2026-10-22T05:20:26.284128+00:00",
+          "observedAt": "2026-10-22T12:23:18.268692+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "ANEVUM V1 \u2014 Dimensional Underground working design baseline and page QA"
@@ -596,7 +596,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/chatmcp/mcpso/issues/1",
-          "observedAt": "2026-10-22T05:20:26.284129+00:00",
+          "observedAt": "2026-10-22T12:23:18.268694+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "Submit Your MCP Servers here"
@@ -605,7 +605,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Yellow-Dog-Man/Resonite-Issues/issues/6134",
-          "observedAt": "2026-10-22T05:20:26.284131+00:00",
+          "observedAt": "2026-10-22T12:23:18.268699+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "Official policy for AI generated content on Resonite"
@@ -614,7 +614,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/554",
-          "observedAt": "2026-10-22T05:20:26.284132+00:00",
+          "observedAt": "2026-10-22T12:23:18.268701+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "\ud83d\udd31 TEAM NAYA \u2014 Naya \u2194 Coda Direct Communication Board"
@@ -623,7 +623,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/markgoodbody-bit/COM/issues/76",
-          "observedAt": "2026-10-22T05:20:26.284133+00:00",
+          "observedAt": "2026-10-22T12:23:18.268703+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "ACTIVE COORDINATION \u2014 frontier / actuator / differentiated research \u2014 2026-08-31 late"
@@ -632,7 +632,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Asymmetric-al/core/issues/1656",
-          "observedAt": "2026-10-22T05:20:26.284135+00:00",
+          "observedAt": "2026-10-22T12:23:18.268705+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "[Phase 26] Support Hub & Conversation Management \u2014 implementation-ready specification"
@@ -641,7 +641,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/MatthewLacerda2/scorsese/issues/594",
-          "observedAt": "2026-10-22T05:20:26.284136+00:00",
+          "observedAt": "2026-10-22T12:23:18.268707+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "Motion graphics as good as a web page: rendering HTML/CSS as a frame source"
@@ -650,7 +650,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/openamer/openamer/issues/18",
-          "observedAt": "2026-10-22T05:20:26.284137+00:00",
+          "observedAt": "2026-10-22T12:23:18.268709+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "Workflow Immune System \u2014 OpenAmer's self-healing UI automation"
@@ -659,7 +659,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Keigyoku/lampway/issues/2",
-          "observedAt": "2026-10-22T05:20:26.284138+00:00",
+          "observedAt": "2026-10-22T12:23:18.268711+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "PR1 local acceptance: remaining real-input, suite, UI and UE verification"
@@ -668,7 +668,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/stevengongqwe-code/graybird-space/issues/4",
-          "observedAt": "2026-10-22T05:20:26.284139+00:00",
+          "observedAt": "2026-10-22T12:23:18.268713+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "[Codex Task] Infinite Universe + Companion + Daily Boss Lab \u2014 Draft PR #6 ready"
@@ -677,7 +677,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/DeeDee-Lab/Dolzore/issues/3",
-          "observedAt": "2026-10-22T05:20:26.284140+00:00",
+          "observedAt": "2026-10-22T12:23:18.268715+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "DOLZORE Music-Only World Overhaul \u2014 Retro Jukebox + Journal"
@@ -686,7 +686,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/StellarEdgeServices/otterquote-platform/issues/2304",
-          "observedAt": "2026-10-22T05:20:26.284142+00:00",
+          "observedAt": "2026-10-22T12:23:18.268716+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "Exec thread \u2014 week of 2026-09-28"
@@ -695,7 +695,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/flash-tex/flashtex/issues/2",
-          "observedAt": "2026-10-22T05:20:26.284143+00:00",
+          "observedAt": "2026-10-22T12:23:18.268718+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "FT-003: dispatch to mac-claude-a \u2014 acknowledgement required"
@@ -704,7 +704,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/kevinrhaas/polecat-platform/issues/56",
-          "observedAt": "2026-10-22T05:20:26.284144+00:00",
+          "observedAt": "2026-10-22T12:23:18.268720+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "Steward journal"
@@ -713,7 +713,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/redfoxtrystman/RedFox_Master_Control/issues/4",
-          "observedAt": "2026-10-22T05:20:26.284145+00:00",
+          "observedAt": "2026-10-22T12:23:18.268722+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "[JOB-09] CLAIMED \u2014 Tow / Recovery / Dispatch transferred to regular chat"
@@ -722,7 +722,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/OmniBlocks/monorepo/issues/552",
-          "observedAt": "2026-10-22T05:20:26.284146+00:00",
+          "observedAt": "2026-10-22T12:23:18.268724+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "General Discussion Issue 3"
@@ -731,7 +731,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/OmniBlocks/monorepo/issues/724",
-          "observedAt": "2026-10-22T05:20:26.284147+00:00",
+          "observedAt": "2026-10-22T12:23:18.268726+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "make the account system"
@@ -740,7 +740,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/AtomChen0425/Global_Trends/issues/191",
-          "observedAt": "2026-10-22T05:20:26.284149+00:00",
+          "observedAt": "2026-10-22T12:23:18.268727+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "\ud83c\udf10 Global Tech Briefing - 2026-08-27"
@@ -754,8 +754,26 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
+          "url": "https://github.com/amerhwitat/ChimeraIIOS/issues/112",
+          "observedAt": "2026-10-22T12:23:18.893597+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Complete Koronos userspace handoff, scheduler ownership, and boot acceptance"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/pgextwin/build/issues/75",
+          "observedAt": "2026-10-22T12:23:18.893614+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Eliminate Work-only Dispatch: Chat-authorized Release trigger and automatic Catalog proposal"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
           "url": "https://github.com/mysteropodes/nemo/issues/1062",
-          "observedAt": "2026-10-22T05:20:27.319120+00:00",
+          "observedAt": "2026-10-22T12:23:18.893616+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "[NEMO:CHECKINS] Shared hourly orchestrator progress log"
@@ -763,17 +781,17 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/tehki/myaso/issues/360",
-          "observedAt": "2026-10-22T05:20:27.319140+00:00",
+          "url": "https://github.com/SoullabTech/Sovereign/issues/1800",
+          "observedAt": "2026-10-22T12:23:18.893619+00:00",
           "sourceVerified": true,
           "demandVerified": false,
-          "title": "Moon Games Integration R1 \u2014 ten-department CI, PR and release gate"
+          "title": "Writer\u2019s Studio \u2014 small approved test group: admission, continuity and isolation gates"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1715",
-          "observedAt": "2026-10-22T05:20:27.319142+00:00",
+          "observedAt": "2026-10-22T12:23:18.893621+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "[NAYA 5] SUCCESSOR-REUSE-engine \u2014 cold-reuse-to-10-10"
@@ -781,89 +799,8 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hessius/XBRW/issues/249",
-          "observedAt": "2026-10-22T05:20:27.319144+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "2.2.0 coordination: contributor PR packages, review and testing"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/dgmolla/fitsy/issues/463",
-          "observedAt": "2026-10-22T05:20:27.319145+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "Finish the shipping workflow and its remaining rollouts"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2472",
-          "observedAt": "2026-10-22T05:20:27.319147+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "Lane 5 \u2014 worker sign-in/out feed"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/zarkmakerburg/BAFT/issues/67",
-          "observedAt": "2026-10-22T05:20:27.319148+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "[HQ] Command Board \u2014 directives, reports and cadence (all roles)"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/binancebotty-bot/hyperliquid-build3-repair/issues/3",
-          "observedAt": "2026-10-22T05:20:27.319149+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "PROJECT HERMES CHANNEL \u2014 implementation handoff and stand-down"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/datarelay-labs/datarelay-link/issues/165",
-          "observedAt": "2026-10-22T05:20:27.319151+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "[AI Work] DRLink v2.4 \u2014 Codex FCS \u2192 \uacb0\ud568 \uc218\uc815\u00b7\uc7ac\uc2dc\ud5d8 \u2192 Full User E2E"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/ipdomx/AIONEX-AIOS/issues/884",
-          "observedAt": "2026-10-22T05:20:27.319152+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "AIONEX AIOS \u2014 OLD host retirement by 22 Oct: NEW verified, FR08E/FR09 acceptance open"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/jawedimtiaz/jawed-website/issues/881",
-          "observedAt": "2026-10-22T05:20:27.319154+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "Website growth roadmap: content, UX, SEO, performance, and AdSense readiness"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/moshehason/117-LAB-TEST/issues/3",
-          "observedAt": "2026-10-22T05:20:27.319155+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "117 AUTONOMOUS STUDIO \u2014 ChatGPT \u00d7 Claude Code"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
           "url": "https://github.com/caosos/Desktop-Agent/issues/3",
-          "observedAt": "2026-10-22T05:20:27.319156+00:00",
+          "observedAt": "2026-10-22T12:23:18.893623+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "Owner directive: Aria Mission Control \u2014 Work coordinator ownership and acceptance gaps"
@@ -871,44 +808,98 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/LowcountryDigitalWorks/gas-engine/issues/31",
-          "observedAt": "2026-10-22T05:20:27.319158+00:00",
+          "url": "https://github.com/FS-GG/.github/issues/4516",
+          "observedAt": "2026-10-22T12:23:18.893625+00:00",
           "sourceVerified": true,
           "demandVerified": false,
-          "title": "GAS-ROADMAP-002 \u2014 Competitor-informed evergreen capability roadmap"
+          "title": "[cross-repo] V3-ENV-01: name the host provisioner and independent cleanup owner"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/goodkie/v-show/issues/6",
-          "observedAt": "2026-10-22T05:20:27.319159+00:00",
+          "url": "https://github.com/zarbopiero963-droid/MatchPilot/issues/97",
+          "observedAt": "2026-10-22T12:23:18.893628+00:00",
           "sourceVerified": true,
           "demandVerified": false,
-          "title": "XPIDER AutoForm Sender Pro \u2014 Owner \u00d7 ChatGPT \u00d7 Antigravity Workspace"
+          "title": "[ROADMAP] Ordine operativo Backend/API-first \u2192 hard test \u2192 UI finale"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/u2giants/theoracle/issues/24",
-          "observedAt": "2026-10-22T05:20:27.319160+00:00",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2472",
+          "observedAt": "2026-10-22T12:23:18.893629+00:00",
           "sourceVerified": true,
           "demandVerified": false,
-          "title": "Oracle overhaul: evidence-backed company consultant"
+          "title": "Lane 5 \u2014 worker sign-in/out feed"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2154",
-          "observedAt": "2026-10-22T05:20:27.319161+00:00",
+          "url": "https://github.com/D22977/gpt-browser-bridge/issues/43",
+          "observedAt": "2026-10-22T12:23:18.893631+00:00",
           "sourceVerified": true,
           "demandVerified": false,
-          "title": "CURRENT MISSION STATE \u2014 live (director-maintained)"
+          "title": "[ADR][CURRENT START HERE \u2192 5361325221] Current execution architecture + history"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/johnkim9524-collab/kaios_enterprise_repo/issues/1066",
+          "observedAt": "2026-10-22T12:23:18.893633+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "[KIDULTS P0] External Strategic Partnerships & Provider PoC Program"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/Wisamit/nx7q9-vk42m-rp81t-z6core/issues/250",
+          "observedAt": "2026-10-22T12:23:18.893635+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Final release gate OPEN \u2014 Stage 132 real-world UAT and unresolved Master Scope \u00a7\u00a775/86/87/88"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/johnkim9524-collab/kaios_enterprise_repo/issues/256",
+          "observedAt": "2026-10-22T12:23:18.893637+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "[Track E] IH Executive Operating System \u2014 Release-001 Integration"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/johnkim9524-collab/kaios_enterprise_repo/issues/237",
+          "observedAt": "2026-10-22T12:23:18.893638+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "[Track C] Portal & Customer Experience \u2014 Projection-Only Intelligence Experience"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/Wisamit/nx7q9-vk42m-rp81t-z6core/issues/327",
+          "observedAt": "2026-10-22T12:23:18.893640+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Finite completion board F0\u2013F8 \u2014 full 88-scope engineering, owner browser QA, and qualified GO"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/Agora-Build/Atem/issues/81",
+          "observedAt": "2026-10-22T12:23:18.893642+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Astation handoff: independent remote clients, staged approvals, rich chat"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/heukshow/aicity-os/issues/292",
-          "observedAt": "2026-10-22T05:20:27.319162+00:00",
+          "observedAt": "2026-10-22T12:23:18.893644+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "COSHUMA Work execution bridge"
@@ -916,20 +907,29 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/Circadian-agent/agent-collective/issues/1",
-          "observedAt": "2026-10-22T05:20:27.319163+00:00",
+          "url": "https://github.com/zarkmakerburg/BAFT/issues/67",
+          "observedAt": "2026-10-22T12:23:18.893646+00:00",
           "sourceVerified": true,
           "demandVerified": false,
-          "title": "Introductions: who you are, what you are selling, one thing you measured"
+          "title": "[HQ] Command Board \u2014 directives, reports and cadence (all roles)"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/kebag-logic/milan-fpga/issues/640",
-          "observedAt": "2026-10-22T05:20:27.319165+00:00",
+          "url": "https://github.com/6076446993/The-Crucible/issues/49",
+          "observedAt": "2026-10-22T12:23:18.893670+00:00",
           "sourceVerified": true,
           "demandVerified": false,
-          "title": "[Optimisation] Meet NFR-RES-01 (60 % LUT) by redesign"
+          "title": "THE CRUCIBLE \u2014 Unified Master Plan | P0 custody recovery first \u00b7 development, learning & industry standards"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/binancebotty-bot/hyperliquid-build3-repair/issues/3",
+          "observedAt": "2026-10-22T12:23:18.893672+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "PROJECT HERMES CHANNEL \u2014 implementation handoff and stand-down"
         }
       ]
     },
@@ -941,7 +941,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/heukshow/aicity-os/issues/292",
-          "observedAt": "2026-10-22T05:20:28.260207+00:00",
+          "observedAt": "2026-10-22T12:23:19.650419+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "COSHUMA Work execution bridge"
@@ -949,8 +949,26 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
+          "url": "https://github.com/thomaschurchadams-eng/work-feel/issues/160",
+          "observedAt": "2026-10-22T12:23:19.650452+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "CUAI Agent Bus \u2014 Runtime Handoffs"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
+          "observedAt": "2026-10-22T12:23:19.650456+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "\ud83e\udded Daily content opportunities"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
           "url": "https://github.com/peleduri/zero-day-pulse/issues/7",
-          "observedAt": "2026-10-22T05:20:28.260229+00:00",
+          "observedAt": "2026-10-22T12:23:19.650458+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "\ud83d\udea8 Zero Day Pulse \u2014 Active Vulnerability Tracker"
@@ -959,7 +977,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/nymrel/nymrel-swarm-studio/issues/21",
-          "observedAt": "2026-10-22T05:20:28.260231+00:00",
+          "observedAt": "2026-10-22T12:23:19.650460+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "Income Opportunity Registry \u2014 map studio assets to the best 100 digital revenue lanes"
@@ -968,7 +986,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/chatmcp/mcpso/issues/1",
-          "observedAt": "2026-10-22T05:20:28.260232+00:00",
+          "observedAt": "2026-10-22T12:23:19.650462+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "Submit Your MCP Servers here"
@@ -976,17 +994,8 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/thomaschurchadams-eng/work-feel/issues/160",
-          "observedAt": "2026-10-22T05:20:28.260234+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "CUAI Agent Bus \u2014 Runtime Handoffs"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
           "url": "https://github.com/JW-Incorporated/swift2/issues/502",
-          "observedAt": "2026-10-22T05:20:28.260235+00:00",
+          "observedAt": "2026-10-22T12:23:19.650464+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "Nils walk log"
@@ -995,7 +1004,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/estebanjvasquez/PerfilAfiliadosCPV/issues/2",
-          "observedAt": "2026-10-22T05:20:28.260236+00:00",
+          "observedAt": "2026-10-22T12:23:19.650466+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "CPV - Development Orchestration & Review"
@@ -1003,17 +1012,8 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
-          "observedAt": "2026-10-22T05:20:28.260238+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "\ud83e\udded Daily content opportunities"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
           "url": "https://github.com/HassiMian/app-assps-edu-pk/issues/4",
-          "observedAt": "2026-10-22T05:20:28.260239+00:00",
+          "observedAt": "2026-10-22T12:23:19.650467+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "ASSPS master coordination: four workstreams, chat consolidation and release ownership"
@@ -1022,7 +1022,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/ibettison/laymatched-install/issues/3",
-          "observedAt": "2026-10-22T05:20:28.260240+00:00",
+          "observedAt": "2026-10-22T12:23:19.650469+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "PAD \u2014 LayMatched Project Assistant Documentation"
@@ -1031,7 +1031,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/contactdeleon/hospitality-ops-lab/issues/1",
-          "observedAt": "2026-10-22T05:20:28.260242+00:00",
+          "observedAt": "2026-10-22T12:23:19.650471+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "AI coordination: ChatGPT \u2194 Grok | Manager Toolkit launch QA"
@@ -1040,7 +1040,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/grizzly020503/swsi-quiz-backup/issues/261",
-          "observedAt": "2026-10-22T05:20:28.260244+00:00",
+          "observedAt": "2026-10-22T12:23:19.650473+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "[All-Scope Nov Final Release] \u5341\u6708\u6574\u5408\u5b8c\u6210\uff0f\u5341\u4e00\u6708\u6b63\u5f0f\u9a57\u6536\u5c01\u7248"
@@ -1049,7 +1049,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/erikhuovi13/pauca-dashboard/issues/8",
-          "observedAt": "2026-10-22T05:20:28.260245+00:00",
+          "observedAt": "2026-10-22T12:23:19.650475+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "TEAM BUS: god squad plan final + Muse role (read & ACK)"
@@ -1058,7 +1058,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/ldavis2700/ai-revenue-agent/issues/85",
-          "observedAt": "2026-10-22T05:20:28.260246+00:00",
+          "observedAt": "2026-10-22T12:23:19.650477+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "APEX: Autonomous Job-to-Cash Engine \u2014 discovery \u2192 winning \u2192 execution \u2192 payout"
@@ -1067,7 +1067,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/417properties/IRIS-Personal-Office/issues/3",
-          "observedAt": "2026-10-22T05:20:28.260247+00:00",
+          "observedAt": "2026-10-22T12:23:19.650479+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "IRIS Persistent Personal Agent Transition Architecture v0.1 \u2014 Candidate"
@@ -1076,7 +1076,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/TSunDanceK/MyStockHarbor/issues/553",
-          "observedAt": "2026-10-22T05:20:28.260249+00:00",
+          "observedAt": "2026-10-22T12:23:19.650481+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "Relay B: Pickers/screeners, dashboard, search, IPO, SPX, news off FMP (non-price); cost alert"
@@ -1085,7 +1085,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/markgoodbody-bit/COM/issues/108",
-          "observedAt": "2026-10-22T05:20:28.260250+00:00",
+          "observedAt": "2026-10-22T12:23:19.650482+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "PLEASE START FROM HERE \u2014 pleasestartfromhere.com \u2014 public Door"
@@ -1094,7 +1094,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/markgoodbody-bit/COM/issues/74",
-          "observedAt": "2026-10-22T05:20:28.260251+00:00",
+          "observedAt": "2026-10-22T12:23:19.650484+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "OPEN HORIZON \u2014 underexplored territory for a better future \u2014 2026-08-31"
@@ -1103,7 +1103,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1354",
-          "observedAt": "2026-10-22T05:20:28.260266+00:00",
+          "observedAt": "2026-10-22T12:23:19.650486+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "\ud83d\udd31 TEAM NAYA \u2014 Priority One execution feed (successor to #554)"
@@ -1112,7 +1112,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/heukshow/aicity-os/issues/763",
-          "observedAt": "2026-10-22T05:20:28.260268+00:00",
+          "observedAt": "2026-10-22T12:23:19.650488+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "COSHUMA Continuous Improvement & Competitive Benchmark Backlog"
@@ -1126,53 +1126,8 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/UOR-Foundation/uor-r4/issues/2028",
-          "observedAt": "2026-10-22T05:20:29.150165+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "[Roadmap] UOR-R4 \u2014 path to a native conversation and memory alpha"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/tehki/myaso/issues/360",
-          "observedAt": "2026-10-22T05:20:29.150187+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "Moon Games Integration R1 \u2014 ten-department CI, PR and release gate"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1715",
-          "observedAt": "2026-10-22T05:20:29.150189+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "[NAYA 5] SUCCESSOR-REUSE-engine \u2014 cold-reuse-to-10-10"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/dgmolla/fitsy/issues/463",
-          "observedAt": "2026-10-22T05:20:29.150190+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "Finish the shipping workflow and its remaining rollouts"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/autonomous-ai/lampOS/issues/2602",
-          "observedAt": "2026-10-22T05:20:29.150192+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "Queue (continued from #1722): the order of the builders' tasks"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
           "url": "https://github.com/division-sh/swarm/issues/2667",
-          "observedAt": "2026-10-22T05:20:29.150193+00:00",
+          "observedAt": "2026-10-22T12:23:20.428114+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "[design-gate][packs] Division Hive (formerly Colony) \u2014 the pack source: what it is, addressing and pinning, provenance, trust, what is publishable"
@@ -1180,44 +1135,17 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1714",
-          "observedAt": "2026-10-22T05:20:29.150195+00:00",
+          "url": "https://github.com/elsa-workflows/elsa-foundation/issues/2892",
+          "observedAt": "2026-10-22T12:23:20.428130+00:00",
           "sourceVerified": true,
           "demandVerified": false,
-          "title": "[NAYA 5] COLD-RETRIEVE-engine \u2014 retrieval-to-10-10"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2472",
-          "observedAt": "2026-10-22T05:20:29.150196+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "Lane 5 \u2014 worker sign-in/out feed"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/StegVerse-Labs/.github/issues/3291",
-          "observedAt": "2026-10-22T05:20:29.150197+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "PROPOSED: StegApp native ephemeral composition \u2014 EIA and LDC"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/zarkmakerburg/BAFT/issues/67",
-          "observedAt": "2026-10-22T05:20:29.150199+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "[HQ] Command Board \u2014 directives, reports and cadence (all roles)"
+          "title": "Program: Elsa 4 unified execution foundation"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1713",
-          "observedAt": "2026-10-22T05:20:29.150200+00:00",
+          "observedAt": "2026-10-22T12:23:20.428132+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "[NAYA 5] LEARN-engine \u2014 gates-wiring-bridge-to-10-10"
@@ -1225,62 +1153,35 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/okou-ai/okou/issues/37510",
-          "observedAt": "2026-10-22T05:20:29.150201+00:00",
+          "url": "https://github.com/pyatkoff/poisk-turov-test/issues/1646",
+          "observedAt": "2026-10-22T12:23:20.428134+00:00",
           "sourceVerified": true,
           "demandVerified": false,
-          "title": "refactor(api): remove db/tx handle passing and shrink transactions in billing and IM integrations"
+          "title": "SEARCH: \u043e\u0431\u0449\u0430\u044f \u0432\u044b\u0434\u0430\u0447\u0430, \u0444\u0438\u043b\u044c\u0442\u0440\u044b \u0438 \u0432\u044b\u0431\u043e\u0440 \u0442\u0443\u0440\u0430"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/akiojin/gwt/issues/5016",
-          "observedAt": "2026-10-22T05:20:29.150202+00:00",
+          "url": "https://github.com/ndrorchestration/DGAF-Framework/issues/1421",
+          "observedAt": "2026-10-22T12:23:20.428136+00:00",
           "sourceVerified": true,
           "demandVerified": false,
-          "title": "SPEC: \u30d5\u30ed\u30f3\u30c8\u30a8\u30f3\u30c9\u306b\u5171\u6709\u72b6\u614b\u30e2\u30c7\u30eb\u3068\u30d7\u30eb\u5f62\u5f0f\u306e\u63cf\u753b\u3092\u5165\u308c\u308b \u2014 66 \u30e2\u30b8\u30e5\u30fc\u30eb 37,260 \u884c\u304c push \u3092\u76f4\u63a5 DOM \u306b\u66f8\u3044\u3066\u304a\u308a\u3001\u9762\u3069\u3046\u3057\u306e\u4e00\u8cab\u6027\u304c\u69cb\u9020\u7684\u306b\u4fdd\u8a3c\u3055\u308c\u3066\u3044\u306a\u3044"
+          "title": "DGAF v1 Gate 0 \u2014 preregister bounded release completion and evidence criteria"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/ChaiWithJai/liquidity-studio/issues/12",
-          "observedAt": "2026-10-22T05:20:29.150204+00:00",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1714",
+          "observedAt": "2026-10-22T12:23:20.428138+00:00",
           "sourceVerified": true,
           "demandVerified": false,
-          "title": "Platform ownership: dependency map and rolling delivery queue"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/UWMD-OSP/UW-Markdown/issues/354",
-          "observedAt": "2026-10-22T05:20:29.150205+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "Second independent implementation: a standard-library Python Reader + Verifier, certified by the existing conformance runner"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/binancebotty-bot/hyperliquid-build3-repair/issues/3",
-          "observedAt": "2026-10-22T05:20:29.150206+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "PROJECT HERMES CHANNEL \u2014 implementation handoff and stand-down"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/leegkssk2000-commits/vultr-z/issues/566",
-          "observedAt": "2026-10-22T05:20:29.150208+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "ZEL Unattended Gate FSM"
+          "title": "[NAYA 5] COLD-RETRIEVE-engine \u2014 retrieval-to-10-10"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/pyatkoff/poisk-turov-test/issues/4709",
-          "observedAt": "2026-10-22T05:20:29.150209+00:00",
+          "observedAt": "2026-10-22T12:23:20.428140+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "AnyTour development coordination \u2014 successor of #4217 (20.10.2026)"
@@ -1288,20 +1189,119 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/Uuriko/project-room/issues/3299",
-          "observedAt": "2026-10-22T05:20:29.150210+00:00",
+          "url": "https://github.com/SoullabTech/Sovereign/issues/1800",
+          "observedAt": "2026-10-22T12:23:20.428142+00:00",
           "sourceVerified": true,
           "demandVerified": false,
-          "title": "Agent coordination log \u2014 Jill (Muse) \u21c4 Codex \u21c4 other fleets"
+          "title": "Writer\u2019s Studio \u2014 small approved test group: admission, continuity and isolation gates"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/datarelay-labs/datarelay-link/issues/165",
-          "observedAt": "2026-10-22T05:20:29.150304+00:00",
+          "url": "https://github.com/kioconnor24-sketch/PokemonGame/issues/15",
+          "observedAt": "2026-10-22T12:23:20.428144+00:00",
           "sourceVerified": true,
           "demandVerified": false,
-          "title": "[AI Work] DRLink v2.4 \u2014 Codex FCS \u2192 \uacb0\ud568 \uc218\uc815\u00b7\uc7ac\uc2dc\ud5d8 \u2192 Full User E2E"
+          "title": "LIVE HUB \u2014 Averon manager, Codex development, reviews and integration"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/autonomous-ai/lampOS/issues/2602",
+          "observedAt": "2026-10-22T12:23:20.428146+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Queue (continued from #1722): the order of the builders' tasks"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1715",
+          "observedAt": "2026-10-22T12:23:20.428147+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "[NAYA 5] SUCCESSOR-REUSE-engine \u2014 cold-reuse-to-10-10"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/akiojin/gwt/issues/3165",
+          "observedAt": "2026-10-22T12:23:20.428149+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "SPEC: Issue auto-improve monitor"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/caosos/Desktop-Agent/issues/3",
+          "observedAt": "2026-10-22T12:23:20.428159+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Owner directive: Aria Mission Control \u2014 Work coordinator ownership and acceptance gaps"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/loftwah/app-composer/issues/215",
+          "observedAt": "2026-10-22T12:23:20.428161+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "[P1 OPERATIONS] Agentic Responder: real incident \u2192 verified recovery, PagerDuty integration, interactive proof and Remotion showcase"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/FS-GG/.github/issues/4516",
+          "observedAt": "2026-10-22T12:23:20.428162+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "[cross-repo] V3-ENV-01: name the host provisioner and independent cleanup owner"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2472",
+          "observedAt": "2026-10-22T12:23:20.428164+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Lane 5 \u2014 worker sign-in/out feed"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2471",
+          "observedAt": "2026-10-22T12:23:20.428166+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Lane 4 \u2014 worker sign-in/out feed"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/genfeedai/genfeed.ai/issues/5149",
+          "observedAt": "2026-10-22T12:23:20.428168+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Move embedding backfill off the retrieval hot path and measure retrieval latency"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/johnkim9524-collab/kaios_enterprise_repo/issues/344",
+          "observedAt": "2026-10-22T12:23:20.428169+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "[P0][KPMO MASTER] KIDULTS Autonomous Global Collectibles Intelligence Platform"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/johnkim9524-collab/kaios_enterprise_repo/issues/480",
+          "observedAt": "2026-10-22T12:23:20.428171+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "[P0][Fast Improvement] Bounded ASI Processor Slice for Real PoC"
         }
       ]
     },
@@ -1313,7 +1313,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/pachaninm-lab/pachanin-demo/issues/5469",
-          "observedAt": "2026-10-22T05:20:30.240433+00:00",
+          "observedAt": "2026-10-22T12:23:21.144358+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "PC-CROP TEAM HUB \u00b7 MASTER v2.1 \u00b7 dual-account coordination"
@@ -1321,8 +1321,26 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
+          "url": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
+          "observedAt": "2026-10-22T12:23:21.144374+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "\ud83e\udded Daily content opportunities"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
+          "observedAt": "2026-10-22T12:23:21.144377+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Central message board \u2014 Hermes, Claude, Codex and operator coordination"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
           "url": "https://github.com/nymrel/nymrel-swarm-studio/issues/21",
-          "observedAt": "2026-10-22T05:20:30.240457+00:00",
+          "observedAt": "2026-10-22T12:23:21.144379+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "Income Opportunity Registry \u2014 map studio assets to the best 100 digital revenue lanes"
@@ -1331,7 +1349,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/markgoodbody-bit/COM/issues/840",
-          "observedAt": "2026-10-22T05:20:30.240459+00:00",
+          "observedAt": "2026-10-22T12:23:21.144381+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "YAC next encounter \u2014 one usable read-and-return release path"
@@ -1340,7 +1358,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mastermindx-market-intelligence/macro/issues/8147",
-          "observedAt": "2026-10-22T05:20:30.240461+00:00",
+          "observedAt": "2026-10-22T12:23:21.144383+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "[Bonds \u00d7 Forex] Institutional research and dashboard delivery \u2014 R0\u2013R10 / H01\u2013H60"
@@ -1349,7 +1367,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/chatmcp/mcpso/issues/1",
-          "observedAt": "2026-10-22T05:20:30.240470+00:00",
+          "observedAt": "2026-10-22T12:23:21.144385+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "Submit Your MCP Servers here"
@@ -1357,26 +1375,8 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
-          "observedAt": "2026-10-22T05:20:30.240471+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "Central message board \u2014 Hermes, Claude, Codex and operator coordination"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
-          "observedAt": "2026-10-22T05:20:30.240473+00:00",
-          "sourceVerified": true,
-          "demandVerified": false,
-          "title": "\ud83e\udded Daily content opportunities"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
           "url": "https://github.com/sheephess9527/reranker.uk/issues/28",
-          "observedAt": "2026-10-22T05:20:30.240474+00:00",
+          "observedAt": "2026-10-22T12:23:21.144387+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "Release watch: 9 new reranker releases"
@@ -1385,7 +1385,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/markgoodbody-bit/COM/issues/76",
-          "observedAt": "2026-10-22T05:20:30.240476+00:00",
+          "observedAt": "2026-10-22T12:23:21.144388+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "ACTIVE COORDINATION \u2014 frontier / actuator / differentiated research \u2014 2026-08-31 late"
@@ -1394,7 +1394,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mojtabarozegar11-ship-it/Saeit/issues/620",
-          "observedAt": "2026-10-22T05:20:30.240477+00:00",
+          "observedAt": "2026-10-22T12:23:21.144390+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "P0: unblock genuinely new autonomous factory products from four evidence-backed sources"
@@ -1403,7 +1403,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/AyobamiH/agent-shop-products/issues/25",
-          "observedAt": "2026-10-22T05:20:30.240479+00:00",
+          "observedAt": "2026-10-22T12:23:21.144392+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "P0 commercial launch: make Agent Shop capable of a real paid purchase and fulfilment"
@@ -1412,7 +1412,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/markgoodbody-bit/COM/issues/798",
-          "observedAt": "2026-10-22T05:20:30.240480+00:00",
+          "observedAt": "2026-10-22T12:23:21.144394+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "ME kernel \u2014 transition, reachability and standing under ordinary-world pressure"
@@ -1421,7 +1421,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/fdittgen-png/deskilo/issues/1447",
-          "observedAt": "2026-10-22T05:20:30.240481+00:00",
+          "observedAt": "2026-10-22T12:23:21.144396+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "[PILOT][QUEUE] Operational essentials for the existing community"
@@ -1430,7 +1430,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/TSunDanceK/MyStockHarbor/issues/563",
-          "observedAt": "2026-10-22T05:20:30.240482+00:00",
+          "observedAt": "2026-10-22T12:23:21.144398+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "Relay C: \"Capex \u2014 Follow the money\" page (Bottlenecks)"
@@ -1439,7 +1439,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/markgoodbody-bit/COM/issues/807",
-          "observedAt": "2026-10-22T05:20:30.240484+00:00",
+          "observedAt": "2026-10-22T12:23:21.144399+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "Campfire quarry \u2014 exit, distributed entityhood, virtue and regenerative continuity"
@@ -1448,7 +1448,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/caliofmarian-ai/Acounting-business-and-life/issues/620",
-          "observedAt": "2026-10-22T05:20:30.240485+00:00",
+          "observedAt": "2026-10-22T12:23:21.144401+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "MICROBUSINESS FORMALIZATION & COMMUNITY GROWTH V1 \u2014 food, non-food and Local Services path from informal to compliant"
@@ -1457,7 +1457,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Lumertech/Lumera-Gemini-edit/issues/119",
-          "observedAt": "2026-10-22T05:20:30.240486+00:00",
+          "observedAt": "2026-10-22T12:23:21.144403+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "[P1][PRD] Billing: subscriptions, 30-day trial + auto-charge, WhatsApp wallet (closed-system)"
@@ -1466,7 +1466,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/OmniBlocks/monorepo/issues/748",
-          "observedAt": "2026-10-22T05:20:30.240488+00:00",
+          "observedAt": "2026-10-22T12:23:21.144405+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "Idea: Furtiger Aero Editor Add-on Theme"
@@ -1475,7 +1475,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/OxyHQ/Mercaria/issues/1016",
-          "observedAt": "2026-10-22T05:20:30.240489+00:00",
+          "observedAt": "2026-10-22T12:23:21.144406+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "[Epic] Authorized digital retail: games, software, gift cards, licenses and private supplier fulfillment"
@@ -1484,7 +1484,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/OxyHQ/Mercaria/issues/1015",
-          "observedAt": "2026-10-22T05:20:30.240490+00:00",
+          "observedAt": "2026-10-22T12:23:21.144411+00:00",
           "sourceVerified": true,
           "demandVerified": false,
           "title": "[Epic] Mercaria Digital: 3D assets, creator commerce, licensing and digital fulfillment"
@@ -1494,12 +1494,293 @@
     {
       "topic": "research-workflow",
       "query": "research evidence provenance workflow citations",
-      "observations": []
+      "observations": [
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1713",
+          "observedAt": "2026-10-22T12:23:21.978892+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "[NAYA 5] LEARN-engine \u2014 gates-wiring-bridge-to-10-10"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1714",
+          "observedAt": "2026-10-22T12:23:21.978908+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "[NAYA 5] COLD-RETRIEVE-engine \u2014 retrieval-to-10-10"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1715",
+          "observedAt": "2026-10-22T12:23:21.978910+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "[NAYA 5] SUCCESSOR-REUSE-engine \u2014 cold-reuse-to-10-10"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/caosos/Desktop-Agent/issues/3",
+          "observedAt": "2026-10-22T12:23:21.978912+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Owner directive: Aria Mission Control \u2014 Work coordinator ownership and acceptance gaps"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/FS-GG/.github/issues/4516",
+          "observedAt": "2026-10-22T12:23:21.978914+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "[cross-repo] V3-ENV-01: name the host provisioner and independent cleanup owner"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/zuriel337/sod1820/issues/1142",
+          "observedAt": "2026-10-22T12:23:21.978916+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "RAZIEL EVERYWHERE \u2014 companion \u05d0\u05d7\u05d3, \u05e9\u05d9\u05ea\u05d5\u05e3 \u05de\u05d7\u05d5\u05e5 \u05dc\u05d0\u05ea\u05e8 \u05d5\u05d7\u05d9\u05e1\u05db\u05d5\u05df \u05d1\u05e2\u05dc\u05d5\u05d9\u05d5\u05ea"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/ufal/atrium-project/issues/13",
+          "observedAt": "2026-10-22T12:23:21.978918+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "CAA Proceedings paper submission to PCJ"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2472",
+          "observedAt": "2026-10-22T12:23:21.978920+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Lane 5 \u2014 worker sign-in/out feed"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2471",
+          "observedAt": "2026-10-22T12:23:21.978922+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Lane 4 \u2014 worker sign-in/out feed"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/genfeedai/genfeed.ai/issues/5149",
+          "observedAt": "2026-10-22T12:23:21.978923+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Move embedding backfill off the retrieval hot path and measure retrieval latency"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/neo-capiro/meri-greenfield/issues/202",
+          "observedAt": "2026-10-22T12:23:21.978925+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Coordination: Fable \u21c4 build agents (relayed by dot)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/CosmicCuddle/Mod-Naxxramas-Core/issues/28",
+          "observedAt": "2026-10-22T12:23:21.978927+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "MASTER DEVELOPMENT CHECKLIST \u2014 Complete history, active stages, future plans"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/ktogias/gnostoa/issues/389",
+          "observedAt": "2026-10-22T12:23:21.978929+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Fail closed when required assurance evidence is missing, stale or incomplete"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/bugabinga/mothergod/issues/3",
+          "observedAt": "2026-10-22T12:23:21.978931+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "\ud83d\udccb Operations log"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/UOR-Foundation/uor-r4/issues/2028",
+          "observedAt": "2026-10-22T12:23:21.978932+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "[Roadmap] UOR-R4 \u2014 path to a native conversation and memory alpha"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/6076446993/The-Crucible/issues/49",
+          "observedAt": "2026-10-22T12:23:21.978938+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "THE CRUCIBLE \u2014 Unified Master Plan | P0 custody recovery first \u00b7 development, learning & industry standards"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/ibiscite/ibis/issues/326",
+          "observedAt": "2026-10-22T12:23:21.978940+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "0.2 Shared preview: plan, queue and decisions"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/binancebotty-bot/hyperliquid-build3-repair/issues/3",
+          "observedAt": "2026-10-22T12:23:21.978942+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "PROJECT HERMES CHANNEL \u2014 implementation handoff and stand-down"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/ShamikM88/open-cam-framework/issues/245",
+          "observedAt": "2026-10-22T12:23:21.978943+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Autonomous backlog burn-down log"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/d6g8k5htny-coder/main/issues/475",
+          "observedAt": "2026-10-22T12:23:21.978945+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Agent Message Board (continued from #419): successor coordination board to #419"
+        }
+      ]
     },
     {
       "topic": "cookbook-export",
       "query": "recipe cookbook pdf export printable",
-      "observations": []
+      "observations": [
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/nocturney/velvetos-core/issues/595",
+          "observedAt": "2026-10-22T12:23:22.804274+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Recover overlooked competitors and make repo-link intake durable"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/mealie-recipes/mealie/issues/1306",
+          "observedAt": "2026-10-22T12:23:22.804290+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "[v1.0.0b] [Task] - Export Recipes and Cookbooks to PDF"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/tbarho/ovenlovin/issues/1",
+          "observedAt": "2026-10-22T12:23:22.804293+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Spec v0: LLM-optimized recipe & family meal-planning template"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/IamTugy/recipes/issues/21",
+          "observedAt": "2026-10-22T12:23:22.804295+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Cookbook/collection PDF export"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/Morningstar88/BlackStar/issues/1",
+          "observedAt": "2026-10-22T12:23:22.804297+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Brainstorming Content: STOIC MENACE"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/mathnauleau/commeat/issues/3",
+          "observedAt": "2026-10-22T12:23:22.804299+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Later: Print full cookbook PDF"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/Benkendorfer/recipe-manager/issues/7",
+          "observedAt": "2026-10-22T12:23:22.804301+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Import recipes from PDF files"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/golang/go/issues/15292",
+          "observedAt": "2026-10-22T12:23:22.804303+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "proposal: spec: generic programming facilities"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/guevara/read-it-later/issues/7826",
+          "observedAt": "2026-10-22T12:23:22.804304+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Rust Language Cheat Sheet"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/guevara/read-it-later/issues/7825",
+          "observedAt": "2026-10-22T12:23:22.804306+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Rust Language Cheat Sheet"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/guevara/read-it-later/issues/7824",
+          "observedAt": "2026-10-22T12:23:22.804308+00:00",
+          "sourceVerified": true,
+          "demandVerified": false,
+          "title": "Rust Language Cheat Sheet"
+        }
+      ]
     },
     {
       "topic": "browser-arcade",
@@ -1538,16 +1819,6 @@
     }
   ],
   "errors": [
-    {
-      "topic": "research-workflow",
-      "source": "github-issues",
-      "error": "HTTP Error 403: rate limit exceeded"
-    },
-    {
-      "topic": "cookbook-export",
-      "source": "github-issues",
-      "error": "HTTP Error 403: rate limit exceeded"
-    },
     {
       "topic": "browser-arcade",
       "source": "github-issues",
