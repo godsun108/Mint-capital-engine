@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.proposals.v1",
-  "generatedAt": "2026-10-22T12:23:23.099374+00:00",
+  "generatedAt": "2026-10-22T17:37:19.655516+00:00",
   "semantics": "RESEARCH_PROPOSALS_NOT_PRODUCT_CANDIDATES",
   "proposals": [
     {
@@ -14,7 +14,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/okou-ai/okou/issues/41550",
-          "observedAt": "2026-10-22T12:23:15.918172+00:00",
+          "observedAt": "2026-10-22T17:37:09.258873+00:00",
           "verified": true,
           "claim": "refactor(api): keep Discord ingress claims in their owner"
         },
@@ -22,7 +22,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/okou-ai/okou/issues/41549",
-          "observedAt": "2026-10-22T12:23:15.918174+00:00",
+          "observedAt": "2026-10-22T17:37:09.258875+00:00",
           "verified": true,
           "claim": "refactor(api): keep changed-migration failure writes in their owner"
         }
@@ -43,24 +43,56 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/Datarails/mcp-outlet/issues/18",
-          "observedAt": "2026-10-22T12:23:16.687104+00:00",
+          "url": "https://github.com/mitodl/mitxpro/issues/2711",
+          "observedAt": "2026-10-22T17:37:09.977313+00:00",
           "verified": true,
-          "claim": "sdk-1.12.0.tgz: 18 vulnerabilities (highest severity is: 9.1) reachable"
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
+          "observedAt": "2026-10-22T17:37:09.977315+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "observedAt": "2026-10-22T17:37:09.977340+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/storm-software/storm-stack/issues/258",
-          "observedAt": "2026-10-22T12:23:16.687133+00:00",
+          "observedAt": "2026-10-22T17:37:09.977327+00:00",
+          "verified": true,
+          "claim": "@storm-stack/core-0.47.0.tgz: 131 vulnerabilities (highest severity is: 9.8) - autoclosed"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/storm-software/storm-stack/issues/262",
+          "observedAt": "2026-10-22T17:37:09.977329+00:00",
           "verified": true,
           "claim": "@storm-stack/core-0.47.0.tgz: 131 vulnerabilities (highest severity is: 9.8)"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/AReid987/career-compass/issues/65",
-          "observedAt": "2026-10-22T12:23:16.687135+00:00",
+          "url": "https://github.com/Nickrock2002/Evershop/issues/3",
+          "observedAt": "2026-10-22T17:37:09.977332+00:00",
+          "verified": true,
+          "claim": "evershop-1.0.0.tgz: 148 vulnerabilities (highest severity is: 9.8)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/AReid987/career-compass/issues/323",
+          "observedAt": "2026-10-22T17:37:09.977334+00:00",
           "verified": true,
           "claim": "nx-plugin-vite-2.2.1.tgz: 54 vulnerabilities (highest severity is: 9.8)"
         }
@@ -82,7 +114,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2641",
-          "observedAt": "2026-10-22T12:23:18.268689+00:00",
+          "observedAt": "2026-10-22T17:37:11.277636+00:00",
           "verified": true,
           "claim": "[NAYA] Team coordination feed \u2014 live board (successor to #2537)"
         },
@@ -90,9 +122,39 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/554",
-          "observedAt": "2026-10-22T12:23:18.268701+00:00",
+          "observedAt": "2026-10-22T17:37:11.277640+00:00",
           "verified": true,
           "claim": "\ud83d\udd31 TEAM NAYA \u2014 Naya \u2194 Coda Direct Communication Board"
+        }
+      ],
+      "guardrails": [
+        "proposal_is_not_verified_demand",
+        "research_must_define_customer_and_problem",
+        "no_build_before_product_gate"
+      ]
+    },
+    {
+      "id": "proposal:offer-scoring:001",
+      "topic": "offer-scoring",
+      "status": "PROPOSED_FOR_RESEARCH",
+      "regulated": false,
+      "upfrontCostUsd": 0,
+      "evidence": [
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/bizzal70/itsalreadypriced/issues/1",
+          "observedAt": "2026-10-22T17:37:12.825171+00:00",
+          "verified": true,
+          "claim": "\ud83d\udd0e Daily content review \u2014 It's Already Priced \u2014 Blog + X"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
+          "observedAt": "2026-10-22T17:37:12.825175+00:00",
+          "verified": true,
+          "claim": "\ud83e\udded Daily content opportunities"
         }
       ],
       "guardrails": [
@@ -111,42 +173,18 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1713",
-          "observedAt": "2026-10-22T12:23:20.428132+00:00",
+          "url": "https://github.com/juv4uk/sens/issues/4196",
+          "observedAt": "2026-10-22T17:37:13.815988+00:00",
           "verified": true,
-          "claim": "[NAYA 5] LEARN-engine \u2014 gates-wiring-bridge-to-10-10"
+          "claim": "[RELEASE][l0.42.0][COORD] \u0404\u0434\u0438\u043d\u0438\u0439 \u0448\u0442\u0430\u0431 SENS \u00b7 main / CI / exact-SHA"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1714",
-          "observedAt": "2026-10-22T12:23:20.428138+00:00",
+          "url": "https://github.com/juv4uk/sens/issues/5029",
+          "observedAt": "2026-10-22T17:37:13.816099+00:00",
           "verified": true,
-          "claim": "[NAYA 5] COLD-RETRIEVE-engine \u2014 retrieval-to-10-10"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1715",
-          "observedAt": "2026-10-22T12:23:20.428147+00:00",
-          "verified": true,
-          "claim": "[NAYA 5] SUCCESSOR-REUSE-engine \u2014 cold-reuse-to-10-10"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2472",
-          "observedAt": "2026-10-22T12:23:20.428164+00:00",
-          "verified": true,
-          "claim": "Lane 5 \u2014 worker sign-in/out feed"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2471",
-          "observedAt": "2026-10-22T12:23:20.428166+00:00",
-          "verified": true,
-          "claim": "Lane 4 \u2014 worker sign-in/out feed"
+          "claim": "[P0][COORD] SID8/SENS8 \u2192 \u0434\u043e\u043c\u0435\u043d\u043d\u0430 \u0434\u0440\u0430\u0431\u0438\u043d\u0430: \u0432\u043b\u0430\u0441\u043d\u0438\u043a\u0438 \u0444\u0430\u0439\u043b\u0456\u0432, CLAIM, single-writer main"
         }
       ],
       "guardrails": [
@@ -165,58 +203,34 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1713",
-          "observedAt": "2026-10-22T12:23:21.978892+00:00",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2793",
+          "observedAt": "2026-10-22T17:37:15.495807+00:00",
           "verified": true,
-          "claim": "[NAYA 5] LEARN-engine \u2014 gates-wiring-bridge-to-10-10"
+          "claim": "Team Naya live board \u2014 coordination venue (successor to #2765)"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1714",
-          "observedAt": "2026-10-22T12:23:21.978908+00:00",
+          "url": "https://github.com/d6g8k5htny-coder/main/issues/475",
+          "observedAt": "2026-10-22T17:37:15.495834+00:00",
           "verified": true,
-          "claim": "[NAYA 5] COLD-RETRIEVE-engine \u2014 retrieval-to-10-10"
+          "claim": "Agent Message Board (continued from #419): successor coordination board to #419"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1715",
-          "observedAt": "2026-10-22T12:23:21.978910+00:00",
+          "url": "https://github.com/tvofi/heatpump_optimizer/issues/201",
+          "observedAt": "2026-10-22T17:37:15.495838+00:00",
           "verified": true,
-          "claim": "[NAYA 5] SUCCESSOR-REUSE-engine \u2014 cold-reuse-to-10-10"
+          "claim": "Audit \u2014 (tracking)"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2472",
-          "observedAt": "2026-10-22T12:23:21.978920+00:00",
+          "url": "https://github.com/shamailsik-prog/cursor-init/issues/30",
+          "observedAt": "2026-10-22T17:37:15.495844+00:00",
           "verified": true,
-          "claim": "Lane 5 \u2014 worker sign-in/out feed"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2471",
-          "observedAt": "2026-10-22T12:23:21.978922+00:00",
-          "verified": true,
-          "claim": "Lane 4 \u2014 worker sign-in/out feed"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/bugabinga/mothergod/issues/3",
-          "observedAt": "2026-10-22T12:23:21.978931+00:00",
-          "verified": true,
-          "claim": "\ud83d\udccb Operations log"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/ShamikM88/open-cam-framework/issues/245",
-          "observedAt": "2026-10-22T12:23:21.978943+00:00",
-          "verified": true,
-          "claim": "Autonomous backlog burn-down log"
+          "claim": "Audit remediation: 48 findings"
         }
       ],
       "guardrails": [
@@ -236,7 +250,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mealie-recipes/mealie/issues/1306",
-          "observedAt": "2026-10-22T12:23:22.804290+00:00",
+          "observedAt": "2026-10-22T17:37:16.177813+00:00",
           "verified": true,
           "claim": "[v1.0.0b] [Task] - Export Recipes and Cookbooks to PDF"
         },
@@ -244,7 +258,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/IamTugy/recipes/issues/21",
-          "observedAt": "2026-10-22T12:23:22.804295+00:00",
+          "observedAt": "2026-10-22T17:37:16.177818+00:00",
           "verified": true,
           "claim": "Cookbook/collection PDF export"
         },
@@ -252,7 +266,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Benkendorfer/recipe-manager/issues/7",
-          "observedAt": "2026-10-22T12:23:22.804301+00:00",
+          "observedAt": "2026-10-22T17:37:16.177825+00:00",
           "verified": true,
           "claim": "Import recipes from PDF files"
         },
@@ -260,7 +274,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mathnauleau/commeat/issues/3",
-          "observedAt": "2026-10-22T12:23:22.804299+00:00",
+          "observedAt": "2026-10-22T17:37:16.177823+00:00",
           "verified": true,
           "claim": "Later: Print full cookbook PDF"
         },
@@ -268,7 +282,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7826",
-          "observedAt": "2026-10-22T12:23:22.804304+00:00",
+          "observedAt": "2026-10-22T17:37:16.177828+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -276,7 +290,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7825",
-          "observedAt": "2026-10-22T12:23:22.804306+00:00",
+          "observedAt": "2026-10-22T17:37:16.177831+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -284,9 +298,85 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7824",
-          "observedAt": "2026-10-22T12:23:22.804308+00:00",
+          "observedAt": "2026-10-22T17:37:16.177833+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
+        }
+      ],
+      "guardrails": [
+        "proposal_is_not_verified_demand",
+        "research_must_define_customer_and_problem",
+        "no_build_before_product_gate"
+      ]
+    },
+    {
+      "id": "proposal:browser-arcade:001",
+      "topic": "browser-arcade",
+      "status": "PROPOSED_FOR_RESEARCH",
+      "regulated": false,
+      "upfrontCostUsd": 0,
+      "evidence": [
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/AnandChowdhary/gitclaw/issues/878",
+          "observedAt": "2026-10-22T17:37:16.776848+00:00",
+          "verified": true,
+          "claim": "GitClaw telegram thread channel-mad-libs-e2e-20260604t072208z"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/AnandChowdhary/gitclaw/issues/877",
+          "observedAt": "2026-10-22T17:37:16.776850+00:00",
+          "verified": true,
+          "claim": "GitClaw telegram thread channel-tool-drill-e2e-20260604t070042z"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/AnandChowdhary/gitclaw/issues/876",
+          "observedAt": "2026-10-22T17:37:16.776852+00:00",
+          "verified": true,
+          "claim": "GitClaw telegram thread channel-soul-drill-e2e-20260604t063934z"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/AnandChowdhary/gitclaw/issues/875",
+          "observedAt": "2026-10-22T17:37:16.776854+00:00",
+          "verified": true,
+          "claim": "GitClaw telegram thread channel-skill-drill-e2e-20260604t061809z"
+        }
+      ],
+      "guardrails": [
+        "proposal_is_not_verified_demand",
+        "research_must_define_customer_and_problem",
+        "no_build_before_product_gate"
+      ]
+    },
+    {
+      "id": "proposal:goal-os:001",
+      "topic": "goal-os",
+      "status": "PROPOSED_FOR_RESEARCH",
+      "regulated": false,
+      "upfrontCostUsd": 0,
+      "evidence": [
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/abyyworld/auto-post-/issues/7",
+          "observedAt": "2026-10-22T17:37:18.815279+00:00",
+          "verified": true,
+          "claim": "Post drafts 2026-10-14"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/abyyworld/auto-post-/issues/6",
+          "observedAt": "2026-10-22T17:37:18.815282+00:00",
+          "verified": true,
+          "claim": "Post drafts 2026-10-12"
         }
       ],
       "guardrails": [

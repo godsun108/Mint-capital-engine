@@ -28,24 +28,56 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/Datarails/mcp-outlet/issues/18",
-          "observedAt": "2026-10-22T12:23:16.687104+00:00",
+          "url": "https://github.com/mitodl/mitxpro/issues/2711",
+          "observedAt": "2026-10-22T17:37:09.977313+00:00",
           "verified": true,
-          "claim": "sdk-1.12.0.tgz: 18 vulnerabilities (highest severity is: 9.1) reachable"
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
+          "observedAt": "2026-10-22T17:37:09.977315+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "observedAt": "2026-10-22T17:37:09.977340+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/storm-software/storm-stack/issues/258",
-          "observedAt": "2026-10-22T12:23:16.687133+00:00",
+          "observedAt": "2026-10-22T17:37:09.977327+00:00",
+          "verified": true,
+          "claim": "@storm-stack/core-0.47.0.tgz: 131 vulnerabilities (highest severity is: 9.8) - autoclosed"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/storm-software/storm-stack/issues/262",
+          "observedAt": "2026-10-22T17:37:09.977329+00:00",
           "verified": true,
           "claim": "@storm-stack/core-0.47.0.tgz: 131 vulnerabilities (highest severity is: 9.8)"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/AReid987/career-compass/issues/65",
-          "observedAt": "2026-10-22T12:23:16.687135+00:00",
+          "url": "https://github.com/Nickrock2002/Evershop/issues/3",
+          "observedAt": "2026-10-22T17:37:09.977332+00:00",
+          "verified": true,
+          "claim": "evershop-1.0.0.tgz: 148 vulnerabilities (highest severity is: 9.8)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/AReid987/career-compass/issues/323",
+          "observedAt": "2026-10-22T17:37:09.977334+00:00",
           "verified": true,
           "claim": "nx-plugin-vite-2.2.1.tgz: 54 vulnerabilities (highest severity is: 9.8)"
         }
@@ -53,7 +85,7 @@
       "status": "DISCOVERED_SOURCE_BACKED",
       "provenance": {
         "proposalId": "proposal:express-auth:001",
-        "promotedAt": "2026-10-22T12:23:23.144980+00:00",
+        "promotedAt": "2026-10-22T17:37:19.702728+00:00",
         "semantics": "SOURCE_BACKED_CANDIDATE_RESEARCH_STILL_REQUIRED"
       }
     }

@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.synthesis.v1",
-  "generatedAt": "2026-10-22T12:23:23.041274+00:00",
+  "generatedAt": "2026-10-22T17:37:19.575634+00:00",
   "clusters": [
     {
       "topic": "express-typescript",
@@ -22,19 +22,49 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/Datarails/mcp-outlet/issues/18",
-          "b": "https://github.com/storm-software/storm-stack/issues/258",
-          "similarity": 0.3
+          "a": "https://github.com/mitodl/mitxpro/issues/2711",
+          "b": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
+          "similarity": 1.0
         },
         {
-          "a": "https://github.com/Datarails/mcp-outlet/issues/18",
-          "b": "https://github.com/AReid987/career-compass/issues/65",
-          "similarity": 0.375
+          "a": "https://github.com/mitodl/mitxpro/issues/2711",
+          "b": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
+          "b": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "similarity": 1.0
         },
         {
           "a": "https://github.com/storm-software/storm-stack/issues/258",
-          "b": "https://github.com/AReid987/career-compass/issues/65",
+          "b": "https://github.com/storm-software/storm-stack/issues/262",
+          "similarity": 0.875
+        },
+        {
+          "a": "https://github.com/storm-software/storm-stack/issues/258",
+          "b": "https://github.com/Nickrock2002/Evershop/issues/3",
+          "similarity": 0.4
+        },
+        {
+          "a": "https://github.com/storm-software/storm-stack/issues/258",
+          "b": "https://github.com/AReid987/career-compass/issues/323",
+          "similarity": 0.444
+        },
+        {
+          "a": "https://github.com/storm-software/storm-stack/issues/262",
+          "b": "https://github.com/Nickrock2002/Evershop/issues/3",
+          "similarity": 0.444
+        },
+        {
+          "a": "https://github.com/storm-software/storm-stack/issues/262",
+          "b": "https://github.com/AReid987/career-compass/issues/323",
           "similarity": 0.5
+        },
+        {
+          "a": "https://github.com/Nickrock2002/Evershop/issues/3",
+          "b": "https://github.com/AReid987/career-compass/issues/323",
+          "similarity": 0.571
         }
       ],
       "promotionEligible": true,
@@ -74,8 +104,14 @@
       "topic": "offer-scoring",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/bizzal70/itsalreadypriced/issues/1",
+          "b": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
+          "similarity": 0.286
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -84,24 +120,9 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1713",
-          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1714",
+          "a": "https://github.com/juv4uk/sens/issues/4196",
+          "b": "https://github.com/juv4uk/sens/issues/5029",
           "similarity": 0.2
-        },
-        {
-          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1713",
-          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1715",
-          "similarity": 0.2
-        },
-        {
-          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1714",
-          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1715",
-          "similarity": 0.2
-        },
-        {
-          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2472",
-          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2471",
-          "similarity": 1.0
         }
       ],
       "promotionEligible": true,
@@ -121,29 +142,14 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1713",
-          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1714",
-          "similarity": 0.2
+          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2793",
+          "b": "https://github.com/d6g8k5htny-coder/main/issues/475",
+          "similarity": 0.25
         },
         {
-          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1713",
-          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1715",
-          "similarity": 0.2
-        },
-        {
-          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1714",
-          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1715",
-          "similarity": 0.2
-        },
-        {
-          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2472",
-          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2471",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/bugabinga/mothergod/issues/3",
-          "b": "https://github.com/ShamikM88/open-cam-framework/issues/245",
-          "similarity": 0.2
+          "a": "https://github.com/tvofi/heatpump_optimizer/issues/201",
+          "b": "https://github.com/shamailsik-prog/cursor-init/issues/30",
+          "similarity": 0.25
         }
       ],
       "promotionEligible": true,
@@ -190,48 +196,85 @@
     },
     {
       "topic": "browser-arcade",
-      "observationCount": 0,
-      "distinctSources": 0,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "observationCount": 20,
+      "distinctSources": 20,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/878",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/877",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/878",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/876",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/878",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/875",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/877",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/876",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/877",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/875",
+          "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/AnandChowdhary/gitclaw/issues/876",
+          "b": "https://github.com/AnandChowdhary/gitclaw/issues/875",
+          "similarity": 0.6
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "earth-data",
-      "observationCount": 0,
-      "distinctSources": 0,
+      "observationCount": 2,
+      "distinctSources": 2,
       "relatedPairs": [],
       "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "camera-discovery",
-      "observationCount": 0,
-      "distinctSources": 0,
+      "observationCount": 6,
+      "distinctSources": 6,
       "relatedPairs": [],
       "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "forecasting",
-      "observationCount": 0,
-      "distinctSources": 0,
+      "observationCount": 20,
+      "distinctSources": 20,
       "relatedPairs": [],
       "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "goal-os",
-      "observationCount": 0,
-      "distinctSources": 0,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "observationCount": 20,
+      "distinctSources": 20,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/abyyworld/auto-post-/issues/7",
+          "b": "https://github.com/abyyworld/auto-post-/issues/6",
+          "similarity": 0.5
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "editorial-evidence",
-      "observationCount": 0,
-      "distinctSources": 0,
+      "observationCount": 20,
+      "distinctSources": 20,
       "relatedPairs": [],
       "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
