@@ -28,64 +28,56 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/mitodl/mitxpro/issues/2711",
-          "observedAt": "2026-10-22T17:37:09.977313+00:00",
+          "url": "https://github.com/amaybaum-prod/supabase/issues/116",
+          "observedAt": "2026-10-22T21:54:43.106028+00:00",
+          "verified": true,
+          "claim": "studio-0.0.9.tgz: 180 vulnerabilities (highest severity is: 10.0) [master] (reachable) - autoclosed"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/amaybaum-prod/supabase/issues/26",
+          "observedAt": "2026-10-22T21:54:43.106030+00:00",
+          "verified": true,
+          "claim": "studio-0.0.9.tgz: 180 vulnerabilities (highest severity is: 10.0) [master] (reachable)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/opensearch-project/agent-health/issues/159",
+          "observedAt": "2026-10-22T21:54:43.106037+00:00",
+          "verified": true,
+          "claim": "sdk-1.29.0.tgz: 19 vulnerabilities (highest severity is: 8.6) - autoclosed"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "observedAt": "2026-10-22T21:54:43.106039+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
-          "observedAt": "2026-10-22T17:37:09.977315+00:00",
+          "url": "https://github.com/hmcts/opal-frontend-common-node-lib/issues/3",
+          "observedAt": "2026-10-22T21:54:43.106049+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
-          "observedAt": "2026-10-22T17:37:09.977340+00:00",
+          "url": "https://github.com/hmcts/wa-task-batch-service/issues/87",
+          "observedAt": "2026-10-22T21:54:43.106051+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/storm-software/storm-stack/issues/258",
-          "observedAt": "2026-10-22T17:37:09.977327+00:00",
-          "verified": true,
-          "claim": "@storm-stack/core-0.47.0.tgz: 131 vulnerabilities (highest severity is: 9.8) - autoclosed"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/storm-software/storm-stack/issues/262",
-          "observedAt": "2026-10-22T17:37:09.977329+00:00",
-          "verified": true,
-          "claim": "@storm-stack/core-0.47.0.tgz: 131 vulnerabilities (highest severity is: 9.8)"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/Nickrock2002/Evershop/issues/3",
-          "observedAt": "2026-10-22T17:37:09.977332+00:00",
-          "verified": true,
-          "claim": "evershop-1.0.0.tgz: 148 vulnerabilities (highest severity is: 9.8)"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/AReid987/career-compass/issues/323",
-          "observedAt": "2026-10-22T17:37:09.977334+00:00",
-          "verified": true,
-          "claim": "nx-plugin-vite-2.2.1.tgz: 54 vulnerabilities (highest severity is: 9.8)"
         }
       ],
       "status": "DISCOVERED_SOURCE_BACKED",
       "provenance": {
         "proposalId": "proposal:express-auth:001",
-        "promotedAt": "2026-10-22T17:37:19.702728+00:00",
+        "promotedAt": "2026-10-22T21:54:48.684313+00:00",
         "semantics": "SOURCE_BACKED_CANDIDATE_RESEARCH_STILL_REQUIRED"
       }
     }
