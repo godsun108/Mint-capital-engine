@@ -8,6 +8,7 @@ on:
       - 'automation/providers/printful-brand-discovery.mjs'
       - 'automation/providers/printful-action-policy.mjs'
       - 'automation/providers/printful-signed-approval.mjs'
+      - 'automation/providers/printful-approval-replay.mjs'
       - '.github/workflows/aurelion-printful-offline-tests.yml'
   workflow_dispatch:
 permissions:
