@@ -124,3 +124,26 @@ test("supplier write policy fails closed without exact, unexpired approval", asy
   assert.equal(decision.authorizedByPolicy,true);
   assert.equal(decision.supplierWriteEnabled,false);
 });
+
+test("signed approvals verify exact scope and reject tampering", async () => {
+  const {verifySignedApproval,signOfflineTestApproval} = await import("../providers/printful-signed-approval.mjs");
+  const oldEnv = process.env.NODE_ENV;
+  process.env.NODE_ENV = "test";
+  try {
+    const testKey = "offline-fixture-key-at-least-32-characters";
+    const selection = {brand:"aurelion",productId:999,variantIds:[1001]};
+    const action = "CREATE_MOCKUP_TASK";
+    const approval = {approved:true,action,brand:"aurelion",productId:999,variantIds:[1001],
+      approvalId:"offline_test_approval_123",expiresAtMs:Date.now()+60000};
+    const signature = signOfflineTestApproval({selection,approval,action,testKey});
+    const verified = verifySignedApproval({selection,approval,action,signature,verificationKey:testKey});
+    assert.equal(verified.signatureVerified,true);
+    assert.equal(verified.replayVerified,false);
+    assert.equal(verified.supplierWriteEnabled,false);
+    assert.throws(()=>verifySignedApproval({selection,approval:{...approval,approvalId:"tampered_approval_123"},action,signature,verificationKey:testKey}),/signature invalid/);
+    assert.throws(()=>verifySignedApproval({selection,approval,action,signature,verificationKey:"wrong-key-that-is-long-enough-12345"}),/signature invalid/);
+    assert.throws(()=>verifySignedApproval({selection,approval,action,signature:"invalid",verificationKey:testKey}),/valid signature/);
+  } finally {
+    if(oldEnv === undefined) delete process.env.NODE_ENV; else process.env.NODE_ENV=oldEnv;
+  }
+});
