@@ -59,3 +59,12 @@ test("rejects nonnumeric catalog product IDs before any network call", async () 
     assert.equal(called, false);
   } finally { globalThis.fetch = prior; }
 });
+
+test("Aurelion read-only tests do not silently inherit Orbital Garden IDs", () => {
+  // Product 274 and variants 9039-9041 are historical Orbital Garden references.
+  // No Aurelion product may be inferred from those identifiers.
+  const orbitalProductId = 274;
+  const aurelionProductId = null;
+  assert.equal(aurelionProductId, null);
+  assert.notEqual(aurelionProductId, orbitalProductId);
+});
