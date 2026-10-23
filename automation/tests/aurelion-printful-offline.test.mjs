@@ -80,3 +80,32 @@ test("distinct Aurelion selection is accepted without supplier contact", () => {
   assert.deepEqual(selection.variantIds,[1001,1002]);
   assert.equal(Object.isFrozen(selection),true);
 });
+
+test("brand discovery rejects Orbital identifiers before any supplier call", async () => {
+  const { discoverBrandProduct } = await import("../providers/printful-brand-discovery.mjs");
+  const previous = globalThis.fetch;
+  let calls = 0;
+  try {
+    globalThis.fetch = async () => { calls++; throw Error("unexpected supplier call"); };
+    await assert.rejects(discoverBrandProduct({brand:"aurelion",productId:274,variantIds:[9039]}), /Orbital Garden/);
+    assert.equal(calls, 0);
+  } finally { globalThis.fetch = previous; }
+});
+
+test("scoped Aurelion discovery uses GET only and rejects unknown variants", async () => {
+  const { discoverBrandProduct } = await import("../providers/printful-brand-discovery.mjs");
+  const previous = globalThis.fetch;
+  const methods = [];
+  try {
+    globalThis.fetch = async (_url, init={}) => {
+      methods.push(init.method ?? "GET");
+      return {ok:true,json:async()=>({result:{variants:[{id:1001,price:"18.00"}]}})};
+    };
+    const result = await discoverBrandProduct({brand:"aurelion",productId:999,variantIds:[1001]});
+    assert.equal(result.writeAuthorized,false);
+    assert.equal(result.brand,"aurelion");
+    assert.deepEqual(methods,["GET","GET"]);
+    await assert.rejects(discoverBrandProduct({brand:"aurelion",productId:999,variantIds:[2002]}), /missing from catalog/);
+    assert.deepEqual(methods,["GET","GET","GET","GET"]);
+  } finally { globalThis.fetch = previous; }
+});
