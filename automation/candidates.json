@@ -28,32 +28,8 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/wa-task-batch-service/issues/87",
-          "observedAt": "2026-10-23T17:25:49.198141+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
-          "observedAt": "2026-10-23T17:25:49.198143+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/hmcts/sptribs-frontend/issues/444",
-          "observedAt": "2026-10-23T17:25:49.198147+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/hmcts/juror-er-portal/issues/1",
-          "observedAt": "2026-10-23T17:25:49.198156+00:00",
+          "url": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
+          "observedAt": "2026-10-23T21:39:14.734660+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -61,31 +37,55 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mitodl/mitxpro/issues/2711",
-          "observedAt": "2026-10-23T17:25:49.198167+00:00",
+          "observedAt": "2026-10-23T21:39:14.734662+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/fdm-monster/fdm-monster-docs/issues/303",
-          "observedAt": "2026-10-23T17:25:49.198160+00:00",
+          "url": "https://github.com/hmcts/juror-er-portal/issues/1",
+          "observedAt": "2026-10-23T21:39:14.734664+00:00",
           "verified": true,
-          "claim": "core-3.9.2.tgz: 110 vulnerabilities (highest severity is: 10.0) - autoclosed"
+          "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/fdm-monster/fdm-monster-docs/issues/339",
-          "observedAt": "2026-10-23T17:25:49.198162+00:00",
+          "url": "https://github.com/hmcts/sptribs-frontend/issues/444",
+          "observedAt": "2026-10-23T21:39:14.734670+00:00",
           "verified": true,
-          "claim": "core-3.9.2.tgz: 113 vulnerabilities (highest severity is: 10.0)"
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "observedAt": "2026-10-23T21:39:14.734678+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/pip-frontend/issues/1109",
+          "observedAt": "2026-10-23T21:39:14.734684+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/wa-message-cron-service/issues/205",
+          "observedAt": "2026-10-23T21:39:14.734691+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
         }
       ],
       "status": "DISCOVERED_SOURCE_BACKED",
       "provenance": {
         "proposalId": "proposal:express-auth:001",
-        "promotedAt": "2026-10-23T17:25:56.546835+00:00",
+        "promotedAt": "2026-10-23T21:39:21.326489+00:00",
         "semantics": "SOURCE_BACKED_CANDIDATE_RESEARCH_STILL_REQUIRED"
       }
     }
