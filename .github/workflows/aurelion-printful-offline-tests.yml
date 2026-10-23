@@ -4,6 +4,7 @@ on:
     paths:
       - 'automation/tests/aurelion-printful-offline.test.mjs'
       - 'automation/providers/printful-readonly.mjs'
+      - 'automation/providers/printful-brand-scope.mjs'
       - '.github/workflows/aurelion-printful-offline-tests.yml'
   workflow_dispatch:
 permissions:
