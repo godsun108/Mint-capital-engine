@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
 import { capabilities, catalogProduct, variantPrices, mockupPreflight } from "../providers/printful-readonly.mjs";
+import { validateBrandSelection } from "../providers/printful-brand-scope.mjs";
 
 // Deliberately offline. This suite never uses supplier credentials.
 test("Printful discovery capability remains fail-closed", () => {
@@ -60,11 +61,22 @@ test("rejects nonnumeric catalog product IDs before any network call", async () 
   } finally { globalThis.fetch = prior; }
 });
 
-test("Aurelion read-only tests do not silently inherit Orbital Garden IDs", () => {
-  // Product 274 and variants 9039-9041 are historical Orbital Garden references.
-  // No Aurelion product may be inferred from those identifiers.
-  const orbitalProductId = 274;
-  const aurelionProductId = null;
-  assert.equal(aurelionProductId, null);
-  assert.notEqual(aurelionProductId, orbitalProductId);
+test("Aurelion rejects Orbital Garden product and variant identifiers", () => {
+  assert.throws(() => validateBrandSelection({brand:"aurelion",productId:274,variantIds:[]}), /Orbital Garden/);
+  assert.throws(() => validateBrandSelection({brand:"aurelion",productId:999,variantIds:[9039]}), /Orbital Garden/);
+  assert.throws(() => validateBrandSelection({brand:"aurelion",productId:999,variantIds:[9041]}), /Orbital Garden/);
+});
+
+test("brand scope rejects unknown brands, missing IDs, and duplicates", () => {
+  assert.throws(() => validateBrandSelection({brand:"unknown",productId:999}), /unknown brand/);
+  assert.throws(() => validateBrandSelection({brand:"aurelion",productId:null}), /valid productId/);
+  assert.throws(() => validateBrandSelection({brand:"aurelion",productId:999,variantIds:[10,10]}), /duplicate/);
+  assert.throws(() => validateBrandSelection({brand:"orbital-garden",productId:999}), /explicitly scoped/);
+});
+
+test("distinct Aurelion selection is accepted without supplier contact", () => {
+  const selection = validateBrandSelection({brand:"aurelion",productId:999,variantIds:[1001,1002]});
+  assert.equal(selection.brand,"aurelion");
+  assert.deepEqual(selection.variantIds,[1001,1002]);
+  assert.equal(Object.isFrozen(selection),true);
 });
