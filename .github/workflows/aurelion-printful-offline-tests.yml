@@ -1,8 +1,12 @@
-name: Aurelion Printful Offline Safety
+name: Aurelion Supplier Offline Safety
 on:
   pull_request:
     paths:
       - 'automation/tests/aurelion-printful-offline.test.mjs'
+      - 'automation/tests/aurelion-printify-offline.test.mjs'
+      - 'automation/tests/printify-readonly.test.mjs'
+      - 'automation/providers/aurelion-printify-offline.mjs'
+      - 'automation/providers/printify-readonly.mjs'
       - 'automation/providers/printful-readonly.mjs'
       - 'automation/providers/printful-brand-scope.mjs'
       - 'automation/providers/printful-brand-discovery.mjs'
@@ -26,5 +30,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Run mocked Printful adapter tests (no supplier calls)
-        run: node --test automation/tests/aurelion-printful-offline.test.mjs
+      - name: Run mocked supplier tests (no supplier calls)
+        run: node --test automation/tests/aurelion-printful-offline.test.mjs automation/tests/aurelion-printify-offline.test.mjs automation/tests/printify-readonly.test.mjs
