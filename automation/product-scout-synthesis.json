@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.synthesis.v1",
-  "generatedAt": "2026-10-23T12:04:58.843988+00:00",
+  "generatedAt": "2026-10-23T17:25:56.436628+00:00",
   "clusters": [
     {
       "topic": "express-typescript",
@@ -16,13 +16,48 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/hmcts/juror-er-portal/issues/1",
-          "b": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
+          "a": "https://github.com/hmcts/wa-task-batch-service/issues/87",
+          "b": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/hmcts/juror-er-portal/issues/1",
-          "b": "https://github.com/hmcts/wa-message-cron-service/issues/205",
+          "a": "https://github.com/hmcts/wa-task-batch-service/issues/87",
+          "b": "https://github.com/hmcts/sptribs-frontend/issues/444",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/wa-task-batch-service/issues/87",
+          "b": "https://github.com/hmcts/juror-er-portal/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/wa-task-batch-service/issues/87",
+          "b": "https://github.com/mitodl/mitxpro/issues/2711",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "b": "https://github.com/hmcts/sptribs-frontend/issues/444",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "b": "https://github.com/hmcts/juror-er-portal/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "b": "https://github.com/mitodl/mitxpro/issues/2711",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/sptribs-frontend/issues/444",
+          "b": "https://github.com/hmcts/juror-er-portal/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/sptribs-frontend/issues/444",
+          "b": "https://github.com/mitodl/mitxpro/issues/2711",
           "similarity": 1.0
         },
         {
@@ -31,64 +66,9 @@
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/hmcts/juror-er-portal/issues/1",
-          "b": "https://github.com/hmcts/appreg-frontend/issues/2",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/juror-er-portal/issues/1",
-          "b": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
-          "b": "https://github.com/hmcts/wa-message-cron-service/issues/205",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
-          "b": "https://github.com/mitodl/mitxpro/issues/2711",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
-          "b": "https://github.com/hmcts/appreg-frontend/issues/2",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
-          "b": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/wa-message-cron-service/issues/205",
-          "b": "https://github.com/mitodl/mitxpro/issues/2711",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/wa-message-cron-service/issues/205",
-          "b": "https://github.com/hmcts/appreg-frontend/issues/2",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/wa-message-cron-service/issues/205",
-          "b": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/mitodl/mitxpro/issues/2711",
-          "b": "https://github.com/hmcts/appreg-frontend/issues/2",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/mitodl/mitxpro/issues/2711",
-          "b": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/appreg-frontend/issues/2",
-          "b": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "similarity": 1.0
+          "a": "https://github.com/fdm-monster/fdm-monster-docs/issues/303",
+          "b": "https://github.com/fdm-monster/fdm-monster-docs/issues/339",
+          "similarity": 0.625
         }
       ],
       "promotionEligible": true,
@@ -108,8 +88,8 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/554",
-          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2641",
+          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2641",
+          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/554",
           "similarity": 0.273
         }
       ],
@@ -120,19 +100,8 @@
       "topic": "software-release-contract",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [
-        {
-          "a": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
-          "b": "https://github.com/d6g8k5htny-coder/main/issues/475",
-          "similarity": 0.25
-        },
-        {
-          "a": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
-          "b": "https://github.com/ontripai/cladora-website/issues/463",
-          "similarity": 0.273
-        }
-      ],
-      "promotionEligible": true,
+      "relatedPairs": [],
+      "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -141,8 +110,13 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
-          "b": "https://github.com/bizzal70/itsalreadypriced/issues/1",
+          "a": "https://github.com/6076446993/The-Crucible/issues/41",
+          "b": "https://github.com/estebanjvasquez/PerfilAfiliadosCPV/issues/2",
+          "similarity": 0.2
+        },
+        {
+          "a": "https://github.com/bizzal70/itsalreadypriced/issues/1",
+          "b": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
           "similarity": 0.286
         }
       ],
@@ -153,14 +127,8 @@
       "topic": "evidence-packets",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [
-        {
-          "a": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
-          "b": "https://github.com/d6g8k5htny-coder/main/issues/475",
-          "similarity": 0.25
-        }
-      ],
-      "promotionEligible": true,
+      "relatedPairs": [],
+      "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -177,13 +145,8 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/d6g8k5htny-coder/main/issues/475",
-          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2793",
-          "similarity": 0.25
-        },
-        {
           "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1714",
-          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1713",
+          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1715",
           "similarity": 0.2
         }
       ],
