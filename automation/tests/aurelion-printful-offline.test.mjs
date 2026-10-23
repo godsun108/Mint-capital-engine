@@ -147,3 +147,32 @@ test("signed approvals verify exact scope and reject tampering", async () => {
     if(oldEnv === undefined) delete process.env.NODE_ENV; else process.env.NODE_ENV=oldEnv;
   }
 });
+
+test("signed approval can be claimed once in a pre-provisioned offline ledger", async () => {
+  const fs = await import("node:fs");
+  const os = await import("node:os");
+  const path = await import("node:path");
+  const {claimApprovalOnce} = await import("../providers/printful-approval-replay.mjs");
+  const {signOfflineTestApproval} = await import("../providers/printful-signed-approval.mjs");
+  const oldEnv = process.env.NODE_ENV;
+  const dir = fs.mkdtempSync(path.join(os.tmpdir(),"mint-approval-test-"));
+  process.env.NODE_ENV="test";
+  try {
+    const selection={brand:"aurelion",productId:999,variantIds:[1001]};
+    const action="CREATE_MOCKUP_TASK";
+    const approval={approved:true,action,brand:"aurelion",productId:999,variantIds:[1001],
+      approvalId:"offline_replay_test_123",expiresAtMs:Date.now()+60000};
+    const verificationKey="offline-fixture-key-at-least-32-characters";
+    const signature=signOfflineTestApproval({selection,approval,action,testKey:verificationKey});
+    const args={selection,approval,action,signature,verificationKey,ledgerDirectory:dir};
+    const claimed=claimApprovalOnce(args);
+    assert.equal(claimed.replayClaimed,true);
+    assert.equal(claimed.supplierWriteEnabled,false);
+    assert.throws(()=>claimApprovalOnce(args),/replay blocked/);
+    assert.equal(fs.existsSync(path.join(dir,approval.approvalId+".claim")),true);
+    assert.throws(()=>claimApprovalOnce({...args,signature:"0".repeat(64)}),/signature invalid/);
+  } finally {
+    fs.rmSync(dir,{recursive:true,force:true});
+    if(oldEnv===undefined) delete process.env.NODE_ENV; else process.env.NODE_ENV=oldEnv;
+  }
+});
