@@ -109,3 +109,18 @@ test("scoped Aurelion discovery uses GET only and rejects unknown variants", asy
     assert.deepEqual(methods,["GET","GET","GET","GET"]);
   } finally { globalThis.fetch = previous; }
 });
+
+test("supplier write policy fails closed without exact, unexpired approval", async () => {
+  const { authorizeSupplierAction } = await import("../providers/printful-action-policy.mjs");
+  const selection = {brand:"aurelion",productId:999,variantIds:[1001]};
+  const approval = {approved:true,action:"CREATE_MOCKUP_TASK",brand:"aurelion",productId:999,
+    variantIds:[1001],approvalId:"approval_test_123456",expiresAtMs:Date.now()+60000};
+  assert.throws(() => authorizeSupplierAction({selection,action:"CREATE_MOCKUP_TASK"}), /explicit approval/);
+  assert.throws(() => authorizeSupplierAction({selection,approval:{...approval,brand:"orbital-garden"},action:"CREATE_MOCKUP_TASK"}), /does not match/);
+  assert.throws(() => authorizeSupplierAction({selection,approval:{...approval,variantIds:[1002]},action:"CREATE_MOCKUP_TASK"}), /variant mismatch/);
+  assert.throws(() => authorizeSupplierAction({selection,approval:{...approval,expiresAtMs:Date.now()-1},action:"CREATE_MOCKUP_TASK"}), /expired/);
+  assert.throws(() => authorizeSupplierAction({selection,approval,action:"CREATE_ORDER"}), /unsupported/);
+  const decision = authorizeSupplierAction({selection,approval,action:"CREATE_MOCKUP_TASK"});
+  assert.equal(decision.authorizedByPolicy,true);
+  assert.equal(decision.supplierWriteEnabled,false);
+});
