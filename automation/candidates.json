@@ -28,56 +28,80 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/amaybaum-prod/supabase/issues/116",
-          "observedAt": "2026-10-22T21:54:43.106028+00:00",
+          "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "observedAt": "2026-10-23T05:20:03.679360+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "observedAt": "2026-10-23T05:20:03.679380+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/sptribs-frontend/issues/444",
+          "observedAt": "2026-10-23T05:20:03.679386+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/mitodl/mitxpro/issues/2711",
+          "observedAt": "2026-10-23T05:20:03.679390+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
+          "observedAt": "2026-10-23T05:20:03.679394+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/objectstack-ai/objectstack/issues/6021",
+          "observedAt": "2026-10-23T05:20:03.679378+00:00",
+          "verified": true,
+          "claim": "[PM seat] domain:services \u2014 \ud83d\udfe2 os-sales"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/objectstack-ai/objectstack/issues/6024",
+          "observedAt": "2026-10-23T05:20:03.679389+00:00",
+          "verified": true,
+          "claim": "[PM seat] domain:cli \u2014 \ud83d\udfe2 os-sales \u00b7 \u7531Sales\u8d26\u6237\u7684\u9879\u76ee\u8d1f\u8d23"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/amaybaum-prod/supabase/issues/26",
+          "observedAt": "2026-10-23T05:20:03.679392+00:00",
           "verified": true,
           "claim": "studio-0.0.9.tgz: 180 vulnerabilities (highest severity is: 10.0) [master] (reachable) - autoclosed"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/amaybaum-prod/supabase/issues/26",
-          "observedAt": "2026-10-22T21:54:43.106030+00:00",
+          "url": "https://github.com/amaybaum-prod/supabase/issues/116",
+          "observedAt": "2026-10-23T05:20:03.679393+00:00",
           "verified": true,
           "claim": "studio-0.0.9.tgz: 180 vulnerabilities (highest severity is: 10.0) [master] (reachable)"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/opensearch-project/agent-health/issues/159",
-          "observedAt": "2026-10-22T21:54:43.106037+00:00",
-          "verified": true,
-          "claim": "sdk-1.29.0.tgz: 19 vulnerabilities (highest severity is: 8.6) - autoclosed"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "observedAt": "2026-10-22T21:54:43.106039+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/hmcts/opal-frontend-common-node-lib/issues/3",
-          "observedAt": "2026-10-22T21:54:43.106049+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/hmcts/wa-task-batch-service/issues/87",
-          "observedAt": "2026-10-22T21:54:43.106051+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
         }
       ],
       "status": "DISCOVERED_SOURCE_BACKED",
       "provenance": {
         "proposalId": "proposal:express-auth:001",
-        "promotedAt": "2026-10-22T21:54:48.684313+00:00",
+        "promotedAt": "2026-10-23T05:20:12.072081+00:00",
         "semantics": "SOURCE_BACKED_CANDIDATE_RESEARCH_STILL_REQUIRED"
       }
     }
