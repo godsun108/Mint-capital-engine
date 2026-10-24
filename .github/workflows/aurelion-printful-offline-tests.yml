@@ -5,6 +5,8 @@ on:
       - 'automation/tests/aurelion-printful-offline.test.mjs'
       - 'automation/tests/aurelion-printify-offline.test.mjs'
       - 'automation/tests/printify-readonly.test.mjs'
+      - 'automation/tests/aurelion-printify-discovery.test.mjs'
+      - 'automation/providers/aurelion-printify-discovery.mjs'
       - 'automation/providers/aurelion-printify-offline.mjs'
       - 'automation/providers/printify-readonly.mjs'
       - 'automation/providers/printful-readonly.mjs'
@@ -31,4 +33,4 @@ jobs:
         with:
           node-version: '22'
       - name: Run mocked supplier tests (no supplier calls)
-        run: node --test automation/tests/aurelion-printful-offline.test.mjs automation/tests/aurelion-printify-offline.test.mjs automation/tests/printify-readonly.test.mjs
+        run: node --test automation/tests/aurelion-printful-offline.test.mjs automation/tests/aurelion-printify-offline.test.mjs automation/tests/printify-readonly.test.mjs automation/tests/aurelion-printify-discovery.test.mjs
