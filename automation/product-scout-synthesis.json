@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.synthesis.v1",
-  "generatedAt": "2026-10-24T11:36:33.972461+00:00",
+  "generatedAt": "2026-10-24T16:14:07.694025+00:00",
   "clusters": [
     {
       "topic": "express-typescript",
@@ -16,18 +16,8 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/hmcts/pip-frontend/issues/1109",
-          "b": "https://github.com/Stooa/Stooa/issues/186",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/pip-frontend/issues/1109",
-          "b": "https://github.com/mitodl/mitxpro/issues/2711",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/Stooa/Stooa/issues/186",
-          "b": "https://github.com/mitodl/mitxpro/issues/2711",
+          "a": "https://github.com/orgtoar/redwood-test/issues/286",
+          "b": "https://github.com/DevSecNinja/OpenArchiver/issues/14",
           "similarity": 1.0
         }
       ],
@@ -70,8 +60,14 @@
       "topic": "software-release-contract",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/azizu06/backrooms/issues/1",
+          "b": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
+          "similarity": 0.25
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -80,8 +76,8 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
-          "b": "https://github.com/bizzal70/itsalreadypriced/issues/1",
+          "a": "https://github.com/bizzal70/itsalreadypriced/issues/1",
+          "b": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
           "similarity": 0.286
         }
       ],
@@ -92,14 +88,8 @@
       "topic": "evidence-packets",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [
-        {
-          "a": "https://github.com/Ken0u/badminton-match-analyzer/issues/74",
-          "b": "https://github.com/askgogo84/gogo-memory-os/issues/274",
-          "similarity": 0.222
-        }
-      ],
-      "promotionEligible": true,
+      "relatedPairs": [],
+      "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -114,19 +104,8 @@
       "topic": "research-workflow",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [
-        {
-          "a": "https://github.com/mikesvoboda/nemotron-v3-home-security-intelligence/issues/6958",
-          "b": "https://github.com/mikesvoboda/nemotron-v3-home-security-intelligence/issues/6854",
-          "similarity": 0.25
-        },
-        {
-          "a": "https://github.com/pymedphys/pymedphys/issues/2075",
-          "b": "https://github.com/tvofi/heatpump_optimizer/issues/201",
-          "similarity": 0.2
-        }
-      ],
-      "promotionEligible": true,
+      "relatedPairs": [],
+      "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -170,30 +149,24 @@
     },
     {
       "topic": "browser-arcade",
-      "observationCount": 19,
-      "distinctSources": 19,
-      "relatedPairs": [
-        {
-          "a": "https://github.com/AnandChowdhary/gitclaw/issues/878",
-          "b": "https://github.com/AnandChowdhary/gitclaw/issues/877",
-          "similarity": 0.6
-        }
-      ],
-      "promotionEligible": true,
+      "observationCount": 0,
+      "distinctSources": 0,
+      "relatedPairs": [],
+      "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "earth-data",
-      "observationCount": 2,
-      "distinctSources": 2,
+      "observationCount": 0,
+      "distinctSources": 0,
       "relatedPairs": [],
       "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "camera-discovery",
-      "observationCount": 6,
-      "distinctSources": 6,
+      "observationCount": 0,
+      "distinctSources": 0,
       "relatedPairs": [],
       "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
