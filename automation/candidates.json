@@ -28,16 +28,16 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/Meeovi/AlternateFramework/issues/4",
-          "observedAt": "2026-10-24T05:00:36.205330+00:00",
+          "url": "https://github.com/hmcts/pip-frontend/issues/1109",
+          "observedAt": "2026-10-24T11:36:25.720599+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/Meeovi/meeovi-learning/issues/3",
-          "observedAt": "2026-10-24T05:00:36.205332+00:00",
+          "url": "https://github.com/Stooa/Stooa/issues/186",
+          "observedAt": "2026-10-24T11:36:25.720609+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -45,47 +45,15 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mitodl/mitxpro/issues/2711",
-          "observedAt": "2026-10-24T05:00:36.205344+00:00",
+          "observedAt": "2026-10-24T11:36:25.720623+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
-          "observedAt": "2026-10-24T05:00:36.205348+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/storm-software/storm-stack/issues/262",
-          "observedAt": "2026-10-24T05:00:36.205340+00:00",
-          "verified": true,
-          "claim": "@storm-stack/core-0.47.0.tgz: 135 vulnerabilities (highest severity is: 9.8)"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/Nickrock2002/Evershop/issues/3",
-          "observedAt": "2026-10-24T05:00:36.205342+00:00",
-          "verified": true,
-          "claim": "evershop-1.0.0.tgz: 149 vulnerabilities (highest severity is: 9.8)"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/snowdensb/Stirling-PDF/issues/57",
-          "observedAt": "2026-10-24T05:00:36.205354+00:00",
-          "verified": true,
-          "claim": "sdk-1.31.0.tgz: 13 vulnerabilities (highest severity is: 8.8)"
         }
       ],
       "status": "DISCOVERED_SOURCE_BACKED",
       "provenance": {
         "proposalId": "proposal:express-auth:001",
-        "promotedAt": "2026-10-24T05:00:41.204287+00:00",
+        "promotedAt": "2026-10-24T11:36:34.082353+00:00",
         "semantics": "SOURCE_BACKED_CANDIDATE_RESEARCH_STILL_REQUIRED"
       }
     }
