@@ -3,11 +3,11 @@
   "schema": "mint.acquisition.snapshot.v3",
   "semantics": "DURABLE_OFFER_AND_SOURCE_AGGREGATES_NOT_UNIQUE_VISITORS",
   "startedAt": "2026-10-19T14:31:15.661Z",
-  "generatedAt": "2026-10-24T23:25:19.626Z",
+  "generatedAt": "2026-10-25T01:23:10.982Z",
   "durableStorageConfigured": true,
   "privacy": "No IP, cookie, user-agent, or personal identifier stored by this counter.",
   "totals": {
-    "VISITED": 36,
+    "VISITED": 37,
     "CHECKOUT_STARTED": 4
   },
   "sources": {
@@ -32,7 +32,7 @@
       "CHECKOUT_STARTED": 0
     },
     "foundrytools_ts_starter": {
-      "VISITED": 6,
+      "VISITED": 7,
       "CHECKOUT_STARTED": 0
     }
   },
@@ -52,7 +52,7 @@
       }
     },
     "portfolio": {
-      "VISITED": 22,
+      "VISITED": 23,
       "CHECKOUT_STARTED": 0,
       "sources": {
         "qa_offers_20261012": {
@@ -68,7 +68,7 @@
           "CHECKOUT_STARTED": 0
         },
         "foundrytools_ts_starter": {
-          "VISITED": 6,
+          "VISITED": 7,
           "CHECKOUT_STARTED": 0
         }
       }
@@ -114,6 +114,6 @@
       }
     }
   },
-  "capturedAt": "2026-10-24T23:25:19.687Z",
+  "capturedAt": "2026-10-25T01:23:11.029Z",
   "captureSemantics": "SNAPSHOT_OF_DURABLE_AGGREGATES_NOT_UNIQUE_VISITORS"
 }
