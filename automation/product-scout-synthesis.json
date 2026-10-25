@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.synthesis.v1",
-  "generatedAt": "2026-10-24T21:10:43.595123+00:00",
+  "generatedAt": "2026-10-25T05:16:41.896588+00:00",
   "clusters": [
     {
       "topic": "express-typescript",
@@ -16,33 +16,228 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "a": "https://github.com/hmcts/dasi-ai-in-sdlc-aica/issues/47",
+          "b": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/dasi-ai-in-sdlc-aica/issues/47",
+          "b": "https://github.com/hmcts/cath-service/issues/3",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/dasi-ai-in-sdlc-aica/issues/47",
+          "b": "https://github.com/hmcts/wa-message-cron-service/issues/205",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/dasi-ai-in-sdlc-aica/issues/47",
+          "b": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/dasi-ai-in-sdlc-aica/issues/47",
           "b": "https://github.com/hmcts/appreg-frontend/issues/2",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "b": "https://github.com/mitodl/mitxpro/issues/2711",
+          "a": "https://github.com/hmcts/dasi-ai-in-sdlc-aica/issues/47",
+          "b": "https://github.com/sneat-co/circleus/issues/1",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "b": "https://github.com/Stooa/Stooa/issues/186",
+          "a": "https://github.com/hmcts/dasi-ai-in-sdlc-aica/issues/47",
+          "b": "https://github.com/sneat-co/sportius/issues/27",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/dasi-ai-in-sdlc-aica/issues/47",
+          "b": "https://github.com/sneat-co/sneat-club/issues/4",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/dasi-ai-in-sdlc-aica/issues/47",
+          "b": "https://github.com/redwoodjs/graphql/issues/3795",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "b": "https://github.com/hmcts/cath-service/issues/3",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "b": "https://github.com/hmcts/wa-message-cron-service/issues/205",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "b": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "b": "https://github.com/hmcts/appreg-frontend/issues/2",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "b": "https://github.com/sneat-co/circleus/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "b": "https://github.com/sneat-co/sportius/issues/27",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "b": "https://github.com/sneat-co/sneat-club/issues/4",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "b": "https://github.com/redwoodjs/graphql/issues/3795",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/cath-service/issues/3",
+          "b": "https://github.com/hmcts/wa-message-cron-service/issues/205",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/cath-service/issues/3",
+          "b": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/cath-service/issues/3",
+          "b": "https://github.com/hmcts/appreg-frontend/issues/2",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/cath-service/issues/3",
+          "b": "https://github.com/sneat-co/circleus/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/cath-service/issues/3",
+          "b": "https://github.com/sneat-co/sportius/issues/27",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/cath-service/issues/3",
+          "b": "https://github.com/sneat-co/sneat-club/issues/4",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/cath-service/issues/3",
+          "b": "https://github.com/redwoodjs/graphql/issues/3795",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/wa-message-cron-service/issues/205",
+          "b": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/wa-message-cron-service/issues/205",
+          "b": "https://github.com/hmcts/appreg-frontend/issues/2",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/wa-message-cron-service/issues/205",
+          "b": "https://github.com/sneat-co/circleus/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/wa-message-cron-service/issues/205",
+          "b": "https://github.com/sneat-co/sportius/issues/27",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/wa-message-cron-service/issues/205",
+          "b": "https://github.com/sneat-co/sneat-club/issues/4",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/wa-message-cron-service/issues/205",
+          "b": "https://github.com/redwoodjs/graphql/issues/3795",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "b": "https://github.com/hmcts/appreg-frontend/issues/2",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "b": "https://github.com/sneat-co/circleus/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "b": "https://github.com/sneat-co/sportius/issues/27",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "b": "https://github.com/sneat-co/sneat-club/issues/4",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "b": "https://github.com/redwoodjs/graphql/issues/3795",
           "similarity": 1.0
         },
         {
           "a": "https://github.com/hmcts/appreg-frontend/issues/2",
-          "b": "https://github.com/mitodl/mitxpro/issues/2711",
+          "b": "https://github.com/sneat-co/circleus/issues/1",
           "similarity": 1.0
         },
         {
           "a": "https://github.com/hmcts/appreg-frontend/issues/2",
-          "b": "https://github.com/Stooa/Stooa/issues/186",
+          "b": "https://github.com/sneat-co/sportius/issues/27",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/mitodl/mitxpro/issues/2711",
-          "b": "https://github.com/Stooa/Stooa/issues/186",
+          "a": "https://github.com/hmcts/appreg-frontend/issues/2",
+          "b": "https://github.com/sneat-co/sneat-club/issues/4",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/appreg-frontend/issues/2",
+          "b": "https://github.com/redwoodjs/graphql/issues/3795",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/circleus/issues/1",
+          "b": "https://github.com/sneat-co/sportius/issues/27",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/circleus/issues/1",
+          "b": "https://github.com/sneat-co/sneat-club/issues/4",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/circleus/issues/1",
+          "b": "https://github.com/redwoodjs/graphql/issues/3795",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sportius/issues/27",
+          "b": "https://github.com/sneat-co/sneat-club/issues/4",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sportius/issues/27",
+          "b": "https://github.com/redwoodjs/graphql/issues/3795",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sneat-club/issues/4",
+          "b": "https://github.com/redwoodjs/graphql/issues/3795",
           "similarity": 1.0
         }
       ],
@@ -117,6 +312,16 @@
           "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1715",
           "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1714",
           "similarity": 0.2
+        },
+        {
+          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2472",
+          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2471",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/jerryyyu/shengji/issues/707",
+          "b": "https://github.com/jerryyyu/shengji/issues/1075",
+          "similarity": 0.286
         }
       ],
       "promotionEligible": true,
@@ -139,6 +344,11 @@
           "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1715",
           "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/1714",
           "similarity": 0.2
+        },
+        {
+          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2472",
+          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2471",
+          "similarity": 1.0
         }
       ],
       "promotionEligible": true,
