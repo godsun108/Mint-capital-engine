@@ -28,64 +28,8 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/Nickrock2002/Evershop/issues/3",
-          "observedAt": "2026-10-25T16:48:12.393151+00:00",
-          "verified": true,
-          "claim": "evershop-1.0.0.tgz: 150 vulnerabilities (highest severity is: 9.8)"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/neinteractiveliterature/intercode/issues/6560",
-          "observedAt": "2026-10-25T16:48:12.393155+00:00",
-          "verified": true,
-          "claim": "doc-site-0.0.0.tgz: 92 vulnerabilities (highest severity is: 10.0)"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/UK-Export-Finance/dtfs2/issues/4589",
-          "observedAt": "2026-10-25T16:48:12.393156+00:00",
-          "verified": true,
-          "claim": "tfm-api-1.0.0.tgz: 47 vulnerabilities (highest severity is: 10.0)"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/UK-Export-Finance/dtfs2/issues/2925",
-          "observedAt": "2026-10-25T16:48:12.393157+00:00",
-          "verified": true,
-          "claim": "tfm-ui-1.0.0.tgz: 50 vulnerabilities (highest severity is: 10.0)"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/fdm-monster/fdm-monster-docs/issues/339",
-          "observedAt": "2026-10-25T16:48:12.393159+00:00",
-          "verified": true,
-          "claim": "core-3.9.2.tgz: 114 vulnerabilities (highest severity is: 10.0)"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/mitodl/mitxpro/issues/2711",
-          "observedAt": "2026-10-25T16:48:12.393161+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/sneat-co/sneat-ext-template/issues/17",
-          "observedAt": "2026-10-25T16:48:12.393163+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
           "url": "https://github.com/TravisPooley/vulhub/issues/4",
-          "observedAt": "2026-10-25T16:48:12.393164+00:00",
+          "observedAt": "2026-10-25T21:13:14.208162+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -93,7 +37,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/sneat-co/sneat-club/issues/4",
-          "observedAt": "2026-10-25T16:48:12.393167+00:00",
+          "observedAt": "2026-10-25T21:13:14.208166+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -101,7 +45,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "observedAt": "2026-10-25T16:48:12.393168+00:00",
+          "observedAt": "2026-10-25T21:13:14.208170+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         }
@@ -109,7 +53,7 @@
       "status": "DISCOVERED_SOURCE_BACKED",
       "provenance": {
         "proposalId": "proposal:express-auth:001",
-        "promotedAt": "2026-10-25T16:48:20.243921+00:00",
+        "promotedAt": "2026-10-25T21:13:21.184328+00:00",
         "semantics": "SOURCE_BACKED_CANDIDATE_RESEARCH_STILL_REQUIRED"
       }
     }
