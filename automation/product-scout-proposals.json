@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.proposals.v1",
-  "generatedAt": "2026-10-26T13:31:43.509454+00:00",
+  "generatedAt": "2026-10-26T22:52:23.671867+00:00",
   "semantics": "RESEARCH_PROPOSALS_NOT_PRODUCT_CANDIDATES",
   "proposals": [
     {
@@ -13,64 +13,18 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/sneat-co/sneat-ext-template/issues/17",
-          "observedAt": "2026-10-26T13:31:34.069052+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
           "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "observedAt": "2026-10-26T13:31:34.069055+00:00",
+          "observedAt": "2026-10-26T22:52:15.455033+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/mitodl/mitxpro/issues/2711",
-          "observedAt": "2026-10-26T13:31:34.069071+00:00",
+          "url": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "observedAt": "2026-10-26T22:52:15.455044+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
-          "observedAt": "2026-10-26T13:31:34.069074+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        }
-      ],
-      "guardrails": [
-        "proposal_is_not_verified_demand",
-        "research_must_define_customer_and_problem",
-        "no_build_before_product_gate"
-      ]
-    },
-    {
-      "id": "proposal:venture-economics:001",
-      "topic": "venture-economics",
-      "status": "PROPOSED_FOR_RESEARCH",
-      "regulated": false,
-      "upfrontCostUsd": 0,
-      "evidence": [
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/SaikiK12/T/issues/7",
-          "observedAt": "2026-10-26T13:31:35.174127+00:00",
-          "verified": true,
-          "claim": "Research handoff room: Claude and Codex"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
-          "observedAt": "2026-10-26T13:31:35.174141+00:00",
-          "verified": true,
-          "claim": "Central message board \u2014 Hermes, Claude, Codex and operator coordination"
         }
       ],
       "guardrails": [
@@ -90,7 +44,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2793",
-          "observedAt": "2026-10-26T13:31:36.274651+00:00",
+          "observedAt": "2026-10-26T22:52:17.060117+00:00",
           "verified": true,
           "claim": "Team Naya live board \u2014 coordination venue (successor to #2765)"
         },
@@ -98,7 +52,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2641",
-          "observedAt": "2026-10-26T13:31:36.274657+00:00",
+          "observedAt": "2026-10-26T22:52:17.060129+00:00",
           "verified": true,
           "claim": "[NAYA] Team coordination feed \u2014 live board (successor to #2537)"
         },
@@ -106,47 +60,9 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/554",
-          "observedAt": "2026-10-26T13:31:36.274660+00:00",
+          "observedAt": "2026-10-26T22:52:17.060131+00:00",
           "verified": true,
           "claim": "\ud83d\udd31 TEAM NAYA \u2014 Naya \u2194 Coda Direct Communication Board"
-        }
-      ],
-      "guardrails": [
-        "proposal_is_not_verified_demand",
-        "research_must_define_customer_and_problem",
-        "no_build_before_product_gate"
-      ]
-    },
-    {
-      "id": "proposal:software-release-contract:001",
-      "topic": "software-release-contract",
-      "status": "PROPOSED_FOR_RESEARCH",
-      "regulated": false,
-      "upfrontCostUsd": 0,
-      "evidence": [
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/mysteropodes/nemo/issues/1062",
-          "observedAt": "2026-10-26T13:31:37.228959+00:00",
-          "verified": true,
-          "claim": "[NEMO:CHECKINS] Shared hourly orchestrator progress log"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/rbmr/wordle-opt/issues/1",
-          "observedAt": "2026-10-26T13:31:37.228963+00:00",
-          "verified": true,
-          "claim": "Agent progress log"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/OptimumAF/Circadian-Predictive-Coding/issues/18",
-          "observedAt": "2026-10-26T13:31:37.228970+00:00",
-          "verified": true,
-          "claim": "Circadian project tracker \u2014 active work, roadmap and agent progress"
         }
       ],
       "guardrails": [
@@ -166,7 +82,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
-          "observedAt": "2026-10-26T13:31:38.323257+00:00",
+          "observedAt": "2026-10-26T22:52:19.057028+00:00",
           "verified": true,
           "claim": "[TEAM NAYA] Coordination feed \u2014 successor to #2793"
         },
@@ -174,7 +90,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2793",
-          "observedAt": "2026-10-26T13:31:38.323267+00:00",
+          "observedAt": "2026-10-26T22:52:19.057044+00:00",
           "verified": true,
           "claim": "Team Naya live board \u2014 coordination venue (successor to #2765)"
         },
@@ -182,85 +98,25 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2641",
-          "observedAt": "2026-10-26T13:31:38.323274+00:00",
+          "observedAt": "2026-10-26T22:52:19.057062+00:00",
           "verified": true,
           "claim": "[NAYA] Team coordination feed \u2014 live board (successor to #2537)"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
-          "observedAt": "2026-10-26T13:31:38.323264+00:00",
-          "verified": true,
-          "claim": "\ud83e\udded Daily content opportunities"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
           "url": "https://github.com/bizzal70/itsalreadypriced/issues/1",
-          "observedAt": "2026-10-26T13:31:38.323275+00:00",
+          "observedAt": "2026-10-26T22:52:19.057057+00:00",
           "verified": true,
           "claim": "\ud83d\udd0e Daily content review \u2014 It's Already Priced \u2014 Blog + X"
-        }
-      ],
-      "guardrails": [
-        "proposal_is_not_verified_demand",
-        "research_must_define_customer_and_problem",
-        "no_build_before_product_gate"
-      ]
-    },
-    {
-      "id": "proposal:evidence-packets:001",
-      "topic": "evidence-packets",
-      "status": "PROPOSED_FOR_RESEARCH",
-      "regulated": false,
-      "upfrontCostUsd": 0,
-      "evidence": [
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/akiojin/gwt/issues/3431",
-          "observedAt": "2026-10-26T13:31:39.143977+00:00",
-          "verified": true,
-          "claim": "SPEC: PM \u30a8\u30fc\u30b8\u30a7\u30f3\u30c8 \u2014 \u5e38\u99d0\u30d7\u30ed\u30b8\u30a7\u30af\u30c8\u30de\u30cd\u30fc\u30b8\u30e3\u30fc\uff08\u552f\u4e00\u306e\u5bfe\u8a71\u7a93\u53e3\u30fbIssue \u5206\u89e3/\u767b\u9332/\u8a08\u753b\u30fb\u610f\u5473\u7684\u9806\u5e8f\u6c7a\u5b9a\u30fbMonitor \u7d4c\u7531\u8d77\u52d5\u6307\u793a\uff09"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/akiojin/gwt/issues/3165",
-          "observedAt": "2026-10-26T13:31:39.143980+00:00",
+          "url": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
+          "observedAt": "2026-10-26T22:52:19.057058+00:00",
           "verified": true,
-          "claim": "SPEC: Issue auto-improve monitor"
-        }
-      ],
-      "guardrails": [
-        "proposal_is_not_verified_demand",
-        "research_must_define_customer_and_problem",
-        "no_build_before_product_gate"
-      ]
-    },
-    {
-      "id": "proposal:research-workflow:001",
-      "topic": "research-workflow",
-      "status": "PROPOSED_FOR_RESEARCH",
-      "regulated": false,
-      "upfrontCostUsd": 0,
-      "evidence": [
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2472",
-          "observedAt": "2026-10-26T13:31:41.745915+00:00",
-          "verified": true,
-          "claim": "Lane 5 \u2014 worker sign-in/out feed"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2471",
-          "observedAt": "2026-10-26T13:31:41.745919+00:00",
-          "verified": true,
-          "claim": "Lane 4 \u2014 worker sign-in/out feed"
+          "claim": "\ud83e\udded Daily content opportunities"
         }
       ],
       "guardrails": [
@@ -280,7 +136,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mealie-recipes/mealie/issues/1306",
-          "observedAt": "2026-10-26T13:31:42.758830+00:00",
+          "observedAt": "2026-10-26T22:52:22.809663+00:00",
           "verified": true,
           "claim": "[v1.0.0b] [Task] - Export Recipes and Cookbooks to PDF"
         },
@@ -288,7 +144,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/IamTugy/recipes/issues/21",
-          "observedAt": "2026-10-26T13:31:42.758835+00:00",
+          "observedAt": "2026-10-26T22:52:22.809666+00:00",
           "verified": true,
           "claim": "Cookbook/collection PDF export"
         },
@@ -296,7 +152,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Benkendorfer/recipe-manager/issues/7",
-          "observedAt": "2026-10-26T13:31:42.758841+00:00",
+          "observedAt": "2026-10-26T22:52:22.809670+00:00",
           "verified": true,
           "claim": "Import recipes from PDF files"
         },
@@ -304,7 +160,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mathnauleau/commeat/issues/3",
-          "observedAt": "2026-10-26T13:31:42.758839+00:00",
+          "observedAt": "2026-10-26T22:52:22.809669+00:00",
           "verified": true,
           "claim": "Later: Print full cookbook PDF"
         },
@@ -312,7 +168,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7826",
-          "observedAt": "2026-10-26T13:31:42.758844+00:00",
+          "observedAt": "2026-10-26T22:52:22.809673+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -320,7 +176,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7825",
-          "observedAt": "2026-10-26T13:31:42.758845+00:00",
+          "observedAt": "2026-10-26T22:52:22.809674+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -328,7 +184,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7824",
-          "observedAt": "2026-10-26T13:31:42.758847+00:00",
+          "observedAt": "2026-10-26T22:52:22.809676+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         }

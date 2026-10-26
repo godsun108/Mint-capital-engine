@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.synthesis.v1",
-  "generatedAt": "2026-10-26T13:31:43.463746+00:00",
+  "generatedAt": "2026-10-26T22:52:23.632422+00:00",
   "clusters": [
     {
       "topic": "express-typescript",
@@ -16,33 +16,8 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
-          "b": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
-          "b": "https://github.com/mitodl/mitxpro/issues/2711",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
-          "b": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
-          "similarity": 1.0
-        },
-        {
           "a": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "b": "https://github.com/mitodl/mitxpro/issues/2711",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "b": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/mitodl/mitxpro/issues/2711",
-          "b": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "b": "https://github.com/sneat-co/sneat-ext-template/issues/17",
           "similarity": 1.0
         }
       ],
@@ -53,14 +28,8 @@
       "topic": "venture-economics",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [
-        {
-          "a": "https://github.com/SaikiK12/T/issues/7",
-          "b": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
-          "similarity": 0.182
-        }
-      ],
-      "promotionEligible": true,
+      "relatedPairs": [],
+      "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -91,19 +60,8 @@
       "topic": "software-release-contract",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [
-        {
-          "a": "https://github.com/mysteropodes/nemo/issues/1062",
-          "b": "https://github.com/rbmr/wordle-opt/issues/1",
-          "similarity": 0.25
-        },
-        {
-          "a": "https://github.com/rbmr/wordle-opt/issues/1",
-          "b": "https://github.com/OptimumAF/Circadian-Predictive-Coding/issues/18",
-          "similarity": 0.222
-        }
-      ],
-      "promotionEligible": true,
+      "relatedPairs": [],
+      "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -122,14 +80,14 @@
           "similarity": 0.556
         },
         {
-          "a": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
-          "b": "https://github.com/bizzal70/itsalreadypriced/issues/1",
-          "similarity": 0.286
-        },
-        {
           "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2793",
           "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2641",
           "similarity": 0.6
+        },
+        {
+          "a": "https://github.com/bizzal70/itsalreadypriced/issues/1",
+          "b": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
+          "similarity": 0.286
         }
       ],
       "promotionEligible": true,
@@ -139,14 +97,8 @@
       "topic": "evidence-packets",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [
-        {
-          "a": "https://github.com/akiojin/gwt/issues/3431",
-          "b": "https://github.com/akiojin/gwt/issues/3165",
-          "similarity": 0.75
-        }
-      ],
-      "promotionEligible": true,
+      "relatedPairs": [],
+      "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -161,14 +113,8 @@
       "topic": "research-workflow",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [
-        {
-          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2472",
-          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2471",
-          "similarity": 1.0
-        }
-      ],
-      "promotionEligible": true,
+      "relatedPairs": [],
+      "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
