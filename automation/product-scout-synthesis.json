@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.synthesis.v1",
-  "generatedAt": "2026-10-27T05:34:52.474765+00:00",
+  "generatedAt": "2026-10-27T12:39:21.197611+00:00",
   "clusters": [
     {
       "topic": "express-typescript",
@@ -16,78 +16,8 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "b": "https://github.com/hmcts/cnp-plum-frontend/issues/167",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "b": "https://github.com/hmcts/cath-service/issues/3",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "b": "https://github.com/sneat-co/sneat-ext-template/issues/17",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "b": "https://github.com/hmcts/sptribs-frontend/issues/444",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "b": "https://github.com/hmcts/fact-frontend/issues/772",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/cnp-plum-frontend/issues/167",
-          "b": "https://github.com/hmcts/cath-service/issues/3",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/cnp-plum-frontend/issues/167",
-          "b": "https://github.com/sneat-co/sneat-ext-template/issues/17",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/cnp-plum-frontend/issues/167",
-          "b": "https://github.com/hmcts/sptribs-frontend/issues/444",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/cnp-plum-frontend/issues/167",
-          "b": "https://github.com/hmcts/fact-frontend/issues/772",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/cath-service/issues/3",
-          "b": "https://github.com/sneat-co/sneat-ext-template/issues/17",
-          "similarity": 1.0
-        },
-        {
           "a": "https://github.com/hmcts/cath-service/issues/3",
           "b": "https://github.com/hmcts/sptribs-frontend/issues/444",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/cath-service/issues/3",
-          "b": "https://github.com/hmcts/fact-frontend/issues/772",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
-          "b": "https://github.com/hmcts/sptribs-frontend/issues/444",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
-          "b": "https://github.com/hmcts/fact-frontend/issues/772",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/sptribs-frontend/issues/444",
-          "b": "https://github.com/hmcts/fact-frontend/issues/772",
           "similarity": 1.0
         }
       ],
@@ -98,8 +28,14 @@
       "topic": "venture-economics",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
+          "b": "https://github.com/SaikiK12/T/issues/7",
+          "similarity": 0.182
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -188,11 +124,6 @@
           "a": "https://github.com/mattleask373-rgb/life-lived-network/issues/125",
           "b": "https://github.com/askgogo84/gogo-memory-os/issues/274",
           "similarity": 0.222
-        },
-        {
-          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2472",
-          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2471",
-          "similarity": 1.0
         }
       ],
       "promotionEligible": true,
@@ -239,73 +170,56 @@
     },
     {
       "topic": "browser-arcade",
-      "observationCount": 19,
-      "distinctSources": 19,
+      "observationCount": 0,
+      "distinctSources": 0,
       "relatedPairs": [],
       "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "earth-data",
-      "observationCount": 3,
-      "distinctSources": 3,
+      "observationCount": 0,
+      "distinctSources": 0,
       "relatedPairs": [],
       "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "camera-discovery",
-      "observationCount": 6,
-      "distinctSources": 6,
+      "observationCount": 0,
+      "distinctSources": 0,
       "relatedPairs": [],
       "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "forecasting",
-      "observationCount": 20,
-      "distinctSources": 20,
+      "observationCount": 0,
+      "distinctSources": 0,
       "relatedPairs": [],
       "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "goal-os",
-      "observationCount": 19,
-      "distinctSources": 19,
-      "relatedPairs": [
-        {
-          "a": "https://github.com/rempemat-eng/appify/issues/149",
-          "b": "https://github.com/HassiMian/app-assps-edu-pk/issues/4",
-          "similarity": 0.2
-        },
-        {
-          "a": "https://github.com/abyyworld/auto-post-/issues/7",
-          "b": "https://github.com/abyyworld/auto-post-/issues/6",
-          "similarity": 0.5
-        }
-      ],
-      "promotionEligible": true,
+      "observationCount": 0,
+      "distinctSources": 0,
+      "relatedPairs": [],
+      "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "editorial-evidence",
-      "observationCount": 20,
-      "distinctSources": 20,
-      "relatedPairs": [
-        {
-          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
-          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2793",
-          "similarity": 0.4
-        }
-      ],
-      "promotionEligible": true,
+      "observationCount": 0,
+      "distinctSources": 0,
+      "relatedPairs": [],
+      "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "subscription-service",
-      "observationCount": 20,
-      "distinctSources": 20,
+      "observationCount": 0,
+      "distinctSources": 0,
       "relatedPairs": [],
       "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
