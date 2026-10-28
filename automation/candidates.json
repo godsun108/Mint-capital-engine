@@ -28,32 +28,8 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/sptribs-frontend/issues/444",
-          "observedAt": "2026-10-28T13:31:10.900160+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/hmcts/fact-public-frontend/issues/1",
-          "observedAt": "2026-10-28T13:31:10.900183+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
-          "observedAt": "2026-10-28T13:31:10.900190+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/mitodl/mitxpro/issues/2711",
-          "observedAt": "2026-10-28T13:31:10.900197+00:00",
+          "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "observedAt": "2026-10-28T22:50:34.595922+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -61,39 +37,55 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/hmcts/fact-admin-frontend/issues/3",
-          "observedAt": "2026-10-28T13:31:10.900203+00:00",
+          "observedAt": "2026-10-28T22:50:34.595933+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/sneat-co/sportius/issues/27",
-          "observedAt": "2026-10-28T13:31:10.900205+00:00",
+          "url": "https://github.com/hmcts/rpts-frontend/issues/13",
+          "observedAt": "2026-10-28T22:50:34.595936+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/snowdensb/Stirling-PDF/issues/57",
-          "observedAt": "2026-10-28T13:31:10.900192+00:00",
+          "url": "https://github.com/hmcts/fact-public-frontend/issues/1",
+          "observedAt": "2026-10-28T22:50:34.595938+00:00",
           "verified": true,
-          "claim": "sdk-1.31.0.tgz: 14 vulnerabilities (highest severity is: 8.8) - autoclosed"
+          "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/Vonage-Community/tutorial-interactive_tutorials/issues/398",
-          "observedAt": "2026-10-28T13:31:10.900206+00:00",
+          "url": "https://github.com/hmcts/wa-reporting-frontend/issues/11",
+          "observedAt": "2026-10-28T22:50:34.595940+00:00",
           "verified": true,
-          "claim": "runtime-1.0.0-beta.9.tgz: 65 vulnerabilities (highest severity is: 9.1)"
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/wa-task-batch-service/issues/87",
+          "observedAt": "2026-10-28T22:50:34.595942+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/sptribs-frontend/issues/444",
+          "observedAt": "2026-10-28T22:50:34.595944+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
         }
       ],
       "status": "DISCOVERED_SOURCE_BACKED",
       "provenance": {
         "proposalId": "proposal:express-auth:001",
-        "promotedAt": "2026-10-28T13:31:16.626105+00:00",
+        "promotedAt": "2026-10-28T22:50:39.750359+00:00",
         "semantics": "SOURCE_BACKED_CANDIDATE_RESEARCH_STILL_REQUIRED"
       }
     }
