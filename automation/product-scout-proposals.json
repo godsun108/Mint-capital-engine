@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.proposals.v1",
-  "generatedAt": "2026-10-29T13:41:43.032020+00:00",
+  "generatedAt": "2026-10-29T22:57:51.562856+00:00",
   "semantics": "RESEARCH_PROPOSALS_NOT_PRODUCT_CANDIDATES",
   "proposals": [
     {
@@ -13,18 +13,74 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
+          "url": "https://github.com/sneat-co/prioritarius/issues/1",
+          "observedAt": "2026-10-29T22:57:44.357425+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "observedAt": "2026-10-29T22:57:44.357430+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/sneat-co/sneat-club/issues/4",
+          "observedAt": "2026-10-29T22:57:44.357444+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/sneat-co/circleus/issues/1",
+          "observedAt": "2026-10-29T22:57:44.357449+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "observedAt": "2026-10-29T22:57:44.357462+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/ontripai/cladora-website/issues/463",
+          "observedAt": "2026-10-29T22:57:44.357434+00:00",
+          "verified": true,
+          "claim": "PM: central coordination and evidence register for Codex seats"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
           "url": "https://github.com/rorymclark-prog/ImbewuField/issues/35",
-          "observedAt": "2026-10-29T13:41:36.203280+00:00",
+          "observedAt": "2026-10-29T22:57:44.357453+00:00",
           "verified": true,
           "claim": "Coordination ledger \u2014 Claude \u21c4 Codex (append-only)"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/ontripai/cladora-website/issues/463",
-          "observedAt": "2026-10-29T13:41:36.203286+00:00",
+          "url": "https://github.com/neinteractiveliterature/intercode/issues/6560",
+          "observedAt": "2026-10-29T22:57:44.357458+00:00",
           "verified": true,
-          "claim": "PM: central coordination and evidence register for Codex seats"
+          "claim": "doc-site-0.0.0.tgz: 99 vulnerabilities (highest severity is: 10.0)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/AReid987/career-compass/issues/323",
+          "observedAt": "2026-10-29T22:57:44.357464+00:00",
+          "verified": true,
+          "claim": "nx-plugin-vite-2.2.1.tgz: 56 vulnerabilities (highest severity is: 9.8)"
         }
       ],
       "guardrails": [
@@ -44,7 +100,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
-          "observedAt": "2026-10-29T13:41:38.426559+00:00",
+          "observedAt": "2026-10-29T22:57:46.027895+00:00",
           "verified": true,
           "claim": "[TEAM NAYA] Coordination feed \u2014 successor to #2793"
         },
@@ -52,7 +108,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2793",
-          "observedAt": "2026-10-29T13:41:38.426582+00:00",
+          "observedAt": "2026-10-29T22:57:46.027935+00:00",
           "verified": true,
           "claim": "Team Naya live board \u2014 coordination venue (successor to #2765)"
         },
@@ -60,7 +116,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2641",
-          "observedAt": "2026-10-29T13:41:38.426597+00:00",
+          "observedAt": "2026-10-29T22:57:46.027943+00:00",
           "verified": true,
           "claim": "[NAYA] Team coordination feed \u2014 live board (successor to #2537)"
         },
@@ -68,7 +124,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/554",
-          "observedAt": "2026-10-29T13:41:38.426599+00:00",
+          "observedAt": "2026-10-29T22:57:46.027945+00:00",
           "verified": true,
           "claim": "\ud83d\udd31 TEAM NAYA \u2014 Naya \u2194 Coda Direct Communication Board"
         }
@@ -90,7 +146,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
-          "observedAt": "2026-10-29T13:41:40.432803+00:00",
+          "observedAt": "2026-10-29T22:57:47.676963+00:00",
           "verified": true,
           "claim": "[TEAM NAYA] Coordination feed \u2014 successor to #2793"
         },
@@ -98,7 +154,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2793",
-          "observedAt": "2026-10-29T13:41:40.432849+00:00",
+          "observedAt": "2026-10-29T22:57:47.677033+00:00",
           "verified": true,
           "claim": "Team Naya live board \u2014 coordination venue (successor to #2765)"
         },
@@ -106,7 +162,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/bizzal70/itsalreadypriced/issues/1",
-          "observedAt": "2026-10-29T13:41:40.432824+00:00",
+          "observedAt": "2026-10-29T22:57:47.677022+00:00",
           "verified": true,
           "claim": "\ud83d\udd0e Daily content review \u2014 It's Already Priced \u2014 Blog + X"
         },
@@ -114,9 +170,39 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
-          "observedAt": "2026-10-29T13:41:40.432831+00:00",
+          "observedAt": "2026-10-29T22:57:47.677024+00:00",
           "verified": true,
           "claim": "\ud83e\udded Daily content opportunities"
+        }
+      ],
+      "guardrails": [
+        "proposal_is_not_verified_demand",
+        "research_must_define_customer_and_problem",
+        "no_build_before_product_gate"
+      ]
+    },
+    {
+      "id": "proposal:research-workflow:001",
+      "topic": "research-workflow",
+      "status": "PROPOSED_FOR_RESEARCH",
+      "regulated": false,
+      "upfrontCostUsd": 0,
+      "evidence": [
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
+          "observedAt": "2026-10-29T22:57:50.733792+00:00",
+          "verified": true,
+          "claim": "[TEAM NAYA] Coordination feed \u2014 successor to #2793"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/Akbarhoja/wrytely-agent/issues/4",
+          "observedAt": "2026-10-29T22:57:50.733798+00:00",
+          "verified": true,
+          "claim": "Team coordination: ownership, interface agreements and handoffs"
         }
       ],
       "guardrails": [
