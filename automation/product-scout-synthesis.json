@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.synthesis.v1",
-  "generatedAt": "2026-10-30T13:31:46.336615+00:00",
+  "generatedAt": "2026-10-30T22:38:25.492875+00:00",
   "clusters": [
     {
       "topic": "express-typescript",
@@ -16,18 +16,58 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
-          "b": "https://github.com/hmcts/pip-frontend/issues/1109",
+          "a": "https://github.com/ontripai/cladora-website/issues/463",
+          "b": "https://github.com/rorymclark-prog/ImbewuField/issues/35",
+          "similarity": 0.222
+        },
+        {
+          "a": "https://github.com/sneat-co/circleus/issues/1",
+          "b": "https://github.com/sneat-co/sneat-ext-template/issues/17",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
-          "b": "https://github.com/hmcts/sptribs-frontend/issues/444",
+          "a": "https://github.com/sneat-co/circleus/issues/1",
+          "b": "https://github.com/sneat-co/sportius/issues/27",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/hmcts/pip-frontend/issues/1109",
-          "b": "https://github.com/hmcts/sptribs-frontend/issues/444",
+          "a": "https://github.com/sneat-co/circleus/issues/1",
+          "b": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/circleus/issues/1",
+          "b": "https://github.com/hmcts/juror-er-portal/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "b": "https://github.com/sneat-co/sportius/issues/27",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "b": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "b": "https://github.com/hmcts/juror-er-portal/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sportius/issues/27",
+          "b": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sportius/issues/27",
+          "b": "https://github.com/hmcts/juror-er-portal/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "b": "https://github.com/hmcts/juror-er-portal/issues/1",
           "similarity": 1.0
         }
       ],
@@ -53,29 +93,9 @@
           "similarity": 0.4
         },
         {
-          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
-          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2641",
-          "similarity": 0.556
-        },
-        {
-          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
-          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/554",
-          "similarity": 0.2
-        },
-        {
-          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2793",
-          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2641",
-          "similarity": 0.6
-        },
-        {
-          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2793",
-          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/554",
-          "similarity": 0.273
-        },
-        {
-          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2641",
-          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/554",
-          "similarity": 0.273
+          "a": "https://github.com/moiraleevincent/GPT/issues/3",
+          "b": "https://github.com/Minuteandone/Village-chat-tool/issues/1",
+          "similarity": 0.286
         }
       ],
       "promotionEligible": true,
@@ -85,14 +105,8 @@
       "topic": "software-release-contract",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [
-        {
-          "a": "https://github.com/honghanh153-creator/la-lanh/issues/2",
-          "b": "https://github.com/rempemat-eng/appify/issues/149",
-          "similarity": 0.3
-        }
-      ],
-      "promotionEligible": true,
+      "relatedPairs": [],
+      "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -101,14 +115,14 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/bizzal70/itsalreadypriced/issues/1",
-          "b": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
-          "similarity": 0.286
-        },
-        {
           "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
           "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2793",
           "similarity": 0.4
+        },
+        {
+          "a": "https://github.com/bizzal70/itsalreadypriced/issues/1",
+          "b": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
+          "similarity": 0.286
         }
       ],
       "promotionEligible": true,
@@ -179,144 +193,56 @@
     },
     {
       "topic": "browser-arcade",
-      "observationCount": 19,
-      "distinctSources": 19,
+      "observationCount": 0,
+      "distinctSources": 0,
       "relatedPairs": [],
       "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "earth-data",
-      "observationCount": 3,
-      "distinctSources": 3,
+      "observationCount": 0,
+      "distinctSources": 0,
       "relatedPairs": [],
       "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "camera-discovery",
-      "observationCount": 7,
-      "distinctSources": 7,
+      "observationCount": 0,
+      "distinctSources": 0,
       "relatedPairs": [],
       "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "forecasting",
-      "observationCount": 20,
-      "distinctSources": 20,
-      "relatedPairs": [
-        {
-          "a": "https://github.com/luohongk/Embodied-AI-Daily/issues/1066",
-          "b": "https://github.com/xllm-io/daily-papers/issues/78",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/luohongk/Embodied-AI-Daily/issues/1066",
-          "b": "https://github.com/xllm-io/daily-papers/issues/77",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/luohongk/Embodied-AI-Daily/issues/1066",
-          "b": "https://github.com/xllm-io/daily-papers/issues/76",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/luohongk/Embodied-AI-Daily/issues/1066",
-          "b": "https://github.com/FFFrosty/DailyArXiv/issues/321",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/SaikiK12/T/issues/7",
-          "b": "https://github.com/dkaps6/imtiredofthis/issues/535",
-          "similarity": 0.375
-        },
-        {
-          "a": "https://github.com/xllm-io/daily-papers/issues/78",
-          "b": "https://github.com/xllm-io/daily-papers/issues/77",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/xllm-io/daily-papers/issues/78",
-          "b": "https://github.com/xllm-io/daily-papers/issues/76",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/xllm-io/daily-papers/issues/78",
-          "b": "https://github.com/FFFrosty/DailyArXiv/issues/321",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/xllm-io/daily-papers/issues/77",
-          "b": "https://github.com/xllm-io/daily-papers/issues/76",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/xllm-io/daily-papers/issues/77",
-          "b": "https://github.com/FFFrosty/DailyArXiv/issues/321",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/xllm-io/daily-papers/issues/76",
-          "b": "https://github.com/FFFrosty/DailyArXiv/issues/321",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/dereknex/immune-brain/issues/286",
-          "b": "https://github.com/dereknex/immune-brain/issues/204",
-          "similarity": 0.357
-        }
-      ],
-      "promotionEligible": true,
+      "observationCount": 0,
+      "distinctSources": 0,
+      "relatedPairs": [],
+      "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "goal-os",
-      "observationCount": 19,
-      "distinctSources": 19,
-      "relatedPairs": [
-        {
-          "a": "https://github.com/rempemat-eng/appify/issues/149",
-          "b": "https://github.com/HassiMian/app-assps-edu-pk/issues/4",
-          "similarity": 0.2
-        },
-        {
-          "a": "https://github.com/abyyworld/auto-post-/issues/7",
-          "b": "https://github.com/abyyworld/auto-post-/issues/6",
-          "similarity": 0.5
-        }
-      ],
-      "promotionEligible": true,
+      "observationCount": 0,
+      "distinctSources": 0,
+      "relatedPairs": [],
+      "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "editorial-evidence",
-      "observationCount": 20,
-      "distinctSources": 20,
-      "relatedPairs": [
-        {
-          "a": "https://github.com/bizzal70/Audit_User_Agent/issues/1",
-          "b": "https://github.com/bizzal70/itsalreadywhen/issues/1",
-          "similarity": 0.429
-        },
-        {
-          "a": "https://github.com/bizzal70/Audit_User_Agent/issues/1",
-          "b": "https://github.com/bizzal70/itsalreadypriced/issues/1",
-          "similarity": 0.429
-        },
-        {
-          "a": "https://github.com/bizzal70/itsalreadywhen/issues/1",
-          "b": "https://github.com/bizzal70/itsalreadypriced/issues/1",
-          "similarity": 0.714
-        }
-      ],
-      "promotionEligible": true,
+      "observationCount": 0,
+      "distinctSources": 0,
+      "relatedPairs": [],
+      "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "subscription-service",
-      "observationCount": 20,
-      "distinctSources": 20,
+      "observationCount": 0,
+      "distinctSources": 0,
       "relatedPairs": [],
       "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"

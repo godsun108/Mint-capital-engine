@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.proposals.v1",
-  "generatedAt": "2026-10-30T13:31:46.397381+00:00",
+  "generatedAt": "2026-10-30T22:38:25.548256+00:00",
   "semantics": "RESEARCH_PROPOSALS_NOT_PRODUCT_CANDIDATES",
   "proposals": [
     {
@@ -13,24 +13,56 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
-          "observedAt": "2026-10-30T13:31:28.663332+00:00",
+          "url": "https://github.com/ontripai/cladora-website/issues/463",
+          "observedAt": "2026-10-30T22:38:19.021844+00:00",
+          "verified": true,
+          "claim": "PM: central coordination and evidence register for Codex seats"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/rorymclark-prog/ImbewuField/issues/35",
+          "observedAt": "2026-10-30T22:38:19.021857+00:00",
+          "verified": true,
+          "claim": "Coordination ledger \u2014 Claude \u21c4 Codex (append-only)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/sneat-co/circleus/issues/1",
+          "observedAt": "2026-10-30T22:38:19.021863+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/pip-frontend/issues/1109",
-          "observedAt": "2026-10-30T13:31:28.663340+00:00",
+          "url": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "observedAt": "2026-10-30T22:38:19.021867+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/sptribs-frontend/issues/444",
-          "observedAt": "2026-10-30T13:31:28.663361+00:00",
+          "url": "https://github.com/sneat-co/sportius/issues/27",
+          "observedAt": "2026-10-30T22:38:19.021868+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "observedAt": "2026-10-30T22:38:19.021870+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/juror-er-portal/issues/1",
+          "observedAt": "2026-10-30T22:38:19.021872+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         }
@@ -52,7 +84,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
-          "observedAt": "2026-10-30T13:31:31.039144+00:00",
+          "observedAt": "2026-10-30T22:38:20.487222+00:00",
           "verified": true,
           "claim": "[TEAM NAYA] Coordination feed \u2014 successor to #2793"
         },
@@ -60,55 +92,25 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2793",
-          "observedAt": "2026-10-30T13:31:31.039159+00:00",
+          "observedAt": "2026-10-30T22:38:20.487254+00:00",
           "verified": true,
           "claim": "Team Naya live board \u2014 coordination venue (successor to #2765)"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2641",
-          "observedAt": "2026-10-30T13:31:31.039166+00:00",
+          "url": "https://github.com/moiraleevincent/GPT/issues/3",
+          "observedAt": "2026-10-30T22:38:20.487228+00:00",
           "verified": true,
-          "claim": "[NAYA] Team coordination feed \u2014 live board (successor to #2537)"
+          "claim": "[village] Rook (GPT-6) bridge"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/554",
-          "observedAt": "2026-10-30T13:31:31.039168+00:00",
+          "url": "https://github.com/Minuteandone/Village-chat-tool/issues/1",
+          "observedAt": "2026-10-30T22:38:20.487238+00:00",
           "verified": true,
-          "claim": "\ud83d\udd31 TEAM NAYA \u2014 Naya \u2194 Coda Direct Communication Board"
-        }
-      ],
-      "guardrails": [
-        "proposal_is_not_verified_demand",
-        "research_must_define_customer_and_problem",
-        "no_build_before_product_gate"
-      ]
-    },
-    {
-      "id": "proposal:software-release-contract:001",
-      "topic": "software-release-contract",
-      "status": "PROPOSED_FOR_RESEARCH",
-      "regulated": false,
-      "upfrontCostUsd": 0,
-      "evidence": [
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/honghanh153-creator/la-lanh/issues/2",
-          "observedAt": "2026-10-30T13:31:32.620081+00:00",
-          "verified": true,
-          "claim": "\u0110i\u1ec1u ph\u1ed1i Codex v\u00e0 Claude theo task"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/rempemat-eng/appify/issues/149",
-          "observedAt": "2026-10-30T13:31:32.620092+00:00",
-          "verified": true,
-          "claim": "NapAttack Codex coordination: four chats, task ownership and Claude handoffs"
+          "claim": "[village] Chat bridge read test"
         }
       ],
       "guardrails": [
@@ -127,24 +129,8 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/bizzal70/itsalreadypriced/issues/1",
-          "observedAt": "2026-10-30T13:31:34.205999+00:00",
-          "verified": true,
-          "claim": "\ud83d\udd0e Daily content review \u2014 It's Already Priced \u2014 Blog + X"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
-          "observedAt": "2026-10-30T13:31:34.206024+00:00",
-          "verified": true,
-          "claim": "\ud83e\udded Daily content opportunities"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
-          "observedAt": "2026-10-30T13:31:34.206016+00:00",
+          "observedAt": "2026-10-30T22:38:22.072475+00:00",
           "verified": true,
           "claim": "[TEAM NAYA] Coordination feed \u2014 successor to #2793"
         },
@@ -152,9 +138,25 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2793",
-          "observedAt": "2026-10-30T13:31:34.206044+00:00",
+          "observedAt": "2026-10-30T22:38:22.072526+00:00",
           "verified": true,
           "claim": "Team Naya live board \u2014 coordination venue (successor to #2765)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/bizzal70/itsalreadypriced/issues/1",
+          "observedAt": "2026-10-30T22:38:22.072510+00:00",
+          "verified": true,
+          "claim": "\ud83d\udd0e Daily content review \u2014 It's Already Priced \u2014 Blog + X"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
+          "observedAt": "2026-10-30T22:38:22.072512+00:00",
+          "verified": true,
+          "claim": "\ud83e\udded Daily content opportunities"
         }
       ],
       "guardrails": [
@@ -174,7 +176,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mealie-recipes/mealie/issues/1306",
-          "observedAt": "2026-10-30T13:31:39.380157+00:00",
+          "observedAt": "2026-10-30T22:38:25.026199+00:00",
           "verified": true,
           "claim": "[v1.0.0b] [Task] - Export Recipes and Cookbooks to PDF"
         },
@@ -182,7 +184,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/IamTugy/recipes/issues/21",
-          "observedAt": "2026-10-30T13:31:39.380161+00:00",
+          "observedAt": "2026-10-30T22:38:25.026204+00:00",
           "verified": true,
           "claim": "Cookbook/collection PDF export"
         },
@@ -190,7 +192,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Benkendorfer/recipe-manager/issues/7",
-          "observedAt": "2026-10-30T13:31:39.380167+00:00",
+          "observedAt": "2026-10-30T22:38:25.026210+00:00",
           "verified": true,
           "claim": "Import recipes from PDF files"
         },
@@ -198,7 +200,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mathnauleau/commeat/issues/3",
-          "observedAt": "2026-10-30T13:31:39.380165+00:00",
+          "observedAt": "2026-10-30T22:38:25.026208+00:00",
           "verified": true,
           "claim": "Later: Print full cookbook PDF"
         },
@@ -206,7 +208,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7826",
-          "observedAt": "2026-10-30T13:31:39.380171+00:00",
+          "observedAt": "2026-10-30T22:38:25.026214+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -214,7 +216,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7825",
-          "observedAt": "2026-10-30T13:31:39.380174+00:00",
+          "observedAt": "2026-10-30T22:38:25.026216+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -222,179 +224,9 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7824",
-          "observedAt": "2026-10-30T13:31:39.380176+00:00",
+          "observedAt": "2026-10-30T22:38:25.026218+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
-        }
-      ],
-      "guardrails": [
-        "proposal_is_not_verified_demand",
-        "research_must_define_customer_and_problem",
-        "no_build_before_product_gate"
-      ]
-    },
-    {
-      "id": "proposal:forecasting:001",
-      "topic": "forecasting",
-      "status": "PROPOSED_FOR_RESEARCH",
-      "regulated": false,
-      "upfrontCostUsd": 0,
-      "evidence": [
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/luohongk/Embodied-AI-Daily/issues/1066",
-          "observedAt": "2026-10-30T13:31:42.679653+00:00",
-          "verified": true,
-          "claim": "Latest 10 Papers - October 30, 2026"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/xllm-io/daily-papers/issues/78",
-          "observedAt": "2026-10-30T13:31:42.679665+00:00",
-          "verified": true,
-          "claim": "Latest 20 Papers - October 30, 2026"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/xllm-io/daily-papers/issues/77",
-          "observedAt": "2026-10-30T13:31:42.679671+00:00",
-          "verified": true,
-          "claim": "Latest 20 Papers - October 29, 2026"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/xllm-io/daily-papers/issues/76",
-          "observedAt": "2026-10-30T13:31:42.679680+00:00",
-          "verified": true,
-          "claim": "Latest 20 Papers - October 28, 2026"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/FFFrosty/DailyArXiv/issues/321",
-          "observedAt": "2026-10-30T13:31:42.679682+00:00",
-          "verified": true,
-          "claim": "Latest 15 Papers - October 28, 2026"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/SaikiK12/T/issues/7",
-          "observedAt": "2026-10-30T13:31:42.679659+00:00",
-          "verified": true,
-          "claim": "Research handoff room: Claude and Codex"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/dkaps6/imtiredofthis/issues/535",
-          "observedAt": "2026-10-30T13:31:42.679673+00:00",
-          "verified": true,
-          "claim": "GPT-5.6 + Claude joint research control room"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/dereknex/immune-brain/issues/286",
-          "observedAt": "2026-10-30T13:31:42.679685+00:00",
-          "verified": true,
-          "claim": "[Proposal] Jev-style decision models in Immune-Brain: complete application plan"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/dereknex/immune-brain/issues/204",
-          "observedAt": "2026-10-30T13:31:42.679687+00:00",
-          "verified": true,
-          "claim": "[Proposal] Jev-style decision models: unified application portfolio (advisory-only, outside Kernel authority)"
-        }
-      ],
-      "guardrails": [
-        "proposal_is_not_verified_demand",
-        "research_must_define_customer_and_problem",
-        "no_build_before_product_gate"
-      ]
-    },
-    {
-      "id": "proposal:goal-os:001",
-      "topic": "goal-os",
-      "status": "PROPOSED_FOR_RESEARCH",
-      "regulated": false,
-      "upfrontCostUsd": 0,
-      "evidence": [
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/rempemat-eng/appify/issues/149",
-          "observedAt": "2026-10-30T13:31:44.017974+00:00",
-          "verified": true,
-          "claim": "NapAttack Codex coordination: four chats, task ownership and Claude handoffs"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/HassiMian/app-assps-edu-pk/issues/4",
-          "observedAt": "2026-10-30T13:31:44.017980+00:00",
-          "verified": true,
-          "claim": "ASSPS master coordination: four workstreams, chat consolidation and release ownership"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/abyyworld/auto-post-/issues/7",
-          "observedAt": "2026-10-30T13:31:44.017996+00:00",
-          "verified": true,
-          "claim": "Post drafts 2026-10-14"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/abyyworld/auto-post-/issues/6",
-          "observedAt": "2026-10-30T13:31:44.017998+00:00",
-          "verified": true,
-          "claim": "Post drafts 2026-10-12"
-        }
-      ],
-      "guardrails": [
-        "proposal_is_not_verified_demand",
-        "research_must_define_customer_and_problem",
-        "no_build_before_product_gate"
-      ]
-    },
-    {
-      "id": "proposal:editorial-evidence:001",
-      "topic": "editorial-evidence",
-      "status": "PROPOSED_FOR_RESEARCH",
-      "regulated": false,
-      "upfrontCostUsd": 0,
-      "evidence": [
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/bizzal70/Audit_User_Agent/issues/1",
-          "observedAt": "2026-10-30T13:31:45.114799+00:00",
-          "verified": true,
-          "claim": "\ud83d\uddde\ufe0f Daily content review digest"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/bizzal70/itsalreadywhen/issues/1",
-          "observedAt": "2026-10-30T13:31:45.114801+00:00",
-          "verified": true,
-          "claim": "\ud83d\udd0e Daily content review \u2014 It's Already When \u2014 Blog + X"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/bizzal70/itsalreadypriced/issues/1",
-          "observedAt": "2026-10-30T13:31:45.114803+00:00",
-          "verified": true,
-          "claim": "\ud83d\udd0e Daily content review \u2014 It's Already Priced \u2014 Blog + X"
         }
       ],
       "guardrails": [
