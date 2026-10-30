@@ -1155,9 +1155,24 @@
         ]
       },
       "jobs": []
+    },
+    {
+      "candidateId": "candidate:express-auth:scout-001",
+      "candidateFingerprint": "981ce6a45f7f452b1285ad03fc5b98c61aa98ba339f7c9e55ba0cea9b0c97558",
+      "at": "2026-10-30T22:56:20.036Z",
+      "cycleId": "20261030-0078",
+      "status": "REJECTED",
+      "gate": {
+        "ok": false,
+        "reasons": [
+          "missing_verified_demand_evidence",
+          "insufficient_distinct_demand_sources"
+        ]
+      },
+      "jobs": []
     }
   ],
   "queue": [],
-  "lastRunAt": "2026-10-30T14:03:13.914Z",
-  "lastExecutorRunAt": "2026-10-30T14:03:14.084Z"
+  "lastRunAt": "2026-10-30T22:56:20.036Z",
+  "lastExecutorRunAt": "2026-10-30T22:56:20.219Z"
 }
