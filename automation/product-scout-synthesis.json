@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.synthesis.v1",
-  "generatedAt": "2026-10-31T13:02:55.351227+00:00",
+  "generatedAt": "2026-10-31T21:51:46.688162+00:00",
   "clusters": [
     {
       "topic": "express-typescript",
@@ -16,18 +16,33 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
-          "b": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "a": "https://github.com/sneat-co/circleus/issues/1",
+          "b": "https://github.com/sneat-co/sneat-ext-template/issues/17",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
-          "b": "https://github.com/hmcts/sptribs-frontend/issues/444",
+          "a": "https://github.com/sneat-co/circleus/issues/1",
+          "b": "https://github.com/sneat-co/prioritarius/issues/1",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
-          "b": "https://github.com/hmcts/sptribs-frontend/issues/444",
+          "a": "https://github.com/sneat-co/circleus/issues/1",
+          "b": "https://github.com/sneat-co/sneat-club/issues/4",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "b": "https://github.com/sneat-co/prioritarius/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "b": "https://github.com/sneat-co/sneat-club/issues/4",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/prioritarius/issues/1",
+          "b": "https://github.com/sneat-co/sneat-club/issues/4",
           "similarity": 1.0
         }
       ],
@@ -40,8 +55,8 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/pachaninm-lab/pachanin-demo/issues/5469",
-          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
+          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
+          "b": "https://github.com/pachaninm-lab/pachanin-demo/issues/5469",
           "similarity": 0.182
         }
       ],
@@ -53,11 +68,6 @@
       "observationCount": 20,
       "distinctSources": 20,
       "relatedPairs": [
-        {
-          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
-          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2793",
-          "similarity": 0.4
-        },
         {
           "a": "https://github.com/moiraleevincent/GPT/issues/3",
           "b": "https://github.com/Minuteandone/Village-chat-tool/issues/1",
@@ -71,8 +81,14 @@
       "topic": "software-release-contract",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/rempemat-eng/appify/issues/149",
+          "b": "https://github.com/Akbarhoja/wrytely-agent/issues/4",
+          "similarity": 0.25
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -86,8 +102,8 @@
           "similarity": 0.4
         },
         {
-          "a": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
-          "b": "https://github.com/bizzal70/itsalreadypriced/issues/1",
+          "a": "https://github.com/bizzal70/itsalreadypriced/issues/1",
+          "b": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
           "similarity": 0.286
         }
       ],
@@ -98,8 +114,19 @@
       "topic": "evidence-packets",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/hartican/sportscal/issues/28",
+          "b": "https://github.com/jerryyyu/shengji/issues/1075",
+          "similarity": 0.25
+        },
+        {
+          "a": "https://github.com/TheLaughingGod1986/orbit-with-ben/issues/264",
+          "b": "https://github.com/keeptxred/TexasDefined/issues/5794",
+          "similarity": 0.222
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -114,8 +141,14 @@
       "topic": "research-workflow",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/Akbarhoja/wrytely-agent/issues/4",
+          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
+          "similarity": 0.2
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
