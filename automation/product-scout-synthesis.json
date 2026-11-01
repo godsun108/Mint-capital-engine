@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.synthesis.v1",
-  "generatedAt": "2026-11-01T06:49:54.446663+00:00",
+  "generatedAt": "2026-11-01T18:05:54.676830+00:00",
   "clusters": [
     {
       "topic": "express-typescript",
@@ -16,6 +16,31 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
+          "a": "https://github.com/Stooa/Stooa/issues/186",
+          "b": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/Stooa/Stooa/issues/186",
+          "b": "https://github.com/sneat-co/circleus/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/Stooa/Stooa/issues/186",
+          "b": "https://github.com/sneat-co/prioritarius/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/Stooa/Stooa/issues/186",
+          "b": "https://github.com/sneat-co/sportius/issues/27",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/Stooa/Stooa/issues/186",
+          "b": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "similarity": 1.0
+        },
+        {
           "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
           "b": "https://github.com/sneat-co/circleus/issues/1",
           "similarity": 1.0
@@ -27,13 +52,18 @@
         },
         {
           "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
-          "b": "https://github.com/sneat-co/sneat-club/issues/4",
+          "b": "https://github.com/sneat-co/sportius/issues/27",
           "similarity": 1.0
         },
         {
           "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
-          "b": "https://github.com/sneat-co/sportius/issues/27",
+          "b": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
           "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/ontripai/cladora-website/issues/463",
+          "b": "https://github.com/rorymclark-prog/ImbewuField/issues/35",
+          "similarity": 0.222
         },
         {
           "a": "https://github.com/sneat-co/circleus/issues/1",
@@ -42,17 +72,12 @@
         },
         {
           "a": "https://github.com/sneat-co/circleus/issues/1",
-          "b": "https://github.com/sneat-co/sneat-club/issues/4",
+          "b": "https://github.com/sneat-co/sportius/issues/27",
           "similarity": 1.0
         },
         {
           "a": "https://github.com/sneat-co/circleus/issues/1",
-          "b": "https://github.com/sneat-co/sportius/issues/27",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/sneat-co/prioritarius/issues/1",
-          "b": "https://github.com/sneat-co/sneat-club/issues/4",
+          "b": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
           "similarity": 1.0
         },
         {
@@ -61,8 +86,13 @@
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/sneat-co/sneat-club/issues/4",
-          "b": "https://github.com/sneat-co/sportius/issues/27",
+          "a": "https://github.com/sneat-co/prioritarius/issues/1",
+          "b": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sportius/issues/27",
+          "b": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
           "similarity": 1.0
         }
       ],
@@ -101,8 +131,19 @@
       "topic": "software-release-contract",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
+          "b": "https://github.com/rempemat-eng/appify/issues/149",
+          "similarity": 0.214
+        },
+        {
+          "a": "https://github.com/officeus-create/Hermes/issues/2033",
+          "b": "https://github.com/officeus-create/Hermes/issues/2106",
+          "similarity": 0.2
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -144,19 +185,8 @@
       "topic": "research-workflow",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [
-        {
-          "a": "https://github.com/Swooshz-com/swooshz-quote-auto-generator/issues/143",
-          "b": "https://github.com/mrcalzon02/HB-TTRPG-tools/issues/19",
-          "similarity": 0.2
-        },
-        {
-          "a": "https://github.com/Akbarhoja/wrytely-agent/issues/4",
-          "b": "https://github.com/A-Birdi/Road-of-Borrowed-Names/issues/1",
-          "similarity": 0.182
-        }
-      ],
-      "promotionEligible": true,
+      "relatedPairs": [],
+      "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
