@@ -3,16 +3,16 @@
   "schema": "mint.acquisition.snapshot.v3",
   "semantics": "DURABLE_OFFER_AND_SOURCE_AGGREGATES_NOT_UNIQUE_VISITORS",
   "startedAt": "2026-10-19T14:31:15.661Z",
-  "generatedAt": "2026-10-31T22:39:25.805Z",
+  "generatedAt": "2026-11-01T01:16:55.353Z",
   "durableStorageConfigured": true,
   "privacy": "No IP, cookie, user-agent, or personal identifier stored by this counter.",
   "totals": {
-    "VISITED": 37,
+    "VISITED": 39,
     "CHECKOUT_STARTED": 4
   },
   "sources": {
     "direct": {
-      "VISITED": 13,
+      "VISITED": 14,
       "CHECKOUT_STARTED": 0
     },
     "qa_offers_20261012": {
@@ -24,7 +24,7 @@
       "CHECKOUT_STARTED": 3
     },
     "foundry_cross_sell": {
-      "VISITED": 5,
+      "VISITED": 6,
       "CHECKOUT_STARTED": 1
     },
     "seo_express_ts": {
@@ -38,11 +38,11 @@
   },
   "offers": {
     "foundry-express-ts-001": {
-      "VISITED": 14,
+      "VISITED": 15,
       "CHECKOUT_STARTED": 0,
       "sources": {
         "direct": {
-          "VISITED": 13,
+          "VISITED": 14,
           "CHECKOUT_STARTED": 0
         },
         "seo_express_ts": {
@@ -52,7 +52,7 @@
       }
     },
     "portfolio": {
-      "VISITED": 23,
+      "VISITED": 24,
       "CHECKOUT_STARTED": 0,
       "sources": {
         "qa_offers_20261012": {
@@ -64,7 +64,7 @@
           "CHECKOUT_STARTED": 0
         },
         "foundry_cross_sell": {
-          "VISITED": 5,
+          "VISITED": 6,
           "CHECKOUT_STARTED": 0
         },
         "foundrytools_ts_starter": {
@@ -114,6 +114,6 @@
       }
     }
   },
-  "capturedAt": "2026-10-31T22:39:25.865Z",
+  "capturedAt": "2026-11-01T01:16:55.410Z",
   "captureSemantics": "SNAPSHOT_OF_DURABLE_AGGREGATES_NOT_UNIQUE_VISITORS"
 }
