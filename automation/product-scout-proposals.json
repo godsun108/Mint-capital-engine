@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.proposals.v1",
-  "generatedAt": "2026-11-03T07:13:58.448178+00:00",
+  "generatedAt": "2026-11-03T19:47:21.487189+00:00",
   "semantics": "RESEARCH_PROPOSALS_NOT_PRODUCT_CANDIDATES",
   "proposals": [
     {
@@ -13,40 +13,48 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/ontripai/cladora-website/issues/463",
-          "observedAt": "2026-11-03T07:13:52.287938+00:00",
-          "verified": true,
-          "claim": "PM: central coordination and evidence register for Codex seats"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
           "url": "https://github.com/rorymclark-prog/ImbewuField/issues/35",
-          "observedAt": "2026-11-03T07:13:52.287943+00:00",
+          "observedAt": "2026-11-03T19:47:20.485601+00:00",
           "verified": true,
           "claim": "Coordination ledger \u2014 Claude \u21c4 Codex (append-only)"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/mitodl/mitxpro/issues/2711",
-          "observedAt": "2026-11-03T07:13:52.287945+00:00",
+          "url": "https://github.com/ontripai/cladora-website/issues/463",
+          "observedAt": "2026-11-03T19:47:20.485606+00:00",
           "verified": true,
-          "claim": "Dependency Dashboard"
+          "claim": "PM: central coordination and evidence register for Codex seats"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/Stooa/Stooa/issues/186",
-          "observedAt": "2026-11-03T07:13:52.287958+00:00",
+          "url": "https://github.com/amaybaum-prod/supabase/issues/26",
+          "observedAt": "2026-11-03T19:47:20.485612+00:00",
           "verified": true,
-          "claim": "Dependency Dashboard"
+          "claim": "studio-0.0.9.tgz: 186 vulnerabilities (highest severity is: 10.0) [master] (reachable) - autoclosed"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/sneat-co/sneat-club/issues/4",
-          "observedAt": "2026-11-03T07:13:52.287962+00:00",
+          "url": "https://github.com/amaybaum-prod/supabase/issues/116",
+          "observedAt": "2026-11-03T19:47:20.485614+00:00",
+          "verified": true,
+          "claim": "studio-0.0.9.tgz: 189 vulnerabilities (highest severity is: 10.0) [master] (reachable)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/Vonage-Community/tutorial-interactive_tutorials/issues/398",
+          "observedAt": "2026-11-03T19:47:20.485631+00:00",
+          "verified": true,
+          "claim": "runtime-1.0.0-beta.9.tgz: 66 vulnerabilities (highest severity is: 9.1)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/juror-er-portal/issues/1",
+          "observedAt": "2026-11-03T19:47:20.485625+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -54,23 +62,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "observedAt": "2026-11-03T07:13:52.287966+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/sneat-co/circleus/issues/1",
-          "observedAt": "2026-11-03T07:13:52.287970+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/sneat-co/sneat-ext-template/issues/17",
-          "observedAt": "2026-11-03T07:13:52.287972+00:00",
+          "observedAt": "2026-11-03T19:47:20.485640+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         }
@@ -91,178 +83,18 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/pachaninm-lab/pachanin-demo/issues/5469",
-          "observedAt": "2026-11-03T07:13:52.911918+00:00",
-          "verified": true,
-          "claim": "PC-CROP TEAM HUB \u00b7 MASTER v2.1 \u00b7 dual-account coordination"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
-          "observedAt": "2026-11-03T07:13:52.911926+00:00",
+          "observedAt": "2026-11-03T19:47:21.194709+00:00",
           "verified": true,
           "claim": "[TEAM NAYA] Coordination feed \u2014 successor to #2793"
-        }
-      ],
-      "guardrails": [
-        "proposal_is_not_verified_demand",
-        "research_must_define_customer_and_problem",
-        "no_build_before_product_gate"
-      ]
-    },
-    {
-      "id": "proposal:procedural-assets:001",
-      "topic": "procedural-assets",
-      "status": "PROPOSED_FOR_RESEARCH",
-      "regulated": false,
-      "upfrontCostUsd": 0,
-      "evidence": [
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/moiraleevincent/GPT/issues/3",
-          "observedAt": "2026-11-03T07:13:53.619388+00:00",
-          "verified": true,
-          "claim": "[village] Rook (GPT-6) bridge"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/Minuteandone/Village-chat-tool/issues/1",
-          "observedAt": "2026-11-03T07:13:53.619395+00:00",
+          "url": "https://github.com/pachaninm-lab/pachanin-demo/issues/5469",
+          "observedAt": "2026-11-03T19:47:21.194715+00:00",
           "verified": true,
-          "claim": "[village] Chat bridge read test"
-        }
-      ],
-      "guardrails": [
-        "proposal_is_not_verified_demand",
-        "research_must_define_customer_and_problem",
-        "no_build_before_product_gate"
-      ]
-    },
-    {
-      "id": "proposal:offer-scoring:001",
-      "topic": "offer-scoring",
-      "status": "PROPOSED_FOR_RESEARCH",
-      "regulated": false,
-      "upfrontCostUsd": 0,
-      "evidence": [
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/bizzal70/itsalreadypriced/issues/1",
-          "observedAt": "2026-11-03T07:13:55.039970+00:00",
-          "verified": true,
-          "claim": "\ud83d\udd0e Daily content review \u2014 It's Already Priced \u2014 Blog + X"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
-          "observedAt": "2026-11-03T07:13:55.039972+00:00",
-          "verified": true,
-          "claim": "\ud83e\udded Daily content opportunities"
-        }
-      ],
-      "guardrails": [
-        "proposal_is_not_verified_demand",
-        "research_must_define_customer_and_problem",
-        "no_build_before_product_gate"
-      ]
-    },
-    {
-      "id": "proposal:evidence-packets:001",
-      "topic": "evidence-packets",
-      "status": "PROPOSED_FOR_RESEARCH",
-      "regulated": false,
-      "upfrontCostUsd": 0,
-      "evidence": [
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/keeptxred/TexasDefined/issues/5794",
-          "observedAt": "2026-11-03T07:13:55.772923+00:00",
-          "verified": true,
-          "claim": "TexasDefined master continuation checkpoint \u2014 October 24, 2026"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/TheLaughingGod1986/orbit-with-ben/issues/264",
-          "observedAt": "2026-11-03T07:13:55.773044+00:00",
-          "verified": true,
-          "claim": "Studio thread: October 2026 (cont.)"
-        }
-      ],
-      "guardrails": [
-        "proposal_is_not_verified_demand",
-        "research_must_define_customer_and_problem",
-        "no_build_before_product_gate"
-      ]
-    },
-    {
-      "id": "proposal:cookbook-export:001",
-      "topic": "cookbook-export",
-      "status": "PROPOSED_FOR_RESEARCH",
-      "regulated": false,
-      "upfrontCostUsd": 0,
-      "evidence": [
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/mealie-recipes/mealie/issues/1306",
-          "observedAt": "2026-11-03T07:13:57.929920+00:00",
-          "verified": true,
-          "claim": "[v1.0.0b] [Task] - Export Recipes and Cookbooks to PDF"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/IamTugy/recipes/issues/21",
-          "observedAt": "2026-11-03T07:13:57.929928+00:00",
-          "verified": true,
-          "claim": "Cookbook/collection PDF export"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/Benkendorfer/recipe-manager/issues/7",
-          "observedAt": "2026-11-03T07:13:57.929934+00:00",
-          "verified": true,
-          "claim": "Import recipes from PDF files"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/mathnauleau/commeat/issues/3",
-          "observedAt": "2026-11-03T07:13:57.929932+00:00",
-          "verified": true,
-          "claim": "Later: Print full cookbook PDF"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/guevara/read-it-later/issues/7826",
-          "observedAt": "2026-11-03T07:13:57.929939+00:00",
-          "verified": true,
-          "claim": "Rust Language Cheat Sheet"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/guevara/read-it-later/issues/7825",
-          "observedAt": "2026-11-03T07:13:57.929942+00:00",
-          "verified": true,
-          "claim": "Rust Language Cheat Sheet"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/guevara/read-it-later/issues/7824",
-          "observedAt": "2026-11-03T07:13:57.929944+00:00",
-          "verified": true,
-          "claim": "Rust Language Cheat Sheet"
+          "claim": "PC-CROP TEAM HUB \u00b7 MASTER v2.1 \u00b7 dual-account coordination"
         }
       ],
       "guardrails": [
