@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.synthesis.v1",
-  "generatedAt": "2026-11-02T21:56:08.751255+00:00",
+  "generatedAt": "2026-11-03T07:13:58.390433+00:00",
   "clusters": [
     {
       "topic": "express-typescript",
@@ -21,53 +21,78 @@
           "similarity": 0.222
         },
         {
+          "a": "https://github.com/mitodl/mitxpro/issues/2711",
+          "b": "https://github.com/Stooa/Stooa/issues/186",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/mitodl/mitxpro/issues/2711",
+          "b": "https://github.com/sneat-co/sneat-club/issues/4",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/mitodl/mitxpro/issues/2711",
+          "b": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/mitodl/mitxpro/issues/2711",
+          "b": "https://github.com/sneat-co/circleus/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/mitodl/mitxpro/issues/2711",
+          "b": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/Stooa/Stooa/issues/186",
+          "b": "https://github.com/sneat-co/sneat-club/issues/4",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/Stooa/Stooa/issues/186",
+          "b": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/Stooa/Stooa/issues/186",
+          "b": "https://github.com/sneat-co/circleus/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/Stooa/Stooa/issues/186",
+          "b": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sneat-club/issues/4",
+          "b": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sneat-club/issues/4",
+          "b": "https://github.com/sneat-co/circleus/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sneat-club/issues/4",
+          "b": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "similarity": 1.0
+        },
+        {
           "a": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
           "b": "https://github.com/sneat-co/circleus/issues/1",
           "similarity": 1.0
         },
         {
           "a": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "b": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "b": "https://github.com/sneat-co/sneat-ext-template/issues/17",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "b": "https://github.com/hmcts/cath-service/issues/3",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/sneat-co/circleus/issues/1",
-          "b": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/sneat-co/circleus/issues/1",
           "b": "https://github.com/sneat-co/sneat-ext-template/issues/17",
           "similarity": 1.0
         },
         {
           "a": "https://github.com/sneat-co/circleus/issues/1",
-          "b": "https://github.com/hmcts/cath-service/issues/3",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
           "b": "https://github.com/sneat-co/sneat-ext-template/issues/17",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
-          "b": "https://github.com/hmcts/cath-service/issues/3",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
-          "b": "https://github.com/hmcts/cath-service/issues/3",
           "similarity": 1.0
         }
       ],
@@ -78,8 +103,14 @@
       "topic": "venture-economics",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/pachaninm-lab/pachanin-demo/issues/5469",
+          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
+          "similarity": 0.182
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -122,8 +153,14 @@
       "topic": "evidence-packets",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/keeptxred/TexasDefined/issues/5794",
+          "b": "https://github.com/TheLaughingGod1986/orbit-with-ben/issues/264",
+          "similarity": 0.222
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
