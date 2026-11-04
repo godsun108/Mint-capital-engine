@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.synthesis.v1",
-  "generatedAt": "2026-11-04T06:57:37.154733+00:00",
+  "generatedAt": "2026-11-04T20:00:34.154295+00:00",
   "clusters": [
     {
       "topic": "express-typescript",
@@ -16,53 +16,23 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/sneat-co/sportius/issues/27",
-          "b": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "a": "https://github.com/neinteractiveliterature/intercode/issues/6560",
+          "b": "https://github.com/Richg44/grafana/issues/16",
+          "similarity": 0.375
+        },
+        {
+          "a": "https://github.com/hmcts/juror-er-portal/issues/1",
+          "b": "https://github.com/mitodl/mitxpro/issues/2711",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/sneat-co/sportius/issues/27",
-          "b": "https://github.com/sneat-co/circleus/issues/1",
+          "a": "https://github.com/hmcts/juror-er-portal/issues/1",
+          "b": "https://github.com/redwoodjs/graphql/issues/3795",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/sneat-co/sportius/issues/27",
-          "b": "https://github.com/sneat-co/sneat-club/issues/4",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/rorymclark-prog/ImbewuField/issues/35",
-          "b": "https://github.com/ontripai/cladora-website/issues/463",
-          "similarity": 0.222
-        },
-        {
-          "a": "https://github.com/Vonage-Community/tutorial-interactive_tutorials/issues/398",
-          "b": "https://github.com/snowdensb/openclaw_2/issues/8",
-          "similarity": 0.429
-        },
-        {
-          "a": "https://github.com/Vonage-Community/tutorial-interactive_tutorials/issues/398",
-          "b": "https://github.com/DimaMend/openclaw/issues/6",
-          "similarity": 0.429
-        },
-        {
-          "a": "https://github.com/snowdensb/openclaw_2/issues/8",
-          "b": "https://github.com/DimaMend/openclaw/issues/6",
-          "similarity": 0.667
-        },
-        {
-          "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
-          "b": "https://github.com/sneat-co/circleus/issues/1",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
-          "b": "https://github.com/sneat-co/sneat-club/issues/4",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/sneat-co/circleus/issues/1",
-          "b": "https://github.com/sneat-co/sneat-club/issues/4",
+          "a": "https://github.com/mitodl/mitxpro/issues/2711",
+          "b": "https://github.com/redwoodjs/graphql/issues/3795",
           "similarity": 1.0
         }
       ],
@@ -73,8 +43,14 @@
       "topic": "venture-economics",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
+          "b": "https://github.com/SaikiK12/T/issues/7",
+          "similarity": 0.182
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -83,8 +59,8 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/Minuteandone/Village-chat-tool/issues/1",
-          "b": "https://github.com/moiraleevincent/GPT/issues/3",
+          "a": "https://github.com/moiraleevincent/GPT/issues/3",
+          "b": "https://github.com/Minuteandone/Village-chat-tool/issues/1",
           "similarity": 0.286
         }
       ],
@@ -97,18 +73,13 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/rempemat-eng/appify/issues/149",
+          "a": "https://github.com/A-Birdi/Road-of-Borrowed-Names/issues/1",
           "b": "https://github.com/Akbarhoja/wrytely-agent/issues/4",
-          "similarity": 0.25
+          "similarity": 0.182
         },
         {
-          "a": "https://github.com/rempemat-eng/appify/issues/149",
-          "b": "https://github.com/rorymclark-prog/ImbewuField/issues/35",
-          "similarity": 0.273
-        },
-        {
-          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
-          "b": "https://github.com/Akbarhoja/wrytely-agent/issues/4",
+          "a": "https://github.com/Akbarhoja/wrytely-agent/issues/4",
+          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
           "similarity": 0.2
         }
       ],
@@ -135,19 +106,9 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/diamondideaco-svg/dir3com2/issues/217",
-          "b": "https://github.com/rempemat-eng/appify/issues/149",
+          "a": "https://github.com/A-Birdi/Road-of-Borrowed-Names/issues/1",
+          "b": "https://github.com/Akbarhoja/wrytely-agent/issues/4",
           "similarity": 0.182
-        },
-        {
-          "a": "https://github.com/rempemat-eng/appify/issues/149",
-          "b": "https://github.com/Akbarhoja/wrytely-agent/issues/4",
-          "similarity": 0.25
-        },
-        {
-          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
-          "b": "https://github.com/Akbarhoja/wrytely-agent/issues/4",
-          "similarity": 0.2
         }
       ],
       "promotionEligible": true,
@@ -167,13 +128,13 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/agalatan/grothendieck-lean/issues/225",
-          "b": "https://github.com/rorymclark-prog/ImbewuField/issues/35",
-          "similarity": 0.333
+          "a": "https://github.com/A-Birdi/Road-of-Borrowed-Names/issues/1",
+          "b": "https://github.com/Akbarhoja/wrytely-agent/issues/4",
+          "similarity": 0.182
         },
         {
-          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
-          "b": "https://github.com/Akbarhoja/wrytely-agent/issues/4",
+          "a": "https://github.com/Akbarhoja/wrytely-agent/issues/4",
+          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
           "similarity": 0.2
         }
       ],
