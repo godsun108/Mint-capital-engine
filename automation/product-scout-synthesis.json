@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.synthesis.v1",
-  "generatedAt": "2026-11-05T20:15:54.168791+00:00",
+  "generatedAt": "2026-11-06T07:22:35.270926+00:00",
   "clusters": [
     {
       "topic": "express-typescript",
@@ -16,133 +16,68 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/hmcts/fact-admin-frontend/issues/3",
-          "b": "https://github.com/hmcts/opal-frontend-common-node-lib/issues/3",
+          "a": "https://github.com/ontripai/cladora-website/issues/463",
+          "b": "https://github.com/rorymclark-prog/ImbewuField/issues/35",
+          "similarity": 0.222
+        },
+        {
+          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "b": "https://github.com/sneat-co/sportius/issues/27",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/hmcts/fact-admin-frontend/issues/3",
-          "b": "https://github.com/sneat-co/prioritarius/issues/1",
+          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "b": "https://github.com/hmcts/juror-er-portal/issues/1",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/hmcts/fact-admin-frontend/issues/3",
-          "b": "https://github.com/hmcts/cnp-plum-frontend/issues/167",
+          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "b": "https://github.com/hmcts/fact-frontend/issues/772",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/hmcts/fact-admin-frontend/issues/3",
+          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "b": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "b": "https://github.com/hmcts/wa-task-batch-service/issues/87",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "b": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
           "b": "https://github.com/hmcts/pre-portal/issues/1",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/hmcts/fact-admin-frontend/issues/3",
-          "b": "https://github.com/sneat-co/sportius/issues/27",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/fact-admin-frontend/issues/3",
-          "b": "https://github.com/sneat-co/circleus/issues/1",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/fact-admin-frontend/issues/3",
-          "b": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/opal-frontend-common-node-lib/issues/3",
-          "b": "https://github.com/sneat-co/prioritarius/issues/1",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/opal-frontend-common-node-lib/issues/3",
-          "b": "https://github.com/hmcts/cnp-plum-frontend/issues/167",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/opal-frontend-common-node-lib/issues/3",
-          "b": "https://github.com/hmcts/pre-portal/issues/1",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/opal-frontend-common-node-lib/issues/3",
-          "b": "https://github.com/sneat-co/sportius/issues/27",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/opal-frontend-common-node-lib/issues/3",
-          "b": "https://github.com/sneat-co/circleus/issues/1",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/opal-frontend-common-node-lib/issues/3",
-          "b": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/sneat-co/prioritarius/issues/1",
-          "b": "https://github.com/hmcts/cnp-plum-frontend/issues/167",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/sneat-co/prioritarius/issues/1",
-          "b": "https://github.com/hmcts/pre-portal/issues/1",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/sneat-co/prioritarius/issues/1",
-          "b": "https://github.com/sneat-co/sportius/issues/27",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/sneat-co/prioritarius/issues/1",
-          "b": "https://github.com/sneat-co/circleus/issues/1",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/sneat-co/prioritarius/issues/1",
-          "b": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/cnp-plum-frontend/issues/167",
-          "b": "https://github.com/hmcts/pre-portal/issues/1",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/cnp-plum-frontend/issues/167",
-          "b": "https://github.com/sneat-co/sportius/issues/27",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/cnp-plum-frontend/issues/167",
-          "b": "https://github.com/sneat-co/circleus/issues/1",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/cnp-plum-frontend/issues/167",
-          "b": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/pre-portal/issues/1",
-          "b": "https://github.com/sneat-co/sportius/issues/27",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/pre-portal/issues/1",
-          "b": "https://github.com/sneat-co/circleus/issues/1",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/pre-portal/issues/1",
-          "b": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "b": "https://github.com/sneat-co/sneat-club/issues/4",
           "similarity": 1.0
         },
         {
           "a": "https://github.com/sneat-co/sportius/issues/27",
-          "b": "https://github.com/sneat-co/circleus/issues/1",
+          "b": "https://github.com/hmcts/juror-er-portal/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sportius/issues/27",
+          "b": "https://github.com/hmcts/fact-frontend/issues/772",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sportius/issues/27",
+          "b": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sportius/issues/27",
+          "b": "https://github.com/hmcts/wa-task-batch-service/issues/87",
           "similarity": 1.0
         },
         {
@@ -151,8 +86,123 @@
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/sneat-co/circleus/issues/1",
+          "a": "https://github.com/sneat-co/sportius/issues/27",
+          "b": "https://github.com/hmcts/pre-portal/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sportius/issues/27",
+          "b": "https://github.com/sneat-co/sneat-club/issues/4",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/solarissongcontest/solarisstudio/issues/574",
+          "b": "https://github.com/PubliciaLLC/go-help-desk/issues/290",
+          "similarity": 0.25
+        },
+        {
+          "a": "https://github.com/hmcts/juror-er-portal/issues/1",
+          "b": "https://github.com/hmcts/fact-frontend/issues/772",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/juror-er-portal/issues/1",
+          "b": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/juror-er-portal/issues/1",
+          "b": "https://github.com/hmcts/wa-task-batch-service/issues/87",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/juror-er-portal/issues/1",
           "b": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/juror-er-portal/issues/1",
+          "b": "https://github.com/hmcts/pre-portal/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/juror-er-portal/issues/1",
+          "b": "https://github.com/sneat-co/sneat-club/issues/4",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/fact-frontend/issues/772",
+          "b": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/fact-frontend/issues/772",
+          "b": "https://github.com/hmcts/wa-task-batch-service/issues/87",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/fact-frontend/issues/772",
+          "b": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/fact-frontend/issues/772",
+          "b": "https://github.com/hmcts/pre-portal/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/fact-frontend/issues/772",
+          "b": "https://github.com/sneat-co/sneat-club/issues/4",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "b": "https://github.com/hmcts/wa-task-batch-service/issues/87",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "b": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "b": "https://github.com/hmcts/pre-portal/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "b": "https://github.com/sneat-co/sneat-club/issues/4",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/wa-task-batch-service/issues/87",
+          "b": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/wa-task-batch-service/issues/87",
+          "b": "https://github.com/hmcts/pre-portal/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/wa-task-batch-service/issues/87",
+          "b": "https://github.com/sneat-co/sneat-club/issues/4",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "b": "https://github.com/hmcts/pre-portal/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "b": "https://github.com/sneat-co/sneat-club/issues/4",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/pre-portal/issues/1",
+          "b": "https://github.com/sneat-co/sneat-club/issues/4",
           "similarity": 1.0
         }
       ],
@@ -181,19 +231,14 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
-          "b": "https://github.com/rempemat-eng/appify/issues/149",
-          "similarity": 0.214
-        },
-        {
           "a": "https://github.com/rempemat-eng/appify/issues/149",
           "b": "https://github.com/A-Birdi/Road-of-Borrowed-Names/issues/1",
           "similarity": 0.231
         },
         {
-          "a": "https://github.com/Ternedal/ModelRig/issues/2275",
-          "b": "https://github.com/A-Birdi/Road-of-Borrowed-Names/issues/1",
-          "similarity": 0.182
+          "a": "https://github.com/lendbucket/254engineering/issues/1",
+          "b": "https://github.com/StegVerse-Labs/.github/issues/3446",
+          "similarity": 0.2
         }
       ],
       "promotionEligible": true,
@@ -217,14 +262,8 @@
       "topic": "evidence-packets",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [
-        {
-          "a": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
-          "b": "https://github.com/rempemat-eng/appify/issues/149",
-          "similarity": 0.214
-        }
-      ],
-      "promotionEligible": true,
+      "relatedPairs": [],
+      "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -241,9 +280,9 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
-          "b": "https://github.com/d6g8k5htny-coder/main/issues/738",
-          "similarity": 0.182
+          "a": "https://github.com/StegVerse-Labs/.github/issues/3449",
+          "b": "https://github.com/StegVerse-Labs/.github/issues/3444",
+          "similarity": 0.333
         }
       ],
       "promotionEligible": true,
