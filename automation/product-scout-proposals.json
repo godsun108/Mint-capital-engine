@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.proposals.v1",
-  "generatedAt": "2026-11-06T07:22:35.328236+00:00",
+  "generatedAt": "2026-11-06T19:41:04.463727+00:00",
   "semantics": "RESEARCH_PROPOSALS_NOT_PRODUCT_CANDIDATES",
   "proposals": [
     {
@@ -13,64 +13,24 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/ontripai/cladora-website/issues/463",
-          "observedAt": "2026-11-06T07:22:27.756865+00:00",
-          "verified": true,
-          "claim": "PM: central coordination and evidence register for Codex seats"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/rorymclark-prog/ImbewuField/issues/35",
-          "observedAt": "2026-11-06T07:22:27.756876+00:00",
-          "verified": true,
-          "claim": "Coordination ledger \u2014 Claude \u21c4 Codex (append-only)"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
-          "observedAt": "2026-11-06T07:22:27.756870+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/sneat-co/sportius/issues/27",
-          "observedAt": "2026-11-06T07:22:27.756874+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/hmcts/juror-er-portal/issues/1",
-          "observedAt": "2026-11-06T07:22:27.756880+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/hmcts/fact-frontend/issues/772",
-          "observedAt": "2026-11-06T07:22:27.756884+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
-          "observedAt": "2026-11-06T07:22:27.756886+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
           "url": "https://github.com/hmcts/wa-task-batch-service/issues/87",
-          "observedAt": "2026-11-06T07:22:27.756888+00:00",
+          "observedAt": "2026-11-06T19:40:59.228697+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/wa-reporting-frontend/issues/11",
+          "observedAt": "2026-11-06T19:40:59.228700+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/fact-admin-frontend/issues/3",
+          "observedAt": "2026-11-06T19:40:59.228723+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -78,41 +38,63 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "observedAt": "2026-11-06T07:22:27.756889+00:00",
+          "observedAt": "2026-11-06T19:40:59.228734+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/pre-portal/issues/1",
-          "observedAt": "2026-11-06T07:22:27.756893+00:00",
+          "url": "https://github.com/hmcts/sptribs-frontend/issues/444",
+          "observedAt": "2026-11-06T19:40:59.228736+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/sneat-co/sneat-club/issues/4",
-          "observedAt": "2026-11-06T07:22:27.756895+00:00",
+          "url": "https://github.com/chatmcp/mcpso/issues/1",
+          "observedAt": "2026-11-06T19:40:59.228727+00:00",
           "verified": true,
-          "claim": "Dependency Dashboard"
+          "claim": "Submit Your MCP Servers here"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/solarissongcontest/solarisstudio/issues/574",
-          "observedAt": "2026-11-06T07:22:27.756878+00:00",
+          "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/issues/3370",
+          "observedAt": "2026-11-06T19:40:59.228732+00:00",
           "verified": true,
-          "claim": "V3 Parallel Implementation Coordination"
+          "claim": "Origin validation rejects browser-based MCP clients on authenticated remote servers"
+        }
+      ],
+      "guardrails": [
+        "proposal_is_not_verified_demand",
+        "research_must_define_customer_and_problem",
+        "no_build_before_product_gate"
+      ]
+    },
+    {
+      "id": "proposal:procedural-assets:001",
+      "topic": "procedural-assets",
+      "status": "PROPOSED_FOR_RESEARCH",
+      "regulated": false,
+      "upfrontCostUsd": 0,
+      "evidence": [
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
+          "observedAt": "2026-11-06T19:41:00.501469+00:00",
+          "verified": true,
+          "claim": "[TEAM NAYA] Coordination feed \u2014 successor to #2793"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/PubliciaLLC/go-help-desk/issues/290",
-          "observedAt": "2026-11-06T07:22:27.756892+00:00",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/554",
+          "observedAt": "2026-11-06T19:41:00.501484+00:00",
           "verified": true,
-          "claim": "Agent coordination: two sessions working from 6e05b81 in parallel"
+          "claim": "\ud83d\udd31 TEAM NAYA \u2014 Naya \u2194 Coda Direct Communication Board"
         }
       ],
       "guardrails": [
@@ -131,34 +113,18 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/rempemat-eng/appify/issues/149",
-          "observedAt": "2026-11-06T07:22:30.607177+00:00",
+          "url": "https://github.com/rorymclark-prog/ImbewuField/issues/35",
+          "observedAt": "2026-11-06T19:41:01.228920+00:00",
           "verified": true,
-          "claim": "NapAttack Codex coordination: four chats, task ownership and Claude handoffs"
+          "claim": "Coordination ledger \u2014 Claude \u21c4 Codex (append-only)"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/A-Birdi/Road-of-Borrowed-Names/issues/1",
-          "observedAt": "2026-11-06T07:22:30.607207+00:00",
+          "url": "https://github.com/Aleynaalij/VegasQuantV1/issues/65",
+          "observedAt": "2026-11-06T19:41:01.228938+00:00",
           "verified": true,
-          "claim": "QA coordination: Agnes \u2194 Claude \u2014 candidate handoffs and playthrough feedback"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/lendbucket/254engineering/issues/1",
-          "observedAt": "2026-11-06T07:22:30.607196+00:00",
-          "verified": true,
-          "claim": "Day queue: chat answers"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/StegVerse-Labs/.github/issues/3446",
-          "observedAt": "2026-11-06T07:22:30.607205+00:00",
-          "verified": true,
-          "claim": "[QUEUE] Kimi"
+          "claim": "Agent coordination \u00b7 Kobe (Codex) \u00d7 Shaq (Claude)"
         }
       ],
       "guardrails": [
@@ -178,7 +144,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/bizzal70/itsalreadypriced/issues/1",
-          "observedAt": "2026-11-06T07:22:31.209495+00:00",
+          "observedAt": "2026-11-06T19:41:01.880020+00:00",
           "verified": true,
           "claim": "\ud83d\udd0e Daily content review \u2014 It's Already Priced \u2014 Blog + X"
         },
@@ -186,39 +152,9 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
-          "observedAt": "2026-11-06T07:22:31.209497+00:00",
+          "observedAt": "2026-11-06T19:41:01.880021+00:00",
           "verified": true,
           "claim": "\ud83e\udded Daily content opportunities"
-        }
-      ],
-      "guardrails": [
-        "proposal_is_not_verified_demand",
-        "research_must_define_customer_and_problem",
-        "no_build_before_product_gate"
-      ]
-    },
-    {
-      "id": "proposal:research-workflow:001",
-      "topic": "research-workflow",
-      "status": "PROPOSED_FOR_RESEARCH",
-      "regulated": false,
-      "upfrontCostUsd": 0,
-      "evidence": [
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/StegVerse-Labs/.github/issues/3449",
-          "observedAt": "2026-11-06T07:22:33.903081+00:00",
-          "verified": true,
-          "claim": "[QUEUE] Perplexity"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/StegVerse-Labs/.github/issues/3444",
-          "observedAt": "2026-11-06T07:22:33.903083+00:00",
-          "verified": true,
-          "claim": "[QUEUE] Coordination"
         }
       ],
       "guardrails": [
@@ -238,7 +174,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mealie-recipes/mealie/issues/1306",
-          "observedAt": "2026-11-06T07:22:34.600621+00:00",
+          "observedAt": "2026-11-06T19:41:04.178072+00:00",
           "verified": true,
           "claim": "[v1.0.0b] [Task] - Export Recipes and Cookbooks to PDF"
         },
@@ -246,7 +182,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/IamTugy/recipes/issues/21",
-          "observedAt": "2026-11-06T07:22:34.600626+00:00",
+          "observedAt": "2026-11-06T19:41:04.178076+00:00",
           "verified": true,
           "claim": "Cookbook/collection PDF export"
         },
@@ -254,7 +190,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Benkendorfer/recipe-manager/issues/7",
-          "observedAt": "2026-11-06T07:22:34.600632+00:00",
+          "observedAt": "2026-11-06T19:41:04.178081+00:00",
           "verified": true,
           "claim": "Import recipes from PDF files"
         },
@@ -262,7 +198,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mathnauleau/commeat/issues/3",
-          "observedAt": "2026-11-06T07:22:34.600630+00:00",
+          "observedAt": "2026-11-06T19:41:04.178079+00:00",
           "verified": true,
           "claim": "Later: Print full cookbook PDF"
         },
@@ -270,7 +206,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7826",
-          "observedAt": "2026-11-06T07:22:34.600636+00:00",
+          "observedAt": "2026-11-06T19:41:04.178084+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -278,7 +214,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7825",
-          "observedAt": "2026-11-06T07:22:34.600638+00:00",
+          "observedAt": "2026-11-06T19:41:04.178086+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -286,7 +222,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7824",
-          "observedAt": "2026-11-06T07:22:34.600640+00:00",
+          "observedAt": "2026-11-06T19:41:04.178088+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         }
