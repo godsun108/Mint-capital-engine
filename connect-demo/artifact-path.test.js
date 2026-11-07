@@ -4,9 +4,11 @@ import {mkdtempSync,mkdirSync,writeFileSync,symlinkSync,rmSync} from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 import {approvedArtifactPath} from './artifact-path.js';
+import {realpath} from 'node:fs/promises';
+const rootReal=await realpath(os.tmpdir());
 
 test('artifact path accepts only real files inside deliverables',async t=>{
-  const root=mkdtempSync(path.join(os.tmpdir(),'mint-artifact-'));
+  const root=mkdtempSync(path.join(rootReal,'mint-artifact-'));
   t.after(()=>rmSync(root,{recursive:true,force:true}));
   mkdirSync(path.join(root,'deliverables'));
   writeFileSync(path.join(root,'deliverables','valid.txt'),'safe');

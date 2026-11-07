@@ -52,7 +52,7 @@ const sim=await runSimulation();
 assert.equal(sim.jobs.length,6);
 assert.equal(sim.jobs.every(j=>j.status==="COMPLETE"),true);
 const snap=companySnapshot(sim,registry);
-assert.equal(snap.agents,30);
+assert.equal(snap.agents,32);
 assert.equal(snap.jobs,6);
 assert.ok(snap.totalTrackedCost>0);
 console.log("executor and company simulation tests passed");
