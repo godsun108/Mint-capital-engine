@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.synthesis.v1",
-  "generatedAt": "2026-11-07T06:34:45.161388+00:00",
+  "generatedAt": "2026-11-07T13:31:43.963078+00:00",
   "clusters": [
     {
       "topic": "express-typescript",
@@ -16,53 +16,78 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
-          "b": "https://github.com/Meeovi/meeovi-learning/issues/3",
+          "a": "https://github.com/orgtoar/redwood-test/issues/286",
+          "b": "https://github.com/hmcts/pcs-frontend/issues/10",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
-          "b": "https://github.com/hmcts/fact-public-frontend/issues/1",
+          "a": "https://github.com/orgtoar/redwood-test/issues/286",
+          "b": "https://github.com/hmcts/rpts-frontend/issues/13",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "a": "https://github.com/orgtoar/redwood-test/issues/286",
+          "b": "https://github.com/hmcts/sptribs-frontend/issues/444",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/orgtoar/redwood-test/issues/286",
+          "b": "https://github.com/hmcts/pre-portal/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/orgtoar/redwood-test/issues/286",
           "b": "https://github.com/hmcts/fact-admin-frontend/issues/3",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
-          "b": "https://github.com/hmcts/opal-frontend-common-node-lib/issues/3",
+          "a": "https://github.com/hmcts/pcs-frontend/issues/10",
+          "b": "https://github.com/hmcts/rpts-frontend/issues/13",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/Meeovi/meeovi-learning/issues/3",
-          "b": "https://github.com/hmcts/fact-public-frontend/issues/1",
+          "a": "https://github.com/hmcts/pcs-frontend/issues/10",
+          "b": "https://github.com/hmcts/sptribs-frontend/issues/444",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/Meeovi/meeovi-learning/issues/3",
+          "a": "https://github.com/hmcts/pcs-frontend/issues/10",
+          "b": "https://github.com/hmcts/pre-portal/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/pcs-frontend/issues/10",
           "b": "https://github.com/hmcts/fact-admin-frontend/issues/3",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/Meeovi/meeovi-learning/issues/3",
-          "b": "https://github.com/hmcts/opal-frontend-common-node-lib/issues/3",
+          "a": "https://github.com/hmcts/rpts-frontend/issues/13",
+          "b": "https://github.com/hmcts/sptribs-frontend/issues/444",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/hmcts/fact-public-frontend/issues/1",
+          "a": "https://github.com/hmcts/rpts-frontend/issues/13",
+          "b": "https://github.com/hmcts/pre-portal/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/rpts-frontend/issues/13",
           "b": "https://github.com/hmcts/fact-admin-frontend/issues/3",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/hmcts/fact-public-frontend/issues/1",
-          "b": "https://github.com/hmcts/opal-frontend-common-node-lib/issues/3",
+          "a": "https://github.com/hmcts/sptribs-frontend/issues/444",
+          "b": "https://github.com/hmcts/pre-portal/issues/1",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/hmcts/fact-admin-frontend/issues/3",
-          "b": "https://github.com/hmcts/opal-frontend-common-node-lib/issues/3",
+          "a": "https://github.com/hmcts/sptribs-frontend/issues/444",
+          "b": "https://github.com/hmcts/fact-admin-frontend/issues/3",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/pre-portal/issues/1",
+          "b": "https://github.com/hmcts/fact-admin-frontend/issues/3",
           "similarity": 1.0
         }
       ],
@@ -73,14 +98,8 @@
       "topic": "venture-economics",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [
-        {
-          "a": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
-          "b": "https://github.com/SaikiK12/T/issues/7",
-          "similarity": 0.182
-        }
-      ],
-      "promotionEligible": true,
+      "relatedPairs": [],
+      "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -101,24 +120,8 @@
       "topic": "software-release-contract",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [
-        {
-          "a": "https://github.com/rempemat-eng/appify/issues/149",
-          "b": "https://github.com/rorymclark-prog/ImbewuField/issues/35",
-          "similarity": 0.273
-        },
-        {
-          "a": "https://github.com/jaehojung1879-netizen/Investment/issues/292",
-          "b": "https://github.com/rorymclark-prog/ImbewuField/issues/35",
-          "similarity": 0.2
-        },
-        {
-          "a": "https://github.com/Priysharan19/Final-Pri-learning/issues/686",
-          "b": "https://github.com/rorymclark-prog/ImbewuField/issues/35",
-          "similarity": 0.182
-        }
-      ],
-      "promotionEligible": true,
+      "relatedPairs": [],
+      "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
