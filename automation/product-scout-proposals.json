@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.proposals.v1",
-  "generatedAt": "2026-11-06T19:41:04.463727+00:00",
+  "generatedAt": "2026-11-07T06:34:45.196292+00:00",
   "semantics": "RESEARCH_PROPOSALS_NOT_PRODUCT_CANDIDATES",
   "proposals": [
     {
@@ -13,16 +13,24 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/wa-task-batch-service/issues/87",
-          "observedAt": "2026-11-06T19:40:59.228697+00:00",
+          "url": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "observedAt": "2026-11-07T06:34:39.081953+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/wa-reporting-frontend/issues/11",
-          "observedAt": "2026-11-06T19:40:59.228700+00:00",
+          "url": "https://github.com/Meeovi/meeovi-learning/issues/3",
+          "observedAt": "2026-11-07T06:34:39.081957+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/fact-public-frontend/issues/1",
+          "observedAt": "2026-11-07T06:34:39.081958+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -30,41 +38,47 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/hmcts/fact-admin-frontend/issues/3",
-          "observedAt": "2026-11-06T19:40:59.228723+00:00",
+          "observedAt": "2026-11-07T06:34:39.081961+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "observedAt": "2026-11-06T19:40:59.228734+00:00",
+          "url": "https://github.com/hmcts/opal-frontend-common-node-lib/issues/3",
+          "observedAt": "2026-11-07T06:34:39.081963+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
+        }
+      ],
+      "guardrails": [
+        "proposal_is_not_verified_demand",
+        "research_must_define_customer_and_problem",
+        "no_build_before_product_gate"
+      ]
+    },
+    {
+      "id": "proposal:venture-economics:001",
+      "topic": "venture-economics",
+      "status": "PROPOSED_FOR_RESEARCH",
+      "regulated": false,
+      "upfrontCostUsd": 0,
+      "evidence": [
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
+          "observedAt": "2026-11-07T06:34:39.788340+00:00",
+          "verified": true,
+          "claim": "Central message board \u2014 Hermes, Claude, Codex and operator coordination"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/sptribs-frontend/issues/444",
-          "observedAt": "2026-11-06T19:40:59.228736+00:00",
+          "url": "https://github.com/SaikiK12/T/issues/7",
+          "observedAt": "2026-11-07T06:34:39.788344+00:00",
           "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/chatmcp/mcpso/issues/1",
-          "observedAt": "2026-11-06T19:40:59.228727+00:00",
-          "verified": true,
-          "claim": "Submit Your MCP Servers here"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/modelcontextprotocol/modelcontextprotocol/issues/3370",
-          "observedAt": "2026-11-06T19:40:59.228732+00:00",
-          "verified": true,
-          "claim": "Origin validation rejects browser-based MCP clients on authenticated remote servers"
+          "claim": "Research handoff room: Claude and Codex"
         }
       ],
       "guardrails": [
@@ -84,7 +98,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
-          "observedAt": "2026-11-06T19:41:00.501469+00:00",
+          "observedAt": "2026-11-07T06:34:40.389354+00:00",
           "verified": true,
           "claim": "[TEAM NAYA] Coordination feed \u2014 successor to #2793"
         },
@@ -92,7 +106,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/554",
-          "observedAt": "2026-11-06T19:41:00.501484+00:00",
+          "observedAt": "2026-11-07T06:34:40.389370+00:00",
           "verified": true,
           "claim": "\ud83d\udd31 TEAM NAYA \u2014 Naya \u2194 Coda Direct Communication Board"
         }
@@ -113,18 +127,34 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
+          "url": "https://github.com/rempemat-eng/appify/issues/149",
+          "observedAt": "2026-11-07T06:34:41.055314+00:00",
+          "verified": true,
+          "claim": "NapAttack Codex coordination: four chats, task ownership and Claude handoffs"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
           "url": "https://github.com/rorymclark-prog/ImbewuField/issues/35",
-          "observedAt": "2026-11-06T19:41:01.228920+00:00",
+          "observedAt": "2026-11-07T06:34:41.055337+00:00",
           "verified": true,
           "claim": "Coordination ledger \u2014 Claude \u21c4 Codex (append-only)"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/Aleynaalij/VegasQuantV1/issues/65",
-          "observedAt": "2026-11-06T19:41:01.228938+00:00",
+          "url": "https://github.com/jaehojung1879-netizen/Investment/issues/292",
+          "observedAt": "2026-11-07T06:34:41.055326+00:00",
           "verified": true,
-          "claim": "Agent coordination \u00b7 Kobe (Codex) \u00d7 Shaq (Claude)"
+          "claim": "Investment Control Tower \u2014 autonomous coordination and Codex failover"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/Priysharan19/Final-Pri-learning/issues/686",
+          "observedAt": "2026-11-07T06:34:41.055330+00:00",
+          "verified": true,
+          "claim": "[CTO Coordination] 30-Step V2 Six-Phase Ownership & Release Ledger (non-authorizing)"
         }
       ],
       "guardrails": [
@@ -144,7 +174,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/bizzal70/itsalreadypriced/issues/1",
-          "observedAt": "2026-11-06T19:41:01.880020+00:00",
+          "observedAt": "2026-11-07T06:34:41.757223+00:00",
           "verified": true,
           "claim": "\ud83d\udd0e Daily content review \u2014 It's Already Priced \u2014 Blog + X"
         },
@@ -152,9 +182,39 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
-          "observedAt": "2026-11-06T19:41:01.880021+00:00",
+          "observedAt": "2026-11-07T06:34:41.757224+00:00",
           "verified": true,
           "claim": "\ud83e\udded Daily content opportunities"
+        }
+      ],
+      "guardrails": [
+        "proposal_is_not_verified_demand",
+        "research_must_define_customer_and_problem",
+        "no_build_before_product_gate"
+      ]
+    },
+    {
+      "id": "proposal:evidence-packets:001",
+      "topic": "evidence-packets",
+      "status": "PROPOSED_FOR_RESEARCH",
+      "regulated": false,
+      "upfrontCostUsd": 0,
+      "evidence": [
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/matthewjameswatkins1978-cyber/pepin/issues/16",
+          "observedAt": "2026-11-07T06:34:42.363879+00:00",
+          "verified": true,
+          "claim": "[COORDINATION] Pepin two-agent branch ownership and 3-slice handoffs"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/rempemat-eng/appify/issues/149",
+          "observedAt": "2026-11-07T06:34:42.363881+00:00",
+          "verified": true,
+          "claim": "NapAttack Codex coordination: four chats, task ownership and Claude handoffs"
         }
       ],
       "guardrails": [
@@ -174,7 +234,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mealie-recipes/mealie/issues/1306",
-          "observedAt": "2026-11-06T19:41:04.178072+00:00",
+          "observedAt": "2026-11-07T06:34:44.488073+00:00",
           "verified": true,
           "claim": "[v1.0.0b] [Task] - Export Recipes and Cookbooks to PDF"
         },
@@ -182,7 +242,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/IamTugy/recipes/issues/21",
-          "observedAt": "2026-11-06T19:41:04.178076+00:00",
+          "observedAt": "2026-11-07T06:34:44.488075+00:00",
           "verified": true,
           "claim": "Cookbook/collection PDF export"
         },
@@ -190,7 +250,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Benkendorfer/recipe-manager/issues/7",
-          "observedAt": "2026-11-06T19:41:04.178081+00:00",
+          "observedAt": "2026-11-07T06:34:44.488079+00:00",
           "verified": true,
           "claim": "Import recipes from PDF files"
         },
@@ -198,7 +258,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mathnauleau/commeat/issues/3",
-          "observedAt": "2026-11-06T19:41:04.178079+00:00",
+          "observedAt": "2026-11-07T06:34:44.488078+00:00",
           "verified": true,
           "claim": "Later: Print full cookbook PDF"
         },
@@ -206,7 +266,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7826",
-          "observedAt": "2026-11-06T19:41:04.178084+00:00",
+          "observedAt": "2026-11-07T06:34:44.488081+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -214,7 +274,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7825",
-          "observedAt": "2026-11-06T19:41:04.178086+00:00",
+          "observedAt": "2026-11-07T06:34:44.488083+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -222,7 +282,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7824",
-          "observedAt": "2026-11-06T19:41:04.178088+00:00",
+          "observedAt": "2026-11-07T06:34:44.488084+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         }
