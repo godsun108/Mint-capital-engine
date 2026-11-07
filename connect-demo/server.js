@@ -1,6 +1,7 @@
 import http from 'node:http';
 import {paymentWebhook} from './payment-webhook.js';
 import {isApprovedLivePurchase} from './payment-authorization.js';
+import {recordSession,observerProjection,evidencePath} from './settlement-evidence.js';
 import {approvedArtifactPath} from './artifact-path.js';
 import {readFile} from 'node:fs/promises';
 import {createReadStream,existsSync,mkdirSync,readFileSync,writeFileSync,renameSync} from 'node:fs';
@@ -299,12 +300,33 @@ async function moneyState(res){
     const ch=pi&&typeof pi.latest_charge==='object'?pi.latest_charge:null;
     const bt=ch&&typeof ch.balance_transaction==='object'?ch.balance_transaction:null;
     const state=session.payment_status!=='paid'?'created':bt?.status==='available'?'provider_available':'pending';
+    // Durable settlement-evidence ledger (privacy-light, idempotent per session).
+    // PAID != SETTLED is preserved: availability records as PAID_PROVIDER_AVAILABLE,
+    // never SETTLED. Settled USD appears only after independent destination-cash
+    // confirmation via confirmSettlement() (operator-attested bank/transfer evidence).
+    if(session.payment_status==='paid'){
+      try{
+        recordSession(process.env.MINT_STATE_DIR||path.join(process.cwd(),'.mint-state'),{
+          sessionId:session.id,
+          offerId:session.metadata?.mint_offer_id||null,
+          amountTotal:session.amount_total||0,
+          currency:session.currency||null,
+          livemode:session.livemode===true,
+          state:state==='provider_available'?'PAID_PROVIDER_AVAILABLE':'PAID_PENDING',
+          balanceTransaction:bt,
+          chargeId:ch?.id||null
+        });
+      }catch{/* evidence recording must never break the money-state read */}
+    }
     totals[state]=(totals[state]||0)+1;
     if(session.payment_status==='paid')totals.paid++;
     if(ch?.paid){totals.gross+=ch.amount||0;totals.applicationFees+=ch.application_fee_amount||0;}
     if(bt){totals.processorFees+=bt.fee||0;totals.net+=bt.net||0;}
   }
-  return send(res,200,{ok:true,mode:(balance.livemode?'live':'test'),settledDefinition:'Requires independent destination-cash evidence; Stripe availability alone is not SETTLED.',generatedAt:new Date().toISOString(),totals});
+  let settlement=null;
+  try{settlement=observerProjection(process.env.MINT_STATE_DIR||path.join(process.cwd(),'.mint-state'));}catch{settlement=null;}
+  return send(res,200,{ok:true,mode:(balance.livemode?'live':'test'),settledDefinition:'Requires independent destination-cash evidence; Stripe availability alone is not SETTLED.',generatedAt:new Date().toISOString(),totals,
+   settlement:{schema:'mint.settlement.evidence.v1',semantics:'PROVIDER_AVAILABLE_IS_NOT_BANK_SETTLEMENT; settledNetUsd counts only independently confirmed destination-cash evidence.',...settlement}});
 }
 
 async function fulfillCheckout(sessionId,res){

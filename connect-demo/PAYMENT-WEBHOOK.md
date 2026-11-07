@@ -31,3 +31,20 @@ Tests use local signed fixtures and a mocked Stripe read, not real paid transact
 Production acceptance requires successful delivery of a real Stripe-originated event
 and separate evidence of a customer download. Never manufacture a live payment event.
 Rollback: disable the Stripe endpoint first, revert the code, preserve entitlement files.
+
+## Settlement evidence ledger (2026-11-07)
+`settlement-evidence.js` closes the loop between Stripe PAID and MINT SETTLED:
+- Every paid session seen by /api/money-state records a durable, atomic,
+  privacy-light row under MINT_STATE_DIR/settlement-evidence.json
+  (idempotent per session; duplicate/stale notifications are no-ops; refunds terminal).
+- PAID != SETTLED is enforced in code: balance-transaction availability records
+  as PAID_PROVIDER_AVAILABLE with settled=false forever until an independent
+  destination-cash evidence ref (bank line / transfer record / operator attestation)
+  confirms settlement via confirmSettlement().
+- /api/money-state now embeds a mint.settlement.evidence.v1 projection, and
+  automation/observe-commerce.js consumes it — settledNetUsd counts only
+  independently confirmed destination-cash evidence. USD-only: non-USD
+  denominations never invent a USD number.
+- This makes the North Star proof event (first independently verified settled
+  dollar) recordable the moment a real sale settles.
+Validation: node --test connect-demo/settlement-evidence.test.js
