@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.proposals.v1",
-  "generatedAt": "2026-11-07T22:16:28.485057+00:00",
+  "generatedAt": "2026-11-08T06:41:00.676212+00:00",
   "semantics": "RESEARCH_PROPOSALS_NOT_PRODUCT_CANDIDATES",
   "proposals": [
     {
@@ -13,24 +13,24 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
-          "observedAt": "2026-11-07T22:16:22.994710+00:00",
+          "url": "https://github.com/Jetnity/jetnity/issues/751",
+          "observedAt": "2026-11-08T06:40:56.206193+00:00",
           "verified": true,
-          "claim": "Dependency Dashboard"
+          "claim": "Guardian Intelligence Current State \u2014 canonical live index"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/sneat-co/sneat-club/issues/4",
-          "observedAt": "2026-11-07T22:16:22.994714+00:00",
+          "url": "https://github.com/meggarmind/RESIDIO/issues/412",
+          "observedAt": "2026-11-08T06:40:56.206217+00:00",
           "verified": true,
-          "claim": "Dependency Dashboard"
+          "claim": "Session state: live handoff record"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "observedAt": "2026-11-07T22:16:22.994725+00:00",
+          "url": "https://github.com/sneat-co/sportius/issues/27",
+          "observedAt": "2026-11-08T06:40:56.206203+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -38,7 +38,39 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/sneat-co/prioritarius/issues/1",
-          "observedAt": "2026-11-07T22:16:22.994727+00:00",
+          "observedAt": "2026-11-08T06:40:56.206205+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "observedAt": "2026-11-08T06:40:56.206207+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/Stooa/Stooa/issues/186",
+          "observedAt": "2026-11-08T06:40:56.206208+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/sneat-co/sneat-club/issues/4",
+          "observedAt": "2026-11-08T06:40:56.206210+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "observedAt": "2026-11-08T06:40:56.206219+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -46,9 +78,39 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/sneat-co/circleus/issues/1",
-          "observedAt": "2026-11-07T22:16:22.994735+00:00",
+          "observedAt": "2026-11-08T06:40:56.206220+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
+        }
+      ],
+      "guardrails": [
+        "proposal_is_not_verified_demand",
+        "research_must_define_customer_and_problem",
+        "no_build_before_product_gate"
+      ]
+    },
+    {
+      "id": "proposal:venture-economics:001",
+      "topic": "venture-economics",
+      "status": "PROPOSED_FOR_RESEARCH",
+      "regulated": false,
+      "upfrontCostUsd": 0,
+      "evidence": [
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/arunakulat/dutchbay-epc-model/issues/1353",
+          "observedAt": "2026-11-08T06:40:56.739897+00:00",
+          "verified": true,
+          "claim": "tracking: DutchBay capability and assurance roadmap"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/LowcountryDigitalWorks/gas-engine/issues/31",
+          "observedAt": "2026-11-08T06:40:56.739908+00:00",
+          "verified": true,
+          "claim": "GAS-ROADMAP-002 \u2014 Competitor-informed evergreen capability roadmap"
         }
       ],
       "guardrails": [
@@ -68,7 +130,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
-          "observedAt": "2026-11-07T22:16:24.237805+00:00",
+          "observedAt": "2026-11-08T06:40:57.258184+00:00",
           "verified": true,
           "claim": "[TEAM NAYA] Coordination feed \u2014 successor to #2793"
         },
@@ -76,7 +138,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/554",
-          "observedAt": "2026-11-07T22:16:24.237831+00:00",
+          "observedAt": "2026-11-08T06:40:57.258211+00:00",
           "verified": true,
           "claim": "\ud83d\udd31 TEAM NAYA \u2014 Naya \u2194 Coda Direct Communication Board"
         }
@@ -98,7 +160,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/bizzal70/itsalreadypriced/issues/1",
-          "observedAt": "2026-11-07T22:16:25.456411+00:00",
+          "observedAt": "2026-11-08T06:40:58.674266+00:00",
           "verified": true,
           "claim": "\ud83d\udd0e Daily content review \u2014 It's Already Priced \u2014 Blog + X"
         },
@@ -106,7 +168,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
-          "observedAt": "2026-11-07T22:16:25.456416+00:00",
+          "observedAt": "2026-11-08T06:40:58.674267+00:00",
           "verified": true,
           "claim": "\ud83e\udded Daily content opportunities"
         }
@@ -127,118 +189,18 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/StegVerse-Labs/.github/issues/3446",
-          "observedAt": "2026-11-07T22:16:26.153418+00:00",
+          "url": "https://github.com/diegoami/onenil-archaeology/issues/1",
+          "observedAt": "2026-11-08T06:40:59.308479+00:00",
           "verified": true,
-          "claim": "[QUEUE] Kimi"
+          "claim": "Checkpoints: where the work stands"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/StegVerse-Labs/.github/issues/3444",
-          "observedAt": "2026-11-07T22:16:26.153439+00:00",
+          "url": "https://github.com/diegoami/onenil/issues/1",
+          "observedAt": "2026-11-08T06:40:59.308480+00:00",
           "verified": true,
-          "claim": "[QUEUE] Coordination"
-        }
-      ],
-      "guardrails": [
-        "proposal_is_not_verified_demand",
-        "research_must_define_customer_and_problem",
-        "no_build_before_product_gate"
-      ]
-    },
-    {
-      "id": "proposal:research-workflow:001",
-      "topic": "research-workflow",
-      "status": "PROPOSED_FOR_RESEARCH",
-      "regulated": false,
-      "upfrontCostUsd": 0,
-      "evidence": [
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/StegVerse-Labs/.github/issues/3446",
-          "observedAt": "2026-11-07T22:16:27.410996+00:00",
-          "verified": true,
-          "claim": "[QUEUE] Kimi"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/StegVerse-Labs/.github/issues/3444",
-          "observedAt": "2026-11-07T22:16:27.411012+00:00",
-          "verified": true,
-          "claim": "[QUEUE] Coordination"
-        }
-      ],
-      "guardrails": [
-        "proposal_is_not_verified_demand",
-        "research_must_define_customer_and_problem",
-        "no_build_before_product_gate"
-      ]
-    },
-    {
-      "id": "proposal:cookbook-export:001",
-      "topic": "cookbook-export",
-      "status": "PROPOSED_FOR_RESEARCH",
-      "regulated": false,
-      "upfrontCostUsd": 0,
-      "evidence": [
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/mealie-recipes/mealie/issues/1306",
-          "observedAt": "2026-11-07T22:16:27.978726+00:00",
-          "verified": true,
-          "claim": "[v1.0.0b] [Task] - Export Recipes and Cookbooks to PDF"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/IamTugy/recipes/issues/21",
-          "observedAt": "2026-11-07T22:16:27.978731+00:00",
-          "verified": true,
-          "claim": "Cookbook/collection PDF export"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/Benkendorfer/recipe-manager/issues/7",
-          "observedAt": "2026-11-07T22:16:27.978737+00:00",
-          "verified": true,
-          "claim": "Import recipes from PDF files"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/mathnauleau/commeat/issues/3",
-          "observedAt": "2026-11-07T22:16:27.978735+00:00",
-          "verified": true,
-          "claim": "Later: Print full cookbook PDF"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/guevara/read-it-later/issues/7826",
-          "observedAt": "2026-11-07T22:16:27.978741+00:00",
-          "verified": true,
-          "claim": "Rust Language Cheat Sheet"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/guevara/read-it-later/issues/7825",
-          "observedAt": "2026-11-07T22:16:27.978743+00:00",
-          "verified": true,
-          "claim": "Rust Language Cheat Sheet"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/guevara/read-it-later/issues/7824",
-          "observedAt": "2026-11-07T22:16:27.978745+00:00",
-          "verified": true,
-          "claim": "Rust Language Cheat Sheet"
+          "claim": "Checkpoints: where the work stands"
         }
       ],
       "guardrails": [

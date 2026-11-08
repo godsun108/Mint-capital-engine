@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.synthesis.v1",
-  "generatedAt": "2026-11-07T22:16:28.429679+00:00",
+  "generatedAt": "2026-11-08T06:41:00.626102+00:00",
   "clusters": [
     {
       "topic": "express-typescript",
@@ -16,18 +16,78 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
+          "a": "https://github.com/Jetnity/jetnity/issues/751",
+          "b": "https://github.com/meggarmind/RESIDIO/issues/412",
+          "similarity": 0.2
+        },
+        {
+          "a": "https://github.com/sneat-co/sportius/issues/27",
+          "b": "https://github.com/sneat-co/prioritarius/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sportius/issues/27",
+          "b": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sportius/issues/27",
+          "b": "https://github.com/Stooa/Stooa/issues/186",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sportius/issues/27",
+          "b": "https://github.com/sneat-co/sneat-club/issues/4",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sportius/issues/27",
+          "b": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sportius/issues/27",
+          "b": "https://github.com/sneat-co/circleus/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/prioritarius/issues/1",
+          "b": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/prioritarius/issues/1",
+          "b": "https://github.com/Stooa/Stooa/issues/186",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/prioritarius/issues/1",
+          "b": "https://github.com/sneat-co/sneat-club/issues/4",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/prioritarius/issues/1",
+          "b": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/prioritarius/issues/1",
+          "b": "https://github.com/sneat-co/circleus/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "b": "https://github.com/Stooa/Stooa/issues/186",
+          "similarity": 1.0
+        },
+        {
           "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
           "b": "https://github.com/sneat-co/sneat-club/issues/4",
           "similarity": 1.0
         },
         {
           "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
-          "b": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
-          "b": "https://github.com/sneat-co/prioritarius/issues/1",
+          "b": "https://github.com/sneat-co/sneat-ext-template/issues/17",
           "similarity": 1.0
         },
         {
@@ -36,13 +96,23 @@
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/sneat-co/sneat-club/issues/4",
-          "b": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "a": "https://github.com/Stooa/Stooa/issues/186",
+          "b": "https://github.com/sneat-co/sneat-club/issues/4",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/Stooa/Stooa/issues/186",
+          "b": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/Stooa/Stooa/issues/186",
+          "b": "https://github.com/sneat-co/circleus/issues/1",
           "similarity": 1.0
         },
         {
           "a": "https://github.com/sneat-co/sneat-club/issues/4",
-          "b": "https://github.com/sneat-co/prioritarius/issues/1",
+          "b": "https://github.com/sneat-co/sneat-ext-template/issues/17",
           "similarity": 1.0
         },
         {
@@ -51,17 +121,7 @@
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "b": "https://github.com/sneat-co/prioritarius/issues/1",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "b": "https://github.com/sneat-co/circleus/issues/1",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/sneat-co/prioritarius/issues/1",
+          "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
           "b": "https://github.com/sneat-co/circleus/issues/1",
           "similarity": 1.0
         }
@@ -73,8 +133,14 @@
       "topic": "venture-economics",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/arunakulat/dutchbay-epc-model/issues/1353",
+          "b": "https://github.com/LowcountryDigitalWorks/gas-engine/issues/31",
+          "similarity": 0.25
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -119,9 +185,9 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/StegVerse-Labs/.github/issues/3446",
-          "b": "https://github.com/StegVerse-Labs/.github/issues/3444",
-          "similarity": 0.333
+          "a": "https://github.com/diegoami/onenil-archaeology/issues/1",
+          "b": "https://github.com/diegoami/onenil/issues/1",
+          "similarity": 1.0
         }
       ],
       "promotionEligible": true,
@@ -139,53 +205,16 @@
       "topic": "research-workflow",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [
-        {
-          "a": "https://github.com/StegVerse-Labs/.github/issues/3446",
-          "b": "https://github.com/StegVerse-Labs/.github/issues/3444",
-          "similarity": 0.333
-        }
-      ],
-      "promotionEligible": true,
+      "relatedPairs": [],
+      "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "cookbook-export",
-      "observationCount": 12,
-      "distinctSources": 12,
-      "relatedPairs": [
-        {
-          "a": "https://github.com/mealie-recipes/mealie/issues/1306",
-          "b": "https://github.com/IamTugy/recipes/issues/21",
-          "similarity": 0.25
-        },
-        {
-          "a": "https://github.com/mealie-recipes/mealie/issues/1306",
-          "b": "https://github.com/Benkendorfer/recipe-manager/issues/7",
-          "similarity": 0.25
-        },
-        {
-          "a": "https://github.com/IamTugy/recipes/issues/21",
-          "b": "https://github.com/mathnauleau/commeat/issues/3",
-          "similarity": 0.286
-        },
-        {
-          "a": "https://github.com/guevara/read-it-later/issues/7826",
-          "b": "https://github.com/guevara/read-it-later/issues/7825",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/guevara/read-it-later/issues/7826",
-          "b": "https://github.com/guevara/read-it-later/issues/7824",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/guevara/read-it-later/issues/7825",
-          "b": "https://github.com/guevara/read-it-later/issues/7824",
-          "similarity": 1.0
-        }
-      ],
-      "promotionEligible": true,
+      "observationCount": 0,
+      "distinctSources": 0,
+      "relatedPairs": [],
+      "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
