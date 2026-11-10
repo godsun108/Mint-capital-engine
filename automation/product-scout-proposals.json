@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.proposals.v1",
-  "generatedAt": "2026-11-10T07:43:29.194503+00:00",
+  "generatedAt": "2026-11-10T19:59:36.715964+00:00",
   "semantics": "RESEARCH_PROPOSALS_NOT_PRODUCT_CANDIDATES",
   "proposals": [
     {
@@ -13,16 +13,32 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
-          "observedAt": "2026-11-10T07:43:22.707198+00:00",
+          "url": "https://github.com/solarissongcontest/solarisstudio/issues/574",
+          "observedAt": "2026-11-10T19:59:30.728951+00:00",
+          "verified": true,
+          "claim": "V3 Parallel Implementation Coordination"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/PubliciaLLC/go-help-desk/issues/290",
+          "observedAt": "2026-11-10T19:59:30.728984+00:00",
+          "verified": true,
+          "claim": "Agent coordination: two sessions working from 6e05b81 in parallel"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/sneat-co/sneat-club/issues/4",
+          "observedAt": "2026-11-10T19:59:30.728975+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/TravisPooley/vulhub/issues/4",
-          "observedAt": "2026-11-10T07:43:22.707201+00:00",
+          "url": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "observedAt": "2026-11-10T19:59:30.728977+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -30,33 +46,109 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mitodl/mitxpro/issues/2711",
-          "observedAt": "2026-11-10T07:43:22.707206+00:00",
+          "observedAt": "2026-11-10T19:59:30.728986+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/rpts-frontend/issues/13",
-          "observedAt": "2026-11-10T07:43:22.707210+00:00",
+          "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "observedAt": "2026-11-10T19:59:30.728987+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/wa-task-batch-service/issues/87",
-          "observedAt": "2026-11-10T07:43:22.707218+00:00",
+          "url": "https://github.com/hmcts/wa-reporting-frontend/issues/11",
+          "observedAt": "2026-11-10T19:59:30.728994+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/sneat-co/prioritarius/issues/1",
-          "observedAt": "2026-11-10T07:43:22.707227+00:00",
+          "url": "https://github.com/hmcts/pcs-frontend/issues/10",
+          "observedAt": "2026-11-10T19:59:30.728996+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/amaybaum-prod/supabase/issues/116",
+          "observedAt": "2026-11-10T19:59:30.728990+00:00",
+          "verified": true,
+          "claim": "studio-0.0.9.tgz: 190 vulnerabilities (highest severity is: 10.0) [master] (reachable) - autoclosed"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/amaybaum-prod/supabase/issues/26",
+          "observedAt": "2026-11-10T19:59:30.728991+00:00",
+          "verified": true,
+          "claim": "studio-0.0.9.tgz: 190 vulnerabilities (highest severity is: 10.0) [master] (reachable)"
+        }
+      ],
+      "guardrails": [
+        "proposal_is_not_verified_demand",
+        "research_must_define_customer_and_problem",
+        "no_build_before_product_gate"
+      ]
+    },
+    {
+      "id": "proposal:venture-economics:001",
+      "topic": "venture-economics",
+      "status": "PROPOSED_FOR_RESEARCH",
+      "regulated": false,
+      "upfrontCostUsd": 0,
+      "evidence": [
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
+          "observedAt": "2026-11-10T19:59:31.633995+00:00",
+          "verified": true,
+          "claim": "Central message board \u2014 Hermes, Claude, Codex and operator coordination"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/SaikiK12/T/issues/7",
+          "observedAt": "2026-11-10T19:59:31.634009+00:00",
+          "verified": true,
+          "claim": "Research handoff room: Claude and Codex"
+        }
+      ],
+      "guardrails": [
+        "proposal_is_not_verified_demand",
+        "research_must_define_customer_and_problem",
+        "no_build_before_product_gate"
+      ]
+    },
+    {
+      "id": "proposal:software-release-contract:001",
+      "topic": "software-release-contract",
+      "status": "PROPOSED_FOR_RESEARCH",
+      "regulated": false,
+      "upfrontCostUsd": 0,
+      "evidence": [
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/rempemat-eng/appify/issues/149",
+          "observedAt": "2026-11-10T19:59:33.313328+00:00",
+          "verified": true,
+          "claim": "NapAttack Codex coordination: four chats, task ownership and Claude handoffs"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/scottonchain/microcredit-agent-testbed/issues/15",
+          "observedAt": "2026-11-10T19:59:33.313337+00:00",
+          "verified": true,
+          "claim": "Central message board \u2014 Hermes, Claude, Codex and operator coordination"
         }
       ],
       "guardrails": [
@@ -76,7 +168,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/bizzal70/itsalreadypriced/issues/1",
-          "observedAt": "2026-11-10T07:43:25.730276+00:00",
+          "observedAt": "2026-11-10T19:59:34.185937+00:00",
           "verified": true,
           "claim": "\ud83d\udd0e Daily content review \u2014 It's Already Priced \u2014 Blog + X"
         },
@@ -84,7 +176,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
-          "observedAt": "2026-11-10T07:43:25.730277+00:00",
+          "observedAt": "2026-11-10T19:59:34.185940+00:00",
           "verified": true,
           "claim": "\ud83e\udded Daily content opportunities"
         }
@@ -96,8 +188,8 @@
       ]
     },
     {
-      "id": "proposal:cookbook-export:001",
-      "topic": "cookbook-export",
+      "id": "proposal:evidence-packets:001",
+      "topic": "evidence-packets",
       "status": "PROPOSED_FOR_RESEARCH",
       "regulated": false,
       "upfrontCostUsd": 0,
@@ -105,58 +197,26 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/mealie-recipes/mealie/issues/1306",
-          "observedAt": "2026-11-10T07:43:28.961445+00:00",
+          "url": "https://github.com/kk051780/toy-wars-factory/issues/218",
+          "observedAt": "2026-11-10T19:59:34.914076+00:00",
           "verified": true,
-          "claim": "[v1.0.0b] [Task] - Export Recipes and Cookbooks to PDF"
+          "claim": "[OWNER P0-D] Chat\u4e26\u5217\u5236\u4f5c\u30fb\u5b8c\u6210\u30d3\u30eb\u30c9\u7d71\u5408\u30fbCodex\u6700\u7d42\u5b9f\u6a5fQA\uff5c\u5171\u901a\u53f0\u5e33"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/IamTugy/recipes/issues/21",
-          "observedAt": "2026-11-10T07:43:28.961451+00:00",
+          "url": "https://github.com/kk051780/toy-wars-factory/issues/213",
+          "observedAt": "2026-11-10T19:59:34.914097+00:00",
           "verified": true,
-          "claim": "Cookbook/collection PDF export"
+          "claim": "[OWNER P0-D 2026-11-09] TRAP RAIDERS\uff5c\u653b\u57ce\u30fb\u5b9d\u5f37\u596a\u30fb\u4ef2\u9593\u30e2\u30f3\u30b9\u30bf\u30fc\u30fb\u30d2\u30fc\u30ed\u30fc\u907a\u7269"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/Benkendorfer/recipe-manager/issues/7",
-          "observedAt": "2026-11-10T07:43:28.961456+00:00",
+          "url": "https://github.com/kk051780/toy-wars-factory/issues/219",
+          "observedAt": "2026-11-10T19:59:34.914099+00:00",
           "verified": true,
-          "claim": "Import recipes from PDF files"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/mathnauleau/commeat/issues/3",
-          "observedAt": "2026-11-10T07:43:28.961454+00:00",
-          "verified": true,
-          "claim": "Later: Print full cookbook PDF"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/guevara/read-it-later/issues/7826",
-          "observedAt": "2026-11-10T07:43:28.961459+00:00",
-          "verified": true,
-          "claim": "Rust Language Cheat Sheet"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/guevara/read-it-later/issues/7825",
-          "observedAt": "2026-11-10T07:43:28.961461+00:00",
-          "verified": true,
-          "claim": "Rust Language Cheat Sheet"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/guevara/read-it-later/issues/7824",
-          "observedAt": "2026-11-10T07:43:28.961463+00:00",
-          "verified": true,
-          "claim": "Rust Language Cheat Sheet"
+          "claim": "[P0-D \u4f01\u753b\u5ba4] TRAP RAIDERS\u5e02\u5834\u5206\u6790\u30fb\u52dd\u3061\u7b4b\u4eee\u8aac\u30fbCodex\u5f15\u6e21\u3057\u30d0\u30c3\u30af\u30ed\u30b0\uff08\u8ffd\u8a18\u5f0f\uff09"
         }
       ],
       "guardrails": [
