@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.synthesis.v1",
-  "generatedAt": "2026-11-11T07:05:34.423968+00:00",
+  "generatedAt": "2026-11-11T19:51:08.597940+00:00",
   "clusters": [
     {
       "topic": "express-typescript",
@@ -16,58 +16,108 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/mitodl/mitxpro/issues/2711",
-          "b": "https://github.com/sneat-co/sneat-club/issues/4",
+          "a": "https://github.com/hmcts/pcs-frontend/issues/10",
+          "b": "https://github.com/sneat-co/sportius/issues/27",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/mitodl/mitxpro/issues/2711",
-          "b": "https://github.com/sneat-co/circleus/issues/1",
+          "a": "https://github.com/hmcts/pcs-frontend/issues/10",
+          "b": "https://github.com/hmcts/fact-public-frontend/issues/1",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/mitodl/mitxpro/issues/2711",
-          "b": "https://github.com/sneat-co/prioritarius/issues/1",
+          "a": "https://github.com/hmcts/pcs-frontend/issues/10",
+          "b": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/mitodl/mitxpro/issues/2711",
+          "a": "https://github.com/hmcts/pcs-frontend/issues/10",
           "b": "https://github.com/sneat-co/sneat-ext-template/issues/17",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/sneat-co/sneat-club/issues/4",
-          "b": "https://github.com/sneat-co/circleus/issues/1",
+          "a": "https://github.com/hmcts/pcs-frontend/issues/10",
+          "b": "https://github.com/hmcts/appreg-frontend/issues/2",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/sneat-co/sneat-club/issues/4",
-          "b": "https://github.com/sneat-co/prioritarius/issues/1",
+          "a": "https://github.com/hmcts/pcs-frontend/issues/10",
+          "b": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/sneat-co/sneat-club/issues/4",
+          "a": "https://github.com/sneat-co/sportius/issues/27",
+          "b": "https://github.com/hmcts/fact-public-frontend/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sportius/issues/27",
+          "b": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sportius/issues/27",
           "b": "https://github.com/sneat-co/sneat-ext-template/issues/17",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/ontripai/cladora-website/issues/463",
-          "b": "https://github.com/rorymclark-prog/ImbewuField/issues/35",
-          "similarity": 0.222
-        },
-        {
-          "a": "https://github.com/sneat-co/circleus/issues/1",
-          "b": "https://github.com/sneat-co/prioritarius/issues/1",
+          "a": "https://github.com/sneat-co/sportius/issues/27",
+          "b": "https://github.com/hmcts/appreg-frontend/issues/2",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/sneat-co/circleus/issues/1",
+          "a": "https://github.com/sneat-co/sportius/issues/27",
+          "b": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/fact-public-frontend/issues/1",
+          "b": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/fact-public-frontend/issues/1",
           "b": "https://github.com/sneat-co/sneat-ext-template/issues/17",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/sneat-co/prioritarius/issues/1",
+          "a": "https://github.com/hmcts/fact-public-frontend/issues/1",
+          "b": "https://github.com/hmcts/appreg-frontend/issues/2",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/fact-public-frontend/issues/1",
+          "b": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
           "b": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "b": "https://github.com/hmcts/appreg-frontend/issues/2",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "b": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "b": "https://github.com/hmcts/appreg-frontend/issues/2",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "b": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/appreg-frontend/issues/2",
+          "b": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
           "similarity": 1.0
         }
       ],
@@ -114,34 +164,87 @@
     },
     {
       "topic": "evidence-packets",
-      "observationCount": 0,
-      "distinctSources": 0,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "observationCount": 20,
+      "distinctSources": 20,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/maxmixalex/hpclang/issues/1",
+          "b": "https://github.com/jerryyyu/shengji/issues/1263",
+          "similarity": 0.2
+        },
+        {
+          "a": "https://github.com/maxmixalex/hpclang/issues/1",
+          "b": "https://github.com/KaiSong06/lol-macro-guide/issues/2",
+          "similarity": 0.2
+        },
+        {
+          "a": "https://github.com/jerryyyu/shengji/issues/1263",
+          "b": "https://github.com/KaiSong06/lol-macro-guide/issues/2",
+          "similarity": 0.2
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "digital-goods",
-      "observationCount": 0,
-      "distinctSources": 0,
+      "observationCount": 20,
+      "distinctSources": 20,
       "relatedPairs": [],
       "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "research-workflow",
-      "observationCount": 0,
-      "distinctSources": 0,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "observationCount": 20,
+      "distinctSources": 20,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/StegVerse-Labs/.github/issues/3447",
+          "b": "https://github.com/StegVerse-Labs/.github/issues/3443",
+          "similarity": 0.333
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "cookbook-export",
-      "observationCount": 0,
-      "distinctSources": 0,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "observationCount": 11,
+      "distinctSources": 11,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/mealie-recipes/mealie/issues/1306",
+          "b": "https://github.com/IamTugy/recipes/issues/21",
+          "similarity": 0.25
+        },
+        {
+          "a": "https://github.com/mealie-recipes/mealie/issues/1306",
+          "b": "https://github.com/Benkendorfer/recipe-manager/issues/7",
+          "similarity": 0.25
+        },
+        {
+          "a": "https://github.com/IamTugy/recipes/issues/21",
+          "b": "https://github.com/mathnauleau/commeat/issues/3",
+          "similarity": 0.286
+        },
+        {
+          "a": "https://github.com/guevara/read-it-later/issues/7826",
+          "b": "https://github.com/guevara/read-it-later/issues/7825",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/guevara/read-it-later/issues/7826",
+          "b": "https://github.com/guevara/read-it-later/issues/7824",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/guevara/read-it-later/issues/7825",
+          "b": "https://github.com/guevara/read-it-later/issues/7824",
+          "similarity": 1.0
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {

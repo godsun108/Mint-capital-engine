@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.proposals.v1",
-  "generatedAt": "2026-11-11T07:05:34.475558+00:00",
+  "generatedAt": "2026-11-11T19:51:08.641683+00:00",
   "semantics": "RESEARCH_PROPOSALS_NOT_PRODUCT_CANDIDATES",
   "proposals": [
     {
@@ -13,32 +13,32 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/mitodl/mitxpro/issues/2711",
-          "observedAt": "2026-11-11T07:05:29.660023+00:00",
+          "url": "https://github.com/hmcts/pcs-frontend/issues/10",
+          "observedAt": "2026-11-11T19:51:00.621470+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/sneat-co/sneat-club/issues/4",
-          "observedAt": "2026-11-11T07:05:29.660037+00:00",
+          "url": "https://github.com/sneat-co/sportius/issues/27",
+          "observedAt": "2026-11-11T19:51:00.621471+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/sneat-co/circleus/issues/1",
-          "observedAt": "2026-11-11T07:05:29.660055+00:00",
+          "url": "https://github.com/hmcts/fact-public-frontend/issues/1",
+          "observedAt": "2026-11-11T19:51:00.621480+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/sneat-co/prioritarius/issues/1",
-          "observedAt": "2026-11-11T07:05:29.660059+00:00",
+          "url": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "observedAt": "2026-11-11T19:51:00.621482+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -46,25 +46,25 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/sneat-co/sneat-ext-template/issues/17",
-          "observedAt": "2026-11-11T07:05:29.660061+00:00",
+          "observedAt": "2026-11-11T19:51:00.621483+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/ontripai/cladora-website/issues/463",
-          "observedAt": "2026-11-11T07:05:29.660041+00:00",
+          "url": "https://github.com/hmcts/appreg-frontend/issues/2",
+          "observedAt": "2026-11-11T19:51:00.621484+00:00",
           "verified": true,
-          "claim": "PM: central coordination and evidence register for Codex seats"
+          "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/rorymclark-prog/ImbewuField/issues/35",
-          "observedAt": "2026-11-11T07:05:29.660057+00:00",
+          "url": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
+          "observedAt": "2026-11-11T19:51:00.621489+00:00",
           "verified": true,
-          "claim": "Coordination ledger \u2014 Claude \u21c4 Codex (append-only)"
+          "claim": "Dependency Dashboard"
         }
       ],
       "guardrails": [
@@ -84,7 +84,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/bizzal70/itsalreadypriced/issues/1",
-          "observedAt": "2026-11-11T07:05:33.004384+00:00",
+          "observedAt": "2026-11-11T19:51:04.060828+00:00",
           "verified": true,
           "claim": "\ud83d\udd0e Daily content review \u2014 It's Already Priced \u2014 Blog + X"
         },
@@ -92,9 +92,147 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
-          "observedAt": "2026-11-11T07:05:33.004386+00:00",
+          "observedAt": "2026-11-11T19:51:04.060831+00:00",
           "verified": true,
           "claim": "\ud83e\udded Daily content opportunities"
+        }
+      ],
+      "guardrails": [
+        "proposal_is_not_verified_demand",
+        "research_must_define_customer_and_problem",
+        "no_build_before_product_gate"
+      ]
+    },
+    {
+      "id": "proposal:evidence-packets:001",
+      "topic": "evidence-packets",
+      "status": "PROPOSED_FOR_RESEARCH",
+      "regulated": false,
+      "upfrontCostUsd": 0,
+      "evidence": [
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/maxmixalex/hpclang/issues/1",
+          "observedAt": "2026-11-11T19:51:05.280169+00:00",
+          "verified": true,
+          "claim": "hpclang development board"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/jerryyyu/shengji/issues/1263",
+          "observedAt": "2026-11-11T19:51:05.280181+00:00",
+          "verified": true,
+          "claim": "Investigation board (release 50 \u2192)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/KaiSong06/lol-macro-guide/issues/2",
+          "observedAt": "2026-11-11T19:51:05.280183+00:00",
+          "verified": true,
+          "claim": "Agent communication board"
+        }
+      ],
+      "guardrails": [
+        "proposal_is_not_verified_demand",
+        "research_must_define_customer_and_problem",
+        "no_build_before_product_gate"
+      ]
+    },
+    {
+      "id": "proposal:research-workflow:001",
+      "topic": "research-workflow",
+      "status": "PROPOSED_FOR_RESEARCH",
+      "regulated": false,
+      "upfrontCostUsd": 0,
+      "evidence": [
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/StegVerse-Labs/.github/issues/3447",
+          "observedAt": "2026-11-11T19:51:07.078620+00:00",
+          "verified": true,
+          "claim": "[QUEUE] CODEX"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/StegVerse-Labs/.github/issues/3443",
+          "observedAt": "2026-11-11T19:51:07.078624+00:00",
+          "verified": true,
+          "claim": "[QUEUE] Claude"
+        }
+      ],
+      "guardrails": [
+        "proposal_is_not_verified_demand",
+        "research_must_define_customer_and_problem",
+        "no_build_before_product_gate"
+      ]
+    },
+    {
+      "id": "proposal:cookbook-export:001",
+      "topic": "cookbook-export",
+      "status": "PROPOSED_FOR_RESEARCH",
+      "regulated": false,
+      "upfrontCostUsd": 0,
+      "evidence": [
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/mealie-recipes/mealie/issues/1306",
+          "observedAt": "2026-11-11T19:51:07.827370+00:00",
+          "verified": true,
+          "claim": "[v1.0.0b] [Task] - Export Recipes and Cookbooks to PDF"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/IamTugy/recipes/issues/21",
+          "observedAt": "2026-11-11T19:51:07.827374+00:00",
+          "verified": true,
+          "claim": "Cookbook/collection PDF export"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/Benkendorfer/recipe-manager/issues/7",
+          "observedAt": "2026-11-11T19:51:07.827378+00:00",
+          "verified": true,
+          "claim": "Import recipes from PDF files"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/mathnauleau/commeat/issues/3",
+          "observedAt": "2026-11-11T19:51:07.827377+00:00",
+          "verified": true,
+          "claim": "Later: Print full cookbook PDF"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/guevara/read-it-later/issues/7826",
+          "observedAt": "2026-11-11T19:51:07.827381+00:00",
+          "verified": true,
+          "claim": "Rust Language Cheat Sheet"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/guevara/read-it-later/issues/7825",
+          "observedAt": "2026-11-11T19:51:07.827383+00:00",
+          "verified": true,
+          "claim": "Rust Language Cheat Sheet"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/guevara/read-it-later/issues/7824",
+          "observedAt": "2026-11-11T19:51:07.827384+00:00",
+          "verified": true,
+          "claim": "Rust Language Cheat Sheet"
         }
       ],
       "guardrails": [
