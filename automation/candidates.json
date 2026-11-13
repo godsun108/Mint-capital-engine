@@ -28,8 +28,56 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
+          "url": "https://github.com/bengmend/FreeCodeCamp/issues/24",
+          "observedAt": "2026-11-13T07:15:40.220124+00:00",
+          "verified": true,
+          "claim": "@freecodecamp/api-0.0.1.tgz: 129 vulnerabilities (highest severity is: 9.3) [main]"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/Datarails/mcp-outlet/issues/18",
+          "observedAt": "2026-11-13T07:15:40.220140+00:00",
+          "verified": true,
+          "claim": "sdk-1.12.0.tgz: 19 vulnerabilities (highest severity is: 9.1) reachable"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/mitodl/mitxpro/issues/2711",
+          "observedAt": "2026-11-13T07:15:40.220129+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/sptribs-frontend/issues/444",
+          "observedAt": "2026-11-13T07:15:40.220152+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
           "url": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
-          "observedAt": "2026-11-12T20:25:54.323625+00:00",
+          "observedAt": "2026-11-13T07:15:40.220156+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/appreg-frontend/issues/2",
+          "observedAt": "2026-11-13T07:15:40.220158+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/pcs-frontend/issues/10",
+          "observedAt": "2026-11-13T07:15:40.220161+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -37,15 +85,15 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "observedAt": "2026-11-12T20:25:54.323629+00:00",
+          "observedAt": "2026-11-13T07:15:40.220163+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
-          "observedAt": "2026-11-12T20:25:54.323634+00:00",
+          "url": "https://github.com/sneat-co/sportius/issues/27",
+          "observedAt": "2026-11-13T07:15:40.220166+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -53,47 +101,15 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/sneat-co/circleus/issues/1",
-          "observedAt": "2026-11-12T20:25:54.323637+00:00",
+          "observedAt": "2026-11-13T07:15:40.220168+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/sneat-co/prioritarius/issues/1",
-          "observedAt": "2026-11-12T20:25:54.323640+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/hmcts/pre-portal/issues/1",
-          "observedAt": "2026-11-12T20:25:54.323648+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/rorymclark-prog/ImbewuField/issues/35",
-          "observedAt": "2026-11-12T20:25:54.323630+00:00",
-          "verified": true,
-          "claim": "Coordination ledger \u2014 Claude \u21c4 Codex (append-only)"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/ontripai/cladora-website/issues/463",
-          "observedAt": "2026-11-12T20:25:54.323639+00:00",
-          "verified": true,
-          "claim": "PM: central coordination and evidence register for Codex seats"
         }
       ],
       "status": "DISCOVERED_SOURCE_BACKED",
       "provenance": {
         "proposalId": "proposal:express-auth:001",
-        "promotedAt": "2026-11-12T20:26:01.623635+00:00",
+        "promotedAt": "2026-11-13T07:15:46.920839+00:00",
         "semantics": "SOURCE_BACKED_CANDIDATE_RESEARCH_STILL_REQUIRED"
       }
     }
