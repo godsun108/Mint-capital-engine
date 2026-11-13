@@ -1,7 +1,7 @@
 {
   "version": 1,
   "mission": "001",
-  "stage": "HUMAN_APPROVED_PILOT",
+  "stage": "WAITING_FOR_HUMAN_APPROVAL",
   "metrics": [
     {
       "id": "pilot_conversations",
@@ -41,5 +41,37 @@
     "authorized payment is not settled revenue",
     "only verified settlement counts",
     "free design-partner feedback is not a paid conversion"
-  ]
+  ],
+  "first_dollar_definition": {
+    "requires": [
+      "external_customer",
+      "nonzero_customer_payment",
+      "verified_settlement",
+      "settled_amount_recorded_by_mint"
+    ],
+    "excludes": [
+      "internal_transfer",
+      "test_payment",
+      "invoice_only",
+      "authorized_but_unsettled_payment",
+      "free_design_partner"
+    ]
+  },
+  "required_observations": [
+    "acquisition_source",
+    "price_variant",
+    "diagnostic_started_at",
+    "diagnostic_completed_at",
+    "operator_minutes",
+    "direct_cost_usd",
+    "customer_payment_status",
+    "settled_revenue_usd"
+  ],
+  "guardrails": {
+    "max_upfront_experiment_spend_usd": 25,
+    "autonomous_outreach": false,
+    "autonomous_customer_communication": false,
+    "production_deployment_requires_human_approval": true,
+    "payment_provider_activation_requires_human_approval": true
+  }
 }

@@ -19,4 +19,5 @@ jobs:
           node-version: 22
       - run: node agents/runtime.test.mjs
       - run: node products/lead-response/diagnostic.test.mjs
+      - run: node products/lead-response/csv.test.mjs
       - run: node agents/public-snapshot.test.mjs
