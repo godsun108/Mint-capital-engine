@@ -1,0 +1,36 @@
+name: Aurelion Supplier Offline Safety
+on:
+  pull_request:
+    paths:
+      - 'automation/tests/aurelion-printful-offline.test.mjs'
+      - 'automation/tests/aurelion-printify-offline.test.mjs'
+      - 'automation/tests/printify-readonly.test.mjs'
+      - 'automation/tests/aurelion-printify-discovery.test.mjs'
+      - 'automation/providers/aurelion-printify-discovery.mjs'
+      - 'automation/providers/aurelion-printify-offline.mjs'
+      - 'automation/providers/printify-readonly.mjs'
+      - 'automation/providers/printful-readonly.mjs'
+      - 'automation/providers/printful-brand-scope.mjs'
+      - 'automation/providers/printful-brand-discovery.mjs'
+      - 'automation/providers/printful-action-policy.mjs'
+      - 'automation/providers/printful-signed-approval.mjs'
+      - 'automation/providers/printful-approval-replay.mjs'
+      - '.github/workflows/aurelion-printful-offline-tests.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  offline-safety:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      PRINTFUL_API_BASE: http://127.0.0.1:9
+      PRINTFUL_TOKEN: ''
+      PRINTFUL_STORE_ID: ''
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run mocked supplier tests (no supplier calls)
+        run: node --test automation/tests/aurelion-printful-offline.test.mjs automation/tests/aurelion-printify-offline.test.mjs automation/tests/printify-readonly.test.mjs automation/tests/aurelion-printify-discovery.test.mjs
