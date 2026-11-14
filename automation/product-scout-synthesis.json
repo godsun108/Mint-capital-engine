@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.synthesis.v1",
-  "generatedAt": "2026-11-14T18:28:43.735205+00:00",
+  "generatedAt": "2026-11-14T22:43:59.197191+00:00",
   "clusters": [
     {
       "topic": "express-typescript",
@@ -22,52 +22,52 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
-          "b": "https://github.com/hmcts/fact-admin-frontend/issues/3",
+          "a": "https://github.com/sneat-co/sportius/issues/27",
+          "b": "https://github.com/sneat-co/prioritarius/issues/1",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
-          "b": "https://github.com/hmcts/fact-public-frontend/issues/1",
+          "a": "https://github.com/sneat-co/sportius/issues/27",
+          "b": "https://github.com/sneat-co/sneat-club/issues/4",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
-          "b": "https://github.com/mitodl/mitxpro/issues/2711",
+          "a": "https://github.com/sneat-co/sportius/issues/27",
+          "b": "https://github.com/sneat-co/sneat-ext-template/issues/17",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "a": "https://github.com/sneat-co/sportius/issues/27",
           "b": "https://github.com/hmcts/appreg-frontend/issues/2",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/hmcts/fact-admin-frontend/issues/3",
-          "b": "https://github.com/hmcts/fact-public-frontend/issues/1",
+          "a": "https://github.com/sneat-co/prioritarius/issues/1",
+          "b": "https://github.com/sneat-co/sneat-club/issues/4",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/hmcts/fact-admin-frontend/issues/3",
-          "b": "https://github.com/mitodl/mitxpro/issues/2711",
+          "a": "https://github.com/sneat-co/prioritarius/issues/1",
+          "b": "https://github.com/sneat-co/sneat-ext-template/issues/17",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/hmcts/fact-admin-frontend/issues/3",
+          "a": "https://github.com/sneat-co/prioritarius/issues/1",
           "b": "https://github.com/hmcts/appreg-frontend/issues/2",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/hmcts/fact-public-frontend/issues/1",
-          "b": "https://github.com/mitodl/mitxpro/issues/2711",
+          "a": "https://github.com/sneat-co/sneat-club/issues/4",
+          "b": "https://github.com/sneat-co/sneat-ext-template/issues/17",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/hmcts/fact-public-frontend/issues/1",
+          "a": "https://github.com/sneat-co/sneat-club/issues/4",
           "b": "https://github.com/hmcts/appreg-frontend/issues/2",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/mitodl/mitxpro/issues/2711",
+          "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
           "b": "https://github.com/hmcts/appreg-frontend/issues/2",
           "similarity": 1.0
         }
@@ -79,8 +79,14 @@
       "topic": "venture-economics",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/arunakulat/dutchbay-epc-model/issues/1353",
+          "b": "https://github.com/LowcountryDigitalWorks/gas-engine/issues/31",
+          "similarity": 0.25
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -144,8 +150,19 @@
       "topic": "research-workflow",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/omertekin2002/SignLoop/issues/5",
+          "b": "https://github.com/omertekin2002/otekin/issues/9",
+          "similarity": 0.5
+        },
+        {
+          "a": "https://github.com/Eternally-Thriving-Grandmasterism/Powrush-MMO/issues/738",
+          "b": "https://github.com/moterodiaz/Junction/issues/1",
+          "similarity": 0.333
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {

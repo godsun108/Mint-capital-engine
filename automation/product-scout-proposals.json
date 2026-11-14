@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.proposals.v1",
-  "generatedAt": "2026-11-14T18:28:43.795781+00:00",
+  "generatedAt": "2026-11-14T22:43:59.246941+00:00",
   "semantics": "RESEARCH_PROPOSALS_NOT_PRODUCT_CANDIDATES",
   "proposals": [
     {
@@ -14,7 +14,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/seersol92/laravel_api_pgsql_swagger/issues/1",
-          "observedAt": "2026-11-14T18:28:37.421759+00:00",
+          "observedAt": "2026-11-14T22:43:49.753965+00:00",
           "verified": true,
           "claim": "Security: malware in this repository and 44 other repositories of this account"
         },
@@ -22,7 +22,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/dev-rayhan-bd/car-shop-extended-server/issues/1",
-          "observedAt": "2026-11-14T18:28:37.421762+00:00",
+          "observedAt": "2026-11-14T22:43:49.753970+00:00",
           "verified": true,
           "claim": "Security: malware in this repository and 135 other repositories of this account"
         }
@@ -43,32 +43,32 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
-          "observedAt": "2026-11-14T18:28:38.057902+00:00",
+          "url": "https://github.com/sneat-co/sportius/issues/27",
+          "observedAt": "2026-11-14T22:43:50.831831+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/fact-admin-frontend/issues/3",
-          "observedAt": "2026-11-14T18:28:38.057916+00:00",
+          "url": "https://github.com/sneat-co/prioritarius/issues/1",
+          "observedAt": "2026-11-14T22:43:50.831839+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/fact-public-frontend/issues/1",
-          "observedAt": "2026-11-14T18:28:38.057918+00:00",
+          "url": "https://github.com/sneat-co/sneat-club/issues/4",
+          "observedAt": "2026-11-14T22:43:50.831851+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/mitodl/mitxpro/issues/2711",
-          "observedAt": "2026-11-14T18:28:38.057922+00:00",
+          "url": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "observedAt": "2026-11-14T22:43:50.831862+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -76,9 +76,39 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/hmcts/appreg-frontend/issues/2",
-          "observedAt": "2026-11-14T18:28:38.057924+00:00",
+          "observedAt": "2026-11-14T22:43:50.831867+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
+        }
+      ],
+      "guardrails": [
+        "proposal_is_not_verified_demand",
+        "research_must_define_customer_and_problem",
+        "no_build_before_product_gate"
+      ]
+    },
+    {
+      "id": "proposal:venture-economics:001",
+      "topic": "venture-economics",
+      "status": "PROPOSED_FOR_RESEARCH",
+      "regulated": false,
+      "upfrontCostUsd": 0,
+      "evidence": [
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/arunakulat/dutchbay-epc-model/issues/1353",
+          "observedAt": "2026-11-14T22:43:51.706820+00:00",
+          "verified": true,
+          "claim": "tracking: DutchBay capability and assurance roadmap"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/LowcountryDigitalWorks/gas-engine/issues/31",
+          "observedAt": "2026-11-14T22:43:51.706832+00:00",
+          "verified": true,
+          "claim": "GAS-ROADMAP-002 \u2014 Competitor-informed evergreen capability roadmap"
         }
       ],
       "guardrails": [
@@ -98,7 +128,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
-          "observedAt": "2026-11-14T18:28:39.694186+00:00",
+          "observedAt": "2026-11-14T22:43:52.614622+00:00",
           "verified": true,
           "claim": "[TEAM NAYA] Coordination feed \u2014 successor to #2793"
         },
@@ -106,7 +136,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2641",
-          "observedAt": "2026-11-14T18:28:39.694190+00:00",
+          "observedAt": "2026-11-14T22:43:52.614625+00:00",
           "verified": true,
           "claim": "[NAYA] Team coordination feed \u2014 live board (successor to #2537)"
         }
@@ -128,7 +158,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/bizzal70/itsalreadypriced/issues/1",
-          "observedAt": "2026-11-14T18:28:41.538058+00:00",
+          "observedAt": "2026-11-14T22:43:54.460655+00:00",
           "verified": true,
           "claim": "\ud83d\udd0e Daily content review \u2014 It's Already Priced \u2014 Blog + X"
         },
@@ -136,7 +166,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
-          "observedAt": "2026-11-14T18:28:41.538069+00:00",
+          "observedAt": "2026-11-14T22:43:54.460682+00:00",
           "verified": true,
           "claim": "\ud83e\udded Daily content opportunities"
         },
@@ -144,7 +174,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
-          "observedAt": "2026-11-14T18:28:41.538073+00:00",
+          "observedAt": "2026-11-14T22:43:54.460687+00:00",
           "verified": true,
           "claim": "[TEAM NAYA] Coordination feed \u2014 successor to #2793"
         },
@@ -152,9 +182,55 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2641",
-          "observedAt": "2026-11-14T18:28:41.538075+00:00",
+          "observedAt": "2026-11-14T22:43:54.460689+00:00",
           "verified": true,
           "claim": "[NAYA] Team coordination feed \u2014 live board (successor to #2537)"
+        }
+      ],
+      "guardrails": [
+        "proposal_is_not_verified_demand",
+        "research_must_define_customer_and_problem",
+        "no_build_before_product_gate"
+      ]
+    },
+    {
+      "id": "proposal:research-workflow:001",
+      "topic": "research-workflow",
+      "status": "PROPOSED_FOR_RESEARCH",
+      "regulated": false,
+      "upfrontCostUsd": 0,
+      "evidence": [
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/omertekin2002/SignLoop/issues/5",
+          "observedAt": "2026-11-14T22:43:57.243263+00:00",
+          "verified": true,
+          "claim": "\ud83e\udded Ultimate form: SignLoop"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/omertekin2002/otekin/issues/9",
+          "observedAt": "2026-11-14T22:43:57.243310+00:00",
+          "verified": true,
+          "claim": "\ud83e\udded Ultimate form: otekin"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/Eternally-Thriving-Grandmasterism/Powrush-MMO/issues/738",
+          "observedAt": "2026-11-14T22:43:57.243312+00:00",
+          "verified": true,
+          "claim": "COUNCIL BOARD"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/moterodiaz/Junction/issues/1",
+          "observedAt": "2026-11-14T22:43:57.243323+00:00",
+          "verified": true,
+          "claim": "Message Board"
         }
       ],
       "guardrails": [
@@ -174,7 +250,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mealie-recipes/mealie/issues/1306",
-          "observedAt": "2026-11-14T18:28:43.599234+00:00",
+          "observedAt": "2026-11-14T22:43:58.048034+00:00",
           "verified": true,
           "claim": "[v1.0.0b] [Task] - Export Recipes and Cookbooks to PDF"
         },
@@ -182,7 +258,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/IamTugy/recipes/issues/21",
-          "observedAt": "2026-11-14T18:28:43.599238+00:00",
+          "observedAt": "2026-11-14T22:43:58.048039+00:00",
           "verified": true,
           "claim": "Cookbook/collection PDF export"
         },
@@ -190,7 +266,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Benkendorfer/recipe-manager/issues/7",
-          "observedAt": "2026-11-14T18:28:43.599244+00:00",
+          "observedAt": "2026-11-14T22:43:58.048047+00:00",
           "verified": true,
           "claim": "Import recipes from PDF files"
         },
@@ -198,7 +274,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mathnauleau/commeat/issues/3",
-          "observedAt": "2026-11-14T18:28:43.599242+00:00",
+          "observedAt": "2026-11-14T22:43:58.048044+00:00",
           "verified": true,
           "claim": "Later: Print full cookbook PDF"
         },
@@ -206,7 +282,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7826",
-          "observedAt": "2026-11-14T18:28:43.599248+00:00",
+          "observedAt": "2026-11-14T22:43:58.048052+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -214,7 +290,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7825",
-          "observedAt": "2026-11-14T18:28:43.599250+00:00",
+          "observedAt": "2026-11-14T22:43:58.048054+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -222,7 +298,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7824",
-          "observedAt": "2026-11-14T18:28:43.599253+00:00",
+          "observedAt": "2026-11-14T22:43:58.048057+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         }
