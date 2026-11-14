@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.synthesis.v1",
-  "generatedAt": "2026-11-13T20:00:32.510060+00:00",
+  "generatedAt": "2026-11-14T06:59:48.771555+00:00",
   "clusters": [
     {
       "topic": "express-typescript",
@@ -22,183 +22,53 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
-          "b": "https://github.com/hmcts/opal-frontend-common-node-lib/issues/3",
+          "a": "https://github.com/sneat-co/circleus/issues/1",
+          "b": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
-          "b": "https://github.com/sneat-co/sneat-ext-template/issues/17",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
-          "b": "https://github.com/mitodl/mitxpro/issues/2711",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
-          "b": "https://github.com/hmcts/wa-reporting-frontend/issues/11",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
-          "b": "https://github.com/sneat-co/sneat-club/issues/4",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
-          "b": "https://github.com/hmcts/fact-admin-frontend/issues/3",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "a": "https://github.com/sneat-co/circleus/issues/1",
           "b": "https://github.com/sneat-co/prioritarius/issues/1",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
-          "b": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
+          "a": "https://github.com/sneat-co/circleus/issues/1",
+          "b": "https://github.com/hmcts/pre-portal/issues/1",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/hmcts/opal-frontend-common-node-lib/issues/3",
-          "b": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "a": "https://github.com/sneat-co/circleus/issues/1",
+          "b": "https://github.com/hmcts/cath-service/issues/3",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/hmcts/opal-frontend-common-node-lib/issues/3",
-          "b": "https://github.com/mitodl/mitxpro/issues/2711",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/opal-frontend-common-node-lib/issues/3",
-          "b": "https://github.com/hmcts/wa-reporting-frontend/issues/11",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/opal-frontend-common-node-lib/issues/3",
-          "b": "https://github.com/sneat-co/sneat-club/issues/4",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/opal-frontend-common-node-lib/issues/3",
-          "b": "https://github.com/hmcts/fact-admin-frontend/issues/3",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/opal-frontend-common-node-lib/issues/3",
+          "a": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
           "b": "https://github.com/sneat-co/prioritarius/issues/1",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/hmcts/opal-frontend-common-node-lib/issues/3",
-          "b": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
+          "a": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "b": "https://github.com/hmcts/pre-portal/issues/1",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
-          "b": "https://github.com/mitodl/mitxpro/issues/2711",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
-          "b": "https://github.com/hmcts/wa-reporting-frontend/issues/11",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
-          "b": "https://github.com/sneat-co/sneat-club/issues/4",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
-          "b": "https://github.com/hmcts/fact-admin-frontend/issues/3",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
-          "b": "https://github.com/sneat-co/prioritarius/issues/1",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
-          "b": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/mitodl/mitxpro/issues/2711",
-          "b": "https://github.com/hmcts/wa-reporting-frontend/issues/11",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/mitodl/mitxpro/issues/2711",
-          "b": "https://github.com/sneat-co/sneat-club/issues/4",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/mitodl/mitxpro/issues/2711",
-          "b": "https://github.com/hmcts/fact-admin-frontend/issues/3",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/mitodl/mitxpro/issues/2711",
-          "b": "https://github.com/sneat-co/prioritarius/issues/1",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/mitodl/mitxpro/issues/2711",
-          "b": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/wa-reporting-frontend/issues/11",
-          "b": "https://github.com/sneat-co/sneat-club/issues/4",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/wa-reporting-frontend/issues/11",
-          "b": "https://github.com/hmcts/fact-admin-frontend/issues/3",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/wa-reporting-frontend/issues/11",
-          "b": "https://github.com/sneat-co/prioritarius/issues/1",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/wa-reporting-frontend/issues/11",
-          "b": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/sneat-co/sneat-club/issues/4",
-          "b": "https://github.com/hmcts/fact-admin-frontend/issues/3",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/sneat-co/sneat-club/issues/4",
-          "b": "https://github.com/sneat-co/prioritarius/issues/1",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/sneat-co/sneat-club/issues/4",
-          "b": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/fact-admin-frontend/issues/3",
-          "b": "https://github.com/sneat-co/prioritarius/issues/1",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/fact-admin-frontend/issues/3",
-          "b": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
+          "a": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
+          "b": "https://github.com/hmcts/cath-service/issues/3",
           "similarity": 1.0
         },
         {
           "a": "https://github.com/sneat-co/prioritarius/issues/1",
-          "b": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
+          "b": "https://github.com/hmcts/pre-portal/issues/1",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/prioritarius/issues/1",
+          "b": "https://github.com/hmcts/cath-service/issues/3",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/hmcts/pre-portal/issues/1",
+          "b": "https://github.com/hmcts/cath-service/issues/3",
           "similarity": 1.0
         }
       ],
@@ -216,9 +86,14 @@
           "similarity": 0.333
         },
         {
-          "a": "https://github.com/kk051780/toy-wars-factory/issues/220",
-          "b": "https://github.com/kk051780/toy-wars-factory/issues/219",
+          "a": "https://github.com/kk051780/toy-wars-factory/issues/219",
+          "b": "https://github.com/kk051780/toy-wars-factory/issues/220",
           "similarity": 0.8
+        },
+        {
+          "a": "https://github.com/LowcountryDigitalWorks/gas-engine/issues/31",
+          "b": "https://github.com/arunakulat/dutchbay-epc-model/issues/1353",
+          "similarity": 0.25
         }
       ],
       "promotionEligible": true,
@@ -242,8 +117,14 @@
       "topic": "software-release-contract",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/StegVerse-Labs/.github/issues/3447",
+          "b": "https://github.com/StegVerse-Labs/.github/issues/3443",
+          "similarity": 0.333
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -251,6 +132,11 @@
       "observationCount": 20,
       "distinctSources": 20,
       "relatedPairs": [
+        {
+          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
+          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2641",
+          "similarity": 0.556
+        },
         {
           "a": "https://github.com/bizzal70/itsalreadypriced/issues/1",
           "b": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
@@ -264,8 +150,14 @@
       "topic": "evidence-packets",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/StegVerse-Labs/.github/issues/3447",
+          "b": "https://github.com/StegVerse-Labs/.github/issues/3443",
+          "similarity": 0.333
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -280,14 +172,25 @@
       "topic": "research-workflow",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/yalexie1/hackprinceton/issues/1",
+          "b": "https://github.com/Eternally-Thriving-Grandmasterism/Powrush-MMO/issues/738",
+          "similarity": 0.333
+        },
+        {
+          "a": "https://github.com/StegVerse-Labs/.github/issues/3447",
+          "b": "https://github.com/StegVerse-Labs/.github/issues/3443",
+          "similarity": 0.333
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "cookbook-export",
-      "observationCount": 11,
-      "distinctSources": 11,
+      "observationCount": 12,
+      "distinctSources": 12,
       "relatedPairs": [
         {
           "a": "https://github.com/mealie-recipes/mealie/issues/1306",
@@ -325,42 +228,59 @@
     },
     {
       "topic": "browser-arcade",
-      "observationCount": 0,
-      "distinctSources": 0,
+      "observationCount": 20,
+      "distinctSources": 20,
       "relatedPairs": [],
       "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "earth-data",
-      "observationCount": 0,
-      "distinctSources": 0,
+      "observationCount": 2,
+      "distinctSources": 2,
       "relatedPairs": [],
       "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "camera-discovery",
-      "observationCount": 0,
-      "distinctSources": 0,
+      "observationCount": 10,
+      "distinctSources": 10,
       "relatedPairs": [],
       "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "forecasting",
-      "observationCount": 0,
-      "distinctSources": 0,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "observationCount": 20,
+      "distinctSources": 20,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/SaikiK12/T/issues/7",
+          "b": "https://github.com/dkaps6/imtiredofthis/issues/535",
+          "similarity": 0.375
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "goal-os",
-      "observationCount": 0,
-      "distinctSources": 0,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "observationCount": 19,
+      "distinctSources": 19,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/rempemat-eng/appify/issues/149",
+          "b": "https://github.com/HassiMian/app-assps-edu-pk/issues/4",
+          "similarity": 0.2
+        },
+        {
+          "a": "https://github.com/abyyworld/auto-post-/issues/7",
+          "b": "https://github.com/abyyworld/auto-post-/issues/6",
+          "similarity": 0.5
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
