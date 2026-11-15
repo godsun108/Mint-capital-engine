@@ -1,12 +1,17 @@
 {
   "schema": "mint.product.scout.synthesis.v1",
-  "generatedAt": "2026-11-14T22:43:59.197191+00:00",
+  "generatedAt": "2026-11-15T07:09:33.271268+00:00",
   "clusters": [
     {
       "topic": "express-typescript",
       "observationCount": 20,
       "distinctSources": 20,
       "relatedPairs": [
+        {
+          "a": "https://github.com/Aleynaalij/VegasQuantV1/issues/65",
+          "b": "https://github.com/askgogo84/gogo-memory-os/issues/274",
+          "similarity": 0.2
+        },
         {
           "a": "https://github.com/seersol92/laravel_api_pgsql_swagger/issues/1",
           "b": "https://github.com/dev-rayhan-bd/car-shop-extended-server/issues/1",
@@ -22,8 +27,43 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
+          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "b": "https://github.com/sneat-co/sportius/issues/27",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "b": "https://github.com/hmcts/appreg-frontend/issues/2",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "b": "https://github.com/mitodl/mitxpro/issues/2711",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "b": "https://github.com/hmcts/wa-task-batch-service/issues/87",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "b": "https://github.com/sneat-co/sneat-club/issues/4",
+          "similarity": 1.0
+        },
+        {
           "a": "https://github.com/sneat-co/sportius/issues/27",
-          "b": "https://github.com/sneat-co/prioritarius/issues/1",
+          "b": "https://github.com/hmcts/appreg-frontend/issues/2",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sportius/issues/27",
+          "b": "https://github.com/mitodl/mitxpro/issues/2711",
+          "similarity": 1.0
+        },
+        {
+          "a": "https://github.com/sneat-co/sportius/issues/27",
+          "b": "https://github.com/hmcts/wa-task-batch-service/issues/87",
           "similarity": 1.0
         },
         {
@@ -32,43 +72,33 @@
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/sneat-co/sportius/issues/27",
-          "b": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "a": "https://github.com/hmcts/appreg-frontend/issues/2",
+          "b": "https://github.com/mitodl/mitxpro/issues/2711",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/sneat-co/sportius/issues/27",
-          "b": "https://github.com/hmcts/appreg-frontend/issues/2",
+          "a": "https://github.com/hmcts/appreg-frontend/issues/2",
+          "b": "https://github.com/hmcts/wa-task-batch-service/issues/87",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/sneat-co/prioritarius/issues/1",
+          "a": "https://github.com/hmcts/appreg-frontend/issues/2",
           "b": "https://github.com/sneat-co/sneat-club/issues/4",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/sneat-co/prioritarius/issues/1",
-          "b": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "a": "https://github.com/mitodl/mitxpro/issues/2711",
+          "b": "https://github.com/hmcts/wa-task-batch-service/issues/87",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/sneat-co/prioritarius/issues/1",
-          "b": "https://github.com/hmcts/appreg-frontend/issues/2",
+          "a": "https://github.com/mitodl/mitxpro/issues/2711",
+          "b": "https://github.com/sneat-co/sneat-club/issues/4",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/sneat-co/sneat-club/issues/4",
-          "b": "https://github.com/sneat-co/sneat-ext-template/issues/17",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/sneat-co/sneat-club/issues/4",
-          "b": "https://github.com/hmcts/appreg-frontend/issues/2",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/sneat-co/sneat-ext-template/issues/17",
-          "b": "https://github.com/hmcts/appreg-frontend/issues/2",
+          "a": "https://github.com/hmcts/wa-task-batch-service/issues/87",
+          "b": "https://github.com/sneat-co/sneat-club/issues/4",
           "similarity": 1.0
         }
       ],
@@ -81,9 +111,9 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/arunakulat/dutchbay-epc-model/issues/1353",
-          "b": "https://github.com/LowcountryDigitalWorks/gas-engine/issues/31",
-          "similarity": 0.25
+          "a": "https://github.com/kk051780/toy-wars-factory/issues/220",
+          "b": "https://github.com/kk051780/toy-wars-factory/issues/219",
+          "similarity": 0.8
         }
       ],
       "promotionEligible": true,
@@ -95,9 +125,19 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
-          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2641",
+          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2641",
+          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/554",
+          "similarity": 0.273
+        },
+        {
+          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2641",
+          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
           "similarity": 0.556
+        },
+        {
+          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/554",
+          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
+          "similarity": 0.2
         }
       ],
       "promotionEligible": true,
@@ -117,14 +157,14 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
+          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2641",
+          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
+          "similarity": 0.556
+        },
+        {
           "a": "https://github.com/bizzal70/itsalreadypriced/issues/1",
           "b": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
           "similarity": 0.286
-        },
-        {
-          "a": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
-          "b": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2641",
-          "similarity": 0.556
         }
       ],
       "promotionEligible": true,
@@ -152,14 +192,14 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/omertekin2002/SignLoop/issues/5",
-          "b": "https://github.com/omertekin2002/otekin/issues/9",
-          "similarity": 0.5
+          "a": "https://github.com/yalexie1/hackprinceton/issues/1",
+          "b": "https://github.com/Eternally-Thriving-Grandmasterism/Powrush-MMO/issues/738",
+          "similarity": 0.333
         },
         {
-          "a": "https://github.com/Eternally-Thriving-Grandmasterism/Powrush-MMO/issues/738",
-          "b": "https://github.com/moterodiaz/Junction/issues/1",
-          "similarity": 0.333
+          "a": "https://github.com/yalexie1/hackprinceton/issues/1",
+          "b": "https://github.com/angelofernand0/omniriff/issues/1",
+          "similarity": 0.4
         }
       ],
       "promotionEligible": true,
