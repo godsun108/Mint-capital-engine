@@ -1,38 +1,8 @@
 {
   "schema": "mint.product.scout.proposals.v1",
-  "generatedAt": "2026-11-19T07:54:35.322849+00:00",
+  "generatedAt": "2026-11-19T20:57:58.636827+00:00",
   "semantics": "RESEARCH_PROPOSALS_NOT_PRODUCT_CANDIDATES",
   "proposals": [
-    {
-      "id": "proposal:express-typescript:001",
-      "topic": "express-typescript",
-      "status": "PROPOSED_FOR_RESEARCH",
-      "regulated": false,
-      "upfrontCostUsd": 0,
-      "evidence": [
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/askgogo84/gogo-memory-os/issues/274",
-          "observedAt": "2026-11-19T07:54:28.256385+00:00",
-          "verified": true,
-          "claim": "AskGogo Contextual Autonomy v1 \u2014 agent coordination bus"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/Aleynaalij/VegasQuantV1/issues/65",
-          "observedAt": "2026-11-19T07:54:28.256395+00:00",
-          "verified": true,
-          "claim": "Agent coordination \u00b7 Kobe (Codex) \u00d7 Shaq (Claude)"
-        }
-      ],
-      "guardrails": [
-        "proposal_is_not_verified_demand",
-        "research_must_define_customer_and_problem",
-        "no_build_before_product_gate"
-      ]
-    },
     {
       "id": "proposal:express-auth:001",
       "topic": "express-auth",
@@ -43,8 +13,8 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/sptribs-frontend/issues/444",
-          "observedAt": "2026-11-19T07:54:29.107292+00:00",
+          "url": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "observedAt": "2026-11-19T20:57:50.297496+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -52,41 +22,71 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/sneat-co/circleus/issues/1",
-          "observedAt": "2026-11-19T07:54:29.107310+00:00",
+          "observedAt": "2026-11-19T20:57:50.297497+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/pcs-frontend/issues/10",
-          "observedAt": "2026-11-19T07:54:29.107321+00:00",
+          "url": "https://github.com/sneat-co/prioritarius/issues/1",
+          "observedAt": "2026-11-19T20:57:50.297502+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/sneat-co/sportius/issues/27",
-          "observedAt": "2026-11-19T07:54:29.107330+00:00",
+          "url": "https://github.com/hmcts/opal-frontend-common-node-lib/issues/3",
+          "observedAt": "2026-11-19T20:57:50.297504+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/WWmend/testTel3/issues/2",
-          "observedAt": "2026-11-19T07:54:29.107327+00:00",
+          "url": "https://github.com/hmcts/fact-frontend/issues/772",
+          "observedAt": "2026-11-19T20:57:50.297505+00:00",
           "verified": true,
-          "claim": "sdk-1.25.1.tgz: 34 vulnerabilities (highest severity is: 9.8) [main]"
+          "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/WWmend/testTel2/issues/2",
-          "observedAt": "2026-11-19T07:54:29.107329+00:00",
+          "url": "https://github.com/mitodl/mitxpro/issues/2711",
+          "observedAt": "2026-11-19T20:57:50.297508+00:00",
           "verified": true,
-          "claim": "sdk-1.25.1.tgz: 34 vulnerabilities (highest severity is: 9.8) [main]"
+          "claim": "Dependency Dashboard"
+        }
+      ],
+      "guardrails": [
+        "proposal_is_not_verified_demand",
+        "research_must_define_customer_and_problem",
+        "no_build_before_product_gate"
+      ]
+    },
+    {
+      "id": "proposal:venture-economics:001",
+      "topic": "venture-economics",
+      "status": "PROPOSED_FOR_RESEARCH",
+      "regulated": false,
+      "upfrontCostUsd": 0,
+      "evidence": [
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/StegVerse-Labs/.github/issues/3443",
+          "observedAt": "2026-11-19T20:57:51.074418+00:00",
+          "verified": true,
+          "claim": "[QUEUE] Claude"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/DeviousDevv303/forgeclaw/issues/235",
+          "observedAt": "2026-11-19T20:57:51.074440+00:00",
+          "verified": true,
+          "claim": "Muse <-> Claude working channel \u2014 Kalshi funds + reliability queue"
         }
       ],
       "guardrails": [
@@ -105,24 +105,24 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
-          "observedAt": "2026-11-19T07:54:30.575295+00:00",
-          "verified": true,
-          "claim": "[TEAM NAYA] Coordination feed \u2014 successor to #2793"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/554",
-          "observedAt": "2026-11-19T07:54:30.575306+00:00",
+          "observedAt": "2026-11-19T20:57:52.118703+00:00",
           "verified": true,
           "claim": "\ud83d\udd31 TEAM NAYA \u2014 Naya \u2194 Coda Direct Communication Board"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
+          "observedAt": "2026-11-19T20:57:52.118710+00:00",
+          "verified": true,
+          "claim": "[TEAM NAYA] Coordination feed \u2014 successor to #2793"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2793",
-          "observedAt": "2026-11-19T07:54:30.575310+00:00",
+          "observedAt": "2026-11-19T20:57:52.118758+00:00",
           "verified": true,
           "claim": "Team Naya live board \u2014 coordination venue (successor to #2765)"
         },
@@ -130,9 +130,39 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2641",
-          "observedAt": "2026-11-19T07:54:30.575315+00:00",
+          "observedAt": "2026-11-19T20:57:52.118762+00:00",
           "verified": true,
           "claim": "[NAYA] Team coordination feed \u2014 live board (successor to #2537)"
+        }
+      ],
+      "guardrails": [
+        "proposal_is_not_verified_demand",
+        "research_must_define_customer_and_problem",
+        "no_build_before_product_gate"
+      ]
+    },
+    {
+      "id": "proposal:software-release-contract:001",
+      "topic": "software-release-contract",
+      "status": "PROPOSED_FOR_RESEARCH",
+      "regulated": false,
+      "upfrontCostUsd": 0,
+      "evidence": [
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/StegVerse-Labs/.github/issues/3443",
+          "observedAt": "2026-11-19T20:57:53.074312+00:00",
+          "verified": true,
+          "claim": "[QUEUE] Claude"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/DeviousDevv303/forgeclaw/issues/235",
+          "observedAt": "2026-11-19T20:57:53.074315+00:00",
+          "verified": true,
+          "claim": "Muse <-> Claude working channel \u2014 Kalshi funds + reliability queue"
         }
       ],
       "guardrails": [
@@ -151,26 +181,94 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
-          "observedAt": "2026-11-19T07:54:32.254461+00:00",
+          "url": "https://github.com/bizzal70/itsalreadypriced/issues/1",
+          "observedAt": "2026-11-19T20:57:53.858484+00:00",
           "verified": true,
-          "claim": "[TEAM NAYA] Coordination feed \u2014 successor to #2793"
+          "claim": "\ud83d\udd0e Daily content review \u2014 It's Already Priced \u2014 Blog + X"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2793",
-          "observedAt": "2026-11-19T07:54:32.254485+00:00",
+          "url": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
+          "observedAt": "2026-11-19T20:57:53.858488+00:00",
           "verified": true,
-          "claim": "Team Naya live board \u2014 coordination venue (successor to #2765)"
+          "claim": "\ud83e\udded Daily content opportunities"
+        }
+      ],
+      "guardrails": [
+        "proposal_is_not_verified_demand",
+        "research_must_define_customer_and_problem",
+        "no_build_before_product_gate"
+      ]
+    },
+    {
+      "id": "proposal:evidence-packets:001",
+      "topic": "evidence-packets",
+      "status": "PROPOSED_FOR_RESEARCH",
+      "regulated": false,
+      "upfrontCostUsd": 0,
+      "evidence": [
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/StegVerse-Labs/.github/issues/3443",
+          "observedAt": "2026-11-19T20:57:54.683142+00:00",
+          "verified": true,
+          "claim": "[QUEUE] Claude"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2641",
-          "observedAt": "2026-11-19T07:54:32.254490+00:00",
+          "url": "https://github.com/DeviousDevv303/forgeclaw/issues/235",
+          "observedAt": "2026-11-19T20:57:54.683148+00:00",
           "verified": true,
-          "claim": "[NAYA] Team coordination feed \u2014 live board (successor to #2537)"
+          "claim": "Muse <-> Claude working channel \u2014 Kalshi funds + reliability queue"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/diegoami/onenil-archaeology/issues/1",
+          "observedAt": "2026-11-19T20:57:54.683154+00:00",
+          "verified": true,
+          "claim": "Checkpoints: where the work stands"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/diegoami/onenil/issues/1",
+          "observedAt": "2026-11-19T20:57:54.683155+00:00",
+          "verified": true,
+          "claim": "Checkpoints: where the work stands"
+        }
+      ],
+      "guardrails": [
+        "proposal_is_not_verified_demand",
+        "research_must_define_customer_and_problem",
+        "no_build_before_product_gate"
+      ]
+    },
+    {
+      "id": "proposal:research-workflow:001",
+      "topic": "research-workflow",
+      "status": "PROPOSED_FOR_RESEARCH",
+      "regulated": false,
+      "upfrontCostUsd": 0,
+      "evidence": [
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/StegVerse-Labs/.github/issues/3443",
+          "observedAt": "2026-11-19T20:57:56.992426+00:00",
+          "verified": true,
+          "claim": "[QUEUE] Claude"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/DeviousDevv303/forgeclaw/issues/235",
+          "observedAt": "2026-11-19T20:57:56.992429+00:00",
+          "verified": true,
+          "claim": "Muse <-> Claude working channel \u2014 Kalshi funds + reliability queue"
         }
       ],
       "guardrails": [
@@ -190,7 +288,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/cgidzinski/Xendelta-Hub/issues/397",
-          "observedAt": "2026-11-19T07:54:35.053823+00:00",
+          "observedAt": "2026-11-19T20:57:58.221856+00:00",
           "verified": true,
           "claim": "XenKitchen: book covers, a bookshelf picker, and PDF export"
         },
@@ -198,7 +296,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mealie-recipes/mealie/issues/1306",
-          "observedAt": "2026-11-19T07:54:35.053825+00:00",
+          "observedAt": "2026-11-19T20:57:58.221857+00:00",
           "verified": true,
           "claim": "[v1.0.0b] [Task] - Export Recipes and Cookbooks to PDF"
         },
@@ -206,7 +304,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/IamTugy/recipes/issues/21",
-          "observedAt": "2026-11-19T07:54:35.053829+00:00",
+          "observedAt": "2026-11-19T20:57:58.221860+00:00",
           "verified": true,
           "claim": "Cookbook/collection PDF export"
         },
@@ -214,7 +312,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Benkendorfer/recipe-manager/issues/7",
-          "observedAt": "2026-11-19T07:54:35.053834+00:00",
+          "observedAt": "2026-11-19T20:57:58.221864+00:00",
           "verified": true,
           "claim": "Import recipes from PDF files"
         },
@@ -222,7 +320,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mathnauleau/commeat/issues/3",
-          "observedAt": "2026-11-19T07:54:35.053832+00:00",
+          "observedAt": "2026-11-19T20:57:58.221863+00:00",
           "verified": true,
           "claim": "Later: Print full cookbook PDF"
         },
@@ -230,7 +328,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7826",
-          "observedAt": "2026-11-19T07:54:35.053837+00:00",
+          "observedAt": "2026-11-19T20:57:58.221867+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -238,7 +336,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7825",
-          "observedAt": "2026-11-19T07:54:35.053838+00:00",
+          "observedAt": "2026-11-19T20:57:58.221868+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -246,7 +344,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7824",
-          "observedAt": "2026-11-19T07:54:35.053840+00:00",
+          "observedAt": "2026-11-19T20:57:58.221869+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         }
