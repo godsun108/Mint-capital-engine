@@ -28,48 +28,56 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/cnp-plum-frontend/issues/167",
-          "observedAt": "2026-11-18T20:52:51.853821+00:00",
+          "url": "https://github.com/hmcts/sptribs-frontend/issues/444",
+          "observedAt": "2026-11-19T07:54:29.107292+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/juror-er-portal/issues/1",
-          "observedAt": "2026-11-18T20:52:51.853825+00:00",
+          "url": "https://github.com/sneat-co/circleus/issues/1",
+          "observedAt": "2026-11-19T07:54:29.107310+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/wa-reporting-frontend/issues/11",
-          "observedAt": "2026-11-18T20:52:51.853826+00:00",
+          "url": "https://github.com/hmcts/pcs-frontend/issues/10",
+          "observedAt": "2026-11-19T07:54:29.107321+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "observedAt": "2026-11-18T20:52:51.853837+00:00",
+          "url": "https://github.com/sneat-co/sportius/issues/27",
+          "observedAt": "2026-11-19T07:54:29.107330+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/sneat-co/sneat-club/issues/4",
-          "observedAt": "2026-11-18T20:52:51.853838+00:00",
+          "url": "https://github.com/WWmend/testTel3/issues/2",
+          "observedAt": "2026-11-19T07:54:29.107327+00:00",
           "verified": true,
-          "claim": "Dependency Dashboard"
+          "claim": "sdk-1.25.1.tgz: 34 vulnerabilities (highest severity is: 9.8) [main]"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/WWmend/testTel2/issues/2",
+          "observedAt": "2026-11-19T07:54:29.107329+00:00",
+          "verified": true,
+          "claim": "sdk-1.25.1.tgz: 34 vulnerabilities (highest severity is: 9.8) [main]"
         }
       ],
       "status": "DISCOVERED_SOURCE_BACKED",
       "provenance": {
         "proposalId": "proposal:express-auth:001",
-        "promotedAt": "2026-11-18T20:52:55.157958+00:00",
+        "promotedAt": "2026-11-19T07:54:35.361212+00:00",
         "semantics": "SOURCE_BACKED_CANDIDATE_RESEARCH_STILL_REQUIRED"
       }
     }
