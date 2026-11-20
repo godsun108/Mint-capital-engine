@@ -28,88 +28,32 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/sneat-co/sneat-ext-template/issues/17",
-          "observedAt": "2026-11-20T07:43:49.553758+00:00",
+          "url": "https://github.com/hmcts/fact-admin-frontend/issues/3",
+          "observedAt": "2026-11-20T20:42:22.778821+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/fact-frontend/issues/772",
-          "observedAt": "2026-11-20T07:43:49.553761+00:00",
+          "url": "https://github.com/hmcts/fact-public-frontend/issues/1",
+          "observedAt": "2026-11-20T20:42:22.778833+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/cath-service/issues/3",
-          "observedAt": "2026-11-20T07:43:49.553767+00:00",
+          "url": "https://github.com/hmcts/rpts-frontend/issues/13",
+          "observedAt": "2026-11-20T20:42:22.778840+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/mitodl/mitxpro/issues/2711",
-          "observedAt": "2026-11-20T07:43:49.553768+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
-          "observedAt": "2026-11-20T07:43:49.553770+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/hmcts/pre-portal/issues/1",
-          "observedAt": "2026-11-20T07:43:49.553771+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/amaybaum-prod/supabase/issues/26",
-          "observedAt": "2026-11-20T07:43:49.553762+00:00",
-          "verified": true,
-          "claim": "studio-0.0.9.tgz: 192 vulnerabilities (highest severity is: 10.0) [master] (reachable) - autoclosed"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/amaybaum-prod/supabase/issues/116",
-          "observedAt": "2026-11-20T07:43:49.553763+00:00",
-          "verified": true,
-          "claim": "studio-0.0.9.tgz: 192 vulnerabilities (highest severity is: 10.0) [master] (reachable)"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/amaybaum-prod/elastic-charts/issues/38",
-          "observedAt": "2026-11-20T07:43:49.553765+00:00",
-          "verified": true,
-          "claim": "probot-12.3.3.tgz: 50 vulnerabilities (highest severity is: 9.8) [main]"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/bengmend/FreeCodeCamp/issues/24",
-          "observedAt": "2026-11-20T07:43:49.553766+00:00",
-          "verified": true,
-          "claim": "@freecodecamp/api-0.0.1.tgz: 133 vulnerabilities (highest severity is: 9.3) [main]"
         }
       ],
       "status": "DISCOVERED_SOURCE_BACKED",
       "provenance": {
         "proposalId": "proposal:express-auth:001",
-        "promotedAt": "2026-11-20T07:43:56.582899+00:00",
+        "promotedAt": "2026-11-20T20:42:33.912210+00:00",
         "semantics": "SOURCE_BACKED_CANDIDATE_RESEARCH_STILL_REQUIRED"
       }
     }

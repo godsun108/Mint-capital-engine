@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.proposals.v1",
-  "generatedAt": "2026-11-20T07:43:56.554889+00:00",
+  "generatedAt": "2026-11-20T20:42:33.878116+00:00",
   "semantics": "RESEARCH_PROPOSALS_NOT_PRODUCT_CANDIDATES",
   "proposals": [
     {
@@ -13,112 +13,26 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/sneat-co/sneat-ext-template/issues/17",
-          "observedAt": "2026-11-20T07:43:49.553758+00:00",
+          "url": "https://github.com/hmcts/fact-admin-frontend/issues/3",
+          "observedAt": "2026-11-20T20:42:22.778821+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/fact-frontend/issues/772",
-          "observedAt": "2026-11-20T07:43:49.553761+00:00",
+          "url": "https://github.com/hmcts/fact-public-frontend/issues/1",
+          "observedAt": "2026-11-20T20:42:22.778833+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/cath-service/issues/3",
-          "observedAt": "2026-11-20T07:43:49.553767+00:00",
+          "url": "https://github.com/hmcts/rpts-frontend/issues/13",
+          "observedAt": "2026-11-20T20:42:22.778840+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/mitodl/mitxpro/issues/2711",
-          "observedAt": "2026-11-20T07:43:49.553768+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
-          "observedAt": "2026-11-20T07:43:49.553770+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/hmcts/pre-portal/issues/1",
-          "observedAt": "2026-11-20T07:43:49.553771+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/amaybaum-prod/supabase/issues/26",
-          "observedAt": "2026-11-20T07:43:49.553762+00:00",
-          "verified": true,
-          "claim": "studio-0.0.9.tgz: 192 vulnerabilities (highest severity is: 10.0) [master] (reachable) - autoclosed"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/amaybaum-prod/supabase/issues/116",
-          "observedAt": "2026-11-20T07:43:49.553763+00:00",
-          "verified": true,
-          "claim": "studio-0.0.9.tgz: 192 vulnerabilities (highest severity is: 10.0) [master] (reachable)"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/amaybaum-prod/elastic-charts/issues/38",
-          "observedAt": "2026-11-20T07:43:49.553765+00:00",
-          "verified": true,
-          "claim": "probot-12.3.3.tgz: 50 vulnerabilities (highest severity is: 9.8) [main]"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/bengmend/FreeCodeCamp/issues/24",
-          "observedAt": "2026-11-20T07:43:49.553766+00:00",
-          "verified": true,
-          "claim": "@freecodecamp/api-0.0.1.tgz: 133 vulnerabilities (highest severity is: 9.3) [main]"
-        }
-      ],
-      "guardrails": [
-        "proposal_is_not_verified_demand",
-        "research_must_define_customer_and_problem",
-        "no_build_before_product_gate"
-      ]
-    },
-    {
-      "id": "proposal:venture-economics:001",
-      "topic": "venture-economics",
-      "status": "PROPOSED_FOR_RESEARCH",
-      "regulated": false,
-      "upfrontCostUsd": 0,
-      "evidence": [
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/kk051780/toy-wars-factory/issues/219",
-          "observedAt": "2026-11-20T07:43:50.348419+00:00",
-          "verified": true,
-          "claim": "[EGGRUMBLE V3 \u4f01\u753b\u5ba4] \u5168\u57ce\u9665\u843dTEAM/BR\u30fb\u5375\u4e89\u596a\u30fb\u5927\u7fa4\u7121\u53cc\u30fb\u500b\u4eba\u57ce"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/kk051780/toy-wars-factory/issues/220",
-          "observedAt": "2026-11-20T07:43:50.348420+00:00",
-          "verified": true,
-          "claim": "[EGGRUMBLE V3 RC\u7d71\u5408] 2\u30e2\u30fc\u30c9\u30fb\u57ce\u6d88\u6ec5/\u5375\u89e3\u653e\u30fbAI\u30fb\u500b\u4eba\u57ce\uff5c\u8a8d\u8a3cwriter"
         }
       ],
       "guardrails": [
@@ -138,7 +52,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/StegVerse-Labs/.github/issues/3443",
-          "observedAt": "2026-11-20T07:43:51.144147+00:00",
+          "observedAt": "2026-11-20T20:42:24.982657+00:00",
           "verified": true,
           "claim": "[QUEUE] Claude"
         },
@@ -146,25 +60,25 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/DeviousDevv303/forgeclaw/issues/235",
-          "observedAt": "2026-11-20T07:43:51.144166+00:00",
+          "observedAt": "2026-11-20T20:42:24.982672+00:00",
           "verified": true,
           "claim": "Muse <-> Claude working channel \u2014 Kalshi funds + reliability queue"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
-          "observedAt": "2026-11-20T07:43:51.144167+00:00",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/554",
+          "observedAt": "2026-11-20T20:42:24.982669+00:00",
           "verified": true,
-          "claim": "[TEAM NAYA] Coordination feed \u2014 successor to #2793"
+          "claim": "\ud83d\udd31 TEAM NAYA \u2014 Naya \u2194 Coda Direct Communication Board"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/554",
-          "observedAt": "2026-11-20T07:43:51.144172+00:00",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
+          "observedAt": "2026-11-20T20:42:24.982674+00:00",
           "verified": true,
-          "claim": "\ud83d\udd31 TEAM NAYA \u2014 Naya \u2194 Coda Direct Communication Board"
+          "claim": "[TEAM NAYA] Coordination feed \u2014 successor to #2793"
         }
       ],
       "guardrails": [
@@ -184,7 +98,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/bizzal70/itsalreadypriced/issues/1",
-          "observedAt": "2026-11-20T07:43:52.682402+00:00",
+          "observedAt": "2026-11-20T20:42:27.231004+00:00",
           "verified": true,
           "claim": "\ud83d\udd0e Daily content review \u2014 It's Already Priced \u2014 Blog + X"
         },
@@ -192,7 +106,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
-          "observedAt": "2026-11-20T07:43:52.682403+00:00",
+          "observedAt": "2026-11-20T20:42:27.231008+00:00",
           "verified": true,
           "claim": "\ud83e\udded Daily content opportunities"
         }
@@ -214,7 +128,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/cgidzinski/Xendelta-Hub/issues/397",
-          "observedAt": "2026-11-20T07:43:55.901517+00:00",
+          "observedAt": "2026-11-20T20:42:31.767096+00:00",
           "verified": true,
           "claim": "XenKitchen: book covers, a bookshelf picker, and PDF export"
         },
@@ -222,7 +136,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mealie-recipes/mealie/issues/1306",
-          "observedAt": "2026-11-20T07:43:55.901518+00:00",
+          "observedAt": "2026-11-20T20:42:31.767098+00:00",
           "verified": true,
           "claim": "[v1.0.0b] [Task] - Export Recipes and Cookbooks to PDF"
         },
@@ -230,7 +144,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/IamTugy/recipes/issues/21",
-          "observedAt": "2026-11-20T07:43:55.901521+00:00",
+          "observedAt": "2026-11-20T20:42:31.767102+00:00",
           "verified": true,
           "claim": "Cookbook/collection PDF export"
         },
@@ -238,7 +152,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Benkendorfer/recipe-manager/issues/7",
-          "observedAt": "2026-11-20T07:43:55.901524+00:00",
+          "observedAt": "2026-11-20T20:42:31.767108+00:00",
           "verified": true,
           "claim": "Import recipes from PDF files"
         },
@@ -246,7 +160,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mathnauleau/commeat/issues/3",
-          "observedAt": "2026-11-20T07:43:55.901523+00:00",
+          "observedAt": "2026-11-20T20:42:31.767106+00:00",
           "verified": true,
           "claim": "Later: Print full cookbook PDF"
         },
@@ -254,7 +168,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7826",
-          "observedAt": "2026-11-20T07:43:55.901527+00:00",
+          "observedAt": "2026-11-20T20:42:31.767112+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -262,7 +176,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7825",
-          "observedAt": "2026-11-20T07:43:55.901528+00:00",
+          "observedAt": "2026-11-20T20:42:31.767114+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -270,9 +184,39 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7824",
-          "observedAt": "2026-11-20T07:43:55.901529+00:00",
+          "observedAt": "2026-11-20T20:42:31.767115+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
+        }
+      ],
+      "guardrails": [
+        "proposal_is_not_verified_demand",
+        "research_must_define_customer_and_problem",
+        "no_build_before_product_gate"
+      ]
+    },
+    {
+      "id": "proposal:browser-arcade:001",
+      "topic": "browser-arcade",
+      "status": "PROPOSED_FOR_RESEARCH",
+      "regulated": false,
+      "upfrontCostUsd": 0,
+      "evidence": [
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/Vivekpsps3/vivek-monorepo/issues/134",
+          "observedAt": "2026-11-20T20:42:32.816269+00:00",
+          "verified": true,
+          "claim": "Roadmap: stylized personal workspace and isometric Town"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/Vivekpsps3/vivek-monorepo/issues/304",
+          "observedAt": "2026-11-20T20:42:32.816285+00:00",
+          "verified": true,
+          "claim": "Personal world: stylized workspace, isometric Town, workouts and dated memories"
         }
       ],
       "guardrails": [
