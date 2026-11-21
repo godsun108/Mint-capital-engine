@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.proposals.v1",
-  "generatedAt": "2026-11-20T20:42:33.878116+00:00",
+  "generatedAt": "2026-11-21T07:40:46.294858+00:00",
   "semantics": "RESEARCH_PROPOSALS_NOT_PRODUCT_CANDIDATES",
   "proposals": [
     {
@@ -13,24 +13,48 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/fact-admin-frontend/issues/3",
-          "observedAt": "2026-11-20T20:42:22.778821+00:00",
+          "url": "https://github.com/hmcts/cath-service/issues/3",
+          "observedAt": "2026-11-21T07:40:42.116290+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/fact-public-frontend/issues/1",
-          "observedAt": "2026-11-20T20:42:22.778833+00:00",
+          "url": "https://github.com/hmcts/appreg-frontend/issues/2",
+          "observedAt": "2026-11-21T07:40:42.116293+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/rpts-frontend/issues/13",
-          "observedAt": "2026-11-20T20:42:22.778840+00:00",
+          "url": "https://github.com/mitodl/mitxpro/issues/2711",
+          "observedAt": "2026-11-21T07:40:42.116315+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "observedAt": "2026-11-21T07:40:42.116320+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "observedAt": "2026-11-21T07:40:42.116322+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/TravisPooley/vulhub/issues/4",
+          "observedAt": "2026-11-21T07:40:42.116324+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         }
@@ -52,7 +76,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/StegVerse-Labs/.github/issues/3443",
-          "observedAt": "2026-11-20T20:42:24.982657+00:00",
+          "observedAt": "2026-11-21T07:40:43.615961+00:00",
           "verified": true,
           "claim": "[QUEUE] Claude"
         },
@@ -60,25 +84,71 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/DeviousDevv303/forgeclaw/issues/235",
-          "observedAt": "2026-11-20T20:42:24.982672+00:00",
+          "observedAt": "2026-11-21T07:40:43.616000+00:00",
           "verified": true,
           "claim": "Muse <-> Claude working channel \u2014 Kalshi funds + reliability queue"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/554",
-          "observedAt": "2026-11-20T20:42:24.982669+00:00",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
+          "observedAt": "2026-11-21T07:40:43.615990+00:00",
           "verified": true,
-          "claim": "\ud83d\udd31 TEAM NAYA \u2014 Naya \u2194 Coda Direct Communication Board"
+          "claim": "[TEAM NAYA] Coordination feed \u2014 successor to #2793"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/3066",
-          "observedAt": "2026-11-20T20:42:24.982674+00:00",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/554",
+          "observedAt": "2026-11-21T07:40:43.615995+00:00",
           "verified": true,
-          "claim": "[TEAM NAYA] Coordination feed \u2014 successor to #2793"
+          "claim": "\ud83d\udd31 TEAM NAYA \u2014 Naya \u2194 Coda Direct Communication Board"
+        }
+      ],
+      "guardrails": [
+        "proposal_is_not_verified_demand",
+        "research_must_define_customer_and_problem",
+        "no_build_before_product_gate"
+      ]
+    },
+    {
+      "id": "proposal:software-release-contract:001",
+      "topic": "software-release-contract",
+      "status": "PROPOSED_FOR_RESEARCH",
+      "regulated": false,
+      "upfrontCostUsd": 0,
+      "evidence": [
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/kk051780/toy-wars-factory/issues/470",
+          "observedAt": "2026-11-21T07:40:44.291425+00:00",
+          "verified": true,
+          "claim": "[EGGRUMBLE V3 GAME QUALITY] 2\u30e2\u30fc\u30c9\u30fb\u57ce\u8131\u843d\u30fb\u5927\u7fa4KO\u30fb16\u82f1\u96c4AI\uff5c\u4fee\u5fa9\u5b8c\u9042"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/kk051780/toy-wars-factory/issues/218",
+          "observedAt": "2026-11-21T07:40:44.291440+00:00",
+          "verified": true,
+          "claim": "[EGGRUMBLE V3][OWNER\u6700\u4e0a\u4f4d] \u57ce\u5168\u6ec5\u6557\u5317\u30fb\u8907\u6570\u5375\u30fb2\u30e2\u30fc\u30c9AI\u30fb\u500b\u4eba\u57ce\u8ab2\u91d1\uff5c\u5168Chat\u5171\u901a"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/lendbucket/254engineering/issues/1",
+          "observedAt": "2026-11-21T07:40:44.291443+00:00",
+          "verified": true,
+          "claim": "Day queue: chat answers"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/StegVerse-Labs/.github/issues/3443",
+          "observedAt": "2026-11-21T07:40:44.291456+00:00",
+          "verified": true,
+          "claim": "[QUEUE] Claude"
         }
       ],
       "guardrails": [
@@ -98,7 +168,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/bizzal70/itsalreadypriced/issues/1",
-          "observedAt": "2026-11-20T20:42:27.231004+00:00",
+          "observedAt": "2026-11-21T07:40:44.860001+00:00",
           "verified": true,
           "claim": "\ud83d\udd0e Daily content review \u2014 It's Already Priced \u2014 Blog + X"
         },
@@ -106,7 +176,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
-          "observedAt": "2026-11-20T20:42:27.231008+00:00",
+          "observedAt": "2026-11-21T07:40:44.860003+00:00",
           "verified": true,
           "claim": "\ud83e\udded Daily content opportunities"
         }
@@ -118,8 +188,8 @@
       ]
     },
     {
-      "id": "proposal:cookbook-export:001",
-      "topic": "cookbook-export",
+      "id": "proposal:evidence-packets:001",
+      "topic": "evidence-packets",
       "status": "PROPOSED_FOR_RESEARCH",
       "regulated": false,
       "upfrontCostUsd": 0,
@@ -127,96 +197,34 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/cgidzinski/Xendelta-Hub/issues/397",
-          "observedAt": "2026-11-20T20:42:31.767096+00:00",
+          "url": "https://github.com/Swooshz-com/swooshz-quote-auto-generator/issues/143",
+          "observedAt": "2026-11-21T07:40:45.500683+00:00",
           "verified": true,
-          "claim": "XenKitchen: book covers, a bookshelf picker, and PDF export"
+          "claim": "[ PARENT THREAD ] SQAG \u2014 Rolling Work Queue"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/mealie-recipes/mealie/issues/1306",
-          "observedAt": "2026-11-20T20:42:31.767098+00:00",
+          "url": "https://github.com/weijunswj/ai-agent-toolkit/issues/421",
+          "observedAt": "2026-11-21T07:40:45.500697+00:00",
           "verified": true,
-          "claim": "[v1.0.0b] [Task] - Export Recipes and Cookbooks to PDF"
+          "claim": "[ PARENT THREAD ] Toolkit \u2014 Delivery and Operational Assurance"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/IamTugy/recipes/issues/21",
-          "observedAt": "2026-11-20T20:42:31.767102+00:00",
+          "url": "https://github.com/kk051780/toy-wars-factory/issues/470",
+          "observedAt": "2026-11-21T07:40:45.500689+00:00",
           "verified": true,
-          "claim": "Cookbook/collection PDF export"
+          "claim": "[EGGRUMBLE V3 GAME QUALITY] 2\u30e2\u30fc\u30c9\u30fb\u57ce\u8131\u843d\u30fb\u5927\u7fa4KO\u30fb16\u82f1\u96c4AI\uff5c\u4fee\u5fa9\u5b8c\u9042"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/Benkendorfer/recipe-manager/issues/7",
-          "observedAt": "2026-11-20T20:42:31.767108+00:00",
+          "url": "https://github.com/kk051780/toy-wars-factory/issues/218",
+          "observedAt": "2026-11-21T07:40:45.500717+00:00",
           "verified": true,
-          "claim": "Import recipes from PDF files"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/mathnauleau/commeat/issues/3",
-          "observedAt": "2026-11-20T20:42:31.767106+00:00",
-          "verified": true,
-          "claim": "Later: Print full cookbook PDF"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/guevara/read-it-later/issues/7826",
-          "observedAt": "2026-11-20T20:42:31.767112+00:00",
-          "verified": true,
-          "claim": "Rust Language Cheat Sheet"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/guevara/read-it-later/issues/7825",
-          "observedAt": "2026-11-20T20:42:31.767114+00:00",
-          "verified": true,
-          "claim": "Rust Language Cheat Sheet"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/guevara/read-it-later/issues/7824",
-          "observedAt": "2026-11-20T20:42:31.767115+00:00",
-          "verified": true,
-          "claim": "Rust Language Cheat Sheet"
-        }
-      ],
-      "guardrails": [
-        "proposal_is_not_verified_demand",
-        "research_must_define_customer_and_problem",
-        "no_build_before_product_gate"
-      ]
-    },
-    {
-      "id": "proposal:browser-arcade:001",
-      "topic": "browser-arcade",
-      "status": "PROPOSED_FOR_RESEARCH",
-      "regulated": false,
-      "upfrontCostUsd": 0,
-      "evidence": [
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/Vivekpsps3/vivek-monorepo/issues/134",
-          "observedAt": "2026-11-20T20:42:32.816269+00:00",
-          "verified": true,
-          "claim": "Roadmap: stylized personal workspace and isometric Town"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/Vivekpsps3/vivek-monorepo/issues/304",
-          "observedAt": "2026-11-20T20:42:32.816285+00:00",
-          "verified": true,
-          "claim": "Personal world: stylized workspace, isometric Town, workouts and dated memories"
+          "claim": "[EGGRUMBLE V3][OWNER\u6700\u4e0a\u4f4d] \u57ce\u5168\u6ec5\u6557\u5317\u30fb\u8907\u6570\u5375\u30fb2\u30e2\u30fc\u30c9AI\u30fb\u500b\u4eba\u57ce\u8ab2\u91d1\uff5c\u5168Chat\u5171\u901a"
         }
       ],
       "guardrails": [
