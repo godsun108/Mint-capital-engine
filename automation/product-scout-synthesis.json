@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.synthesis.v1",
-  "generatedAt": "2026-11-21T19:46:13.034374+00:00",
+  "generatedAt": "2026-11-22T07:26:02.926062+00:00",
   "clusters": [
     {
       "topic": "express-typescript",
@@ -16,33 +16,33 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/Meeovi/meeovi-learning/issues/3",
-          "b": "https://github.com/orgtoar/redwood-test/issues/286",
+          "a": "https://github.com/hmcts/fact-public-frontend/issues/1",
+          "b": "https://github.com/hmcts/juror-er-portal/issues/1",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/Meeovi/meeovi-learning/issues/3",
-          "b": "https://github.com/Meeovi/AlternateFramework/issues/4",
+          "a": "https://github.com/hmcts/fact-public-frontend/issues/1",
+          "b": "https://github.com/hmcts/fact-admin-frontend/issues/3",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/Meeovi/meeovi-learning/issues/3",
-          "b": "https://github.com/Pixel-Eucaristico/DOMUS/issues/25",
+          "a": "https://github.com/hmcts/fact-public-frontend/issues/1",
+          "b": "https://github.com/sneat-co/sportius/issues/27",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/orgtoar/redwood-test/issues/286",
-          "b": "https://github.com/Meeovi/AlternateFramework/issues/4",
+          "a": "https://github.com/hmcts/juror-er-portal/issues/1",
+          "b": "https://github.com/hmcts/fact-admin-frontend/issues/3",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/orgtoar/redwood-test/issues/286",
-          "b": "https://github.com/Pixel-Eucaristico/DOMUS/issues/25",
+          "a": "https://github.com/hmcts/juror-er-portal/issues/1",
+          "b": "https://github.com/sneat-co/sportius/issues/27",
           "similarity": 1.0
         },
         {
-          "a": "https://github.com/Meeovi/AlternateFramework/issues/4",
-          "b": "https://github.com/Pixel-Eucaristico/DOMUS/issues/25",
+          "a": "https://github.com/hmcts/fact-admin-frontend/issues/3",
+          "b": "https://github.com/sneat-co/sportius/issues/27",
           "similarity": 1.0
         }
       ],
@@ -51,26 +51,44 @@
     },
     {
       "topic": "venture-economics",
-      "observationCount": 19,
-      "distinctSources": 19,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "observationCount": 20,
+      "distinctSources": 20,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/StegVerse-Labs/.github/issues/3443",
+          "b": "https://github.com/DeviousDevv303/forgeclaw/issues/235",
+          "similarity": 0.25
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "procedural-assets",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/StegVerse-Labs/.github/issues/3443",
+          "b": "https://github.com/DeviousDevv303/forgeclaw/issues/235",
+          "similarity": 0.25
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "software-release-contract",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/StegVerse-Labs/.github/issues/3448",
+          "b": "https://github.com/StegVerse-Labs/.github/issues/3443",
+          "similarity": 0.333
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -109,9 +127,9 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/rempemat-eng/appify/issues/149",
-          "b": "https://github.com/surendra2304/FRIDAY-Universe/issues/35",
-          "similarity": 0.231
+          "a": "https://github.com/StegVerse-Labs/.github/issues/3444",
+          "b": "https://github.com/StegVerse-Labs/.github/issues/3443",
+          "similarity": 0.333
         }
       ],
       "promotionEligible": true,
