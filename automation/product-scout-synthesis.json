@@ -1,9 +1,23 @@
 {
   "schema": "mint.product.scout.synthesis.v1",
-  "generatedAt": "2026-11-22T07:26:02.926062+00:00",
+  "generatedAt": "2026-11-22T19:57:44.500493+00:00",
   "clusters": [
     {
       "topic": "express-typescript",
+      "observationCount": 20,
+      "distinctSources": 20,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/Delower-Hasan/multichain/issues/1",
+          "b": "https://github.com/jibon-roy/next-js-starter/issues/3",
+          "similarity": 1.0
+        }
+      ],
+      "promotionEligible": true,
+      "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
+    },
+    {
+      "topic": "express-auth",
       "observationCount": 20,
       "distinctSources": 20,
       "relatedPairs": [],
@@ -11,56 +25,11 @@
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
-      "topic": "express-auth",
-      "observationCount": 20,
-      "distinctSources": 20,
-      "relatedPairs": [
-        {
-          "a": "https://github.com/hmcts/fact-public-frontend/issues/1",
-          "b": "https://github.com/hmcts/juror-er-portal/issues/1",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/fact-public-frontend/issues/1",
-          "b": "https://github.com/hmcts/fact-admin-frontend/issues/3",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/fact-public-frontend/issues/1",
-          "b": "https://github.com/sneat-co/sportius/issues/27",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/juror-er-portal/issues/1",
-          "b": "https://github.com/hmcts/fact-admin-frontend/issues/3",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/juror-er-portal/issues/1",
-          "b": "https://github.com/sneat-co/sportius/issues/27",
-          "similarity": 1.0
-        },
-        {
-          "a": "https://github.com/hmcts/fact-admin-frontend/issues/3",
-          "b": "https://github.com/sneat-co/sportius/issues/27",
-          "similarity": 1.0
-        }
-      ],
-      "promotionEligible": true,
-      "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
-    },
-    {
       "topic": "venture-economics",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [
-        {
-          "a": "https://github.com/StegVerse-Labs/.github/issues/3443",
-          "b": "https://github.com/DeviousDevv303/forgeclaw/issues/235",
-          "similarity": 0.25
-        }
-      ],
-      "promotionEligible": true,
+      "relatedPairs": [],
+      "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -83,9 +52,9 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/StegVerse-Labs/.github/issues/3448",
-          "b": "https://github.com/StegVerse-Labs/.github/issues/3443",
-          "similarity": 0.333
+          "a": "https://github.com/surendra2304/FRIDAY-Universe/issues/35",
+          "b": "https://github.com/rempemat-eng/appify/issues/149",
+          "similarity": 0.231
         }
       ],
       "promotionEligible": true,
@@ -109,8 +78,19 @@
       "topic": "evidence-packets",
       "observationCount": 20,
       "distinctSources": 20,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/ach1992/simple-tun-link/issues/135",
+          "b": "https://github.com/ach1992/simple-tun-link/issues/139",
+          "similarity": 0.3
+        },
+        {
+          "a": "https://github.com/surendra2304/FRIDAY-Universe/issues/35",
+          "b": "https://github.com/rempemat-eng/appify/issues/149",
+          "similarity": 0.231
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
@@ -127,9 +107,14 @@
       "distinctSources": 20,
       "relatedPairs": [
         {
-          "a": "https://github.com/StegVerse-Labs/.github/issues/3444",
-          "b": "https://github.com/StegVerse-Labs/.github/issues/3443",
-          "similarity": 0.333
+          "a": "https://github.com/surendra2304/FRIDAY-Universe/issues/35",
+          "b": "https://github.com/rempemat-eng/appify/issues/149",
+          "similarity": 0.231
+        },
+        {
+          "a": "https://github.com/jaclose/AXOM/issues/140",
+          "b": "https://github.com/AMASI-SA/AMASI-SA/issues/1006",
+          "similarity": 0.222
         }
       ],
       "promotionEligible": true,
@@ -186,58 +171,93 @@
     },
     {
       "topic": "browser-arcade",
-      "observationCount": 0,
-      "distinctSources": 0,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "observationCount": 20,
+      "distinctSources": 20,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/Vivekpsps3/vivek-monorepo/issues/134",
+          "b": "https://github.com/Vivekpsps3/vivek-monorepo/issues/304",
+          "similarity": 0.5
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "earth-data",
-      "observationCount": 0,
-      "distinctSources": 0,
+      "observationCount": 3,
+      "distinctSources": 3,
       "relatedPairs": [],
       "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "camera-discovery",
-      "observationCount": 0,
-      "distinctSources": 0,
+      "observationCount": 14,
+      "distinctSources": 14,
       "relatedPairs": [],
       "promotionEligible": false,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "forecasting",
-      "observationCount": 0,
-      "distinctSources": 0,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "observationCount": 20,
+      "distinctSources": 20,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/KoshiirRa/midgley/issues/709",
+          "b": "https://github.com/KoshiirRa/midgley/issues/708",
+          "similarity": 0.778
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "goal-os",
-      "observationCount": 0,
-      "distinctSources": 0,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "observationCount": 20,
+      "distinctSources": 20,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/rempemat-eng/appify/issues/149",
+          "b": "https://github.com/HassiMian/app-assps-edu-pk/issues/4",
+          "similarity": 0.2
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "editorial-evidence",
-      "observationCount": 0,
-      "distinctSources": 0,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "observationCount": 20,
+      "distinctSources": 20,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/Schulzet3/The-Dial-In-Collective/issues/508",
+          "b": "https://github.com/Schulzet3/The-Dial-In-Collective/issues/504",
+          "similarity": 0.273
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     },
     {
       "topic": "subscription-service",
-      "observationCount": 0,
-      "distinctSources": 0,
-      "relatedPairs": [],
-      "promotionEligible": false,
+      "observationCount": 20,
+      "distinctSources": 20,
+      "relatedPairs": [
+        {
+          "a": "https://github.com/kk051780/toy-wars-factory/issues/220",
+          "b": "https://github.com/kk051780/toy-wars-factory/issues/218",
+          "similarity": 0.25
+        },
+        {
+          "a": "https://github.com/jaclose/AXOM/issues/140",
+          "b": "https://github.com/AMASI-SA/AMASI-SA/issues/1006",
+          "similarity": 0.222
+        }
+      ],
+      "promotionEligible": true,
       "semantics": "SYNTHESIS_ONLY_RESEARCH_MUST_CHALLENGE"
     }
   ]
