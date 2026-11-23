@@ -28,40 +28,72 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/fact-public-frontend/issues/1",
-          "observedAt": "2026-11-22T07:25:57.587345+00:00",
+          "url": "https://github.com/amaybaum-prod/supabase/issues/26",
+          "observedAt": "2026-11-23T08:11:53.763037+00:00",
+          "verified": true,
+          "claim": "studio-0.0.9.tgz: 192 vulnerabilities (highest severity is: 10.0) [master] (reachable) - autoclosed"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/bengmend/FreeCodeCamp/issues/24",
+          "observedAt": "2026-11-23T08:11:53.763038+00:00",
+          "verified": true,
+          "claim": "@freecodecamp/api-0.0.1.tgz: 136 vulnerabilities (highest severity is: 9.3) [main]"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/amaybaum-prod/supabase/issues/116",
+          "observedAt": "2026-11-23T08:11:53.763040+00:00",
+          "verified": true,
+          "claim": "studio-0.0.9.tgz: 192 vulnerabilities (highest severity is: 10.0) [master] (reachable)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/amaybaum-prod/elastic-charts/issues/38",
+          "observedAt": "2026-11-23T08:11:53.763044+00:00",
+          "verified": true,
+          "claim": "probot-12.3.3.tgz: 50 vulnerabilities (highest severity is: 9.8) [main]"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/mitodl/mitxpro/issues/2711",
+          "observedAt": "2026-11-23T08:11:53.763045+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/juror-er-portal/issues/1",
-          "observedAt": "2026-11-22T07:25:57.587349+00:00",
+          "url": "https://github.com/sneat-co/circleus/issues/1",
+          "observedAt": "2026-11-23T08:11:53.763058+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/fact-admin-frontend/issues/3",
-          "observedAt": "2026-11-22T07:25:57.587355+00:00",
+          "url": "https://github.com/Div23ine/Global/issues/5",
+          "observedAt": "2026-11-23T08:11:53.763053+00:00",
           "verified": true,
-          "claim": "Dependency Dashboard"
+          "claim": "Writing"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/sneat-co/sportius/issues/27",
-          "observedAt": "2026-11-22T07:25:57.587378+00:00",
+          "url": "https://github.com/Div23ine/Global/issues/4",
+          "observedAt": "2026-11-23T08:11:53.763054+00:00",
           "verified": true,
-          "claim": "Dependency Dashboard"
+          "claim": "Writing"
         }
       ],
       "status": "DISCOVERED_SOURCE_BACKED",
       "provenance": {
         "proposalId": "proposal:express-auth:001",
-        "promotedAt": "2026-11-22T07:26:03.005674+00:00",
+        "promotedAt": "2026-11-23T08:12:08.047002+00:00",
         "semantics": "SOURCE_BACKED_CANDIDATE_RESEARCH_STILL_REQUIRED"
       }
     }
