@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.proposals.v1",
-  "generatedAt": "2026-11-24T10:24:46.253475+00:00",
+  "generatedAt": "2026-11-24T22:44:56.643151+00:00",
   "semantics": "RESEARCH_PROPOSALS_NOT_PRODUCT_CANDIDATES",
   "proposals": [
     {
@@ -14,7 +14,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Delower-Hasan/multichain/issues/1",
-          "observedAt": "2026-11-24T10:24:36.853941+00:00",
+          "observedAt": "2026-11-24T22:44:42.490339+00:00",
           "verified": true,
           "claim": "Security: malware in this repository and 42 other repositories of this account"
         },
@@ -22,7 +22,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/jibon-roy/next-js-starter/issues/3",
-          "observedAt": "2026-11-24T10:24:36.853943+00:00",
+          "observedAt": "2026-11-24T22:44:42.490341+00:00",
           "verified": true,
           "claim": "Security: malware in this repository and 60 other repositories of this account"
         }
@@ -43,40 +43,8 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/mitodl/mitxpro/issues/2711",
-          "observedAt": "2026-11-24T10:24:37.783031+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/hmcts/cath-service/issues/3",
-          "observedAt": "2026-11-24T10:24:37.783056+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
-          "observedAt": "2026-11-24T10:24:37.783058+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/hmcts/appreg-frontend/issues/2",
-          "observedAt": "2026-11-24T10:24:37.783060+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
-          "observedAt": "2026-11-24T10:24:37.783072+00:00",
+          "url": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "observedAt": "2026-11-24T22:44:43.753755+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
@@ -84,9 +52,71 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "observedAt": "2026-11-24T10:24:37.783076+00:00",
+          "observedAt": "2026-11-24T22:44:43.753764+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/sneat-co/sneat-club/issues/4",
+          "observedAt": "2026-11-24T22:44:43.753770+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/PlayGrifball/GrifballWebApp/issues/81",
+          "observedAt": "2026-11-24T22:44:43.753780+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/rorymclark-prog/ImbewuField/issues/35",
+          "observedAt": "2026-11-24T22:44:43.753772+00:00",
+          "verified": true,
+          "claim": "Coordination ledger \u2014 Claude \u21c4 Codex (append-only)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/ontripai/cladora-website/issues/463",
+          "observedAt": "2026-11-24T22:44:43.753788+00:00",
+          "verified": true,
+          "claim": "PM: central coordination and evidence register for Codex seats"
+        }
+      ],
+      "guardrails": [
+        "proposal_is_not_verified_demand",
+        "research_must_define_customer_and_problem",
+        "no_build_before_product_gate"
+      ]
+    },
+    {
+      "id": "proposal:venture-economics:001",
+      "topic": "venture-economics",
+      "status": "PROPOSED_FOR_RESEARCH",
+      "regulated": false,
+      "upfrontCostUsd": 0,
+      "evidence": [
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/mrcalzon02/HB-TTRPG-tools/issues/19",
+          "observedAt": "2026-11-24T22:44:44.883330+00:00",
+          "verified": true,
+          "claim": "Master Development Dispatcher \u2014 Rolling Six-Hour Queue"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/Donh91/Investering-Framework-Archive-v1/issues/1512",
+          "observedAt": "2026-11-24T22:44:44.883350+00:00",
+          "verified": true,
+          "claim": "Research Lab: External Specialist Dissection master queue"
         }
       ],
       "guardrails": [
@@ -106,7 +136,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/bighauss/Sportsedge/issues/57",
-          "observedAt": "2026-11-24T10:24:39.602473+00:00",
+          "observedAt": "2026-11-24T22:44:46.226186+00:00",
           "verified": true,
           "claim": "SportsEdge agent relay \u2014 Claude / ChatGPT / Perplexity only"
         },
@@ -114,9 +144,47 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/moshehason/117-LAB-TEST/issues/3",
-          "observedAt": "2026-11-24T10:24:39.602505+00:00",
+          "observedAt": "2026-11-24T22:44:46.226213+00:00",
           "verified": true,
           "claim": "117 AUTONOMOUS STUDIO \u2014 ChatGPT \u00d7 Claude Code"
+        }
+      ],
+      "guardrails": [
+        "proposal_is_not_verified_demand",
+        "research_must_define_customer_and_problem",
+        "no_build_before_product_gate"
+      ]
+    },
+    {
+      "id": "proposal:software-release-contract:001",
+      "topic": "software-release-contract",
+      "status": "PROPOSED_FOR_RESEARCH",
+      "regulated": false,
+      "upfrontCostUsd": 0,
+      "evidence": [
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/ohhmm/openmind/issues/2603",
+          "observedAt": "2026-11-24T22:44:47.619652+00:00",
+          "verified": true,
+          "claim": "Workflow Failure: React to PR Review Comments"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/ohhmm/openmind/issues/2601",
+          "observedAt": "2026-11-24T22:44:47.619656+00:00",
+          "verified": true,
+          "claim": "Workflow Failure: React to PR Review Comments"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/ohhmm/openmind/issues/2602",
+          "observedAt": "2026-11-24T22:44:47.619674+00:00",
+          "verified": true,
+          "claim": "Workflow Failure: React to PR Review Comments"
         }
       ],
       "guardrails": [
@@ -136,7 +204,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/bizzal70/itsalreadypriced/issues/1",
-          "observedAt": "2026-11-24T10:24:41.459006+00:00",
+          "observedAt": "2026-11-24T22:44:48.738095+00:00",
           "verified": true,
           "claim": "\ud83d\udd0e Daily content review \u2014 It's Already Priced \u2014 Blog + X"
         },
@@ -144,7 +212,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
-          "observedAt": "2026-11-24T10:24:41.459012+00:00",
+          "observedAt": "2026-11-24T22:44:48.738099+00:00",
           "verified": true,
           "claim": "\ud83e\udded Daily content opportunities"
         }
@@ -165,18 +233,34 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/diegoami/goal2/issues/471",
-          "observedAt": "2026-11-24T10:24:42.951664+00:00",
+          "url": "https://github.com/StegVerse-Labs/.github/issues/3448",
+          "observedAt": "2026-11-24T22:44:49.864641+00:00",
           "verified": true,
-          "claim": "Checkpoints: where the work stands"
+          "claim": "[QUEUE] ChatGPT"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/diegoami/onenil-archaeology/issues/1",
-          "observedAt": "2026-11-24T10:24:42.951699+00:00",
+          "url": "https://github.com/StegVerse-Labs/.github/issues/3444",
+          "observedAt": "2026-11-24T22:44:49.864657+00:00",
           "verified": true,
-          "claim": "Checkpoints: where the work stands"
+          "claim": "[QUEUE] Coordination"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/BryceCurran86/PlanReader-3D/issues/4135",
+          "observedAt": "2026-11-24T22:44:49.864669+00:00",
+          "verified": true,
+          "claim": "PlanReader agent coordination hub continuation \u2014 #3462 reached GitHub 2,500-comment limit"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/ktogias/gnostoa/issues/511",
+          "observedAt": "2026-11-24T22:44:49.864671+00:00",
+          "verified": true,
+          "claim": "Coordination successor of #325 (comment limit reached 2026-11-18T11:03Z)"
         }
       ],
       "guardrails": [
@@ -195,34 +279,18 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/diegoami/goal2/issues/471",
-          "observedAt": "2026-11-24T10:24:44.734586+00:00",
+          "url": "https://github.com/StegVerse-Labs/.github/issues/3448",
+          "observedAt": "2026-11-24T22:44:53.554128+00:00",
           "verified": true,
-          "claim": "Checkpoints: where the work stands"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/diegoami/onenil-archaeology/issues/1",
-          "observedAt": "2026-11-24T10:24:44.734614+00:00",
-          "verified": true,
-          "claim": "Checkpoints: where the work stands"
+          "claim": "[QUEUE] ChatGPT"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/StegVerse-Labs/.github/issues/3444",
-          "observedAt": "2026-11-24T10:24:44.734622+00:00",
+          "observedAt": "2026-11-24T22:44:53.554148+00:00",
           "verified": true,
           "claim": "[QUEUE] Coordination"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/FaultMaven/faultmaven/issues/2853",
-          "observedAt": "2026-11-24T10:24:44.734626+00:00",
-          "verified": true,
-          "claim": "Queue"
         }
       ],
       "guardrails": [
@@ -242,7 +310,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/cgidzinski/Xendelta-Hub/issues/397",
-          "observedAt": "2026-11-24T10:24:45.687594+00:00",
+          "observedAt": "2026-11-24T22:44:55.442621+00:00",
           "verified": true,
           "claim": "XenKitchen: book covers, a bookshelf picker, and PDF export"
         },
@@ -250,7 +318,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mealie-recipes/mealie/issues/1306",
-          "observedAt": "2026-11-24T10:24:45.687596+00:00",
+          "observedAt": "2026-11-24T22:44:55.442623+00:00",
           "verified": true,
           "claim": "[v1.0.0b] [Task] - Export Recipes and Cookbooks to PDF"
         },
@@ -258,7 +326,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/IamTugy/recipes/issues/21",
-          "observedAt": "2026-11-24T10:24:45.687601+00:00",
+          "observedAt": "2026-11-24T22:44:55.442627+00:00",
           "verified": true,
           "claim": "Cookbook/collection PDF export"
         },
@@ -266,7 +334,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Benkendorfer/recipe-manager/issues/7",
-          "observedAt": "2026-11-24T10:24:45.687607+00:00",
+          "observedAt": "2026-11-24T22:44:55.442633+00:00",
           "verified": true,
           "claim": "Import recipes from PDF files"
         },
@@ -274,7 +342,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mathnauleau/commeat/issues/3",
-          "observedAt": "2026-11-24T10:24:45.687605+00:00",
+          "observedAt": "2026-11-24T22:44:55.442631+00:00",
           "verified": true,
           "claim": "Later: Print full cookbook PDF"
         },
@@ -282,7 +350,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7826",
-          "observedAt": "2026-11-24T10:24:45.687611+00:00",
+          "observedAt": "2026-11-24T22:44:55.442637+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -290,7 +358,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7825",
-          "observedAt": "2026-11-24T10:24:45.687613+00:00",
+          "observedAt": "2026-11-24T22:44:55.442638+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -298,7 +366,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7824",
-          "observedAt": "2026-11-24T10:24:45.687614+00:00",
+          "observedAt": "2026-11-24T22:44:55.442640+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         }
