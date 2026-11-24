@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.proposals.v1",
-  "generatedAt": "2026-11-23T08:12:08.010293+00:00",
+  "generatedAt": "2026-11-24T00:20:54.369527+00:00",
   "semantics": "RESEARCH_PROPOSALS_NOT_PRODUCT_CANDIDATES",
   "proposals": [
     {
@@ -14,7 +14,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Delower-Hasan/multichain/issues/1",
-          "observedAt": "2026-11-23T08:11:52.820895+00:00",
+          "observedAt": "2026-11-24T00:20:37.738441+00:00",
           "verified": true,
           "claim": "Security: malware in this repository and 42 other repositories of this account"
         },
@@ -22,7 +22,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/jibon-roy/next-js-starter/issues/3",
-          "observedAt": "2026-11-23T08:11:52.820898+00:00",
+          "observedAt": "2026-11-24T00:20:37.738443+00:00",
           "verified": true,
           "claim": "Security: malware in this repository and 60 other repositories of this account"
         }
@@ -43,66 +43,50 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/amaybaum-prod/supabase/issues/26",
-          "observedAt": "2026-11-23T08:11:53.763037+00:00",
-          "verified": true,
-          "claim": "studio-0.0.9.tgz: 192 vulnerabilities (highest severity is: 10.0) [master] (reachable) - autoclosed"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/bengmend/FreeCodeCamp/issues/24",
-          "observedAt": "2026-11-23T08:11:53.763038+00:00",
-          "verified": true,
-          "claim": "@freecodecamp/api-0.0.1.tgz: 136 vulnerabilities (highest severity is: 9.3) [main]"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/amaybaum-prod/supabase/issues/116",
-          "observedAt": "2026-11-23T08:11:53.763040+00:00",
-          "verified": true,
-          "claim": "studio-0.0.9.tgz: 192 vulnerabilities (highest severity is: 10.0) [master] (reachable)"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/amaybaum-prod/elastic-charts/issues/38",
-          "observedAt": "2026-11-23T08:11:53.763044+00:00",
-          "verified": true,
-          "claim": "probot-12.3.3.tgz: 50 vulnerabilities (highest severity is: 9.8) [main]"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/mitodl/mitxpro/issues/2711",
-          "observedAt": "2026-11-23T08:11:53.763045+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
           "url": "https://github.com/sneat-co/circleus/issues/1",
-          "observedAt": "2026-11-23T08:11:53.763058+00:00",
+          "observedAt": "2026-11-24T00:20:38.883537+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/Div23ine/Global/issues/5",
-          "observedAt": "2026-11-23T08:11:53.763053+00:00",
+          "url": "https://github.com/sneat-co/prioritarius/issues/1",
+          "observedAt": "2026-11-24T00:20:38.883539+00:00",
           "verified": true,
-          "claim": "Writing"
+          "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/Div23ine/Global/issues/4",
-          "observedAt": "2026-11-23T08:11:53.763054+00:00",
+          "url": "https://github.com/sneat-co/sportius/issues/27",
+          "observedAt": "2026-11-24T00:20:38.883542+00:00",
           "verified": true,
-          "claim": "Writing"
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "observedAt": "2026-11-24T00:20:38.883553+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/fact-admin-frontend/issues/3",
+          "observedAt": "2026-11-24T00:20:38.883557+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/nfdiv-frontend/issues/3049",
+          "observedAt": "2026-11-24T00:20:38.883558+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
         }
       ],
       "guardrails": [
@@ -121,8 +105,24 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/2641",
+          "observedAt": "2026-11-24T00:20:41.026345+00:00",
+          "verified": true,
+          "claim": "[NAYA] Team coordination feed \u2014 live board (successor to #2537)"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/SoulSchoolAcademy/NayaPOWER/issues/554",
+          "observedAt": "2026-11-24T00:20:41.026397+00:00",
+          "verified": true,
+          "claim": "\ud83d\udd31 TEAM NAYA \u2014 Naya \u2194 Coda Direct Communication Board"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
           "url": "https://github.com/bighauss/Sportsedge/issues/57",
-          "observedAt": "2026-11-23T08:11:55.679613+00:00",
+          "observedAt": "2026-11-24T00:20:41.026366+00:00",
           "verified": true,
           "claim": "SportsEdge agent relay \u2014 Claude / ChatGPT / Perplexity only"
         },
@@ -130,25 +130,9 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/moshehason/117-LAB-TEST/issues/3",
-          "observedAt": "2026-11-23T08:11:55.679615+00:00",
+          "observedAt": "2026-11-24T00:20:41.026386+00:00",
           "verified": true,
           "claim": "117 AUTONOMOUS STUDIO \u2014 ChatGPT \u00d7 Claude Code"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/StegVerse-Labs/.github/issues/3443",
-          "observedAt": "2026-11-23T08:11:55.679624+00:00",
-          "verified": true,
-          "claim": "[QUEUE] Claude"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/DeviousDevv303/forgeclaw/issues/235",
-          "observedAt": "2026-11-23T08:11:55.679625+00:00",
-          "verified": true,
-          "claim": "Muse <-> Claude working channel \u2014 Kalshi funds + reliability queue"
         }
       ],
       "guardrails": [
@@ -167,18 +151,18 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/handfulofluck-lab/osra/issues/50",
-          "observedAt": "2026-11-23T08:11:56.704183+00:00",
+          "url": "https://github.com/DjL88/Kestrel/issues/890",
+          "observedAt": "2026-11-24T00:20:42.142541+00:00",
           "verified": true,
-          "claim": "KCL program board \u2014 phase lanes and owners"
+          "claim": "V2 Settle Board (successor to #418 for this phase)"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/DjL88/Kestrel/issues/890",
-          "observedAt": "2026-11-23T08:11:56.704213+00:00",
+          "url": "https://github.com/handfulofluck-lab/osra/issues/50",
+          "observedAt": "2026-11-24T00:20:42.142563+00:00",
           "verified": true,
-          "claim": "V2 Settle Board (successor to #418 for this phase)"
+          "claim": "KCL program board \u2014 phase lanes and owners"
         }
       ],
       "guardrails": [
@@ -198,7 +182,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/bizzal70/itsalreadypriced/issues/1",
-          "observedAt": "2026-11-23T08:11:57.598109+00:00",
+          "observedAt": "2026-11-24T00:20:43.083240+00:00",
           "verified": true,
           "claim": "\ud83d\udd0e Daily content review \u2014 It's Already Priced \u2014 Blog + X"
         },
@@ -206,7 +190,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
-          "observedAt": "2026-11-23T08:11:57.598112+00:00",
+          "observedAt": "2026-11-24T00:20:43.083246+00:00",
           "verified": true,
           "claim": "\ud83e\udded Daily content opportunities"
         }
@@ -228,7 +212,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/cgidzinski/Xendelta-Hub/issues/397",
-          "observedAt": "2026-11-23T08:12:01.627133+00:00",
+          "observedAt": "2026-11-24T00:20:47.321498+00:00",
           "verified": true,
           "claim": "XenKitchen: book covers, a bookshelf picker, and PDF export"
         },
@@ -236,7 +220,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mealie-recipes/mealie/issues/1306",
-          "observedAt": "2026-11-23T08:12:01.627135+00:00",
+          "observedAt": "2026-11-24T00:20:47.321500+00:00",
           "verified": true,
           "claim": "[v1.0.0b] [Task] - Export Recipes and Cookbooks to PDF"
         },
@@ -244,7 +228,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/IamTugy/recipes/issues/21",
-          "observedAt": "2026-11-23T08:12:01.627138+00:00",
+          "observedAt": "2026-11-24T00:20:47.321504+00:00",
           "verified": true,
           "claim": "Cookbook/collection PDF export"
         },
@@ -252,7 +236,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Benkendorfer/recipe-manager/issues/7",
-          "observedAt": "2026-11-23T08:12:01.627143+00:00",
+          "observedAt": "2026-11-24T00:20:47.321509+00:00",
           "verified": true,
           "claim": "Import recipes from PDF files"
         },
@@ -260,7 +244,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/mathnauleau/commeat/issues/3",
-          "observedAt": "2026-11-23T08:12:01.627141+00:00",
+          "observedAt": "2026-11-24T00:20:47.321508+00:00",
           "verified": true,
           "claim": "Later: Print full cookbook PDF"
         },
@@ -268,7 +252,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7826",
-          "observedAt": "2026-11-23T08:12:01.627146+00:00",
+          "observedAt": "2026-11-24T00:20:47.321512+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -276,7 +260,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7825",
-          "observedAt": "2026-11-23T08:12:01.627147+00:00",
+          "observedAt": "2026-11-24T00:20:47.321514+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         },
@@ -284,7 +268,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/guevara/read-it-later/issues/7824",
-          "observedAt": "2026-11-23T08:12:01.627148+00:00",
+          "observedAt": "2026-11-24T00:20:47.321515+00:00",
           "verified": true,
           "claim": "Rust Language Cheat Sheet"
         }
@@ -306,7 +290,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Vivekpsps3/vivek-monorepo/issues/134",
-          "observedAt": "2026-11-23T08:12:02.596996+00:00",
+          "observedAt": "2026-11-24T00:20:48.363585+00:00",
           "verified": true,
           "claim": "Roadmap: stylized personal workspace and isometric Town"
         },
@@ -314,7 +298,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Vivekpsps3/vivek-monorepo/issues/304",
-          "observedAt": "2026-11-23T08:12:02.597042+00:00",
+          "observedAt": "2026-11-24T00:20:48.363612+00:00",
           "verified": true,
           "claim": "Personal world: stylized workspace, isometric Town, workouts and dated memories"
         }
@@ -336,7 +320,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/KoshiirRa/midgley/issues/709",
-          "observedAt": "2026-11-23T08:12:05.162687+00:00",
+          "observedAt": "2026-11-24T00:20:50.949095+00:00",
           "verified": true,
           "claim": "[main] \ud83d\udcca Weekly Model Review Report & Performance Audit (2026-11-07)"
         },
@@ -344,7 +328,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/KoshiirRa/midgley/issues/708",
-          "observedAt": "2026-11-23T08:12:05.162690+00:00",
+          "observedAt": "2026-11-24T00:20:50.949097+00:00",
           "verified": true,
           "claim": "[dev] \ud83d\udcca Weekly Model Review Report & Performance Audit (2026-11-07)"
         }
@@ -366,7 +350,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/rempemat-eng/appify/issues/149",
-          "observedAt": "2026-11-23T08:12:06.076428+00:00",
+          "observedAt": "2026-11-24T00:20:51.973688+00:00",
           "verified": true,
           "claim": "NapAttack Codex coordination: four chats, task ownership and Claude handoffs"
         },
@@ -374,7 +358,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/HassiMian/app-assps-edu-pk/issues/4",
-          "observedAt": "2026-11-23T08:12:06.076451+00:00",
+          "observedAt": "2026-11-24T00:20:51.973712+00:00",
           "verified": true,
           "claim": "ASSPS master coordination: four workstreams, chat consolidation and release ownership"
         }
@@ -395,34 +379,18 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/askgogo84/gogo-memory-os/issues/274",
-          "observedAt": "2026-11-23T08:12:07.917984+00:00",
+          "url": "https://github.com/DjL88/Kestrel/issues/890",
+          "observedAt": "2026-11-24T00:20:54.275439+00:00",
           "verified": true,
-          "claim": "AskGogo Contextual Autonomy v1 \u2014 agent coordination bus"
+          "claim": "V2 Settle Board (successor to #418 for this phase)"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/solrenning-llc/marktmorgen/issues/4932",
-          "observedAt": "2026-11-23T08:12:07.917992+00:00",
+          "url": "https://github.com/handfulofluck-lab/osra/issues/50",
+          "observedAt": "2026-11-24T00:20:54.275453+00:00",
           "verified": true,
-          "claim": "Agent coordination \u2014 part 7 (continues #4858)"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/kk051780/toy-wars-factory/issues/218",
-          "observedAt": "2026-11-23T08:12:07.917993+00:00",
-          "verified": true,
-          "claim": "[EGGRUMBLE V3][OWNER\u6700\u4e0a\u4f4d] \u57ce\u5168\u6ec5\u6557\u5317\u30fb\u8907\u6570\u5375\u30fb2\u30e2\u30fc\u30c9AI\u30fb\u500b\u4eba\u57ce\u8ab2\u91d1\uff5c\u5168Chat\u5171\u901a"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/kk051780/toy-wars-factory/issues/220",
-          "observedAt": "2026-11-23T08:12:07.918001+00:00",
-          "verified": true,
-          "claim": "[EGGRUMBLE V3 RC\u7d71\u5408] 2\u30e2\u30fc\u30c9\u30fb\u57ce\u6d88\u6ec5/\u5375\u89e3\u653e\u30fbAI\u30fb\u500b\u4eba\u57ce\uff5c\u8a8d\u8a3cwriter"
+          "claim": "KCL program board \u2014 phase lanes and owners"
         }
       ],
       "guardrails": [
