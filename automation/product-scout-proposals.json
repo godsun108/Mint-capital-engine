@@ -1,6 +1,6 @@
 {
   "schema": "mint.product.scout.proposals.v1",
-  "generatedAt": "2026-11-25T21:58:32.875648+00:00",
+  "generatedAt": "2026-11-26T08:52:52.523716+00:00",
   "semantics": "RESEARCH_PROPOSALS_NOT_PRODUCT_CANDIDATES",
   "proposals": [
     {
@@ -14,7 +14,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/Delower-Hasan/multichain/issues/1",
-          "observedAt": "2026-11-25T21:58:26.766384+00:00",
+          "observedAt": "2026-11-26T08:52:43.517859+00:00",
           "verified": true,
           "claim": "Security: malware in this repository and 42 other repositories of this account"
         },
@@ -22,7 +22,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/jibon-roy/next-js-starter/issues/3",
-          "observedAt": "2026-11-25T21:58:26.766386+00:00",
+          "observedAt": "2026-11-26T08:52:43.517861+00:00",
           "verified": true,
           "claim": "Security: malware in this repository and 60 other repositories of this account"
         }
@@ -44,7 +44,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/KEYFLOWOS/KEYFLOWOS/issues/80",
-          "observedAt": "2026-11-25T21:58:27.477680+00:00",
+          "observedAt": "2026-11-26T08:52:44.365107+00:00",
           "verified": true,
           "claim": "KEYFLOWOS Agent Control Room \u2014 ChatGPT \u2194 Claude Code"
         },
@@ -52,63 +52,47 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/claude-builders-bounty/claude-builders-bounty/issues/4",
-          "observedAt": "2026-11-25T21:58:27.477712+00:00",
+          "observedAt": "2026-11-26T08:52:44.365143+00:00",
           "verified": true,
           "claim": "[BOUNTY $150] AGENT: Claude Code sub-agent that reviews a PR and posts a structured comment"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/sneat-co/sneat-ext-template/issues/17",
-          "observedAt": "2026-11-25T21:58:27.477683+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/sneat-co/circleus/issues/1",
-          "observedAt": "2026-11-25T21:58:27.477689+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/sneat-co/sportius/issues/27",
-          "observedAt": "2026-11-25T21:58:27.477694+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
           "url": "https://github.com/sneat-co/sneat-club/issues/4",
-          "observedAt": "2026-11-25T21:58:27.477701+00:00",
+          "observedAt": "2026-11-26T08:52:44.365114+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/lau-frontend/issues/203",
-          "observedAt": "2026-11-25T21:58:27.477703+00:00",
+          "url": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "observedAt": "2026-11-26T08:52:44.365121+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/fact-frontend/issues/772",
-          "observedAt": "2026-11-25T21:58:27.477704+00:00",
+          "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
+          "observedAt": "2026-11-26T08:52:44.365125+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/sptribs-dss-update-case-web/issues/1",
-          "observedAt": "2026-11-25T21:58:27.477709+00:00",
+          "url": "https://github.com/hmcts/appreg-frontend/issues/2",
+          "observedAt": "2026-11-26T08:52:44.365132+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/pre-portal/issues/1",
+          "observedAt": "2026-11-26T08:52:44.365141+00:00",
           "verified": true,
           "claim": "Dependency Dashboard"
         }
@@ -120,8 +104,8 @@
       ]
     },
     {
-      "id": "proposal:procedural-assets:001",
-      "topic": "procedural-assets",
+      "id": "proposal:venture-economics:001",
+      "topic": "venture-economics",
       "status": "PROPOSED_FOR_RESEARCH",
       "regulated": false,
       "upfrontCostUsd": 0,
@@ -129,18 +113,48 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/DeviousDevv303/forgeclaw/issues/235",
-          "observedAt": "2026-11-25T21:58:29.478717+00:00",
+          "url": "https://github.com/anthropics/claude-code/issues/38335",
+          "observedAt": "2026-11-26T08:52:45.163942+00:00",
           "verified": true,
-          "claim": "Muse <-> Claude working channel \u2014 Kalshi funds + reliability queue"
+          "claim": "[BUG] Claude Max plan session limits exhausted abnormally fast since March 23, 2026 (CLI usage)"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/StegVerse-Labs/.github/issues/3443",
-          "observedAt": "2026-11-25T21:58:29.478739+00:00",
+          "url": "https://github.com/anthropics/claude-code/issues/16157",
+          "observedAt": "2026-11-26T08:52:45.163944+00:00",
           "verified": true,
-          "claim": "[QUEUE] Claude"
+          "claim": "[BUG] Instantly hitting usage limits with Max subscription"
+        }
+      ],
+      "guardrails": [
+        "proposal_is_not_verified_demand",
+        "research_must_define_customer_and_problem",
+        "no_build_before_product_gate"
+      ]
+    },
+    {
+      "id": "proposal:software-release-contract:001",
+      "topic": "software-release-contract",
+      "status": "PROPOSED_FOR_RESEARCH",
+      "regulated": false,
+      "upfrontCostUsd": 0,
+      "evidence": [
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/netzen-abm/janavani/issues/237",
+          "observedAt": "2026-11-26T08:52:46.521699+00:00",
+          "verified": true,
+          "claim": "P1: Establish a governed CivicTech collaboration and interoperability pilot"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/GLORIFIER7/GLORIFIER/issues/471",
+          "observedAt": "2026-11-26T08:52:46.521705+00:00",
+          "verified": true,
+          "claim": "architecture: establish cross-platform, Linux, internet, and blockchain interoperability"
         }
       ],
       "guardrails": [
@@ -160,7 +174,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/bizzal70/itsalreadypriced/issues/1",
-          "observedAt": "2026-11-25T21:58:31.664403+00:00",
+          "observedAt": "2026-11-26T08:52:47.548865+00:00",
           "verified": true,
           "claim": "\ud83d\udd0e Daily content review \u2014 It's Already Priced \u2014 Blog + X"
         },
@@ -168,7 +182,7 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/bizzal70/Audit_User_Agent/issues/2",
-          "observedAt": "2026-11-25T21:58:31.664406+00:00",
+          "observedAt": "2026-11-26T08:52:47.548867+00:00",
           "verified": true,
           "claim": "\ud83e\udded Daily content opportunities"
         }
@@ -189,26 +203,18 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/YehorBabenko88/eth_tester/issues/2",
-          "observedAt": "2026-11-25T21:58:32.555199+00:00",
+          "url": "https://github.com/ubiquitarianism/leonida/issues/1608",
+          "observedAt": "2026-11-26T08:52:48.610885+00:00",
           "verified": true,
-          "claim": "ETH B STORAGE \u2014 integration round 1"
+          "claim": "Coordinating who works on what (continued from #14)"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/YehorBabenko88/eth_tester/issues/3",
-          "observedAt": "2026-11-25T21:58:32.555225+00:00",
+          "url": "https://github.com/Marvisak/VIctory/issues/1633",
+          "observedAt": "2026-11-26T08:52:48.610908+00:00",
           "verified": true,
-          "claim": "ETH C ANALYTICS \u2014 integration round 1"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/YehorBabenko88/eth_tester/issues/1",
-          "observedAt": "2026-11-25T21:58:32.555227+00:00",
-          "verified": true,
-          "claim": "ETH A DATA \u2014 integration round 1"
+          "claim": "Coordinating who works on what"
         }
       ],
       "guardrails": [
