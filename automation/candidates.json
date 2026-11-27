@@ -28,72 +28,24 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/sneat-co/sportius/issues/27",
-          "observedAt": "2026-11-27T09:03:28.759026+00:00",
+          "url": "https://github.com/amaybaum-prod/supabase/issues/116",
+          "observedAt": "2026-11-27T21:37:43.365747+00:00",
           "verified": true,
-          "claim": "Dependency Dashboard"
+          "claim": "studio-0.0.9.tgz: 193 vulnerabilities (highest severity is: 10.0) [master] (reachable) - autoclosed"
         },
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
-          "url": "https://github.com/hmcts/appreg-frontend/issues/2",
-          "observedAt": "2026-11-27T09:03:28.759052+00:00",
+          "url": "https://github.com/amaybaum-prod/supabase/issues/26",
+          "observedAt": "2026-11-27T21:37:43.365749+00:00",
           "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/commercetools/merchant-center-application-kit/issues/2351",
-          "observedAt": "2026-11-27T09:03:28.759059+00:00",
-          "verified": true,
-          "claim": "Dependency Dashboard"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/rorymclark-prog/ImbewuField/issues/35",
-          "observedAt": "2026-11-27T09:03:28.759048+00:00",
-          "verified": true,
-          "claim": "Coordination ledger \u2014 Claude \u21c4 Codex (append-only)"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/ontripai/cladora-website/issues/463",
-          "observedAt": "2026-11-27T09:03:28.759062+00:00",
-          "verified": true,
-          "claim": "PM: central coordination and evidence register for Codex seats"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/Trinity-S-AI-DNA/t27/issues/6133",
-          "observedAt": "2026-11-27T09:03:28.759054+00:00",
-          "verified": true,
-          "claim": "Port bootstrap/src/proxy.rs (Rust, 6 functions) to specs/port/bootstrap/src/proxy.t27"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/Trinity-S-AI-DNA/t27/issues/7330",
-          "observedAt": "2026-11-27T09:03:28.759056+00:00",
-          "verified": true,
-          "claim": "Port gHashTag/trios:crates/trios-mcp/rings/SR-00/src/auth.rs (Rust, 6 functions) to specs/port/trios/crates/trios-mcp/rings/SR-00/src/auth.t27"
-        },
-        {
-          "kind": "public_problem_observation",
-          "source": "github-issues",
-          "url": "https://github.com/Trinity-S-AI-DNA/t27/issues/9516",
-          "observedAt": "2026-11-27T09:03:28.759057+00:00",
-          "verified": true,
-          "claim": "Port gHashTag/trios:crates/trios-server/src/security.rs (Rust, 6 functions) to specs/port/trios/crates/trios-server/src/security.t27"
+          "claim": "studio-0.0.9.tgz: 193 vulnerabilities (highest severity is: 10.0) [master] (reachable)"
         }
       ],
       "status": "DISCOVERED_SOURCE_BACKED",
       "provenance": {
         "proposalId": "proposal:express-auth:001",
-        "promotedAt": "2026-11-27T09:03:35.570520+00:00",
+        "promotedAt": "2026-11-27T21:37:51.791370+00:00",
         "semantics": "SOURCE_BACKED_CANDIDATE_RESEARCH_STILL_REQUIRED"
       }
     }
