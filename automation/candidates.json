@@ -28,8 +28,56 @@
         {
           "kind": "public_problem_observation",
           "source": "github-issues",
+          "url": "https://github.com/hmcts/appreg-frontend/issues/2",
+          "observedAt": "2026-11-28T08:25:15.613433+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/hmcts/fact-frontend/issues/772",
+          "observedAt": "2026-11-28T08:25:15.613434+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/mitodl/mitxpro/issues/2711",
+          "observedAt": "2026-11-28T08:25:15.613437+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/sneat-co/circleus/issues/1",
+          "observedAt": "2026-11-28T08:25:15.613439+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/sneat-co/prioritarius/issues/1",
+          "observedAt": "2026-11-28T08:25:15.613445+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
+          "url": "https://github.com/sneat-co/sneat-ext-template/issues/17",
+          "observedAt": "2026-11-28T08:25:15.613448+00:00",
+          "verified": true,
+          "claim": "Dependency Dashboard"
+        },
+        {
+          "kind": "public_problem_observation",
+          "source": "github-issues",
           "url": "https://github.com/amaybaum-prod/supabase/issues/116",
-          "observedAt": "2026-11-27T21:37:43.365747+00:00",
+          "observedAt": "2026-11-28T08:25:15.613450+00:00",
           "verified": true,
           "claim": "studio-0.0.9.tgz: 193 vulnerabilities (highest severity is: 10.0) [master] (reachable) - autoclosed"
         },
@@ -37,15 +85,15 @@
           "kind": "public_problem_observation",
           "source": "github-issues",
           "url": "https://github.com/amaybaum-prod/supabase/issues/26",
-          "observedAt": "2026-11-27T21:37:43.365749+00:00",
+          "observedAt": "2026-11-28T08:25:15.613451+00:00",
           "verified": true,
-          "claim": "studio-0.0.9.tgz: 193 vulnerabilities (highest severity is: 10.0) [master] (reachable)"
+          "claim": "studio-0.0.9.tgz: 194 vulnerabilities (highest severity is: 10.0) [master] (reachable)"
         }
       ],
       "status": "DISCOVERED_SOURCE_BACKED",
       "provenance": {
         "proposalId": "proposal:express-auth:001",
-        "promotedAt": "2026-11-27T21:37:51.791370+00:00",
+        "promotedAt": "2026-11-28T08:25:22.143423+00:00",
         "semantics": "SOURCE_BACKED_CANDIDATE_RESEARCH_STILL_REQUIRED"
       }
     }
